@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>온라인예약관 - 여행박람회 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script type="text/javascript" src="../js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="../js/swiper.min.js"></script>
+<script type="text/javascript" src="../js/m.expo_1703.js"></script>
+<script type="text/javascript">
+	//온라인 예약관 메인 초기화 //상품 마크업 완료 후 호출
+	$(function () {
+		if (EXPO !== undefined && typeof EXPO.initOnlineMain !== 'undefined') EXPO.initOnlineMain();
+	});
+
+	//스와이프 초기화 방법 
+	$(function () {
+		if (EXPO !== undefined && typeof EXPO.resetOnlineSwiper !== 'undefined') EXPO.resetOnlineSwiper();
+	});
+
+	//스와이프 초기화 테스트
+	/*
+	$(document).on('keydown', function (e) {
+		if (e.keyCode == 39) {
+			$('.reservProdBox').not(':eq(0)').find('> .swiper-container').remove();
+		}
+
+		if (e.keyCode == 37) {
+			$('.reservProdBox').not(':eq(0)').append('<div class="swiper-container"><div class="swiper-wrapper"><div class="swiper-slide"><a href="#" class="prod_in"><span><img src="../images/reservation/img_prod_dummy01.jpg" alt=""></span><div class="intxtBox"><strong><em>동남아</em>방콕/파타야 5일</strong><p>핵심 관광을 놓치기 싫은 당신에게 추천하는 상품</p><b>729,000<span>원~</span></b></div></a></div><div class="swiper-slide"><a href="#" class="prod_in"><span><img src="../images/reservation/img_prod_dummy02.jpg" alt=""></span><div class="intxtBox"><strong><em>동남아</em>방콕/파타야 5일</strong><p>핵심 관광을 놓치기 싫은 당신에게 추천하는 상품</p><b>729,000<span>원~</span></b></div></a></div><div class="swiper-slide"><a href="#" class="prod_in"><span><img src="../images/reservation/img_prod_dummy01.jpg" alt=""></span><div class="intxtBox"><strong><em>동남아</em>방콕/파타야 5일</strong><p>핵심 관광을 놓치기 싫은 당신에게 추천하는 상품</p><b>729,000<span>원~</span></b></div></a></div><div class="swiper-slide"><a href="#" class="prod_in"><span><img src="../images/reservation/img_prod_dummy02.jpg" alt=""></span><div class="intxtBox"><strong><em>동남아</em>방콕/파타야 5일</strong><p>핵심 관광을 놓치기 싫은 당신에게 추천하는 상품</p><b>729,000<span>원~</span></b></div></a></div></div><div class="swiper-pagination" style="display:none"></div><div class="swiper-pag-num"><span>1</span> / 13</div></div>');
+
+			if (EXPO !== undefined && typeof EXPO.resetOnlineSwiper !== 'undefined') EXPO.resetOnlineSwiper();
+		}
+	});
+	*/
+</script>
+</head>
+
+<body>
+<div id="wrap" class="mainWrap">
+	
+	<!-- 헤더 -->
+	<header>
+		<h1><a href="#"><img src="http://image1.hanatour.com/mobile/common/expo2017/btn_head_logo.png" alt="하나투어 여행박람회 - HANATOUR INTERNATIONAL TRAVEL SHOW 2017"></a></h1>
+		<a href="#" class="allMenu"><img src="http://image1.hanatour.com/mobile/common/expo2017/btn_head_all.png" alt="전체메뉴보기"></a>
+		<a href="#" class="shared"><img src="http://image1.hanatour.com/mobile/common/expo2017/btn_head_shared.png" alt="공유하기"></a>
+		
+		<nav class="navDep">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide on"><a href="#">홈</a></div><!-- 선택시 class="on" -->
+					<div class="swiper-slide"><a href="#">패키지</a></div>
+					<div class="swiper-slide"><a href="#">항공권</a></div>
+					<div class="swiper-slide"><a href="#">호텔</a></div>
+					<div class="swiper-slide"><a href="#">테마</a></div>
+					<div class="swiper-slide"><a href="#">에어텔/배낭</a></div>
+					<div class="swiper-slide"><a href="#">입장권/교통패스/현지투어</a></div>
+					<div class="swiper-slide"><a href="#">슈퍼세이브</a></div>
+					<div class="swiper-slide"><a href="#">추천여행지</a></div>
+				</div>
+			</div>
+			<a href="#" class="btn_navAll" title="전체메뉴보기"></a><!-- 열릴시 class="on" 추가 -->
+		</nav>
+		
+		
+		<!-- 전체메뉴 -->
+		<div class="allDepBox" style="display:none">
+			<ul class="navAllDep">
+				<li class="on"><a href="#">홈</a></li><!-- 해당 관일시 class="on" 추가 -->
+				<li><a href="#">패키지</a></li>
+				<li><a href="#">항공권</a></li>
+				<li><a href="#">호텔</a></li>
+				<li><a href="#">테마</a></li>
+				<li><a href="#">에어텔/배낭</a></li>
+				<li><a href="#" class="two">입장권/교통패스<br>/현지투어</a></li>
+				<li><a href="#">슈퍼세이브</a></li>
+				<li><a href="#">추천여행지</a></li>
+			</ul>
+		</div>
+		<!-- 전체메뉴 -->
+	</header>
+	<!-- // 헤더 -->
+	
+	<!-- 컨텐츠 영역 -->
+	<section id="container" class="mainSect reserv"><!-- 예약관 class="reserv" 추가 -->
+		<!-- top -->
+		<div class="mainTopCont">
+			<h2><em>제 11회 하나투어 여행박람회</em>온라인 예약관</h2>
+			<strong class="day">5월 22일 월요일 – 6월 11일 일요일</strong>
+			<p>보다 간편하게 만나는 하나투어 여행박람회 전용상품!<br>하나투어가 올 여름 최고의 선택을 제안합니다.</p>
+			
+			<div class="timeBox">
+				<em>여행박람회 남은 시간</em>
+				<div class="time">
+					<div><span>40</span><strong>DAYS</strong></div>
+					<div><span>20</span><strong>HOURS</strong></div>
+					<div><span>32</span><strong>MINUTES</strong></div>
+					<div><span>54</span><strong>SECONDS</strong></div>
+				</div>
+			</div>
+		</div>
+		<!-- // top -->
+		
+		<!-- 상품 공통 -->
+		<div class="reservProdBox">
+			<h3>패키지</h3>
+			
+			<!-- 스와이프 양쪽 20px 공간에 앞뒤상품 15px 노출-->
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide sold_out"><!-- 매진 class="sold_out" -->
+						<a href="#" class="prod_in">
+							<span><img data-src="http://image5.hanatour.com/mst_info_image/7/P000144377_M.jpg" class="swiper-lazy" alt=""></span>
+							<div class="intxtBox">
+								<strong><em>동남아</em>방콕/파타야 5일</strong><!-- em 라벨 :: 기본 레드컬러 col01~col06 -->
+								<p>핵심 관광을 놓치기 싫은 당신에게 추천하는 상품</p>
+								<b>729,000<span>원~</span></b>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" class="prod_in">
+							<span><img data-src="http://mddisplay.hanatour.com/asp/contents/imageaccess/ia-view_image.asp?img_no=P000718543&obj_img=image1" class="swiper-lazy" alt=""></span>
+							<div class="intxtBox">
+								<strong><em>동남아</em>방콕/파타야 5일</strong><!-- em 라벨 :: 기본 레드컬러 col01~col06 -->
+								<p>핵심 관광을 놓치기 싫은 당신에게 추천하는 상품</p>
+								<b>729,000<span>원~</span></b>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" class="prod_in">
+							<span><img data-src="http://image5.hanatour.com/mst_info_image/3/P001104263_M.jpg" class="swiper-lazy" alt=""></span>
+							<div class="intxtBox">
+								<strong><em>동남아</em>방콕/파타야 5일</strong><!-- em 라벨 :: 기본 레드컬러 col01~col06 -->
+								<p>핵심 관광을 놓치기 싫은 당신에게 추천하는 상품</p>
+								<b>729,000<span>원~</span></b>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" class="prod_in">
+							<span><img data-src="http://image5.hanatour.com/CMS/2015/08/17/20150817000082_0.jpg" class="swiper-lazy" alt=""></span>
+							<div class="intxtBox">
+								<strong><em>동남아</em>방콕/파타야 5일</strong><!-- em 라벨 :: 기본 레드컬러 col01~col06 -->
+								<p>핵심 관광을 놓치기 싫은 당신에게 추천하는 상품</p>
+								<b>729,000<span>원~</span></b>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="swiper-pagination" style="display:none"></div>
+				<div class="swiper-pag-num"><span>1</span> / 13</div>
+			</div>
+			<!-- // 스와이프 -->
+		</div>
+		<!-- // 상품 공통 -->
+		
+		<!-- 지역별 특가보기 -->
+		<div class="areaProd">
+			<h3>지역별 특가 보기</h3>
+			
+			<!-- 스와이프 -->
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="#" class="area_in">
+							<span><img src="http://image1.hanatour.com/mobile/common/expo2017/reservation/img_areaprod01.png" alt=""></span>
+							<strong>동남아</strong>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" class="area_in">
+							<span><img src="http://image1.hanatour.com/mobile/common/expo2017/reservation/img_areaprod02.png" alt=""></span>
+							<strong>중국</strong>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" class="area_in">
+							<span><img src="http://image1.hanatour.com/mobile/common/expo2017/reservation/img_areaprod03.png" alt=""></span>
+							<strong>일본</strong>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" class="area_in">
+							<span><img src="http://image1.hanatour.com/mobile/common/expo2017/reservation/img_areaprod04.png" alt=""></span>
+							<strong>유럽</strong>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" class="area_in">
+							<span><img src="http://image1.hanatour.com/mobile/common/expo2017/reservation/img_areaprod05.png" alt=""></span>
+							<strong>미주</strong>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" class="area_in">
+							<span><img src="http://image1.hanatour.com/mobile/common/expo2017/reservation/img_areaprod06.png" alt=""></span>
+							<strong>남태평양</strong>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" class="area_in">
+							<span><img src="http://image1.hanatour.com/mobile/common/expo2017/reservation/img_areaprod07.png" alt=""></span>
+							<strong>국내</strong>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" class="area_in">
+							<span><img src="http://image1.hanatour.com/mobile/common/expo2017/reservation/img_areaprod08.png" alt=""></span>
+							<strong>지방출발</strong>
+						</a>
+					</div>
+				</div>
+				<div class="swiper-pagination" style="display:none"></div>
+			</div>
+			<!-- // 스와이프 -->
+		</div>
+		<!-- // 지역별 특가보기 -->
+		
+		<!-- 상품 공통 -->
+		<div class="reservProdBox">
+			<h3>항공<a href="#">특가 더보기 ＞</a></h3>
+			
+			<!-- 스와이프 -->
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="#" class="prod_in">
+							<span><img src="http://image1.hanatour.com/mobile/common/expo2017/reservation/img_prod_dummy02.jpg" alt=""></span>
+							<div class="intxtBox">
+								<strong><em class="col01">동남아</em>방콕/파타야 5일</strong><!-- em 라벨 :: 기본 레드컬러 col01~col06 -->
+								<p>핵심 관광을 놓치기 싫은 당신에게 추천하는 상품</p>
+								<b>729,000<span>원~</span></b>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" class="prod_in">
+							<span><img src="http://image1.hanatour.com/mobile/common/expo2017/reservation/img_prod_dummy03.jpg" alt=""></span>
+							<div class="intxtBox">
+								<strong><em class="col02">동남아</em>방콕/파타야 5일</strong><!-- em 라벨 :: 기본 레드컬러 col01~col06 -->
+								<p>핵심 관광을 놓치기 싫은 당신에게 추천하는 상품</p>
+								<b>729,000<span>원~</span></b>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" class="prod_in">
+							<span><img src="http://image1.hanatour.com/mobile/common/expo2017/reservation/img_prod_dummy02.jpg" alt=""></span>
+							<div class="intxtBox">
+								<strong><em>동남아</em>방콕/파타야 5일</strong><!-- em 라벨 :: 기본 레드컬러 col01~col06 -->
+								<p>핵심 관광을 놓치기 싫은 당신에게 추천하는 상품</p>
+								<b>729,000<span>원~</span></b>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" class="prod_in">
+							<span><img src="http://image1.hanatour.com/mobile/common/expo2017/reservation/img_prod_dummy03.jpg" alt=""></span>
+							<div class="intxtBox">
+								<strong><em>동남아</em>방콕/파타야 5일</strong><!-- em 라벨 :: 기본 레드컬러 col01~col06 -->
+								<p>핵심 관광을 놓치기 싫은 당신에게 추천하는 상품</p>
+								<b>729,000<span>원~</span></b>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="swiper-pagination" style="display:none"></div>
+				<div class="swiper-pag-num"><span>1</span> / 13</div>
+			</div>
+			<!-- // 스와이프 -->
+		</div>
+		<!-- // 상품 공통 -->
+		
+		<!-- 상품 공통 -->
+		<div class="reservProdBox">
+			<h3>호텔<a href="#">특가 더보기 ＞</a></h3>
+			
+			<!-- 스와이프 -->
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="#" class="prod_in">
+							<span><img src="http://image1.hanatour.com/mobile/common/expo2017/reservation/img_prod_dummy02.jpg" alt=""></span>
+							<div class="intxtBox">
+								<strong><em class="col03">동남아</em>방콕/파타야 5일</strong><!-- em 라벨 :: 기본 레드컬러 col01~col06 -->
+								<p>핵심 관광을 놓치기 싫은 당신에게 추천하는 상품</p>
+								<b>729,000<span>원~</span></b>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" class="prod_in">
+							<span><img src="http://image1.hanatour.com/mobile/common/expo2017/reservation/img_prod_dummy03.jpg" alt=""></span>
+							<div class="intxtBox">
+								<strong><em class="col05">동남아</em>방콕/파타야 5일</strong><!-- em 라벨 :: 기본 레드컬러 col01~col06 -->
+								<p>핵심 관광을 놓치기 싫은 당신에게 추천하는 상품</p>
+								<b>729,000<span>원~</span></b>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" class="prod_in">
+							<span><img src="http://image1.hanatour.com/mobile/common/expo2017/reservation/img_prod_dummy02.jpg" alt=""></span>
+							<div class="intxtBox">
+								<strong><em>동남아</em>방콕/파타야 5일</strong><!-- em 라벨 :: 기본 레드컬러 col01~col06 -->
+								<p>핵심 관광을 놓치기 싫은 당신에게 추천하는 상품</p>
+								<b>729,000<span>원~</span></b>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" class="prod_in">
+							<span><img src="http://image1.hanatour.com/mobile/common/expo2017/reservation/img_prod_dummy03.jpg" alt=""></span>
+							<div class="intxtBox">
+								<strong><em>동남아</em>방콕/파타야 5일</strong><!-- em 라벨 :: 기본 레드컬러 col01~col06 -->
+								<p>핵심 관광을 놓치기 싫은 당신에게 추천하는 상품</p>
+								<b>729,000<span>원~</span></b>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="swiper-pagination" style="display:none"></div>
+				<div class="swiper-pag-num"><span>1</span> / 13</div>
+			</div>
+			<!-- // 스와이프 -->
+		</div>
+		<!-- // 상품 공통 -->
+		
+		<!-- 상품 공통 -->
+		<div class="reservProdBox">
+			<h3>테마여행<a href="#">특가 더보기 ＞</a></h3>
+			
+			<!-- 스와이프 -->
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="#" class="prod_in">
+							<span><img src="http://image1.hanatour.com/mobile/common/expo2017/reservation/img_prod_dummy02.jpg" alt=""></span>
+							<div class="intxtBox">
+								<strong><em class="col03">동남아</em>방콕/파타야 5일</strong><!-- em 라벨 :: 기본 레드컬러 col01~col06 -->
+								<p>핵심 관광을 놓치기 싫은 당신에게 추천하는 상품</p>
+								<b>729,000<span>원~</span></b>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" class="prod_in">
+							<span><img src="http://image1.hanatour.com/mobile/common/expo2017/reservation/img_prod_dummy03.jpg" alt=""></span>
+							<div class="intxtBox">
+								<strong><em class="col05">동남아</em>방콕/파타야 5일</strong><!-- em 라벨 :: 기본 레드컬러 col01~col06 -->
+								<p>핵심 관광을 놓치기 싫은 당신에게 추천하는 상품</p>
+								<b>729,000<span>원~</span></b>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" class="prod_in">
+							<span><img src="http://image1.hanatour.com/mobile/common/expo2017/reservation/img_prod_dummy02.jpg" alt=""></span>
+							<div class="intxtBox">
+								<strong><em>동남아</em>방콕/파타야 5일</strong><!-- em 라벨 :: 기본 레드컬러 col01~col06 -->
+								<p>핵심 관광을 놓치기 싫은 당신에게 추천하는 상품</p>
+								<b>729,000<span>원~</span></b>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" class="prod_in">
+							<span><img src="http://image1.hanatour.com/mobile/common/expo2017/reservation/img_prod_dummy03.jpg" alt=""></span>
+							<div class="intxtBox">
+								<strong><em>동남아</em>방콕/파타야 5일</strong><!-- em 라벨 :: 기본 레드컬러 col01~col06 -->
+								<p>핵심 관광을 놓치기 싫은 당신에게 추천하는 상품</p>
+								<b>729,000<span>원~</span></b>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="swiper-pagination" style="display:none"></div>
+				<div class="swiper-pag-num"><span>1</span> / 13</div>
+			</div>
+			<!-- // 스와이프 -->
+		</div>
+		<!-- // 상품 공통 -->
+		
+		<!-- 상품 공통 -->
+		<div class="reservProdBox">
+			<h3>자유여행<a href="#">특가 더보기 ＞</a></h3>
+			
+			<!-- 스와이프 -->
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="#" class="prod_in">
+							<span><img src="http://image1.hanatour.com/mobile/common/expo2017/reservation/img_prod_dummy02.jpg" alt=""></span>
+							<div class="intxtBox">
+								<strong><em class="col03">동남아</em>방콕/파타야 5일</strong><!-- em 라벨 :: 기본 레드컬러 col01~col06 -->
+								<p>핵심 관광을 놓치기 싫은 당신에게 추천하는 상품</p>
+								<b>729,000<span>원~</span></b>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" class="prod_in">
+							<span><img src="http://image1.hanatour.com/mobile/common/expo2017/reservation/img_prod_dummy03.jpg" alt=""></span>
+							<div class="intxtBox">
+								<strong><em class="col05">동남아</em>방콕/파타야 5일</strong><!-- em 라벨 :: 기본 레드컬러 col01~col06 -->
+								<p>핵심 관광을 놓치기 싫은 당신에게 추천하는 상품</p>
+								<b>729,000<span>원~</span></b>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" class="prod_in">
+							<span><img src="http://image1.hanatour.com/mobile/common/expo2017/reservation/img_prod_dummy02.jpg" alt=""></span>
+							<div class="intxtBox">
+								<strong><em>동남아</em>방콕/파타야 5일</strong><!-- em 라벨 :: 기본 레드컬러 col01~col06 -->
+								<p>핵심 관광을 놓치기 싫은 당신에게 추천하는 상품</p>
+								<b>729,000<span>원~</span></b>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" class="prod_in">
+							<span><img src="http://image1.hanatour.com/mobile/common/expo2017/reservation/img_prod_dummy03.jpg" alt=""></span>
+							<div class="intxtBox">
+								<strong><em>동남아</em>방콕/파타야 5일</strong><!-- em 라벨 :: 기본 레드컬러 col01~col06 -->
+								<p>핵심 관광을 놓치기 싫은 당신에게 추천하는 상품</p>
+								<b>729,000<span>원~</span></b>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="swiper-pagination" style="display:none"></div>
+				<div class="swiper-pag-num"><span>1</span> / 13</div>
+			</div>
+			<!-- // 스와이프 -->
+		</div>
+		<!-- // 상품 공통 -->
+		
+		<!-- 상품 공통 -->
+		<div class="reservProdBox">
+			<h3>현지투어/교통패스/입장권<a href="#">특가 더보기 ＞</a></h3>
+			
+			<!-- 스와이프 -->
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="#" class="prod_in">
+							<span><img src="http://image1.hanatour.com/mobile/common/expo2017/reservation/img_prod_dummy02.jpg" alt=""></span>
+							<div class="intxtBox">
+								<strong><em class="col03">동남아</em>방콕/파타야 5일</strong><!-- em 라벨 :: 기본 레드컬러 col01~col06 -->
+								<p>핵심 관광을 놓치기 싫은 당신에게 추천하는 상품</p>
+								<b>729,000<span>원~</span></b>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" class="prod_in">
+							<span><img src="http://image1.hanatour.com/mobile/common/expo2017/reservation/img_prod_dummy03.jpg" alt=""></span>
+							<div class="intxtBox">
+								<strong><em class="col05">동남아</em>방콕/파타야 5일</strong><!-- em 라벨 :: 기본 레드컬러 col01~col06 -->
+								<p>핵심 관광을 놓치기 싫은 당신에게 추천하는 상품</p>
+								<b>729,000<span>원~</span></b>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" class="prod_in">
+							<span><img src="http://image1.hanatour.com/mobile/common/expo2017/reservation/img_prod_dummy02.jpg" alt=""></span>
+							<div class="intxtBox">
+								<strong><em>동남아</em>방콕/파타야 5일</strong><!-- em 라벨 :: 기본 레드컬러 col01~col06 -->
+								<p>핵심 관광을 놓치기 싫은 당신에게 추천하는 상품</p>
+								<b>729,000<span>원~</span></b>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" class="prod_in">
+							<span><img src="http://image1.hanatour.com/mobile/common/expo2017/reservation/img_prod_dummy03.jpg" alt=""></span>
+							<div class="intxtBox">
+								<strong><em>동남아</em>방콕/파타야 5일</strong><!-- em 라벨 :: 기본 레드컬러 col01~col06 -->
+								<p>핵심 관광을 놓치기 싫은 당신에게 추천하는 상품</p>
+								<b>729,000<span>원~</span></b>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="swiper-pagination" style="display:none"></div>
+				<div class="swiper-pag-num"><span>1</span> / 13</div>
+			</div>
+			<!-- // 스와이프 -->
+		</div>
+		<!-- // 상품 공통 -->
+		
+		<a href="#" class="fixedBtn" title="바로가기"><img src="http://image1.hanatour.com/mobile/common/expo2017/btn_quickmenu02.png" alt="여행예약관"></a><!-- 온라인예약관 버튼 -->
+	</section>
+	<!-- //컨텐츠 영역 -->
+	
+	<!-- 푸터 -->
+	<footer>
+		<address>
+			(주)하나투어 | 대표 : 김진국 | 주소 : 서울특별시 종로구 인사동 5길 41<br>
+			고객센터 : 1577-1233 | 팩스 : 02-734-0392 <br>
+			개인정보관리 책임자 : 박성재 | 사업자 등록번호 : 102-81-39440<br>
+			통신판매업신고번호 : 종로 01-1806호 | <a href="http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1028139440" target="_blank" title="새창">사업자정보확인</a><br>
+			관광사업자 등록번호 : 제1993-000006호 | 영업보증보험 : 22억1천만원 가입
+		</address>
+		<p>
+			부득이한 사정에 의해 여행일정이 변경되는 경우<br> 여행자의 사전 동의를 받습니다.
+			<!--b>이제작물은 아모레퍼시픽의 <em>아리따글꼴</em>과 <em>한수원글꼴</em>을 사용하여 디자인 되었습니다.</b-->
+			<span>COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED</span>
+		</p>
+	</footer>
+	<!-- // 푸터 -->
+</div>
+
+<!-- 좌측메뉴 -->
+<div id="expoMenuPanel" class=""><!-- 펼칠시 class open 추가 -->
+	<div class="expoMenuCont">
+		<!-- 상단 fixed -->
+		<div class="leftmenu_top">
+			<h2>하나투어 여행박람회를<br>200% 즐겨보세요<span>!</span><a href="#" class="closeSlide" title="닫기"></a></h2>
+			<div>
+				<a href="#">여행박람회</a>
+				<a href="#">온라인예약관</a>
+			</div>
+		</div>
+		<!-- // 상단 fixed -->
+		
+		<div class="innerScroller">
+			<!-- 리스트 -->
+			<div class="in_menuList reservType">
+				<h3>온라인예약관</h3>
+				<ul>
+					<li><a href="#">패키지</a></li>
+					<li><a href="#">테마</a></li>
+					<li><a href="#">항공권</a></li>
+					<li><a href="#">호텔</a></li>
+					<li><a href="#">에어텔/<br>배낭</a></li>
+					<li><a href="#">입장권/교통<br>패스/현지투어</a></li>
+					<li><a href="#">슈퍼세이브</a></li>
+				</ul>
+				
+				<h3>추천여행지</h3>
+				<ul>
+					<li><a href="#">일본·홋카이도</a></li>
+				</ul>
+			</div>
+			<!-- // 리스트 -->
+			
+			<div class="btmBox">
+				<a href="#">여행박람회 <span>무료초대장</span></a>
+				<select title="언어설정">
+					<option>KOREAN</option>
+					<option>ENGLISH</option>
+				</select>
+			</div>
+			
+		</div>
+		
+		
+	</div>
+</div>
+<!-- // 좌측메뉴 -->
+
+<!-- 공유하기 팝업 -->
+<div class="layerPop" style="display:none">
+	<div>
+		<h3>공유하기<a href="#" class="btn_y_Close" title="닫기"></a></h3>
+		
+		<!-- content -->
+		<div class="pop_y_cont">
+			<ul class="snsList">
+				<li><a href="#" class="face">페이스북</a></li>
+				<li><a href="#" class="kakao">카카오톡</a></li>
+			</ul>
+			<div class="url_copy">
+				<a href="#">http://mhotel.hanatour.com/hotel/info.hnt?hotelCode=G45011</a>
+				<p>URL을 길게 누르시면 복사 하실 수 있습니다.</p>
+			</div>
+		</div>
+		<!-- // content -->
+	</div>
+</div>
+<!-- // 공유하기 팝업 -->
+
+
+</body>
+</html>
+
