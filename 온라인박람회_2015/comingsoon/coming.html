@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>온라인박람회 - 하나투어</title>
+<style type="text/css">
+body,form,div,p,h1,h2,h3,h4,h5,h6,dl,dt,dd,ul,ol,li,fieldset,input,textarea,blockquote,th,td {margin:0;padding:0;-webkit-text-size-adjust:none; font-size:14px; font-family:'DroidSansFallback','Apple Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;color:#252525;letter-spacing:-1px}
+table {border-spacing:0;border-collapse:collapse;width:100%}
+table caption {font-size:0;line-height:0;width:0;height:0;visibility:hidden;text-indent:-9999px}
+em,cite,address,dfn,var {font-style:normal}
+dl,ul,ol{list-style:none}
+img,fieldset {border:0}
+input, select, img{vertical-align:middle}
+input, select {-webkit-appearance:none;border-radius:0}
+a {text-decoration:none;color:#333}
+body {width:100%;overflow-x:hidden;-webkit-text-size-adjust:none;text-size-adjust: none;}
+#wrap {position:relative;width:100%;}
+.top_visual {background:url(http://image1.hanatour.com/mobile/common/onbak/images/bg_tit_top.jpg) no-repeat 0 0; background-size:100% 100%; text-align:center; padding-bottom:55px}
+.top_visual span {display:block; padding:15px 0}
+.top_visual span img{ height:44px}
+.top_visual h1 {padding-top:25px}
+.top_visual h1 img {height:223px}
+.onbak_event {background:url(http://image1.hanatour.com/mobile/common/onbak/images/bg_event.png) no-repeat 0 0; background-size:100% 100%; padding:30px 16px 35px}
+.onbak_event h2 {text-align:center; color:#fff; font-size:24px; letter-spacing:-2px}
+.onbak_event > p strong {color:#fff; display:block; margin:30px 0 5px; font-size:16px; margin-right:-50px}
+.onbak_event > p {text-align:left; color:#fff;padding:0 90px 30px 0;background:url(http://image1.hanatour.com/mobile/common/onbak/images/bg_coffee.png) no-repeat right bottom; background-size:70px; min-height:101px; box-sizing:border-box}
+.onbak_event .telBox {padding-right:90px; position:relative}
+.onbak_event .telBox input {border:2px solid #004778; height:45px; padding-left:10px; width:100%; font-size:15px}
+.onbak_event .telBox a {position:absolute;right:0;top:0; color:#fff; background-color:#004778; border-radius:3px; height:49px; box-sizing:border-box; padding-top:15px; width:70px; text-align:center; font-weight:bold}
+.onbak_event .telBox p {color:#002e48;font-size:13px; margin-top:12px; margin-right:-90px}
+.onbak_big5 {background-color:#f7f7f7; text-align:center; padding:30px 0}
+.onbak_big5 h2 { font-weight:normal; color:#dd3e76; font-size:28px}
+.onbak_big5 strong img { height:47px}
+.onbak_big5 p { font-size:13px; color:#444}
+.onbak_big5 ul { margin-top:20px; overflow:hidden}
+.onbak_big5 ul li img {width:80px}
+.onbak_big5 ul li p { font-size:11px}
+.onbak_big5 ul li p strong {display:block; font-size:15px; color:#dd3e76; margin:3px 0}
+.onbak_big5 ul.typeone li { float:left; width:33.3%}
+.onbak_big5 ul.typeone li:nth-child(2) {width:33.4%}
+.onbak_big5 ul.typetwo li { float:left; width:50%}
+.onbak_theme {text-align:center;background-color:#fff; padding:25px 12px}
+.onbak_theme h2 {font-weight:normal;font-size:25px}
+.onbak_theme h2 strong {font-weight:bold}
+.onbak_theme p {font-size:12px}
+.onbak_theme ul {margin-top:20px}
+.onbak_theme ul li {padding-left:75px;border:2px solid #26acd2; position:relative; margin-bottom:5px; height:100px}
+.onbak_theme ul li+li {border-color:#69ab3c}
+.onbak_theme ul li+li+li {border-color:#9a7243}
+.onbak_theme ul li:after {content:'';width:1px;height:90px; position:absolute; left:75px; top:5px; background-color:#26acd2}
+.onbak_theme ul li+li:after {background-color:#69ab3c}
+.onbak_theme ul li+li+li:after {background-color:#9a7243}
+.onbak_theme ul li h3 {position:absolute;left:0;top:50%; margin-top:-18px; font-weight:normal; font-size:16px; width:75px; text-align:center}
+.onbak_theme ul li h3 strong {display:block;font-weight:bold}
+.onbak_theme ul li .table {display:table;width:100%}
+.onbak_theme ul li .table div {display:table-cell; width:33.3%; vertical-align:middle; text-align:center; padding-top:7px}
+.onbak_theme ul li .table div:nth-child(2) {width:33.4%}
+.onbak_theme ul li .table div span img { height:55px}
+.onbak_theme ul li .table div p { font-size:11px}
+.day_intro {text-align:center;background:url(http://image1.hanatour.com/mobile/common/onbak/images/bg_dayintro.png) no-repeat 0 0; background-size:100% 100%; height:206px; padding:0 12px 15px}
+.day_intro h2 {color:#fff; font-size:32px; font-weight:normal; padding-top:15px}
+.day_intro p {color:#fff}
+
+.smallPop {position:fixed;left:0;top:90px;z-index:100;width:100%;background:rgba(0,0,0,0.7);}
+.sm_Inner {margin:0 12px;position: relative; background:#fff; padding:30px 15px 0; border-radius:5px; text-align:center}
+.sm_Inner .oneBtnBox {margin:30px -15px 0;}
+.sm_Inner .oneBtnBox a {color:#fff; font-size:18px; display:block; background-color:#e45b85; text-align:center;border-radius:0 0 4px 4px; font-weight:bold; padding:12px 0}
+.sm_Inner .twoBtnBox {margin:30px -15px 0; overflow:hidden}
+.sm_Inner .twoBtnBox a {float:left;width:50%;color:#fff; font-size:18px; display:block; background-color:#e45b85; text-align:center;border-radius:0 0 4px 0; font-weight:bold; padding:12px 0}
+.sm_Inner .twoBtnBox a:first-child {background-color:#e5e6e9; color:#666;border-radius:0 0 0 4px}
+.sm_Inner .cancleTxt {padding:30px 0 15px;font-size:16px}
+
+.yellowPop {position:fixed;left:0;top:0;height:100%; width:100%; z-index:999}
+.yellowPop > div {margin:0 12px; background-color:#fff;border-radius:5px; margin-top:30%; position:relative; overflow:hidden}
+.yellowPop h3 { background-color:#f8f8f8; padding:15px 20px; font-size:17px; border-bottom:1px solid #ccc; border-radius:5px 5px 0 0}
+.yellowPop h3 a {background:url(http://image1.hanatour.com/mobile/common/comm/btn_pop_yellow_close.png) no-repeat center center; position:absolute;right:0;top:0; width:19px; height:19px; background-size:19px; padding:15px}
+.yellowPop .pop_y_cont {padding:15px}
+.termsTxtList { background-color:#f7f7f7;padding:15px}
+.termsTxtList li {font-size:12px; color:#666; margin-bottom:10px}
+.termsTxtList li:last-child {margin-bottom:0}
+.termsTxtList li strong {display:block; }
+.termsRadio  { text-align:center; padding-top:15px}
+.termsRadio input[type='radio'] {background:url(http://image1.hanatour.com/mobile/common/onbak/images/bg_radio_off.png) no-repeat 0 0;background-size:24px;width:24px; height:24px; margin-right:5px; border:none}
+.termsRadio label:first-child {margin-right:15px}
+.termsRadio span {font-size:16px; color:#666; vertical-align:middle}
+.termsRadio input[type='radio']:checked {background-image:url(http://image1.hanatour.com/mobile/common/onbak/images/bg_radio_on.png)}
+.termsRadio input[type='radio']:checked+span {color:#333}
+.m_btnRed {display:block; background-color:#c83d67; border:1px solid #c83d67; text-align:center; font-size:19px; color:#fff; padding:11px 0; border-radius:5px;font-weight:bold; margin:15px auto; width:150px}
+.modalBg{position:fixed;width:100%;height:100%;background:#000;opacity:0.5;z-index:2;left:0;top:0; z-index:50}
+
+@media all and (max-width:320px) {	/* 320이하일 경우*/
+	.onbak_event h2 {font-size:22px}
+	.top_visual h1 img { height:200px}
+	.onbak_big5 strong img {height:40px}
+	.onbak_theme ul li h3 { font-size:14px; width:60px}
+	.onbak_theme ul li {padding-left:60px;}
+	.onbak_theme ul li:after {left:60px}
+	.onbak_event .telBox p {font-size:12px}
+}
+
+/* footer  20151106 추가 */
+footer { background-color:#f2f2f2; padding:20px 0; border-top:1px solid #ccc}
+footer address {font-size:12px;color:#7f7f82;padding:0 8px;line-height:19px;letter-spacing:-0.10em;text-align:center}
+footer address a  { text-decoration:underline}
+@media all and (max-width:320px) {	/* 320이하일 경우*/
+	footer address {font-size:11px;line-height:17px}
+}
+
+.sponsorship {position:relative;margin-bottom:20px; overflow:hidden; padding:20px 12px}
+.sponsorship h2 {text-align:center; margin-bottom:20px; font-size:24px; font-weight:normal}
+.sponsorship ul {overflow:hidden;}
+.sponsorship ul li {float:left;width:25%; margin-bottom:5px; text-align:center}
+.sponsorship ul li img { height:32px}
+
+
+</style>
+</head>
+
+<body>
+
+<div id="wrap">
+
+	<div class="top_visual">
+		<span><a href="http://m.hanatour.com"><img src="http://image1.hanatour.com/mobile/common/onbak/images/img_logo.png" alt="하나투어 온라인여행박람회"></a></span>
+		<h1><img src="http://image1.hanatour.com/mobile/common/onbak/images/tit_toptxt.png" alt="휴:休 휴식이 필요한 당신께! 리조트/골프/온천 3色겨울휴양 특가전에 여러분을 초대합니다!
+2015 하나투어 온라인 박람회에서 달콤한 휴식을 예약해보세요~ coming Soon. 제 1회 하나투어 온라인 여행박람회 :: 2015년 11월 16일(월) 10시 ~ 11월 29일(일) 24시"></h1>
+	</div>
+	
+	<div class="onbak_event">
+		<h2>온라인 여행박람회 사전알림 이벤트</h2>
+		
+		<p><strong>여행박람회 알림 신청하고 기프티콘 받자!</strong>
+		연락 받으실 고객님의 휴대폰 번호를 적고 '알림신청'을 하시면, 신청하신 분들 중 111명을추첨하여 스타벅스 기프티콘을 발송해 드립니다.</p>
+		<div class="telBox">
+			<input type="tel" title="연락처 입력" placeholder="연락처 입력(예:01012345678)">
+			<a href="#">신청하기</a>
+			<p>※알림은 여행박람회가 시작되는 정각에 문자로 발송해 드립니다.</p>
+		</div>
+	</div>
+	
+	<div class="onbak_big5">
+		<h2>하나투어 온라인 여행박람회</h2>
+		<strong><img src="http://image1.hanatour.com/mobile/common/onbak/images/txt_big5.png" alt="BIG5 특전 증정!"></strong>
+		<p>온라인 박람회 기간 내 상품 예약 및 이벤트 참여 시<br> 푸짐한 특전을 드립니다.</p>
+		
+		<ul class="typeone">
+			<li>
+				<span><img src="http://image1.hanatour.com/mobile/common/onbak/images/img_big5_01.png" alt=""></span>
+				<p><strong>SM면세점<br>기프트카드</strong>박람회 상품 예약자<br>1만원권 전원 증정!</p>
+			</li>
+			<li>
+				<span><img src="http://image1.hanatour.com/mobile/common/onbak/images/img_big5_02.png" alt=""></span>
+				<p><strong>T마크 호텔<br>숙박권</strong>박람회 상품 예약자 중<br>50명 추첨 증정</p>
+			</li>
+			<li>
+				<span><img src="http://image1.hanatour.com/mobile/common/onbak/images/img_big5_03.png" alt=""></span>
+				<p><strong>최대 50만<br>마일리지</strong>리조트/골프/온천<br>3大 테마관 추가 특전</p>
+			</li>
+		</ul>
+		<ul class="typetwo">
+			<li>
+				<span><img src="http://image1.hanatour.com/mobile/common/onbak/images/img_big5_04.png" alt=""></span>
+				<p><strong>전세계 8개국 여행권</strong>왕복 패키지 상품권<br>추첨 증정 Event</p>
+			</li>
+			<li>
+				<span><img src="http://image1.hanatour.com/mobile/common/onbak/images/img_big5_05.png" alt=""></span>
+				<p><strong>액션캠 등 9종 경품</strong>항공권/액션캠/화장품 등<br>추첨 증정 Event</p>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="onbak_theme">
+		<h2><strong>3色 테마관</strong>추가 예약 특전</h2>
+		<p>온라인 박람회 기간 내 리조트/골프/온천 테마관 상품을 예약하시면<br> 푸짐한 특전을 드립니다!</p>
+		
+		<ul>
+			<li>
+				<h3><strong>리조트</strong>테마관</h3>
+				<div class="table">
+					<div>
+						<span><img src="http://image1.hanatour.com/mobile/common/onbak/images/img_theme3_01.png" alt=""></span>
+						<p>최대 50만<br>마일리지 적립!</p>
+					</div>
+					<div>
+						<span><img src="http://image1.hanatour.com/mobile/common/onbak/images/img_theme3_02.png" alt=""></span>
+						<p>셀카렌즈/<br>라텍스 목베개 등</p>
+					</div>
+					<div>
+						<span><img src="http://image1.hanatour.com/mobile/common/onbak/images/img_theme3_03.png" alt=""></span>
+						<p>전통 사케/<br>마사지 등</p>
+					</div>
+				</div>
+			</li>
+			
+			<li>
+				<h3><strong>골프</strong>테마관</h3>
+				<div class="table">
+					<div>
+						<span><img src="http://image1.hanatour.com/mobile/common/onbak/images/img_theme3_04.png" alt=""></span>
+						<p>고급 아이언 등<br>골프채!</p>
+					</div>
+					<div>
+						<span><img src="http://image1.hanatour.com/mobile/common/onbak/images/img_theme3_05.png" alt=""></span>
+						<p>최대 10만원<br>사전예약할인</p>
+					</div>
+					<div>
+						<span><img src="http://image1.hanatour.com/mobile/common/onbak/images/img_theme3_06.png" alt=""></span>
+						<p>라텍스 목베개/<br>클럽하우스 중식 등</p>
+					</div>
+				</div>
+			</li>
+			
+			<li>
+				<h3><strong>온천</strong>테마관</h3>
+				<div class="table">
+					<div>
+						<span><img src="http://image1.hanatour.com/mobile/common/onbak/images/img_theme3_07.png" alt=""></span>
+						<p>마일리지<br>트리플(X3배)적립!</p>
+					</div>
+					<div>
+						<span><img src="http://image1.hanatour.com/mobile/common/onbak/images/img_theme3_08.png" alt=""></span>
+						<p>미키모토<br>바디 용품</p>
+					</div>
+					<div>
+						<span><img src="http://image1.hanatour.com/mobile/common/onbak/images/img_theme3_09.png" alt=""></span>
+						<p>전신 마사지<br>업그레이드</p>
+					</div>
+				</div>
+			</li>
+		</ul>
+		
+		<p>※ 테마관 특전 적용 여부는 상품별로 상이하므로,<br>예약 시 상세 일정표를 참고해주십시오.</p>
+		
+	</div>
+	
+	<div class="day_intro">
+		<h2>11월 16일</h2>
+		<p>전세계 8개국 무료여행 EVENT 등 더 많은 특전으로 제1회 하나투어 온라인 여행박람회가 고객 여러분을 찾아갑니다!</p><!-- 20151106 수정 -->
+	</div>
+	
+	<!-- 20151106 추가 -->
+	<div class="sponsorship">
+		<h2>하나투어 온라인 여행박람회<br>후원 및 협찬사</h2>
+		<ul>
+			<li><img src="http://image1.hanatour.com/mobile/common/onbak/images/img_com_sponsorship01.png" alt="SM면세점"></li>
+			<li><img src="http://image1.hanatour.com/mobile/common/onbak/images/img_com_sponsorship02.png" alt="센터마크호텔"></li>
+			<li><img src="http://image1.hanatour.com/mobile/common/onbak/images/img_com_sponsorship03.png" alt="티마크호텔"></li>
+			<li><img src="http://image1.hanatour.com/mobile/common/onbak/images/img_com_sponsorship04.png" alt="다음카카오"></li>
+			<li><img src="http://image1.hanatour.com/mobile/common/onbak/images/img_com_sponsorship05.png" alt="필리핀관광청"></li>
+			<li><img src="http://image1.hanatour.com/mobile/common/onbak/images/img_com_sponsorship06.png" alt="J파크아일랜드"></li>
+			<li><img src="http://image1.hanatour.com/mobile/common/onbak/images/img_com_sponsorship07.png" alt="뫼뵌픽"></li>
+			<li><img src="http://image1.hanatour.com/mobile/common/onbak/images/img_com_sponsorship08.png" alt="OK캐시백"></li>
+			<li><img src="http://image1.hanatour.com/mobile/common/onbak/images/img_com_sponsorship09.png" alt="SK탤레콤"></li>
+			<li><img src="http://image1.hanatour.com/mobile/common/onbak/images/img_com_sponsorship10.png" alt="엘리샤코이"></li>
+		</ul>
+	</div>
+	<!-- // 20151106 추가 -->
+	
+	<!-- 20151106 푸터 추가 -->
+	<footer>
+		<address>
+				(주)하나투어 | 대표 : 최현석 | 주소 : 서울특별시 종로구 인사동 5길 41<br>
+				고객센터 : 1577-1233 | 팩스 : 02-734-0392 <br>
+				개인정보관리 책임자 : 최종윤 | 사업자 등록번호 : 102-81-39440<br>
+				통신판매업신고번호 : 종로 01-1806호 | <a href="http://www.ftc.go.kr/info/bizinfo/communicationList.jsp" target="_blank" title="새창">사업자정보확인</a><br>
+				관광사업자 등록번호 : 제1993-000006호 | 영업보증보험 : 22억1천만원 가입<br>
+				부득이한 사정에 의해 여행일정이 변경되는 경우 여행자의 사전 동의를 받습니다. <br><br>
+				COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+		</address>
+	</footer>
+	<!-- // 20151106 푸터 추가 -->
+	
+</div>
+
+<!-- 팝업 개인정보 수집 동의 -->
+<div class="yellowPop" style="display:none">
+	<div>
+		<h3>개인정보 수집/이용에 대한 안내<a href="#" class="btn_y_Close" data-role="none" title="닫기"></a></h3>
+		
+		<!-- content -->
+		<div class="pop_y_cont">
+			<ul class="termsTxtList">
+				<li><strong>* 수집하는 개인정보의 항목 :</strong>휴대전화번호</li>
+				<li><strong>* 개인정보의 수집 목적 :</strong>온라인 여행박람회 사전 알림 신청</li>
+				<li><strong>* 개인정보의 보유 및 이용기간 :</strong>여행박람회 사전 알림 문자 전송 후 즉시 파기</li>
+				<li><strong>* 동의 거부권 및 거부 시 불이익 사항 </strong>고객님은 동의를 거부하실 수 있으며, 동의 거부 시 온라인 여행박람회 사전알림 문자신청이 불가합니다.</li>
+			</ul>
+			
+			<div class="termsRadio">
+				<label><input type="radio" title="동의함" name="sec01" data-role="none" checked>동의합니다.</label>
+				<label><input type="radio" title="동의안함" name="sec01" data-role="none">동의하지 않습니다.</label>
+			</div>
+			
+			<a href="#" data-role="none" class="m_btnRed">확인</a>
+			
+		</div>
+		<!-- // content -->
+	</div>
+</div>
+<!-- // 팝업 개인정보 수집 동의 -->
+
+
+<!-- 팝업 : 동의했을경우 -->
+<div class="smallPop" style="top:120px;display:none">
+	<div class="sm_Inner">
+		<p class="cancleTxt">하나투어 온라인 여행박람회<br>알림이 정상적으로 신청되었습니다.<br>감사합니다.</p>
+		<div class="oneBtnBox"><a href="#" data-role="none">확인</a></div>
+	</div>
+</div>
+<!-- // 팝업 : 동의했을경우 -->
+
+<!-- 팝업 : 동의X -->
+<div class="smallPop" style="top:120px;display:none">
+	<div class="sm_Inner">
+		<p class="cancleTxt">개인정보 수집/이용에 대해<br>동의하지 않으시면<br>본 이벤트 참여가 불가합니다.</p>
+		<div class="oneBtnBox"><a href="#" data-role="none">확인</a></div>
+	</div>
+</div>
+<!-- // 팝업 : 동의X -->
+
+<div class="modalBg" style="display:none"></div><!-- 팝업딤처리 -->
+<!-- 팝업 -->
+
+
+
+</body>
+</html>
+
