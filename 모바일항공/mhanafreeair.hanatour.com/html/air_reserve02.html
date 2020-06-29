@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>예약하기 - 하나프리항공</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/air.css">
+<link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.5.css">
+<script src="../js/jquery-2.1.3.min.js" type="text/javascript"></script>
+<script src="../js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<script src="../js/iscroll.carousel.js" type="text/javascript"></script>
+<script src="../js/iscroll.swipeview.js" type="text/javascript"></script>
+<script src="../js/fixedPostiion.js" type="text/javascript"></script>
+<script src="../js/common.js" type="text/javascript"></script>
+<script src="../js/reservation.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+	<header id="header" class="subHead">
+		<h1><a href="#" data-role="none"><img src="../images/air/btn_nlogo.png" alt="하나Free 항공"></a></h1><!-- 20150426 수정 -->
+		<a href="#" id="" class="backBtn" data-role="none"><img src="../images/air/btn_headprev.png" alt="이전페이지"></a>
+	</header>
+
+
+	<div id="container" class="subCont"><!-- 컨텐츠 sub 영역 -->
+
+		<!-- 검색결과 -->
+		<section>
+			
+			<h2 class="pagTit">정보입력</h2><!-- 20150427 수정 -->
+			<!-- 20150427 삭제 ol class="reserveStep">
+				<li class="on">약관동의</li>  완료단계 class="checked" 추가
+				<li class="">정보입력</li>
+				<li class="">예약완료</li>
+			</ol-->
+				
+			<div class="garyBox01">
+				<h2 class="stit01">1. 예약자 정보 입력</h2>
+				
+				<!-- 예약자입력없는경우 -->
+				<div class="InforSect">
+					<h3 class="s_stit01">예약자</h3>
+					<div class="whiteInfor"><a class="InfoPop" href="#popReserve01" data-role="none">예약자의 정보를 입력해 주세요.</a></div>
+					
+				</div>
+				<!-- //예약자입력없는경우 end -->
+				
+				<!-- 예약자입력있는 경우 start -->
+				<div class="InforSect">
+					<h3 class="s_stit01">예약자</h3>
+					<a class="InfoPop grayCo" href="#popReserve01" data-role="none">정보 수정</a>
+					
+					<ul class="inInforBox">
+						<li class="twoType">
+							<div>
+								<h4>한글성명</h4>
+								<strong>홍길동</strong>
+							</div>
+							<div>
+								<h4>법정생년월일</h4>
+								<span>19801225</span>
+							</div>
+						</li>
+						<li>
+							<h4>전화번호</h4>
+							<span>010-7777-7777</span>
+						</li>
+						<li>
+							<h4>이메일</h4>
+							<span>hahahah@hanatour.com</span>
+						</li>
+					</ul>
+				</div>
+				<!-- // 예약자입력있는 경우 end -->
+				
+				<h2 class="stit01">2. 탑승자 정보 입력</h2>
+				
+				<div class="InforSect">
+					<h3 class="s_stit02">성인 1</h3>
+					<a class="InfoPop redCo" href="#popReserve02" data-role="none">정보 수정</a>
+					
+					<ul class="inInforBox marB15">
+						<li class="twoType">
+							<div>
+								<h4>한글성명</h4>
+								<strong>홍길동(성인)</strong>
+							</div>
+							<div>
+								<h4>법정생년월일</h4>
+								<span>19801225</span>
+							</div>
+						</li>
+						<!-- 20150521 추가 -->
+						<li>
+							<h4>영문성명</h4>
+							<span>HONG GILDONG</span>
+						</li>
+						<!-- // 20150521 추가 end -->
+						<li>
+							<h4>전화번호</h4>
+							<span>010-7777-7777</span>
+						</li>
+						<li>
+							<h4>이메일</h4>
+							<span>hahahah@hanatour.com</span>
+						</li>
+						<li>
+							<h4>하나투어클럽</h4>
+							<span class="c_red">1044444</span>
+						</li>
+					</ul>
+				</div>
+				
+				
+				<div class="InforSect ">
+					<h3 class="s_stit02">성인 2</h3>
+					<div class="whiteInfor"><a class="InfoPop" href="#popReserve02" data-role="none">성인2의 정보를 입력해 주세요.</a></div>
+				</div>
+				
+				
+				<!-- 요청사항입력 start -->
+				<!-- 20150427 삭제 div class="txtAreBox">
+					<textarea data-role="none" title="요청사항입력" placeholder="요청사항을 입력해 주세요.(선택사항)"></textarea>
+					<span><em class="c_red">0</em> / 120</span>
+				</div-->
+				<!-- 요청사항입력 end -->
+				
+				
+				<!-- 20150409삭제h2 class="stit01">3. 도우미 여행사 선택</h2-->
+				
+				<!-- 20150409삭제 div class="doumiBox">
+					<p>고객님의 즐거운 여행을 도와줄 도우미 여행사가 지정됩니다. 특정 여행사 선택이 없으실 경우, 자동으로 도우미 여행사가 추천됩니다.</p>
+					<a href="pop_travel.html" data-role="none" class="slideUpPop">도우미 여행사 선택</a>
+				</div-->
+				
+				<!-- 도우미여행사 선택된 경우 -->
+				<!--20150409삭제 dl class="doumiBox_ch">
+					<dt>
+						하나비즈투어
+						<a href="pop_travel.html" data-role="none" class="slideUpPop">수정</a>
+					</dt>
+					<dd>
+						<ul>	
+							<li>[지 번] 서울시 마포구 염리동 8-44 2층</li>
+							<li>[도로명] 서울시 마포구 신촌로 200, 2층 (염리동)</li>
+							<li><a href="tel:02-365-7626" data-role="none"><img src="../images/air/bg_reser_tel.png" alt="전화하기"> 02-365-7626</a></li>
+						</ul>
+					</dd>
+				</dl-->
+				
+				<!-- // 도우미여행사 선택된 경우 end -->
+				
+				<!-- 유의사항 start -->
+				<dl class="inforList01">
+					<dt>유의사항</dt>
+					<dd>
+						
+						<ul>
+							<!-- 20170203 추가 -->
+							<li>정확한 여권정보 (영문명/여권번호/유효기간 등)는 민원24(나의 생활정보)에서 직접 확인할 수 있습니다.
+								<br>(본인 공인인증서 필요) <a href="http://www.minwon.go.kr/main?a=AA210LifeSvcInfoApp" data-role="none" class="c_red" target="_blank" title="새창">[여권정보 조회 바로가기]</a>
+							</li>
+							<!-- // 20170203 추가 -->
+							<li>예약후 성명 변경은 불가하오니 실제 탑승하실 분의 여권상 영어성명을 입력하여 주십시오.</li>
+							<li>영문성/영문이름은 영문스펠링만 입력해 주십시오.(여권에 띄어쓰기 및 '-'표시는 입력시 예약이 되지 않습니다.)</li>
+							<li>승객구분은 출발일의 나이 기준으로 적용되며, 소아는 출발일 기준 만 2세~12세 미만, 유아는 만 2세 미만입니다.</li>
+							<li>유아요금의 경우 귀국일 기준으로 만 2세 미만인 경우에만 적용이 가능한 항공사가 있으므로 요금이 변동될 수 있습니다.</li>
+							<li>보호자없이 혼자 여행하는 만 12~17세 미만 청소년의 경우 운송항공사에 따라 탑승이 제한될 수 있습니다.(항공권 구매전 확인 필수)</li>
+                            <li><strong>고객 상담 문의 처리시간 : </strong>평일 기준 09:00~16:00 / 주말, 공휴일 제외</li>
+                            <li><strong>업무 시간 :</strong><br>평일- 09:00~17:00 (발권/상담 가능)<br>주말 및 공휴일 : 09:00~17:00(발권가능 / 상담,변경,취소,환불 등 업무처리불가)</li>
+						</ul>
+					</dd>
+				</dl>
+				<!-- // 유의사항 end -->
+				
+				<div class="fullBtn">
+					<a href="#" data-role="none">이전</a>
+					<a href="#" data-role="none">예약완료</a>
+				</div>
+				
+			</div>
+		</section>
+		
+		
+		<footer class="newFoot">
+			<ul>
+				<li><a href="#" data-role="none">로그인</a></li><!-- 20150427 추가 -->
+				<!-- 20150521 삭제 li><a href="#" data-role="none">PC버전</a></li-->
+				<li><a href="#" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+			</ul>
+			<div>
+				<a href="#" data-role="none">이용약관</a>|
+				<a href="#" data-role="none">개인정보처리방침</a>|
+				<a href="#" data-role="none">여행약관</a>|
+				<a href="#" data-role="none">사업자정보확인</a>
+			</div>
+			<address>
+					㈜ 하나투어 | 대표자: 김진국 | 사업자등록번호 : 102-81-39440<br>
+					통신판매업신고번호 : 종로01-1806호 | 개인정보관리 책임자 : 박성재<br>
+					[110-160]서울특별시 종로구 인사동 5길 41 ㈜ 하나투어<br>
+					하나투어상담센터 : <a href="tel:1577-1233" data-role="none">1577-1233</a> | FAX : 02-734-0392<br>
+					이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> | 호스팅 서비스 사업자 : ㈜하나투어<br>
+					관광사업자 등록번호 : 제1933-000006호 | 영업보증보험 : 22억 1천만원 가입<br>
+					COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+	
+			</address>
+		</footer>
+
+	</div><!-- //컨텐츠 영역 -->
+</div>
+
+
+
+
+<!-- Picker 창 -->
+<div id="overlayPanel">
+</div>
+
+
+<!-- pop start  -->
+<div id="popReserve01">
+	<div class="popReserve01">
+		<!-- 20150511 삭제 div class="headerMar"></div-->
+		<div><!-- 20150511 class="header" 삭제 -->
+			<h3>예약자 정보수정<a href="#" class="closeOverlayPanel" data-role="none" title="레이어닫기"></a></h3>
+		</div>
+		<div class="innerScroller">
+			<div>
+				<div class="popIncont01">
+					<p class="tTxt">실시간 예약상황 알림 서비스를 위해<br> <span class="c_red">핸드폰과 이메일주소는 정확하게 입력</span>해 주세요.</p>
+					
+					<ul class="formBox01">
+					<li class="disabled"><!-- 입력된(로그인) 경우 class="disabled" 20150406 추가-->
+						<strong><label for="laTy01">한글설명</label></strong><!-- 20150406 label 추가 -->
+						<input type="text" disabled id="laTy01" title="한글성명" data-role="none" value="홍길동">
+					</li>
+					<li>
+						<strong><label for="laTy02">법정생년월일</label></strong><!-- 20150406 label 추가 -->
+						<input type="tel" id="laTy02" title="법정생년월일" data-role="none" placeholder="예) 19810225">
+					</li>
+					<li>
+						<strong><label for="laTy03">전화번호</label></strong><!-- 20150406 label 추가 -->
+						<input type="tel" id="laTy03" title="전화번호" data-role="none" placeholder="예) 01012344567">
+					</li>
+					<li>
+						<strong><label for="laTy04">이메일</label></strong><!-- 20150406 label 추가 -->
+						<input type="email" id="laTy04" title="이메일" data-role="none" placeholder="예) hana@hanatour.com">
+					</li>
+				</ul>
+					
+					<div class="s_redBtn"><a href="#" data-role="none">수정</a></div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // pop end -->
+
+
+<!-- pop start  -->
+<div id="popReserve02">
+	<div class="popReserve01">
+		<!-- 20150511 삭제 div class="headerMar"></div-->
+		<div><!-- 20150511 class="header" 삭제 -->
+			<h3>성인1 정보입력<a href="#" class="closeOverlayPanel" data-role="none" title="레이어닫기"></a></h3>
+		</div>
+		<div class="innerScroller">
+			<div class="popIncont01">
+				
+				<label class="reservCh"><input type="checkbox" class="redCheck" data-role="none"> 예약자와 동일</label>
+				
+				<ul class="formBox01">
+					<li class="marB0 disabled"><!-- 아래공간 없을경우 class="marB0"추가, 입력된(로그인) 경우 class="disabled" 20150406 추가 -->
+						<strong><label for="inTy01">한글설명</label></strong><!-- 20150406 label 추가 -->
+						<input type="text" id="inTy01" disabled title="한글성명" data-role="none" value="홍길동"> 
+					</li>
+					<li class="marB0">
+						<strong><label for="inTy02">영문명</label></strong><!-- 20150406 label 추가 -->
+						<input type="text" id="inTy02" title="영문명" data-role="none">
+					</li>
+					<li>
+						<strong><label for="inTy03">영문이름</label></strong><!-- 20150406 label 추가 -->
+						<input type="text" id="inTy03" title="영문이름" data-role="none">
+					</li>
+					<!-- 라디오 박스  class="radiType" 추가 -->
+					<li class="marB0 radiType">
+						<strong>성별</strong>
+						<div>
+							<label><input type="radio" title="남성" name="sec01" data-role="none" checked><span>남성</span></label>
+							<label><input type="radio" title="여성" name="sec01" data-role="none"><span>여성</span></label>
+						</div>
+					</li>
+					<!-- 라디오 박스 end -->
+					<li>
+						<strong><label for="inTy04">법정생년월일</label></strong><!-- 20150406 label 추가 -->
+						<input type="tel" title="법정생년월일" id="inTy04" data-role="none" placeholder="예) 19810225">
+					</li>
+					<li class="marB0">
+						<strong><label for="inTy05">전화번호</label></strong><!-- 20150406 label 추가 -->
+						<input type="tel" title="전화번호" id="inTy05" data-role="none" placeholder="예) 01012344567">
+					</li>
+					<li>
+						<strong><label for="inTy06">이메일</label></strong><!-- 20150406 label 추가 -->
+						<input type="email" title="이메일" id="inTy06" data-role="none" placeholder="예) hana@hanatour.com">
+					</li>
+					
+					<li class="disabled">
+						<strong><label for="inTy07">하나투어 클럽</label></strong><!-- 20150406 label 추가 -->
+						<input type="tel" title="하나투어클럽" disabled id="inTy07" data-role="none" placeholder="번호를 입력해주세요">
+					</li>
+					
+				</ul>
+				
+				<div class="clubser"><a href="#" data-role="none">하나투어클럽 회원번호 조회</a></div>
+				
+				<!-- 20170203 추가 -->
+				<p class="tTxt02 marT20">정확한 여권정보 (영문명/여권번호/유효기간 등)는 민원24(나의 생활정보)에서 직접 확인할 수 있습니다.
+					<br>(본인 공인인증서 필요) <a href="http://www.minwon.go.kr/main?a=AA210LifeSvcInfoApp" data-role="none" class="c_red" target="_blank" title="새창">[여권정보 조회 바로가기]</a>
+				</p>
+				<!-- // 20170203 추가 -->
+				
+				<div class="s_redBtn"><a href="#" data-role="none">확인</a></div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>결제하기 - 하나프리항공</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/air.css">
+<link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.5.css">
+<script src="../js/jquery-2.1.3.min.js" type="text/javascript"></script>
+<script src="../js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<script src="../js/iscroll.carousel.js" type="text/javascript"></script>
+<script src="../js/iscroll.swipeview.js" type="text/javascript"></script>
+<script src="../js/fixedPostiion.js" type="text/javascript"></script>
+<script src="../js/common.js" type="text/javascript"></script>
+<script src="../js/reservation.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+
+
+<div id="wrap">
+	<header id="header" class="subHead">
+		<h1><a href="#" data-role="none"><img src="../images/air/btn_nlogo.png" alt="하나Free 항공"></a></h1><!-- 20150426 수정 -->
+		<a href="#" id="" class="backBtn" data-role="none"><img src="../images/air/btn_headprev.png" alt="이전페이지"></a>
+	</header>
+
+
+	<div id="container" class="subCont"><!-- 컨텐츠 sub 영역 -->
+
+		
+		<section id="payStep"> <!-- 20150403 id 추가 -->
+			
+			<h2 class="pagTit">부가정보입력</h2><!-- 20150427 수정 -->
+			<!-- 20150427 삭제 ol class="reserveStep tyPay">결제하기 class="tyPay"추가
+				<li class="on">부가정보입력</li>완료단계 class="checked" 추가
+				<li class="">결제진행</li>
+				<li class="">결제완료</li>
+			</ol-->
+			
+			<div class="garyBox02">
+				<div class="payContTop01">
+					<strong class="c_red">H1412026044</strong>
+					<span><em>(</em>예약번호<em>)</em></span>
+					<strong class="rigTxt01">결제마감 1일전</strong>
+				</div>
+				<p class="inforTxt">여권정보를 모두 입력한 경우에만 결제로 진행이 가능합니다.<br>임의로 여권정보를 입력하신 경우출국 전 여권정보를 반드시 수정해주시길 바랍니다.</p>
+				
+				<!-- 여권정보입력 start -->
+				<div class="payRedBox">
+					<h2 class="payTit01 on"><a href="#" data-role="none">여권정보 입력</a></h2><!-- 선택시 h2에 class="on" 추가하면 아래태그 block 처리 되있음 -->
+					<div class="payInputBox">
+						<dl>
+							<dt class="lineNone"><strong>성인 1 홍길동</strong>HONG GILDONG / 19811213 / 남성
+								<div class="prevHis"><a href="#" data-role="none" class="gradBtn">이전기록</a></div><!-- 20150426 추가 -->
+							</dt>
+							<dd>
+								<!-- 20150426 삭제 dt안으로 이동 div class="prevHis"><a href="#" data-role="none">이전기록</a></div-->
+								
+								<ul class="payIpList">
+									<li>
+										<strong><label for="payPut01">여권번호</label></strong>
+										<input type="tel" id="payPut01" data-role="none">
+									</li>
+									<li>
+										<strong><label for="payPut02">여권만료일</label></strong>
+										<input type="date" id="payPut02" data-role="none">
+									</li>
+									<li>
+										<strong><label for="payPut03">국적</label></strong>
+										<select title="국적선택" id="payPut03" data-role="none">
+											<option>한국</option>
+											<option></option>
+											<option></option>
+											<option></option>
+										</select>
+									</li>
+									<li>
+										<strong><label for="payPut04">발행국</label></strong>
+										
+										<select title="발행국선택" id="payPut04" data-role="none">
+											<option>한국</option>
+											<option></option>
+											<option></option>
+											<option></option>
+										</select>
+									</li>
+								</ul>
+								
+								<div class="prevHis02"><a href="#" data-role="none">저장</a></div><!-- 20150426 추가 -->
+								
+							</dd>
+							<dt><strong>성인 2 홍길동</strong>HONG GILDONG / 19811213 / 남성
+								<div class="prevHis"><a href="#" data-role="none" class="gradBtn">이전기록</a></div><!-- 20150426 추가 -->
+							</dt>
+							<dd>
+								<!-- 20150426 삭제 dt안으로 이동 div class="prevHis"><a href="#" data-role="none">이전기록</a></div-->
+								
+								<ul class="payIpList">
+									<li>
+										<strong><label for="payPut05">여권번호</label></strong>
+										<input type="tel" id="payPut05" data-role="none">
+									</li>
+									<li>
+										<strong><label for="payPut06">여권만료일</label></strong>
+										<input type="date" id="payPut06" data-role="none">
+									</li>
+									<li>
+										<strong><label for="payPut07">국적</label></strong>
+										<select title="국적선택" id="payPut07" data-role="none">
+											<option>한국</option>
+											<option></option>
+											<option></option>
+											<option></option>
+										</select>
+									</li>
+									<li>
+										<strong><label for="payPut08">발행국</label></strong>
+										
+										<select title="발행국선택" id="payPut08" data-role="none">
+											<option>한국</option>
+											<option></option>
+											<option></option>
+											<option></option>
+										</select>
+									</li>
+								</ul>
+								
+								<div class="prevHis02"><a href="#" data-role="none">저장</a></div><!-- 20150426 추가 -->
+								
+							</dd>
+						</dl>
+					</div>
+					
+				</div>
+				<!-- // 여권정보입력 end -->
+				
+				
+				<!-- 체류지 등록/변경 start -->
+				<div class="payRedBox">
+					<h2 class="payTit01 on"><a href="#" data-role="none">체류지 등록/변경</a></h2><!-- 선택시 h2에 class="on" 추가하면 아래태그 block 처리 되있음 -->
+					<div class="payInputBox">
+						<ul class="bulOneList">
+							<li>체류지 정보는 입국 시 참조자료로서, 부정확해도 큰 문제가 없으므로 아시는 만큼 주소를 입력하시면 됩니다.</li>
+							<li>등록 후 수정 가능합니다.</li>
+							<li>우편번호를 모르실 경우 '9999'로 입력해주세요.</li>
+						</ul>
+						
+						<dl>
+							<dt><strong>성인 1 홍길동</strong>HONG GILDONG / 19811213 / 남성</dt>
+							<dd>
+								<ul class="payIpList">
+									<li>
+										<strong><label for="payPut09">체류 국가</label></strong>
+										<input type="text" id="payPut09" value="미국" data-role="none" disabled>
+									</li>
+									<li>
+										<strong>체류 주/도시</strong>
+										<a href="pop_city02.html" data-role="none" class="btnSelectType slideUpPop">선택해주세요.</a><!-- 20150406 a태그로 수정 -->
+									</li>
+									<li>
+										<strong><label for="payPut11">체류 주소</label></strong>
+										<input type="text" id="payPut11" data-role="none">
+									</li>
+									<li>
+										<strong><label for="payPut12">우편번호</label></strong>
+										<input type="tel" id="payPut12" data-role="none">
+									</li>
+									<li>
+										<strong>거주국</strong>
+										<a href="pop_city02.html" data-role="none" class="btnSelectType slideUpPop">한국</a><!-- 20150406 a태그로 수정 -->
+									</li>
+								</ul>
+								<div class="prevHis02"><a href="#" data-role="none">저장</a></div><!-- 20150426 추가 -->
+							</dd>
+							<dt><strong>성인 2 홍길동</strong>HONG GILDONG / 19811213 / 남성</dt>
+							<dd>
+								<ul class="payIpList">
+									<li>
+										<strong><label for="payPut14">체류 국가</label></strong>
+										<input type="text" id="payPut14" value="미국" data-role="none" disabled>
+									</li>
+									<li>
+										<strong>체류 주/도시</strong>
+										<a href="pop_city02.html" data-role="none" class="slideUpPop btnSelectType">선택해주세요.</a><!-- 20150406 a태그로 수정 -->
+									</li>
+									<li>
+										<strong><label for="payPut16">체류 주소</label></strong>
+										<input type="text" id="payPut16" data-role="none">
+									</li>
+									<li>
+										<strong><label for="payPut17">우편번호</label></strong>
+										<input type="tel" id="payPut17" data-role="none">
+									</li>
+									<li>
+										<strong>거주국</strong>
+										<a href="pop_city02.html" data-role="none" class="slideUpPop btnSelectType">한국</a><!-- 20150406 a태그로 수정 -->
+									</li>
+								</ul>
+								<!-- 20150426 추가 -->
+								<div class="prevHis02">
+									<label for="same01" class="sameHis"><input type="checkbox" id="same01" class="redCheck" data-role="none"> 성인1과 동일</label>
+									<a href="#" data-role="none">저장</a>
+								</div>
+								<!-- 20150426 추가 end -->
+							</dd>
+						</dl>
+					</div>
+					
+				</div>
+				<!-- // 체류지 등록/변경 end -->
+				
+				<!-- 증빙서류 등록/변경 20150426 추가 -->
+				<div class="payRedBox">
+					<h2 class="payTit01 on"><a href="#" data-role="none">증빙서류 등록/변경</a></h2><!-- 선택시 h2에 class="on" 추가하면 아래태그 block 처리 되있음 -->
+					<div>
+						<ul class="bulOneList">
+							<li>팩스번호(032-582-0069)로 증빙서류를 보내주신 후, 팩스 발송일시를 등록해 주세요.</li>
+							<li>팩스로 증빙서류를 보내지 않은 상태에서 발송일시를 등록하실 경우 확인이 불가능할 수 있습니다.</li>
+						</ul>
+						
+						<!-- 성인1-->
+						<div class="proofBox">
+							<h3><strong>성인 2 홍길동</strong>HONG GILDONG / 19811213 / 남성</h3>
+							<ul>
+								<li><strong>등록방식</strong>팩스전송 (032-582-0069)</li>
+								<li><strong>필수 증빙서류</strong>
+									<ol>
+										<li>1. 6개월 이상의 현지입학허가서</li>
+										<li>2. 여권사본</li>
+										<li>3. 재학증명서(원본)</li>
+										<li>4. 학생비자(학생본인)</li>
+										<li>5. 학생증 사본</li>
+									</ol>
+								</li>
+							</ul>
+							<div class="pofDay">
+								<strong>발송날짜</strong>
+								<div class="tableWr">
+									<span class="w50"><input type="date" class="" id="" data-role="none" title="날짜입력"></span>
+									<span class="cePad5"></span>
+									<span class="w50">
+										<select title="발송시간" data-role="none">
+											<option>00:00</option>
+										</select>
+									</span>
+								</div>
+							</div>
+							<div class="prevHis02"><a href="#" data-role="none">저장</a></div>
+						</div>
+						<!-- 성인1 end-->
+						
+						<!-- 성인2-->
+						<div class="proofBox">
+							<h3><strong>성인 2 홍길동</strong>HONG GILDONG / 19811213 / 남성</h3>
+							<ul>
+								<li><strong>등록방식</strong>팩스전송 (032-582-0069)</li>
+								<li><strong>필수 증빙서류</strong>
+									<ol>
+										<li>1. 6개월 이상의 현지입학허가서</li>
+										<li>2. 여권사본</li>
+										<li>3. 재학증명서(원본)</li>
+										<li>4. 학생비자(학생본인)</li>
+										<li>5. 학생증 사본</li>
+									</ol>
+								</li>
+							</ul>
+							<div class="pofDay">
+								<strong>발송날짜</strong>
+								<div class="tableWr">
+									<span class="w50"><input type="date" class="" id="" data-role="none" title="날짜입력"></span>
+									<span class="cePad5"></span>
+									<span class="w50">
+										<select title="발송시간" data-role="none">
+											<option>00:00</option>
+										</select>
+									</span>
+								</div>
+							</div>
+							<div class="prevHis02"><a href="#" data-role="none">저장</a></div>
+						</div>
+						<!-- 성인2 end-->
+					</div>
+				</div>
+				<!-- //증빙서류 등록/변경 20150426 추가 end -->
+				
+				
+				<dl class="inforList01">
+					<dt>유의사항</dt>
+					<dd>
+						<ul>
+							<!-- 20170203 추가 -->
+							<li>정확한 여권정보 (영문명/여권번호/유효기간 등)는 민원24(나의 생활정보)에서 직접 확인할 수 있습니다.
+								<br>(본인 공인인증서 필요) <a href="http://www.minwon.go.kr/main?a=AA210LifeSvcInfoApp" data-role="none" class="c_red" target="_blank" title="새창">[여권정보 조회 바로가기]</a>
+							</li>
+							<!-- // 20170203 추가 -->
+							<li>여권만료일이 출발일로부터 6개월 미만인 경우 출발 전에 여권기간을 연장하시기 바랍니다.</li>
+							<li>여권유효기간이 6개월 미만인 경우 입국허가요건이 국가별로 상이하므로 외교통상부 사이트에서 확인하시기 바랍니다.</li>
+							<li>소아/유아 탑승객 동반여권인 경우는 반드시 동반여권 탑승객을 선택하셔야 합니다.</li>
+							
+							<!-- 20170203 수정/추가 -->
+							<li>등록하신 여권번호/국적/생년월일/여권만료일은 변경사항이 있는 경우 출국 72시간 전까지 재등록이 가능합니다.<br>(단, 러시아항공,하문항공,에어아스타나항공,홍콩항공의 경우 결제 전 정확한 여권 정보 입력해야 함)</li>
+							<li><span class="c_red">여권을 분실한 적이 있는 경우</span> 분실여권 등록 여부를 반드시 확인하시고, 분실여권인 경우 <span class="c_red">새 여권번호로 변경하셔야 합니다.</span> </li>
+							<li><span class="c_red">여권정보가 다르거나 누락된 경우, 또는 분실 신고된 여권번호인 경우</span> 항공편 탑승 및 입국이 거절될 수 있으며, 이로 인해 <span class="c_red">발생되는 문제는 당사에서 책임지지 않습니다.</span></li>
+							<!-- // 20170203 수정/추가 -->
+							
+							<li class="c_red">출국 전 경유 및 목적지 국가의 비자 필요 여부를 반드시 직접 확인하여 출국 시 문제가 되지 않도록  비자를 준비하셔야 합니다.<br>비자 미소지로 출국 또는  해당 국가의 입국이 거절될 경우 발생하는 문제 및 그에 따른 발생 비용이나 항공권 환불 수수료는 당사에서 책임지지 않습니다.</li>
+							<li>편도 여정으로 항공권을 구입하실 경우,  입국 국가의 비자를 반드시 소지하셔야 합니다. 비자를 소지하지 않는 경우에는 해당국가로의 출국이 거부됩니다.</li>
+							<li>미국을 경유하거나 체류하는 경우 반드시 목적에 맞는 비자를 소지해야 하며, 단순 관광,상용,경유로 90일 이내  미국을 체류하실 경우 전자여권을 소지하고 ESTA(전자여행허가제)를 통해 비자 승인을 받으신 후 승인번호를 출력하여 출국하셔야 합니다.<br> 전자여행허가(ESTA) 홈페이지(<a href="https://esta.cbp.dhs.gov" class="c_red" target="_blank" title="새창" data-role="none">https://esta.cbp.dhs.gov</a>) / 미국대사관 연락처 : 02-397-4114</li>
+							
+							<li>쉥겐 국가(그리스, 지중해 등)를 체류하는 경우 출입국시 여권의 유효기간은 쉥겐 국가를 떠나는 시점을 기준으로 최소 90일 이상 남아 있어야 합니다.<br>(자세한 내용은 <a href="http://www.0404.go.kr" target="_blank" title="새창" class="c_red" data-role="none">http://www.0404.go.kr</a> 참조) </li>
+							<li>고객나이 구분변경(성인/아동/유아)시에는 여행사에 요청하시기 바랍니다.</li>
+							<li><strong>상담 문의 답변 및 처리가능 시간 : </strong><br>평일 기준 10:00~17:00 / 주말, 공휴일 제외</li>
+							<li><strong>업무 시간 :</strong><br>평일은 09:00~17:00 (발권/상담 가능)<br>토요일은 09:00~16:00 (발권 가능)<br>일요일 및 공휴일은 변경, 환불 ,취소, 상담 등 업무 처리 불가</li>
+						</ul>
+					</dd>
+				</dl>
+				
+				<a href="#" data-role="none" class="m_btnRed mr12">다음</a>
+
+			</div>
+			
+				
+		</section>
+		
+		
+		<footer class="newFoot">
+			<ul>
+				<li><a href="#" data-role="none">로그인</a></li><!-- 20150427 추가 -->
+				<!-- 20150521 삭제 li><a href="#" data-role="none">PC버전</a></li-->
+				<li><a href="#" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+			</ul>
+			<div>
+				<a href="#" data-role="none">이용약관</a>|
+				<a href="#" data-role="none">개인정보처리방침</a>|
+				<a href="#" data-role="none">여행약관</a>|
+				<a href="#" data-role="none">사업자정보확인</a>
+			</div>
+			<address>
+					㈜ 하나투어 | 대표자: 김진국 | 사업자등록번호 : 102-81-39440<br>
+					통신판매업신고번호 : 종로01-1806호 | 개인정보관리 책임자 : 박성재<br>
+					[110-160]서울특별시 종로구 인사동 5길 41 ㈜ 하나투어<br>
+					하나투어상담센터 : <a href="tel:1577-1233" data-role="none">1577-1233</a> | FAX : 02-734-0392<br>
+					이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> | 호스팅 서비스 사업자 : ㈜하나투어<br>
+					관광사업자 등록번호 : 제1933-000006호 | 영업보증보험 : 22억 1천만원 가입<br>
+					COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+	
+			</address>
+		</footer>
+
+	</div><!-- //컨텐츠 영역 -->
+</div>
+
+<!-- 우측메뉴 -->
+<div id="userPanel">
+	<div class="innerScroller"><!-- 2015-04-14 추가 -->
+		<div class="r_inTop">
+			<!-- 로그아웃일경우 -->
+			<div class="outCont" style="display:none">
+				<p>
+					하나Free항공이 처음이신가요?
+					<a href="#" data-role="none">하나투어 <strong>회원가입하기</strong></a>
+				</p>
+				<!-- 20150427 삭제 a href="#" class="loginBtn" data-role="none">로그인</a-->
+			</div>
+			<!-- // 로그아웃일경우 end -->
+		
+			<!-- 로그인일경우-->
+			<div class="inCont" style="display:no ne">
+				<h3><strong>김하나</strong> 님 환영합니다.</h3>
+				<!-- 20150427 삭제 a href="#" class="loginBtn" data-role="none">로그아웃</a-->
+				<div>
+					하나투어 마일리지
+					<strong>2,000 <img src="../images/air/bg_menumile.png" alt="마일리지"></strong>
+				</div>
+			</div>
+			<!-- // 로그인일경우 end -->
+			
+		</div>
+		
+		<div class="r_inBtm">
+			<a href="#" class="reservBtn" data-role="none">예약내역<!-- 20150506 삭제 span>2건</span--></a>
+			
+			<ul class="r_btmList">
+				<li><a href="#" data-role="none">홈</a></li>
+				<li><a href="#" data-role="none">주요도시</a></li>
+				<li><a href="#" data-role="none">기획전/이벤트</a></li>
+				<li><a href="#" data-role="none">설정</a></li>
+			</ul>
+			
+		</div>
+	</div><!-- //2015-04-14 추가 -->
+</div>
+
+<!-- Picker 창 -->
+<div id="overlayPanel">
+</div>
+
+</body>
+</html>
+

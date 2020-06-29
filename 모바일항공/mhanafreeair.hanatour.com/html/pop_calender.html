@@ -1,0 +1,80 @@
+
+<div class="popReserve01">
+	<div class="header pickerTop">
+		<h3 class="datepickerTit"><span class="tit">출국/중간/귀국일 선택</span><span class="firstMonth"></span><a href="#" class="closeOverlayPanel" data-role="none" title="레이어닫기"></a></h3>
+		<ul class="pickerDayList">
+			<li>일</li>
+			<li>월</li>
+			<li>화</li>
+			<li>수</li>
+			<li>목</li>
+			<li>금</li>
+			<li>토</li>
+		</ul>
+	</div>
+	<div class="headPicMargin"></div>
+	
+	<div class="overflowWrap innerScroller">
+		<div class="view">
+			<div id="datePicker"></div>
+		</div>
+	</div>
+
+	<div class="footPicMargin"></div>
+	<div class="pickerBtm footer">
+		<form id="detepicker-form" name="detepicker-form">
+			<!-- 다구간 : dateS=출국일 / dateM=중간일 / dateE=귀국일 -->
+			<!-- 왕복 : dateS=출국일 / dateE=귀국일 -->
+			<!-- 편도 : dateS=출국일 -->
+			<input type="hidden" name="dateS" value="" />
+			<input type="hidden" name="dateM" value="" />
+			<input type="hidden" name="dateE" value="" />
+		</form>
+		
+		<!-- 왕복 -->
+		<div class="twoType">
+			<span class="dayCell">출국일<strong class="date-start">&nbsp;</strong></span>
+			<span class="dayCell return"><!-- 20150520 귀국미정으로 진입시 class="lastPr0" 추가. 추가될경우 체류기간 선택 disabled 처리되어야함 -->
+				<span class="txtBox">귀국일<strong class="date-end">&nbsp;</strong></span>
+				
+				<!-- 미정 체크시 -->
+				<span class="selBox" style="display:none">
+					<em>체류기간 선택</em>
+					<select data-role="none" title="체류기간 선택">
+						<option>5일</option>
+						<option>7일</option>
+						<option>14일</option>
+						<option>20일</option>
+						<option>1개월</option>
+						<option>3개월</option>
+						<option>6개월</option>
+						<option>1년</option>
+					</select>
+				</span>
+				<!-- 미정 체크시  -->
+				<span class="daylabel">
+<!-- 2015-04-26 수정 -->
+					<input type="checkbox" class="redCheck" id="not" value="N" data-role="none"><label for="not">미정</label>
+<!-- //2015-04-26 수정 -->
+				</span>
+			</span><!-- 달력 날짜 선택시 자동입력 -->
+		</div>
+		<!-- // 왕복 end -->
+		
+		<!-- 편도 -->
+		<div class="oneType" style="display:none">
+			<span class="dayCell">출국일<strong class="date-start">&nbsp;</strong></span>
+		</div>
+		<!-- // 편도 end --> 
+		
+		<!-- 다구간 -->
+		<div class="threeType" style="display:none">
+			<span class="dayCell">출국일<strong class="date-start">&nbsp;</strong></span>
+			<span class="dayCell">중간일<strong class="date-middle">&nbsp;</strong></span>
+			<span class="dayCell">귀국일<strong class="date-end">&nbsp;</strong></span>
+		</div>
+		<!-- // 다구간 end --> 
+
+		<a href="#" data-role="none">확인</a>
+	</div>
+</div>

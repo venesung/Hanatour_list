@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>예약내역 상세 - 하나프리항공</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/air.css">
+<link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.5.css">
+<script src="../js/jquery-2.1.3.min.js" type="text/javascript"></script>
+<script src="../js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<script src="../js/iscroll.carousel.js" type="text/javascript"></script>
+<script src="../js/iscroll.swipeview.js" type="text/javascript"></script>
+<script src="../js/fixedPostiion.js" type="text/javascript"></script>
+<script src="../js/common.js" type="text/javascript"></script>
+<script src="../js/reservation.js" type="text/javascript"></script>
+<!-- 2015-04-27 추가 -->
+<script type="text/javascript">
+$(document).ready(function () {
+	//개별적으로 이벤트 처리를 하고자 할때에는 각 버튼에 임의 class명을 주고 작업해 주세요
+	/*
+	$('#overlayPanel [임의 class명]').overlayPanelOpener({
+		target: "#overlayPanel02",
+		cover: true,
+		dynamicData: true,					// 동적으로 data가 불러와지는 경우 : true
+		onBeforeRender: function(that){		// ajax가 call되기 전 호출
+			console.log("onBeforeRender")
+		},
+		onAfterRender: function(that){		// data가 로딩되고 DOM이 만들어진 후
+			console.log("onAfterRender")
+		},
+		onSlideUp: function(that){			// slide up transitions 완료된 후
+			console.log("onSlideUp")
+		}
+	});
+	*/
+
+
+	//아래 코드는 항공바우처/항공바우처 메일전송/여정확인서/여정확인서 메일전송 팝업을 한번에 이벤트 등록하는 코드 샘플 입니다
+	$('#overlayPanel .slideUpPop.localEvent').overlayPanelOpener({
+		target: "#overlayPanel02",
+		cover: true,
+		dynamicData: true,					// 동적으로 data가 불러와지는 경우 : true
+		onBeforeRender: function(that){		// ajax가 call되기 전 호출
+			console.log("onBeforeRender")
+		},
+		onAfterRender: function(that){		// data가 로딩되고 DOM이 만들어진 후
+			console.log("onAfterRender")
+		},
+		onSlideUp: function(that){			// slide up transitions 완료된 후
+			console.log("onSlideUp")
+		}
+	});
+});
+</script>
+<!-- //2015-04-27 추가 -->
+</head>
+
+<body>
+
+<div id="wrap">
+	<header id="header" class="subHead">
+		<h1><a href="#" data-role="none"><img src="../images/air/btn_nlogo.png" alt="하나Free 항공"></a></h1><!-- 20150426 수정 -->
+		<a href="#" id="" class="backBtn" data-role="none"><img src="../images/air/btn_headprev.png" alt="이전페이지"></a>
+	</header>
+
+
+	<div id="container" class="subCont"><!-- 컨텐츠 sub 영역 -->
+
+		<!-- 검색결과 -->
+		<section>
+			<h2 class="pagTit">예약내역 상세</h2><!-- 20150426 추가 -->
+			<div class="scInforTop payType">
+				<!--div class="payContTop01">
+					<strong class="c_red">H1412026044</strong>
+					<span><em>(</em>예약번호<em>)</em></span>
+					<strong class="rigTxt01">결제마감 1일전</strong>
+				</div 삭제 -->
+			
+				<!-- 20160523 변경 -->
+				<div class="payContTop02 cancle"><!-- 취소완료인경우만 class="cancle"추가 -->
+					<div>
+						<strong>예약번호</strong>
+						<em>H1412026842<b>취소완료</b></em>
+					</div>
+				</div>
+				<!-- // 20160523 변경 -->
+				
+				<strong>
+					<img src="../images/main/BB.png" alt="">대한항공
+					<span>왕복</span>
+				</strong>
+				<div>
+					<div class="sectIn01 lineNone"><!-- 편도, 다구간일경우 class="typeBg02" 추가 -->
+						<div><strong>서울</strong>(인천 ICN)</div>
+						<div><strong>도쿄</strong>(나리타 NRT)</div>
+					</div>
+					<div class="inforTop_c "> <!-- 하나일경우 class="pdTb15" 추가 -->
+						<div><span class="c_red">출국일</span><strong>2014.03.23(수)&nbsp; 10:20</strong><em class="c_ok">예약가능</em></div>
+						<div><span class="c_red">귀국일</span><strong>2014.03.23(수)&nbsp; 10:20</strong><em class="c_ok">예약가능</em></div>
+					</div>
+					<p class="ifTxtBtm">성인 2명, 소아1명, 유아 1명, 비즈니스석</p>
+				</div>
+			</div>
+
+			<div class="garyBox02">
+				<!-- 긴급연락처 20160616 추가 -->
+				<div class="InforSect emerGency">
+					<h3>긴급연락처</h3>
+					
+					<ul class="inInforBox marB15">
+						<li>
+							<h4>영문 성명</h4>
+							<span>KIM HANA</span>
+						</li>
+						<li>
+							<h4>휴대전화</h4>
+							<span>01012341234</span>
+						</li>
+					</ul>
+				</div>
+				<!-- // end 긴급연락처 20160616 추가 -->
+			
+				<!-- 예약정보 start -->
+				<div class="payRedBox">
+					<h2 class="payTit01 on"><a href="#" data-role="none">예약정보</a></h2><!-- 선택시 h2에 class="on" 추가하면 아래태그 block 처리 되있음 -->
+					<div class="endtopCont01">
+						<dl class="endDlList01">
+							<dt>결제시한</dt>
+							<dd class="c_red"><strong class="cellRp">즉시결제</strong></dd>
+							<dt>예약일</dt>
+							<dd><span class="cellRp">2015. 06. 29(월) 21:35</span></dd>
+							<dt>예약상태</dt>
+							<dd><strong>좌석확정, 요금확정, 결제완료, 출발확정</strong></dd>
+							<dt>요금조건</dt>
+							<dd>성인</dd>
+							<dt>예약인원</dt>
+							<dd><strong>2명</strong></dd>
+							
+							<!-- 20160616 에어아시아 추가 -->
+							<dt class="marB0">에어아시아 예약코드</dt>
+							<dd class="c_red marB0"><strong>A52BTGE5</strong></dd>
+							<!-- // 20160616 에어아시아 추가 -->
+						</dl>
+						
+						<!-- 20160616 에어아시아 추가 -->
+						<div class="airAsiaBox">
+							<div class="fullBtn">
+								<a href="#" data-role="none">에어아시아<br>온라인 체크인</a>
+								<a href="#" data-role="none">에어아시아X<br>셀프서비스</a>
+							</div>
+							
+							<ul class="bulOneList">
+								<li>항공 예약은 에어아시아를 통해 진행되며 변경 또는 취소하려면 에어아시아 홈페이지에 직접 연락하셔야 합니다.</li>
+								<li>고객님이 에어아시아에 직접 연락하여 항공을 변경 또는 취소하거나 에어아시아가 고객님의 항공 일정을 변경하는 경우, 하나투어에는 이러한 정보가 전달되지 않는 점을 양지해 주시기 바랍니다.</li>
+								<li>이러한 변경 사항은 고객님의 하나투어 일정에 반영되지 않으므로 이후에 에어아시아로부터 직접 받으시는 일정 변경에 대한 e-메일도 반드시 출력해 두시기 바랍니다.</li>
+							</ul>
+							
+						</div>
+						<!-- // 20160616 에어아시아 추가 -->
+						
+						<div class="txt_r"><a href="pop_boarding.html" data-role="none" class="sGrayBtn01 slideUpPop">탑승자 정보 / E-티켓 보기</a></div>
+					</div>
+				</div>
+				<!-- // 예약정보 end -->
+				
+				
+				
+				<!-- 결제정보 start -->
+				<div class="payRedBox">
+					<h2 class="payTit01 on"><a href="#" data-role="none">결제정보</a></h2><!-- 선택시 h2에 class="on" 추가하면 아래태그 block 처리 되있음 -->
+					<div class="endtopCont01">
+						<dl class="endDlList01 dotLineTy">
+							<dt>기본운임 (성인 2명,소아 2명,유아 2명)</dt>
+							<dd>1,560,000원</dd>
+							<dt>유류할증료 등 제세공과금</dt>
+							<dd>937,800원</dd>
+						</dl>
+						
+						<dl class="endTotal01 reserType">
+							<dt>총 요금</dt>
+							<dd><strong class="c_red">2,746,800</strong><em>원</em></dd>
+						</dl>
+						
+						<p class="inforTxt c_red marB0">유류할증료/제세공과금은 항공사 사정 및 환율변동에 의해 매일 변경되며 발권 당일 환율에 따라 적용됩니다.</p>
+						<div class="txt_r"><a href="pop_terms.html" data-role="none" class="sGrayBtn01 slideUpPop">요금규정</a></div>
+						
+						<div class="lnGrayBtn"><a href="pop_tax.html" class="slideUpPop" data-role="none">유류할증료 + 제세공과금 변동내역</a></div><!-- 20150506 추가 -->
+						
+					</div>
+					
+				</div>
+				<!-- // 결제정보 end -->
+				
+				<!-- 상세일정 start -->
+				<div class="payRedBox">
+					<h2 class="payTit01 on"><a href="#" data-role="none">상세일정</a></h2><!-- 선택시 h2에 class="on" 추가하면 아래태그 block 처리 되있음 -->
+					
+					<div>
+						<dl class="deScheBox marB15">
+							<dt>출국 상세일정<span class="c_ok">예약가능</span></dt>
+							<dd>
+								<ul class="detailList">
+									<li>
+										<span><strong>11:30</strong>03/23(월)</span>
+										<strong>인천 출발</strong>
+										
+										<!-- 20160726 탑승수속 문구 추가 -->
+										<p>
+											<span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em>
+											<em>공동운항 KE5209 <em class="c_blue">*실제운항:대한항공</em></em>
+											<strong class="boardingTxt">탑승수속은<b class="c_red">[산동항공]</b>카운터 이용</strong><!-- 탑승수속 문구 추가 -->
+										</p> 
+										<!-- // 20160726 탑승수속 문구 추가 -->
+										
+									</li>
+									<li>
+										<span><strong>13:20</strong>03/23(월)</span>
+										<strong>오사카(간사이) 도착</strong>
+										<p><span class="waitBox">대기</span> 1시간 50분 소요</p><!-- 대기 class="waitBox" -->
+									</li>
+									<li>
+										<span><strong>11:30</strong>03/23(월)</span>
+										<strong>오사카(간사이) 출발</strong>
+										<p>
+											<span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em>
+											<strong class="boardingTxt">탑승수속은 <b class="c_red">[산동항공]</b>카운터 이용</strong><!-- 탑승수속 문구 추가 -->
+										</p>
+									</li>
+									<li>
+										<span><strong>14:50</strong>03/23(월)</span>
+										<strong>도쿄(나리타) 도착</strong>
+									</li>
+								</ul>
+								
+								<div class="de_btmSect">
+									<strong>총 소요시간 : 20시간 20분</strong>
+									<span class="waitBox">총 대기</span> 04시간 45분
+									<span class="airBox">총 비행</span> 15시간 35분
+								</div>
+								
+								
+								
+								<!-- 20150422 삭제 span class="de_btnStyle">03.23(수) ~ 03.26(목) / 체류기간 4일</span-->
+								
+							</dd>
+							<dt>귀국 상세일정<span class="c_ok">예약가능</span></dt>
+							<dd>
+								<ul class="detailList">
+									<li>
+										<span><strong>11:30</strong>03/23(월)</span>
+										<strong>인천 출발</strong>
+										<p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p> <!-- 비행 class="airBox" -->
+									</li>
+									<li>
+										<span><strong>13:20</strong>03/23(월)</span>
+										<strong>오사카(간사이) 도착</strong>
+										<p><span class="waitBox">대기</span> 1시간 50분 소요</p><!-- 대기 class="waitBox" -->
+									</li>
+									<li>
+										<span><strong>11:30</strong>03/23(월)</span>
+										<strong>오사카(간사이) 출발</strong>
+										<p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p>
+									</li>
+									<li>
+										<span><strong>14:50</strong>03/23(월)</span>
+										<strong>도쿄(나리타) 도착</strong>
+									</li>
+								</ul>
+								
+								<div class="de_btmSect">
+									<strong>총 소요시간 : 20시간 20분</strong>
+									<span class="waitBox">총 대기</span> 04시간 45분
+									<span class="airBox">총 비행</span> 15시간 35분
+								</div>
+							</dd>
+							
+							<!-- 귀국미정일경우 20150515 추가 -->
+							<dt>귀국 상세일정</dt>
+							<dd>
+								<ul class="detailList">
+									<li>
+										<span class="open"><strong class="c_red">OPEN</strong></span>
+										<strong>인천 출발</strong>
+										<p><span class="airBox">비행</span> </p> <!-- 비행 class="airBox" -->
+									</li>
+									<li>
+										<strong>오사카(간사이) 도착</strong>
+									</li>
+								</ul>
+								<div class="de_btmSect">
+									<p class="c_gary">출발일 기준 최대 체류기간 내 귀국편 티켓을 해당 항공사 또는 도우미 여행사로 예약하시기 바랍니다.</p>
+								</div>
+							</dd>
+							<!-- // 귀국미정일경우 20150515 추가 end -->
+							
+							
+						</dl>
+					</div>
+					
+				</div>
+				<!-- // 상세일정 end -->
+				
+				<!-- 요청사항 start -->
+				<!-- 20150427 삭제 div class="payRedBox">
+					<h2 class="payTit01 on"><a href="#" data-role="none">요청사항</a></h2>
+					
+					<div class="padBox01">
+						<p class="c_gary">결제는 어떻게 하면 되나요? 분할결제 가능한가요?</p>
+					</div>
+					
+				</div-->
+				<!-- // 요청사항 end -->
+				
+				<!-- eTA(전자여행허가제도) 발급 안내 20160311 -->
+				<div class="payRedBox">
+					<h2 class="payTit01 on"><a href="#" data-role="none">eTA(전자여행허가제도) 발급 안내</a></h2><!-- 선택시 h2에 class="on" 추가하면 아래태그 block 처리 되있음 -->
+					<div class="endtopCont01">
+						<p>항공편으로 캐나다 입국 및 경유시 미리 인터넷을 통해 eTA(전자여행허가제도)를 신청해서 허가를 받아야 합니다.<br>2016년 3월 15일부터는 의무화가 되며, eTA 신청절차를 통해 반드시 허가를 받아야 입국이 가능해집니다. <br><br>
+
+※자세히 보기:<br><a href="http://www.cic.gc.ca/english/visit/eta-facts-ko.asp" target="_blank" title="새창">http://www.cic.gc.ca/english/visit/eta-facts-ko.asp</a>
+</p>
+					</div>
+				</div>
+				<!-- // eTA(전자여행허가제도) 발급 안내 20160311 -->
+				
+				
+				<!-- 도우미여행사 start -->
+				<div class="payRedBox">
+					<h2 class="payTit01 on"><a href="#" data-role="none">도우미 여행사</a></h2><!-- 선택시 h2에 class="on" 추가하면 아래태그 block 처리 되있음 -->
+					<div>
+						<dl class="doumiBox_ch payType">
+							<dt>
+								<strong>하나비즈투어</strong>
+								<a href="pop_customer.html" data-role="none" class="slideUpPop">1:1 문의</a>
+							</dt>
+							<dd>
+								<ul>	
+									<li>[지 번] 서울시 마포구 염리동 8-44 2층</li>
+									<li>[도로명] 서울시 마포구 신촌로 200, 2층 (염리동)</li>
+									<li><a href="tel:02-365-7626" data-role="none" class="c_red"><img src="../images/air/bg_reser_tel.png" alt="전화하기"> 02-365-7626</a></li>
+								</ul>
+							</dd>
+						</dl>
+						<ul class="bulOneList">
+							<li><strong>상담 문의 답변 및 처리가능 시간 : </strong><br>평일 기준 10:00 ~ 17:00 / 주말, 공휴일 제외</li>
+							<li><strong>업무 시간 : </strong><br>평일은 09:00 ~ 17:00 (발권/상담 가능)<br>토요일은 09:00 ~ 16:00 (발권 가능)<br>일요일 및 공휴일은 변경, 환불, 취소, 상담 등 업무 처리 불가</li>
+						</ul>
+					</div>
+					<!-- 문의내역 추가 20150420 -->
+					<a href="pop_customer02.html" data-role="none" class="slideUpPop">
+						<dl class="qnaBox firstQna"><!-- 첫번째 문의내역 dl에 firstQna -->
+							<dt class="inquiry">문의요청<span>2015.04.17 15:43</span></dt><!-- 문의 요청 class="inquiry" -->
+							<dd><p>학생인데 학생할인되나요?</p></dd>
+						</dl>
+					</a>
+					<a href="pop_customer02.html" data-role="none" class="slideUpPop">
+						<dl class="qnaBox">
+							<dt class="reply">답변완료<span>2015.04.17 15:43</span></dt><!-- 답변완료 class="reply" -->
+							<dd><p>날씨가 궁금해요~</p></dd>
+						</dl>
+					</a>
+					<a href="pop_customer02.html" data-role="none" class="slideUpPop">
+						<dl class="qnaBox">
+							<dt class="reply">답변완료<span>2015.04.17 15:43</span></dt><!-- 답변완료 class="reply" -->
+							<dd><p>요즘 도쿄가 좋다고 하던데 지금날씨에 두꺼운 옷을 준비해야하나요?요즘 도쿄가 좋다고 하던데 지금날씨에 두꺼운 옷을 준비해야하나요?요즘 도쿄가 좋다고 하던데 지금날씨에 두꺼운 옷을 준비해야하나요?요즘 도쿄가 좋다고 하던데 지금날씨에 두꺼운 옷을 준비해야하나요?요즘 도쿄가 좋다고 하던데 지금날씨에 두꺼운 옷을 준비해야하나요?요즘 도쿄가 좋다고 하던데 지금날씨에 두꺼운 옷을 준비해야하나요?</p></dd>
+						</dl>
+					</a>
+					<!-- 문의내역 추가 20150420 end -->
+					
+				</div>
+				<!-- // 도우미여행사 end -->
+				
+				<!-- 안내사항 start -->
+				<dl class="inforList01">
+					<dt>안내사항</dt>
+					<dd>
+						<ul>
+							<li>유류할증료/제세공과금은 항공사 사정 및 환율변동에 의해 매일 변경되며 발권 당일 환율에 따라 적용 됩니다.</li>
+							<li>모든 예약상황이 OK가 될 경우 결제가 가능하며, 결제마감일(발권마감)까지 결제하지 않으시면 예약이 자동 취소됩니다.</li>
+							<li>항공요금, 규정 및 스케줄은 항공사 사정에 의하여 사전공지 없이 변경될 수 있습니다.</li>
+							<li>유류할증료 등 제세공과금 금액은 결제일 기준으로 당일 환율이 적용되어 재계산되므로 예약일과 결제일이 상이한 경우 변동될 수 있습니다.</li>
+							<li>여권 유효기간은 출발일 기준으로 6개월 이상 남아있어야 합니다.</li>
+							<li>경유지 및 목적지 국가에서 비자가 필요할 수 있으니 출발 전 비자 필요유무를 확인하고 발급받으시기 바랍니다.</li>
+							<li>편도 여정으로 항공권을 구입하실 경우 상대편 입국 국가의 비자를 반드시 소지하고 계셔야 합니다. (일부 국가는 복편 항공권을 소지하지 않으면 탑승수속이 거절될 수 있으니 유의하시기 바랍니다.)</li>
+							<li>비자를 소지하지 않은 경우에는 해당 국가로의 출국이 거부됩니다.</li>
+							<li>여권 및 비자 상담은 예약시 지정된 도우미 여행사나 여권과(여권관련), 해당국가의 대사관이나 영사관(비자관련)에 문의하시기 바랍니다.</li>
+							<li>항공사 규정상 중복예약을 하는 경우에 사전경고 없이 모든 예약이 취소될 수 있으므로 이에 따른 피해는 고객님께서 부담하셔야 합니다.</li>
+						</ul>
+					</dd>
+				</dl>
+				<!-- // 안내사항 end -->
+				
+				<!-- 20150714 버튼명수정 start-->
+				<div class="fullBtn" style="display:none">
+					<a href="#" data-role="none">목록으로</a>
+					<a href="#" data-role="none">예약취소</a>
+				</div>
+				<!-- // 20150714 버튼명수정 end -->
+				
+				<a href="#" style="display:n ne" data-role="none" class="m_btnRed mr12">목록으로</a> <!-- 버튼1개일경우-->
+
+			</div>
+			
+
+			
+				
+		</section>
+		
+		
+		<footer class="newFoot">
+			<ul>
+				<li><a href="#" data-role="none">로그인</a></li><!-- 20150427 추가 -->
+				<!-- 20150521 삭제 li><a href="#" data-role="none">PC버전</a></li-->
+				<li><a href="#" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+			</ul>
+			<div>
+				<a href="#" data-role="none">이용약관</a>|
+				<a href="#" data-role="none">개인정보처리방침</a>|
+				<a href="#" data-role="none">여행약관</a>|
+				<a href="#" data-role="none">사업자정보확인</a>
+			</div>
+			<address>
+					㈜ 하나투어 | 대표자: 김진국 | 사업자등록번호 : 102-81-39440<br>
+					통신판매업신고번호 : 종로01-1806호 | 개인정보관리 책임자 : 박성재<br>
+					[110-160]서울특별시 종로구 인사동 5길 41 ㈜ 하나투어<br>
+					하나투어상담센터 : <a href="tel:1577-1233" data-role="none">1577-1233</a> | FAX : 02-734-0392<br>
+					이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> | 호스팅 서비스 사업자 : ㈜하나투어<br>
+					관광사업자 등록번호 : 제1933-000006호 | 영업보증보험 : 22억 1천만원 가입<br>
+					COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+	
+			</address>
+		</footer>
+
+	</div><!-- //컨텐츠 영역 -->
+</div>
+
+
+
+
+<!-- Picker 창 -->
+<div id="overlayPanel">
+</div>
+
+<!-- 2015-04-27 추가 -->
+<div id="overlayPanel02">
+</div>
+<!-- //2015-04-27 추가 -->
+
+</body>
+</html>
+
