@@ -1,0 +1,242 @@
+<!--
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>information - Hanatour Air</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script src="../js/jquery-2.2.3.min.js" type="text/javascript"></script>
+<script src="../js/swiper.min.js" type="text/javascript"></script>
+<script src="../js/jquery-ui-custom.js" type="text/javascript"></script>
+<script src="../js/ht.calendar.js" type="text/javascript"></script>
+<script src="../js/m.globalflight.js" type="text/javascript"></script>
+</head>
+<body>
+-->
+
+
+<script type="text/javascript">
+	$('#overlayPanel').on('open.loadpop', function (e, data) {
+   		if (GLOBALFLIGHT !== undefined && typeof GLOBALFLIGHT.initPeople === 'function') GLOBALFLIGHT.initPeople();
+   	});
+</script>
+
+<!-- pop -->
+<div class="slideUpPop" style="display:block">
+	
+	<div class="header tyCent">
+		<h2>INVOICE<a href="#" class="closeOverlayPanel" title="pop close"></a></h2>
+	</div>
+	
+	<div class="popContainer">
+		
+		<div class="invoiceTop">
+			<p>Prints and e-mail are only possible in PC ver.</p>
+			<div>
+				<strong>INVOICE</strong>
+				<span>Booking NO. <em>G160015212312</em></span>
+			</div>
+		</div>
+		
+		<h3 class="titGray">Flight Informaiton</h3>
+		<!-- detailBox -->
+		<div class="detailBox">
+			<!-- Depart -->
+			<div class="Depart">
+				<h2 class="tit"><strong>Depart</strong><em>Fri, May 05</em></h2>
+				
+				<div class="timeListBox">
+					<!-- time top -->
+					<div class="inTimeTop">
+						<strong>ICN<br><span>10:20</span></strong>
+						<strong>BKK<br><span>15:10</span></strong>
+						<div class="cityStop">
+							<strong>1 Stop</strong>
+							<p>Total Duration : 5h 30m</p>
+						</div>
+					</div>
+					<!-- // time top -->
+					
+					<!-- time list -->
+					<ol class="inTimeCont">
+						<li>
+							<div class="titLeft">
+								<strong>ICN</strong>
+								<span>Fri. Jan 1<b>10:20</b></span>
+							</div>
+							<div class="contRig">
+								<strong class="titPort">Incheon Intl Airport</strong>
+								<span>Thai aways / TG629</span>
+								<b>Economy</b>
+								<div class="label"><em>2h20m</em></div>
+							</div>
+						</li>
+						<li>
+							<div class="titLeft">
+								<strong>HKG</strong>
+								<span>Fri. Jan 1<b>10:20</b></span>
+							</div>
+							<div class="contRig stop"> <!-- 경유 대기시간일경우 class="stop" 추가 -->
+								<strong class="titPort">Hongkong Intl Airport</strong>
+								<div class="label"><em>1h stop</em></div>
+							</div>
+						</li>
+						<li>
+							<div class="titLeft">
+								<strong>HKG</strong>
+								<span>Fri. Jan 1<b>10:20</b></span>
+							</div>
+							<div class="contRig">
+								<strong class="titPort">Hongkong Intl Airport</strong>
+								<span>Thai aways / TG629</span>
+								<b>Economy</b>
+								<p class="codeShare">
+									<strong>Code Share:</strong>
+									<span>Actual operate by <b>Singapore airlines</b></span>
+								</p>
+								<div class="label"><em>2h20m</em></div>
+							</div>
+						</li>
+						<li>
+							<div class="titLeft">
+								<strong>BKK</strong>
+								<span>Fri. Jan 1<b>10:20</b></span>
+							</div>
+							<div class="contRig">
+								<strong class="titPort">Bangkok Suvarnabumi Airport</strong>
+							</div>
+						</li>
+					</ol>
+					<!-- // time list -->
+				</div>
+				
+				<div class="baggage">
+					<strong>Baggage allowance</strong>
+					<div>
+						<span>TG <em>No fee up to 2pc</em></span>
+						<span>SG <em>No fee up to 23KG</em></span>
+					</div>
+				</div>
+			</div>
+			<!-- // Depart -->
+			
+			<!-- return -->
+			<div class="return">
+				<h2 class="tit tyRe"><strong>Return</strong><em>Sun, May 08</em></h2><!-- 리턴일경우 tyRe 추가 -->
+				
+				<div class="timeListBox">
+					<!-- time top -->
+					<div class="inTimeTop">
+						<strong>ICN<br><span>10:20</span></strong>
+						<strong>BKK<br><span>15:10</span></strong>
+						<div class="cityStop">
+							<strong>1 Stop</strong>
+							<p>Total Duration : 5h 30m</p>
+						</div>
+					</div>
+					<!-- // time top -->
+					
+					<!-- time list -->
+					<ol class="inTimeCont">
+						<li>
+							<div class="titLeft">
+								<strong>ICN</strong>
+								<span>Fri. Jan 1<b>10:20</b></span>
+							</div>
+							<div class="contRig">
+								<strong class="titPort">Incheon Intl Airport</strong>
+								<span>Thai aways / TG629</span>
+								<b>Economy</b>
+								<div class="label"><em>2h20m</em></div>
+							</div>
+						</li>
+						<li>
+							<div class="titLeft">
+								<strong>BKK</strong>
+								<span>Fri. Jan 1<b>10:20</b></span>
+							</div>
+							<div class="contRig">
+								<strong class="titPort">Bangkok Suvarnabumi Airport</strong>
+							</div>
+						</li>
+					</ol>
+					<!-- // time list -->
+				</div>
+				
+				<div class="baggage">
+					<strong>Baggage allowance <em>No fee up to 2pc</em></strong>
+				</div>
+			</div>
+			<!-- // return -->
+		</div>
+		<!-- // detailBox -->
+		
+		<h3 class="titGray marT10">Fare by passenger</h3>
+		<div class="popFareBox">
+			<div class="pfTop">
+				<strong>Total Fare <span>(4 Travelers)</span></strong>
+				<em>￦ 2,400,000</em>
+				<p>Incl. tax,surcharge</p>
+			</div>
+			<dl>
+				<dt><strong>1</strong><span>Adult</span><span class="name">SEUNGHEE, PARK</span></dt>
+				<dd><strong>Base Fare</strong><em>￦ 500,000</em></dd>
+				<dd><strong>Tax, Fuel Surcharge</strong><em>￦ 50,000</em></dd>
+				<dd><strong>Booking Fees</strong><em>￦ 44,000</em></dd>
+				
+				<dt><strong>2</strong><span>Adult</span><span class="name">SEUNGHEE, PARK</span></dt>
+				<dd><strong>Base Fare</strong><em>￦ 500,000</em></dd>
+				<dd><strong>Tax, Fuel Surcharge</strong><em>￦ 50,000</em></dd>
+				<dd><strong>Booking Fees</strong><em>￦ 44,000</em></dd>
+				
+				<dt><strong>3</strong><span>Adult</span><span class="name">SEUNGHEE, PARK</span></dt>
+				<dd><strong>Base Fare</strong><em>￦ 500,000</em></dd>
+				<dd><strong>Tax, Fuel Surcharge</strong><em>￦ 50,000</em></dd>
+				<dd><strong>Booking Fees</strong><em>￦ 44,000</em></dd>
+			</dl>
+		</div>
+		
+		<h3 class="titGray marT10">Payment details</h3>
+		<div class="popFareBox02">
+			<ul>
+				<li><strong class="c_red">Total Fare</strong><em class="c_red">￦ 2,400,000</em></li>
+				<li class="middle"><strong>Paid Amount</strong><em>￦ 2,400,000</em>
+					<ul>
+						<li><strong>Hyundai card</strong><em>￦ 300,000</em></li>
+						<li><strong>Samsung card</strong><em>￦ 100,000</em></li>
+						<li><strong>Cash</strong><em>￦ 100,000</em></li>
+					</ul>
+				</li>
+				<li><strong>Remaining Balance</strong><em class="c_red">￦ 0</em></li>
+			</ul>
+			
+			<h4 class="titGray marT10">Account Information</h4>
+			<ul>
+				<li class="middle"><strong>Bank Name</strong><em>Kookminbank</em>
+					<ul>
+						<li><strong>Account Number</strong><em>217-002-04-180720</em></li>
+						<li><strong>Account Holder</strong><em>하나투어 (Hanatour)</em></li>
+					</ul>
+				</li>
+				<li><strong>Account</strong><em class="c_red">￦ 100,000</em></li>
+			</ul>
+		</div>
+			
+	</div>
+	
+	<!-- 인보이스 푸터 -->
+	<article class="popFooter">
+		<span><img src="../images/img_pop_footer_logo.png" alt="Hanatour"></span>
+		<address>
+			Hana Tour Co., Ltd.  45, Insa-dong 5-gil, Jongno-gu, Seoul<br>
+			Coporate Resistration NO. 1028139440<br>
+			Business Category : Service/Travel agency, Ticketing agency<br>
+			CEO : JINKOOK,KIM
+		</address>
+	</article>
+	<!-- // 인보이스 푸터 -->
+	
+</div>
+<!-- // pop -->

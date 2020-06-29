@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>Hanatour Global Flight</title>
+<link rel="shortcut icon" href="../images/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="../images/icon_120.png">
+
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script src="../js/jquery-2.2.3.min.js" type="text/javascript"></script>
+<script src="../js/swiper.min.js" type="text/javascript"></script>
+<script src="../js/jquery-ui-custom.js" type="text/javascript"></script>
+<script src="../js/ht.calendar.js" type="text/javascript"></script>
+<script src="../js/m.globalflight.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+
+<div id="wrap">
+	<header id="header">
+		<h1><a href="#"><img src="../images/btn_nlogo.png" alt=""></a></h1>
+		<a href="#" class="btnRight"><img src="../images/btn_hd_right.png" alt="right menu"></a>
+	</header>
+	
+	<nav class="mainTap">
+		<ul>
+			<li class="on"><a href="#">Round Trip</a></li><!-- selected class="on" -->
+			<li><a href="#">One-Way</a></li>
+			<li><a href="#">Multi-City</a></li><!-- 201707 추가 -->
+		</ul>
+	</nav>
+
+	<!-- container -->
+	<div id="container" class="headMarTop01"><!-- nav 있는경우 headMarTop01, 없는경우 headMarTop02 -->
+		
+		<!-- main tabCont -->
+		<div class="mainTabCont">
+			<!-- Round Trip -->
+			<div class="">
+				<div class="cityDayCont">
+					<!-- city -->
+					<div class="city on"><!-- 도시가 선택되었을경우 class="on" 추가 :: 폰트색변경 -->
+						<a href="pop_city_search.html" class="popComeup">
+							<b>Seoul(Incheon/Kimpo)</b>
+							<strong>SEL</strong>
+						</a>
+						<a href="pop_city_search.html" class="popComeup">
+							<b>Bangkok</b>
+							<strong>BKK</strong>
+						</a>
+					</div>
+					<!-- // city -->
+					
+					<!-- day -->
+					<a href="pop_calender.html" class="day popComeup">
+						<div>
+							<b>Departure</b>
+							<strong>Mon, 14/04/2016</strong>
+						</div>
+						<div>
+							<b>Return</b>
+							<strong>Mon, 14/04/2016</strong>
+						</div>
+					</a>
+					<!-- // day -->
+				</div>
+				
+				<div class="selectCont">
+					<a href="pop_people.html" class="selectBox people popComeup">
+						<span>Adult <em>2</em></span>
+						<span>Child <em>1</em></span>
+						<span>Infant <em>1</em></span>
+					</a>
+				
+					<select class="selectBox" title="seat select">
+						<option>Economy</option>
+						<option>Primium Economy</option>
+						<option>Business</option>
+						<option>First</option>
+					</select>
+				</div>
+				<a href="#" class="btnFull">Search</a>
+			</div>
+			<!-- // Round Trip -->
+			
+			<!-- One-Way -->
+			<div class="" style="display:none">
+				<div class="cityDayCont oneWay"> <!-- 편도일경우 class="oneWay" 추가 -->
+					<!-- city -->
+					<div class="city on"><!-- 도시가 선택되었을경우 class="on" 추가 :: 폰트색변경 -->
+						<a href="pop_city_search.html" class="popComeup">
+							<b>Seoul(Incheon/Kimpo)</b>
+							<strong>SEL</strong>
+						</a>
+						<a href="pop_city_search.html" class="popComeup">
+							<b>Bangkok</b>
+							<strong>BKK</strong>
+						</a>
+					</div>
+					<!-- // city -->
+					
+					<!-- day -->
+					<a href="pop_calender.html" class="day popComeup">
+						<div>
+							<b>Departure</b>
+							<strong>Mon, 14/04/2016</strong>
+						</div>
+					</a>
+					<!-- // day -->
+				</div>
+				
+				<div class="selectCont">
+					<a href="pop_people.html" class="selectBox people popComeup">
+						<span>Adult <em>2</em></span>
+						<span>Child <em>1</em></span>
+						<span>Infant <em>1</em></span>
+					</a>
+				
+					<select class="selectBox" title="seat select">
+						<option>Economy</option>
+						<option>Primium Economy</option>
+						<option>Business</option>
+						<option>First</option>
+					</select>
+				</div>
+				
+				<a href="#" class="btnFull">Search</a>
+			</div>
+			<!-- // One-Way -->
+			
+			<!-- Multi-City 201707 추가 -->
+			<div class="" style="display:none">
+				<div class="cityDayCont multiCont"><!-- 다구간일경우 class="multiCont" 추가 -->
+					<!-- 각 cell -->
+					<div class="multiCell">
+						<div class="city">
+							<a href="pop_city_search.html" class="popComeup"><!-- 도시가 선택되었을경우 class="on" 추가 :: 폰트색변경 -->
+								<b>City name or<br>airport</b>
+								<strong>From</strong>
+							</a>
+							<a href="pop_city_search.html" class="popComeup">
+								<b>City name or<br>airport</b>
+								<strong>To</strong>
+							</a>
+						</div>
+						<!-- // city -->
+						
+						<!-- day -->
+						<a href="pop_calender.html" class="day popComeup">
+							<div>
+								<b>Departure</b>
+								<strong>08/10<br>Thu</strong>
+							</div>
+						</a>
+						<!-- // day -->
+						<button type="button" title="delete" class="deleteBtn" disabled></button><!-- 삭제버튼 -->
+					</div>
+					<!-- // 각 cell -->
+					
+					<!-- 각 cell -->
+					<div class="multiCell">
+						<div class="city">
+							<a href="pop_city_search.html" class="popComeup on"><!-- 도시가 선택되었을경우 class="on" 추가 :: 폰트색변경 -->
+								<b>Seoul<br>(Incheon/Kimpo)</b>
+								<strong>SEL</strong>
+							</a>
+							<a href="pop_city_search.html" class="popComeup on">
+								<b>Bangkok</b>
+								<strong>BKK</strong>
+							</a>
+						</div>
+						<!-- // city -->
+						
+						<!-- day -->
+						<a href="pop_calender.html" class="day popComeup">
+							<div>
+								<b>Departure</b>
+								<strong>08/11<br>Sun</strong>
+							</div>
+						</a>
+						<!-- // day -->
+						<button type="button" title="delete" class="deleteBtn" disabled></button><!-- 삭제버튼 -->
+					</div>
+					<!-- // 각 cell -->
+					
+					<!-- 각 cell -->
+					<div class="multiCell">
+						<div class="city">
+							<a href="pop_city_search.html" class="popComeup on"><!-- 도시가 선택되었을경우 class="on" 추가 :: 폰트색변경 -->
+								<b>Seoul<br>(Incheon/Kimpo)</b>
+								<strong>ICN</strong>
+							</a>
+							<a href="pop_city_search.html" class="popComeup on">
+								<b>Bangkok</b>
+								<strong>BKK</strong>
+							</a>
+						</div>
+						<!-- // city -->
+						
+						<!-- day -->
+						<a href="pop_calender.html" class="day popComeup">
+							<div>
+								<b>Departure</b>
+								<strong>08/12<br>Wed</strong>
+							</div>
+						</a>
+						<!-- // day -->
+						<button type="button" title="delete" class="deleteBtn"></button><!-- 삭제버튼 -->
+					</div>
+					<!-- // 각 cell -->
+					
+					<!-- 각 cell -->
+					<div class="multiCell">
+						<div class="city">
+							<a href="pop_city_search.html" class="popComeup on"><!-- 도시가 선택되었을경우 class="on" 추가 :: 폰트색변경 -->
+								<b>Seoul<br>(Incheon/Kimpo)</b>
+								<strong>SEL</strong>
+							</a>
+							<a href="pop_city_search.html" class="popComeup on">
+								<b>Bangkok</b>
+								<strong>BKK</strong>
+							</a>
+						</div>
+						<!-- // city -->
+						
+						<!-- day -->
+						<a href="pop_calender.html" class="day popComeup">
+							<div>
+								<b>Departure</b>
+								<strong>08/10<br>Wed</strong>
+							</div>
+						</a>
+						<!-- // day -->
+						<button type="button" title="delete" class="deleteBtn"></button><!-- 삭제버튼 -->
+					</div>
+					<!-- // 각 cell -->
+					
+					<!-- 각 cell -->
+					<div class="multiCell">
+						<div class="city">
+							<a href="pop_city_search.html" class="popComeup on"><!-- 도시가 선택되었을경우 class="on" 추가 :: 폰트색변경 -->
+								<b>Seoul<br>(Incheon/Kimpo)</b>
+								<strong>ICN</strong>
+							</a>
+							<a href="pop_city_search.html" class="popComeup on">
+								<b>Bangkok</b>
+								<strong>BKK</strong>
+							</a>
+						</div>
+						<!-- // city -->
+						
+						<!-- day -->
+						<a href="pop_calender.html" class="day popComeup">
+							<div>
+								<b>Departure</b>
+								<strong>08/12<br>Wed</strong>
+							</div>
+						</a>
+						<!-- // day -->
+						<button type="button" title="delete" class="deleteBtn"></button><!-- 삭제버튼 -->
+					</div>
+					<!-- // 각 cell -->
+					
+					<!-- 각 cell -->
+					<div class="multiCell">
+						<div class="city">
+							<a href="pop_city_search.html" class="popComeup on"><!-- 도시가 선택되었을경우 class="on" 추가 :: 폰트색변경 -->
+								<b>Seoul<br>(Incheon/Kimpo)</b>
+								<strong>SEL</strong>
+							</a>
+							<a href="pop_city_search.html" class="popComeup on">
+								<b>Bangkok</b>
+								<strong>BKK</strong>
+							</a>
+						</div>
+						<!-- // city -->
+						
+						<!-- day -->
+						<a href="pop_calender.html" class="day popComeup">
+							<div>
+								<b>Departure</b>
+								<strong>08/10<br>Wed</strong>
+							</div>
+						</a>
+						<!-- // day -->
+						<button type="button" title="delete" class="deleteBtn"></button><!-- 삭제버튼 -->
+					</div>
+					<!-- // 각 cell -->
+				</div>
+				
+				<button type="button" class="addCellBtn" title="addCell"></button><!-- 영역 추가버튼 -->
+				
+				<div class="selectCont">
+					<a href="pop_people.html" class="selectBox people popComeup">
+						<span>Adult <em>2</em></span>
+						<span>Child <em>1</em></span>
+						<span>Infant <em>1</em></span>
+					</a>
+				
+					<select class="selectBox" title="seat select">
+						<option>Economy</option>
+						<option>Primium Economy</option>
+						<option>Business</option>
+						<option>First</option>
+					</select>
+				</div>
+				
+				<a href="#" class="btnFull">Search</a>
+			</div>
+			<!-- // Multi-City 201707 추가 -->
+			
+			<!-- banner -->
+			<article class="banner">
+				<!--a href="#"><img src="../images/img_main_banner_ad_01.png" alt="banner"></a-->
+			</article>
+			<!-- // banner -->
+		</div>
+		<!-- // main tabCont -->
+	</div>
+	<!-- // container -->
+	
+	
+	<!-- footer -->
+	<footer>
+		<div class="footTerms">
+			<a href="pop_foot_terms01_ko.html" class="popComeup">항공약관</a>
+			<a href="pop_foot_terms02_ko.html" class="popComeup">이용약관</a>
+			<a href="pop_foot_terms03_ko.html" class="popComeup">개인정보처리방침</a>
+		</div>
+		
+		<address>
+			Hana Tour Co., Ltd.<span class="line"></span>CEO : Jin-Kook KIM<span class="line"></span>Address : Hana Tour Co.,<br>
+			Ltd. 45, Insa-dong 5-gil, Jongno-gu, Seoul<span class="line"></span><br>
+			Corporate Registration Number : 102-81-39440<span class="line"></span><br>
+			Communications vendor registration number : Jongno 01-1806<br>
+			Ensure business information<span class="line"></span><br>
+			Tour operators registration number : The No. 1993-000006<span class="line"></span><br>
+			Guarantee Insurance Sales : 2.21 billion won<span class="line"></span><br>
+			Service center : 1577-1233<span class="line"></span>FAX : 02-734-0392<br>
+			Personal Information Manager : Sung-Jae Park<br>
+		</address>
+	</footer>
+	<!-- // footer -->
+	
+</div>
+
+
+<!-- right Menu -->
+<div id="userPanel" class=""><!-- 펼칠시 slideIn 추가 --> 
+	<div class="innerScroller">
+		<div class="rigMenuCont">
+			<a href="#" class="booking">Search my booking</a>
+			<ul class="rigMenuList">
+				<li class="lang">
+					<strong>Language</strong>
+					<!-- 버튼으로 수정 20171024 -->
+					<!--select title="lang select">
+						<option>English</option>
+						<option>Chinese</option>
+					</select-->
+					
+					<button type="button" class="btnNation" title="language select"><!-- 클릭시 하단 레이어 노출 id="languageLayer" -->
+						<span class="icoNation on"><img src="../images/ico_nation_us.png" alt="">English</span><!-- 선택된 언어 class="on"추가 -->
+						<span class="icoNation"><img src="../images/ico_nation_ch.png" alt="">中文</span>
+						<span class="icoNation"><img src="../images/ico_nation_ko.png" alt="">한국어</span>
+					</button>
+					<!-- // 버튼으로 수정 20171024 -->
+				</li>
+				<li class="customer">
+					<strong>Customer Service</strong>
+					<div class="txtBox">
+						<em>HanaTour Service Inc</em>
+						<p>Inquire about bokking : 
+							<a href="mailto:globalflight-en@hanatour.com" class="blue"><b>English</b> globalflight-en@hanatour.com</a>
+							<a href="mailto:globalflight-cn@hanatour.com" class="blue"><b>中国</b> globalflight-cn@hanatour.com</a>
+						</p>
+						<p>operating hours : <span class="gray">Korean Standard Time : 09:00 ~ 16:00</span></p>
+					</div>
+				</li>
+				<li class="about">
+					<a href="#">About Hantour<b>Korea best travel agency</b></a>
+				</li>
+			</ul>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="mask" style="display:none"></div><!-- dim -->
+<!-- // right Menu -->
+
+<!-- 20171120 수정 booking layer -->
+<div class="layerPopCom01" id="searchMyBooking" style="display:none;">
+	<div class="layer_inner pb_toggle">
+		<h3 class="layerHead">Search My Booking<a href="#" class="layerClose"></a></h3>
+		<ul class="tabList grayType">
+			<li class="on"><a href="#">예약번호로 찾기</a></li>
+			<li><a href="#">연락처로 찾기</a></li>
+		</ul>
+		<div class="tabCont">
+			<div class="layelPopCont">
+				<!-- booking Input -->
+				<div class="booking_input">
+					<strong>Booking No.</strong>
+					<input type="text" class="inputBase" title="Booking Number write">
+				</div>
+				<div class="booking_input tableCell">
+					<div>
+						<strong>First name</strong>
+						<input type="text" class="inputBase" title="First name write">
+					</div>
+					<span class="cellPad"></span>
+					<div>
+						<strong>Last name</strong>
+						<input type="text" class="inputBase" title="Last name write">
+					</div>
+				</div>
+				<!-- // booking Input -->
+			</div>
+		</div>
+		<div class="tabCont" style="display:none">
+			<div class="layelPopCont">
+				<div class="booking_input tableCell">
+					<div>
+						<strong>First name</strong>
+						<input type="text" class="inputBase" title="First name write">
+					</div>
+					<span class="cellPad"></span>
+					<div>
+						<strong>Last name</strong>
+						<input type="text" class="inputBase" title="Last name write">
+					</div>
+				</div>
+				<div class="booking_input tableCell multiInputCell">
+					<!-- 20171127 추가 -->
+					<div class="emailSelect">
+						<strong>Phone number</strong>
+						<select disabled class="selectBox02">
+							<option>82(Korea)</option>
+						</select>
+					</div>
+					<span class="cellPad"></span>
+					<!-- // 20171127 추가 -->
+					<div>
+						<input type="tel" class="inputBase" title="Phone number write">
+					</div>
+					<span class="cellPad withTxt"><span>OR</span></span>
+				</div>
+				<div class="booking_input noBorder tableCell multiInputCell">
+					<div>
+						<strong>Email address</strong>
+						<input type="text" class="inputBase" title="email adress write">
+					</div>
+					<span class="cellPad withTxt"><span>@</span></span>
+					<div>
+						<input type="text" class="inputBase" title="email adress write">
+					</div>
+					<span class="cellPad"></span>
+					<div class="emailSelect">
+						<select class="selectBox02">
+							<option>Enter directly</option>
+							<option>다른옵션</option>
+						</select>
+					</div>
+				</div>
+				<ul class="marB10">
+					<li class="comBultxt01">예약 시 입력한 휴대폰 번호 또는 이메일을 입력해 주십시오.</li>
+					<li class="comBultxt01">휴대폰 확인은 한국인 경우에만 확인 가능합니다.</li>
+				</ul>
+				<!-- // booking Input -->
+			</div>
+		</div>
+		<a href="#" class="btnFull">Search</a>
+	</div>
+</div>
+<!-- // 20171120 수정 booking layer -->
+
+<!-- Language 20171024 추가 -->
+<div class="layerPopCom01" id="languageLayer" style="display:none;">
+	<div class="layer_inner">
+		<h3 class="layerHead">Language<a href="#" class="layerClose"></a></h3>
+		<div class="layelPopCont">
+			
+			<!-- 국가선택 -->
+			<div class="languagePop"> 
+				<label><input type="radio" class="checkBox black" name="nation" checked> <span class="icoNation"><img src="../images/ico_nation_us.png" alt="">English</span></label>
+				<label><input type="radio" class="checkBox black" name="nation"> <span class="icoNation"><img src="../images/ico_nation_ch.png" alt="">中文</span></label>
+				<label><input type="radio" class="checkBox black" name="nation"> <span class="icoNation"><img src="../images/ico_nation_ko.png" alt="">한국어</span></label>
+			</div>
+			<!-- // 국가선택 -->
+			
+		</div>
+		<a href="#" class="btnFull">OK</a>
+	</div>
+</div>
+<!-- // booking layer -->
+
+<!-- 20171129 추가 -->
+<div class="layerSmallPop">
+	<div class="layer_inner">
+		<div class="smPopCont mgSearchPop">
+			<a href="#" class="layerClose" title="닫기"></a>
+			
+			<h2>해외 출발 항공은<br><span class="blue">하나투어 글로벌 항공사이트</span>에서<br>예약/결제, 예약확인이 가능합니다.</h2>
+			<p>※Global Flight 해외출발 항공권 서비스는<br> 하나투어 회원정책(마일리지 적립/결제/할인쿠폰 사용 등)<br> 별도로 운영됩니다.</p>
+			
+			<a href="#" class="btnSmPop">글로벌항공 검색 진행하기</a>
+			
+			<label class="noMorePop"><input type="checkbox" class="checkBox black"> 오늘 하루 다시보지 않기</label><!-- 20171227 추가 -->
+		</div>
+
+		
+	</div>
+</div>
+<!-- // 20171129 추가 -->
+
+</body>
+</html>
+

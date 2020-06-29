@@ -1,0 +1,77 @@
+<!--
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>Main - Hanatour Air</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script src="../js/jquery-2.2.3.min.js" type="text/javascript"></script>
+<script src="../js/swiper.min.js" type="text/javascript"></script>
+<script src="../js/jquery-ui-custom.js" type="text/javascript"></script>
+<script src="../js/ht.calendar.js" type="text/javascript"></script>
+<script src="../js/m.globalflight.js" type="text/javascript"></script>
+</head>
+
+<body>
+-->
+
+<script type="text/javascript">
+	$('#overlayPanel').on('open.loadpop', function (e, data) {
+   		if (GLOBALFLIGHT !== undefined && typeof GLOBALFLIGHT.initPeople === 'function') GLOBALFLIGHT.initPeople();
+   	});
+</script>
+
+<!-- pop -->
+<div class="slideUpPop" style="display:block">
+	
+	<div class="header">
+		<h2>Passengers<a href="#" class="closeOverlayPanel" title="pop close"></a></h2>
+		<div class="peopleNum">
+			<span class="adult num1"></span><!-- 기본 성인1 // Adult add 2 ~ 9 :: class="num2" ~ "num9" -->
+			<span class="child num0"></span><!-- Child add 1 ~ 8 :: class="num1" ~ "num8" -->
+			<span class="infant num0"></span><!-- infant add 1 ~ 8 :: class="num1" ~ "num8"-->
+		</div>
+	</div>
+	
+	<div class="popContainer">
+		<!-- pop cont -->
+		<div class="passengersCont">
+			<div class="peopleBtn">
+				<a href="#" class="delBtn" title="delete button"></a>
+				<div class="numTxt">
+					<strong>1</strong>
+					<em>Adult</em>
+					<span>12 or over</span>
+				</div>
+				<a href="#" class="plusBtn" title="plus button"></a>
+			</div>
+			
+			<div class="peopleBtn">
+				<a href="#" class="delBtn" title="delete button"></a>
+				<div class="numTxt">
+					<strong>0</strong>
+					<em>Child</em>
+					<span>2~11</span>
+				</div>
+				<a href="#" class="plusBtn" title="plus button"></a>
+			</div>
+			
+			<div class="peopleBtn">
+				<a href="#" class="delBtn" title="delete button"></a>
+				<div class="numTxt">
+					<strong>0</strong>
+					<em>Infant</em>
+					<span>Younger than 2</span>
+				</div>
+				<a href="#" class="plusBtn" title="plus button"></a>
+			</div>
+			
+			<a href="#" class="btnFull">OK</a>
+		</div>
+		<!-- // pop cont -->
+			
+	</div>
+</div>
+<!-- // pop -->

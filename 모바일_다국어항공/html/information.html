@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>information - Hanatour Air</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script src="../js/jquery-2.2.3.min.js" type="text/javascript"></script>
+<script src="../js/swiper.min.js" type="text/javascript"></script>
+<script src="../js/jquery-ui-custom.js" type="text/javascript"></script>
+<script src="../js/ht.calendar.js" type="text/javascript"></script>
+<script src="../js/m.globalflight.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+
+<div id="wrap">
+	<header id="header" class="subHead"><!-- 서브일경우 class="subHead" 추가 -->
+		<h1><a href="#"><img src="../images/btn_nlogo.png" alt=""></a></h1>
+		<a href="#" class="btnLeft"><img src="../images/btn_hd_back.png" alt="back Key"></a>
+		<a href="#" class="btnRight"><img src="../images/btn_hd_right.png" alt="right menu"></a>
+	</header>
+	
+	<!-- container -->
+	<div id="container" class="headMarTop02"><!-- nav 있는경우 headMarTop01, 없는경우 headMarTop02 -->
+		<!-- information -->
+		<div class="inforSect">
+			<!-- top -->
+			<a href="pop_schedule.html" class="searchContTop popComeup"><!-- 예약정보에서 a태그로 변경 -->
+				<!-- 20170713 다구간일경우 -->
+				<div class="tripCity oneWay multiSize"><!-- 다구간 oneWay 추가 -->
+					<strong>Bangkok</strong><!-- 콤마일경우 class="comma" -->
+					<strong class="comma">Incheon</strong>
+					<strong>Incheon</strong>
+					<strong>Osaka</strong>
+					<strong>Incheon</strong>
+				</div>
+				<!-- // 20170713 다구간일경우 -->
+				<div class="tripDay">
+					<span class="day">Fri, May 0 Sun, May 08</span>
+					<span class="ple">3</span>
+					<em>Economy</em>
+				</div>
+			</a>
+			<!-- //top -->
+			
+			<!-- Total Fare -->
+			<div class="fareTopCont">
+				<div>
+						<!-- 20170825 : 문구 수정 및 요금상세레이어 추가 - 수정 -->
+						<strong>총 요금 <a href="#none" class="fareTopContNoticeBtn" id="farePricNoticePopupBtn"><em id="totAmtEm">￦ 328,300</em></a></strong>
+						<span>(Tax, 유류할증료, 발권수수료 포함)</span>
+						<!-- // 20170825 : 문구 수정 및 요금상세레이어 추가 - 수정 -->
+					</div>
+				<a href="pop_fare_rules.html" class="popComeup">Fare Rules</a>
+			</div>
+			<!-- // Total Fare -->
+			
+			
+			<div class="pass_informaiton">
+				<h2 class="tit01">Passengers Informaiton</h2>
+				
+				<!-- inforList -->
+				<dl class="inforList">
+					<dt class="open"><!-- dt class="open" 추가 :: 하위 dd 펼쳐짐 -->
+						<a href="#">
+							<strong>Passenger 1</strong>
+							<span>Adult</span>
+							<em>Register</em><!-- 입력완료시 :: <em class="done">Done</em> -->
+						</a>
+					</dt>
+					<dd>
+						<!-- 입력 리스트 -->
+						<ul class="inputCell">
+							<!-- 20170224 수정 -->
+							<li>
+								<label class="w100">
+									<strong>First / Middle name (Given)</strong>
+									<input type="text" class="inputBase">
+								</label>
+								
+								<!-- in_notification 추가 -->
+								<p class="in_notification" style="display:n one">
+									<span>You have reached the maximum passenger limit.</span>
+								</p>
+								<!-- // in_notification 추가 -->
+							</li>
+							<!-- // 20170224 수정 -->
+							<li>
+								<label class="w60">
+									<strong>Last name</strong>
+									<input type="text" class="inputBase">
+								</label>
+								<span class="cellPad"></span><!-- 빈태그 -->
+								<label class="w40">
+									<strong>Gender</strong>
+									<select class="selectBox02">
+										<option>Male</option>
+										<option>Female</option>
+									</select>
+								</label>
+							</li>
+							<li>
+								<label class="w60">
+									<strong>Birthday</strong>
+									<input type="date" class="selectBox02">
+								</label>
+								<span class="cellPad"></span><!-- 빈태그 -->
+								<label class="w40">
+									<strong>Nationality</strong>
+									<select class="selectBox02">
+										<option>South Korea</option>
+										<option>Japan</option>
+									</select>
+								</label>
+							</li>
+						</ul>
+						<!-- // 입력 리스트 -->
+						
+						<!-- 20161214 삭제
+						<div class="inforTxt">
+							<strong>Contact Information<span>Your Ticket and flight info will be sent here</span></strong>
+							<p>If your phone number is  outside of  korea, Booking information will be  sent by only E-mail.</p>
+						</div>
+						
+						<ul class="inputCell">
+							<li>
+								<label class="w30">
+									<strong>Phone number</strong>
+									<select class="selectBox02">
+										<option>+ 82</option>
+										<option>Korea(82)</option>
+										<option>Kuwait(965)</option>
+									</select>
+								</label>
+								<span class="cellPad"></span>
+								<label class="w70">
+									<strong> &nbsp;</strong>
+									<input type="tel" class="inputBase">
+								</label>
+							</li>
+							<li>
+								<label class="w100">
+									<strong>Email address</strong>
+									<input type="text" class="inputBase">
+								</label>
+							</li>
+						</ul>
+						 20161214 삭제 -->
+						
+						<div class="inforBtnBox">
+							<a href="#" class="btnFull black">Done</a>
+						</div>
+					</dd>
+					
+					<dt class=""><!-- dt class="open" 추가 :: 하위 dd 펼쳐짐 -->
+						<a href="#">
+							<strong>Passenger 2</strong>
+							<span>Adult</span>
+							<span>Kim Jungeun</span>
+							<em class="done">Done</em><!-- 입력완료시 :: <em class="done">Done</em> -->
+						</a>
+					</dt>
+					<dd>
+						<!-- 입력 리스트 -->
+						<ul class="inputCell">
+							<li>
+								<label>
+									<strong>First name</strong>
+									<input type="text" class="inputBase">
+								</label>
+								<span class="cellPad"></span><!-- 빈태그 -->
+								<label>
+									<strong>Middle name</strong>
+									<input type="text" class="inputBase">
+								</label>
+							</li>
+							<li>
+								<label class="w60">
+									<strong>Last name</strong>
+									<input type="text" class="inputBase">
+								</label>
+								<span class="cellPad"></span><!-- 빈태그 -->
+								<label class="w40">
+									<strong>Gender</strong>
+									<select class="selectBox02">
+										<option>Male</option>
+										<option>Female</option>
+									</select>
+								</label>
+							</li>
+							<li>
+								<label class="w60">
+									<strong>Birthday</strong>
+									<input type="date" class="selectBox02">
+								</label>
+								<span class="cellPad"></span><!-- 빈태그 -->
+								<label class="w40">
+									<strong>Nationality</strong>
+									<select class="selectBox02">
+										<option>South Korea</option>
+										<option>Japan</option>
+									</select>
+								</label>
+							</li>
+						</ul>
+						<!-- // 입력 리스트 -->
+						
+						<!-- 20161214 삭제
+						<div class="inforTxt">
+							<strong>Contact Information<span>Your Ticket and flight info will be sent here</span></strong>
+							<p>If your phone number is  outside of  korea, Booking information will be  sent by only E-mail.</p>
+						</div>
+						
+						<ul class="inputCell">
+							<li>
+								<label class="w30">
+									<strong>Phone number</strong>
+									<select class="selectBox02">
+										<option>+ 82</option>
+										<option>Korea(82)</option>
+										<option>Kuwait(965)</option>
+									</select>
+								</label>
+								<span class="cellPad"></span>
+								<label class="w70">
+									<strong> &nbsp;</strong>
+									<input type="tel" class="inputBase">
+								</label>
+							</li>
+							<li>
+								<label class="w100">
+									<strong>Email address</strong>
+									<input type="text" class="inputBase">
+								</label>
+							</li>
+						</ul>
+						 20161214 삭제 -->
+						
+						<div class="inforBtnBox">
+							<a href="#" class="btnFull black">Done</a>
+						</div>
+					</dd>
+					
+					<dt class=""><!-- dt class="open" 추가 :: 하위 dd 펼쳐짐 -->
+						<a href="#">
+							<strong>Passenger 3</strong>
+							<span>Child</span>
+							<span>Park Hyomin</span>
+							<em class="done">Done</em><!-- 입력완료시 :: <em class="done">Done</em> -->
+						</a>
+					</dt>
+					<dd>
+						<!-- 입력 리스트 -->
+						<ul class="inputCell">
+							<li>
+								<label>
+									<strong>First name</strong>
+									<input type="text" class="inputBase">
+								</label>
+								<span class="cellPad"></span><!-- 빈태그 -->
+								<label>
+									<strong>Middle name</strong>
+									<input type="text" class="inputBase">
+								</label>
+							</li>
+							<li>
+								<label class="w60">
+									<strong>Last name</strong>
+									<input type="text" class="inputBase">
+								</label>
+								<span class="cellPad"></span><!-- 빈태그 -->
+								<label class="w40">
+									<strong>Gender</strong>
+									<select class="selectBox02">
+										<option>Male</option>
+										<option>Female</option>
+									</select>
+								</label>
+							</li>
+							<li>
+								<label class="w60">
+									<strong>Birthday</strong>
+									<input type="date" class="selectBox02">
+								</label>
+								<span class="cellPad"></span><!-- 빈태그 -->
+								<label class="w40">
+									<strong>Nationality</strong>
+									<select class="selectBox02">
+										<option>South Korea</option>
+										<option>Japan</option>
+									</select>
+								</label>
+							</li>
+						</ul>
+						<!-- // 입력 리스트 -->
+						
+						<!-- 20161214 삭제
+						<div class="inforTxt">
+							<strong>Contact Information<span>Your Ticket and flight info will be sent here</span></strong>
+							<p>If your phone number is  outside of  korea, Booking information will be  sent by only E-mail.</p>
+						</div>
+						
+						<ul class="inputCell">
+							<li>
+								<label class="w30">
+									<strong>Phone number</strong>
+									<select class="selectBox02">
+										<option>+ 82</option>
+										<option>Korea(82)</option>
+										<option>Kuwait(965)</option>
+									</select>
+								</label>
+								<span class="cellPad"></span>
+								<label class="w70">
+									<strong> &nbsp;</strong>
+									<input type="tel" class="inputBase">
+								</label>
+							</li>
+							<li>
+								<label class="w100">
+									<strong>Email address</strong>
+									<input type="text" class="inputBase">
+								</label>
+							</li>
+						</ul>
+						 20161214 삭제 -->
+						
+						<div class="inforBtnBox">
+							<a href="#" class="btnFull black">Done</a>
+						</div>
+					</dd>
+					
+					<dt class="open"><!-- dt class="open" 추가 :: 하위 dd 펼쳐짐 -->
+						<a href="#">
+							<strong>Passenger 4</strong>
+							<span>Infant</span>
+							<em>Register</em><!-- 입력완료시 :: <em class="done">Done</em> -->
+						</a>
+					</dt>
+					<dd>
+						<!-- 입력 리스트 -->
+						<ul class="inputCell">
+							<li>
+								<label>
+									<strong>First name</strong>
+									<input type="text" class="inputBase">
+								</label>
+								<span class="cellPad"></span><!-- 빈태그 -->
+								<label>
+									<strong>Middle name</strong>
+									<input type="text" class="inputBase">
+								</label>
+							</li>
+							<li>
+								<label class="w60">
+									<strong>Last name</strong>
+									<input type="text" class="inputBase">
+								</label>
+								<span class="cellPad"></span><!-- 빈태그 -->
+								<label class="w40">
+									<strong>Gender</strong>
+									<select class="selectBox02">
+										<option>Male</option>
+										<option>Female</option>
+									</select>
+								</label>
+							</li>
+							<li>
+								<label class="w60">
+									<strong>Birthday</strong>
+									<input type="date" class="selectBox02">
+								</label>
+								<span class="cellPad"></span><!-- 빈태그 -->
+								<label class="w40">
+									<strong>Nationality</strong>
+									<select class="selectBox02">
+										<option>South Korea</option>
+										<option>Japan</option>
+									</select>
+								</label>
+							</li>
+							
+							<!-- 20161214 삭제
+							<li>
+								<label class="w100">
+									<strong>Accompanied Adult</strong>
+									<select class="selectBox02">
+										<option>SEUNGHEE, PARK</option>
+										<option>JUNGEUN, KIM</option>
+									</select>
+								</label>
+							</li>
+							// 20161214 삭제 -->
+							
+						</ul>
+						<!-- // 입력 리스트 -->
+						
+						<div class="inforBtnBox">
+							<a href="#" class="btnFull black">Done</a>
+						</div>
+					</dd>
+				</dl>
+				<!-- // inforList -->
+				
+				<!-- 하단 동의하기 영역 -->
+				<div class="inforAgreeBox">
+					<div>
+						<p>The name in English on the ticket must be same on the passport.  It can not change after booking. </p>
+						<label><input type="checkbox" class="checkBox"> I agree</label>
+					</div>
+					
+					<a href="pop_fare_terms.html" class="terms popComeup">
+						Fare Rules <span>|</span> Terms &amp; Conditons <em style="display:none">Incomplete</em>
+						<span class="termsCheckBox">I agree</span><!-- 20170316 추가 :: 팝업에서 전체동의시 class="on"추가 -->
+					</a>
+					
+					<p>The ticket is issued as an <span><strong>E-Ticket</strong> (electronic ticket).</span></p>
+				</div>
+				<!-- // 하단 동의하기 영역 -->
+				
+				<a href="#" class="btnFull">Continue</a>
+			</div>
+			
+			
+		</div>
+		<!-- // information -->
+		
+		
+	</div>
+	<!-- // container -->
+	
+	
+	<!-- footer -->
+	<footer>
+		<ul class=""><!-- 푸터 도달시 static 추가 -->
+			<li class="notics"><!-- class="on" 추가시 아래 레이어 펼쳐짐 -->
+				<a href="#">Notice</a>
+				<div class="noticsLayel">
+					<ul>
+						<li>Payment is made in KRW.</li>
+						<li>Fuel Surcharge and taxes as well as the total fare are subject to change depending on the airline's circumstances and change of exchange rate. </li>
+					</ul>
+					<a href="#" class="noticsClose"><img src="../images/btn_notics_close.png" alt="notics close button"></a>
+				</div>
+			</li>
+			<li class="top"><a href="#">TOP</a></li>
+		</ul>
+		
+		<div class="footTerms">
+			<a href="pop_foot_terms01.html" class="popComeup">Aviation Terms and Conditions</a>
+			<a href="pop_foot_terms02.html" class="popComeup">Terms of Use</a>
+			<a href="pop_foot_terms03.html" class="popComeup">Information Processing Policy</a>
+		</div>
+		
+		<address>
+			Hana Tour Co., Ltd.<span class="line"></span>CEO : Jin-Kook KIM<span class="line"></span>Address : Hana Tour Co.,<br>
+			Ltd. 45, Insa-dong 5-gil, Jongno-gu, Seoul<span class="line"></span><br>
+			Corporate Registration Number : 102-81-39440<span class="line"></span><br>
+			Communications vendor registration number : Jongno 01-1806<br>
+			Ensure business information<span class="line"></span><br>
+			Tour operators registration number : The No. 1993-000006<span class="line"></span><br>
+			Guarantee Insurance Sales : 2.21 billion won<span class="line"></span><br>
+			Service center : 1577-1233<span class="line"></span>FAX : 02-734-0392<br>
+			Personal Information Manager : Sung-Jae Park<br>
+		</address>
+	</footer>
+	<!-- // footer -->
+	
+</div>
+
+
+<!-- right Menu -->
+<div id="userPanel" class=""><!-- 펼칠시 slideIn 추가 --> 
+	<div class="innerScroller">
+		<div class="rigMenuCont">
+			<a href="#" class="booking">Search my booking</a>
+			<ul class="rigMenuList">
+				<li class="lang">
+					<strong>Language</strong>
+					<select title="lang select">
+						<option>English</option>
+						<option>Chinese</option>
+					</select>
+				</li>
+				<li class="customer">
+					<strong>Customer Service</strong>
+					<div class="txtBox">
+						<em>HanaTour Service Inc</em>
+						<p>Inquire about bokking : <span class="blue">globalflight-en@hanatour.com</span></p>
+						<p>operating hours : <span class="gray">Korean Standard Time : 09:00 ~ 16:00</span></p>
+					</div>
+				</li>
+				<li class="about">
+					<a href="#">About Hantour<b>Korea best travel agency</b></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="mask" style="display:none"></div><!-- dim -->
+<!-- // right Menu -->
+
+<!-- booking layer -->
+<div class="layerPopCom01" style="display:none">
+	<div class="layer_inner">
+		<h3 class="layerHead">Search My Booking<a href="#" class="layerClose"></a></h3>
+		<div class="layelPopCont">
+		
+			<!-- booking Input -->
+			<div class="booking_input">
+				<strong>Booking No.</strong>
+				<input type="text" class="inputBase" title="Booking Number write">
+			</div>
+			<div class="booking_input tableCell">
+				<div>
+					<strong>First name</strong>
+					<input type="text" class="inputBase" title="First name write">
+				</div>
+				<span class="cellPad"></span>
+				<div>
+					<strong>Last name</strong>
+					<input type="text" class="inputBase" title="Last name write">
+				</div>
+			</div>
+			<!-- // booking Input -->
+		</div>
+		<a href="#" class="btnFull">Search</a>
+	</div>
+</div>
+<!-- // booking layer -->
+
+<!-- UM 규정 20170809 추가 :: 영문 불가  -->
+<div class="layerSmallPop" style="display:none">
+	<div class="layer_inner">
+		<div class="smPopCont ticketServicePop">
+			<h2 class="minor">Unaccompanied minor</h2>
+			<div>
+				<ul class="txtList">
+					<li>Passenger is classified by age at the time of departure. Passenger between 2~under 12 at the time of departure is classified as child and the passenger under 2, infant.</li>
+					<li>Some airlines apply the infant fare only when the passenger would be under 2 at the time of return as well, and the fare can change accordingly.</li>
+					<li>Passengers under 14 years old without an accompanying adult not allowed to make reservation. Should you have any inquiries please contact <a href="mailto:globalflight-en@hanatour.com" class="link">globalflight-en@hanatour.com</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<a href="#" class="btnSmPop">OK</a>
+	</div>
+</div>
+<!-- // UM 규정 20170809 추가 :: 영문 불가  -->
+
+<!-- UM 규정 20170809 추가 :: 영문 주의  -->
+<div class="layerSmallPop" style="display:none">
+	<div class="layer_inner">
+		<div class="smPopCont ticketServicePop">
+			<h2 class="minor">Unaccompanied minor</h2>
+			<div>
+				<ul class="txtList">
+					<li>Passenger is classified by age at the time of departure. Passenger between 2~under 12 at the time of departure is classified as child and the passenger under 2, infant.</li>
+					<li>Some airlines apply the infant fare only when the passenger would be under 2 at the time of return as well, and the fare can change accordingly.</li>
+					<li>Some airlines limit the boarding of adolescent between 12 ~ under 17 travelling alone without guardian.</li>
+				</ul>
+			</div>
+		</div>
+		
+		<a href="#" class="btnSmPop">OK</a>
+	</div>
+</div>
+<!-- // UM 규정 20170809 추가 :: 영문 주의  -->
+
+<!-- UM 규정 20170809 추가 :: 중문 불가  -->
+<div class="layerSmallPop" style="display:none">
+	<div class="layer_inner">
+		<div class="smPopCont ticketServicePop">
+			<h2 class="minor">儿童单独乘机</h2>
+			<div>
+				<ul class="txtList">
+					<li>乘客类型将以出发当天的年龄为准，出发当天2周岁~12周岁为儿童，2周岁以下为婴儿。 </li>
+					<li>有些航空公司的婴儿票仅适用于返程时在2周岁以下的婴儿，所以费用会有所变动。 </li>
+					<li>14周岁以下的乘客不可单独预订，必须有同舱等的成人陪伴乘机。 咨询邮件：<a href="mailto:globalflight-cn@hanatour.com" class="link">globalflight-cn@hanatour.com</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<a href="#" class="btnSmPop">OK</a>
+	</div>
+</div>
+<!-- // UM 규정 20170809 추가 :: 중문 불가  -->
+
+<!-- UM 규정 20170809 추가 :: 중문 주의  -->
+<div class="layerSmallPop" style="display:none">
+	<div class="layer_inner">
+		<div class="smPopCont ticketServicePop">
+			<h2 class="minor">儿童单独乘机</h2>
+			<div>
+				<ul class="txtList">
+					<li>乘客类型将以出发当天的年龄为准，出发当天2周岁~12周岁为儿童，2周岁以下为婴儿。 </li>
+					<li>有些航空公司的婴儿票仅适用于返程时在2周岁以下的婴儿，所以费用会有所变动。 </li>
+					<li>一些航空公司不接受12周岁-17周岁以下的青少年单独乘坐飞机。</li>
+				</ul>
+			</div>
+		</div>
+		
+		<a href="#" class="btnSmPop">OK</a>
+	</div>
+</div>
+<!-- // UM 규정 20170809 추가 :: 중문 주의  -->
+
+<!-- 20170825 : 문구 수정 및 요금상세레이어 추가 - 추가  -->
+<div class="layerSmallPop" style="display:none">
+	<div class="layer_inner farePricePop">
+		<div class="farePricePopCont">
+			<dl class="farePriceList">
+				<dt class="farePriceItemBold">Adult 1<span> (Total)</span></dt>
+				<dd class="farePriceItemBold"><span>&#8361;</span> 230,000</dd>
+				<dt class="farePriceItemGray">Base Fare</dt>
+				<dd class="farePriceItemGray">&#8361; 100,000</dd>
+				<dt class="farePriceItemGray">Tax & Fuelsurcharge</dt>
+				<dd class="farePriceItemGray">&#8361; 100,000</dd>
+				<dt class="farePriceItemPink">Booking Fee </dt>
+				<dd class="farePriceItemPink">&#8361; 30,000</dd>
+			</dl>
+			<dl class="farePriceList">
+				<dt class="farePriceItemBold">Adult 2 <span> (Total)</span></dt>
+				<dd class="farePriceItemBold"><span>&#8361;</span> 230,000</dd>
+				<dt class="farePriceItemGray">Base Fare</dt>
+				<dd class="farePriceItemGray">&#8361; 100,000</dd>
+				<dt class="farePriceItemGray">Tax & Fuelsurcharge</dt>
+				<dd class="farePriceItemGray">&#8361; 100,000</dd>
+				<dt class="farePriceItemPink">Booking Fee </dt>
+				<dd class="farePriceItemPink">&#8361; 30,000</dd>
+			</dl>
+			<dl class="farePriceList">
+				<dt class="farePriceItemBold">Child  1<span> (Total)</span></dt>
+				<dd class="farePriceItemBold"><span>&#8361;</span> 230,000</dd>
+				<dt class="farePriceItemGray">Base Fare</dt>
+				<dd class="farePriceItemGray">&#8361; 100,000</dd>
+				<dt class="farePriceItemGray">Tax & Fuelsurcharge</dt>
+				<dd class="farePriceItemGray">&#8361; 100,000</dd>
+				<dt class="farePriceItemPink">Booking Fee </dt>
+				<dd class="farePriceItemPink">&#8361; 30,000</dd>
+			</dl>
+			<dl class="farePriceList">
+				<dt class="farePriceItemBold">Adult 3<span> (Total)</span></dt>
+				<dd class="farePriceItemBold"><span>&#8361;</span> 230,000</dd>
+				<dt class="farePriceItemGray">Base Fare</dt>
+				<dd class="farePriceItemGray">&#8361; 100,000</dd>
+				<dt class="farePriceItemGray">Tax & Fuelsurcharge</dt>
+				<dd class="farePriceItemGray">&#8361; 100,000</dd>
+				<dt class="farePriceItemPink">Booking Fee </dt>
+				<dd class="farePriceItemPink">&#8361; 30,000</dd>
+			</dl>
+			<p class="farePriceTotal">
+				<span>Total Fare</span>
+				<span>&#8361; 670,000</span>
+			</p>
+			<p class="farePricNotice">Booking Fee will not be refunded</p>
+		</div>
+		<a href="#" class="btnSmPop">OK</a>
+	</div>
+</div>
+<!-- // 20170825 : 문구 수정 및 요금상세레이어 추가 - 추가  -->
+
+<!-- 유소아 알럿 추가 20170829 :: 중문-->
+<div class="layerSmallPop" style="display:none">
+	<div class="layer_inner childPop">
+		<div class="childPopCont">
+			<h2 class="minor">婴儿、儿童年龄不符合规定。</h2>
+			<p class="childPopTxtBox">
+				<em>婴儿、儿童年龄不符合规定。</em><br/><br/>
+				婴儿：乘机时年龄未满2周岁（所有航段)<br/>
+				儿童：乘机时年龄未满12周岁（所有航段)<br/><br/>
+				订票后负责人将会确认婴儿、儿童年龄是否符合规定，<br/>
+				若不符合， 需再加支付一定费用。<br/><br/>
+				若果出发时婴儿未满2周岁，但返回时刚过2岁生日，返回航班应购买儿童票。<br/>
+				详情请咨询负责人。<br/><br/>
+				如果没有座位，无法订票。
+			</p>
+			<div class="childPopColorBox">
+				<span>营业时间</span>
+				<span>
+					营业日为准 09-17点<br/>
+					(韩国时间)
+				</span>
+			</div>
+		</div>
+		<a href="#" class="btnSmPop">确认</a>
+	</div>
+</div>
+<!-- // 유소아 알럿 추가 20170829 :: 중문-->
+
+<!-- 유소아 알럿 추가 20170829 :: 영문-->
+<div class="layerSmallPop" style="display:none">
+	<div class="layer_inner childPop">
+		<div class="childPopCont">
+			<h2 class="minor">Fare & Seat Notice for Infant.Child</h2>
+			<p class="childPopTxtBox">
+				<em>There is a itinerary where age type changes.</em><br/><br/>
+				Infant fare : Less than 24 months based on the final date of return.<br/>
+				Child fare : Less than 12 years based on the final date of return.<br/><br/>
+				After a reservation, additional fee may be charged for each segment that is subject to change.<br/><br/>
+				Infants who are already two years of the age during the journey are required to occupy a seat.<br/>
+				Please contact us in order to reserve a seat<br/>
+				for the infant on the scheduled flight.<br/>
+				(If there are no seats, you may not be able to book them)
+			<div class="childPopColorBox">
+				<span>Business Hour</span>
+				<span>
+					Business day 9AM to 17PM<br/>
+					(Korean Standard Time)
+				</span>
+			</div>
+		</div>
+		<a href="#" class="btnSmPop">OK</a>
+	</div>
+</div>
+<!-- // 유소아 알럿 추가 20170829 :: 영문-->
+
+<!-- 추석연휴 알럿 추가 20170920 :: 한글-->
+<div class="layerSmallPop" style="display:none">
+	<div class="layer_inner chuseokPop">
+		<div class="chuseokPopCont">
+			<div class="btnLangChangCont">
+				<a href="#" class="btnLangChange">English</a> <!-- 영어로 언어 변경 -->
+				<!--<a href="#" class="btnLangChange">中文</a>-->  <!-- 중문으로 언어 변경 -->
+			</div>
+			<h2>안녕하세요<br/>Globalflight 입니다.</h2>
+			<p class="chuseokPopTxtBox">
+				아래 기간은 공휴일로 상담 업무가 원활하지 않을 수 있습니다.<br/>
+				예약변경 및 환불 문의는 온라인 상담 및 이메일로 접수해주시면<br/>
+				10월 10일 이후 순차적으로 답변 드리겠습니다.<br/>
+				항공권 예약 및 발권은 업무시간 기준으로 정상적으로 운영됩니다
+			</p>
+			<ul class="txtList">
+				<li>기간 : 9/30 ~ 10/9</li>
+				<li>제한업무 : 상담, 변경, 취소 & 환불</li>
+				<li>
+					이메일: (영어, 한국어) <span>globalflight-en@hanatour.com</span><br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(중국어) <span>globalflight-cn@hanatour.com</span>
+				</li>
+			</ul>
+			<p class="chuseokPopColorBox">
+				Booking and Ticketing service will be available duirng<br/>
+				normal operating hours.Thank you for your understanding.
+			</p>
+			<label><input type="checkbox" class="checkBox"> Do not show this page again today.</label>
+		</div>
+		<a href="#" class="btnSmPop">OK</a>
+	</div>
+</div>
+<!-- // 추석연휴 알럿 추가 20170920 :: 한글-->
+
+<!-- 추석연휴 알럿 추가 20170920 :: 영문-->
+<div class="layerSmallPop" style="display:none">
+	<div class="layer_inner chuseokPop">
+		<div class="chuseokPopCont">
+			<div class="btnLangChangCont">
+				<a href="#" class="btnLangChange">한국어</a>
+			</div>
+			<h2>Dear Valued Customer</h2>
+			<p class="chuseokPopTxtBox">
+				Our customer support service will be closed on following<br/>
+				dates due to national holidays in Korea.<br/>
+				Our access to email may be limited so please kindly expect<br/>
+				some delay in responding your emails.<br/>
+				We will resume our regular activty on<br/>
+				Tuesday,October 10th, 2017.
+			</p>
+			<ul class="txtList">
+				<li>Holiday period: September 30th ~ October 9th</li>
+				<li>Service: Email support, Change, Cancellation,<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Refund will be closed.</li>
+				<li>
+					Email: (EN, KR) <span>globalflight-en@hanatour.com</span><br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(CN) <span>globalflight-cn@hanatour.com</span>
+				</li>
+			</ul>
+			<p class="chuseokPopColorBox">
+				Booking and Ticketing service will be available duirng<br/>
+				normal operating hours.Thank you for your understanding.
+			</p>
+			<label><input type="checkbox" class="checkBox"> Do not show this page again today.</label>
+		</div>
+		<a href="#" class="btnSmPop">OK</a>
+	</div>
+</div>
+<!-- // 추석연휴 알럿 추가 20170920 :: 영문-->
+
+<!-- 추석연휴 알럿 추가 20170920 :: 중문-->
+<div class="layerSmallPop" style="display:none">
+	<div class="layer_inner chuseokPop">
+		<div class="chuseokPopCont">
+			<div class="btnLangChangCont">
+				<a href="#" class="btnLangChange">한국어</a>
+			</div>
+			<h2>
+				尊敬的用户：<br/>
+				您好！中秋节期间，Globalflight客服工作时间安排如下：
+			</h2>
+			<p class="chuseokPopTxtBox">
+				放假时间 ：2017年9月30日－10月9日<br/>
+				此期间无法提供改签、咨询、取消、退票等服务。<br/>
+				改签、退票请通过邮件咨询。10月10日开始我们将按顺序答复。<br/>
+				订票、出票：正常服务。
+			</p>
+			<ul class="txtList">
+				<li>
+					Email: (英文, 韩语) <span>globalflight-en@hanatour.com</span><br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(中文) <span>globalflight-cn@hanatour.com</span>
+				</li>
+			</ul>
+			<label><input type="checkbox" class="checkBox"> 今天不在显示此消息。</label>
+		</div>
+		<a href="#" class="btnSmPop">OK</a>
+	</div>
+</div>
+<!-- // 추석연휴 알럿 추가 20170920 :: 중문-->
+</body>
+</html>
+

@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>Search List - Hanatour Air</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script src="../js/jquery-2.2.3.min.js" type="text/javascript"></script>
+<script src="../js/swiper.min.js" type="text/javascript"></script>
+<script src="../js/jquery-ui-custom.js" type="text/javascript"></script>
+<script src="../js/ht.calendar.js" type="text/javascript"></script>
+<script src="../js/m.globalflight.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+
+<div id="wrap">
+	<header id="header" class="subHead"><!-- 서브일경우 class="subHead" 추가 -->
+		<h1><a href="#"><img src="../images/btn_nlogo.png" alt=""></a></h1>
+		<a href="#" class="btnLeft"><img src="../images/btn_hd_back.png" alt="back Key"></a>
+		<a href="#" class="btnRight"><img src="../images/btn_hd_right.png" alt="right menu"></a>
+	</header>
+	
+	<!-- container -->
+	<div id="container" class="headMarTop02"><!-- nav 있는경우 headMarTop01, 없는경우 headMarTop02 -->
+		<!-- searchList -->
+		<div class="searchSect">
+			<!-- top -->
+			<div class="searchContTop">
+				<div class="tripCity">
+					<strong>柏林特格尔</strong>
+					<strong>巴尔的摩 - 华盛顿国际</strong>
+				</div>
+				<div class="tripDay">
+					<span class="day">11/23, 星期三 ~  11/25, 星期五</span>
+					<span class="ple">3</span>
+					<em>经济舱</em>
+				</div>
+			</div>
+			<!-- //top -->
+			
+			<!-- sort -->
+			<div class="sortingBox">
+				<div class="filt"><a href="pop_filter.html" class="popComeup">Filter</a></div>
+				<div class="sort">
+					<span>Sort</span>
+					<select title="sort select">
+						<option>Lowest Price</option>
+						<option>Shorter Flight duration</option>
+						<option>出发地ure time(early to late)</option>
+						<option>出发地ure time(late to early)</option>
+						<option>Arrival time(early to late)</option>
+						<option>Arrival time(late to early)</option>
+					</select>
+				</div>
+			</div>
+			<!-- // sort -->
+			
+			<!-- list -->
+			<div class="airList">
+				<ul>
+					<li>
+						<a href="#" class="chSelect"><!-- 편도는 a태그로 변경 :: 선택시 하단 detailBox 노출됨 -->
+							<div class="airLogo">
+								<span><img src="../images/airline/KE.png" alt=""></span>
+								<em>大韩航空</em>
+							</div>
+							<div class="depTime">
+								<strong>08:55</strong>
+								<span>ICN</span>
+							</div>
+							<div class="leadTime">
+								<strong>12h 30m</strong>
+								<div class="bar"><span><img src="../images/img_leadtime01.png" alt="1"></span></div>
+							</div>
+							<div class="depTime">
+								<strong>20:55</strong>
+								<span>BKK</span>
+							</div>
+						</a>
+						<!-- // 출국편 -->
+						
+						<a href="#" class="detailTog"><!-- 선택시 class="on" 추가 :: 하단 detail 노출됨 -->
+							<div class="seatTag">
+								<span>经济舱</span>
+							</div>
+							<div class="moneyBox">
+								<b>￦ 549,000</b>
+								<strong>￥ 594</strong>
+							</div>
+						</a>
+						
+						<!-- 하단 상세 스케쥴 -->
+						<div class="detailBox">
+							<!-- 出发地 -->
+							<div class="出发地">
+								<h2 class="tit"><strong>出发地</strong><em>11/23, 星期三</em></h2>
+								
+								<div class="timeListBox">
+									<!-- time top -->
+									<div class="inTimeTop">
+										<strong>ICN<br><span>10:20</span></strong>
+										<strong>BKK<br><span>15:10</span></strong>
+										<div class="city程中转">
+											<strong>1 程中转</strong>
+											<p>总时长 : 5h 30m</p>
+										</div>
+									</div>
+									<!-- // time top -->
+									
+									<!-- time list -->
+									<ol class="inTimeCont">
+										<li>
+											<div class="titLeft">
+												<strong>ICN</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">仁川 机场</strong>
+												<span>泰国国际航空 / TG629</span>
+												<b>经济舱</b>
+												<div class="label"><em>2h20m</em></div>
+											</div>
+										</li>
+										<li>
+											<div class="titLeft">
+												<strong>HKG</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig 程中转"> <!-- 경유 대기시간일경우 class="程中转" 추가 -->
+												<strong class="titPort">香港机场</strong>
+												<div class="label"><em>1h 程中转</em></div>
+											</div>
+										</li>
+										<li>
+											<div class="titLeft">
+												<strong>HKG</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">香港机场</strong>
+												<span>泰国国际航空 / TG629</span>
+												<b>经济舱</b>
+												<p class="codeShare">
+													<strong>Code Share:</strong>
+													<span>本航班实际上是利用法国航空的代码共享航班。</span>
+												</p>
+												<div class="label"><em>2h20m</em></div>
+											</div>
+										</li>
+										<li>
+											<div class="titLeft">
+												<strong>BKK</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">曼谷机场</strong>
+											</div>
+										</li>
+									</ol>
+									<!-- // time list -->
+								</div>
+								
+								<div class="baggage">
+									<strong>免费行李额规定</strong>
+									<div>
+										<span>TG <em>免费行李额：1件</em></span>
+										<span>SG <em>免费行李额：1件</em></span>
+									</div>
+								</div>
+							</div>
+							<!-- // 出发地 -->
+							
+							
+							<!-- 요금 -->
+							<div class="fareBox">
+								<dl>
+									<dt><strong>平均票价<span>(成人, 儿童 )</span></strong><em>￦ 594,000</em></dt>
+									<dd><strong>票价</strong><em>￦ 500,000</em></dd>
+									<dd><strong>燃油费</strong><em>￦ 50,000</em></dd>
+									<dd><strong>税金</strong><em>￦ 44,000</em></dd>
+								</dl>
+								<div class="btmFare">
+									<div><strong>婴儿票价</strong><em>￦ 100,000</em></div>
+									<div class="total">
+										<strong>总价<span>(4 旅客)</span></strong>
+										<em>￦1,882,000 <b>￥1,882</b></em>
+									</div>
+								</div>
+							</div>
+							<!-- // 요금 -->
+							
+							<a href="#" class="btnFull">选择</a>
+						</div>	
+						<!-- // 하단 상세 스케쥴 -->
+					</li>
+					
+					<li>
+						<a href="#" class="chSelect"><!-- 편도는 a태그로 변경 :: 선택시 하단 detailBox 노출됨 -->
+							<div class="airLogo">
+								<span><img src="../images/airline/KE.png" alt=""></span>
+								<em>大韩航空</em>
+							</div>
+							<div class="depTime">
+								<strong>08:55</strong>
+								<span>ICN</span>
+							</div>
+							<div class="leadTime">
+								<strong>12h 30m</strong>
+								<div class="bar"><span><img src="../images/img_leadtime01.png" alt="1"></span></div>
+							</div>
+							<div class="depTime">
+								<strong>20:55</strong>
+								<span>BKK</span>
+							</div>
+						</a>
+						<!-- // 출국편 -->
+						
+						<a href="#" class="detailTog"><!-- 선택시 class="on" 추가 :: 하단 detail 노출됨 -->
+							<div class="seatTag">
+								<span>经济舱</span>
+							</div>
+							<div class="moneyBox">
+								<b>￦ 549,000</b>
+								<strong>￥ 594</strong>
+							</div>
+						</a>
+						
+						<!-- 하단 상세 스케쥴 -->
+						<div class="detailBox">
+							<!-- 出发地 -->
+							<div class="出发地">
+								<h2 class="tit"><strong>出发地</strong><em>11/23, 星期三</em></h2>
+								
+								<div class="timeListBox">
+									<!-- time top -->
+									<div class="inTimeTop">
+										<strong>ICN<br><span>10:20</span></strong>
+										<strong>BKK<br><span>15:10</span></strong>
+										<div class="city程中转">
+											<strong>1 程中转</strong>
+											<p>总时长 : 5h 30m</p>
+										</div>
+									</div>
+									<!-- // time top -->
+									
+									<!-- time list -->
+									<ol class="inTimeCont">
+										<li>
+											<div class="titLeft">
+												<strong>ICN</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">仁川 机场</strong>
+												<span>泰国国际航空 / TG629</span>
+												<b>经济舱</b>
+												<div class="label"><em>2h20m</em></div>
+											</div>
+										</li>
+										<li>
+											<div class="titLeft">
+												<strong>HKG</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig 程中转"> <!-- 경유 대기시간일경우 class="程中转" 추가 -->
+												<strong class="titPort">香港机场</strong>
+												<div class="label"><em>1h 程中转</em></div>
+											</div>
+										</li>
+										<li>
+											<div class="titLeft">
+												<strong>HKG</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">香港机场</strong>
+												<span>泰国国际航空 / TG629</span>
+												<b>经济舱</b>
+												<p class="codeShare">
+													<strong>Code Share:</strong>
+													<span>本航班实际上是利用法国航空的代码共享航班。
+</span>
+												</p>
+												<div class="label"><em>2h20m</em></div>
+											</div>
+										</li>
+										<li>
+											<div class="titLeft">
+												<strong>BKK</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">曼谷机场</strong>
+											</div>
+										</li>
+									</ol>
+									<!-- // time list -->
+								</div>
+								
+								<div class="baggage">
+									<strong>免费行李额规定</strong>
+									<div>
+										<span>TG <em>免费行李额：1件</em></span>
+										<span>SG <em>免费行李额：1件</em></span>
+									</div>
+								</div>
+							</div>
+							<!-- // 出发地 -->
+							
+							
+							<!-- 요금 -->
+							<div class="fareBox">
+								<dl>
+									<dt><strong>平均票价<span>(成人, 儿童 )</span></strong><em>￦ 594,000</em></dt>
+									<dd><strong>票价</strong><em>￦ 500,000</em></dd>
+									<dd><strong>燃油费</strong><em>￦ 50,000</em></dd>
+									<dd><strong>税金</strong><em>￦ 44,000</em></dd>
+								</dl>
+								<div class="btmFare">
+									<div><strong>婴儿票价</strong><em>￦ 100,000</em></div>
+									<div class="total">
+										<strong>总价<span>(4 旅客)</span></strong>
+										<em>￦1,882,000 <b>￥1,882</b></em>
+									</div>
+								</div>
+							</div>
+							<!-- // 요금 -->
+							
+							<a href="#" class="btnFull">选择</a>
+						</div>	
+						<!-- // 하단 상세 스케쥴 -->
+					</li>
+					
+					<li>
+						<a href="#" class="chSelect"><!-- 편도는 a태그로 변경 :: 선택시 하단 detailBox 노출됨 -->
+							<div class="airLogo">
+								<span><img src="../images/airline/KE.png" alt=""></span>
+								<em>大韩航空</em>
+							</div>
+							<div class="depTime">
+								<strong>08:55</strong>
+								<span>ICN</span>
+							</div>
+							<div class="leadTime">
+								<strong>12h 30m</strong>
+								<div class="bar"><span><img src="../images/img_leadtime01.png" alt="1"></span></div>
+							</div>
+							<div class="depTime">
+								<strong>20:55</strong>
+								<span>BKK</span>
+							</div>
+						</a>
+						<!-- // 출국편 -->
+						
+						<a href="#" class="detailTog"><!-- 선택시 class="on" 추가 :: 하단 detail 노출됨 -->
+							<div class="seatTag">
+								<span>经济舱</span>
+							</div>
+							<div class="moneyBox">
+								<b>￦ 549,000</b>
+								<strong>￥ 594</strong>
+							</div>
+						</a>
+						
+						<!-- 하단 상세 스케쥴 -->
+						<div class="detailBox">
+							<!-- 出发地 -->
+							<div class="出发地">
+								<h2 class="tit"><strong>出发地</strong><em>11/23, 星期三</em></h2>
+								
+								<div class="timeListBox">
+									<!-- time top -->
+									<div class="inTimeTop">
+										<strong>ICN<br><span>10:20</span></strong>
+										<strong>BKK<br><span>15:10</span></strong>
+										<div class="city程中转">
+											<strong>1 程中转</strong>
+											<p>总时长 : 5h 30m</p>
+										</div>
+									</div>
+									<!-- // time top -->
+									
+									<!-- time list -->
+									<ol class="inTimeCont">
+										<li>
+											<div class="titLeft">
+												<strong>ICN</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">仁川 机场</strong>
+												<span>泰国国际航空 / TG629</span>
+												<b>经济舱</b>
+												<div class="label"><em>2h20m</em></div>
+											</div>
+										</li>
+										<li>
+											<div class="titLeft">
+												<strong>HKG</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig 程中转"> <!-- 경유 대기시간일경우 class="程中转" 추가 -->
+												<strong class="titPort">香港机场</strong>
+												<div class="label"><em>1h 程中转</em></div>
+											</div>
+										</li>
+										<li>
+											<div class="titLeft">
+												<strong>HKG</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">香港机场</strong>
+												<span>泰国国际航空 / TG629</span>
+												<b>经济舱</b>
+												<p class="codeShare">
+													<strong>Code Share:</strong>
+													<span>本航班实际上是利用法国航空的代码共享航班</span>
+												</p>
+												<div class="label"><em>2h20m</em></div>
+											</div>
+										</li>
+										<li>
+											<div class="titLeft">
+												<strong>BKK</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">曼谷机场</strong>
+											</div>
+										</li>
+									</ol>
+									<!-- // time list -->
+								</div>
+								
+								<div class="baggage">
+									<strong>免费行李额规定</strong>
+									<div>
+										<span>TG <em>免费行李额：1件</em></span>
+										<span>SG <em>免费行李额：1件</em></span>
+									</div>
+								</div>
+							</div>
+							<!-- // 出发地 -->
+							
+							
+							<!-- 요금 -->
+							<div class="fareBox">
+								<dl>
+									<dt><strong>平均票价<span>(成人, 儿童 )</span></strong><em>￦ 594,000</em></dt>
+									<dd><strong>票价</strong><em>￦ 500,000</em></dd>
+									<dd><strong>燃油费</strong><em>￦ 50,000</em></dd>
+									<dd><strong>税金</strong><em>￦ 44,000</em></dd>
+								</dl>
+								<div class="btmFare">
+									<div><strong>婴儿票价</strong><em>￦ 100,000</em></div>
+									<div class="total">
+										<strong>总价<span>(4 旅客)</span></strong>
+										<em>￦1,882,000 <b>￥1,882</b></em>
+									</div>
+								</div>
+							</div>
+							<!-- // 요금 -->
+							
+							<a href="#" class="btnFull">选择</a>
+						</div>	
+						<!-- // 하단 상세 스케쥴 -->
+					</li>
+					
+					<li>
+						<a href="#" class="chSelect"><!-- 편도는 a태그로 변경 :: 선택시 하단 detailBox 노출됨 -->
+							<div class="airLogo">
+								<span><img src="../images/airline/KE.png" alt=""></span>
+								<em>大韩航空</em>
+							</div>
+							<div class="depTime">
+								<strong>08:55</strong>
+								<span>ICN</span>
+							</div>
+							<div class="leadTime">
+								<strong>12h 30m</strong>
+								<div class="bar"><span><img src="../images/img_leadtime01.png" alt="1"></span></div>
+							</div>
+							<div class="depTime">
+								<strong>20:55</strong>
+								<span>BKK</span>
+							</div>
+						</a>
+						<!-- // 출국편 -->
+						
+						<a href="#" class="detailTog"><!-- 선택시 class="on" 추가 :: 하단 detail 노출됨 -->
+							<div class="seatTag">
+								<span>经济舱</span>
+							</div>
+							<div class="moneyBox">
+								<b>￦ 549,000</b>
+								<strong>￥ 594</strong>
+							</div>
+						</a>
+						
+						<!-- 하단 상세 스케쥴 -->
+						<div class="detailBox">
+							<!-- 出发地 -->
+							<div class="出发地">
+								<h2 class="tit"><strong>出发地</strong><em>11/23, 星期三</em></h2>
+								
+								<div class="timeListBox">
+									<!-- time top -->
+									<div class="inTimeTop">
+										<strong>ICN<br><span>10:20</span></strong>
+										<strong>BKK<br><span>15:10</span></strong>
+										<div class="city程中转">
+											<strong>1 程中转</strong>
+											<p>总时长 : 5h 30m</p>
+										</div>
+									</div>
+									<!-- // time top -->
+									
+									<!-- time list -->
+									<ol class="inTimeCont">
+										<li>
+											<div class="titLeft">
+												<strong>ICN</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">仁川 机场</strong>
+												<span>泰国国际航空 / TG629</span>
+												<b>经济舱</b>
+												<div class="label"><em>2h20m</em></div>
+											</div>
+										</li>
+										<li>
+											<div class="titLeft">
+												<strong>HKG</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig 程中转"> <!-- 경유 대기시간일경우 class="程中转" 추가 -->
+												<strong class="titPort">香港机场</strong>
+												<div class="label"><em>1h 程中转</em></div>
+											</div>
+										</li>
+										<li>
+											<div class="titLeft">
+												<strong>HKG</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">香港机场</strong>
+												<span>泰国国际航空 / TG629</span>
+												<b>经济舱</b>
+												<p class="codeShare">
+													<strong>Code Share:</strong>
+													<span>本航班实际上是利用法国航空的代码共享航班。
+</span>
+												</p>
+												<div class="label"><em>2h20m</em></div>
+											</div>
+										</li>
+										<li>
+											<div class="titLeft">
+												<strong>BKK</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">曼谷机场</strong>
+											</div>
+										</li>
+									</ol>
+									<!-- // time list -->
+								</div>
+								
+								<div class="baggage">
+									<strong>免费行李额规定</strong>
+									<div>
+										<span>TG <em>免费行李额：1件</em></span>
+										<span>SG <em>免费行李额：1件</em></span>
+									</div>
+								</div>
+							</div>
+							<!-- // 出发地 -->
+							
+							
+							<!-- 요금 -->
+							<div class="fareBox">
+								<dl>
+									<dt><strong>平均票价<span>(成人, 儿童 )</span></strong><em>￦ 594,000</em></dt>
+									<dd><strong>票价</strong><em>￦ 500,000</em></dd>
+									<dd><strong>燃油费</strong><em>￦ 50,000</em></dd>
+									<dd><strong>税金</strong><em>￦ 44,000</em></dd>
+								</dl>
+								<div class="btmFare">
+									<div><strong>婴儿票价</strong><em>￦ 100,000</em></div>
+									<div class="total">
+										<strong>总价<span>(4 旅客)</span></strong>
+										<em>￦1,882,000 <b>￥1,882</b></em>
+									</div>
+								</div>
+							</div>
+							<!-- // 요금 -->
+							
+							<a href="#" class="btnFull">选择</a>
+						</div>	
+						<!-- // 하단 상세 스케쥴 -->
+					</li>
+				</ul>
+			</div>
+			<!-- // list -->
+		</div>
+		<!-- // searchList -->
+		
+		
+	</div>
+	<!-- // container -->
+	
+	
+	<!-- footer -->
+	<footer>
+		<ul class=""><!-- 푸터 도달시 static 추가 -->
+			<li class="notics"><!-- class="on" 추가시 아래 레이어 펼쳐짐 -->
+				<a href="#">Notice</a>
+				<div class="noticsLayel">
+					<ul>
+						<li>Payment is made in KRW.</li>
+						<li>Fuel Surcharge and taxes as well as the total fare are subject to change depending on the airline's circumstances and change of exchange rate. </li>
+					</ul>
+					<a href="#" class="noticsClose"><img src="../images/btn_notics_close.png" alt="notics close button"></a>
+				</div>
+			</li>
+			<li class="top"><a href="#">TOP</a></li>
+		</ul>
+		
+		<div class="footTerms">
+			<a href="pop_foot_terms01.html" class="popComeup">航空章程</a>
+			<a href="pop_foot_terms02.html" class="popComeup">利用章程</a>
+			<a href="pop_foot_terms03.html" class="popComeup">信息处理方针</a>
+		</div>
+		
+		<address>
+			Hana Tour Co., Ltd.<span class="line"></span>CEO : Jin-Kook KIM<span class="line"></span>Address : Hana Tour Co.,<br>
+			Ltd. 45, Insa-dong 5-gil, Jongno-gu, Seoul<span class="line"></span><br>
+			Corporate Registration Number : 102-81-39440<span class="line"></span><br>
+			Communications vendor registration number : Jongno 01-1806<br>
+			Ensure business information<span class="line"></span><br>
+			Tour operators registration number : The No. 1993-000006<span class="line"></span><br>
+			Guarantee Insurance Sales : 2.21 billion won<span class="line"></span><br>
+			Service center : 1577-1233<span class="line"></span>FAX : 02-734-0392<br>
+			Personal Information Manager : Sung-Jae Park<br>
+		</address>
+	</footer>
+	<!-- // footer -->
+	
+</div>
+
+
+<!-- right Menu -->
+<div id="userPanel" class=""><!-- 펼칠시 slideIn 추가 --> 
+	<div class="innerScroller">
+		<div class="rigMenuCont">
+			<a href="#" class="booking">Search my booking</a>
+			<ul class="rigMenuList">
+				<li class="lang">
+					<strong>Language</strong>
+					<select title="lang select">
+						<option>English</option>
+						<option>Chinese</option>
+					</select>
+				</li>
+				<li class="customer">
+					<strong>Customer Service</strong>
+					<div class="txtBox">
+						<em>HanaTour Service Inc</em>
+						<p>Inquire about bokking : <span class="blue">globalflight-cn@hanatour.com</span></p>
+						<p>operating hours : <span class="gray">Korean Standard Time : 09:00 ~ 16:00</span></p>
+					</div>
+				</li>
+				<li class="about">
+					<a href="#">About Hantour<b>Korea best travel agency</b></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="mask" style="display:none"></div><!-- dim -->
+<!-- // right Menu -->
+
+<!-- booking layer -->
+<div class="layerPopCom01" style="display:none">
+	<div class="layer_inner" style="margin-top:-135px"><!-- 팝업 세로값의 반 -->
+		<h3 class="layerHead">Search My Booking<a href="#" class="layerClose"></a></h3>
+		<div class="layelPopCont">
+		
+			<!-- booking Input -->
+			<div class="booking_input">
+				<strong>Booking No.</strong>
+				<input type="text" class="inputBase" title="Booking Number write">
+			</div>
+			<div class="booking_input tableCell">
+				<div>
+					<strong>First name</strong>
+					<input type="text" class="inputBase" title="First name write">
+				</div>
+				<span class="cellPad"></span>
+				<div>
+					<strong>Last name</strong>
+					<input type="text" class="inputBase" title="Last name write">
+				</div>
+			</div>
+			<!-- // booking Input -->
+		</div>
+		<a href="#" class="btnFull">Search</a>
+	</div>
+</div>
+<!-- // booking layer -->
+
+</body>
+</html>
+

@@ -1,0 +1,279 @@
+<!--
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>information - Hanatour Air</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script src="../js/jquery-2.2.3.min.js" type="text/javascript"></script>
+<script src="../js/swiper.min.js" type="text/javascript"></script>
+<script src="../js/jquery-ui-custom.js" type="text/javascript"></script>
+<script src="../js/ht.calendar.js" type="text/javascript"></script>
+<script src="../js/m.globalflight.js" type="text/javascript"></script>
+</head>
+
+<body>
+-->
+<script type="text/javascript">
+	$('#overlayPanel').on('open.loadpop', function (e, data) {
+   		if (GLOBALFLIGHT !== undefined && typeof GLOBALFLIGHT.initFareRules === 'function') GLOBALFLIGHT.initFareRules();
+   	});
+</script>
+
+<!-- pop -->
+<div class="slideUpPop" style="display:block">
+	
+	<div class="header tyCent">
+		<h2>Inflight Meal, Mileage Request <a href="#" class="closeOverlayPanel" title="pop close"></a></h2>
+	</div>
+	
+	<div class="popContainer">
+		
+		<!-- pop cont -->
+		<div class="popFareRules pb_toggle">
+			<ul class="tabList tyTwo">
+				<li class="on"><a href="#">기내식신청</a></li><!-- 선택시 class="on" -->
+				<li class=""><a href="#">항공마일리지신청</a></li><!-- 두줄일경우 twoLine 추가 -->
+			</ul>
+			
+			<!-- cont1 -->
+			<div class="tabCont">
+				<dl class="inforList02">
+					<dt class="open"><!-- dt class="open" 추가 :: 하위 dd 펼쳐짐 -->
+						<a href="#">
+							<strong>1</strong>
+							<span>Adult</span>
+							<span class="name">SEUNGHEE, PARK</span>
+						</a>
+					</dt>
+					<dd>
+						<!-- 입력 리스트 -->
+						<ul class="inputCell">
+							<li>
+								<label>
+									<select class="selectBox02" style="width:50%">
+										<option>No Preference</option>
+									</select>
+								</label>
+							</li>
+						</ul>
+						<!-- // 입력 리스트 -->
+					</dd>
+					
+					<dt class="open"><!-- dt class="open" 추가 :: 하위 dd 펼쳐짐 -->
+						<a href="#">
+							<strong>2</strong>
+							<span>Adult</span>
+							<span class="name">SEUNGHEE, PARK</span>
+						</a>
+					</dt>
+					<dd>
+						<!-- 입력 리스트 -->
+						<ul class="inputCell">
+							<li>
+								<label>
+									<select class="selectBox02" style="width:50%">
+										<option>No Preference</option>
+									</select>
+								</label>
+							</li>
+						</ul>
+						<!-- // 입력 리스트 -->
+					</dd>
+					
+					<dt class="open"><!-- dt class="open" 추가 :: 하위 dd 펼쳐짐 -->
+						<a href="#">
+							<strong>3</strong>
+							<span>Adult</span>
+							<span class="name">SEUNGHEE, PARK</span>
+						</a>
+					</dt>
+					<dd>
+						<!-- 입력 리스트 -->
+						<ul class="inputCell">
+							<li>
+								<label>
+									<select class="selectBox02">
+										<option>Child Meal</option>
+									</select>
+								</label>
+								<span class="cellPad"></span><!-- 빈태그 -->
+								<label>
+									<input type="text" class="inputBase" disabled value="Input directly menu">
+								</label>
+							</li>
+						</ul>
+						<!-- // 입력 리스트 -->
+						
+						<div class="inforTxt">
+							<p>If you do not request an in-flight meal, a regular meal will be provided.</p>
+							<p>Some airlines do not provide in-flight meals or have limited menus. Check the results after making your request. </p>
+						</div>
+						
+						<div class="qnaCont">
+							<strong>Comments</strong>
+							<div class="writeBox">
+								<textarea title="comments write"></textarea>
+							</div>
+						</div>
+						<div class="qnaCont">
+							<strong>Answer</strong>
+							<div>
+								<p>Does Korean Air offer in-flight slippers? Where is the VIP Lounge in Incheon air port? Is there any discount coupon?</p>
+							</div>
+						</div>
+						
+					</dd>
+				</dl>
+				
+				<a href="#" class="btnFull marT35">Request</a>
+			</div>
+			<!-- // cont1 -->
+			
+			<!-- cont2 -->
+			<div class="tabCont" style="display:none">
+				<dl class="inforList02">
+					<dt class="open"><!-- dt class="open" 추가 :: 하위 dd 펼쳐짐 -->
+						<a href="#">
+							<strong>1</strong>
+							<span>Adult</span>
+							<span class="name">SEUNGHEE, PARK</span>
+						</a>
+					</dt>
+					<dd>	
+						<!-- 입력 리스트 -->
+						<ul class="inputCell">
+							<li>
+								<label>
+									<strong>Korean Air</strong>
+									<select class="selectBox02">
+										<option>Korean Airlines Skypass </option>
+									</select>
+								</label>
+								<span class="cellPad"></span><!-- 빈태그 -->
+								<label>
+									<strong>&nbsp;</strong>
+									<input type="text" class="inputBase" placeholder="Mileage No.">
+								</label>
+							</li>
+							<li>
+								<label>
+									<strong>Thai Airways</strong>
+									<select class="selectBox02">
+										<option>Thai Royal Orchid Plus</option>
+									</select>
+								</label>
+								<span class="cellPad"></span><!-- 빈태그 -->
+								<label>
+									<strong>&nbsp;</strong>
+									<input type="text" class="inputBase" placeholder="Mileage No.">
+								</label>
+							</li>
+						</ul>
+						<!-- // 입력 리스트 -->
+					</dd>
+					
+					<dt class="open"><!-- dt class="open" 추가 :: 하위 dd 펼쳐짐 -->
+						<a href="#">
+							<strong>2</strong>
+							<span>Adult</span>
+							<span class="name">SEUNGHEE, PARK</span>
+						</a>
+					</dt>
+					<dd>	
+						<!-- 입력 리스트 -->
+						<ul class="inputCell">
+							<li>
+								<label>
+									<strong>Korean Air</strong>
+									<select class="selectBox02">
+										<option>Korean Airlines Skypass </option>
+									</select>
+								</label>
+								<span class="cellPad"></span><!-- 빈태그 -->
+								<label>
+									<strong>&nbsp;</strong>
+									<input type="text" class="inputBase" placeholder="Mileage No.">
+								</label>
+							</li>
+							<li>
+								<label>
+									<strong>Thai Airways</strong>
+									<select class="selectBox02">
+										<option>Thai Royal Orchid Plus</option>
+									</select>
+								</label>
+								<span class="cellPad"></span><!-- 빈태그 -->
+								<label>
+									<strong>&nbsp;</strong>
+									<input type="text" class="inputBase" placeholder="Mileage No.">
+								</label>
+							</li>
+						</ul>
+						<!-- // 입력 리스트 -->
+					</dd>
+					
+					<dt class="open"><!-- dt class="open" 추가 :: 하위 dd 펼쳐짐 -->
+						<a href="#">
+							<strong>3</strong>
+							<span>Adult</span>
+							<span class="name">SEUNGHEE, PARK</span>
+						</a>
+					</dt>
+					<dd>	
+						<!-- 입력 리스트 -->
+						<ul class="inputCell">
+							<li>
+								<label>
+									<strong>Korean Air</strong>
+									<select class="selectBox02">
+										<option>Korean Airlines Skypass </option>
+									</select>
+								</label>
+								<span class="cellPad"></span><!-- 빈태그 -->
+								<label>
+									<strong>&nbsp;</strong>
+									<input type="text" class="inputBase" placeholder="Mileage No.">
+								</label>
+							</li>
+							<li>
+								<label>
+									<strong>Thai Airways</strong>
+									<select class="selectBox02">
+										<option>Thai Royal Orchid Plus</option>
+									</select>
+								</label>
+								<span class="cellPad"></span><!-- 빈태그 -->
+								<label>
+									<strong>&nbsp;</strong>
+									<input type="text" class="inputBase" placeholder="Mileage No.">
+								</label>
+							</li>
+						</ul>
+						<!-- // 입력 리스트 -->
+						
+						<div class="inforTxt">
+							<p>Please be free to enter only the exact number of occupants the mileage. </p>
+							<p>If the mileage number has not been entered incorrectly sent to ticket number one airline ticket reservations it can be canceled automatically. </p>
+						</div>
+						
+						<div class="qnaCont">
+							<strong>Answer</strong>
+							<div>
+								<p>Does Korean Air offer in-flight slippers? Where is the VIP Lounge in Incheon air port? Is there any discount coupon?</p>
+							</div>
+						</div>
+					</dd>
+				</dl>
+				
+				<a href="#" class="btnFull marT35">Request</a>
+			</div>
+			<!-- // cont2 -->
+			
+		</div>
+		<!-- // pop cont -->
+	</div>
+</div>
+<!-- // pop -->

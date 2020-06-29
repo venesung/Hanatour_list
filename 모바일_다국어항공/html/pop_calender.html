@@ -1,0 +1,72 @@
+
+<script type="text/javascript">
+	$('#overlayPanel').on('open.loadpop', function (e, data) {
+   		if (GLOBALFLIGHT !== undefined && typeof GLOBALFLIGHT.initCalendar === 'function') GLOBALFLIGHT.initCalendar();
+
+   		var ins = $('.popContainer > .calenderCont').getInstance();
+
+   		ins.setDate(new Date(2017, 0, 10));
+   		ins.setRange(new Date(2017, 0, 20));
+   	});
+</script>
+
+<!-- pop -->
+<div class="slideUpPop" style="display:block">
+	
+	<div class="header fixed"><!-- 달력 헤더 fixed -->
+		<h2>Choose Dates<a href="#" class="closeOverlayPanel" title="pop close"></a></h2>
+		
+		<div class="cldHeadBox fiveSix"><!-- 편도일경우 class="oneWay" 추가, 201707 추가 다구간 5개이상일경우 fiveSix 추가 -->
+			<div class="calenderHead on"><!-- 날짜 입력시 class on 추가 -->
+				<strong>Itinerary 1</strong>
+				<em>Mon, 14/04/2016</em>
+			</div>
+			<div class="calenderHead on">
+				<strong>Itinerary 2</strong>
+				<em>Mon, 14/04/2016</em>
+			</div>
+			<div class="calenderHead on">
+				<strong>Itinerary 3</strong>
+				<em>Mon, 14/04/2016</em>
+			</div>
+			<div class="calenderHead on">
+				<strong>Itinerary 4</strong>
+				<em>Mon, 14/04/2016</em>
+			</div>
+			<div class="calenderHead on">
+				<strong>Itinerary 5</strong>
+				<em>Mon, 14/04/2016</em>
+			</div>
+			<div class="calenderHead on">
+				<strong>Itinerary 6</strong>
+				<em>Mon, 14/04/2016</em>
+			</div>
+		</div>
+		
+		<div class="dayWeek">
+			<span class="sun">S</span>
+			<span>M</span>
+			<span>T</span>
+			<span>W</span>
+			<span>T</span>
+			<span>F</span>
+			<span class="sat">S</span>
+		</div>
+	</div>
+	
+	<div class="popContainer">
+		
+		<!-- pop cont -->
+		<div id="datepicker" class="calenderCont">
+		
+		
+		</div>
+		<!-- // pop cont -->
+		
+		<div class="btnFixed">
+			<a href="#" class="btnFull">OK</a>
+		</div>
+		
+	</div>
+</div>
+<!-- // pop -->

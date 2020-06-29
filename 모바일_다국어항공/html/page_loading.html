@@ -1,0 +1,1009 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>Search List - Hanatour Air</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script src="../js/jquery-2.2.3.min.js" type="text/javascript"></script>
+<script src="../js/swiper.min.js" type="text/javascript"></script>
+<script src="../js/jquery-ui-custom.js" type="text/javascript"></script>
+<script src="../js/ht.calendar.js" type="text/javascript"></script>
+<script src="../js/m.globalflight.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+
+<div id="wrap">
+	<header id="header" class="subHead"><!-- 서브일경우 class="subHead" 추가 -->
+		<h1><a href="#"><img src="../images/btn_nlogo.png" alt=""></a></h1>
+		<a href="#" class="btnLeft"><img src="../images/btn_hd_back.png" alt="back Key"></a>
+		<a href="#" class="btnRight"><img src="../images/btn_hd_right.png" alt="right menu"></a>
+	</header>
+	
+	<!-- container -->
+	<div id="container" class="headMarTop02"><!-- nav 있는경우 headMarTop01, 없는경우 headMarTop02 -->
+		<!-- searchList -->
+		<div class="searchSect">
+			<!-- top -->
+			<div class="searchContTop">
+				<div class="tripCity">
+					<strong>Bangkok</strong>
+					<strong>Incheon</strong>
+				</div>
+				<div class="tripDay">
+					<span class="day">Fri, May 0 Sun, May 08</span>
+					<span class="ple">3</span>
+					<em>Economy</em>
+				</div>
+			</div>
+			<!-- //top -->
+			
+			<!-- sort -->
+			<div class="sortingBox">
+				<div class="filt"><a href="pop_filter.html" class="popComeup">Filter</a></div>
+				<div class="sort">
+					<span>Sort</span>
+					<select title="sort select">
+						<option>Lowest Price</option>
+						<option>Shorter Flight duration</option>
+						<option>Departure time(early to late)</option>
+						<option>Departure time(late to early)</option>
+						<option>Arrival time(early to late)</option>
+						<option>Arrival time(late to early)</option>
+					</select>
+				</div>
+			</div>
+			<!-- // sort -->
+			
+			<!-- list -->
+			<div class="airList">
+				<ul>
+					<li>
+						<!-- 출국편 -->
+						<label class="chSelect">
+							<div class="input"><input type="checkbox" class="checkBox" title="departure checkbox"></div>
+							<div class="airLogo">
+								<span><img src="../images/airline/KE.png" alt=""></span>
+								<em>KOREAN AIR</em>
+							</div>
+							<div class="depTime">
+								<strong>08:55</strong>
+								<span>ICN</span>
+							</div>
+							<div class="leadTime">
+								<strong>12h 30m</strong>
+								<div class="bar"><span><img src="../images/img_leadtime01.png" alt="1"></span></div>
+							</div>
+							<div class="depTime">
+								<strong>20:55</strong>
+								<span>BKK</span>
+							</div>
+						</label>
+						<!-- // 출국편 -->
+						
+						<!-- 귀국편 -->
+						<label class="chSelect">
+							<div class="input"><input type="checkbox" class="checkBox" title="homecoming checkbox"></div>
+							<div class="airLogo">
+								<span><img src="../images/airline/OZ.png" alt=""></span>
+								<em>Asiana AIR</em>
+							</div>
+							<div class="depTime">
+								<strong>08:55</strong>
+								<span>ICN</span>
+							</div>
+							<div class="leadTime">
+								<strong>12h 30m</strong>
+								<div class="bar"><span><img src="../images/img_leadtime01.png" alt="1"></span></div>
+							</div>
+							<div class="depTime">
+								<strong>20:55</strong>
+								<span>BKK</span>
+							</div>
+						</label>
+						<!-- // 귀국편 -->
+						
+						<a href="#" class="detailTog"><!-- 선택시 class="on" 추가 :: 하단 detail 노출됨 -->
+							<div class="seatTag">
+								<span>Economy</span>
+							</div>
+							<div class="moneyBox">
+								<b>￦ 549,000</b>
+								<strong>$ 594</strong>
+							</div>
+						</a>
+						
+						<!-- 하단 상세 스케쥴 -->
+						<div class="detailBox">
+							<!-- Depart -->
+							<div class="Depart">
+								<h2 class="tit"><strong>Depart</strong><em>Fri, May 05</em></h2>
+								
+								<div class="timeListBox">
+									<!-- time top -->
+									<div class="inTimeTop">
+										<strong>ICN<br><span>10:20</span></strong>
+										<strong>BKK<br><span>15:10</span></strong>
+										<div class="cityStop">
+											<strong>1 Stop</strong>
+											<p>Total Duration : 5h 30m</p>
+										</div>
+									</div>
+									<!-- // time top -->
+									
+									<!-- time list -->
+									<ol class="inTimeCont">
+										<li>
+											<div class="titLeft">
+												<strong>ICN</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">Incheon Intl Airport</strong>
+												<span>Thai aways / TG629</span>
+												<b>Economy</b>
+												<div class="label"><em>2h20m</em></div>
+											</div>
+										</li>
+										<li>
+											<div class="titLeft">
+												<strong>HKG</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig stop"> <!-- 경유 대기시간일경우 class="stop" 추가 -->
+												<strong class="titPort">Hongkong Intl Airport</strong>
+												<div class="label"><em>1h stop</em></div>
+											</div>
+										</li>
+										<li>
+											<div class="titLeft">
+												<strong>HKG</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">Hongkong Intl Airport</strong>
+												<span>Thai aways / TG629</span>
+												<b>Economy</b>
+												<p class="codeShare">
+													<strong>Code Share:</strong>
+													<span>Actual operate by <b>Singapore airlines</b></span>
+												</p>
+												<div class="label"><em>2h20m</em></div>
+											</div>
+										</li>
+										<li>
+											<div class="titLeft">
+												<strong>BKK</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">Bangkok Suvarnabumi Airport</strong>
+											</div>
+										</li>
+									</ol>
+									<!-- // time list -->
+								</div>
+								
+								<div class="baggage">
+									<strong>Baggage allowance</strong>
+									<div>
+										<span>TG <em>No fee up to 2pc</em></span>
+										<span>SG <em>No fee up to 23KG</em></span>
+									</div>
+								</div>
+							</div>
+							<!-- // Depart -->
+							
+							<!-- return -->
+							<div class="return">
+								<h2 class="tit tyRe"><strong>Return</strong><em>Sun, May 08</em></h2><!-- 리턴일경우 tyRe 추가 -->
+								
+								<div class="timeListBox">
+									<!-- time top -->
+									<div class="inTimeTop">
+										<strong>ICN<br><span>10:20</span></strong>
+										<strong>BKK<br><span>15:10</span></strong>
+										<div class="cityStop">
+											<strong>1 Stop</strong>
+											<p>Total Duration : 5h 30m</p>
+										</div>
+									</div>
+									<!-- // time top -->
+									
+									<!-- time list -->
+									<ol class="inTimeCont">
+										<li>
+											<div class="titLeft">
+												<strong>ICN</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">Incheon Intl Airport</strong>
+												<span>Thai aways / TG629</span>
+												<b>Economy</b>
+												<div class="label"><em>2h20m</em></div>
+											</div>
+										</li>
+										<li>
+											<div class="titLeft">
+												<strong>BKK</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">Bangkok Suvarnabumi Airport</strong>
+											</div>
+										</li>
+									</ol>
+									<!-- // time list -->
+								</div>
+								
+								<div class="baggage">
+									<strong>Baggage allowance <em>No fee up to 2pc</em></strong>
+								</div>
+							</div>
+							<!-- // return -->
+							
+							<!-- 요금 -->
+							<div class="fareBox">
+								<dl>
+									<dt><strong>Average Price<span>(Adult, Child)</span></strong><em>￦ 594,000</em></dt>
+									<dd><strong>Base Fare</strong><em>￦ 500,000</em></dd>
+									<dd><strong>Fuel Surcharge</strong><em>￦ 50,000</em></dd>
+									<dd><strong>Taxes</strong><em>￦ 44,000</em></dd>
+								</dl>
+								<div class="btmFare">
+									<div><strong>Infants fare</strong><em>￦ 100,000</em></div>
+									<div class="total">
+										<strong>Total Fare<span>(4 Travelers)</span></strong>
+										<em>￦1,882,000 <b>$1,882</b></em>
+									</div>
+								</div>
+							</div>
+							<!-- // 요금 -->
+							
+							<a href="#" class="btnFull">Booking</a>
+						</div>	
+						<!-- // 하단 상세 스케쥴 -->
+					</li>
+					<li>
+						<!-- 출국편 -->
+						<label class="chSelect">
+							<div class="input"><input type="checkbox" class="checkBox" title="departure checkbox"></div>
+							<div class="airLogo">
+								<span><img src="../images/airline/KE.png" alt=""></span>
+								<em>KOREAN AIR</em>
+							</div>
+							<div class="depTime">
+								<strong>08:55</strong>
+								<span>ICN</span>
+							</div>
+							<div class="leadTime">
+								<strong>12h 30m</strong>
+								<div class="bar"><span><img src="../images/img_leadtime02.png" alt="2"></span></div>
+							</div>
+							<div class="depTime">
+								<strong>20:55</strong>
+								<span>BKK</span>
+							</div>
+						</label>
+						<!-- // 출국편 -->
+						
+						<!-- 귀국편 -->
+						<label class="chSelect">
+							<div class="input"><input type="checkbox" class="checkBox" title="homecoming checkbox"></div>
+							<div class="airLogo">
+								<span><img src="../images/airline/OZ.png" alt=""></span>
+								<em>Asiana AIR</em>
+							</div>
+							<div class="depTime">
+								<strong>08:55</strong>
+								<span>ICN</span>
+							</div>
+							<div class="leadTime">
+								<strong>12h 30m</strong>
+								<div class="bar"><span><img src="../images/img_leadtime02.png" alt="2"></span></div>
+							</div>
+							<div class="depTime">
+								<strong>20:55</strong>
+								<span>BKK</span>
+							</div>
+						</label>
+						<!-- // 귀국편 -->
+						
+						<a href="#" class="detailTog"><!-- 선택시 class="on" 추가 :: 하단 detail 노출됨 -->
+							<div class="seatTag">
+								<span>Economy</span>
+							</div>
+							<div class="moneyBox">
+								<b>￦ 549,000</b>
+								<strong>$ 594</strong>
+							</div>
+						</a>
+						
+						<!-- 하단 상세 스케쥴 -->
+						<div class="detailBox">
+							<!-- Depart -->
+							<div class="Depart">
+								<h2 class="tit"><strong>Depart</strong><em>Fri, May 05</em></h2>
+								
+								<div class="timeListBox">
+									<!-- time top -->
+									<div class="inTimeTop">
+										<strong>ICN<br><span>10:20</span></strong>
+										<strong>BKK<br><span>15:10</span></strong>
+										<div class="cityStop">
+											<strong>1 Stop</strong>
+											<p>Total Duration : 5h 30m</p>
+										</div>
+									</div>
+									<!-- // time top -->
+									
+									<!-- time list -->
+									<ol class="inTimeCont">
+										<li>
+											<div class="titLeft">
+												<strong>ICN</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">Incheon Intl Airport</strong>
+												<span>Thai aways / TG629</span>
+												<b>Economy</b>
+												<div class="label"><em>2h20m</em></div>
+											</div>
+										</li>
+										<li>
+											<div class="titLeft">
+												<strong>HKG</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig stop"> <!-- 경유 대기시간일경우 class="stop" 추가 -->
+												<strong class="titPort">Hongkong Intl Airport</strong>
+												<div class="label"><em>1h stop</em></div>
+											</div>
+										</li>
+										<li>
+											<div class="titLeft">
+												<strong>HKG</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">Hongkong Intl Airport</strong>
+												<span>Thai aways / TG629</span>
+												<b>Economy</b>
+												<p class="codeShare">
+													<strong>Code Share:</strong>
+													<span>Actual operate by <b>Singapore airlines</b></span>
+												</p>
+												<div class="label"><em>2h20m</em></div>
+											</div>
+										</li>
+										<li>
+											<div class="titLeft">
+												<strong>BKK</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">Bangkok Suvarnabumi Airport</strong>
+											</div>
+										</li>
+									</ol>
+									<!-- // time list -->
+								</div>
+								
+								<div class="baggage">
+									<strong>Baggage allowance</strong>
+									<div>
+										<span>TG <em>No fee up to 2pc</em></span>
+										<span>SG <em>No fee up to 23KG</em></span>
+									</div>
+								</div>
+							</div>
+							<!-- // Depart -->
+							
+							<!-- return -->
+							<div class="return">
+								<h2 class="tit tyRe"><strong>Return</strong><em>Sun, May 08</em></h2><!-- 리턴일경우 tyRe 추가 -->
+								
+								<div class="timeListBox">
+									<!-- time top -->
+									<div class="inTimeTop">
+										<strong>ICN<br><span>10:20</span></strong>
+										<strong>BKK<br><span>15:10</span></strong>
+										<div class="cityStop">
+											<strong>1 Stop</strong>
+											<p>Total Duration : 5h 30m</p>
+										</div>
+									</div>
+									<!-- // time top -->
+									
+									<!-- time list -->
+									<ol class="inTimeCont">
+										<li>
+											<div class="titLeft">
+												<strong>ICN</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">Incheon Intl Airport</strong>
+												<span>Thai aways / TG629</span>
+												<b>Economy</b>
+												<div class="label"><em>2h20m</em></div>
+											</div>
+										</li>
+										<li>
+											<div class="titLeft">
+												<strong>BKK</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">Bangkok Suvarnabumi Airport</strong>
+											</div>
+										</li>
+									</ol>
+									<!-- // time list -->
+								</div>
+								
+								<div class="baggage">
+									<strong>Baggage allowance <em>No fee up to 2pc</em></strong>
+								</div>
+							</div>
+							<!-- // return -->
+							
+							<!-- 요금 -->
+							<div class="fareBox">
+								<dl>
+									<dt><strong>Average Price<span>(Adult, Child)</span></strong><em>￦ 594,000</em></dt>
+									<dd><strong>Base Fare</strong><em>￦ 500,000</em></dd>
+									<dd><strong>Fuel Surcharge</strong><em>￦ 50,000</em></dd>
+									<dd><strong>Taxes</strong><em>￦ 44,000</em></dd>
+								</dl>
+								<div class="btmFare">
+									<div><strong>Infants fare</strong><em>￦ 100,000</em></div>
+									<div class="total">
+										<strong>Total Fare<span>(4 Travelers)</span></strong>
+										<em>￦1,882,000 <b>$1,882</b></em>
+									</div>
+								</div>
+							</div>
+							<!-- // 요금 -->
+							
+							<a href="#" class="btnFull">Booking</a>
+						</div>	
+						<!-- // 하단 상세 스케쥴 -->
+					</li>
+					<li>
+						<!-- 출국편 -->
+						<label class="chSelect">
+							<div class="input"><input type="checkbox" class="checkBox" title="departure checkbox"></div>
+							<div class="airLogo">
+								<span><img src="../images/airline/KE.png" alt=""></span>
+								<em>KOREAN AIR</em>
+							</div>
+							<div class="depTime">
+								<strong>08:55</strong>
+								<span>ICN</span>
+							</div>
+							<div class="leadTime">
+								<strong>12h 30m</strong>
+								<div class="bar"><span><img src="../images/img_leadtime03.png" alt="3"></span></div>
+							</div>
+							<div class="depTime">
+								<strong>20:55</strong>
+								<span>BKK</span>
+							</div>
+						</label>
+						<!-- // 출국편 -->
+						
+						<!-- 귀국편 -->
+						<label class="chSelect">
+							<div class="input"><input type="checkbox" class="checkBox" title="homecoming checkbox"></div>
+							<div class="airLogo">
+								<span><img src="../images/airline/OZ.png" alt=""></span>
+								<em>Asiana AIR</em>
+							</div>
+							<div class="depTime">
+								<strong>08:55</strong>
+								<span>ICN</span>
+							</div>
+							<div class="leadTime">
+								<strong>12h 30m</strong>
+								<div class="bar"><span><img src="../images/img_leadtime03.png" alt="3"></span></div>
+							</div>
+							<div class="depTime">
+								<strong>20:55</strong>
+								<span>BKK</span>
+							</div>
+						</label>
+						<!-- // 귀국편 -->
+						
+						<a href="#" class="detailTog"><!-- 선택시 class="on" 추가 :: 하단 detail 노출됨 -->
+							<div class="seatTag">
+								<span>Economy</span>
+							</div>
+							<div class="moneyBox">
+								<b>￦ 549,000</b>
+								<strong>$ 594</strong>
+							</div>
+						</a>
+						
+						<!-- 하단 상세 스케쥴 -->
+						<div class="detailBox">
+							<!-- Depart -->
+							<div class="Depart">
+								<h2 class="tit"><strong>Depart</strong><em>Fri, May 05</em></h2>
+								
+								<div class="timeListBox">
+									<!-- time top -->
+									<div class="inTimeTop">
+										<strong>ICN<br><span>10:20</span></strong>
+										<strong>BKK<br><span>15:10</span></strong>
+										<div class="cityStop">
+											<strong>1 Stop</strong>
+											<p>Total Duration : 5h 30m</p>
+										</div>
+									</div>
+									<!-- // time top -->
+									
+									<!-- time list -->
+									<ol class="inTimeCont">
+										<li>
+											<div class="titLeft">
+												<strong>ICN</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">Incheon Intl Airport</strong>
+												<span>Thai aways / TG629</span>
+												<b>Economy</b>
+												<div class="label"><em>2h20m</em></div>
+											</div>
+										</li>
+										<li>
+											<div class="titLeft">
+												<strong>HKG</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig stop"> <!-- 경유 대기시간일경우 class="stop" 추가 -->
+												<strong class="titPort">Hongkong Intl Airport</strong>
+												<div class="label"><em>1h stop</em></div>
+											</div>
+										</li>
+										<li>
+											<div class="titLeft">
+												<strong>HKG</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">Hongkong Intl Airport</strong>
+												<span>Thai aways / TG629</span>
+												<b>Economy</b>
+												<p class="codeShare">
+													<strong>Code Share:</strong>
+													<span>Actual operate by <b>Singapore airlines</b></span>
+												</p>
+												<div class="label"><em>2h20m</em></div>
+											</div>
+										</li>
+										<li>
+											<div class="titLeft">
+												<strong>BKK</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">Bangkok Suvarnabumi Airport</strong>
+											</div>
+										</li>
+									</ol>
+									<!-- // time list -->
+								</div>
+								
+								<div class="baggage">
+									<strong>Baggage allowance</strong>
+									<div>
+										<span>TG <em>No fee up to 2pc</em></span>
+										<span>SG <em>No fee up to 23KG</em></span>
+									</div>
+								</div>
+							</div>
+							<!-- // Depart -->
+							
+							<!-- return -->
+							<div class="return">
+								<h2 class="tit tyRe"><strong>Return</strong><em>Sun, May 08</em></h2><!-- 리턴일경우 tyRe 추가 -->
+								
+								<div class="timeListBox">
+									<!-- time top -->
+									<div class="inTimeTop">
+										<strong>ICN<br><span>10:20</span></strong>
+										<strong>BKK<br><span>15:10</span></strong>
+										<div class="cityStop">
+											<strong>1 Stop</strong>
+											<p>Total Duration : 5h 30m</p>
+										</div>
+									</div>
+									<!-- // time top -->
+									
+									<!-- time list -->
+									<ol class="inTimeCont">
+										<li>
+											<div class="titLeft">
+												<strong>ICN</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">Incheon Intl Airport</strong>
+												<span>Thai aways / TG629</span>
+												<b>Economy</b>
+												<div class="label"><em>2h20m</em></div>
+											</div>
+										</li>
+										<li>
+											<div class="titLeft">
+												<strong>BKK</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">Bangkok Suvarnabumi Airport</strong>
+											</div>
+										</li>
+									</ol>
+									<!-- // time list -->
+								</div>
+								
+								<div class="baggage">
+									<strong>Baggage allowance <em>No fee up to 2pc</em></strong>
+								</div>
+							</div>
+							<!-- // return -->
+							
+							<!-- 요금 -->
+							<div class="fareBox">
+								<dl>
+									<dt><strong>Average Price<span>(Adult, Child)</span></strong><em>￦ 594,000</em></dt>
+									<dd><strong>Base Fare</strong><em>￦ 500,000</em></dd>
+									<dd><strong>Fuel Surcharge</strong><em>￦ 50,000</em></dd>
+									<dd><strong>Taxes</strong><em>￦ 44,000</em></dd>
+								</dl>
+								<div class="btmFare">
+									<div><strong>Infants fare</strong><em>￦ 100,000</em></div>
+									<div class="total">
+										<strong>Total Fare<span>(4 Travelers)</span></strong>
+										<em>￦1,882,000 <b>$1,882</b></em>
+									</div>
+								</div>
+							</div>
+							<!-- // 요금 -->
+							
+							<a href="#" class="btnFull">Booking</a>
+						</div>	
+						<!-- // 하단 상세 스케쥴 -->
+					</li>
+					<li>
+						<!-- 출국편 -->
+						<label class="chSelect">
+							<div class="input"><input type="checkbox" class="checkBox" title="departure checkbox"></div>
+							<div class="airLogo">
+								<span><img src="../images/airline/LJ.png" alt=""></span>
+								<em>JIN AIR</em>
+							</div>
+							<div class="depTime">
+								<strong>08:55</strong>
+								<span>ICN</span>
+							</div>
+							<div class="leadTime">
+								<strong>12h 30m</strong>
+								<div class="bar"><span><img src="../images/img_leadtime01.png" alt="1"></span></div>
+							</div>
+							<div class="depTime">
+								<strong>20:55</strong>
+								<span>BKK</span>
+							</div>
+						</label>
+						<!-- // 출국편 -->
+						
+						<!-- 귀국편 -->
+						<label class="chSelect">
+							<div class="input"><input type="checkbox" class="checkBox" title="homecoming checkbox"></div>
+							<div class="airLogo">
+								<span><img src="../images/airline/LJ.png" alt=""></span>
+								<em>JIN AIR</em>
+							</div>
+							<div class="depTime">
+								<strong>08:55</strong>
+								<span>ICN</span>
+							</div>
+							<div class="leadTime">
+								<strong>12h 30m</strong>
+								<div class="bar"><span><img src="../images/img_leadtime01.png" alt="1"></span></div>
+							</div>
+							<div class="depTime">
+								<strong>20:55</strong>
+								<span>BKK</span>
+							</div>
+						</label>
+						<!-- // 귀국편 -->
+						
+						<a href="#" class="detailTog"><!-- 선택시 class="on" 추가 :: 하단 detail 노출됨 -->
+							<div class="seatTag">
+								<span>Economy</span>
+							</div>
+							<div class="moneyBox">
+								<b>￦ 549,000</b>
+								<strong>$ 594</strong>
+							</div>
+						</a>
+						
+						<!-- 하단 상세 스케쥴 -->
+						<div class="detailBox">
+							<!-- Depart -->
+							<div class="Depart">
+								<h2 class="tit"><strong>Depart</strong><em>Fri, May 05</em></h2>
+								
+								<div class="timeListBox">
+									<!-- time top -->
+									<div class="inTimeTop">
+										<strong>ICN<br><span>10:20</span></strong>
+										<strong>BKK<br><span>15:10</span></strong>
+										<div class="cityStop">
+											<strong>1 Stop</strong>
+											<p>Total Duration : 5h 30m</p>
+										</div>
+									</div>
+									<!-- // time top -->
+									
+									<!-- time list -->
+									<ol class="inTimeCont">
+										<li>
+											<div class="titLeft">
+												<strong>ICN</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">Incheon Intl Airport</strong>
+												<span>Thai aways / TG629</span>
+												<b>Economy</b>
+												<div class="label"><em>2h20m</em></div>
+											</div>
+										</li>
+										<li>
+											<div class="titLeft">
+												<strong>HKG</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig stop"> <!-- 경유 대기시간일경우 class="stop" 추가 -->
+												<strong class="titPort">Hongkong Intl Airport</strong>
+												<div class="label"><em>1h stop</em></div>
+											</div>
+										</li>
+										<li>
+											<div class="titLeft">
+												<strong>HKG</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">Hongkong Intl Airport</strong>
+												<span>Thai aways / TG629</span>
+												<b>Economy</b>
+												<p class="codeShare">
+													<strong>Code Share:</strong>
+													<span>Actual operate by <b>Singapore airlines</b></span>
+												</p>
+												<div class="label"><em>2h20m</em></div>
+											</div>
+										</li>
+										<li>
+											<div class="titLeft">
+												<strong>BKK</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">Bangkok Suvarnabumi Airport</strong>
+											</div>
+										</li>
+									</ol>
+									<!-- // time list -->
+								</div>
+								
+								<div class="baggage">
+									<strong>Baggage allowance</strong>
+									<div>
+										<span>TG <em>No fee up to 2pc</em></span>
+										<span>SG <em>No fee up to 23KG</em></span>
+									</div>
+								</div>
+							</div>
+							<!-- // Depart -->
+							
+							<!-- return -->
+							<div class="return">
+								<h2 class="tit tyRe"><strong>Return</strong><em>Sun, May 08</em></h2><!-- 리턴일경우 tyRe 추가 -->
+								
+								<div class="timeListBox">
+									<!-- time top -->
+									<div class="inTimeTop">
+										<strong>ICN<br><span>10:20</span></strong>
+										<strong>BKK<br><span>15:10</span></strong>
+										<div class="cityStop">
+											<strong>1 Stop</strong>
+											<p>Total Duration : 5h 30m</p>
+										</div>
+									</div>
+									<!-- // time top -->
+									
+									<!-- time list -->
+									<ol class="inTimeCont">
+										<li>
+											<div class="titLeft">
+												<strong>ICN</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">Incheon Intl Airport</strong>
+												<span>Thai aways / TG629</span>
+												<b>Economy</b>
+												<div class="label"><em>2h20m</em></div>
+											</div>
+										</li>
+										<li>
+											<div class="titLeft">
+												<strong>BKK</strong>
+												<span>Fri. Jan 1<b>10:20</b></span>
+											</div>
+											<div class="contRig">
+												<strong class="titPort">Bangkok Suvarnabumi Airport</strong>
+											</div>
+										</li>
+									</ol>
+									<!-- // time list -->
+								</div>
+								
+								<div class="baggage">
+									<strong>Baggage allowance <em>No fee up to 2pc</em></strong>
+								</div>
+							</div>
+							<!-- // return -->
+							
+							<!-- 요금 -->
+							<div class="fareBox">
+								<dl>
+									<dt><strong>Average Price<span>(Adult, Child)</span></strong><em>￦ 594,000</em></dt>
+									<dd><strong>Base Fare</strong><em>￦ 500,000</em></dd>
+									<dd><strong>Fuel Surcharge</strong><em>￦ 50,000</em></dd>
+									<dd><strong>Taxes</strong><em>￦ 44,000</em></dd>
+								</dl>
+								<div class="btmFare">
+									<div><strong>Infants fare</strong><em>￦ 100,000</em></div>
+									<div class="total">
+										<strong>Total Fare<span>(4 Travelers)</span></strong>
+										<em>￦1,882,000 <b>$1,882</b></em>
+									</div>
+								</div>
+							</div>
+							<!-- // 요금 -->
+							
+							<a href="#" class="btnFull">Booking</a>
+						</div>	
+						<!-- // 하단 상세 스케쥴 -->
+					</li>
+				</ul>
+			</div>
+			<!-- // list -->
+		</div>
+		<!-- // searchList -->
+		
+		
+	</div>
+	<!-- // container -->
+	
+	
+	<!-- footer -->
+	<footer>
+		<ul class=""><!-- 푸터 도달시 static 추가 -->
+			<li class="notics"><!-- class="on" 추가시 아래 레이어 펼쳐짐 -->
+				<a href="#">Notice</a>
+				<div class="noticsLayel">
+					<ul>
+						<li>Payment is made in KRW.</li>
+						<li>Fuel Surcharge and taxes as well as the total fare are subject to change depending on the airline's circumstances and change of exchange rate. </li>
+					</ul>
+					<a href="#" class="noticsClose"><img src="../images/btn_notics_close.png" alt="notics close button"></a>
+				</div>
+			</li>
+			<li class="top"><a href="#">TOP</a></li>
+		</ul>
+		
+		<div class="footTerms">
+			<a href="pop_foot_terms01.html" class="popComeup">Aviation Terms and Conditions</a>
+			<a href="pop_foot_terms02.html" class="popComeup">Terms of Use</a>
+			<a href="pop_foot_terms03.html" class="popComeup">Information Processing Policy</a>
+		</div>
+		
+		<address>
+			Hana Tour Co., Ltd.<span class="line"></span>CEO : Jin-Kook KIM<span class="line"></span>Address : Hana Tour Co.,<br>
+			Ltd. 45, Insa-dong 5-gil, Jongno-gu, Seoul<span class="line"></span><br>
+			Corporate Registration Number : 102-81-39440<span class="line"></span><br>
+			Communications vendor registration number : Jongno 01-1806<br>
+			Ensure business information<span class="line"></span><br>
+			Tour operators registration number : The No. 1993-000006<span class="line"></span><br>
+			Guarantee Insurance Sales : 2.21 billion won<span class="line"></span><br>
+			Service center : 1577-1233<span class="line"></span>FAX : 02-734-0392<br>
+			Personal Information Manager : Sung-Jae Park<br>
+		</address>
+	</footer>
+	<!-- // footer -->
+	
+</div>
+
+
+<!-- right Menu -->
+<div id="userPanel" class=""><!-- 펼칠시 slideIn 추가 --> 
+	<div class="innerScroller">
+		<div class="rigMenuCont">
+			<a href="#" class="booking">Search my booking</a>
+			<ul class="rigMenuList">
+				<li class="lang">
+					<strong>Language</strong>
+					<select title="lang select">
+						<option>English</option>
+						<option>Chinese</option>
+					</select>
+				</li>
+				<li class="customer">
+					<strong>Customer Service</strong>
+					<div class="txtBox">
+						<em>HanaTour Service Inc</em>
+						<p>Inquire about bokking : <span class="blue">globalflight-en@hanatour.com</span></p>
+						<p>operating hours : <span class="gray">Korean Standard Time : 09:00 ~ 16:00</span></p>
+					</div>
+				</li>
+				<li class="about">
+					<a href="#">About Hantour<b>Korea best travel agency</b></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="mask" style="display:none"></div><!-- dim -->
+<!-- // right Menu -->
+
+<!-- booking layer -->
+<div class="layerPopCom01" style="display:none">
+	<div class="layer_inner">
+		<h3 class="layerHead">Search My Booking<a href="#" class="layerClose"></a></h3>
+		<div class="layelPopCont">
+		
+			<!-- booking Input -->
+			<div class="booking_input">
+				<strong>Booking No.</strong>
+				<input type="text" class="inputBase" title="Booking Number write">
+			</div>
+			<div class="booking_input tableCell">
+				<div>
+					<strong>First name</strong>
+					<input type="text" class="inputBase" title="First name write">
+				</div>
+				<span class="cellPad"></span>
+				<div>
+					<strong>Last name</strong>
+					<input type="text" class="inputBase" title="Last name write">
+				</div>
+			</div>
+			<!-- // booking Input -->
+		</div>
+		<a href="#" class="btnFull">Search</a>
+	</div>
+</div>
+<!-- // booking layer -->
+
+<!-- 페이지로딩 20161213 추가 -->
+<div class="pageLoading"></div>
+<!-- 페이지로딩 20161213 추가 -->
+
+
+</body>
+</html>
+

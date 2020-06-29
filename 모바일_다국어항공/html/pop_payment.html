@@ -1,0 +1,76 @@
+<!--
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>information - Hanatour Air</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script src="../js/jquery-2.2.3.min.js" type="text/javascript"></script>
+<script src="../js/swiper.min.js" type="text/javascript"></script>
+<script src="../js/jquery-ui-custom.js" type="text/javascript"></script>
+<script src="../js/ht.calendar.js" type="text/javascript"></script>
+<script src="../js/m.globalflight.js" type="text/javascript"></script>
+</head>
+
+<body>
+-->
+
+<script type="text/javascript">
+	$('#overlayPanel').on('open.loadpop', function (e, data) {
+   		if (GLOBALFLIGHT !== undefined && typeof GLOBALFLIGHT.initFareRules === 'function') GLOBALFLIGHT.initFareRules();
+   	});
+</script>
+
+<!-- pop -->
+<div class="slideUpPop" style="display:block">
+	
+	<div class="header tyCent">
+		<h2>Payment Information <a href="#" class="closeOverlayPanel" title="pop close"></a></h2>
+	</div>
+	
+	<div class="popContainer">
+		
+		<!-- pop cont -->
+		<dl class="paymentPopCont">
+			<dt><span>Amount to Pay</span><strong>￦ 2,400,000</strong></dt>
+			<dd>
+				<ul class="refundList">
+					<li><span>Hyundai card</span><strong>￦ 1,400,000</strong></li>
+					<li><span>Samsung card</span><strong>￦ 1,000,000</strong></li>
+					<li><span>Cash</span><strong>￦ 400,000</strong></li>
+				</ul>
+			</dd>
+			
+			<dt><span>Account Information</span></dt>
+			<dd>
+				<ul class="refundList">
+					<li><span>Bank Name</span><strong>Kookminbank</strong></li>
+					<li><span>Account Number</span><strong>217-002-04-180720</strong></li>
+					<li><span>Account holder</span><strong>하나투어 (Hanatour)</strong></li>
+				</ul>
+			</dd>
+			<dd class="account">
+				<ul class="refundList">
+					<li><span>Account</span><strong>￦ 1,400,000</strong></li>
+				</ul>
+			</dd>
+			
+			<dt><span>Refund handling Fee</span></dt>
+			<dd>
+				<ul class="refundList">
+					<li><span>Hyundai card</span><strong>￦ 1,400,000</strong></li>
+				</ul>
+			</dd>
+		</dl>
+		
+		<div class="refundBtm">
+			<p class="comBultxt01">Refund handling Fee is the service charge to hanatour</p>
+		</div>
+		<!-- // pop cont -->
+		
+	</div>
+</div>
+<!-- // pop -->
+

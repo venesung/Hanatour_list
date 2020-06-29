@@ -1,0 +1,71 @@
+<!--
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>information - Hanatour Air</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script src="../js/jquery-2.2.3.min.js" type="text/javascript"></script>
+<script src="../js/swiper.min.js" type="text/javascript"></script>
+<script src="../js/jquery-ui-custom.js" type="text/javascript"></script>
+<script src="../js/ht.calendar.js" type="text/javascript"></script>
+<script src="../js/m.globalflight.js" type="text/javascript"></script>
+</head>
+-->
+<body>
+
+
+<script type="text/javascript">
+	$('#overlayPanel').on('open.loadpop', function (e, data) {
+   		if (GLOBALFLIGHT !== undefined && typeof GLOBALFLIGHT.initPeople === 'function') GLOBALFLIGHT.initPeople();
+   	});
+</script>
+
+<!-- pop -->
+<div class="slideUpPop" style="display:block">
+	
+	<div class="header tyCent">
+		<h2>Fare  Information <a href="#" class="closeOverlayPanel" title="pop close"></a></h2>
+	</div>
+	
+	<div class="popContainer">
+		
+		<!-- pop cont -->
+		<div class="popSchedule">
+		
+			
+			<!-- totalFare -->
+			<div class="popFareBox">
+				<div class="pfTop">
+					<strong>Total Fare <span>(4 Travelers)</span></strong>
+					<em>￦ 2,400,000</em>
+					<p>Incl. tax,surcharge</p>
+				</div>
+				<dl>
+					<dt><strong>1</strong><span>Adult</span><span class="name">SEUNGHEE, PARK</span></dt>
+					<dd><strong>Base Fare</strong><em>￦ 500,000</em></dd>
+					<dd><strong>Tax, Fuel Surcharge</strong><em>￦ 50,000</em></dd>
+					<dd><strong>Booking Fees</strong><em>￦ 44,000</em></dd>
+					
+					<dt><strong>2</strong><span>Adult</span><span class="name">SEUNGHEE, PARK</span></dt>
+					<dd><strong>Base Fare</strong><em>￦ 500,000</em></dd>
+					<dd><strong>Tax, Fuel Surcharge</strong><em>￦ 50,000</em></dd>
+					<dd><strong>Booking Fees</strong><em>￦ 44,000</em></dd>
+					
+					<dt><strong>3</strong><span>Adult</span><span class="name">SEUNGHEE, PARK</span></dt>
+					<dd><strong>Base Fare</strong><em>￦ 500,000</em></dd>
+					<dd><strong>Tax, Fuel Surcharge</strong><em>￦ 50,000</em></dd>
+					<dd><strong>Booking Fees</strong><em>￦ 44,000</em></dd>
+				</dl>
+			</div>
+			<!-- // totalFare -->
+			
+			<p class="comBultxt01">Fuel surcharge and taxes as well as the total fare are subject to change depending on the airline's circumstances and exchange rate changes.</p>
+		</div>
+		<!-- // pop cont -->
+			
+	</div>
+</div>
+<!-- // pop -->

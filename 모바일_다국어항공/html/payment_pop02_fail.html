@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>Payment - Hanatour Air</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script src="../js/jquery-2.2.3.min.js" type="text/javascript"></script>
+<script src="../js/swiper.min.js" type="text/javascript"></script>
+<script src="../js/jquery-ui-custom.js" type="text/javascript"></script>
+<script src="../js/ht.calendar.js" type="text/javascript"></script>
+<script src="../js/m.globalflight.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+
+<div id="wrap">
+	<header id="header" class="subHead"><!-- 서브일경우 class="subHead" 추가 -->
+		<h1><a href="#"><img src="../images/btn_nlogo.png" alt=""></a></h1>
+		<a href="#" class="btnLeft"><img src="../images/btn_hd_back.png" alt="back Key"></a>
+		<a href="#" class="btnRight"><img src="../images/btn_hd_right.png" alt="right menu"></a>
+	</header>
+	
+	<!-- container -->
+	<div id="container" class="headMarTop02"><!-- nav 있는경우 headMarTop01, 없는경우 headMarTop02 -->
+	
+		<!-- 결제 -->
+		<div class="paymentSect">
+			<!-- top -->
+			<a href="pop_schedule.html" class="searchContTop popComeup"><!-- 예약정보에서 a태그로 변경 -->
+				<div class="tripCity">
+					<strong>Bangkok</strong>
+					<strong>Incheon </strong>
+				</div>
+				<div class="tripDay">
+					<span class="day">Fri, May 0 Sun, May 08</span>
+					<span class="ple">3</span>
+					<em>Economy</em>
+				</div>
+			</a>
+			<!-- //top -->
+			
+			<!-- Total Fare -->
+			<div class="fareTopCont">
+				<div>
+					<strong>Total Fare <span>(Incl. Tax &amp; surcharge)</span></strong>
+					<em>￦ 2,400,000</em>
+				</div>
+				<a href="pop_fare_rules.html" class="popComeup">Fare Rules</a>
+			</div>
+			<!-- // Total Fare -->
+			
+			<a href="pop_panss_info.html" class="btnSoloGray popComeup">Panssengers Information</a>
+			
+			<!-- 결제 입력 -->
+			<div class="paymentContent">
+			
+				<h2 class="tit01">Payment</h2><!-- 20170524 Convenient Payment 경우 Payment Method 로 변경-->
+				
+				<!-- 탭으로 변경 20170524 -->
+				<div class="pb_toggle paySelectTab">
+					<ul class="tabList">
+						<li class="on"><a href="#">Credit/Debit Card</a></li>
+						<li><a href="#">Convenient Payment</a></li>
+					</ul>
+					
+					<!-- Credit/Debit Card -->
+					<div class="tabCont">
+						<div class="payMethods">
+							<!-- 20170524 결제방법 선택 라디오버튼으로 수정 -->
+							<!--a href="#" class="btnCardSelect on">Korean Credit/Debit Card</a>
+							<a href="#" class="btnCardSelect">Non-Korean Credit/Debit Card</a-->
+							
+							<label class="btnCardSelect"><input type="radio" name="pay_select01" checked><span>Korean Credit/Debit Card</span></label>
+							<label class="btnCardSelect"><input type="radio" name="pay_select01"><span>Non-Korean Credit/Debit Card</span></label>
+							<!-- // 20170524 결제방법 선택 라디오버튼으로 수정 -->
+							
+							<!-- cardCellBox -->
+							<div class="cardCellBox">
+								<!-- korea card1 -->
+								<strong class="cardTit">Korean Credit/Debit Card</strong>
+								<ul class="inputCell">
+									<li>
+										<label class="w100">
+											<strong>Card Type</strong>
+											<select class="selectBox02" style="width:60%">
+												<option>BC Card</option>
+												<option>KB Kookmin Card</option>
+											</select>
+										</label>
+									</li>
+									<li>
+										<div class="w100"><!-- 카드입력 div 로 수정 20170316 -->
+											<strong>Card No.</strong>
+											<div class="cardType">
+												<input type="tel" class="inputBase" maxlength="4">
+												<span class="cellPad"></span>
+												<input type="tel" class="inputBase" maxlength="4">
+												<span class="cellPad"></span>
+												<input type="tel" class="inputBase pw" maxlength="4" pattern="[0-9]*">
+												<span class="cellPad"></span>
+												<input type="tel" class="inputBase pw" maxlength="4" pattern="[0-9]*">
+											</div>
+										</div>
+									</li>
+									<li>
+										<label class="w100">
+											<strong>Installment</strong>
+											<select class="selectBox02" style="width:60%">
+												<option>Lump Sum</option>
+												<option>2</option>
+												<option>3</option>
+											</select>
+										</label>
+									</li>
+									<li>
+										<label>
+											<strong>Expireation</strong>
+											<select class="selectBox02">
+												<option>Month</option>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+											</select>
+										</label>
+										<span class="cellPad"></span>
+										<label>
+											<strong>&nbsp;</strong>
+											<select class="selectBox02">
+												<option>Year</option>
+												<option>2019</option>
+												<option>2020</option>
+												<option>2021</option>
+											</select>
+										</label>
+									</li>
+									<li>
+										<label class="w100">
+											<strong>Holder</strong>
+											<select class="selectBox02">
+												<option>Sung Woo, Park</option>
+												<option>Ji Woon, Koo</option>
+											</select>
+										</label>
+									</li>
+									<li>
+										<label class="w100">
+											<strong>Birthday</strong>
+											<input type="date" class="selectBox02" value="1990-01-01">
+										</label>
+									</li>
+									<li>
+										<label class="w100">
+											<strong>Password</strong>
+											<input type="password" class="inputBase" maxlength="2" style="width:50px; margin-right:10px">
+											<span class="cellStar">*</span>
+											<span class="cellStar">*</span>
+										</label>
+									</li>
+								</ul>
+								<!-- // korea card1 -->
+								
+								<!-- non-korea card1 -->
+								<strong class="cardTit">Non-Korean Credit/Debit Card</strong>
+								<ul class="inputCell">
+									<li>
+										<label class="w100">
+											<strong>Card Type</strong>
+											<select class="selectBox02" style="width:60%">
+												<option>BC Card</option>
+												<option>KB Kookmin Card</option>
+											</select>
+										</label>
+									</li>
+									<li>
+										<div class="w100"><!-- 카드입력 div 로 수정 20170316 -->
+											<strong>Card No.</strong>
+											<div class="cardType">
+												<input type="tel" class="inputBase" maxlength="4">
+												<span class="cellPad"></span>
+												<input type="tel" class="inputBase" maxlength="4">
+												<span class="cellPad"></span>
+												<input type="password" class="inputBase" maxlength="4">
+												<span class="cellPad"></span>
+												<input type="password" class="inputBase" maxlength="4">
+											</div>
+										</div>
+									</li>
+									<li>
+										<label>
+											<strong>Expireation</strong>
+											<select class="selectBox02">
+												<option>Month</option>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+											</select>
+										</label>
+										<span class="cellPad"></span>
+										<label>
+											<strong>&nbsp;</strong>
+											<select class="selectBox02">
+												<option>Year</option>
+												<option>2019</option>
+												<option>2020</option>
+												<option>2021</option>
+											</select>
+										</label>
+									</li>
+									<li>
+										<label class="w100">
+											<strong>Holder</strong>
+											<select class="selectBox02">
+												<option>Sung Woo, Park</option>
+												<option>Ji Woon, Koo</option>
+											</select>
+										</label>
+									</li>
+								</ul>
+								<!-- // non-korea card1 -->
+								
+								<!-- korea card2 -->
+								<strong class="cardTit">Korean Credit/Debit Card</strong>
+								<ul class="inputCell">
+									<li>
+										<label class="w100">
+											<strong>Card Type</strong>
+											<select class="selectBox02" style="width:60%">
+												<option>BC Card</option>
+												<option>KB Kookmin Card</option>
+											</select>
+										</label>
+									</li>
+									<li>
+										<label class="w100">
+											<strong>Installment</strong>
+											<select class="selectBox02" style="width:60%">
+												<option>Lump Sum</option>
+												<option>2</option>
+												<option>3</option>
+											</select>
+										</label>
+									</li>
+									<li>
+										<label class="w100">
+											<strong>Holder</strong>
+											<select class="selectBox02">
+												<option>Sung Woo, Park</option>
+												<option>Ji Woon, Koo</option>
+											</select>
+										</label>
+									</li>
+								</ul>
+								<!-- // korea card2 -->
+								
+								<!-- non-korea card2 -->
+								<strong class="cardTit">Non-Korean Credit/Debit Card</strong>
+								<ul class="inputCell">
+									<li>
+										<div class="w100"><!-- 카드입력 div 로 수정 20170316 -->
+											<strong>Card No.</strong>
+											<div class="cardType">
+												<input type="tel" class="inputBase" maxlength="4">
+												<span class="cellPad"></span>
+												<input type="tel" class="inputBase" maxlength="4">
+												<span class="cellPad"></span>
+												<input type="password" class="inputBase" maxlength="4">
+												<span class="cellPad"></span>
+												<input type="password" class="inputBase" maxlength="4">
+											</div>
+										</div>
+									</li>
+									<li>
+										<label>
+											<strong>Expireation</strong>
+											<select class="selectBox02">
+												<option>Month</option>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+											</select>
+										</label>
+										<span class="cellPad"></span>
+										<label>
+											<strong>&nbsp;</strong>
+											<select class="selectBox02">
+												<option>Year</option>
+												<option>2019</option>
+												<option>2020</option>
+												<option>2021</option>
+											</select>
+										</label>
+									</li>
+								</ul>
+								<!-- // non-korea card2 -->
+							</div>
+							<!-- // cardCellBox -->
+							
+							<!-- 동의 -->
+							<div class="cardBtmTerms">
+								<p>I acknowledge that the credit card information I provided herein will be used to process the payment through the airline system and will not be used for other purposes.</p>
+								
+								<!-- 20170524 문구추가 -->
+								<dl class="afterPayment">
+									<dt>After Payment</dt>
+									<dd>The information you provided will be processed for credit card payment requests and actual payment will be made when the ticket is issued.<br>If your card is not possible airline ticketing card, administrators can request another card information.</dd>	
+									<dd>The actual amount to be paid upon ticketing is determined by the exchange rate of the payment date and can be different from the amount suggested when booking.</dd>
+								</dl>
+								<!-- // 20170524 문구추가 -->
+								
+								<label class="all">
+									<input type="checkbox" class="checkBox"><p>I consent to this condition and wish to proceed with the payment.</p>
+								</label>
+							</div>
+							<!-- // 동의 -->
+						</div>
+					</div>
+					<!-- // Credit/Debit Card -->
+					
+					<!-- Convenient Payment -->
+					<div class="tabCont" style="display:none">
+						<div class="payMethods">
+							<!-- 결제방법 선택 -->
+							<label class="btnCardSelect"><input type="radio" name="pay_select02" checked><span>Union Pay</span></label>
+							<label class="btnCardSelect"><input type="radio" name="pay_select02"><span>Wechatpay</span></label>
+							<label class="btnCardSelect"><input type="radio" name="pay_select02"><span>Tenpay</span></label>
+							<!-- // 결제방법 선택 -->
+							
+							<!-- 동의 -->
+							<div class="cardBtmTerms">
+								<p>I acknowledge that the credit card information I provided herein will be used to process the payment through the airline system and will not be used for other purposes.</p>
+								
+								<!-- 20170524 문구추가 -->
+								<dl class="afterPayment">
+									<dt>After Payment</dt>
+									<dd>The information you provided will be processed for credit card payment requests and actual payment will be made when the ticket is issued.<br>If your card is not possible airline ticketing card, administrators can request another card information.</dd>	
+									<dd>The actual amount to be paid upon ticketing is determined by the exchange rate of the payment date and can be different from the amount suggested when booking.</dd>
+								</dl>
+								<!-- // 20170524 문구추가 -->
+								
+								<label class="all">
+									<input type="checkbox" class="checkBox"><p>I consent to this condition and wish to proceed with the payment.</p>
+								</label>
+							</div>
+							<!-- // 동의 -->
+						</div>
+					</div>
+					<!-- // Convenient Payment -->
+				</div>
+				<!-- // 탭으로 변경 20170524 -->
+				
+			
+				<h2 class="tit01">Consent to Ticket Issue</h2>
+				<div class="payConsent">
+					<ul>
+						<li>
+							<p>Did you check the dates/stops/airports in your itinerary?</p>
+							<label><input type="checkbox" class="checkBox black"><span>Yes</span></label>
+						</li>
+						<li>
+							<p>Does the passenger's surname and given name in English match those on the passport?</p>
+							<label><input type="checkbox" class="checkBox black"><span>Yes</span></label>
+						</li>
+						<li>
+							<p>Does the passenger's date of birth match the passport information?</p>
+							<label><input type="checkbox" class="checkBox black"><span>Yes</span></label>
+						</li>
+						<li>
+							<p>Is the passenger's passport valid for at least 6 months from the departure date?</p>
+							<label><input type="checkbox" class="checkBox black"><span>Yes</span></label>
+						</li>
+						<li>
+							<p>Have you checked the rules on penalties due to changes and cancellations of flights?</p>
+							<label><input type="checkbox" class="checkBox black"><span>Yes</span></label>
+						</li>
+						<li>
+							<p>I checked the itinerary of the airline ticket and the passenger information, I fully understand and consent to the fare <a href="#">rules</a>, and I consent to the issue of the ticket.</p>
+							<label><input type="checkbox" class="checkBox black"><span>Yes</span></label>
+						</li>
+						<li>
+							<p>When you make payment, the ticket will be issued in 1~2days and any cancellation after issue may lead to penalties on refund.</p>
+							<label><input type="checkbox" class="checkBox black"><span>Yes</span></label>
+						</li>
+					</ul>
+					<label class="all">
+						<input type="checkbox" class="checkBox"><p>I have read and agreed with all of above and wish to have my ticket issued.</p>
+					</label>
+				</div>
+				
+				<a href="#" class="btnFull">Pay Now</a>
+			</div>
+			<!-- // 결제 입력 -->
+			
+			
+		</div>
+		<!-- // 결제 -->
+		
+		
+	</div>
+	<!-- // container -->
+	
+	
+	<!-- footer -->
+	<footer>
+		<ul class=""><!-- 푸터 도달시 static 추가 -->
+			<li class="notics"><!-- class="on" 추가시 아래 레이어 펼쳐짐 -->
+				<a href="#">Notice</a>
+				<div class="noticsLayel">
+					<ul>
+						<li>Payment is made in KRW.</li>
+						<li>Fuel Surcharge and taxes as well as the total fare are subject to change depending on the airline's circumstances and change of exchange rate. </li>
+					</ul>
+					<a href="#" class="noticsClose"><img src="../images/btn_notics_close.png" alt="notics close button"></a>
+				</div>
+			</li>
+			<li class="top"><a href="#">TOP</a></li>
+		</ul>
+		
+		<div class="footTerms">
+			<a href="pop_foot_terms01.html" class="popComeup">Aviation Terms and Conditions</a>
+			<a href="pop_foot_terms02.html" class="popComeup">Terms of Use</a>
+			<a href="pop_foot_terms03.html" class="popComeup">Information Processing Policy</a>
+		</div>
+		
+		<address>
+			Hana Tour Co., Ltd.<span class="line"></span>CEO : Jin-Kook KIM<span class="line"></span>Address : Hana Tour Co.,<br>
+			Ltd. 45, Insa-dong 5-gil, Jongno-gu, Seoul<span class="line"></span><br>
+			Corporate Registration Number : 102-81-39440<span class="line"></span><br>
+			Communications vendor registration number : Jongno 01-1806<br>
+			Ensure business information<span class="line"></span><br>
+			Tour operators registration number : The No. 1993-000006<span class="line"></span><br>
+			Guarantee Insurance Sales : 2.21 billion won<span class="line"></span><br>
+			Service center : 1577-1233<span class="line"></span>FAX : 02-734-0392<br>
+			Personal Information Manager : Sung-Jae Park<br>
+		</address>
+	</footer>
+	<!-- // footer -->
+	
+	
+	
+</div>
+
+
+<!-- right Menu -->
+<div id="userPanel" class=""><!-- 펼칠시 slideIn 추가 --> 
+	<div class="innerScroller">
+		<div class="rigMenuCont">
+			<a href="#" class="booking">Search my booking</a>
+			<ul class="rigMenuList">
+				<li class="lang">
+					<strong>Language</strong>
+					<select title="lang select">
+						<option>English</option>
+						<option>Chinese</option>
+					</select>
+				</li>
+				<li class="customer">
+					<strong>Customer Service</strong>
+					<div class="txtBox">
+						<em>HanaTour Service Inc</em>
+						<p>Inquire about bokking : <span class="blue">globalflight-en@hanatour.com</span></p>
+						<p>operating hours : <span class="gray">Korean Standard Time : 09:00 ~ 16:00</span></p>
+					</div>
+				</li>
+				<li class="about">
+					<a href="#">About Hantour<b>Korea best travel agency</b></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+</div>
+<div class="mask" style="display:none"></div><!-- dim -->
+<!-- // right Menu -->
+
+<!-- booking layer -->
+<div class="layerPopCom01" style="display:none">
+	<div class="layer_inner">
+		<h3 class="layerHead">Search My Booking<a href="#" class="layerClose"></a></h3>
+		<div class="layelPopCont">
+		
+			<!-- booking Input -->
+			<div class="booking_input">
+				<strong>Booking No.</strong>
+				<input type="text" class="inputBase" title="Booking Number write">
+			</div>
+			<div class="booking_input tableCell">
+				<div>
+					<strong>First name</strong>
+					<input type="text" class="inputBase" title="First name write">
+				</div>
+				<span class="cellPad"></span>
+				<div>
+					<strong>Last name</strong>
+					<input type="text" class="inputBase" title="Last name write">
+				</div>
+			</div>
+			<!-- // booking Input -->
+		</div>
+		<a href="#" class="btnFull">Search</a>
+	</div>
+</div>
+<!-- // booking layer -->
+
+<!-- notification -->
+<div class="notification" style="display:none">
+	<p>You have reached the maximum passenger limit. You have reached the maximum passenger limit.</p>
+</div>
+<!-- // notification -->
+
+<div class="notificationTop " style="display:none">
+	<p>You have reached the maximum passenger limit.</p>
+</div>
+
+<!-- 20170609 결제완료 추가 -->
+<div class="layerSmallPop" style="display:non e;">
+	<div class="layer_inner">
+		<div class="smPopCont">
+			<div class="paymentState fail"><!-- 실패일경우 class fail 추가 -->
+				<h2>Fail</h2>
+				<ul class="payinforList">
+					<li>Card Number:<span>4111 - **** - **** - 1111</span></li>
+					<li>Amount:<span>USD 1,250.00</span></li>
+					<li>Card Type:<span>VISA</span></li>
+					<li>Approval Code:<span>475601</span></li>
+					<li>Result Message:<span>[0000]Fail !!</span></li>
+				</ul>
+				
+				<p><strong>Your Card has been declined.</strong>Please re-check your payment information. Should you have any queries, please contact <a href="mailto:globalflight-en@hanatour.com" class="link blue">globalflight-en@hanatour.com</a></p>
+			</div>
+		</div>
+		<a href="#" class="btnSmPop">CLOSE</a>
+	</div>
+</div>
+<!-- // 20170609 결제완료 추가 -->
+
+</body>
+</html>
+

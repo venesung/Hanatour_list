@@ -1,0 +1,124 @@
+<!--
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>information - Hanatour Air</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<script src="../js/jquery-2.2.3.min.js" type="text/javascript"></script>
+<script src="../js/swiper.min.js" type="text/javascript"></script>
+<script src="../js/jquery-ui-custom.js" type="text/javascript"></script>
+<script src="../js/ht.calendar.js" type="text/javascript"></script>
+<script src="../js/m.globalflight.js" type="text/javascript"></script>
+</head>
+-->
+<body>
+
+
+<script type="text/javascript">
+	$('#overlayPanel').on('open.loadpop', function (e, data) {
+   		if (GLOBALFLIGHT !== undefined && typeof GLOBALFLIGHT.initFareRules === 'function') GLOBALFLIGHT.initFareRules();
+   	});
+</script>
+
+<!-- pop -->
+<div class="slideUpPop" style="display:block">
+	
+	<div class="header tyCent">
+		<h2>Refund Information <a href="#" class="closeOverlayPanel" title="pop close"></a></h2>
+	</div>
+	
+	<div class="popContainer">
+		
+		<!-- pop cont -->
+		
+		<dl class="inforList02 marT0">
+			<dt class="open">
+				<a href="#">
+					<strong>1</strong>
+					<span>Adult</span>
+					<span class="name">SEUNGHEE, PARK</span>
+				</a>
+			</dt>
+			<dd>
+				<ul class="refund_ifList">
+					<li><strong>Date of Birth</strong><em>OVT 05, 1980</em></li>
+					<li><strong>Ticket Number</strong><em>29019452910</em></li>
+					<li><strong>Itinerary</strong><em>ICN - BKK</em></li>
+				</ul>
+				
+				<div class="popRefundBox">
+					<ul>
+						<li><a href="#"><strong>Refund Status</strong><em><img src="../images/ico_bookstatus.png" alt=""> Request</em></a></li>
+						<li><strong>Total Fare</strong><em>￦ 2,400,000</em></li>
+						<li><strong>Refund Charge</strong><em>-</em></li>
+						<li class="amount"><strong class="c_red">Refund Amount</strong><em>-</em></li>
+					</ul>
+					<p class="comBultxt01">Refund handling fee <span class="blue">30,000 won</span> (for hanatour) payment is completed.</p>
+				</div>
+			</dd>
+			
+			<dt class="open"><!-- dt class="open" 추가 :: 하위 dd 펼쳐짐 -->
+				<a href="#">
+					<strong>2</strong>
+					<span>Adult</span>
+					<span class="name">SEUNGHEE, PARK</span>
+				</a>
+			</dt>
+			<dd>
+				<ul class="refund_ifList">
+					<li><strong>Date of Birth</strong><em>OVT 05, 1980</em></li>
+					<li><strong>Ticket Number</strong><em>29019452910</em></li>
+					<li><strong>Itinerary</strong><em>ICN - BKK</em></li>
+				</ul>
+				
+				<div class="popRefundBox">
+					<ul>
+						<li><a href="#"><strong>Refund Status</strong><em><img src="../images/ico_bookstatus.png" alt=""> Request</em></a></li>
+						<li><strong>Total Fare</strong><em>￦ 2,400,000</em></li>
+						<li><strong>Refund Charge</strong><em>-</em></li>
+						<li class="amount"><strong class="c_red">Refund Amount</strong><em>-</em></li>
+					</ul>
+					<p class="comBultxt01">Refund handling fee <span class="blue">30,000 won</span> (for hanatour) payment is completed.</p>
+				</div>
+			</dd>
+		</dl>
+		
+		<div class="refundBtm">
+			<ul class="comBulList01">
+				<li>Total fare means the sum of airfare, TAX, fees which of itinerary to be refunded.</li>
+				<li>Refund Charge is total cost about a refund Including airlines cancellation charge, Service charge, etc.</li>
+				<li>Refund handling Fee is  additional service charge for hanatour to request a refund. </li>
+			</ul>
+		</div>
+		<!-- // pop cont -->
+	</div>
+</div>
+<!-- // pop -->
+
+<!-- Request pop -->
+<div class="layerSmallPop" style="display:none">
+	<div class="layer_inner">
+		<div class="smPopCont_base"><!-- 기본 알럿창 class="smPopCont_base" -->
+			<ul class="requestPop">
+				<li>
+					<strong>Request</strong>
+					<p>Your refund request has been received and will be sent to Airline.</p>
+				</li>
+				<li>
+					<strong>Successfully Received</strong>
+					<p>Your refund request has been sent to Airline. Processing times may vary by airline and you may need to check actual credit card bills for refund confirmation.</p>				</li>
+				<li>
+					<strong>Non-Refundable</strong>
+					<p>This Ticket is non-refundable.<br>Please check e-mail for more details.</p>
+				</li>
+				
+			</ul>
+		</div>
+		
+		<a href="#" class="btnSmPop gray">Close</a>
+	</div>
+</div>
+<!-- // Request pop -->

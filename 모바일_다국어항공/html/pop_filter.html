@@ -1,0 +1,257 @@
+
+
+<script type="text/javascript">
+	$('#overlayPanel').on('open.loadpop', function (e, data) {
+   		if (GLOBALFLIGHT !== undefined && typeof GLOBALFLIGHT.initFilter === 'function') GLOBALFLIGHT.initFilter();
+   	});
+</script>
+
+<!-- pop -->
+<div class="slideUpPop" style="display:block">
+	
+	<div class="header fixed ty_ft"><!-- 필터 팝업 ty_ft 추가 --> 
+		<h2>Filters<a href="#" class="closeOverlayPanel" title="pop close"></a></h2>
+		
+		<!-- 20161221 수정 -->
+		<div class="filterTop">
+			<a href="#" class="btnFull black">Reset All</a>
+			<a href="#" class="btnFull">Apply</a>
+		</div>
+		<!-- // 20161221 수정 -->
+	</div>
+	
+	<div class="popContainer">
+		<!-- pop cont -->
+		<div class="filterCont">
+			<!-- Stops -->
+			<h3 class="titFt">Stops</h3>
+			<div class="ft_inCont">
+				<ul class="ftList">
+					<li><!-- 선택시 class="on"추가 -->
+						<a href="#">
+							<strong>Direct</strong>
+							<span>(100)</span>
+							<em>￦ 549,000~</em>
+						</a>
+					</li>
+					<li class="on">
+						<a href="#">
+							<strong>1 Stop</strong>
+							<span>(100)</span>
+							<em>￦ 163,000~</em>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<strong>2+ Stops</strong>
+							<span>(100)</span>
+							<em>￦ 163,000~</em>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- // Stops -->
+			
+			<!-- Departure time -->
+			<h3 class="titFt">Departure time</h3>
+			<div class="ft_inCont">
+				<ul class="ftList tyTime">
+					<li class="on"><!-- 선택시 class="on"추가 -->
+						<a href="#" class="bgico01">
+							<strong>Morning</strong>
+							<span>(100)</span>
+							<em>5:00~11:59</em>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="bgico02">
+							<strong>Afternoon</strong>
+							<span>(100)</span>
+							<em>12:00~17:59</em>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="bgico03">
+							<strong>Evening</strong>
+							<span>(100)</span>
+							<em>18:00~23:59</em>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="bgico04">
+							<strong>Early<br>Morning</strong>
+							<span>(100)</span>
+							<em>24:00~04:59</em>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- // Departure time -->
+			
+			<!-- Arrival time -->
+			<h3 class="titFt">Arrival time</h3>
+			<div class="ft_inCont">
+				<ul class="ftList tyTime">
+					<li><!-- 선택시 class="on"추가 -->
+						<a href="#" class="bgico01">
+							<strong>Morning</strong>
+							<span>(100)</span>
+							<em>5:00~11:59</em>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="bgico02">
+							<strong>Afternoon</strong>
+							<span>(100)</span>
+							<em>12:00~17:59</em>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="bgico03">
+							<strong>Evening</strong>
+							<span>(100)</span>
+							<em>18:00~23:59</em>
+						</a>
+					</li>
+					<li class="on">
+						<a href="#" class="bgico04">
+							<strong>Early<br>Morning</strong>
+							<span>(100)</span>
+							<em>24:00~04:59</em>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- // Arrival time -->
+			
+			<!-- Airlines -->
+			<h3 class="titFt">Airlines</h3>
+			<div class="ft_inCont">
+				<div class="chekLabelList"><!-- 디폴트 3개 노출 :: more버튼 클릭시 open 추가 -->
+					<label class="chekLabel">
+						<input type="checkbox" class="checkBox pink" title="airlines check">
+						<strong>All (160)</strong>
+						<em>￦ 163,000~</em>
+					</label>
+					<label class="chekLabel">
+						<input type="checkbox" class="checkBox pink" title="airlines check">
+						<strong>Korea Air (30)</strong>
+						<em>￦ 163,000~</em>
+					</label>
+					<label class="chekLabel">
+						<input type="checkbox" class="checkBox pink" title="airlines check">
+						<strong>Asiana Air (100)</strong>
+						<em>￦ 163,000~</em>
+					</label>
+					<label class="chekLabel">
+						<input type="checkbox" class="checkBox pink" title="airlines check">
+						<strong>Jeju Air (30)</strong>
+						<em>￦ 163,000~</em>
+					</label>
+					<label class="chekLabel">
+						<input type="checkbox" class="checkBox pink" title="airlines check">
+						<strong>Eastar Air (30)</strong>
+						<em>￦ 163,000~</em>
+					</label>
+					<label class="chekLabel">
+						<input type="checkbox" class="checkBox pink" title="airlines check">
+						<strong>Asiana Air (30)</strong>
+						<em>￦ 163,000~</em>
+					</label>
+					
+					<a href="#" class="btnLabel" title="air check toggle"></a><!-- 클릭시 class="on" 추가 chekLabelList에 open 추가 --> 
+				</div>
+			</div>
+			<!-- // Airlines -->
+			
+			<!-- Price -->
+			<h3 class="titFt">Price</h3>
+			<div class="ft_inCont">
+				<div class="priceSlider">
+					<div class="slider"></div>
+					
+					<div class="sliderBtmTxt">
+						<span>￦ 0</span>
+						<span>￦ 163,000</span>
+					</div>
+				</div>
+			</div>
+			<!-- // Price -->
+			
+			<!-- Durations -->
+			<h3 class="titFt">Durations</h3>
+			<div class="ft_inCont">
+				<div class="departureSlider">
+					<strong class="titSlider">Departure</strong>
+					<div class="slider"></div>
+					
+					<div class="sliderBtmTxt">
+						<span>24h 30m</span>
+						<span>66h 20m</span>
+					</div>
+				</div>
+				
+				<div class="returnSlider">
+					<strong class="titSlider">Return</strong>
+					<div class="slider"></div>
+					
+					<div class="sliderBtmTxt">
+						<span>24h 30m</span>
+						<span>66h 20m</span>
+					</div>
+				</div>
+			</div>
+			<!-- // Durations -->
+			
+			<!-- Layover Airports -->
+			<h3 class="titFt">Layover Airports </h3>
+			<div class="ft_inCont">
+				<div class="chekLabelList"><!-- 디폴트 3개 노출 :: more버튼 클릭시 open 추가 -->
+					<label class="chekLabel">
+						<input type="checkbox" class="checkBox pink" title="Layover Airports check">
+						<strong>All (160)</strong>
+						<em>￦ 163,000~</em>
+					</label>
+					<label class="chekLabel">
+						<input type="checkbox" class="checkBox pink" title="Layover Airports check">
+						<strong>Tokyo (NRT) (30)</strong>
+						<em>￦ 163,000~</em>
+					</label>
+					<label class="chekLabel">
+						<input type="checkbox" class="checkBox pink" title="Layover Airports check">
+						<strong>San Francisco (SFO) (100)</strong>
+						<em>￦ 163,000~</em>
+					</label>
+					<label class="chekLabel">
+						<input type="checkbox" class="checkBox pink" title="Layover Airports check">
+						<strong>Vancouver (YVR) Air (30)</strong>
+						<em>￦ 163,000~</em>
+					</label>
+					<label class="chekLabel">
+						<input type="checkbox" class="checkBox pink" title="Layover Airports check">
+						<strong>Tokyo (NRT) (30)</strong>
+						<em>￦ 163,000~</em>
+					</label>
+					<label class="chekLabel">
+						<input type="checkbox" class="checkBox pink" title="Layover Airports check">
+						<strong>San Francisco (SFO) (100)</strong>
+						<em>￦ 163,000~</em>
+					</label>
+					<label class="chekLabel">
+						<input type="checkbox" class="checkBox pink" title="Layover Airports check">
+						<strong>Vancouver (YVR) (30)</strong>
+						<em>￦ 163,000~</em>
+					</label>
+					
+					<a href="#" class="btnLabel" title="Layover Airports check toggle"></a><!-- 클릭시 class="on" 추가 chekLabelList에 open 추가 --> 
+				</div>
+			</div>
+			<!-- // Layover Airports -->
+			
+			<div class="applyBox"><a href="#" class="btnFull black">Apply</a></div>
+		</div>
+		<!-- // pop cont -->
+			
+	</div>
+</div>
+<!-- // pop -->

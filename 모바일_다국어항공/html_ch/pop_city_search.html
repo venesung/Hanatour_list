@@ -1,0 +1,59 @@
+
+
+<script type="text/javascript">
+	$('#overlayPanel').on('open.loadpop', function (e, data) {
+   		if (GLOBALFLIGHT !== undefined && typeof GLOBALFLIGHT.initCitySearch === 'function') GLOBALFLIGHT.initCitySearch();
+   	});
+</script>
+
+<!-- pop -->
+<div class="slideUpPop" style="display:block">
+	
+	<div class="header">
+		<h2>City Search<a href="#" class="closeOverlayPanel" title="pop close"></a></h2>
+		<div class="citySearch">
+			<input type="text" title="city search" placeholder="Departure City or Airport">
+			<!-- 자동완성 기능 -->
+			<div class="cityAutoLayer">
+				<ul class="autoList">
+					<li><a href="#">ICN <strong>Seoul</strong>, Korea - Incheon</a></li><!-- 볼드처리 strong 태그로 묶어주세요 -->
+					<li><a href="#">WGO WINCHESTER,VA -  Winchester</a></li>
+					<li><a href="#">SEL Seoul, Korea – All Airports</a>
+						<ul>
+							<li><a href="#">GMP - Gimpo</a></li>
+							<li><a href="#">ICN - Incheon</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- // 자동완성 기능 -->
+			<a href="#" class="btnSearch" title="search button"></a>
+		</div>
+		
+		
+	</div>
+	
+	<div class="popContainer">
+		<!-- pop cont -->
+		<div class="citySearchCont">
+			<h3>Nearby</h3>
+			<ul class="cityList">
+				<li><a href="#">Gimpo Intl Airport (GMP)<span>Seoul,KR</span></a></li>
+				<li><a href="#">Incheon Intl Airport (ICN)<span>Seoul,KR</span></a></li>
+				<li><a href="#">Narita Intl Airport(NRT)<span>Tyokyo,JP</span></a></li>
+			</ul>
+			
+			<h3>Recent Searches<a href="#" class="btnClear" title="list clear">Clear</a></h3>
+			<ul class="cityList">
+				<li><a href="#">Gimpo Intl Airport (GMP)<span>Seoul,KR</span></a></li>
+				<li><a href="#">Incheon Intl Airport (ICN)<span>Seoul,KR</span></a></li>
+				<li><a href="#">Narita Intl Airport(NRT)<span>Tyokyo,JP</span></a></li>
+			</ul>
+			
+			<p class="listNone">There is no recent search history.</p><!-- 검색이력이 없는경우 노출 -->
+		</div>
+		<!-- // pop cont -->
+			
+	</div>
+</div>
+<!-- // pop -->
