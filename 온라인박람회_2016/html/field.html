@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>현장예약관 - 온라인박람회 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<script type="text/javascript" src="../js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="../js/swiper.min.js"></script>
+<script type="text/javascript" src="../js/m.expo_1611.js"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('.fieldTab').on('click', 'ul > li > a', function (e) {
+			var target = $(e.currentTarget);
+			var li = target.closest('li');
+			var idx = li.index();
+			var content = $('.tabCont');
+
+			li.addClass('on').siblings().removeClass('on');
+			content.hide().eq(idx).show();
+		});
+	});
+</script>
+
+</head>
+
+<body>
+
+<div id="wrap">
+	
+	<header class="commonHead"><!-- 공통 헤더 -->
+		<a href="#" class="allMenu"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/btn_head_all.png" alt="전체메뉴보기"></a>
+		<h1><a href="#"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/btn_head_logo.png" alt="하나투어 온라인여행박람회"></a></h1>
+		<a href="#" class="shared"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/btn_head_shared.png" alt="공유하기"></a>
+		
+		<nav class="navDep">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide on"><a href="#">홈</a></div><!-- 선택시 class="on" -->
+					<div class="swiper-slide"><a href="#">지역관</a></div>
+					<div class="swiper-slide"><a href="#">테마관</a></div>
+					<div class="swiper-slide"><a href="#">자유여행관</a></div>
+					<div class="swiper-slide"><a href="#">항공관</a></div>
+					<div class="swiper-slide"><a href="#">호텔관</a></div>
+					<div class="swiper-slide"><a href="#">추천여행지</a></div>
+					<div class="swiper-slide"><a href="#">트래블TV</a></div>
+					<div class="swiper-slide"><a href="#">이벤트</a></div>
+					<div class="swiper-slide"><a href="#">소개·혜택</a></div>
+					<div class="swiper-slide"><a href="#">현장예약관</a></div><!-- 20161101 수정 -->
+				</div>
+			</div>
+			<a href="#" class="btn_navAll" title="전체메뉴보기"></a><!-- 열릴시 class="on" 추가 -->
+		</nav>
+		
+		<!-- 전체메뉴 -->
+		<div class="allDepBox" style="display:none">
+			<ul class="navAllDep">
+				<li class="on"><a href="#">홈</a></li><!-- 해당 관일시 class="on" 추가 -->
+				<li><a href="#">지역관</a></li>
+				<li><a href="#">테마관</a></li>
+				<li><a href="#">자유여행관</a></li>
+				<li><a href="#">항공관</a></li>
+				<li><a href="#">호텔관</a></li>
+				<li><a href="#">추천여행지</a></li>
+				<li><a href="#">트래블TV</a></li>
+				<li><a href="#">이벤트</a></li>
+				<li><a href="#">소개·혜택</a></li>
+				<li><a href="#">현장예약관</a></li>
+			</ul>
+		</div>
+		<!-- 전체메뉴 -->
+	</header>
+	
+	<section id="container">
+		<div class="fieldSect">
+			<div class="fieldTop">
+				<h2><img src="http://image1.hanatour.com/mobile/common/expo2016/field/tit_fieldtop.png" alt="현장 예약상담관"></h2>
+				<p>온라인이 낯선 분들에게 추천합니다.<br> 서울 중앙 예약상담관이나 집에서 가까운 하나투어 대리점에서<br> 당신과 찰떡궁합 여행을 만나실 수 있습니다.</p>
+			</div>
+			
+			<!-- 탭 -->
+			<div class="tabContSect fieldTab">
+				<ul class="tabBase">
+					<li class="on"><a href="#">서울중앙</a></li>
+					<li><a href="#">전국 대리점</a></li>
+				</ul>
+				
+				<!-- 서울중앙 -->
+				<div class="tabCont">
+					<!-- 서울 중앙 예약상담 -->
+					<div class="seoulCont01">
+						<h3>서울 중앙 예약 상담</h3>
+						<p class="txt_t">온라인 예약 특전은 기본<br>현장 단독 이벤트&amp;특전 혜택 챙겨가세요!</p>
+						
+						<div class="dayBox">
+							<p><strong>일시</strong>2016. 11. 22 (화) ~ 11. 27 (일)</p>
+							<p><strong>시간</strong>10:00 ~ 18:00</p>
+							<p><strong>장소</strong>티마크 그랜드호텔 명동 3층</p>
+							<p><strong>상담 가능 상품</strong>해외 패키지/골프/허니문/크루즈 및 국내 상품</p>
+						</div>
+						
+						<p class="txt_b">※ 항공권, 호텔, 현지패스/입장권 예약 상담은 진행하지 않습니다.<br>반드시 사전 확인 후 방문 신청해 주시기 바랍니다.</p>
+						<span><img src="http://image1.hanatour.com/mobile/common/expo2016/field/img_seoulcont01.png" alt=""></span>
+					</div>
+					<!-- // 서울 중앙 예약상담 -->
+					
+					<!-- 이벤트 -->
+					<div class="seoulCont02">
+						<em>현장 단독 경품 이벤트</em>
+						<h3><span>100% 당첨</span> 행운의 럭키 드로우!</h3>
+						
+						<span><img src="http://image1.hanatour.com/mobile/common/expo2016/field/img_seoulcont02.png" alt=""></span>
+						
+						<ul>
+							<li>모든 경품은 예약상담관 현장에서 당첨 여부에 따라 지급됩니다.</li>
+							<li>당첨 후, 경품 미사용 의사를 밝히실 경우 대체 경품 지급이 불가합니다.</li>
+							<li>호텔 숙박권 유효기간은 2017년 2월까지입니다.<br>(12.23, 12.24, 12.30, 12.31 제외)</li>
+							<li>객실 상황에 따라 투숙 희망일에 예약이 어려울 수도 있습니다.</li>
+							<li>이벤트는 1인 1회에 한해 참여 가능합니다.</li>
+							<li>이벤트 내용은 당사 사정에 따라 고지 없이 변경될 수 있습니다.</li>
+							<li>이벤트는 경품 소진 시 조기 마감될 수 있습니다.</li>
+						</ul>
+					</div>
+					<!-- // 이벤트 -->
+					
+					<!-- 특전 -->
+					<div class="seoulCont03">
+						<em>현장 예약 특별혜택</em>
+						<h3>가득~챙겨드리는 특전</h3>
+						
+						<ul>
+							<li>
+								<strong><span><img src="http://image1.hanatour.com/mobile/common/expo2016/field/ico_seoulcont03_01.png" alt=""></span>동남아</strong>
+								<p>SM면세점 3만원 모바일 쿠폰<br>5만원 백화점 상품권<br>라텍스 목베개<br>지역특산품/기념품증정<br>스냅촬영 포함</p>
+							</li>
+							<li>
+								<strong><span><img src="http://image1.hanatour.com/mobile/common/expo2016/field/ico_seoulcont03_02.png" alt=""></span>중국</strong>
+								<p>과일바구니<br>라텍스 목베개<br>선택관광 포함<br>마사지 포함 (발or전신)</p>
+							</li>
+							<li>
+								<strong><span><img src="http://image1.hanatour.com/mobile/common/expo2016/field/ico_seoulcont03_03.png" alt=""></span>일본</strong>
+								<p>객실업그레이드<br>객실 부대시설 이용권 (스파, 실내수영장)<br>화과자 or 먹거리 쿠폰 제공</p>
+							</li>
+							<li>
+								<strong><span><img src="http://image1.hanatour.com/mobile/common/expo2016/field/ico_seoulcont03_04.png" alt=""></span>남태평양</strong>
+								<p>T-갤러리아 상품권 20불<br>$30 상당의 트래블 머니<br>지역특산품 증정</p>
+							</li>
+							<li>
+								<strong><span><img src="http://image1.hanatour.com/mobile/common/expo2016/field/ico_seoulcont03_05.png" alt=""></span>미주/중남미</strong>
+								<p>와인 1병<br>선택관광/일정 포함</p>
+							</li>
+							<li>
+								<strong><span><img src="http://image1.hanatour.com/mobile/common/expo2016/field/ico_seoulcont03_06.png" alt=""></span>유럽</strong>
+								<p>스타벅스 상품권 1만원권 제공<br>선택관광 포함</p>
+							</li>
+						</ul>
+						<p>※ 지역별/상품별/출발도시별 제공내역이 상이하므로, 자세한 내용은 현장방문 후 상담원에게 문의해주세요.</p>
+					</div>
+					<!-- // 특전 -->
+					
+					<div class="btmBtn">
+						<a href="https://form.office.naver.com/form/responseView.cmd?formkey=NGIyNDVkNDYtOWE1MC00MWQzLTlkMzMtOWUzYzEzZmQyYTg0&sourceId=editor" target="_blank" title="새창" class="btnRed">무료 방문상담 신청하기</a>
+					</div>
+				</div>
+				<!-- // 서울중앙 -->
+				
+				<!-- 전국 대리점 -->
+				<div class="tabCont" style="display:none">
+					<!-- 전국 대리점 예약상담 -->
+					<div class="seoulCont01">
+						<h3>전국 대리점 예약 상담</h3>
+						<p class="txt_t">집에서도 멀리 가지 않고도<br>완벽하게 준비하는 올 겨울 여행!</p>
+						
+						<div class="dayBox">
+							<p><strong>일시</strong>2016. 11. 07 (화) ~ 11. 27 (일) 3주간</p>
+							<p><strong>장소</strong>전국 하나투어 전문 판매점</p>
+							<p><strong>상담 가능 상품</strong>해외 패키지/골프/허니문/크루즈 및 국내 상품</p>
+						</div>
+						
+						<p class="txt_b">※ 항공권, 호텔, 현지패스/입장권 예약 상담은 진행하지 않습니다.<br>상담 가능 시간은 대리점 별 상이합니다.<br>반드시 사전 확인 후 방문 신청해 주시기 바랍니다.</p>
+						<span><img src="http://image1.hanatour.com/mobile/common/expo2016/field/img_seoulcont01_02.png" alt=""></span>
+					</div>
+					<!-- // 전국 대리점 예약상담 -->
+					
+					<div class="koreaMap">
+						<h3>전국 대리점 예약 상담</h3>
+						<p>집에서도 멀리 가지 않고도<br>완벽하게 준비하는 올 겨울 여행!</p>
+						
+						<span><img src="http://image1.hanatour.com/mobile/common/expo2016/field/img_map.png" alt=""></span>
+					</div>
+				</div>
+				<!-- // 전국 대리점 -->
+			</div>
+			<!-- // 탭 -->
+		</div>
+	</section>
+	
+	<!-- 푸터 -->
+	<footer>
+		<address>
+			(주)하나투어 | 대표 : 김진국 | 주소 : 서울특별시 종로구 인사동 5길 41<br>
+			고객센터 : 1577-1233 | 팩스 : 02-734-0392 <br>
+			개인정보관리 책임자 : 박성재 | 사업자 등록번호 : 102-81-39440<br>
+			통신판매업신고번호 : 종로 01-1806호 | <a href="#" target="_blank" title="새창">사업자정보확인</a><br>
+			관광사업자 등록번호 : 제1993-000006호 | 영업보증보험 : 22억1천만원 가입
+		</address>
+		<p>
+			부득이한 사정에 의해 여행일정이 변경되는 경우<br> 여행자의 사전 동의를 받습니다.
+			<b>이제작물은 아모레퍼시픽의 <em>아리따글꼴</em>과 <em>한수원글꼴</em>을 사용하여 디자인 되었습니다.</b>
+			<span>COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED</span>
+		</p>
+	</footer>
+	<!-- // 푸터 -->
+	
+</div>
+
+
+<!-- 좌측메뉴 -->
+<div id="expoMenuPanel" class=""><!-- 펼칠시 class open 추가 -->
+	<h2>전체메뉴<a href="#" class="closeSlide" title="닫기"></a></h2>
+	
+	<div class="innerScroller">
+		<!-- 지역관 -->
+		<div class="hanaMenuList">
+			<h3><a href="#">지역관<span>전체보기</span></a></h3>
+			<h4 class="btNone"><a href="#">동남아관</a></h4>
+			<ul class="innerMenuBox"><!-- 3의 배수로 맞춰 주세요 -->
+				<li><a href="#">태국</a></li>
+				<li><a href="#">베트남</a></li>
+				<li><a href="#">필리핀</a></li>
+				<li><a href="#">대만</a></li>
+				<li><a href="#">싱가포르</a></li>
+				<li><a href="#">말레이시아</a></li>
+				<li><a href="#">캄보디아</a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+			</ul>
+			<h4><a href="#">중국/홍콩관</a></h4>
+			<ul class="innerMenuBox"><!-- 3의 배수로 맞춰 주세요 -->
+				<li><a href="#">홍콩/마카오</a></li>
+				<li><a href="#">상해</a></li>
+				<li><a href="#">북경</a></li>
+				<li><a href="#">장가계</a></li>
+				<li><a href="#">계림</a></li>
+				<li><a href="#"></a></li>
+			</ul>
+			<h4><a href="#">일본관</a></h4>
+			<ul class="innerMenuBox"><!-- 3의 배수로 맞춰 주세요 -->
+				<li><a href="#">규슈</a></li>
+				<li><a href="#">오사카</a></li>
+				<li><a href="#">오키나와</a></li>
+				<li><a href="#">훗카이도</a></li>
+				<li><a href="#">도쿄</a></li>
+				<li><a href="#"></a></li>
+			</ul>
+			<h4><a href="#">남태평양관</a></h4>
+			<ul class="innerMenuBox"><!-- 3의 배수로 맞춰 주세요 -->
+				<li><a href="#">괌/팔라우</a></li>
+				<li><a href="#">사이판</a></li>
+				<li><a href="#">호주</a></li>
+				<li><a href="#">뉴질랜드</a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+			</ul>
+			<h4><a href="#">유럽/아프리카관</a></h4>
+			<ul class="innerMenuBox"><!-- 3의 배수로 맞춰 주세요 -->
+				<li><a href="#">서유럽</a></li>
+				<li><a href="#">지중해</a></li>
+				<li><a href="#">동유럽</a></li>
+				<li><a href="#" class="two">아프리카/중동/러시아</a></li>
+				<li><a href="#">도쿄</a></li>
+				<li><a href="#"></a></li>
+			</ul>
+			<h4><a href="#">미국/캐나다/중남미관</a></h4>
+			<ul class="innerMenuBox"><!-- 3의 배수로 맞춰 주세요 -->
+				<li><a href="#">하와이</a></li>
+				<li><a href="#">미국서부</a></li>
+				<li><a href="#">미국동부</a></li>
+				<li><a href="#">캐나다</a></li>
+				<li><a href="#">중미남미</a></li>
+				<li><a href="#"></a></li>
+			</ul>
+			<h4 class="line_ccc"><a href="#">국내관</a></h4>
+			<h4 class="btNone bbNone"><a href="#">지방출발관</a></h4>
+		</div>
+		<!-- // 지역관 -->
+		
+		<!-- 테마관 -->
+		<div class="hanaMenuList">
+			<h3><a href="#">테마관<span>전체보기</span></a></h3>
+			<ul class="innerMenuBox"><!-- 3의 배수로 맞춰 주세요 -->
+				<li><a href="#">그랜드투어</a></li>
+				<li><a href="#">골프</a></li>
+				<li><a href="#">허니문</a></li>
+				<li><a href="#">식도락</a></li>
+				<li><a href="#">역사/문화</a></li>
+				<li><a href="#">레저/축제</a></li>
+				<li><a href="#">가족</a></li>
+				<li><a href="#">커플</a></li>
+				<li><a href="#">효도</a></li>
+				<li><a href="#">유아동반</a></li>
+				<li><a href="#">나홀로</a></li>
+				<li><a href="#">장기여행</a></li>
+			</ul>
+		</div>
+		<!-- // 테마관 -->
+		
+		<!-- 자유여행관 -->
+		<div class="hanaMenuList">
+			<h3><a href="#">자유여행관<span>전체보기</span></a></h3>
+			<ul class="innerMenuBox"><!-- 3의 배수로 맞춰 주세요 -->
+				<li><a href="#">에어텔</a></li>
+				<li><a href="#">배낭여행</a></li>
+				<li><a href="#" class="two">입장권/패스/현지투어</a></li>
+			</ul>
+		</div>
+		<!-- // 자유여행관 -->
+		
+		<div class="hanaAppList">
+			<ul>
+				<li><a href="#"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/img_ico_allmenu01.png" alt=""><span>항공관</span></a></li>
+				<li><a href="#"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/img_ico_allmenu02.png" alt=""><span>호텔관</span></a></li>
+				<li><a href="#"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/img_ico_allmenu03.png" alt=""><span>추천여행지 규슈</span></a></li>
+				<li><a href="#"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/img_ico_allmenu04.png" alt=""><span>트래블 TV</span></a></li>
+				<li><a href="#"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/img_ico_allmenu05.png" alt=""><span>이벤트</span></a></li>
+				<li><a href="#"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/img_ico_allmenu06.png" alt=""><span>소개·혜택</span></a></li><!-- 20161101 수정 -->
+				<li><a href="#"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/img_ico_allmenu07.png" alt=""><span>현장예약관</span></a></li><!-- 20161101 추가 -->
+			</ul>
+		</div>
+	</div>
+	
+</div>
+<!-- // 좌측메뉴 -->
+
+</body>
+</html>
+

@@ -1,0 +1,866 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 지역관 */
+.zoneAreaTop {background:no-repeat 0 0; background-size:100% 100%; padding:0 0 4px; text-align:center}
+.zoneAreaTop.bgZone01 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_zonearea01.jpg)}
+.zoneAreaTop.bgZone02 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_zonearea02.jpg)}
+.zoneAreaTop.bgZone03 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_zonearea03.jpg)}
+.zoneAreaTop.bgZone04 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_zonearea04.jpg)}
+.zoneAreaTop.bgZone05 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_zonearea05.jpg)}
+.zoneAreaTop.bgZone06 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_zonearea06.jpg)}
+.zoneAreaTop.bgZone07 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_zonearea07.jpg)}
+.zoneAreaTop.bgZone08 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_zonearea08.jpg)}
+.zoneAreaTop h2 {padding:30px 0 70px}
+.zoneAreaTop h2 img {height:130px}
+.zoneAreaTop.bgZone03 h2 {padding:45px 0 55px}
+.zoneAreaTop.bgZone04 h2 img { height:134px}
+.zoneAreaTop.bgZone05 h2 {padding:35px 0 75px}
+.zoneAreaTop.bgZone06 h2 {padding:35px 0 40px}
+.zoneAreaTop.bgZone06 h2 img {height:159px}
+.zoneAreaTop.bgZone07 h2 {padding:55px 0 118px}
+.zoneAreaTop.bgZone07 h2 img {height:120px}
+.zoneAreaTop.bgZone08 h2 {padding:55px 0 86px}
+.zoneAreaTop.bgZone08 h2 img {height:140px}
+.zoneAreaTop .swiper-slide {float:left; width:86px;margin-right:4px}
+.zoneAreaTop .swiper-slide span {position:absolute;left:0;bottom:10%;width:100%;color:#fff;font-size:1.2rem}
+.zoneAreaTop .swiper-slide span.center {bottom:50%; margin-bottom:-8px}
+.zoneAreaTop .swiper-slide span.center03 {bottom:50%; margin-bottom:-24px; line-height:1.3rem}
+.zoneAreaTop .swiper-slide img {width:100%}
+
+.zoneArea_love {padding:25px 12px 30px; border-bottom:1px solid #ccc; text-align:center; position:relative; margin-bottom:7px}
+.zoneArea_love.bgLove01 {background:#fff url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_lovebox_01.png) no-repeat right 70%; background-size:64px 144px}
+.titRedLine {position:relative;font-size:1.6rem; color:#252525; padding-bottom:14px; margin-bottom:16px}
+.titRedLine:after {content:'';width:26px; height:1px; position:absolute;left:50%; bottom:0; background-color:#f3474d; margin-left:-13px}
+.loveList {overflow:hidden; margin-bottom:40px}
+.loveList li {float:left;width:50%;}
+.loveList li+li+li {margin-top:30px}
+.loveList li span {}
+.loveList li span img {width:100%}
+.loveList li p {font-size:1.2rem;color:#666;text-align:left;padding-left:10px}
+.txtLove {font-size:1.3rem;background:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_lovetxt.png) no-repeat 0 0; background-size:47px 36px; padding-top:12px; margin-bottom:20px}
+.peopleBox02 span img {height:49px}
+.peopleBox02 em {display:block;color:#888; font-size:1.0rem; margin-top:7px}
+.peopleBox02 strong {font-size:1.2rem;font-weight:normal}
+
+.zoneArea_korea {text-align:center; padding:0 12px;background:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/zonearea_korea02.png) no-repeat 0 0; background-size:100% 100%; margin-bottom:7px; border-bottom:1px solid #ccc}
+.zoneArea_korea .tmarkHotel {margin:0 -12px}
+.zoneArea_korea .tmarkHotel dl {padding:20px 12px 30px}
+.zoneArea_korea .tmarkHotel dl dt {font-size:1.6rem; font-weight:bold; margin-bottom:18px}
+.zoneArea_korea .tmarkHotel dl dt strong {color:#e85481}
+.zoneArea_korea .tmarkHotel dl dt strong.money {font-size:2.1rem}
+.zoneArea_korea .tmarkHotel dl dd {font-size:1.3rem;color:333}
+
+.koreaBene { padding:25px 12px 0}
+
+
+.zoneBestCity {margin-bottom:7px}
+.zoneBestCity table td {background:no-repeat 0 0; background-size:100% 100%; position:relative;vertical-align:top}
+.zoneBestCity table td * {color:#fff;}
+.zoneBestCity table td a {display:block; padding:10px 15px 60px;}
+.zoneBestCity table td.bgCity01 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_bestcity01.jpg)}
+.zoneBestCity table td.bgCity02 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_bestcity02.jpg)}
+.zoneBestCity table td.bgCity03 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_bestcity03.jpg)}
+.zoneBestCity table td.bgCity04 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_bestcity04.jpg)}
+.zoneBestCity table td.bgCity05 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_bestcity05.jpg)}
+.zoneBestCity table td.bgCity06 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_bestcity06.jpg)}
+.zoneBestCity table td.bgCity07 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_bestcity07.jpg)}
+.zoneBestCity table td.bgCity08 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_bestcity08.jpg)}
+.zoneBestCity table td.bgCity09 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_bestcity09.jpg)}
+.zoneBestCity table td.bgCity10 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_bestcity10.jpg)}
+.zoneBestCity table td.bgCity11 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_bestcity11.jpg)}
+.zoneBestCity table td.bgCity12 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_bestcity12.jpg)}
+.zoneBestCity table td.bgCity13 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_bestcity13.jpg)}
+.zoneBestCity table td.bgCity14 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_bestcity14.jpg)}
+.zoneBestCity table td.bgCity15 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_bestcity15.jpg)}
+.zoneBestCity table td.bgCity16 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_bestcity16.jpg)}
+.zoneBestCity table td.bgCity17 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_bestcity17.jpg)}
+.zoneBestCity table td.bgCity18 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_bestcity18.jpg)}
+.zoneBestCity table td.bgCity19 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_bestcity19.jpg)}
+.zoneBestCity table td.bgCity20 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_bestcity20.jpg)}
+.zoneBestCity table td.bgCity21 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_bestcity21.jpg)}
+.zoneBestCity table td.bgCity22 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_bestcity22.jpg)}
+.zoneBestCity table td.bgCity23 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_bestcity23.jpg)}
+.zoneBestCity table td.bgCity24 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_bestcity24.jpg)}
+.zoneBestCity table td.bgCity25 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_bestcity25.jpg)}
+.zoneBestCity table td.bgCity26 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_bestcity26.jpg)}
+.zoneBestCity table td.bgCity27 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_bestcity27.jpg)}
+.zoneBestCity table td.bgCity28 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_bestcity28.jpg)}
+.zoneBestCity table td.bgCity29 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_bestcity29.jpg)}
+.zoneBestCity table td.bgCity30 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_bestcity30.jpg)}
+.zoneBestCity table td .num {position:relative; z-index:101}
+.zoneBestCity table td .num img {height:20px}
+.zoneBestCity table td em {display:block; font-size:1.1rem; margin:5px 0 10px; letter-spacing:0}
+.zoneBestCity table td strong {display:block;font-size:1.6rem; margin-bottom:-4px}
+.zoneBestCity table td b {font-weight:normal; font-size:1.2rem;letter-spacing:0}
+.zoneBestCity table td p {position:absolute;right:10px;bottom:15px;font-size:1.2rem}
+.zoneBestCity table td.top01 strong {font-size:2.5rem}
+.zoneBestCity table td.top01 p {position:static;}
+.zoneBestCity table td.top01 b.img {display:block;position:relative;right:-20%; z-index:100; margin:20px 0 15px -20%;}
+.zoneBestCity table td.top01 b.img img {width:100%}
+.zoneBestCity table td.top01.bgCity08 b.img {right:-32%; margin-left:-32%;}
+.zoneBestCity table td.top01.bgCity12 b.img {right:0; margin-left:0}
+.zoneBestCity table td.top01.bgCity17 b.img {right:0; margin-left:0; margin-top:50px}
+.zoneBestCity table td.top01.bgCity21 b.img {right:-55%; margin-left:-55%}
+.zoneBestCity table td.top01.bgCity25 b.img {right:0; margin-left:0}
+.zoneBestCity.area05 table td a {min-height:219px; padding-bottom:10px}
+
+.newCityBox {border-top:1px solid #ccc;border-bottom:1px solid #ccc; background:#fff;margin-bottom:7px;}
+.newCityBox h3 {font-size:1.2rem; color:#888; text-align:center; font-weight:normal; padding:20px 0 15px}
+.newCityBox h3 strong {display:block; font-size:1.6rem; color:#252525}
+.newCityBox h3 strong span {color:#0078ff}
+.newCityBox .newCityMenu { background-color:#0078ff}
+.newCityBox .newCityMenu .swiper-slide {float:left;width:auto}
+.newCityBox .newCityMenu .swiper-slide a {padding:12px 20px; color:#a6d0ff; font-size:1.4rem}
+.newCityBox .newCityMenu .swiper-slide.on a {color:#fff !important; text-decoration:underline}
+.newCityBox .newCityList ul li a {display:block; padding:10px; border-bottom:1px solid #e0e0e0; position:relative}
+.newCityBox .newCityList ul li:last-child a {border-bottom:none}
+.newCityBox .newCityList ul li a > span {display:inline-block;width:110px; height:73px}
+.newCityBox .newCityList ul li a > span img {width:110px; height:73px}
+.newCityBox .newCityList ul li a > div {position:absolute;left:132px; top:15px; padding-right:10px;letter-spacing:0}
+.newCityBox .newCityList ul li a > div b {display:block; font-size:1.2rem; color:#666; font-weight:normal; margin-bottom:6px;}
+.newCityBox .newCityList ul li a > div strong {font-size:1.3rem; color:#333; line-height:1.6rem; display:block}
+.newCityBox.area02 h3 strong span {color:#ff6b00}
+.newCityBox.area02 .newCityMenu { background-color:#ff6b00}
+.newCityBox.area02 .newCityMenu .swiper-slide a {color:#ffe8d7}
+.newCityBox.area03 h3 strong span {color:#b80014}
+.newCityBox.area03 .newCityMenu { background-color:#b80014}
+.newCityBox.area03 .newCityMenu .swiper-slide a {color:#ffc2c5}
+.newCityBox.area04 h3 strong span {color:#023486}
+.newCityBox.area04 .newCityMenu { background-color:#023486}
+.newCityBox.area04 .newCityMenu .swiper-slide a {color:#a6d0ff}
+.newCityBox.area05 h3 strong span {color:#5934d1}
+.newCityBox.area05 .newCityMenu { background-color:#5934d1}
+.newCityBox.area05 .newCityMenu .swiper-slide a {color:#d2c5fc}
+
+.hanaShop { margin-bottom:7px}
+.hanaShop ul {display:table;width:100%}
+.hanaShop ul+ul {border-top:1px solid #fff}
+.hanaShop ul li {display:table-cell;width:33.3%; vertical-align:middle;box-sizing:border-box;height:106px;}
+.hanaShop ul li:nth-child(3n+2) {width:33.4%; border-left:1px solid #fff;border-right:1px solid #fff}
+.hanaShop ul li a {color:#fff; text-align:center;  display:block;}
+.hanaShop ul li.prod {background:no-repeat; background-size:100% 100%;}
+.hanaShop ul li.prod.bg01 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_hanashop01.jpg)}
+.hanaShop ul li.prod.bg02 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_hanashop02.jpg)}
+.hanaShop ul li.prod.bg03 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_hanashop03.jpg)}
+.hanaShop ul li.prod.bg04 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_hanashop04.jpg)}
+.hanaShop ul li.prod.bg05 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_hanashop05.jpg)}
+.hanaShop ul li.prod.bg06 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_hanashop06.jpg)}
+.hanaShop ul li.prod.bg07 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_hanashop07.jpg)}
+.hanaShop ul li.prod.bg08 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_hanashop08.jpg)}
+.hanaShop ul li.prod.bg09 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_hanashop09.jpg)}
+.hanaShop ul li.prod.bg10 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_hanashop10.jpg)}
+.hanaShop ul li.prod.bg11 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_hanashop11.jpg)}
+.hanaShop ul li.prod.bg12 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_hanashop12.jpg)}
+.hanaShop ul li.prod.bg13 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_hanashop13.jpg)}
+.hanaShop ul li.prod.bg14 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_hanashop14.jpg)}
+.hanaShop ul li.prod.bg15 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_hanashop15.jpg)}
+.hanaShop ul li.prod.bg16 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_hanashop16.jpg)}
+.hanaShop ul li.prod.bg17 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_hanashop17.jpg)}
+.hanaShop ul li.prod.bg18 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_hanashop18.jpg)}
+.hanaShop ul li.prod.bg19 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_hanashop19.jpg)}
+.hanaShop ul li.prod.bg20 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_hanashop20.jpg)}
+.hanaShop ul li.prod.bg21 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_hanashop21.jpg)}
+.hanaShop ul li.prod.bg22 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_hanashop22.jpg)}
+.hanaShop ul li.prod.bg23 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_hanashop23.jpg)}
+.hanaShop ul li.prod.bg24 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_hanashop24.jpg)}
+.hanaShop ul li.prod.bg25 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_hanashop25.jpg)}
+
+.hanaShop ul li.prod a span {display:inline-block;padding:4px 12px; border:1px solid #fff; border-radius:50px; background:rgba(0,0,0,0.6); font-size:1.1rem}
+.hanaShop ul li.mileage a {background:#f3474d url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_hanashop_go.png) no-repeat right bottom; background-size:39px 14px; height:100%; text-align:left; padding:10px}
+.hanaShop ul li.mileage a span {font-size:1.1rem}
+
+.habitBox {background-color:#fff;border-top:1px solid #ccc;border-bottom:1px solid #ccc; margin-bottom:7px; padding:25px 6px;text-align:center; background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_habit_pattern01.png),url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_habit_pattern02.png),url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_habit_pattern03.png); background-repeat:no-repeat; background-position:right 15%, left 57%, right 65%; background-size:44px 74px,52px 115px, 29px 25px}
+.habitBox h3 {font-size:1.2rem; color:#888}
+.habitBox h3 strong {display:block; font-size:1.6rem; color:#252525}
+.habitBox h3 strong span { color:#e85481}
+.habitBox ul {overflow:hidden;box-sizing:border-box; margin-top:-10px}
+.habitBox ul li {float:left;width:50%;  background:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_habit01.png) no-repeat center 20px; background-size:auto 34px; min-height:206px}
+.habitBox ul li > div {margin:0 6px;padding:75px 0 20px}
+.habitBox ul li+li {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_habit02.png)}
+.habitBox ul li+li+li {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_habit03.png)}
+.habitBox ul li+li+li > div {border-top:1px solid #e0e0e0;}
+.habitBox ul li+li+li+li {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_habit04.png)}
+.habitBox ul li strong {font-size:1.2rem; display:block; line-height:1.6rem}
+.habitBox ul li p {color:#666; font-size:1.2rem; margin-top:8px}
+
+.tabRagion {overflow:hidden; border-bottom:1px solid #444; margin-bottom:7px}
+.tabRagion li {float:left;width:33.3%; box-sizing:border-box}
+.tabRagion li:nth-child(2) {width:33.4%; border-left:1px solid #444;border-right:1px solid #444}
+.tabRagion li a {display:block; background:#222 url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_tabragion01.png) no-repeat center 10px; background-size:auto 22px; text-align:center; color:#fff; font-size:1.4rem; padding:38px 0 8px; height:64px; box-sizing:border-box}
+.tabRagion li.on a {background-color:#792bd7}
+.tabRagion li+li a {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_tabragion02.png)}
+.tabRagion li+li+li a {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_tabragion03.png)}
+.tabRagion.bgRed li.on a { background-color:#f4474d}
+
+.vrList {background-color:#fff; border-top:1px solid #ccc; padding:15px}
+.vrList li {position:relative; margin-bottom:7px}
+.vrList li:last-child {margin-bottom:0}
+.vrList li a {display:block}
+.vrList li a div {position:absolute;left:0;top:50%;width:100%; margin-top:-45px;  box-sizing:border-box;text-align:center}
+.vrList li a em {font-size:1.1rem; color:#f3474d; border:1px solid #f3474d; background:rgba(0,0,0,0.4); padding:2px 4px}
+.vrList li a strong {display:block; font-size:1.8rem; color:#fff; margin:5px 0 10px}
+.vrList li a div:after { content:''; display:inline-block;width:32px; height:32px;background:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_play_btn.png) no-repeat center bottom; background-size:32px 32px;}
+
+.specialPrice {background:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_specialprice01.png) no-repeat left top,url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_specialprice02.png) no-repeat right top; background-size:63px 56px, 76px 130px;text-align:center; padding:25px 12px 20px; background-color:#fff; border-top:1px solid #ccc; border-bottom:1px solid #ccc; margin-bottom:7px}
+.specialPrice.bgTheme {background:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_specialprice03.png) no-repeat left top; background-size:82px 168px; background-color:#fff}
+.specialPrice.bgNone {background:none;background-color:#fff}
+.stit_sp {color:#fff; background-color:#792bd7; padding:4px 12px; border-radius:50px; display:inline-block; margin-bottom:5px; font-size:1.2rem}
+.tit_sp {font-size:1.6rem; margin-bottom:20px}
+.tit_sp span {color:#792bd7}
+.stit_sp.green {background-color:#207200}
+.tit_sp.green span {color:#207200}
+.stit_sp.best {background-color:#f4474d}
+.tit_sp.best span {color:#f4474d}
+.stit_sp.best02 {background-color:#b50665}
+.tit_sp.best02 span {color:#b50665}
+.stit_sp.korea {background-color:#c73192}
+
+.tabSmall {overflow:hidden; margin-bottom:10px}
+.tabSmall li {float:left;width:25%}
+.tabSmall li a {display:block;background-color:#f1f1f3; border:1px solid #dbdce1; padding:10px 0 7px; text-align:center;font-size:1.2rem; height:36px; box-sizing:border-box; line-height:1.3rem}
+.tabSmall li+li a {margin-left:-1px}
+.tabSmall li.on a {background-color:#fff; color:#792bd7; font-weight:bold; border:1px solid #792bd7; z-index:1; position:relative}
+.tabSmall li.twoLine a {padding:4px 0}
+.tabSmall.fnd li {width:33.3%}
+.tabSmall.fnd li:nth-child(2) {width:33.4%}
+.tabSmall.fnd li.on a {border:1px solid #05a594;color:#05a594}
+.tabSmall.best li {width:33.3%}
+.tabSmall.best li:nth-child(2) {width:33.4%}
+.tabSmall.best li.on a {border:1px solid #f4474d;color:#f4474d}
+.tabSmall.best02 li {width:33.3%}
+.tabSmall.best02 li:nth-child(2) {width:33.4%}
+.tabSmall.best02 li.on a {border:1px solid #b50665;color:#b50665}
+.tabSmall.korea li {width:33.3%}
+.tabSmall.korea li:nth-child(2) {width:33.4%}
+.tabSmall.korea li.on a {border:1px solid #000;color:#fff; background-color:#000}
+.tabSmall.korea02 li.on a {border:1px solid #c73192;color:#c73192;}
+.tabSmall.type1 li {width:100%}
+.tabSmall.type2 li {width:50%}
+.tabSmall.type3 li {width:33.3%}
+.tabSmall.type3 li:nth-child(2) {width:33.4%}
+.tabSmall.type5 li {width:20%}
+
+.travelData {padding:0 12px; margin-bottom:7px}
+.travelTab {background-color:#fff; padding:15px 12px 0; margin:0 -12px; border-top:1px solid #ccc}
+.travelTab .trv_inCont {margin:0 -12px}
+.travelTab .txtBtmBox {position:relative; background-color:#694fca; border-bottom:1px solid #5809b6; padding:20px 90px 20px 12px}
+.travelTab .txtBtmBox:after {content:''; position:absolute;right:0;top:0;width:68px; height:112px;background:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_txtbtmbox_01.png) no-repeat 0 0; background-size:68px 112px;}
+.travelTab .txtBtmBox p {color:#fff; font-size:1.3rem; margin-bottom:32px; min-height:60px}
+.travelTab .txtBtmBox dl dt {font-size:1.1rem; color:#fff; margin-bottom:4px; letter-spacing:0}
+.travelTab .txtBtmBox dl dd {color:#fff;font-size:1.1rem}
+.travelTab .txtBtmBox .btnPlus {position:absolute;width:70px; height:70px;right:10px; bottom:10px; border-radius:50%; color:#fff; font-size:1.1rem; background-color:#5809b6; padding:20px 0 0 12px; box-sizing:border-box}
+.travelTab .txtBtmBox .btnPlus:after {content:''; position:absolute;right:15px;bottom:15px;width:13px; height:5px;background:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_btnplus_rarr.png) no-repeat 0 0; background-size:13px 5px;}
+
+.honeyTip {margin:0 -12px}
+.honeyTip .swiper-slide {float:left;width:95%; margin-right:5px}
+.honeyTip .swiper-slide .honeySwip {position:relative;width:100%}
+.honeyTip .swiper-slide .honeySwip dl {position:absolute;left:0;bottom:0; padding:15px 8px 8px; background:rgba(0,0,0,0.7); text-align:left}
+.honeyTip .swiper-slide .honeySwip dl dt {color:#fff; font-size:1.6rem; font-weight:bold; margin-bottom:5px}
+.honeyTip .swiper-slide .honeySwip dl dd {font-size:1.2rem; color:#fff}
+
+/* 테마관 */
+.themeCommon {}
+.themeTopCont {background: no-repeat 0 0; background-size:100% 100%; padding:37px 12px 32px; position:relative}
+.themeTopCont.golf {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_theme_top_golf.jpg)}
+.themeTopCont.honey {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_theme_top_honey.jpg)}
+.themeTopCont.food {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_theme_top_food.jpg)}
+.themeTopCont.long {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_theme_top_long.jpg); padding-bottom:50px}
+.themeTopCont.leisure {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_theme_top_leisure.jpg);padding-bottom:50px}
+.themeTopCont.history {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_theme_top_history.jpg);padding-bottom:50px}
+.themeTopCont.family {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_theme_top_family.jpg);padding-bottom:68px}
+.themeTopCont.alone {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_theme_top_alone.jpg);padding-bottom:72px}
+.themeTopCont.baby {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_theme_top_baby.jpg);padding-bottom:68px}
+.themeTopCont.filial {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_theme_top_filial.jpg);padding-bottom:68px}
+.themeTopCont.couple {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_theme_top_couple.jpg);padding-bottom:68px}
+.themeTopCont.grand {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_theme_top_grand.jpg);padding-bottom:100px}
+.themeTopCont h2 {font-size:1.2rem;color:#fff;position:relative; font-weight:normal}
+.themeTopCont h2 strong {font-size:3.9rem;color:#fff; display:block; margin-bottom:12px}
+.themeTopCont h2 strong span {font-size:3.4rem}
+
+.tabNation {display:table;width:100%; padding:0 12px;background-color:#fbfcfd;box-sizing:border-box}
+.tabNation li {display:table-cell;width:20%}
+.tabNation li a {display:block;text-align:center;font-size:1.1rem;color:#333; padding:8px 0 11px; position:relative}
+.tabNation li a:before {content:''; display:block; width:19px; height:19px; background:no-repeat 0 0; background-size:19px 19px; margin:0 auto 8px}
+.tabNation li a.icoGolf01:before {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_nation01.png)}
+.tabNation li a.icoGolf02:before {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_nation02.png)}
+.tabNation li a.icoGolf03:before {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_nation03.png)}
+.tabNation li a.icoGolf04:before {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_nation04.png)}
+.tabNation li a.icoGolf05:before {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_nation05.png)}
+.tabNation li a.icoHoney01:before {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_nation06.png)}
+.tabNation li a.icoHoney02:before {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_nation07.png)}
+.tabNation li a.icoHoney03:before {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_nation08.png)}
+.tabNation li a.icoHoney04:before {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_nation09.png)}
+.tabNation li a.icoHoney05:before {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_nation10.png)}
+.tabNation li a.icoLong01:before {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_nation28.png)}
+.tabNation li a.icoLong02:before {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_nation29.png)}
+.tabNation li.on a:after {content:''; width:100%; height:3px; background:#488d19; position:absolute;left:0;bottom:0;}
+.tabNation.honey li {width:25%}
+.tabNation.honey li+li+li {width:16%}
+.tabNation.honey li+li+li+li+li {width:18%}
+.tabNation.honey li.on a:after {background:#db2d5e;}
+.tabNation.long li.on a:after {background:#ada500;}
+
+.tabNation_swipe {position:relative;background-color:#f2e8e9; overflow:hidden}
+.tabNation_swipe.prevShadow:before {content:''; width:14%; height:100%; position:absolute; left:0;bottom:4px;background:-webkit-gradient(linear,left top,right top,color-stop(36.66%,#f2e8e9),color-stop(100%,rgba(255,255,255,0)));z-index:50}
+.tabNation_swipe.nextShadow:after {content:''; width:14%; height:100%; position:absolute; right:0;bottom:4px;background:-webkit-gradient(linear,right top,left top,color-stop(36.66%,#f2e8e9),color-stop(100%,rgba(255,255,255,0)));z-index:50}
+
+.tabNation_swipe .swiper-slide {float:left;width:20%}
+.tabNation_swipe .swiper-slide a {display:block;text-align:center;font-size:1.1rem;  color:#333; padding:8px 0 11px; position:relative}
+.tabNation_swipe .swiper-slide a:before {content:''; display:block; width:19px; height:19px; background:no-repeat 0 0; background-size:19px 19px; margin:0 auto 8px;}
+.tabNation_swipe .swiper-slide a:after {content:''; width:100%; height:3px; position:absolute;left:0;bottom:0;}
+.tabNation_swipe a.icoFood01:before {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_nation11.png)}
+.tabNation_swipe a.icoFood02:before {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_nation12.png)}
+.tabNation_swipe a.icoFood03:before {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_nation13.png)}
+.tabNation_swipe a.icoFood04:before {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_nation14.png)}
+.tabNation_swipe a.icoFood05:before {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_nation15.png)}
+.tabNation_swipe a.icoleisure01:before {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_nation16.png)}
+.tabNation_swipe a.icoleisure02:before {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_nation17.png)}
+.tabNation_swipe a.icoleisure03:before {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_nation18.png)}
+.tabNation_swipe a.icoleisure04:before {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_nation19.png)}
+.tabNation_swipe a.icoleisure05:before {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_nation20.png)}
+.tabNation_swipe a.icoleisure06:before {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_nation21.png)}
+.tabNation_swipe a.icoHistory01:before {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_nation22.png)}
+.tabNation_swipe a.icoHistory02:before {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_nation23.png)}
+.tabNation_swipe a.icoHistory03:before {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_nation24.png)}
+.tabNation_swipe a.icoHistory04:before {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_nation25.png)}
+.tabNation_swipe a.icoHistory05:before {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_nation26.png)}
+.tabNation_swipe a.icoHistory06:before {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/ico_nation27.png)}
+.tabNation_swipe .swiper-slide.on a:after {background:#d95717;}
+.tabNation_swipe.leisure .swiper-slide.on a:after {background:#0093ed;}
+.tabNation_swipe.history .swiper-slide.on a:after {background:#750505;}
+
+.grandTab_swipe {position:absolute;left:0;bottom:0; background:rgba(255,255,255,0.9);width:100%; overflow:hidden}
+.grandTab_swipe.prevShadow:before {content:''; width:20%; height:100%; position:absolute; left:0;bottom:4px;background:-webkit-gradient(linear,left top,right top,color-stop(36.66%,#E8E8E8),color-stop(100%,rgba(255,255,255,0)));z-index:50}
+.grandTab_swipe.nextShadow:after {content:''; width:20%; height:100%; position:absolute; right:0;bottom:4px;background:-webkit-gradient(linear,right top,left top,color-stop(36.66%,#E8E8E8),color-stop(100%,rgba(255,255,255,0)));z-index:50}
+.grandTab_swipe .swiper-slide {float:left;width:33.3%}
+.grandTab_swipe .swiper-slide a {display:block;text-align:center;font-size:1.4rem;color:#333; padding:10px 0; position:relative}
+.grandTab_swipe .swiper-slide a:after {content:''; width:100%; height:3px; position:absolute;left:0;bottom:0;}
+.grandTab_swipe .swiper-slide.on a:after {background:#c70509;}
+.grandTab_swipe .swiper-slide a span {display:block;font-size:1.1rem}
+ 
+.nt_inTopCont {background-color:#fff;text-align:center; padding:15px 14px 14px}
+.nt_inTopCont h3 {font-size:2.1rem; margin-bottom:14px}
+.nt_inTopCont h3 img {height:20px; position:relative; bottom:-4px}
+.nt_inTopCont p {font-size:1.5rem; font-weight:bold; position:relative; padding-bottom:15px}
+.nt_inTopCont p.baby,.nt_inTopCont p.family,.nt_inTopCont p.filial,.nt_inTopCont p.alone,.nt_inTopCont p.couple {padding-top:12px}
+.nt_inTopCont p.golf span {color:#488d19}
+.nt_inTopCont p.honey span {color:#db2d5e}
+.nt_inTopCont p.grand span {color:#c70509}
+.nt_inTopCont p.baby span {color:#e9a106}
+.nt_inTopCont p.family span {color:#00a99d}
+.nt_inTopCont p.filial span {color:#8c4319}
+.nt_inTopCont p.alone span {color:#522bc6}
+.nt_inTopCont p.couple span {color:#831d81}
+.nt_inTopCont p.leisure span {color:#0093ed}
+.nt_inTopCont p.history span {color:#750505}
+.nt_inTopCont p.long span {color:#ada500}
+.nt_inTopCont p:after {content:'';width:26px; height:1px; background-color:#f3474d; position:absolute;left:50%; bottom:0; margin-left:-13px}
+.nt_inTopCont p.golf:after {background-color:#488d19}
+.nt_inTopCont p.honey:after {background-color:#db2d5e}
+.nt_inTopCont p.grand:after {background-color:#c70509}
+.nt_inTopCont p.baby:after {background-color:#e9a106}
+.nt_inTopCont p.family:after {background-color:#00a99d}
+.nt_inTopCont p.filial:after {background-color:#8c4319}
+.nt_inTopCont p.alone:after {background-color:#522bc6}
+.nt_inTopCont p.couple:after {background-color:#831d81}
+.nt_inTopCont p.leisure:after {background-color:#0093ed}
+.nt_inTopCont p.history:after {background-color:#750505}
+.nt_inTopCont p.long:after {background-color:#ada500}
+
+.bestTxtList {overflow:hidden; margin-bottom:10px}
+.bestTxtList li {float:left;width:33.3%;color:#fff; text-align:center; font-size:1.2rem; box-sizing:border-box; padding:32px 0 25px; background:no-repeat 0 0; background-size:100% 100%}
+.bestTxtList li:nth-child(2) {width:33.4%; border-left:1px solid #e9ecef;border-right:1px solid #e9ecef}
+.bestTxtList li strong {display:inline-block; padding:2px 8px; border:1px solid #fff; border-radius:50px; font-size:1.1rem; margin:0 auto 5px; background:rgba(0,0,0,0.4)}
+.bestTxtList li.bg_grand01 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_grand01.jpg)}
+.bestTxtList li.bg_grand02 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_grand02.jpg)}
+.bestTxtList li.bg_grand03 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_grand03.jpg)}
+.bestTxtList li.bg_grand04 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_grand04.jpg)}
+.bestTxtList li.bg_grand05 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_grand05.jpg)}
+.bestTxtList li.bg_grand06 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_grand06.jpg)}
+.bestTxtList li.bg_grand07 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_grand07.jpg)}
+.bestTxtList li.bg_grand08 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_grand08.jpg)}
+.bestTxtList li.bg_grand09 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_grand09.jpg)}
+.bestTxtList li.bg_grand10 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_grand10.jpg)}
+.bestTxtList li.bg_grand11 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_grand11.jpg)}
+.bestTxtList li.bg_grand12 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_grand12.jpg)}
+.bestTxtList li.bg_grand13 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_grand13.jpg)}
+.bestTxtList li.bg_grand14 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_grand14.jpg)}
+.bestTxtList li.bg_grand15 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_grand15.jpg)}
+.bestTxtList li.bg_grand16 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_grand16.jpg)}
+.bestTxtList li.bg_grand17 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_grand17.jpg)}
+.bestTxtList li.bg_grand18 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_grand18.jpg)}
+.bestTxtList li.bg_grand19 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_grand19.jpg)}
+.bestTxtList li.bg_grand20 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_grand20.jpg)}
+.bestTxtList li.bg_grand21 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_grand21.jpg)}
+.bestTxtList li.bg_baby01 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_baby01.jpg)}
+.bestTxtList li.bg_baby02 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_baby02.jpg)}
+.bestTxtList li.bg_baby03 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_baby03.jpg)}
+.bestTxtList li.bg_golf01 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_golf01.jpg)}
+.bestTxtList li.bg_golf02 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_golf02.jpg)}
+.bestTxtList li.bg_golf03 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_golf03.jpg)}
+.bestTxtList li.bg_golf04 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_golf04.jpg)}
+.bestTxtList li.bg_golf05 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_golf05.jpg)}
+.bestTxtList li.bg_golf06 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_golf06.jpg)}
+.bestTxtList li.bg_golf07 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_golf07.jpg)}
+.bestTxtList li.bg_golf08 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_golf08.jpg)}
+.bestTxtList li.bg_golf09 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_golf09.jpg)}
+.bestTxtList li.bg_golf10 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_golf10.jpg)}
+.bestTxtList li.bg_golf11 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_golf11.jpg)}
+.bestTxtList li.bg_golf12 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_golf12.jpg)}
+.bestTxtList li.bg_golf13 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_golf13.jpg)}
+.bestTxtList li.bg_golf14 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_golf14.jpg)}
+.bestTxtList li.bg_golf15 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_golf15.jpg)}
+.bestTxtList li.bg_honey01 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_honey01.jpg)}
+.bestTxtList li.bg_honey02 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_honey02.jpg)}
+.bestTxtList li.bg_honey03 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_honey03.jpg)}
+.bestTxtList li.bg_honey04 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_honey04.jpg)}
+.bestTxtList li.bg_honey05 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_honey05.jpg)}
+.bestTxtList li.bg_honey06 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_honey06.jpg)}
+.bestTxtList li.bg_honey07 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_honey07.jpg)}
+.bestTxtList li.bg_honey08 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_honey08.jpg)}
+.bestTxtList li.bg_honey09 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_honey09.jpg)}
+.bestTxtList li.bg_honey10 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_honey10.jpg)}
+.bestTxtList li.bg_honey11 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_honey11.jpg)}
+.bestTxtList li.bg_honey12 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_honey12.jpg)}
+.bestTxtList li.bg_honey13 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_honey13.jpg)}
+.bestTxtList li.bg_honey14 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_honey14.jpg)}
+.bestTxtList li.bg_honey15 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_honey15.jpg)}
+.bestTxtList li.bg_family01 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_family01.jpg)}
+.bestTxtList li.bg_family02 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_family02.jpg)}
+.bestTxtList li.bg_family03 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_family03.jpg)}
+.bestTxtList li.bg_filial01 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_filial01.jpg)}
+.bestTxtList li.bg_filial02 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_filial02.jpg)}
+.bestTxtList li.bg_filial03 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_filial03.jpg)}
+.bestTxtList li.bg_alone01 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_alone01.jpg)}
+.bestTxtList li.bg_alone02 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_alone02.jpg)}
+.bestTxtList li.bg_alone03 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_alone03.jpg)}
+.bestTxtList li.bg_couple01 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_couple01.jpg)}
+.bestTxtList li.bg_couple02 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_couple02.jpg)}
+.bestTxtList li.bg_couple03 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_couple03.jpg)}
+.bestTxtList li.bg_leisure01 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_leisure01.jpg)}
+.bestTxtList li.bg_leisure02 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_leisure02.jpg)}
+.bestTxtList li.bg_leisure03 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_leisure03.jpg)}
+.bestTxtList li.bg_leisure04 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_leisure04.jpg)}
+.bestTxtList li.bg_leisure05 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_leisure05.jpg)}
+.bestTxtList li.bg_leisure06 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_leisure06.jpg)}
+.bestTxtList li.bg_leisure07 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_leisure07.jpg)}
+.bestTxtList li.bg_leisure08 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_leisure08.jpg)}
+.bestTxtList li.bg_leisure09 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_leisure09.jpg)}
+.bestTxtList li.bg_leisure10 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_leisure10.jpg)}
+.bestTxtList li.bg_leisure11 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_leisure11.jpg)}
+.bestTxtList li.bg_leisure12 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_leisure12.jpg)}
+.bestTxtList li.bg_leisure13 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_leisure13.jpg)}
+.bestTxtList li.bg_leisure14 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_leisure14.jpg)}
+.bestTxtList li.bg_leisure15 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_leisure15.jpg)}
+.bestTxtList li.bg_leisure16 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_leisure16.jpg)}
+.bestTxtList li.bg_leisure17 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_leisure17.jpg)}
+.bestTxtList li.bg_leisure18 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_leisure18.jpg)}
+.bestTxtList li.bg_history01 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_history01.jpg)}
+.bestTxtList li.bg_history02 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_history02.jpg)}
+.bestTxtList li.bg_history03 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_history03.jpg)}
+.bestTxtList li.bg_history04 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_history04.jpg)}
+.bestTxtList li.bg_history05 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_history05.jpg)}
+.bestTxtList li.bg_history06 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_history06.jpg)}
+.bestTxtList li.bg_history07 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_history07.jpg)}
+.bestTxtList li.bg_history08 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_history08.jpg)}
+.bestTxtList li.bg_history09 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_history09.jpg)}
+.bestTxtList li.bg_history10 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_history10.jpg)}
+.bestTxtList li.bg_history11 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_history11.jpg)}
+.bestTxtList li.bg_history12 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_history12.jpg)}
+.bestTxtList li.bg_history13 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_history13.jpg)}
+.bestTxtList li.bg_history14 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_history14.jpg)}
+.bestTxtList li.bg_history15 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_history15.jpg)}
+.bestTxtList li.bg_history16 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_history16.jpg)}
+.bestTxtList li.bg_history17 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_history17.jpg)}
+.bestTxtList li.bg_history18 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_history18.jpg)}
+.bestTxtList li.bg_long01 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_long01.jpg)}
+.bestTxtList li.bg_long02 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_long02.jpg)}
+.bestTxtList li.bg_long03 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_long03.jpg)}
+.bestTxtList li.bg_long04 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_long04.jpg)}
+.bestTxtList li.bg_long05 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_long05.jpg)}
+.bestTxtList li.bg_long06 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_best_long06.jpg)}
+
+.in_prodCont {padding:10px 12px 15px; border-bottom:1px solid #ccc; background-color:#fff;border-top:1px solid #ccc;}
+.tabBase {overflow:hidden;overflow:hidden}
+.tabBase li {float:left;width:50%}
+.tabBase li a {display:block;background-color:#404444; color:#fff; text-align:center; font-size:1.6rem; font-weight:bold; padding:15px 0}
+.tabBase.golf li.on a {background-color:#488d19}
+.tabBase.honey li.on a {background-color:#db2d5e}
+.tabBase.food li.on a {background-color:#d95717}
+.tabBase.leisure li.on a {background-color:#0093ed}
+.tabBase.baby li.on a {background-color:#e9a106}
+.tabBase.family li.on a {background-color:#00a99d}
+.tabBase.filial li.on a {background-color:#8c4319}
+.tabBase.alone li.on a {background-color:#522bc6}
+.tabBase.couple li.on a {background-color:#831d81}
+.tabBase.history li.on a {background-color:#750505}
+.tabBase.long li.on a {background-color:#ada500}
+
+.themeBox {padding:10px 12px; background-color:#fff; border-bottom:1px solid #ccc}
+
+.popFoodTop {background-repeat:no-repeat; background-position:0 0; background-size:100% 100%; padding:32px 0 60px; text-align:center}
+.popFoodTop.bg01 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/pop/bg_food_top01.jpg)}
+.popFoodTop.bg02 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/pop/bg_food_top02.jpg)}
+.popFoodTop.bg03 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/pop/bg_food_top03.jpg)}
+.popFoodTop.bg04 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/pop/bg_food_top04.jpg)}
+.popFoodTop.bg05 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/pop/bg_food_top05.jpg)}
+.popFoodTop.bg06 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/pop/bg_food_top06.jpg)}
+.popFoodTop.bg07 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/pop/bg_food_top07.jpg)}
+.popFoodTop.bg08 {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/pop/bg_food_top08.jpg)}
+.popFoodTop strong {color:#fff; font-size:3.5rem}
+.popFoodTop p {color:#fff; font-size:1.8rem}
+.popFoodList {background-color:#e9ecef; padding:0 12px; margin-bottom:-35px}
+.popFoodList li {position:relative;display:table;width:100%; background-color:#fff; margin-bottom:5px; border:1px solid #e5e5e5;top:-45px}
+.popFoodList li div {display:table-cell;width:155px; padding:15px 12px; text-align:center}
+.popFoodList li div img {height:131px; margin-bottom:8px}
+.popFoodList li strong {display:block; font-size:1.6rem; color:#222}
+.popFoodList li p {display:table-cell;width:auto; vertical-align:middle; padding:18px 12px 18px 0; font-size:1.25rem}
+
+.grandTcherBox {}
+.grandTcherBox+.grandTcherBox {margin-top:30px}
+.grandTcherBox .full_img {margin:0 -12px;}
+.grandTcherBox dl {text-align:center; padding-top:25px}
+.grandTcherBox dl dt {font-weight:bold; font-size:1.6rem;}
+.grandTcherBox dl dd.stit {font-size:1.2rem; color:#888; padding:10px 0 15px; position:relative; margin-bottom:20px}
+.grandTcherBox dl dd.stit:after {content:'';width:26px; height:1px; position:absolute;left:50%; margin-left:-13px; bottom:0; background-color:#f3474d}
+.grandTcherBox dl dd.txt {color:#333; font-size:1.3rem; text-align:left;}
+.grandBestBox {}
+.grandBestBox h4 {text-align:center; padding:16px 0; font-size:2.0rem; position:relative; margin-bottom:20px}
+.grandBestBox h4 span {color:#f3474d}
+.grandBestBox h4:after {content:'';width:26px; height:1px; position:absolute;left:50%; margin-left:-13px; bottom:0; background-color:#f3474d}
+.grandBestBox .full_img {margin:0 -12px;}
+.grandBestBox dl { padding:20px 0 32px}
+.grandBestBox dl dt {font-size:1.6rem; color:#333; font-weight:bold; margin-bottom:8px}
+.grandBestBox dl dt span {font-size:1.0rem; color:#f3474d; display:inline-block; margin-right:8px; font-weight:normal}
+.grandBestBox dl dd {color:#333; font-size:1.3rem;}
+
+/* 자유여행관 */
+.freeTopCont {text-align:center; background:no-repeat 0 0; background-size:100% 100%; padding:40px 0 108px}
+.freeTopCont.bgAir {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_freetop_air.jpg)}
+.freeTopCont.bgBag {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_freetop_bag.jpg);padding:32px 0 105px}
+.freeTopCont.bgFnd {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_freetop_fnd.jpg);padding:32px 0 75px}
+.freeTopCont h2 {margin-bottom:15px}
+.freeTopCont h2 img {height:86px}
+.freeTopCont.bgBag h2 {margin-bottom:10px}
+.freeTopCont.bgBag h2 img {height:102px}
+.freeTopCont.bgFnd h2 {margin-bottom:10px}
+.freeTopCont.bgFnd h2 img {height:147px}
+.freeTopCont p {color:#fff;font-size:1.3rem;text-shadow:1px 1px 1px #000;}
+
+.freeLoveBox {overflow:hidden;text-align:center; background-color:#fff; padding-bottom:35px; background-repeat:no-repeat; background-position:center bottom; }
+.freeLoveBox.air {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_freelove_air.png);background-size:320px 62px} 
+.freeLoveBox.bag {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_freelove_bag.png);background-size:320px 40px} 
+.freeLoveBox.fnd {background-image:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_freelove_fnd.png);background-size:320px 40px} 
+.freeLoveBox h3 {font-size:1.6rem; position:relative; padding-bottom:14px; margin-bottom:20px}
+.freeLoveBox h3:after {content:'';width:26px; height:1px; position:absolute;left:50%; bottom:0; background-color:#b21e5a; margin-left:-13px}
+.freeLoveBox.bag h3:after {background-color:#03903f}
+.freeLoveBox.fnd h3:after {background-color:#05a594}
+.freeLoveBox.air h3 span {color:#b21e5a}
+.freeLoveBox.bag h3 span {color:#03903f}
+.freeLoveBox.fnd h3 span {color:#05a594}
+.freeLoveBox ul li {float:left;width:33.3%;padding:0 12px; box-sizing:border-box}
+.freeLoveBox ul li:nth-child(2) {width:33.4%;}
+.freeLoveBox ul li img {width:100%}
+.freeLoveBox ul li strong {font-size:1.3rem; display:block; margin-top:10px}
+
+.freeProd {padding:15px 12px 0;}
+.freeProd.air {background-color:#fff2f6}
+.freeProd.bag {background-color:#f2fbf4}
+.freeProd.fnd {background-color:#ebfff1}
+.freeProd .btnRed {margin-top:15px}
+.careTxt {border-top:1px solid #ccc;border-bottom:1px solid #ccc; margin:20px -12px 7px; background-color:#fff; padding:15px 12px}
+.careTxt dt {color:#444;font-size:1.3rem;background:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_caretxt_dt.png) no-repeat 0 2px; background-size:13px 13px; padding-left:18px; font-weight:bold; margin-bottom:6px}
+.careTxt dd {font-size:1.2rem; color:#666; margin-bottom:8px; position:relative; padding-left:6px}
+.careTxt dd:last-child {margin-bottom:0}
+.careTxt dd:before {content:'';width:2px; height:2px; background-color:#666; border-radius:50%; position:absolute;left:0;top:6px}
+.freeBanner {display:block;margin-bottom:7px}
+.freeBanner img {width:100%}
+.freeBenefit {}
+.freeBenefit h4 {background-color:#05a594; text-align:center; font-size:1.5rem; color:#fff; padding:14px 0 12px}
+.freeBenefit h4 span {display:block; font-size:1.2rem; color:#c7f6f1; margin-top:4px; font-weight:normal}
+.freeBenefit > span {display:block; margin-bottom:15px;border-bottom:1px solid #05a594}
+.freeBenefit img {width:100%}
+
+.kyushuContList {margin:0 -12px -20px}
+.kyushuContList li {margin-bottom:7px}
+.kyushuContList li:last-child {margin-bottom:0}
+.kyushuContList li .kyuCont {background-color:#67ad0e; padding:17px 12px; text-align:left; border-bottom:1px solid #559700}
+.kyushuContList li .kyuCont * {color:#fff}
+.kyushuContList li .kyuCont em {font-size:1.1rem;}
+.kyushuContList li .kyuCont strong {font-size:1.7rem; display:block; margin:8px 0}
+.kyushuContList li .kyuCont p {font-size:1.2rem}
+
+.kyushuContList02 { margin:0 -12px -20px}
+.kyushuContList02 li {margin-bottom:20px;border-bottom:1px solid #ccc;padding:0 12px 20px}
+.kyushuContList02 li:last-child {margin-bottom:0; border-bottom:none}
+.kyushuContList02 li .kyuCont {padding:17px 0 0; text-align:left}
+.kyushuContList02 li .kyuCont em {font-size:1.1rem; color:#ff6796; font-weight:bold}
+.kyushuContList02 li .kyuCont strong {font-size:1.7rem; display:block; margin:8px 0; color:#222}
+.kyushuContList02 li .kyuCont p {font-size:1.2rem; color:#666; margin-bottom:20px}
+
+.airRent { margin-bottom:7px;}
+.airRent a {display:block; padding:25px 20px}
+.airRent a b {display:inline-block; border:1px solid #fff; font-size:1.1rem; padding:2px 6px; color:#fff}
+.airRent a p {font-size:1.8rem;color:#fff; margin:15px 0 20px}
+.airRent a p strong {display:block}
+.airRent a em {color:#bdd8ff; font-size:1.2rem;background:url(http://image1.hanatour.com/mobile/common/expo2016/images/ico_rarr.png) no-repeat right center; background-size:9px 8px; padding-right:13px}
+.airRent a.air {background:#3f80df url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_airrent01.png) no-repeat right bottom; background-size:178px 122px; text-align:left;}
+.airRent a.rent {background:#7a68ae url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_airrent02.png) no-repeat left bottom; background-size:149px 125px; text-align:right}
+.airRent a.rent em {color:#e6deff}
+
+.makerCont {text-align:center; margin-bottom:7px}
+.makerCont a {display:block; padding:25px 12px 20px}
+.makerCont a h3 {color:#fff; font-size:1.2rem; background-color:#333; border-radius:50px; padding:4px 10px; display:inline-block; font-weight:normal}
+.makerCont a strong {color:#333; font-size:1.6rem; display:block; margin:6px 0 20px}
+.makerCont a.train {background:#ffdee2}
+.makerCont a.jeju {background:#cbc8f5}
+
+.zoneArea_etc {text-align:center;background:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_zonearea_etc.jpg) no-repeat 0 0; background-size:100% 100%; padding:23px 0 25px; margin-bottom:7px; border-bottom:1px solid #ccc}
+.zoneArea_etc p {font-size:1.3rem; color:#252525}
+.zoneArea_etc p strong {display:inline-block;margin-bottom:10px;background:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_txt_y_line.png) repeat-x 0 bottom; background-size:1px 10px; font-weight:normal}
+
+/* 지역관별 컬러 변경 */
+.area01_02 .tabRagion li.on a {background-color:#fa5e21}
+.area01_02 .tabSmall li.on a {color:#fa5e21;border:1px solid #fa5e21}
+.area01_02 .travelTab .txtBtmBox {background-color:#ff9204;border-bottom:1px solid #fa5e21}
+.area01_02 .travelTab .txtBtmBox .btnPlus {background-color:#fa5e21}
+.area01_02 .stit_sp {background-color:#fa5e21}
+.area01_02 .tit_sp span {color:#fa5e21}
+
+.area01_03 .tabRagion li.on a {background-color:#0221e0}
+.area01_03 .tabSmall li.on a {color:#0221e0;border:1px solid #0221e0}
+.area01_03 .travelTab .txtBtmBox {background-color:#3c64d4;border-bottom:1px solid #0221e0}
+.area01_03 .travelTab .txtBtmBox .btnPlus {background-color:#0221e0}
+.area01_03 .stit_sp {background-color:#0221e0}
+.area01_03 .tit_sp span {color:#0221e0}
+
+.area01_04 .tabRagion li.on a {background-color:#f63313}
+.area01_04 .tabSmall li.on a {color:#f63313;border:1px solid #f63313}
+.area01_04 .travelTab .txtBtmBox {background-color:#ff7604;border-bottom:1px solid #f63313}
+.area01_04 .travelTab .txtBtmBox .btnPlus {background-color:#f63313}
+.area01_04 .stit_sp {background-color:#f63313}
+.area01_04 .tit_sp span {color:#f63313}
+
+.area01_05 .tabRagion li.on a {background-color:#8a044c}
+.area01_05 .tabSmall li.on a {color:#8a044c;border:1px solid #8a044c}
+.area01_05 .travelTab .txtBtmBox {background-color:#b60766;border-bottom:1px solid #8a044c}
+.area01_05 .travelTab .txtBtmBox .btnPlus {background-color:#8a044c}
+.area01_05 .stit_sp {background-color:#8a044c}
+.area01_05 .tit_sp span {color:#8a044c}
+
+.area01_06 .tabRagion li.on a {background-color:#8a044c}
+.area01_06 .tabSmall li.on a {color:#8a044c;border:1px solid #8a044c}
+.area01_06 .travelTab .txtBtmBox {background-color:#b50665;border-bottom:1px solid #8a044c}
+.area01_06 .travelTab .txtBtmBox .btnPlus {background-color:#8a044c}
+.area01_06 .stit_sp {background-color:#8a044c}
+.area01_06 .tit_sp span {color:#8a044c}
+
+.area01_07 .tabRagion li.on a {background-color:#207200}
+.area01_07 .tabSmall li.on a {color:#207200;border:1px solid #207200}
+.area01_07 .travelTab .txtBtmBox {background-color:#66ad0c;border-bottom:1px solid #207200}
+.area01_07 .travelTab .txtBtmBox .btnPlus {background-color:#207200}
+.area01_07 .stit_sp {background-color:#207200}
+.area01_07 .tit_sp span {color:#207200}
+
+.area02_01 .tabRagion li.on a {background-color:#792bd7}
+.area02_01 .tabSmall li.on a {color:#792bd7;border:1px solid #792bd7}
+.area02_01 .travelTab .txtBtmBox {background-color:#780a94;border-bottom:1px solid #792bd7}
+.area02_01 .travelTab .txtBtmBox .btnPlus {background-color:#792bd7}
+.area02_01 .stit_sp {background-color:#792bd7}
+.area02_01 .tit_sp span {color:#792bd7}
+
+.area02_02 .tabRagion li.on a {background-color:#8a044c}
+.area02_02 .tabSmall li.on a {color:#8a044c;border:1px solid #8a044c}
+.area02_02 .travelTab .txtBtmBox {background-color:#b60766;border-bottom:1px solid #8a044c}
+.area02_02 .travelTab .txtBtmBox .btnPlus {background-color:#8a044c}
+.area02_02 .stit_sp {background-color:#8a044c}
+.area02_02 .tit_sp span {color:#8a044c}
+
+.area02_03 .tabRagion li.on a {background-color:#fa5e21}
+.area02_03 .tabSmall li.on a {color:#fa5e21;border:1px solid #fa5e21}
+.area02_03 .travelTab .txtBtmBox {background-color:#fa5e21;border-bottom:1px solid #fa5e21}
+.area02_03 .travelTab .txtBtmBox .btnPlus {background-color:#f63313}
+.area02_03 .stit_sp {background-color:#fa5e21}
+.area02_03 .tit_sp span {color:#fa5e21}
+
+.area02_04 .tabRagion li.on a {background-color:#0221e0}
+.area02_04 .tabSmall li.on a {color:#0221e0;border:1px solid #0221e0}
+.area02_04 .travelTab .txtBtmBox {background-color:#3c64d4;border-bottom:1px solid #0221e0}
+.area02_04 .travelTab .txtBtmBox .btnPlus {background-color:#0221e0}
+.area02_04 .stit_sp {background-color:#0221e0}
+.area02_04 .tit_sp span {color:#0221e0}
+
+.area02_05 .tabRagion li.on a {background-color:#207200}
+.area02_05 .tabSmall li.on a {color:#207200;border:1px solid #207200}
+.area02_05 .travelTab .txtBtmBox {background-color:#66ad0c;border-bottom:1px solid #207200}
+.area02_05 .travelTab .txtBtmBox .btnPlus {background-color:#207200}
+.area02_05 .stit_sp {background-color:#207200}
+.area02_05 .tit_sp span {color:#207200}
+.area02_01 .travelTab .txtBtmBox:after,.area02_02 .travelTab .txtBtmBox:after,.area02_03 .travelTab .txtBtmBox:after,.area02_04 .travelTab .txtBtmBox:after,.area02_05 .travelTab .txtBtmBox:after {width:59px; height:64px;background:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_txtbtmbox_02.png) no-repeat 0 0; background-size:59px 64px}
+
+.area03_01 .tabRagion li.on a {background-color:#d98500}
+.area03_01 .tabSmall li.on a {color:#d98500;border:1px solid #d98500}
+.area03_01 .travelTab .txtBtmBox {background-color:#e8a622;border-bottom:1px solid #d98500}
+.area03_01 .travelTab .txtBtmBox .btnPlus {background-color:#d98500}
+.area03_01 .stit_sp {background-color:#d98500}
+.area03_01 .tit_sp span {color:#d98500}
+
+.area03_02 .tabRagion li.on a {background-color:#bb1a77}
+.area03_02 .tabSmall li.on a {color:#bb1a77;border:1px solid #bb1a77}
+.area03_02 .travelTab .txtBtmBox {background-color:#cf5c9d;border-bottom:1px solid #bb1a77}
+.area03_02 .travelTab .txtBtmBox .btnPlus {background-color:#bb1a77}
+.area03_02 .stit_sp {background-color:#bb1a77}
+.area03_02 .tit_sp span {color:#bb1a77}
+
+.area03_03 .tabRagion li.on a {background-color:#0012ae}
+.area03_03 .tabSmall li.on a {color:#0012ae;border:1px solid #0012ae}
+.area03_03 .travelTab .txtBtmBox {background-color:#3546e0;border-bottom:1px solid #0012ae}
+.area03_03 .travelTab .txtBtmBox .btnPlus {background-color:#0012ae}
+.area03_03 .stit_sp {background-color:#0012ae}
+.area03_03 .tit_sp span {color:#0012ae}
+
+.area03_04 .tabRagion li.on a {background-color:#4a7900}
+.area03_04 .tabSmall li.on a {color:#4a7900;border:1px solid #4a7900}
+.area03_04 .travelTab .txtBtmBox {background-color:#6fb600;border-bottom:1px solid #4a7900}
+.area03_04 .travelTab .txtBtmBox .btnPlus {background-color:#4a7900}
+.area03_04 .stit_sp {background-color:#4a7900}
+.area03_04 .tit_sp span {color:#4a7900}
+
+.area03_05 .tabRagion li.on a {background-color:#a60000}
+.area03_05 .tabSmall li.on a {color:#a60000;border:1px solid #a60000}
+.area03_05 .travelTab .txtBtmBox {background-color:#c4070b;border-bottom:1px solid #a60000}
+.area03_05 .travelTab .txtBtmBox .btnPlus {background-color:#a60000}
+.area03_05 .stit_sp {background-color:#a60000}
+.area03_05 .tit_sp span {color:#a60000}
+.area03_01 .travelTab .txtBtmBox:after,.area03_02 .travelTab .txtBtmBox:after,.area03_03 .travelTab .txtBtmBox:after,.area03_04 .travelTab .txtBtmBox:after,.area03_05 .travelTab .txtBtmBox:after {width:59px; height:98px;background:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_txtbtmbox_03.png) no-repeat 0 0; background-size:59px 98px}
+
+.area04_01 .tabRagion li.on a {background-color:#008f83}
+.area04_01 .tabSmall li.on a {color:#008f83;border:1px solid #008f83}
+.area04_01 .travelTab .txtBtmBox {background-color:#18b7a6;border-bottom:1px solid #008f83}
+.area04_01 .travelTab .txtBtmBox .btnPlus {background-color:#008f83}
+.area04_01 .stit_sp {background-color:#008f83}
+.area04_01 .tit_sp span {color:#008f83}
+
+.area04_02 .tabRagion li.on a {background-color:#3d61d6}
+.area04_02 .tabSmall li.on a {color:#3d61d6;border:1px solid #3d61d6}
+.area04_02 .travelTab .txtBtmBox {background-color:#3d61d6;border-bottom:1px solid #0044c1}
+.area04_02 .travelTab .txtBtmBox .btnPlus {background-color:#0044c1}
+.area04_02 .stit_sp {background-color:#3d61d6}
+.area04_02 .tit_sp span {color:#3d61d6}
+
+.area04_03 .tabRagion li.on a {background-color:#694fca}
+.area04_03 .tabSmall li.on a {color:#694fca;border:1px solid #694fca}
+.area04_03 .travelTab .txtBtmBox {background-color:#ff9204;border-bottom:1px solid #5809b6}
+.area04_03 .travelTab .txtBtmBox .btnPlus {background-color:#5809b6}
+.area04_03 .stit_sp {background-color:#694fca}
+.area04_03 .tit_sp span {color:#694fca}
+
+.area04_04 .tabRagion li.on a {background-color:#694fca}
+.area04_04 .tabSmall li.on a {color:#694fca;border:1px solid #694fca}
+.area04_04 .travelTab .txtBtmBox {background-color:#694fca;border-bottom:1px solid #5809b6}
+.area04_04 .travelTab .txtBtmBox .btnPlus {background-color:#5809b6}
+.area04_04 .stit_sp {background-color:#694fca}
+.area04_04 .tit_sp span {color:#694fca}
+.area04_01 .travelTab .txtBtmBox:after,.area04_02 .travelTab .txtBtmBox:after,.area04_03 .travelTab .txtBtmBox:after,.area04_04 .travelTab .txtBtmBox:after {width:65px; height:107px;background:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_txtbtmbox_04.png) no-repeat 0 0; background-size:65px 107px}
+
+.area05_01 .tabRagion li.on a {background-color:#fa5e21}
+.area05_01 .tabSmall li.on a {color:#fa5e21;border:1px solid #fa5e21}
+.area05_01 .travelTab .txtBtmBox {background-color:#fa5e21;border-bottom:1px solid #f63313}
+.area05_01 .travelTab .txtBtmBox .btnPlus {background-color:#f63313}
+.area05_01 .stit_sp {background-color:#fa5e21}
+.area05_01 .tit_sp span {color:#fa5e21}
+.area05_01 .travelTab .txtBtmBox:after {width:57px; height:111px;background:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_txtbtmbox_05.png) no-repeat 0 0; background-size:57px 111px}
+
+.area05_02 .tabRagion li.on a {background-color:#024de0}
+.area05_02 .tabSmall li.on a {color:#024de0;border:1px solid #024de0}
+.area05_02 .travelTab .txtBtmBox {background-color:#3c64d4;border-bottom:1px solid #024de0}
+.area05_02 .travelTab .txtBtmBox .btnPlus {background-color:#024de0}
+.area05_02 .stit_sp {background-color:#024de0}
+.area05_02 .tit_sp span {color:#024de0}
+.area05_02 .travelTab .txtBtmBox:after {width:55px; height:119px;background:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_txtbtmbox_06.png) no-repeat 0 0; background-size:55px 119px}
+
+.area05_03 .tabRagion li.on a {background-color:#792bd7}
+.area05_03 .tabSmall li.on a {color:#792bd7;border:1px solid #792bd7}
+.area05_03 .travelTab .txtBtmBox {background-color:#792bd7;border-bottom:1px solid #5809b6}
+.area05_03 .travelTab .txtBtmBox .btnPlus {background-color:#5809b6}
+.area05_03 .stit_sp {background-color:#792bd7}
+.area05_03 .tit_sp span {color:#792bd7}
+.area05_03 .travelTab .txtBtmBox:after {width:52px; height:111px;background:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_txtbtmbox_07.png) no-repeat 0 0; background-size:52px 111px}
+
+.area05_04 .tabRagion li.on a {background-color:#207200}
+.area05_04 .tabSmall li.on a {color:#207200;border:1px solid #207200}
+.area05_04 .travelTab .txtBtmBox {background-color:#66ad0c;border-bottom:1px solid #207200}
+.area05_04 .travelTab .txtBtmBox .btnPlus {background-color:#207200}
+.area05_04 .stit_sp {background-color:#207200}
+.area05_04 .tit_sp span {color:#207200}
+.area05_04 .travelTab .txtBtmBox:after {width:63px; height:108px;background:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_txtbtmbox_08.png) no-repeat 0 0; background-size:63px 108px}
+
+.area06_01 .tabRagion li.on a {background-color:#5809b6}
+.area06_01 .tabSmall li.on a {color:#5809b6;border:1px solid #5809b6}
+.area06_01 .travelTab .txtBtmBox {background-color:#694fca;border-bottom:1px solid #4e00ab}
+.area06_01 .travelTab .txtBtmBox .btnPlus {background-color:#4e00ab}
+.area06_01 .stit_sp {background-color:#5809b6}
+.area06_01 .tit_sp span {color:#5809b6}
+.area06_01 .travelTab .txtBtmBox:after {width:54px; height:95px;background:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_txtbtmbox_09.png) no-repeat 0 0; background-size:54px 95px}
+
+.area06_02 .tabRagion li.on a {background-color:#fa5e21}
+.area06_02 .tabSmall li.on a {color:#fa5e21;border:1px solid #fa5e21}
+.area06_02 .travelTab .txtBtmBox {background-color:#ff7604;border-bottom:1px solid #f63313}
+.area06_02 .travelTab .txtBtmBox .btnPlus {background-color:#f63313}
+.area06_02 .stit_sp {background-color:#fa5e21}
+.area06_02 .tit_sp span {color:#fa5e21}
+.area06_02 .travelTab .txtBtmBox:after {width:57px; height:84px;background:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_txtbtmbox_10.png) no-repeat 0 0; background-size:57px 84px}
+
+.area06_03 .tabRagion li.on a {background-color:#1f60c5}
+.area06_03 .tabSmall li.on a {color:#1f60c5;border:1px solid #1f60c5}
+.area06_03 .travelTab .txtBtmBox {background-color:#1f60c5;border-bottom:1px solid #0d3371}
+.area06_03 .travelTab .txtBtmBox .btnPlus {background-color:#0d3371}
+.area06_03 .stit_sp {background-color:#1f60c5}
+.area06_03 .tit_sp span {color:#1f60c5}
+.area06_03 .travelTab .txtBtmBox:after {width:40px; height:110px;background:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_txtbtmbox_11.png) no-repeat 0 0; background-size:40px 110px}
+
+.area06_04 .tabRagion li.on a {background-color:#207200}
+.area06_04 .tabSmall li.on a {color:#207200;border:1px solid #207200}
+.area06_04 .travelTab .txtBtmBox {background-color:#66ad0c;border-bottom:1px solid #207200}
+.area06_04 .travelTab .txtBtmBox .btnPlus {background-color:#207200}
+.area06_04 .stit_sp {background-color:#207200}
+.area06_04 .tit_sp span {color:#207200}
+.area06_04 .travelTab .txtBtmBox:after {width:114px; height:46px;background:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_txtbtmbox_12.png) no-repeat 0 0; background-size:114px 46px}
+
+.area06_05 .tabRagion li.on a {background-color:#b50665}
+.area06_05 .tabSmall li.on a {color:#b50665;border:1px solid #b50665}
+.area06_05 .travelTab .txtBtmBox {background-color:#b50665;border-bottom:1px solid #8a044c}
+.area06_05 .travelTab .txtBtmBox .btnPlus {background-color:#8a044c}
+.area06_05 .stit_sp {background-color:#b50665}
+.area06_05 .tit_sp span {color:#b50665}
+.area06_05 .travelTab .txtBtmBox:after {width:69px; height:70px;background:url(http://image1.hanatour.com/mobile/common/expo2016/images/sub/bg_txtbtmbox_13.png) no-repeat 0 0; background-size:69px 70px}
+
+/* 지역관 이미지 크롭 */
+.area01_01 li span.img,.area01_02 li span.img,.area01_03 li span.img,.area01_04 li span.img,.area01_05 li span.img,.area01_06 li span.img,.area01_07 li span.img,.area02_01 li span.img,.area02_02 li span.img,.area02_03 li span.img,.area02_04 li span.img,.area02_05 li span.img,.area03_01 li span.img,.area03_02 li span.img,.area03_03 li span.img,.area03_04 li span.img,.area03_05 li span.img,.area04_01 li span.img,.area04_02 li span.img,.area04_03 li span.img,.area04_04 li span.img,.area05_01 li span.img,.area05_02 li span.img,.area05_03 li span.img,.area05_04 li span.img,.area06_01 li span.img,.area06_02 li span.img,.area06_03 li span.img,.area06_04 li span.img,.area06_05 li span.img,.freeProd li span.img,.specialPrice li span.img,.themeCommon li span.img {height:145px;overflow:hidden}
+@media all and (min-width:375px) { /* 아이폰6 */
+.area01_01 li span.img,.area01_02 li span.img,.area01_03 li span.img,.area01_04 li span.img,.area01_05 li span.img,.area01_06 li span.img,.area01_07 li span.img,.area02_01 li span.img,.area02_02 li span.img,.area02_03 li span.img,.area02_04 li span.img,.area02_05 li span.img,.area03_01 li span.img,.area03_02 li span.img,.area03_03 li span.img,.area03_04 li span.img,.area03_05 li span.img,.area04_01 li span.img,.area04_02 li span.img,.area04_03 li span.img,.area04_04 li span.img,.area05_01 li span.img,.area05_02 li span.img,.area05_03 li span.img,.area05_04 li span.img,.area06_01 li span.img,.area06_02 li span.img,.area06_03 li span.img,.area06_04 li span.img,.area06_05 li span.img,.freeProd li span.img,.specialPrice li span.img,.themeCommon li span.img {height:175px;overflow:hidden}
+}
+@media all and (min-width:414px) { /* 아이폰6 plus */
+.area01_01 li span.img,.area01_02 li span.img,.area01_03 li span.img,.area01_04 li span.img,.area01_05 li span.img,.area01_06 li span.img,.area01_07 li span.img,.area02_01 li span.img,.area02_02 li span.img,.area02_03 li span.img,.area02_04 li span.img,.area02_05 li span.img,.area03_01 li span.img,.area03_02 li span.img,.area03_03 li span.img,.area03_04 li span.img,.area03_05 li span.img,.area04_01 li span.img,.area04_02 li span.img,.area04_03 li span.img,.area04_04 li span.img,.area05_01 li span.img,.area05_02 li span.img,.area05_03 li span.img,.area05_04 li span.img,.area06_01 li span.img,.area06_02 li span.img,.area06_03 li span.img,.area06_04 li span.img,.area06_05 li span.img,.freeProd li span.img,.specialPrice li span.img,.themeCommon li span.img {height:195px;overflow:hidden}
+}
+
+/* 세로값 고정 배너 */
+.mainBanner.fixed {text-align:center; margin-top:25px}
+.mainBanner.fixed img {width:auto;height:107px}
+.mainBanner.fixed .swiper-container-horizontal>.swiper-pagination {width:auto; right:0; left:inherit}
+
+.popReserve01 h3.popEvType {background-color:inherit; position:relative; height:auto; padding:0; font-size:inherit}
+.popReserve01 h3.popEvType img {width:100%}
+.popEventCont {background-color:#fff; padding:0 20px 20px}
+.popEventCont dt {font-size:1.3rem; color:#333; margin:20px 0 10px; font-weight:bold}
+.popEventCont dd {font-size:1.3rem; color:#666;}
+.popEventCont dd .eventPopList01 {}
+.popEventCont dd .eventPopList01 li {padding-left:8px; position:relative;font-size:1.3rem; color:#666;}
+.popEventCont dd .eventPopList01 li+li {margin-top:6px}
+.popEventCont dd .eventPopList01 li:before {content:'';width:2px; height:2px; background-color:#666; position:absolute;left:0;top:6px;}
+.popEventCont dd .eventPopList02 {margin-top:15px}
+.popEventCont dd .eventPopList02 li {font-size:1.2rem; color:#888;}
+.popEventCont dd .eventPopList02 li+li {margin-top:6px}
+.popEventBtn { background-color:#fff; text-align:center; padding-bottom:40px}
+.popEventBtn a {color:#fff; background-color:#e85581; display:inline-block; padding:12px 40px; margin:0 auto; font-weight:bold; border-radius:3px}

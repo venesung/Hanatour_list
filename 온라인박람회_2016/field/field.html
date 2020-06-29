@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>현장예약 - 온라인박람회 - 하나투어</title>
+<style type="text/css">
+body,form,div,p,h1,h2,h3,h4,h5,h6,dl,dt,dd,ul,ol,li,fieldset,input,textarea,blockquote,th,td {margin:0;padding:0;-webkit-text-size-adjust:none; font-family:'DroidSansFallback','Apple Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;color:#252525;letter-spacing:-1px;}
+table {border-spacing:0;border-collapse:collapse;width:100%}
+table caption {font-size:0;line-height:0;width:0;height:0;visibility:hidden;text-indent:-9999px}
+em,cite,address,dfn,var {font-style:normal}
+dl,ul,ol{list-style:none}
+img {border:0; vertical-align:top}
+input, select {vertical-align:middle;-webkit-appearance:none;border-radius:0;}
+a {text-decoration:none;color:#333}
+html {font-size:10px}
+@media all and (min-width:375px) { /* 아이폰6 */
+html {font-size:11.5px}
+}
+@media all and (min-width:414px) { /* 아이폰6 plus */
+html {font-size:12px}
+}
+
+body {width:100%;-webkit-text-size-adjust:none;text-size-adjust: none; font-size:1.4rem; overflow:hidden; overflow-y:scroll; background-color:fff}
+#wrap {position:relative}
+header.commonHead {position:fixed;left:0;top:0;width: 100%;z-index:200;background:#fff; overflow:hidden;}
+header.commonHead h1 {position:relative;text-align:center; height:48px; border-bottom:1px solid #e0e0e0}
+header.commonHead h1 span {display:inline-block;padding:8px 15px 7px;height:48px; box-sizing:border-box}
+header.commonHead h1 img{height:34px}
+header.commonHead h1.subMain {}
+header.commonHead h1.subMain a {font-size:20px; color:#f3474d}
+header.commonHead h1.subMain a span {display:inline-block; padding:5px 0 0 8px;}
+header.commonHead > a {position:absolute;top:0; z-index:50}
+header.commonHead .shared {right:0;padding:14px 12px}
+header.commonHead .shared img {height:20px}
+.btnRed {display:block; background-color:#c83d67; border:1px solid #c83d67; border-bottom:1px solid #838487; text-align:center; font-size:1.7rem; color:#fff; padding:11px 0; border-radius:3px;font-weight:bold;}
+.btnRed.marTy {margin:12px}
+footer {background-color:#171717; padding:20px 0;text-align:center}
+footer address {font-size:1.1rem;color:#fff;padding:0 8px;line-height:19px;letter-spacing:-0.10em}
+footer address a {text-decoration:underline;color:#fff}
+footer p {color:#808080;font-size:1.1rem;padding-top:20px;line-height:17px}
+footer p span {font-size:1.0rem; display:block;margin-top:20px}
+footer b {font-size:0.95rem; display:block; font-weight:normal}
+footer b em {color:#fff}
+.fieldSect {margin-top:49px}
+.fieldTop {background:url(http://image1.hanatour.com/mobile/common/expo2016/field/bg_fieldtop.jpg) no-repeat 0 0; background-size:100% 100%; padding:35px 0; text-align:center}
+.fieldTop h2 img {height:40px}
+.fieldTop p {color:#fff;font-size:1.2rem;margin-top:8px}
+.tabBase {overflow:hidden; margin-bottom:7px}
+.tabBase li {float:left;width:50%}
+.tabBase li a {display:block;background-color:#404444; color:#fff; text-align:center; font-size:1.6rem; font-weight:bold; padding:15px 0}
+.tabBase li.on a {background-color:#f3474d}
+.dayBox {text-align:left}
+.dayBox p {color:#0d8b9e;font-weight:bold; margin-top:25px; font-size:1.3rem;letter-spacing:-0.07em}
+.dayBox p+p {margin-top:5px}
+.dayBox p strong {display:inline-block; color:#fff; font-size:1.0rem; background-color:#0d8b9e; font-weight:normal; border-radius:2px; padding:2px 5px;vertical-align:top; margin-right:6px;width:72px; text-align:center;letter-spacing:-0.1em}
+.seoulCont01 {text-align:center; padding:25px 12px 0; background-color:#fff; background-image:url(http://image1.hanatour.com/mobile/common/expo2016/field/ico_seoulcont01_01.png),url(http://image1.hanatour.com/mobile/common/expo2016/field/ico_seoulcont01_02.png); background-position:right top, left bottom; background-repeat:no-repeat; background-size:65px 98px, 38px 128px; border-top:1px solid #ccc;border-bottom:1px solid #ccc; margin-bottom:7px}
+.seoulCont01 h3 {font-size:1.6rem; color:#252525; margin-bottom:10px}
+.seoulCont01 .txt_t {font-size:1.2rem;color:#888}
+.seoulCont01 .txt_b {font-size:1.1rem;color:#888; margin:15px 0}
+.seoulCont01 img {width:100%}
+.seoulCont02 {text-align:center; padding:25px 12px 30px; background-color:#dcedf0; background-image:url(http://image1.hanatour.com/mobile/common/expo2016/field/ico_seoulcont02_01.png),url(http://image1.hanatour.com/mobile/common/expo2016/field/ico_seoulcont02_02.png); background-position:left top, right top; background-repeat:no-repeat; background-size:80px 152px, 46px 72px; border-top:1px solid #ccc;border-bottom:1px solid #ccc; margin-bottom:7px}
+.seoulCont02 em {font-size:1.2rem; color:#888}
+.seoulCont02 h3 {font-size:1.6rem; margin:4px 0 18px}
+.seoulCont02 h3 span {color:#158191}
+.seoulCont02 > span {display:block; margin:0 -12px 20px}
+.seoulCont02 > span img {width:100%; max-width:400px}
+.seoulCont02 ul {text-align:left}
+.seoulCont02 ul li {font-size:1.2rem; color:#888; position:relative; padding-left:8px}
+.seoulCont02 ul li+li {margin-top:10px}
+.seoulCont02 ul li:before {content:'';width:2px; height:2px; background-color:#888; position:absolute;left:0;top:6px; border-radius:50%}
+.seoulCont03 {text-align:center; padding:25px 12px 30px; background-color:#fff; background-image:url(http://image1.hanatour.com/mobile/common/expo2016/field/bg_seoulcont03_01.png),url(http://image1.hanatour.com/mobile/common/expo2016/field/bg_seoulcont03_02.png); background-position:left top, right top; background-repeat:no-repeat; background-size:66px 128px, 93px 86px; border-top:1px solid #ccc;border-bottom:1px solid #ccc; margin-bottom:7px}
+@media all and (min-width:375px) { /* 아이폰6 */
+.seoulCont03 {padding-top:20px}
+}
+.seoulCont03 em {font-size:1.2rem; color:#888}
+.seoulCont03 h3 {font-size:1.6rem; margin:4px 0 18px}
+.seoulCont03 ul {}
+.seoulCont03 ul li {border:1px solid #000; display:table;width:100%; min-height:88px; background-color:#fff}
+.seoulCont03 ul li+li {margin-top:5px}
+.seoulCont03 ul li strong {display:table-cell;width:100px; vertical-align:middle; font-size:1.3rem}
+.seoulCont03 ul li strong span {display:block; margin-bottom:5px}
+.seoulCont03 ul li strong img {width:60px}
+.seoulCont03 ul li p {display:table-cell;width:auto; padding:15px 0; text-align:left; line-height:1.9rem; font-size:1.3rem; vertical-align:middle} 
+.seoulCont03 > p {font-size:1.2rem; color:#888; margin-top:15px; text-align:left}
+.btmBtn {margin:15px 12px 20px}
+.koreaMap {text-align:center; padding:25px 12px 40px;background:url(http://image1.hanatour.com/mobile/common/expo2016/field/bg_koreamap.png) no-repeat 0 0;background-size:100% 100%; border-top:1px solid #ccc;border-bottom:1px solid #ccc; margin-bottom:7px}
+.koreaMap h3 {font-size:1.6rem}
+.koreaMap p {font-size:1.2rem;color:#888; margin:8px 0 25px}
+.koreaMap img {width:100%}
+</style>
+<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('.fieldTab').on('click', 'ul > li > a', function (e) {
+			var target = $(e.currentTarget);
+			var li = target.closest('li');
+			var idx = li.index();
+			var content = $('.tabCont');
+
+			li.addClass('on').siblings().removeClass('on');
+			content.hide().eq(idx).show();
+		});
+	});
+</script>
+
+</head>
+
+<body>
+
+<div id="wrap">
+	
+	<header class="commonHead"><!-- 공통 헤더 -->
+		<h1><span><img src="http://image1.hanatour.com/mobile/common/expo2016/field/btn_head_logo.png" alt="하나투어 온라인여행박람회"></span></h1>
+	</header>
+	
+	<div class="fieldSect">
+		<div class="fieldTop">
+			<h2><img src="http://image1.hanatour.com/mobile/common/expo2016/field/tit_fieldtop.png" alt="현장 예약상담관"></h2>
+			<p>온라인이 낯선 분들에게 추천합니다.<br> 서울 중앙 예약상담관이나 집에서 가까운 하나투어 대리점에서<br> 당신과 찰떡궁합 여행을 만나실 수 있습니다.</p>
+		</div>
+		
+		<!-- 탭 -->
+		<div class="tabContSect fieldTab">
+			<ul class="tabBase">
+				<li class="on"><a href="#">서울중앙</a></li>
+				<li><a href="#">전국 대리점</a></li>
+			</ul>
+			
+			<!-- 서울중앙 -->
+			<div class="tabCont">
+				<!-- 서울 중앙 예약상담 -->
+				<div class="seoulCont01">
+					<h3>서울 중앙 예약 상담</h3>
+					<p class="txt_t">온라인 예약 특전은 기본<br>현장 단독 이벤트&amp;특전 혜택 챙겨가세요!</p>
+					
+					<div class="dayBox">
+						<p><strong>일시</strong>2016. 11. 22 (화) ~ 11. 27 (일)</p>
+						<p><strong>시간</strong>10:00 ~ 18:00</p>
+						<p><strong>장소</strong>티마크 그랜드호텔 명동 3층</p>
+						<p><strong>상담 가능 상품</strong>해외 패키지/골프/허니문/크루즈 및 국내 상품</p>
+					</div>
+					
+					<p class="txt_b">※ 항공권, 호텔, 현지패스/입장권 예약 상담은 진행하지 않습니다.<br>반드시 사전 확인 후 방문 신청해 주시기 바랍니다.</p>
+					<span><img src="http://image1.hanatour.com/mobile/common/expo2016/field/img_seoulcont01.png" alt=""></span>
+				</div>
+				<!-- // 서울 중앙 예약상담 -->
+				
+				<!-- 이벤트 -->
+				<div class="seoulCont02">
+					<em>현장 단독 경품 이벤트</em>
+					<h3><span>100% 당첨</span> 행운의 럭키 드로우!</h3>
+					
+					<span><img src="http://image1.hanatour.com/mobile/common/expo2016/field/img_seoulcont02.png" alt=""></span>
+					
+					<ul>
+						<li>모든 경품은 예약상담관 현장에서 당첨 여부에 따라 지급됩니다.</li>
+						<li>당첨 후, 경품 미사용 의사를 밝히실 경우 대체 경품 지급이 불가합니다.</li>
+						<li>호텔 숙박권 유효기간은 2017년 2월까지입니다.<br>(12.23, 12.24, 12.30, 12.31 제외)</li>
+						<li>객실 상황에 따라 투숙 희망일에 예약이 어려울 수도 있습니다.</li>
+						<li>이벤트는 1인 1회에 한해 참여 가능합니다.</li>
+						<li>이벤트 내용은 당사 사정에 따라 고지 없이 변경될 수 있습니다.</li>
+						<li>이벤트는 경품 소진 시 조기 마감될 수 있습니다.</li>
+					</ul>
+				</div>
+				<!-- // 이벤트 -->
+				
+				<!-- 특전 -->
+				<div class="seoulCont03">
+					<em>현장 예약 특별혜택</em>
+					<h3>가득~챙겨드리는 특전</h3>
+					
+					<ul>
+						<li>
+							<strong><span><img src="http://image1.hanatour.com/mobile/common/expo2016/field/ico_seoulcont03_01.png" alt=""></span>동남아</strong>
+							<p>SM면세점 3만원 모바일 쿠폰<br>5만원 백화점 상품권<br>라텍스 목베개<br>지역특산품/기념품증정<br>스냅촬영 포함</p>
+						</li>
+						<li>
+							<strong><span><img src="http://image1.hanatour.com/mobile/common/expo2016/field/ico_seoulcont03_02.png" alt=""></span>중국</strong>
+							<p>과일바구니<br>라텍스 목베개<br>선택관광 포함<br>마사지 포함 (발or전신)</p>
+						</li>
+						<li>
+							<strong><span><img src="http://image1.hanatour.com/mobile/common/expo2016/field/ico_seoulcont03_03.png" alt=""></span>일본</strong>
+							<p>객실업그레이드<br>객실 부대시설 이용권 (스파, 실내수영장)<br>화과자 or 먹거리 쿠폰 제공</p>
+						</li>
+						<li>
+							<strong><span><img src="http://image1.hanatour.com/mobile/common/expo2016/field/ico_seoulcont03_04.png" alt=""></span>남태평양</strong>
+							<p>T-갤러리아 상품권 20불<br>$30 상당의 트래블 머니<br>지역특산품 증정</p>
+						</li>
+						<li>
+							<strong><span><img src="http://image1.hanatour.com/mobile/common/expo2016/field/ico_seoulcont03_05.png" alt=""></span>미주/중남미</strong>
+							<p>와인 1병<br>선택관광/일정 포함</p>
+						</li>
+						<li>
+							<strong><span><img src="http://image1.hanatour.com/mobile/common/expo2016/field/ico_seoulcont03_06.png" alt=""></span>유럽</strong>
+							<p>스타벅스 상품권 1만원권 제공<br>선택관광 포함</p>
+						</li>
+					</ul>
+					<p>※ 지역별/상품별/출발도시별 제공내역이 상이하므로, 자세한 내용은 현장방문 후 상담원에게 문의해주세요.</p>
+				</div>
+				<!-- // 특전 -->
+				
+				<div class="btmBtn">
+					<a href="https://form.office.naver.com/form/responseView.cmd?formkey=NGIyNDVkNDYtOWE1MC00MWQzLTlkMzMtOWUzYzEzZmQyYTg0&sourceId=editor" target="_blank" title="새창" class="btnRed">무료 방문상담 신청하기</a>
+				</div>
+			</div>
+			<!-- // 서울중앙 -->
+			
+			<!-- 전국 대리점 -->
+			<div class="tabCont" style="display:none">
+				<!-- 전국 대리점 예약상담 -->
+				<div class="seoulCont01">
+					<h3>전국 대리점 예약 상담</h3>
+					<p class="txt_t">집에서도 멀리 가지 않고도<br>완벽하게 준비하는 올 겨울 여행!</p>
+					
+					<div class="dayBox">
+						<p><strong>일시</strong>2016. 11. 07 (화) ~ 11. 27 (일) 3주간</p>
+						<p><strong>장소</strong>전국 하나투어 전문 판매점</p>
+						<p><strong>상담 가능 상품</strong>해외 패키지/골프/허니문/크루즈 및 국내 상품</p>
+					</div>
+					
+					<p class="txt_b">※ 항공권, 호텔, 현지패스/입장권 예약 상담은 진행하지 않습니다.<br>상담 가능 시간은 대리점 별 상이합니다.<br>반드시 사전 확인 후 방문 신청해 주시기 바랍니다.</p>
+					<span><img src="http://image1.hanatour.com/mobile/common/expo2016/field/img_seoulcont01_02.png" alt=""></span>
+				</div>
+				<!-- // 전국 대리점 예약상담 -->
+				
+				<div class="koreaMap">
+					<h3>전국 대리점 예약 상담</h3>
+					<p>집에서도 멀리 가지 않고도<br>완벽하게 준비하는 올 겨울 여행!</p>
+					
+					<span><img src="http://image1.hanatour.com/mobile/common/expo2016/field/img_map.png" alt=""></span>
+				</div>
+			</div>
+			<!-- // 전국 대리점 -->
+		</div>
+		<!-- // 탭 -->
+	</div>
+	
+	
+	<!-- 푸터 -->
+	<footer>
+		<address>
+			(주)하나투어 | 대표 : 김진국 | 주소 : 서울특별시 종로구 인사동 5길 41<br>
+			고객센터 : 1577-1233 | 팩스 : 02-734-0392 <br>
+			개인정보관리 책임자 : 박성재 | 사업자 등록번호 : 102-81-39440<br>
+			통신판매업신고번호 : 종로 01-1806호 | <a href="#" target="_blank" title="새창">사업자정보확인</a><br>
+			관광사업자 등록번호 : 제1993-000006호 | 영업보증보험 : 22억1천만원 가입
+		</address>
+		<p>
+			부득이한 사정에 의해 여행일정이 변경되는 경우<br> 여행자의 사전 동의를 받습니다.
+			<b>이제작물은 아모레퍼시픽의 <em>아리따글꼴</em>과 <em>한수원글꼴</em>을 사용하여 디자인 되었습니다.</b>
+			<span>COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED</span>
+		</p>
+	</footer>
+	<!-- // 푸터 -->
+	
+</div>
+
+
+</body>
+</html>
+

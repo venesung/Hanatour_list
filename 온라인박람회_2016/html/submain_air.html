@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>항공관 - 온라인박람회 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<script type="text/javascript" src="../js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="../js/swiper.min.js"></script>
+<script type="text/javascript" src="../js/m.expo_1611.js"></script>
+</head>
+<body>
+
+<div id="wrap">
+	<header class="commonHead"><!-- 공통 헤더 -->
+		<a href="#" class="allMenu"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/btn_head_all.png" alt="전체메뉴보기"></a>
+		<h1><a href="#"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/btn_head_logo.png" alt="하나투어 온라인여행박람회"></a></h1>
+		<a href="#" class="shared"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/btn_head_shared.png" alt="공유하기"></a>
+		
+		<nav class="navDep">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide on"><a href="#">홈</a></div><!-- 선택시 class="on" -->
+					<div class="swiper-slide"><a href="#">지역관</a></div>
+					<div class="swiper-slide"><a href="#">테마관</a></div>
+					<div class="swiper-slide"><a href="#">자유여행관</a></div>
+					<div class="swiper-slide"><a href="#">항공관</a></div>
+					<div class="swiper-slide"><a href="#">호텔관</a></div>
+					<div class="swiper-slide"><a href="#">추천여행지</a></div>
+					<div class="swiper-slide"><a href="#">트래블TV</a></div>
+					<div class="swiper-slide"><a href="#">이벤트</a></div>
+					<div class="swiper-slide"><a href="#">박람회소개</a></div>
+				</div>
+			</div>
+			<a href="#" class="btn_navAll" title="전체메뉴보기"></a><!-- 열릴시 class="on" 추가 -->
+		</nav>
+		
+		<!-- 전체메뉴 -->
+		<div class="allDepBox" style="display:none">
+			<ul class="navAllDep">
+				<li class="on"><a href="#">홈</a></li><!-- 해당 관일시 class="on" 추가 -->
+				<li><a href="#">지역관</a></li>
+				<li><a href="#">테마관</a></li>
+				<li><a href="#">자유여행관</a></li>
+				<li><a href="#">항공관</a></li>
+				<li><a href="#">호텔관</a></li>
+				<li><a href="#">추천여행지</a></li>
+				<li><a href="#">트래블TV</a></li>
+				<li><a href="#">이벤트</a></li>
+				<li><a href="#">박람회소개</a></li>
+			</ul>
+		</div>
+		<!-- 전체메뉴 -->
+	</header>
+	
+	<!-- 컨텐츠 영역 -->
+	<section id="container">
+		
+		<div class="subMain_air">
+			<div class="airTop">
+				<h2><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/tit_submain_air.png" alt="항공관"></h2>
+				<p>지금 당신이 꿈꾸는 그 곳은 어디인가요?</p>
+				<a href="#" target="_blank" title="새창">항공기획전 보러가기</a>
+			</div>
+			
+			<!-- 오늘만 특가 -->
+			<div class="todayPrice">
+				<h3><span>딱 3주동안 매일매일 터지는</span>알짜항공권 오늘만 특가</h3>
+				
+				<div class="todaySwiperCont">
+					<ul>
+						<li class="on"><a href="#">월</a></li><!-- 선택시 class="on" -->
+						<li class=""><a href="#">화</a></li>
+						<li class=""><a href="#">수</a></li>
+						<li class=""><a href="#">목</a></li>
+						<li class=""><a href="#">금</a></li>
+					</ul>
+					
+					<!-- 스와이프 :: 양쪽여백 12px / 양 옆 컨텐츠 8px 보임 -->
+					<div class="swiper-container">				
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><!-- 월요일 -->
+								<div class="todayCont"><!--  해당요일 마감일경우 class "end", 이전요일 마감 class "p_end", 커밍순 class "coming" 추가하면 해당라벨 노출됨 -->
+									<span class="img"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_todaycont01.jpg" alt=""></span>
+									<a href="#" class="inAbsol">
+										<div>
+											<strong class="day01">2016.11.07 (월)</strong>
+											<span>마카오</span>
+											<b>249,000원</b>
+											<em>129,000<span> 원~</span></em>
+										</div>
+									</a>
+									<div class="label end"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_today_swipe_end.png" alt=""></div><!-- 마감라벨 -->
+									<div class="label p_end"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_today_swipe_pass.jpg" alt=""><span>2016.11.08 목요일<strong>마감되었습니다</strong></span></div><!-- 이전요일마감라벨 -->
+									<div class="label coming"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_today_swipe_coming.jpg" alt=""><span>2016.11.10 목요일<strong>COMING SOON!</strong></span></div><!-- 커밍순라벨 -->
+								</div>
+							</div>
+							<div class="swiper-slide"><!-- 화요일 -->
+								<div class="todayCont"><!--  해당요일 마감일경우 class "end", 이전요일 마감 class "p_end", 커밍순 class "coming" 추가하면 해당라벨 노출됨 -->
+									<span class="img"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_todaycont02.jpg" alt=""></span>
+									<a href="#" class="inAbsol">
+										<div>
+											<strong class="day02">2016.11.08 (화)</strong>
+											<span>도쿄(나리타)</span>
+											<b>299,000원</b>
+											<em>199,000<span> 원~</span></em>
+										</div>
+									</a>
+									<div class="label end"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_today_swipe_end.png" alt=""></div><!-- 마감라벨 -->
+									<div class="label p_end"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_today_swipe_pass.jpg" alt=""><span>2016.11.08 목요일<strong>마감되었습니다</strong></span></div><!-- 이전요일마감라벨 -->
+									<div class="label coming"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_today_swipe_coming.jpg" alt=""><span>2016.11.10 목요일<strong>COMING SOON!</strong></span></div><!-- 커밍순라벨 -->
+								</div>
+							</div>
+							<div class="swiper-slide"><!-- 수요일 -->
+								<div class="todayCont"><!-- 해당요일 마감일경우 class "end", 이전요일 마감 class "p_end", 커밍순 class "coming" 추가하면 해당라벨 노출됨 -->
+									<span class="img"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_todaycont03.jpg" alt=""></span>
+									<a href="#" class="inAbsol">
+										<div>
+											<strong class="day03">2016.11.09 (수)</strong>
+											<span>보라카이</span>
+											<b>299,000원</b>
+											<em>159,000<span> 원~</span></em>
+										</div>
+									</a>
+									<div class="label end"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_today_swipe_end.png" alt=""></div><!-- 마감라벨 -->
+									<div class="label p_end"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_today_swipe_pass.jpg" alt=""><span>2016.11.08 목요일<strong>마감되었습니다</strong></span></div><!-- 이전요일마감라벨 -->
+									<div class="label coming"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_today_swipe_coming.jpg" alt=""><span>2016.11.10 목요일<strong>COMING SOON!</strong></span></div><!-- 커밍순라벨 -->
+								</div>
+							</div>
+							<div class="swiper-slide"><!-- 목요일 -->
+								<div class="todayCont"><!--  해당요일 마감일경우 class "end", 이전요일 마감 class "p_end", 커밍순 class "coming" 추가하면 해당라벨 노출됨 -->
+									<span class="img"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_todaycont04.jpg" alt=""></span>
+									<a href="#" class="inAbsol">
+										<div>
+											<strong class="day04">2016.11.10 (목)</strong>
+											<span>방콕</span>
+											<b>354,000원</b>
+											<em>179,000<span> 원~</span></em>
+										</div>
+									</a>
+									<div class="label end"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_today_swipe_end.png" alt=""></div><!-- 마감라벨 -->
+									<div class="label p_end"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_today_swipe_pass.jpg" alt=""><span>2016.11.08 목요일<strong>마감되었습니다</strong></span></div><!-- 이전요일마감라벨 -->
+									<div class="label coming"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_today_swipe_coming.jpg" alt=""><span>2016.11.10 목요일<strong>COMING SOON!</strong></span></div><!-- 커밍순라벨 -->
+								</div>
+							</div>
+							<div class="swiper-slide"><!-- 금요일 -->
+								<div class="todayCont"><!--  해당요일 마감일경우 class "end", 이전요일 마감 class "p_end", 커밍순 class "coming" 추가하면 해당라벨 노출됨 -->
+									<span class="img"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_todaycont05.jpg" alt=""></span>
+									<a href="#" class="inAbsol">
+										<div>
+											<strong class="day05">2016.11.11 (금)</strong>
+											<span>하와이(호놀룰루)</span>
+											<b>779,000원</b>
+											<em>549,000<span> 원~</span></em>
+										</div>
+									</a>
+									<div class="label end"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_today_swipe_end.png" alt=""></div><!-- 마감라벨 -->
+									<div class="label p_end"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_today_swipe_pass.jpg" alt=""><span>2016.11.08 목요일<strong>마감되었습니다</strong></span></div><!-- 이전요일마감라벨 -->
+									<div class="label coming"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_today_swipe_coming.jpg" alt=""><span>2016.11.10 목요일<strong>COMING SOON!</strong></span></div><!-- 커밍순라벨 -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- // 스와이프 -->
+				</div>
+				
+				<ul class="txtList">
+					<li>※ 11월 7일부터 11월 25일까지 3주간 평일 <strong class="c_red">오전 11시</strong> 업데이트 됩니다.</li>
+					<li>※ 좌석은 선착순 한정으로 조기 마감 될 수 있습니다.</li>
+				</ul>
+			</div>
+			<!-- // 오늘만 특가 -->
+			
+			
+			<!-- 선물을 쏜다! -->
+			<div class="airGiftBox">
+				<h3><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/tit_air_gift.png" alt=""></h3>
+				<p>박람회기간동안 하나투어에서 항공권을 구매하신 고객님 중 추첨을 통해 무료항공권과 경품을 드립니다.</p>
+				<span class="full_img"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_air_gift.png" alt=""></span>
+				<dl>
+					<dt>발표일 : 2016년 12월 16일</dt>
+					<dd>※ 발표방법 : 하나투어항공 게시판 내 공지</dd>
+					<dd>※ 5만원이 넘는 경품 당첨 시 제세공과금 22%는 본인 부담입니다.</dd>
+				</dl>
+			</div>
+			<!-- // 선물을 쏜다! -->
+			
+			<!-- 추천항공사 -->
+			<div class="bestAirCom">
+				<h3><span>온라인박람회에서만 만나는 특별한 가격</span>하나투어항공 추천 항공사</h3>
+				
+				<!-- 스와이프 :: 좌측여백 12px // 간격 10px -->
+				<div class="swiper-container">				
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="#" class="bgAir01">
+								<span class="img_logo"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_bestair_logo12.png" alt=""></span>
+								<strong>필리핀항공</strong>
+								<p>당신의 모든 여행을<br>더욱 안전하고 정확하게</p>
+								<em>전 노선<br>항공권 특가!</em>
+								<span class="img_tail"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_bestair_tail12.png" alt=""></span>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="bgAir02">
+								<span class="img_logo"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_bestair_logo02.png" alt=""></span>
+								<strong>아시아나항공</strong>
+								<p>당신의 모든 여행을<br>더욱 안전하고 정확하게</p>
+								<em>전 노선<br>항공권 특가!</em>
+								<span class="img_tail"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_bestair_tail02.png" alt=""></span>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="bgAir03">
+								<span class="img_logo"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_bestair_logo03.png" alt=""></span>
+								<strong>터키항공</strong>
+								<p>당신의 모든 여행을<br>더욱 안전하고 정확하게</p>
+								<em>유럽<br>항공권 특가!</em>
+								<span class="img_tail"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_bestair_tail03.png" alt=""></span>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="bgAir04">
+								<span class="img_logo"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_bestair_logo05.png" alt=""></span>
+								<strong>아메리칸항공</strong>
+								<p>당신의 모든 여행을<br>더욱 안전하고 정확하게</p>
+								<em>미주/중남미<br>항공권 특가!</em>
+								<span class="img_tail"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_bestair_tail05.png" alt=""></span>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="bgAir05">
+								<span class="img_logo"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_bestair_logo10.png" alt=""></span>
+								<strong>유나이티드항공</strong>
+								<p>당신의 모든 여행을<br>더욱 안전하고 정확하게</p>
+								<em>미주<br>항공권 특가!</em>
+								<span class="img_tail"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_bestair_tail10.png" alt=""></span>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="bgAir06">
+								<span class="img_logo"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_bestair_logo08.png" alt=""></span>
+								<strong>하와이안항공</strong>
+								<p>당신의 모든 여행을<br>더욱 안전하고 정확하게</p>
+								<em>미주<br>항공권 특가!</em>
+								<span class="img_tail"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_bestair_tail08.png" alt=""></span>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="bgAir07">
+								<span class="img_logo"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_bestair_logo11.png" alt=""></span>
+								<strong>루프트한자 독일항공</strong>
+								<p>당신의 모든 여행을<br>더욱 안전하고 정확하게</p>
+								<em>유럽<br>항공권 특가!</em>
+								<span class="img_tail"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_bestair_tail11.png" alt=""></span>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="bgAir08">
+								<span class="img_logo"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_bestair_logo04.png" alt=""></span>
+								<strong>에미레이트항공</strong>
+								<p>당신의 모든 여행을<br>더욱 안전하고 정확하게</p>
+								<em>유럽/중동<br>항공권 특가!</em>
+								<span class="img_tail"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_bestair_tail04.png" alt=""></span>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="bgAir09">
+								<span class="img_logo"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_bestair_logo07.png" alt=""></span>
+								<strong>에티하드항공</strong>
+								<p>당신의 모든 여행을<br>더욱 안전하고 정확하게</p>
+								<em>유럽/중동/남미<br>항공권 특가!</em>
+								<span class="img_tail"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_bestair_tail07.png" alt=""></span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- // 스와이프 -->
+			</div>
+			<!-- // 추천항공사 -->
+			
+			
+			<!-- 카드 할인 안내 -->
+			<div class="cardSaleBox">
+				<h3>카드 할인 안내</h3>
+				
+				<ul>
+					<li>
+						<span><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_air_cardsale01.png" alt=""></span>
+						<strong>현대카드</strong>
+						<!--p>하나투어에서 항공권<br>구입시 최대 15% 추가 할인</p-->
+						<a href="#">혜택 자세히 보기</a>
+					</li>
+					<li>
+						<span><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_air_cardsale02.png" alt=""></span>
+						<strong>삼성카드</strong>
+						<!--p>하나투어에서 항공권<br>구입시 최대 15% 추가 할인</p-->
+						<a href="#">혜택 자세히 보기</a>
+					</li>
+				</ul>
+			</div>
+			<!-- // 카드 할인 안내 -->
+			
+			<!-- 문자보내기영역 -->
+			<div class="airSmsBox">
+				<h3>항공권도 역시<strong>하나면 돼!</strong></h3>
+				<p>하나투어 항공 앱으로 예약하면<br>하나투어마일리지 <span>1,000 추가적립!</span></p>
+				<span><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_air_sms.png" alt="해외호텔 10% 할인쿠폰, SM면세점 특별혜택, 하나투어항공 모바일앱 혜택"></span>
+				
+				<div class="smsWriteCont">
+					<p>입력하신 번호는 저장되지 않고, 전송은 무료입니다.</p>
+					<div class="telBox">
+						<input type="tel" title="연락처입력" placeholder="연락처를 입력해주세요">
+						<a href="#">문자 보내기</a>
+					</div>
+					<div class="chBox">
+						<label><input type="checkbox">개인정보 수집/이용동의<a href="#">전문보기</a></label>
+					</div>
+				</div>
+			</div>
+			<!-- 문자보내기영역 -->
+			
+			<!-- 나만의 자유여행 만들기 -->
+			<div class="myFreeAir">
+				<h3>몇일이든, 어딜가든, 어디서든, 무얼하든<strong>나만의 자유여행 만들기</strong></h3>
+				
+				<span><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_myfreeair.png" alt="항공+호텔 최대 30%할인"></span>
+				<a href="#">자유여행 만들기</a>
+			</div>
+			<!-- // 나만의 자유여행 만들기 -->
+		</div>
+		
+		<!-- 국내 배너 -->
+		<div class="commonBanner02">
+			<a href="#"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_banner50_korea01.jpg" alt=""></a>
+			<a href="#"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_banner50_korea02.jpg" alt=""></a>
+		</div>
+		<!-- // 국내 배너 -->
+		
+		<!-- 스와이프 배너 -->
+		<div class="swipCommBanner">
+			<div class="swiper-container">				
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="#"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/img_banner50_01.jpg" alt="SM DUTY FREE - 최저가 300% 보상제 하나투어 고객 최고 우대 SM면세점 찬스를 누리세요"></a>
+						<a href="#"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/img_banner50_02.jpg" alt="ZEUS - 세상에 단 하나 뿐인 당신만을 위한 여행 최고의 럭셔리 여행브랜드"></a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/img_banner50_03.jpg" alt=""></a>
+						<a href="#"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/img_banner50_04.jpg" alt=""></a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/img_banner50_05.jpg" alt=""></a>
+						<a href="#"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/img_banner50_06.jpg" alt=""></a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/img_banner50_07.jpg" alt=""></a>
+						<a href="#"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/img_banner50_08.jpg" alt=""></a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/img_banner50_09.jpg" alt=""></a>
+						<a href="#"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/img_banner50_10.jpg" alt=""></a>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+		<!-- // 스와이프 배너 -->
+		
+		<!-- 협찬사 -->
+		<div class="sponsorship">
+			<div class="swiper-container">				
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_sponsorship01.png" alt=""></div>
+					<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_sponsorship02.png" alt=""></div>
+					<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_sponsorship03.png" alt=""></div>
+					<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_sponsorship04.png" alt=""></div>
+					<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_sponsorship05.png" alt=""></div>
+					<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_sponsorship06.png" alt=""></div>
+					<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_sponsorship07.png" alt=""></div>
+					<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_sponsorship08.png" alt=""></div>
+					<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_sponsorship09.png" alt=""></div>
+					<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_sponsorship10.png" alt=""></div>
+					<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_sponsorship11.png" alt=""></div>
+					<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_sponsorship12.png" alt=""></div>
+					<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_sponsorship13.png" alt=""></div>
+					<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/main/img_sponsorship14.png" alt=""></div>
+				</div>
+			</div>
+		</div>
+		<!-- // 협찬사 -->
+		
+	</section>
+	<!-- //컨텐츠 영역 -->
+	
+	<!-- 푸터 -->
+	<footer>
+		<address>
+			(주)하나투어 | 대표 : 김진국 | 주소 : 서울특별시 종로구 인사동 5길 41<br>
+			고객센터 : 1577-1233 | 팩스 : 02-734-0392 <br>
+			개인정보관리 책임자 : 박성재 | 사업자 등록번호 : 102-81-39440<br>
+			통신판매업신고번호 : 종로 01-1806호 | <a href="#" target="_blank" title="새창">사업자정보확인</a><br>
+			관광사업자 등록번호 : 제1993-000006호 | 영업보증보험 : 22억1천만원 가입
+		</address>
+		<p>
+			부득이한 사정에 의해 여행일정이 변경되는 경우<br> 여행자의 사전 동의를 받습니다.
+			<b>이제작물은 아모레퍼시픽의 <em>아리따글꼴</em>과 <em>한수원글꼴</em>을 사용하여 디자인 되었습니다.</b>
+			<span>COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED</span>
+		</p>
+	</footer>
+	<!-- // 푸터 -->
+</div>
+
+<!-- 퀵메뉴 -->
+<div class="quickDimBox">
+	<a href="#" class="dimbtnToggle" title="열기"></a>
+	<div class="dimBtnQuick"><!-- on 추가시 block  -->
+		<ul>
+			<li><a href="#" class="icoBg01"><span class="txt"><em>제2회 하나투어 온라인</em>박람회 메인으로</span></a></li>
+			<li><a href="#" class="icoBg02"><span class="txt">박람회 전체메뉴</span></a></li>
+			<li><a href="#" class="icoBg03"><span class="txt">하나투어 App 다운받기</span></a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- // 퀵메뉴 -->
+
+<!-- 좌측메뉴 -->
+<div id="expoMenuPanel" class=""><!-- 펼칠시 class open 추가 -->
+	<h2>전체메뉴<a href="#" class="closeSlide" title="닫기"></a></h2>
+	
+	<div class="innerScroller">
+		<!-- 지역관 -->
+		<div class="hanaMenuList">
+			<h3><a href="#">지역관<span>전체보기</span></a></h3>
+			<h4 class="btNone"><a href="#">동남아관</a></h4>
+			<ul class="innerMenuBox"><!-- 3의 배수로 맞춰 주세요 -->
+				<li><a href="#">태국</a></li>
+				<li><a href="#">베트남</a></li>
+				<li><a href="#">필리핀</a></li>
+				<li><a href="#">대만</a></li>
+				<li><a href="#">싱가포르</a></li>
+				<li><a href="#">말레이시아</a></li>
+				<li><a href="#">캄보디아</a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+			</ul>
+			<h4><a href="#">중국/홍콩관</a></h4>
+			<ul class="innerMenuBox"><!-- 3의 배수로 맞춰 주세요 -->
+				<li><a href="#">홍콩/마카오</a></li>
+				<li><a href="#">상해</a></li>
+				<li><a href="#">북경</a></li>
+				<li><a href="#">장가계</a></li>
+				<li><a href="#">계림</a></li>
+				<li><a href="#"></a></li>
+			</ul>
+			<h4><a href="#">일본관</a></h4>
+			<ul class="innerMenuBox"><!-- 3의 배수로 맞춰 주세요 -->
+				<li><a href="#">규슈</a></li>
+				<li><a href="#">오사카</a></li>
+				<li><a href="#">오키나와</a></li>
+				<li><a href="#">훗카이도</a></li>
+				<li><a href="#">도쿄</a></li>
+				<li><a href="#"></a></li>
+			</ul>
+			<h4><a href="#">남태평양관</a></h4>
+			<ul class="innerMenuBox"><!-- 3의 배수로 맞춰 주세요 -->
+				<li><a href="#">괌/팔라우</a></li>
+				<li><a href="#">사이판</a></li>
+				<li><a href="#">호주</a></li>
+				<li><a href="#">뉴질랜드</a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+			</ul>
+			<h4><a href="#">유럽/아프리카관</a></h4>
+			<ul class="innerMenuBox"><!-- 3의 배수로 맞춰 주세요 -->
+				<li><a href="#">서유럽</a></li>
+				<li><a href="#">지중해</a></li>
+				<li><a href="#">동유럽</a></li>
+				<li><a href="#" class="two">아프리카/중동/러시아</a></li>
+				<li><a href="#">도쿄</a></li>
+				<li><a href="#"></a></li>
+			</ul>
+			<h4><a href="#">미국/캐나다/중남미관</a></h4>
+			<ul class="innerMenuBox"><!-- 3의 배수로 맞춰 주세요 -->
+				<li><a href="#">하와이</a></li>
+				<li><a href="#">미국서부</a></li>
+				<li><a href="#">미국동부</a></li>
+				<li><a href="#">캐나다</a></li>
+				<li><a href="#">중미남미</a></li>
+				<li><a href="#"></a></li>
+			</ul>
+			<h4 class="line_ccc"><a href="#">국내관</a></h4>
+			<h4 class="btNone bbNone"><a href="#">지방출발관</a></h4>
+		</div>
+		<!-- // 지역관 -->
+		
+		<!-- 테마관 -->
+		<div class="hanaMenuList">
+			<h3><a href="#">테마관<span>전체보기</span></a></h3>
+			<ul class="innerMenuBox"><!-- 3의 배수로 맞춰 주세요 -->
+				<li><a href="#">그랜드투어</a></li>
+				<li><a href="#">골프</a></li>
+				<li><a href="#">허니문</a></li>
+				<li><a href="#">식도락</a></li>
+				<li><a href="#">역사/문화</a></li>
+				<li><a href="#">레저/축제</a></li>
+				<li><a href="#">가족</a></li>
+				<li><a href="#">커플</a></li>
+				<li><a href="#">효도</a></li>
+				<li><a href="#">유아동반</a></li>
+				<li><a href="#">나홀로</a></li>
+				<li><a href="#">장기여행</a></li>
+			</ul>
+		</div>
+		<!-- // 테마관 -->
+		
+		<!-- 자유여행관 -->
+		<div class="hanaMenuList">
+			<h3><a href="#">자유여행관<span>전체보기</span></a></h3>
+			<ul class="innerMenuBox"><!-- 3의 배수로 맞춰 주세요 -->
+				<li><a href="#">에어텔</a></li>
+				<li><a href="#">배낭여행</a></li>
+				<li><a href="#" class="two">입장권/패스/현지투어</a></li>
+			</ul>
+		</div>
+		<!-- // 자유여행관 -->
+		
+		<div class="hanaAppList">
+			<ul>
+				<li><a href="#"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/img_ico_allmenu01.png" alt=""><span>항공관</span></a></li>
+				<li><a href="#"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/img_ico_allmenu02.png" alt=""><span>호텔관</span></a></li>
+				<li><a href="#"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/img_ico_allmenu03.png" alt=""><span>추천여행지 규슈</span></a></li>
+				<li><a href="#"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/img_ico_allmenu04.png" alt=""><span>트래블 TV</span></a></li>
+				<li><a href="#"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/img_ico_allmenu05.png" alt=""><span>이벤트</span></a></li>
+				<li><a href="#"><img src="http://image1.hanatour.com/mobile/common/expo2016/images/img_ico_allmenu06.png" alt=""><span>박람회소개</span></a></li>
+			</ul>
+		</div>
+	</div>
+	
+</div>
+<!-- // 좌측메뉴 -->
+
+<!-- 팝업 개인정보 수집 동의 -->
+<div class="layerPop" style="display:none">
+	<div style="margin-top:-200px">
+		<h3>개인 정보 관련 안내<a href="#" class="btn_y_Close" data-role="none" title="닫기"></a></h3>
+		
+		<!-- content -->
+		<div class="pop_y_cont">
+			<div class="termsTxtList">
+				<strong>개인정보 수집/이용 동의</strong>
+				<p>입력하신 휴대전화번호는 발송 용도로만 사용되며 그 외 목적으로 사용하지 않습니다.</p>
+				<ul>
+					<li><strong>* 개인정보의 수집 목적 :</strong> 1) 하나투어 온라인여행박람회 경로 발송용<br> 2) 추첨 당첨 시 경품 발송용</li>
+					<li><strong>* 수집하는 개인정보의 항목 :  </strong>휴대전화번호</li>
+					<li><strong>* 보유 및 이용기간 :</strong>문자/경품 발송 후 즉시파기</li>
+				</ul><br>
+				<p>고객님은 동의를 거부하실 수 있으며, 거부 시 문자 및 경품을 수신하실 수 없습니다.</p>
+			</div>
+			
+		</div>
+		<!-- // content -->
+	</div>
+</div>
+<!-- // 팝업 개인정보 수집 동의 -->
+
+<!-- 공유하기 팝업 -->
+<div class="layerPop" style="display:none">
+	<div>
+		<h3>공유하기<a href="#" class="btn_y_Close" title="닫기"></a></h3>
+		
+		<!-- content -->
+		<div class="pop_y_cont">
+			<ul class="snsList">
+				<li><a href="#" class="face">페이스북</a></li>
+				<li><a href="#" class="kakao">카카오톡</a></li>
+			</ul>
+			<div class="url_copy">
+				<input type="text" value="http://mhotel.hanatour.com/hotel/info.hnt?hotelCode=G45011" readonly="">
+				<p>URL을 길게 누르시면 복사 하실 수 있습니다.</p>
+			</div>
+		</div>
+		<!-- // content -->
+	</div>
+</div>
+<!-- // 공유하기 팝업 -->
+
+</body>
+</html>
+
