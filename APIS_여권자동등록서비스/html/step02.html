@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>여권 자동등록 서비스 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../css/passport_auto.css">
+<script src="../js/jquery-2.2.3.min.js" type="text/javascript"></script>
+<script src="../js/m.apis.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+	<div id="wrap">
+		
+		<!-- 컨텐츠 영역 -->
+		<div id="container">
+			<h2 class="pagTit">여권 자동등록 서비스</h2>
+			
+			<section class="passport_stepSect">
+				<ul class="pageStep">
+					<li>약관동의</li><!-- 활성화 class="on" -->
+					<li class="on">정보입력</li>
+					<li>마일리지 안내</li>
+				</ul>
+				
+				<div class="step2_cont01">
+					<p><strong>[1급대전]</strong>세부막탄 4일_베스트웨스턴 샌드바 | 오션뷰+발마사지+리조트식</p>
+					<ul>
+						<li><span>출발일</span><strong>12월 31일</strong></li>
+						<li><span>여행기간</span><strong>3박 4일</strong></li>
+					</ul>
+				</div>
+				
+				<!-- 입력폼 -->
+				<div class="step2_cont02">
+					<ul class="inputCell">
+						<li>
+							<label for="name">이름</label><!-- for = id 값 동일하게 맞춰주세요 -->
+							<div><input type="text" id="name" class="inputTxt" data-role="none" title="한글성명" disabled value="김하나"></div>
+						</li>
+						<li>
+							<label for="birth">법정생년월일</label>
+							
+							<div class="right_gender">
+								<input type="tel" id="birth" class="inputTxt" data-role="none" disabled value="19870101">
+								
+								<!-- 성별 선택 -->
+								<div class="genderBox">
+									<input type="radio" name="gender" data-role="none" class="man" checked title="남">
+									<input type="radio" name="gender" data-role="none" class="woman" title="여">
+								</div>
+								<!-- // 성별 선택 -->
+							</div>
+						</li>
+						
+						<li>
+							<label for="phone">휴대폰</label>
+							<div>
+								<div class="inTable">
+									<span class="w30">
+										<input type="tel" id="phone" class="inputTxt" data-role="none" title="휴대폰 앞자리">
+									</span>
+									<span class="cellPad10">-</span>
+									<span class="w35">
+										<input type="tel" class="inputTxt" data-role="none" title="휴대폰 가운데자리">
+									</span>
+									<span class="cellPad10">-</span>
+									<span class="w35">
+										<input type="tel" class="inputTxt" data-role="none" title="휴대폰 뒷">
+									</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<label for="passport">여권번호</label>
+							<div class="right_Scanner">
+								<input type="number" id="passport" class="inputTxt" data-role="none" placeholder="M00000000">
+								<button type="button" class="btnScan" title="스캔하기"></button>
+							</div>
+						</li>
+						<li>
+							<label for="en_name">영문성명</label>
+							<div>
+								<div class="inTable">
+									<span class="w35">
+										<input type="text" id="en_name" class="inputTxt" data-role="none" title="영문성" placeholder="예)HONG">
+									</span>
+									<span class="cellPad"></span>
+									<span class="w65">
+										<input type="text" class="inputTxt" data-role="none" title="영문이름" placeholder="예)GILDONG">
+									</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<label for="passport_end">여권만료일</label><!-- for = id 값 동일하게 맞춰주세요 -->
+							<div><input type="date" id="passport_end" class="inputTxt" data-role="none" title="여권만료일"></div>
+						</li>
+						
+					</ul>
+				</div>
+				<!-- // 입력폼 -->
+				
+				<!-- 하단 버튼 -->
+				<a href="#" class="m_btnRed">다음</a>
+				<!-- 하단 버튼 -->
+				
+				<p class="btn_underTxt">※ 예약정보 수정이 필요 한 경우 담당 대리점에 요청해주시기 바랍니다.</p>
+			</section>
+		</div>
+		<!-- // 컨텐츠 영역 -->
+	</div>
+	
+	
+	<!-- 페이지 로딩 -->
+	<div class="pageLoding" style="display:none">
+		<span><img src="http://image1.hanatour.com/mobile/common/hanatour/apis/search_loading_ani.gif" alt=""></span>
+	</div>
+	<!-- // 페이지 로딩 -->
+	
+	<!-- 여권정보 확인 팝업 1 -->
+	<div class="smallPopCommon" style="display:none">
+		<div>
+			<h2>여권정보 확인<button type="button" title="닫기" class="closeSmallPop"></button></h2>
+			<div class="smPop_inner">
+				
+				<p class="redBulTxt">스캔된 정보를 확인 해주세요.</p>
+				
+				<ul class="popPassportCont01">
+					<li><span>여권번호</span><strong>M42122345</strong></li>
+					<li><span>영문성명</span><strong>HONG GILDONG</strong></li>
+					<li><span>여권만료일</span><strong>20221231</strong></li>
+				</ul>
+				
+				<div class="smPopBtnBox">
+					<a href="#" class="btnRed_short">입력</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 여권정보 확인 팝업 1  -->
+	
+	<!-- 여권정보 확인 팝업 2 -->
+	<div class="smallPopCommon" style="display:none">
+		<div>
+			<h2>여권정보 확인<button type="button" title="닫기" class="closeSmallPop"></button></h2>
+			<div class="smPop_inner">
+				
+				<p class="centTxt">외국인 여권은 스캔 되지 않습니다.<br>여권정보를 직접 입력해주세요.</p>
+				
+				<div class="popPassportCont02">
+					<ul class="inputCell">
+						<li>
+							<label for="passportNum">여권번호</label><!-- for = id 값 동일하게 맞춰주세요 -->
+							<div><input type="text" id="passportNum" class="inputTxt" data-role="none" title="여권번호"></div>
+						</li>
+						<li>
+							<label for="passportName">영문성명</label>
+							<div><input type="text" id="passportName" class="inputTxt" data-role="none" title="영문성명"></div>
+						</li>
+						<li>
+							<label for="passportEnd">여권만료일</label>
+							<div><input type="date" id="passportEnd" class="inputTxt" data-role="none" title="여권만료일"></div>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="smPopBtnBox">
+					<a href="#" class="btnRed_short">입력</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 여권정보 확인 팝업 2  -->
+	
+	<!-- 여권정보 확인 팝업 3 -->
+	<div class="smallPopCommon" style="display:none">
+		<div>
+			<h2>예약정보 확인<button type="button" title="닫기" class="closeSmallPop"></button></h2>
+			<div class="smPop_inner">
+				
+				<p class="redBulTxt">동명이인이 존재합니다. 여행자를 선택 해주세요.</p>
+				
+				<table class="popPassportCont03">
+					<caption>동명이인 안내표</caption>
+					<colgroup>
+						<col style="width:15%" span="3">
+						<col style="width:30%">
+						<col style="width:25%">
+					</colgroup>
+					
+					<thead>
+						<tr>
+							<th scope="col">선택</th>
+							<th scope="col">순번</th>
+							<th scope="col">성별</th>
+							<th scope="col">휴대폰</th>
+							<th scope="col">이메일</th>
+						</tr>
+					</thead>
+					
+					<tbody>
+						<tr>
+							<td><input type="radio" class="comm_radio" name="samecheck" checked></td>
+							<td>2</td>
+							<td>남</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td><input type="radio" class="comm_radio" name="samecheck"></td>
+							<td>2</td>
+							<td>남</td>
+							<td>01012341234</td>
+							<td>abce@gmail.com</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<div class="smPopBtnBox">
+					<a href="#" class="btnRed_short">입력</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 여권정보 확인 팝업 3  -->
+	
+</body>
+</html>
+

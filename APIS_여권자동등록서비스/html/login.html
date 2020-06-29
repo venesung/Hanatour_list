@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+
+<!-- 20180620 추가 -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="여권스캔으로 간편한 입력">
+<meta property="og:url" content="http://"><!-- 공유 url 입력 -->
+<meta property="og:description" content="예약정보 입력하기">
+<meta property="og:image" content="http://image1.hanatour.com/mobile/common/hanatour/apis/img_og_thumb.jpg">
+<meta property="twitter:title" content="여권스캔으로 간편한 입력">
+<meta property="twitter:card" content="summary">
+<meta property="twitter:description" content="예약정보 입력하기">
+<meta property="twitter:url" content="http://"><!-- 공유 url 입력 -->
+<meta property="twitter:image" content="http://image1.hanatour.com/mobile/common/hanatour/apis/img_og_thumb.jpg">
+<!-- // 20180620 추가 -->
+
+<title>여권 자동등록 서비스 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../css/passport_auto.css">
+<script src="../js/jquery-2.2.3.min.js" type="text/javascript"></script>
+<script src="../js/m.apis.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+	<div id="wrap">
+	
+		<!-- 로그인 -->
+		<div class="loginCont">
+			
+			<header class="loginHeader">
+				<h1><img src="http://image1.hanatour.com/mobile/common/hanatour/apis/img_logo.png" alt="하나투어"></h1>
+				<h2><img src="http://image1.hanatour.com/mobile/common/hanatour/apis/tit_name.png" alt="하나투어 여행자를 위한 여권 자동등록 서비스"></h2>
+				
+				<!-- 공유하기 -->
+				<div class="sharedBox">
+					<button type="button" title="공유하기"><img src="http://image1.hanatour.com/mobile/common/hanatour/apis/btn_share.png" alt=""></button><!-- 클릭시 아래 div 노출 -->
+					
+					<div class="share_popUp" style="display:none"><!-- 공유팝업 -->
+						<div>
+							<h2>URL 보내기</h2>
+							<a href="#" class="kakao">카카오톡</a>
+							<a href="#" class="sms">문자</a>
+						</div>
+					</div>
+				</div>
+				<!-- // 공유하기 -->
+			</header>
+		
+			<section class="loginSect">
+				<div class="inputBox">
+					
+					<!-- 20180625 수정 -->
+					<div class="idBox">
+						<input type="text" class="inputTxt" title="예약번호" placeholder="예약번호">
+						<button type="button" class="txtDelBtn" title="삭제"></button>
+					</div>
+					<div class="idBox">
+						<input type="text" class="inputTxt" title="한글성명" placeholder="한글성명">
+						<button type="button" class="txtDelBtn" title="삭제"></button>
+					</div>
+					<div class="idBox">
+						<input type="tel" class="inputTxt" title="생년월일 8자리 또는 휴대폰번호" placeholder="생년월일 8자리 또는 휴대폰번호">
+						<button type="button" class="txtDelBtn" title="삭제"></button>
+					</div>
+					<!-- // 20180625 수정 -->
+					
+					<p class="txtLogin">※ 예약 시 입력한 한글성명, 생년월일 or 휴대폰번호입력</p>
+					
+					<button type="submit" class="m_btnRed">예약확인</button>
+				</div>
+				
+			</section>
+			
+			
+			<footer>
+				<address>
+					(주)하나투어 | 대표 : 김진국 | 주소 : 서울특별시 종로구 인사동 5길 41<br>
+					고객센터 : 1577-1233 | 팩스 : 02-734-0392 <br>
+					개인정보 보호책임자 : 박영학 | 사업자 등록번호 : 102-81-39440<br>
+					통신판매업신고번호 : 종로 01-1806호 | <a href="http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1028139440" target="_blank" title="새창">사업자정보확인</a><br>
+					관광사업자 등록번호 : 제1993-000006호 | 영업보증보험 : 22억1천만원 가입
+				</address>
+				<p>
+					부득이한 사정에 의해 여행일정이 변경되는 경우<br> 여행자의 사전 동의를 받습니다.
+					<span>COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED</span>
+				</p>
+			</footer>
+			
+		</div>
+		<!-- // 로그인 -->
+		
+	</div>
+	<!-- 페이지 로딩 -->
+	<div class="pageLoding" style="display:none">
+		<span><img src="http://image1.hanatour.com/mobile/common/hanatour/apis/search_loading_ani.gif" alt=""></span>
+	</div>
+	<!-- // 페이지 로딩 -->
+
+</body>
+</html>
+
