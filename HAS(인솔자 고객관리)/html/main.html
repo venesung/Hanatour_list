@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>메인 - 고객정보 상호전달체계</title>
+<link rel="stylesheet" type="text/css" href="../css/happiness_maker.css">
+<script src="../js/jquery-2.2.3.min.js" type="text/javascript"></script>
+<script src="../js/m.ciis.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+	<div id="wrap" class="container"><!-- 공통 class="container" -->
+		
+		<!-- 기본 헤더 -->
+		<header class="header"> 
+			<div class="top">
+				<h1><a href="#"><img src="../images/img_logo.png" alt="하나투어"></a></h1>
+				<a href="#" class="home" title="홈으로"></a>
+				<a href="#" class="emergency" title="긴급상황"></a>
+				<a href="#" class="logout" title="로그아웃"></a><!-- 20170403 추가 -->
+			</div>
+			
+			<div class="user">
+				<p><strong>이만득</strong>가이드님 환영합니다.</p>
+				<span><em>H.P</em>010-1234-5678</span>
+			</div>
+		</header>
+		<!-- // 기본 헤더 -->
+	
+		<!-- 컨텐츠 -->
+		<section class="content">
+			<!-- cont1 -->
+			<div>
+				<h2 class="pinkTit">행사 2일전<button type="button" class="titToggleBtn on" title="펼치기/닫기 토글"></button></h2><!-- 20170616 버튼 추가 :: 클릭시 class="on"추가 / div inContBox none/block -->
+				
+				<div class="inContBox">
+					<!-- 출발일, 인원 -->
+					<ul class="titList_wid">
+						<li>
+							<em>출발일</em>
+							<strong>2017년 12월 28일</strong>
+						</li>
+						<li>
+							<em>총인원</em>
+							<strong class="c_red">총17명</strong>
+							<span class="c_gray">(어른 16, 아동 1, 유아0)</span>
+						</li>
+					</ul>
+					<!-- // 출발일, 인원 -->
+					
+					<!-- 기타정보 -->
+					<ul class="titList_hei">
+						<li>
+							<em class="code"><b class="classic">클래식</b> APP100170102KEA</em>
+							<span>태국 맛3♥ [노쇼핑+노옵션] 방콕/파타야 5일 준특급+선택관광 BEST 5</span>
+						</li>
+						<li>
+							<em>미팅정보</em>
+							<span>인천공항 M카운터 <strong class="c_red">15시 30분</strong></span>
+						</li>
+						<li>
+							<em>항공정보</em>
+							<div class="airLine">
+								<span>ICN(18:40)</span>
+								<span>BKK(00:10+1)</span>
+								<b>KE651</b>
+							</div>
+						</li>
+						<li>
+							<em>룸배정<strong class="roomNum">총 8룸</strong></em>
+							<div class="roomList">
+								<span>TWIN <b class="on">7</b></span><!-- 1이상일경우 b class="on" -->
+								<span>SGL <b class="">0</b></span>
+								<span>TRPL <b class="on">1</b></span>
+								<span>DBL <b class="">0</b></span>
+							</div>
+						</li>
+					</ul>
+					<!-- // 기타정보 -->
+					
+					<!-- 고객정보 -->
+					<div class="custoLink">
+						<a href="#" class="on">고객요청사항 <span>10</span></a>
+						<a href="#" class="on">VIP고객 <span>2</span></a>
+					</div>
+					<!-- // 고객정보 -->
+					
+					<div class="btnThreeBox">
+						<a href="#" class="smallBtnGray">해피콜</a>
+						<span></span>
+						<a href="#" class="smallBtnGray">행사일정</a>
+						<span></span>
+						<a href="#" class="smallBtnGray">고객정보</a>
+					</div>
+					
+					<!-- 20171128 행사총평 입력추가 -->
+					<button type="button" class="btn_evWrite">행사 총평 입력하기</button><!-- 클릭시  eventWriteCont block -->
+					
+					<!-- 행사 총평 입력 전  -->
+					<div class="evWriteCont" style="display:none">
+						<h3>행사 총평 입력</h3>
+						
+						<label class="comRadio"><input type="radio" name="eventWrite" checked><span>전체를 한번에 입력</span></label>
+						<label class="comRadio"><input type="radio" name="eventWrite"><span>날짜별 입력</span></label>
+						
+						<!-- 총평 tab01 -->
+						<div class="evTab01"><textarea placeholder="내용을 입력하세요."></textarea></div>
+						<!-- // 총평 tab01 -->
+						
+						<!-- 총평 tab02 -->
+						<div class="evTab02" style="display:none">
+							<ol>
+								<li><!-- 선택시 class="on" 추가 -->
+									<strong>1일차</strong><span>2017.09.20(수)</span><button type="button" class="smallBtnWhite">입력</button><!-- 클릭시 li class on 추가 -->
+									<div><textarea placeholder="내용을 입력하세요."></textarea></div>
+								</li>
+								<li>
+									<strong>2일차</strong><span>2017.09.21(목)</span><button type="button" class="smallBtnWhite">입력</button>
+									<div><textarea placeholder="내용을 입력하세요."></textarea></div>
+								</li>
+								<li>
+									<strong>3일차</strong><span>2017.09.22(금)</span><button type="button" class="smallBtnWhite">입력</button>
+									<div><textarea placeholder="내용을 입력하세요."></textarea></div>
+								</li>
+								<li>
+									<strong>4일차</strong><span>2017.09.23(토)</span><button type="button" class="smallBtnWhite">입력</button>
+									<div><textarea placeholder="내용을 입력하세요."></textarea></div>
+								</li>
+							</ol>
+							
+						</div>
+						<!-- // 총평 tab02 -->
+						
+						<div class="btnTwoBox">
+							<button type="button" class="m_btnRed gray">취소</button>
+							<button type="button" class="m_btnRed">저장</button>
+						</div>
+					</div>
+					<!-- // 행사 총평 입력 전 -->
+					
+					<!-- // 20171128 행사총평 입력추가 -->
+				</div>
+				
+			</div>
+			<!-- // cont1 -->
+			
+			<!-- cont2 -->
+			<div>
+				<h2 class="pinkTit">행사 3일전<button type="button" class="titToggleBtn" title="펼치기/닫기 토글"></button></h2><!-- 20170616 버튼 추가 :: 클릭시 class="on"추가 / div inContBox none/block -->
+				
+				<div class="inContBox" style="display:none">
+					<!-- 출발일, 인원 -->
+					<ul class="titList_wid">
+						<li>
+							<em>출발일</em>
+							<strong>2017년 12월 28일</strong>
+						</li>
+						<li>
+							<em>총인원</em>
+							<strong class="c_red">총17명</strong>
+							<span class="c_gray">(어른 16, 아동 1, 유아0)</span>
+						</li>
+					</ul>
+					<!-- // 출발일, 인원 -->
+					
+					<!-- 기타정보 -->
+					<ul class="titList_hei">
+						<li>
+							<em class="code"><b class="classic">클래식</b> APP100170102KEA</em>
+							<span>태국 맛3♥ [노쇼핑+노옵션] 방콕/파타야 5일 준특급+선택관광 BEST 5</span>
+						</li>
+						<li>
+							<em>미팅정보</em>
+							<span>인천공항 M카운터 <strong class="c_red">15시 30분</strong></span>
+						</li>
+						<li>
+							<em>항공정보</em>
+							<div class="airLine">
+								<span>ICN(18:40)</span>
+								<span>BKK(00:10+1)</span>
+								<b>KE651</b>
+							</div>
+						</li>
+						<li>
+							<em>룸배정<strong class="roomNum">총 8룸</strong></em>
+							<div class="roomList">
+								<span>TWIN <b class="on">7</b></span><!-- 1이상일경우 b class="on" -->
+								<span>SGL <b class="">0</b></span>
+								<span>TRPL <b class="on">1</b></span>
+								<span>DBL <b class="">0</b></span>
+							</div>
+						</li>
+					</ul>
+					<!-- // 기타정보 -->
+					
+					<!-- 고객정보 -->
+					<div class="custoLink">
+						<a href="#" class="">고객요청사항 <span>0</span></a>
+						<a href="#" class="on">VIP고객 <span>2</span></a>
+					</div>
+					<!-- // 고객정보 -->
+					
+					<div class="btnTwoBox">
+						<a href="#" class="smallBtnGray">행사일정 체크</a>
+						<a href="#" class="smallBtnGray">고객정보 체크</a>
+					</div>
+					
+					<!-- 20171128 행사총평 입력추가 -->
+					<button type="button" class="btn_evWrite">행사 총평 추가입력하기</button><!-- 클릭시  eventWriteCont block -->
+					
+					<!-- 행사 총평 입력 전  -->
+					<div class="evWriteCont" style="display:none">
+						<h3>행사 총평 입력</h3>
+						
+						<label class="comRadio"><input type="radio" name="eventWrite" checked><span>전체를 한번에 입력</span></label>
+						<label class="comRadio"><input type="radio" name="eventWrite"><span>날짜별 입력</span></label>
+						
+						<!-- 총평 tab01 -->
+						<div class="evTab01"><textarea placeholder="내용을 입력하세요."></textarea></div>
+						<!-- // 총평 tab01 -->
+						
+						<!-- 총평 tab02 -->
+						<div class="evTab02" style="display:none">
+							<ol>
+								<li><!-- 선택시 class="on" 추가 -->
+									<strong>1일차</strong><span>2017.09.20(수)</span><button type="button" class="smallBtnWhite">입력</button><!-- 클릭시 li class on 추가 -->
+									<div><textarea placeholder="내용을 입력하세요."></textarea></div>
+								</li>
+								<li>
+									<strong>2일차</strong><span>2017.09.21(목)</span><button type="button" class="smallBtnWhite">입력</button>
+									<div><textarea placeholder="내용을 입력하세요."></textarea></div>
+								</li>
+								<li>
+									<strong>3일차</strong><span>2017.09.22(금)</span><button type="button" class="smallBtnWhite">입력</button>
+									<div><textarea placeholder="내용을 입력하세요."></textarea></div>
+								</li>
+								<li>
+									<strong>4일차</strong><span>2017.09.23(토)</span><button type="button" class="smallBtnWhite">입력</button>
+									<div><textarea placeholder="내용을 입력하세요."></textarea></div>
+								</li>
+							</ol>
+							
+						</div>
+						<!-- // 총평 tab02 -->
+						
+						<div class="btnTwoBox">
+							<button type="button" class="m_btnRed gray">취소</button>
+							<button type="button" class="m_btnRed">저장</button>
+						</div>
+					</div>
+					<!-- // 행사 총평 입력 전 -->
+					
+					<!-- // 20171128 행사총평 입력추가 -->
+					
+					<!-- 입력 후 -->
+					<div class="evWriteCont_after">
+						<p>행사 총평이 <strong class="c_red">2건</strong>이 있습니다.</p>
+						
+						<!-- 일차별 cont -->
+						<div class="in_evWrite">
+							<strong>전체입력</strong><span>2017.09.23</span><em>이하나</em>
+							<div class="in_evText">
+								<textarea rows="3" readonly>버스기사의 급정거로 고객 두분(김두울,박하나)이 앞좌석에 머리를 부딪혀 이마에 혹이 남.</textarea>
+							</div>
+							<div class="in_evBtn">
+								<button type="button" class="smallBtnWhite">수정</button><!-- 수정버튼 클릭시 textarea readonly 풀림 -->
+								<button type="button" class="smallBtnWhite">삭제</button>
+							</div>
+						</div>
+						<!-- // 일차별 cont -->
+						
+						<!-- 일차별 cont -->
+						<div class="in_evWrite">
+							<strong>4일차</strong><span>2017.09.22</span><em>이하나</em>
+							<div class="in_evText">
+								<textarea rows="3">2일차 미식 블루엘리펀 중식 시 약간의 세미 드레스코드 설명 드렸으나 외부</textarea>
+							</div>
+							<div class="in_evBtn">
+								<button type="button" class="smallBtnWhite">취소</button>
+								<button type="button" class="smallBtnWhite red">저장</button>
+							</div>
+						</div>
+						<!-- // 일차별 cont -->
+					</div>
+					<!-- // 입력 후 -->
+					<!-- // 20171128 행사총평 입력추가 -->
+				</div>
+				
+				<a href="#" class="btnBar" style="display:none">공동행사 <strong class="c_red">2건</strong>이 있습니다.</a> <!-- 공동행사 있는경우 :: 클릭시 아래 inContBox block처리 -->
+				
+				<!-- 공동행사 -->
+				<div class="inContBox" style="display:none">
+					<!-- 건별로 묶음 -->
+					<div>
+						<!-- 출발일, 인원 -->
+						<ul class="titList_wid">
+							<li>
+								<em>출발일</em>
+								<strong>2017년 12월 28일</strong>
+							</li>
+							<li>
+								<em>총인원</em>
+								<strong class="c_red">총17명</strong>
+								<span class="c_gray">(어른 16, 아동 1, 유아0)</span>
+							</li>
+						</ul>
+						<!-- // 출발일, 인원 -->
+						
+						<!-- 기타정보 -->
+						<ul class="titList_hei">
+							<li>
+								<em class="code"><b class="classic">클래식</b> APP100170102KEA</em>
+								<span>태국 맛3♥ [노쇼핑+노옵션] 방콕/파타야 5일 준특급+선택관광 BEST 5</span>
+							</li>
+							<li>
+								<em>미팅정보</em>
+								<span>인천공항 M카운터 <strong class="c_red">15시 30분</strong></span>
+							</li>
+							<li>
+								<em>항공정보</em>
+								<div class="airLine">
+									<span>ICN(18:40)</span>
+									<span>BKK(00:10+1)</span>
+									<b>KE651</b>
+								</div>
+							</li>
+							<li>
+								<em>룸배정<strong class="roomNum">총 8룸</strong></em>
+								<div class="roomList">
+									<span>TWIN <b class="on">7</b></span><!-- 1이상일경우 b class="on" -->
+									<span>SGL <b class="">0</b></span>
+									<span>TRPL <b class="on">1</b></span>
+									<span>DBL <b class="">0</b></span>
+								</div>
+							</li>
+						</ul>
+						<!-- // 기타정보 -->
+						
+						<!-- 고객정보 -->
+						<div class="custoLink">
+							<a href="#" class="">고객요청사항 <span>0</span></a>
+							<a href="#" class="on">VIP고객 <span>2</span></a>
+						</div>
+						<!-- // 고객정보 -->
+						
+						<div class="btnTwoBox">
+							<a href="#" class="smallBtnGray">행사일정 체크</a>
+							<a href="#" class="smallBtnGray">고객정보 체크</a>
+						</div>
+					</div>
+					<!-- // 건별로 묶음 -->
+					
+					<!-- 건별로 묶음 -->
+					<div>
+						<!-- 출발일, 인원 -->
+						<ul class="titList_wid">
+							<li>
+								<em>출발일</em>
+								<strong>2017년 12월 28일</strong>
+							</li>
+							<li>
+								<em>총인원</em>
+								<strong class="c_red">총17명</strong>
+								<span class="c_gray">(어른 16, 아동 1, 유아0)</span>
+							</li>
+						</ul>
+						<!-- // 출발일, 인원 -->
+						
+						<!-- 기타정보 -->
+						<ul class="titList_hei">
+							<li>
+								<em class="code"><b class="classic">클래식</b> APP100170102KEA</em>
+								<span>태국 맛3♥ [노쇼핑+노옵션] 방콕/파타야 5일 준특급+선택관광 BEST 5</span>
+							</li>
+							<li>
+								<em>미팅정보</em>
+								<span>인천공항 M카운터 <strong class="c_red">15시 30분</strong></span>
+							</li>
+							<li>
+								<em>항공정보</em>
+								<div class="airLine">
+									<span>ICN(18:40)</span>
+									<span>BKK(00:10+1)</span>
+									<b>KE651</b>
+								</div>
+							</li>
+							<li>
+								<em>룸배정<strong class="roomNum">총 8룸</strong></em>
+								<div class="roomList">
+									<span>TWIN <b class="on">7</b></span><!-- 1이상일경우 b class="on" -->
+									<span>SGL <b class="">0</b></span>
+									<span>TRPL <b class="on">1</b></span>
+									<span>DBL <b class="">0</b></span>
+								</div>
+							</li>
+						</ul>
+						<!-- // 기타정보 -->
+						
+						<!-- 고객정보 -->
+						<div class="custoLink">
+							<a href="#" class="">고객요청사항 <span>0</span></a>
+							<a href="#" class="on">VIP고객 <span>2</span></a>
+						</div>
+						<!-- // 고객정보 -->
+						
+						<div class="btnTwoBox">
+							<a href="#" class="smallBtnGray">행사일정 체크</a>
+							<a href="#" class="smallBtnGray">고객정보 체크</a>
+						</div>
+					</div>
+					<!-- // 건별로 묶음 -->
+				</div>
+				<!-- // 공동행사 -->
+			</div>
+			<!-- // cont2 -->
+			
+			<!-- cont2 -->
+			<div>
+				<h2 class="pinkTit">행사 4일전<button type="button" class="titToggleBtn" title="펼치기/닫기 토글"></button></h2><!-- 20170616 버튼 추가 :: 클릭시 class="on"추가 / div inContBox none/block -->
+				
+				<div class="inContBox" style="display:none">
+					<!-- 출발일, 인원 -->
+					<ul class="titList_wid">
+						<li>
+							<em>출발일</em>
+							<strong>2017년 12월 28일</strong>
+						</li>
+						<li>
+							<em>총인원</em>
+							<strong class="c_red">총17명</strong>
+							<span class="c_gray">(어른 16, 아동 1, 유아0)</span>
+						</li>
+					</ul>
+					<!-- // 출발일, 인원 -->
+					
+					<!-- 기타정보 -->
+					<ul class="titList_hei">
+						<li>
+							<em class="code"><b class="classic">클래식</b> APP100170102KEA</em>
+							<span>태국 맛3♥ [노쇼핑+노옵션] 방콕/파타야 5일 준특급+선택관광 BEST 5</span>
+						</li>
+						<li>
+							<em>미팅정보</em>
+							<span>인천공항 M카운터 <strong class="c_red">15시 30분</strong></span>
+						</li>
+						<li>
+							<em>항공정보</em>
+							<div class="airLine">
+								<span>ICN(18:40)</span>
+								<span>BKK(00:10+1)</span>
+								<b>KE651</b>
+							</div>
+						</li>
+						<li>
+							<em>룸배정<strong class="roomNum">총 8룸</strong></em>
+							<div class="roomList">
+								<span>TWIN <b class="on">7</b></span><!-- 1이상일경우 b class="on" -->
+								<span>SGL <b class="">0</b></span>
+								<span>TRPL <b class="on">1</b></span>
+								<span>DBL <b class="">0</b></span>
+							</div>
+						</li>
+					</ul>
+					<!-- // 기타정보 -->
+					
+					<!-- 고객정보 -->
+					<div class="custoLink">
+						<a href="#" class="">고객요청사항 <span>0</span></a>
+						<a href="#" class="on">VIP고객 <span>2</span></a>
+					</div>
+					<!-- // 고객정보 -->
+					
+					<div class="btnTwoBox">
+						<a href="#" class="smallBtnGray">행사일정 체크</a>
+						<a href="#" class="smallBtnGray">고객정보 체크</a>
+					</div>
+				</div>
+				
+				
+				<a href="#" class="btnBar" style="display:none">공동행사 <strong class="c_red">1건</strong>이 있습니다.</a> <!-- 공동행사 있는경우 :: 클릭시 아래 inContBox block처리 -->
+				
+				<!-- 공동행사 -->
+				<div class="inContBox" style="display:none">
+					<div>
+						<!-- 출발일, 인원 -->
+						<ul class="titList_wid">
+							<li>
+								<em>출발일</em>
+								<strong>2017년 12월 28일</strong>
+							</li>
+							<li>
+								<em>총인원</em>
+								<strong class="c_red">총17명</strong>
+								<span class="c_gray">(어른 16, 아동 1, 유아0)</span>
+							</li>
+						</ul>
+						<!-- // 출발일, 인원 -->
+						
+						<!-- 기타정보 -->
+						<ul class="titList_hei">
+							<li>
+								<em class="code"><b class="classic">클래식</b> APP100170102KEA</em>
+								<span>태국 맛3♥ [노쇼핑+노옵션] 방콕/파타야 5일 준특급+선택관광 BEST 5</span>
+							</li>
+							<li>
+								<em>미팅정보</em>
+								<span>인천공항 M카운터 <strong class="c_red">15시 30분</strong></span>
+							</li>
+							<li>
+								<em>항공정보</em>
+								<div class="airLine">
+									<span>ICN(18:40)</span>
+									<span>BKK(00:10+1)</span>
+									<b>KE651</b>
+								</div>
+							</li>
+							<li>
+								<em>룸배정<strong class="roomNum">총 8룸</strong></em>
+								<div class="roomList">
+									<span>TWIN <b class="on">7</b></span><!-- 1이상일경우 b class="on" -->
+									<span>SGL <b class="">0</b></span>
+									<span>TRPL <b class="on">1</b></span>
+									<span>DBL <b class="">0</b></span>
+								</div>
+							</li>
+						</ul>
+						<!-- // 기타정보 -->
+						
+						<!-- 고객정보 -->
+						<div class="custoLink">
+							<a href="#" class="">고객요청사항 <span>0</span></a>
+							<a href="#" class="on">VIP고객 <span>2</span></a>
+						</div>
+						<!-- // 고객정보 -->
+						
+						<div class="btnTwoBox">
+							<a href="#" class="smallBtnGray">행사일정 체크</a>
+							<a href="#" class="smallBtnGray">고객정보 체크</a>
+						</div>
+					</div>
+				</div>
+				<!-- // 공동행사 -->
+			</div>
+			<!-- // cont2 -->
+		</section>
+		<!-- // 컨텐츠 -->
+		
+	</div><!--//wrap-->
+	
+</body>
+</html>
+

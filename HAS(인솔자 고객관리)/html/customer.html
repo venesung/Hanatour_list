@@ -1,0 +1,1583 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>고객정보 - 고객정보 상호전달체계</title>
+<link rel="stylesheet" type="text/css" href="../css/happiness_maker.css">
+<script src="../js/jquery-2.2.3.min.js" type="text/javascript"></script>
+<script src="../js/signature_pad.min.js" type="text/javascript"></script><!-- 20171213 추가 -->
+<script src="../js/m.ciis.js" type="text/javascript"></script>
+<script type="text/javascript"><!-- 20171213 추가 -->
+	CIIS.callSignature = function (data) {
+		alert(data);
+	};
+</script>
+</head>
+
+<body>
+
+	<div id="wrap" class="container"><!-- 공통 class="container" -->
+		
+		<!-- 기본 헤더 -->
+		<header class="header"> 
+			<div class="top">
+				<h1><a href="#"><img src="../images/img_logo.png" alt="하나투어"></a></h1>
+				<a href="#" class="back" title="이전으로"></a><!-- 20170616 back 키로 변경 -->
+				<a href="#" class="emergency" title="긴급상황"></a>
+				<a href="#" class="logout" title="로그아웃"></a><!-- 20170403 추가 -->
+			</div>
+			
+			<div class="user">
+				<p><strong>이만득</strong>가이드님 환영합니다.</p>
+				<span><em>H.P</em>010-1234-5678</span>
+			</div>
+		</header>
+		<!-- // 기본 헤더 -->
+	
+		<!-- 컨텐츠 -->
+		<section class="content">
+			<!-- topcont -->
+			<div>
+				<!-- 상단정보 -->
+				<div class="scTopGray">
+					<span class="scCode">APP100170102KEA</span>
+					<span>성인 <b>16,</b></span>
+					<span>아동 <b>1,</b></span>
+					<span>유아 <b>0</b></span>
+					
+					<p>태국 맛3♥ [노쇼핑+노옵션] 방콕/ 파타야 5일 준특급+선택관광 BEST 5</p>
+				</div>
+				<!-- // 상단정보 -->
+			</div>
+			<!-- // topcont -->
+			
+			<!-- 고객정보 리스트 -->
+			<ul class="personList">
+				<li>
+					<div class="titBox">
+						<strong>RP1712345678 / 1 / <span class="c_red">A</span></strong>
+						<em><span>L</span>공동행사</em>
+					</div>
+					
+					<table class="personTable">
+						<caption>고객정보 상세표</caption>
+						<colgroup>
+							<col style="width:25%">
+							<col style="width:30%">
+							<col style="width:20%">
+							<col style="width:25%">
+						</colgroup>
+						
+						<tbody>
+							<tr>
+								<th scope="row">이름</th>
+								<td colspan="3">김하나
+									<sup class="c_red">*</sup>
+									<em class="vip">VIP</em>
+									<a href="#" class="rarrBtn">상세정보<span class="c_gray">＞</span></a>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">생년월일</th>
+								<td>1967.01.02 (여)</td>
+								<th scope="row">HC회원</th>
+								<td>회원<span class="birth">생일(회갑)</span></td>
+							</tr>
+							<tr>
+								<th scope="row">핸드폰</th>
+								<td colspan="3">010-9999-1213
+									<button type="button" class="smallBtnWhite">수정</button><!-- 20171128 수정버튼 추가 :: 클릭시 팝업노출 -->
+									
+									<!-- 20171128 휴대폰번호 수정/등록 팝업 -->
+									<div class="layerPop02" style="display:none">
+										<div class="">
+											<div class="smPopCont">
+												<h3>고객 휴대폰번호 수정/등록</h3>
+												
+												<ul class="tbList">
+													<li><em>이름</em><div><strong>김하나</strong></div></li>
+													<li><em>생일</em>
+														<div>
+															<strong>1967</strong><i>년</i>
+															<strong>01</strong><i>월</i>
+															<strong>0</strong><span><input type="tel" class="inputSm" placeholder="" maxlength="1"></span><i>일</i>
+														</div>
+													</li>
+													<li><span class="long">휴대폰번호</span><span><input type="tel" class="inputTxt" placeholder="휴대폰 번호를 입력해 주세요"></span></li>
+												</ul>
+												
+												<div class="bBox">
+													<label><input type="checkbox" class="redCheck"> <span>개인정보 수집/이용동의</span></label>
+													<a href="#" class="termsView">전문보기</a>
+												</div>
+												<div class="bBox">
+													<label><input type="checkbox" class="redCheck"> <span>마케팅 활용 동의 (선택)</span></label>
+													<a href="#" class="termsView">전문보기</a>
+												</div>
+											</div>
+											<div class="alertBtn_box">
+												<button type="button" class="alertBtn gray">취소</button>
+												<button type="button" class="alertBtn">다음</button>
+											</div>
+										</div>
+									</div>
+									<!-- // 휴대폰번호 수정/등록 팝업 -->
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">HC마일리지</th>
+								<td colspan="3">310,050 마일</td>
+							</tr>
+							<tr>
+								<th scope="row">요청사항</th>
+								<td colspan="3"><a href="#" class="inToggle">현지서비스, 호텔, 선택관광, 루밍, VIP서비스</a><!-- 클릭시 class="on"추가 :: 아래 <tr> 노출 --></td>
+							</tr>
+							<!-- 요청사항 펼쳐지는 영역 -->
+							<tr class="inTogCont" style="display:none"><!-- 노출시 display:table-row -->
+								<td colspan="4">
+									<ul class="inDetailList checkCase"><!-- 20171128 체크박스있는경우 class="checkCase" 추가 -->
+										<li>
+											<strong>과일바구니</strong>
+											<em>멘트: 즐거운 여행되세요.며느리 올림 즐거운 여행되세요.</em>
+											<input type="checkbox" class="checkBtn on" title="체크하기"><!-- 20171128 button에서 checkbox로 변경 -->
+										</li>
+										<li>
+											<strong>선택관광</strong>
+											<em>전통안마 2시간</em>
+											<input type="checkbox" class="checkBtn" title="체크하기"><!-- 20171128 button에서 checkbox로 변경 -->
+										</li>
+										<li>
+											<strong>VIP서비스</strong>
+											<input type="checkbox" class="checkBtn" title="체크하기"><!-- 20171128 button에서 checkbox로 변경 -->
+										</li>
+									</ul>
+								</td>
+							</tr>
+							<!-- // 요청사항 펼쳐지는 영역 -->
+							
+							<tr>
+								<th scope="row"><a href="#" class="characteBtn">고객특성<br>정보</a></th><!-- 20170616 고객특성정보 안내 팝업추가 :: 하단 팝업 노출 -->
+								<td colspan="3"><a href="#" class="inToggle">식사, 쇼핑, 건강, 고객요청</a><!-- 클릭시 class="on"추가 :: 아래 <tr> 노출 --></td>
+							</tr>
+							<!-- 고객특성 펼쳐지는 영역 -->
+							<tr class="inTogCont" style="display:none">
+								<td colspan="4">
+									<ul class="inDetailList">
+										<li>
+											<strong>식사</strong>
+											<em>약 복용으로 정식 식사를 드셔야 함</em>
+											<button type="button" class="delBtn" title="삭제하기">삭제</button><!-- 삭제 버튼 -->
+										</li>
+										
+										<!-- 고객요청 -->
+										<li>
+											<strong>고객요청</strong>
+											<div class="modifyText"><textarea readonly>김하나 고객님께서 요청사항 요청사항 요청사항</textarea></div>
+											<button type="button" class="modifyBtn" title="수정하기">수정</button><!-- 수정 버튼 클릭시 textarea readonly 삭제 : 20170718 추가 -->
+											<button type="button" class="delBtn" title="삭제하기">삭제</button><!-- 삭제 버튼 -->
+										</li>
+										<!-- // 고객요청 -->
+										
+										<!-- 고객요청 수정할경우 -->
+										<li>
+											<strong>고객요청</strong>
+											<div class="modifyText"><textarea>김하나 고객님께서 요청사항 요청사항 요청사항</textarea></div>
+											<div class="modifyBtnBox">
+												<button type="button" class="smallBtnWhite">취소</button>
+												<button type="button" class="smallBtnWhite red">저장</button>
+											</div>
+											<button type="button" class="delBtn" title="삭제하기">삭제</button><!-- 삭제 버튼 -->
+										</li>
+										<!-- // 고객요청 수정할경우 -->
+										
+										<!-- 20171128 추가 -->
+										<li class="lastBtnAdd">
+											<button type="button" class="smallBtnPlus gray" title="추가">고객특성정보 추가</button>
+											<p>행사 이전부터 가지고 있던 고객의 특성/성향을 입력</p>
+											
+											<!-- 항목선택 팝업 -->
+											<div class="layerPop02" style="display:none">
+												<div class="">
+													<ul class="smPopRadioCont">
+														<li>
+															<label class="comRadio"><input type="radio" name="addList"><span>건강</span></label><!-- 클릭시 아래 펼쳐짐 :: 한개씩만 펼쳐지게 해주세요 -->
+															
+															<div class="in_detailBox" style="display:none">
+																<button type="button" class="in_normalBtn">건강상 지속적인 케어가 꼭 필요한 고객</button><!-- 선택시 on 토글 -->
+																<button type="button" class="in_normalBtn">정시 복용약으로 케어필요</button>
+																<button type="button" class="in_normalBtn">힘들고 긴 일정 소화가 어려운고객</button>
+																<button type="button" class="in_normalBtn">잦은 화장실로 비행기, 버스앞 배석요망</button>
+																<button type="button" class="in_normalBtn">추위에 약하여 별도 침구, 난방필요 고객</button>
+																<button type="button" class="in_normalBtn">장시간 버스 탑승이 어려운 고객</button>
+																<button type="button" class="in_normalBtn">흡연룸 선호 고객</button>
+															</div>
+														</li>
+														<li>
+															<label class="comRadio"><input type="radio" name="addList"><span>식사</span></label><!-- 클릭시 아래 펼쳐짐 -->
+															
+															<div class="in_detailBox" style="display:none">
+																<button type="button" class="in_toggleBtn">특정음식 섭취불가 (과민)</button><!-- 클릭시 on처리 -->
+																<div class="inner_deList">
+																	<button type="button">육류 (돼지고기, 소고기 등)</button><!-- 선택시 on 처리 -->
+																	<button type="button" class="">생선/해산물 (고등어, 새우 등)</button>
+																	<button type="button">유제품 (계란, 우유 등)</button>
+																	<button type="button">견과류 (땅콩 등)</button>
+																</div>
+																
+																<button type="button" class="in_toggleBtn">특정음식 비 선호</button><!-- 클릭시 on처리 -->
+																<div class="inner_deList">
+																	<button type="button">육류 (돼지고기, 소고기 등)</button><!-- 선택시 on 처리 -->
+																	<button type="button" class="">생선/해산물 (고등어, 새우 등)</button>
+																	<button type="button">유제품 (계란, 우유 등)</button>
+																	<button type="button">견과류 (땅콩 등)</button>
+																</div>
+																
+																<button type="button" class="in_toggleBtn">특정음식 비 선호</button><!-- 클릭시 on처리 -->
+																<div class="inner_deList">
+																	<button type="button">육류 (돼지고기, 소고기 등)</button><!-- 선택시 on 처리 -->
+																	<button type="button" class="">생선/해산물 (고등어, 새우 등)</button>
+																	<button type="button">유제품 (계란, 우유 등)</button>
+																	<button type="button">견과류 (땅콩 등)</button>
+																</div>
+															</div>
+														</li>
+														<li>
+															<label class="comRadio"><input type="radio" name="addList"><span>도난분실</span></label><!-- 클릭시 아래 펼쳐짐 :: 한개씩만 펼쳐지게 해주세요 -->
+															
+															<div class="in_detailBox" style="display:none">
+																<button type="button" class="in_toggleBtn">도난 물품</button><!-- 클릭시 on처리 -->
+																<div class="inner_deList">
+																	<input type="text" class="inputTxt" placeholder="물품명을 입력해 주세요.">
+																</div>
+																
+																<button type="button" class="in_toggleBtn">고객이 물품을 분실함(폴리스리포트건)</button><!-- 클릭시 on처리 -->
+																<div class="inner_deList">
+																	<input type="text" class="inputTxt" placeholder="물품명을 입력해 주세요.">
+																</div>
+																
+																<button type="button" class="in_toggleBtn">고객이 물품을 분실함</button><!-- 클릭시 on처리 -->
+																<div class="inner_deList">
+																	<input type="text" class="inputTxt" placeholder="물품명을 입력해 주세요.">
+																</div>
+																
+																<button type="button" class="in_toggleBtn noneTog">고객이 분실물 추후 받을예정</button><!-- 클릭시 on처리 :: 입력폼 없는경우 noneTog 추가 -->
+															</div>
+														</li>
+														<li>
+															<label class="comRadio"><input type="radio" name="addList"><span>쇼핑</span></label><!-- 클릭시 아래 펼쳐짐 -->
+															
+															<div class="in_detailBox" style="display:none">
+																<button type="button">특정음식 섭취불가 (과민)</button><!-- 클릭시 아래 펼쳐지고 on처리 -->
+																<div class="inner_deList">
+																	<button type="button" class="on">육류 (돼지고기, 소고기 등)</button><!-- 선택시 on 처리 -->
+																	<button type="button">생선/해산물 (고등어, 새우 등)</button>
+																	<button type="button">유제품 (계란, 우유 등)/button>
+																	<button type="button">견과류 (땅콩 등)</button>
+																</div>
+															</div>
+														</li>
+														<li>
+															<label class="comRadio"><input type="radio" name="addList"><span>고객요청</span></label><!-- 클릭시 아래 펼쳐짐 -->
+															
+															<div class="in_detailBox short" style="display:none"><!-- 고객요청인경우 short 추가 -->
+																<textarea placeholder="요청사항을 입력해 주세요"></textarea>
+															</div>
+														</li>
+													</ul>
+													
+													<div class="alertBtn_box">
+														<button type="button" class="alertBtn gray">취소</button>
+														<button type="button" class="alertBtn">확인</button>
+													</div>
+												</div>
+											</div>
+											<!-- // 항목선택 팝업 -->
+										</li>
+										<!-- // 20171128 추가 -->
+									</ul>
+									
+									<!-- 입력창 -->
+									<!-- 20171128 삭제 div class="inWriteBox">
+										<span class="select">
+											<select title="구분 선택" class="selectBox">
+												<option>식사</option>
+												<option>쇼핑</option>
+												<option>건강</option>
+												<option>고객요청</option>
+											</select>
+										</span>
+										<span class="cellPad"></span>
+										<span class="wAuto"><textarea type="text" placeholder="내용을 입력해주세요" title="입력"></textarea></span> textarea 줄바꿈시 자동 늘어짐 :: 늘어질경우 span에 height:추가 
+										<span><button type="submit" class="addBtn"><em>등록</em></button></span>
+									</div-->
+									<!-- // 입력창 -->
+								</td>
+							</tr>
+							<!-- // 고객특성 펼쳐지는 영역 -->
+							
+							<tr>
+								<th scope="row" class="c_red">행사 중<br>특이사항</th>
+								<td colspan="3"><a href="#" class="inToggle">도난분실, 질병상해, 고객칭찬, 고객불만, 기타사항</a><!-- 클릭시 class="on"추가 :: 아래 <tr> 노출 --></td>
+							</tr>
+							<!-- 특이사항 펼쳐지는 영역 -->
+							<tr class="inTogCont" style="display:none">
+								<td colspan="4">
+									<ul class="inDetailList">
+										<li>
+											<strong>고객칭찬</strong>
+											<em>미모가 출중하시다 하니 좋아하심</em>
+											<button type="button" class="delBtn" title="삭제하기">삭제</button><!-- 삭제 버튼 -->
+										</li>
+										<li>
+											<strong>질병사고</strong>
+											<em>둘째날 석식 후 복통과 설사</em>
+											<button type="button" class="delBtn" title="삭제하기">삭제</button><!-- 삭제 버튼 -->
+										</li>
+										
+										<li>
+											<strong>도난분실</strong>
+											<em>고객 물품이 도난됨 (폴리스리포트건)<span>DSLR 카메라 니콘 D750</span></em>
+											<button type="button" class="delBtn" title="삭제하기">삭제</button><!-- 삭제 버튼 -->
+										</li>
+										
+										<!-- 20171128 추가 -->
+										<li class="lastBtnAdd">
+											<button type="button" class="smallBtnPlus gray" title="추가">행사 중 특이사항 추가</button><!-- 버튼클릭시 아래 레이어 노출 -->
+											<p>이번 행사에 발생한 특이사항을 입력</p>
+											
+											<!-- 항목선택 팝업 -->
+											<div class="layerPop02" style="display:none">
+												<div class="">
+													<ul class="smPopRadioCont">
+														<li>
+															<label class="comRadio"><input type="radio" name="addList"><span>건강</span></label><!-- 클릭시 아래 펼쳐짐 :: 한개씩만 펼쳐지게 해주세요 -->
+															
+															<div class="in_detailBox" style="display:none">
+																<button type="button" class="in_normalBtn">건강상 지속적인 케어가 꼭 필요한 고객</button><!-- 선택시 on 토글 -->
+																<button type="button" class="in_normalBtn">정시 복용약으로 케어필요</button>
+																<button type="button" class="in_normalBtn">힘들고 긴 일정 소화가 어려운고객</button>
+																<button type="button" class="in_normalBtn">잦은 화장실로 비행기, 버스앞 배석요망</button>
+																<button type="button" class="in_normalBtn">추위에 약하여 별도 침구, 난방필요 고객</button>
+																<button type="button" class="in_normalBtn">장시간 버스 탑승이 어려운 고객</button>
+																<button type="button" class="in_normalBtn">흡연룸 선호 고객</button>
+															</div>
+														</li>
+														<li>
+															<label class="comRadio"><input type="radio" name="addList"><span>식사</span></label><!-- 클릭시 아래 펼쳐짐 -->
+															
+															<div class="in_detailBox" style="display:none">
+																<button type="button" class="in_toggleBtn">특정음식 섭취불가 (과민)</button><!-- 클릭시 on처리 -->
+																<div class="inner_deList">
+																	<button type="button">육류 (돼지고기, 소고기 등)</button><!-- 선택시 on 처리 -->
+																	<button type="button" class="">생선/해산물 (고등어, 새우 등)</button>
+																	<button type="button">유제품 (계란, 우유 등)</button>
+																	<button type="button">견과류 (땅콩 등)</button>
+																</div>
+																
+																<button type="button" class="in_toggleBtn">특정음식 비 선호</button><!-- 클릭시 on처리 -->
+																<div class="inner_deList">
+																	<button type="button">육류 (돼지고기, 소고기 등)</button><!-- 선택시 on 처리 -->
+																	<button type="button" class="">생선/해산물 (고등어, 새우 등)</button>
+																	<button type="button">유제품 (계란, 우유 등)</button>
+																	<button type="button">견과류 (땅콩 등)</button>
+																</div>
+																
+																<button type="button" class="in_toggleBtn">특정음식 비 선호</button><!-- 클릭시 on처리 -->
+																<div class="inner_deList">
+																	<button type="button">육류 (돼지고기, 소고기 등)</button><!-- 선택시 on 처리 -->
+																	<button type="button" class="">생선/해산물 (고등어, 새우 등)</button>
+																	<button type="button">유제품 (계란, 우유 등)</button>
+																	<button type="button">견과류 (땅콩 등)</button>
+																</div>
+															</div>
+														</li>
+														<li>
+															<label class="comRadio"><input type="radio" name="addList"><span>도난분실</span></label><!-- 클릭시 아래 펼쳐짐 :: 한개씩만 펼쳐지게 해주세요 -->
+															
+															<div class="in_detailBox" style="display:none">
+																<button type="button" class="in_toggleBtn">도난 물품</button><!-- 클릭시 on처리 -->
+																<div class="inner_deList">
+																	<input type="text" class="inputTxt" placeholder="물품명을 입력해 주세요.">
+																</div>
+																
+																<button type="button" class="in_toggleBtn">고객이 물품을 분실함(폴리스리포트건)</button><!-- 클릭시 on처리 -->
+																<div class="inner_deList">
+																	<input type="text" class="inputTxt" placeholder="물품명을 입력해 주세요.">
+																</div>
+																
+																<button type="button" class="in_toggleBtn">고객이 물품을 분실함</button><!-- 클릭시 on처리 -->
+																<div class="inner_deList">
+																	<input type="text" class="inputTxt" placeholder="물품명을 입력해 주세요.">
+																</div>
+																
+																<button type="button" class="in_toggleBtn noneTog">고객이 분실물 추후 받을예정</button><!-- 클릭시 on처리 :: 입력폼 없는경우 noneTog 추가 -->
+															</div>
+														</li>
+														<li>
+															<label class="comRadio"><input type="radio" name="addList"><span>쇼핑</span></label><!-- 클릭시 아래 펼쳐짐 -->
+															
+															<div class="in_detailBox" style="display:none">
+																<button type="button">특정음식 섭취불가 (과민)</button><!-- 클릭시 아래 펼쳐지고 on처리 -->
+																<div class="inner_deList">
+																	<button type="button" class="on">육류 (돼지고기, 소고기 등)</button><!-- 선택시 on 처리 -->
+																	<button type="button">생선/해산물 (고등어, 새우 등)</button>
+																	<button type="button">유제품 (계란, 우유 등)/button>
+																	<button type="button">견과류 (땅콩 등)</button>
+																</div>
+															</div>
+														</li>
+														<li>
+															<label class="comRadio"><input type="radio" name="addList"><span>고객요청</span></label><!-- 클릭시 아래 펼쳐짐 -->
+															
+															<div class="in_detailBox short" style="display:none"><!-- 고객요청인경우 short 추가 -->
+																<textarea placeholder="요청사항을 입력해 주세요"></textarea>
+															</div>
+														</li>
+													</ul>
+													
+													<div class="alertBtn_box">
+														<button type="button" class="alertBtn gray">취소</button>
+														<button type="button" class="alertBtn">확인</button>
+													</div>
+												</div>
+											</div>
+											<!-- // 항목선택 팝업 -->
+										</li>
+										<!-- // 20171128 추가 -->
+									</ul>
+									
+									<!-- 입력창 -->
+									<!-- 20171128 삭제 div class="inWriteBox">
+										<span class="select02">
+											<select title="구분 선택" class="selectBox">
+												<option>NO-SHOW</option>
+												<option>도난분실</option>
+												<option>질병상해건강</option>
+												<option>고객칭찬</option>
+												<option>고객불만</option>
+												<option>기타사항</option>
+											</select>
+										</span>
+										<span class="cellPad"></span>
+										<span class="wAuto"><textarea type="text" placeholder="내용을 입력해주세요" title="입력"></textarea></span> textarea 줄바꿈시 자동 늘어짐 :: 늘어질경우 span에 height:추가 
+										<span><button type="submit" class="addBtn"><em>등록</em></button></span>
+									</div-->
+									<!-- // 입력창 -->
+								</td>
+							</tr>
+							<!-- // 특이사항 펼쳐지는 영역 -->
+							  
+						</tbody>
+					</table>
+				</li>
+				
+				<li>
+					<div class="titBox">
+						<strong>RP1712345678 / 2 / <span class="c_red">A</span></strong>
+						<em><span>L</span>공동행사</em>
+					</div>
+					
+					<table class="personTable">
+						<caption>고객정보 상세표</caption>
+						<colgroup>
+							<col style="width:25%">
+							<col style="width:30%">
+							<col style="width:20%">
+							<col style="width:25%">
+						</colgroup>
+						
+						<tbody>
+							<tr>
+								<th scope="row">이름</th>
+								<td colspan="3">김두울
+									<a href="#" class="rarrBtn">상세정보<span class="c_gray">＞</span></a>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">생년월일</th>
+								<td>1964.01.02 (남)</td>
+								<th scope="row">HC회원</th>
+								<td>회원</td>
+							</tr>
+							<tr>
+								<th scope="row">핸드폰</th>
+								<!-- 휴대폰 미입력인경우 -->
+								<td colspan="3">
+									휴대폰 미입력 <button type="button" class="smallBtnWhite red">입력</button><!-- 20171128 수정버튼 추가 :: 클릭시 팝업노출 -->
+									
+									<!-- 20171128 휴대폰번호 수정/등록 팝업 -->
+									<div class="layerPop02" style="display:none">
+										<div class="">
+											<div class="smPopCont">
+												<h3>고객 휴대폰번호 수정/등록</h3>
+												
+												<ul class="tbList">
+													<li><em>이름</em><div><strong>김하나</strong></div></li>
+													<li><em>생일</em>
+														<div>
+															<strong>1967</strong><i>년</i>
+															<strong>01</strong><i>월</i>
+															<strong>0</strong><span><input type="tel" class="inputSm" placeholder="" maxlength="1"></span><i>일</i>
+														</div>
+													</li>
+													<li><span class="long">휴대폰번호</span><span><input type="tel" class="inputTxt" placeholder="휴대폰 번호를 입력해 주세요"></span></li>
+												</ul>
+												
+												<div class="bBox">
+													<label><input type="checkbox" class="redCheck"> <span>개인정보 수집/이용동의</span></label>
+													<a href="#" class="termsView">전문보기</a>
+												</div>
+												<div class="bBox">
+													<label><input type="checkbox" class="redCheck"> <span>마케팅 활용 동의 (선택)</span></label>
+													<a href="#" class="termsView">전문보기</a>
+												</div>
+											</div>
+											<div class="alertBtn_box">
+												<button type="button" class="alertBtn gray">취소</button>
+												<button type="button" class="alertBtn">다음</button>
+											</div>
+										</div>
+									</div>
+									<!-- // 휴대폰번호 수정/등록 팝업 -->
+									
+									<!--<a href="#" class="phoneBtn">휴대폰 미입력</a--> <!-- 선택시 class="on" 추가되면 css로 아래 펼쳐짐 -->
+									<!--<div class="telWrite">
+										<div class="tBox">
+											<input type="tel" class="inputTxt" title="휴대폰 입력" placeholder="휴대폰 번호 입력">
+											<button type="submit" class="smallBtnGray">완료</button>
+										</div>
+										<div class="bBox">
+											<label><input type="checkbox" class="redCheck"> <span>개인정보 수집/이용동의</span></label>
+											<a href="#" class="termsView">전문보기</a>
+										</div>
+									</div-->
+								</td>
+								<!-- // 휴대폰 미입력인경우 -->
+							</tr>
+							<tr>
+								<th scope="row">HC마일리지</th>
+								<!-- 마일리지 적립여부 -->
+								<td colspan="3">
+									HC회원시 <span class="c_red">19,800마일</span> 적립 <button type="button" class="smallBtnWhite red">가입</button><!-- 20171128 수정버튼 추가 :: 클릭시 팝업노출 -->
+
+									<!-- 20171128 하나투어 마일리지 서명 -->
+									<div class="layerPop02" style="display:none">
+										<div class="">
+											<div class="smPopCont">
+												<!-- 20171213 수정 -->
+												<p class="signTxt" style="">서명을 해주세요.</p><!-- 서명시 none처리 -->
+												<canvas class="signBox" style="position:relative;"></canvas><!-- 서명 -->
+												<!-- // 20171213 수정 -->
+											</div>
+											<div class="alertBtn_box">
+												<button type="button" class="alertBtn gray">취소</button>
+												<button type="button" class="alertBtn">입력</button>
+											</div>
+										</div>
+									</div>
+									<!-- //20171128 하나투어 마일리지 서명  -->
+
+									<!-- 20171128 하나투어 마일리지 클럽 회원가입 팝업 1 -->
+									<div class="layerPop02" style="display:none">
+										<div class="">
+											<div class="smPopCont">
+												<h3>하나투어 마일리지 클럽 회원가입</h3>
+												
+												<ul class="tbList">
+													<li><em>이름</em><div><strong>김하나</strong></div></li>
+													<li><em>생일</em>
+														<div>
+															<strong>1967</strong><i>년</i>
+															<strong>01</strong><i>월</i>
+															<strong>0</strong><span><input type="tel" class="inputSm" placeholder="" maxlength="1"></span><i>일</i>
+														</div>
+													</li>
+													<li><span class="long">휴대폰번호</span><span><input type="tel" class="inputTxt" placeholder="휴대폰 번호를 입력해 주세요"></span></li>
+												</ul>
+												
+											</div>
+											<div class="alertBtn_box">
+												<button type="button" class="alertBtn gray">취소</button>
+												<button type="button" class="alertBtn">다음</button>
+											</div>
+										</div>
+									</div>
+									<!-- // 20171128 하나투어 마일리지 클럽 회원가입 팝업 1 -->
+									
+									<!-- 20171128 하나투어 마일리지 회원일경우 팝업 2 -->
+									<div class="layerPop02" style="display:none">
+										<div class="">
+											<div class="smPopCont">
+												<h3>하나투어 마일리지 클럽 회원가입</h3>
+												
+												<div class="popMileCont">
+													<p><b>김두울</b> 고객 하나투어 마일리지 클럽 회원이십니다.</p>
+													<strong class="numBox">회원번호 (1000 210000)</strong>
+													<p class="mileTxt">이번 여행으로 <span class="c_red">19,800마일</span>을 적립하여 드리겠습니다.
+														<em>아래 마일리지 적립요청을 눌러주세요.</em>
+													</p>
+												</div>
+												
+											</div>
+											<div class="alertBtn_box">
+												<button type="button" class="alertBtn gray">취소</button>
+												<button type="button" class="alertBtn">마일리지 적립요청</button>
+											</div>
+										</div>
+									</div>
+									<!-- //20171128  하나투어 마일리지 회원일경우 팝업2  -->
+									
+									<!-- 20171128 하나투어 마일리지 회원일경우 팝업 3 -->
+									<div class="layerPop02" style="display:none">
+										<div class="">
+											<div class="smPopCont">
+												<h3>하나투어 마일리지 클럽 회원가입</h3>
+												
+												<div class="popMileCont">
+													<p><b>김두울</b> 고객 하나투어 마일리지 클럽 회원이십니다.</p>
+													<strong class="numBox">가입 시 <span class="c_red">19,800마일</span> 적립</strong>
+													
+													<div class="bBox">
+														<label><input type="checkbox" class="redCheck"> <span>마일리지클럽 회원약관</span></label>
+														<a href="#" class="termsView">전문보기</a>
+													</div>
+													<div class="bBox">
+														<label><input type="checkbox" class="redCheck"> <span>개인정보 수집/이용동의</span></label>
+														<a href="#" class="termsView">전문보기</a>
+													</div>
+													<div class="bBox">
+														<label><input type="checkbox" class="redCheck"> <span>개인정보 제 3자 제공 동의</span></label>
+														<a href="#" class="termsView">전문보기</a>
+													</div>
+													<div class="bBox">
+														<label><input type="checkbox" class="redCheck"> <span>마케팅 수신 동의 (선택)</span></label>
+														<a href="#" class="termsView">전문보기</a>
+													</div>
+													<div class="bBox">
+														<label><input type="checkbox" class="redCheck"> <span>마케팅 제3자 제공 (선택)</span></label>
+														<a href="#" class="termsView">전문보기</a>
+													</div>
+												</div>
+												
+											</div>
+											<div class="alertBtn_box">
+												<button type="button" class="alertBtn gray">취소</button>
+												<button type="button" class="alertBtn">다음</button>
+											</div>
+										</div>
+									</div>
+									<!-- //20171128  하나투어 마일리지 회원일경우 팝업3  -->
+									
+									<!-- 20180116 하나투어 마일리지 가입 아동/유아 -->
+									<div class="layerPop02" style="display:n one">
+										<div class="">
+											<div class="smPopCont">
+												<h3>하나투어 마일리지 클럽 회원가입</h3>
+												
+												<div class="popMileCont">
+													<p><b>김유아</b> 고객 회원가입을 원하시면<br>아래 확인 버튼을 눌러주세요</p><br>
+													
+													<p class="mileTxt">신청서와 증빙서류로 가입이 가능한 <span class="c_red">모바일페이지</span>로 이동합니다.
+														<em>* 유아는 마일리지 적립대상이 아닙니다.</em>
+													</p>
+												</div>
+											</div>
+											<div class="alertBtn_box">
+												<button type="button" class="alertBtn gray">취소</button>
+												<button type="button" class="alertBtn">확인</button>
+											</div>
+										</div>
+									</div>
+									<!-- // 20180116  하나투어 마일리지 가입 아동/유아  -->
+									
+									<!--<a href="#" class="phoneBtn">HC회원시 <span class="c_red">19,800마일</span> 적립</a--> <!-- 선택시 class="on" 추가되면 css로 아래 펼쳐짐 -->
+									<!--div class="telWrite">
+										<div class="tBox">
+											<input type="tel" class="inputTxt" title="휴대폰 입력" placeholder="휴대폰 번호 입력">
+											<button type="submit" class="smallBtnGray">완료</button>
+										</div>
+										<div class="bBox">
+											<label><input type="checkbox" class="redCheck"> <span>개인정보 수집/이용동의</span></label>
+											<a href="#" class="termsView">전문보기</a>
+										</div>
+									</div-->
+								</td>
+								<!-- // 마일리지 적립여부 -->
+							</tr>
+							<tr>
+								<th scope="row">요청사항</th>
+								<td colspan="3"><a href="#" class="inToggle">현지서비스, 호텔, 선택관광, 루밍, VIP서비스</a><!-- 클릭시 class="on"추가 :: 아래 <tr> 노출 --></td>
+							</tr>
+							<!-- 요청사항 펼쳐지는 영역 -->
+							<tr class="inTogCont" style="display:none">
+								<td colspan="4">
+									<ul class="inDetailList checkCase"><!-- 20171128 체크박스있는경우 class="checkCase" 추가 -->
+										<li>
+											<strong>과일바구니</strong>
+											<em>멘트: 즐거운 여행되세요.며느리 올림 즐거운 여행되세요.</em>
+											<input type="checkbox" class="checkBtn" title="체크하기"><!-- 20171128 button에서 checkbox로 변경 -->
+										</li>
+										<li>
+											<strong>선택관광</strong>
+											<em>전통안마 2시간</em>
+											<input type="checkbox" class="checkBtn" title="체크하기"><!-- 20171128 button에서 checkbox로 변경 -->
+										</li>
+										<li>
+											<strong>VIP서비스</strong>
+											<input type="checkbox" class="checkBtn" title="체크하기"><!-- 20171128 button에서 checkbox로 변경 -->
+										</li>
+									</ul>
+								</td>
+							</tr>
+							<!-- // 요청사항 펼쳐지는 영역 -->
+							
+							<tr>
+								<th scope="row"><a href="#" class="characteBtn">고객특성<br>정보</a></th>
+								<td colspan="3">
+									<button type="button" class="smallBtnPlus">고객특성정보 선택</button><!-- 20171128 추가 -->
+									
+									<!-- 항목선택 팝업 -->
+									<div class="layerPop02" style="display:none">
+										<div class="">
+											<ul class="smPopRadioCont">
+												<li>
+													<label class="comRadio"><input type="radio" name="addList"><span>건강</span></label><!-- 클릭시 아래 펼쳐짐 :: 한개씩만 펼쳐지게 해주세요 -->
+													
+													<div class="in_detailBox" style="display:none">
+														<button type="button" class="in_normalBtn">건강상 지속적인 케어가 꼭 필요한 고객</button><!-- 선택시 on 토글 -->
+														<button type="button" class="in_normalBtn">정시 복용약으로 케어필요</button>
+														<button type="button" class="in_normalBtn">힘들고 긴 일정 소화가 어려운고객</button>
+														<button type="button" class="in_normalBtn">잦은 화장실로 비행기, 버스앞 배석요망</button>
+														<button type="button" class="in_normalBtn">추위에 약하여 별도 침구, 난방필요 고객</button>
+														<button type="button" class="in_normalBtn">장시간 버스 탑승이 어려운 고객</button>
+														<button type="button" class="in_normalBtn">흡연룸 선호 고객</button>
+													</div>
+												</li>
+												<li>
+													<label class="comRadio"><input type="radio" name="addList"><span>식사</span></label><!-- 클릭시 아래 펼쳐짐 -->
+													
+													<div class="in_detailBox" style="display:none">
+														<button type="button" class="in_toggleBtn">특정음식 섭취불가 (과민)</button><!-- 클릭시 on처리 -->
+														<div class="inner_deList">
+															<button type="button">육류 (돼지고기, 소고기 등)</button><!-- 선택시 on 처리 -->
+															<button type="button" class="">생선/해산물 (고등어, 새우 등)</button>
+															<button type="button">유제품 (계란, 우유 등)</button>
+															<button type="button">견과류 (땅콩 등)</button>
+														</div>
+														
+														<button type="button" class="in_toggleBtn">특정음식 비 선호</button><!-- 클릭시 on처리 -->
+														<div class="inner_deList">
+															<button type="button">육류 (돼지고기, 소고기 등)</button><!-- 선택시 on 처리 -->
+															<button type="button" class="">생선/해산물 (고등어, 새우 등)</button>
+															<button type="button">유제품 (계란, 우유 등)</button>
+															<button type="button">견과류 (땅콩 등)</button>
+														</div>
+														
+														<button type="button" class="in_toggleBtn">특정음식 비 선호</button><!-- 클릭시 on처리 -->
+														<div class="inner_deList">
+															<button type="button">육류 (돼지고기, 소고기 등)</button><!-- 선택시 on 처리 -->
+															<button type="button" class="">생선/해산물 (고등어, 새우 등)</button>
+															<button type="button">유제품 (계란, 우유 등)</button>
+															<button type="button">견과류 (땅콩 등)</button>
+														</div>
+													</div>
+												</li>
+												<li>
+													<label class="comRadio"><input type="radio" name="addList"><span>도난분실</span></label><!-- 클릭시 아래 펼쳐짐 :: 한개씩만 펼쳐지게 해주세요 -->
+													
+													<div class="in_detailBox" style="display:none">
+														<button type="button" class="in_toggleBtn">도난 물품</button><!-- 클릭시 on처리 -->
+														<div class="inner_deList">
+															<input type="text" class="inputTxt" placeholder="물품명을 입력해 주세요.">
+														</div>
+														
+														<button type="button" class="in_toggleBtn">고객이 물품을 분실함(폴리스리포트건)</button><!-- 클릭시 on처리 -->
+														<div class="inner_deList">
+															<input type="text" class="inputTxt" placeholder="물품명을 입력해 주세요.">
+														</div>
+														
+														<button type="button" class="in_toggleBtn">고객이 물품을 분실함</button><!-- 클릭시 on처리 -->
+														<div class="inner_deList">
+															<input type="text" class="inputTxt" placeholder="물품명을 입력해 주세요.">
+														</div>
+														
+														<button type="button" class="in_toggleBtn noneTog">고객이 분실물 추후 받을예정</button><!-- 클릭시 on처리 :: 입력폼 없는경우 noneTog 추가 -->
+													</div>
+												</li>
+												<li>
+													<label class="comRadio"><input type="radio" name="addList"><span>쇼핑</span></label><!-- 클릭시 아래 펼쳐짐 -->
+													
+													<div class="in_detailBox" style="display:none">
+														<button type="button">특정음식 섭취불가 (과민)</button><!-- 클릭시 아래 펼쳐지고 on처리 -->
+														<div class="inner_deList">
+															<button type="button" class="on">육류 (돼지고기, 소고기 등)</button><!-- 선택시 on 처리 -->
+															<button type="button">생선/해산물 (고등어, 새우 등)</button>
+															<button type="button">유제품 (계란, 우유 등)/button>
+															<button type="button">견과류 (땅콩 등)</button>
+														</div>
+													</div>
+												</li>
+												<li>
+													<label class="comRadio"><input type="radio" name="addList"><span>고객요청</span></label><!-- 클릭시 아래 펼쳐짐 -->
+													
+													<div class="in_detailBox short" style="display:none"><!-- 고객요청인경우 short 추가 -->
+														<textarea placeholder="요청사항을 입력해 주세요"></textarea>
+													</div>
+												</li>
+											</ul>
+											
+											<div class="alertBtn_box">
+												<button type="button" class="alertBtn gray">취소</button>
+												<button type="button" class="alertBtn">확인</button>
+											</div>
+										</div>
+									</div>
+									<!-- // 항목선택 팝업 -->
+								</td>
+							</tr>
+							<tr>
+								<th scope="row" class="c_red">행사 중<br>특이사항</th>
+								<td colspan="3">
+									<button type="button" class="smallBtnPlus">행사 중 특이사항 선택</button><!-- 20171128 추가 -->
+									
+									<!-- 항목선택 팝업 -->
+									<div class="layerPop02" style="display:none">
+										<div class="">
+											<ul class="smPopRadioCont">
+												<li>
+													<label class="comRadio"><input type="radio" name="addList"><span>건강</span></label><!-- 클릭시 아래 펼쳐짐 :: 한개씩만 펼쳐지게 해주세요 -->
+													
+													<div class="in_detailBox" style="display:none">
+														<button type="button" class="in_normalBtn">건강상 지속적인 케어가 꼭 필요한 고객</button><!-- 선택시 on 토글 -->
+														<button type="button" class="in_normalBtn">정시 복용약으로 케어필요</button>
+														<button type="button" class="in_normalBtn">힘들고 긴 일정 소화가 어려운고객</button>
+														<button type="button" class="in_normalBtn">잦은 화장실로 비행기, 버스앞 배석요망</button>
+														<button type="button" class="in_normalBtn">추위에 약하여 별도 침구, 난방필요 고객</button>
+														<button type="button" class="in_normalBtn">장시간 버스 탑승이 어려운 고객</button>
+														<button type="button" class="in_normalBtn">흡연룸 선호 고객</button>
+													</div>
+												</li>
+												<li>
+													<label class="comRadio"><input type="radio" name="addList"><span>식사</span></label><!-- 클릭시 아래 펼쳐짐 -->
+													
+													<div class="in_detailBox" style="display:none">
+														<button type="button" class="in_toggleBtn">특정음식 섭취불가 (과민)</button><!-- 클릭시 on처리 -->
+														<div class="inner_deList">
+															<button type="button">육류 (돼지고기, 소고기 등)</button><!-- 선택시 on 처리 -->
+															<button type="button" class="">생선/해산물 (고등어, 새우 등)</button>
+															<button type="button">유제품 (계란, 우유 등)</button>
+															<button type="button">견과류 (땅콩 등)</button>
+														</div>
+														
+														<button type="button" class="in_toggleBtn">특정음식 비 선호</button><!-- 클릭시 on처리 -->
+														<div class="inner_deList">
+															<button type="button">육류 (돼지고기, 소고기 등)</button><!-- 선택시 on 처리 -->
+															<button type="button" class="">생선/해산물 (고등어, 새우 등)</button>
+															<button type="button">유제품 (계란, 우유 등)</button>
+															<button type="button">견과류 (땅콩 등)</button>
+														</div>
+														
+														<button type="button" class="in_toggleBtn">특정음식 비 선호</button><!-- 클릭시 on처리 -->
+														<div class="inner_deList">
+															<button type="button">육류 (돼지고기, 소고기 등)</button><!-- 선택시 on 처리 -->
+															<button type="button" class="">생선/해산물 (고등어, 새우 등)</button>
+															<button type="button">유제품 (계란, 우유 등)</button>
+															<button type="button">견과류 (땅콩 등)</button>
+														</div>
+													</div>
+												</li>
+												<li>
+													<label class="comRadio"><input type="radio" name="addList"><span>도난분실</span></label><!-- 클릭시 아래 펼쳐짐 :: 한개씩만 펼쳐지게 해주세요 -->
+													
+													<div class="in_detailBox" style="display:none">
+														<button type="button" class="in_toggleBtn">도난 물품</button><!-- 클릭시 on처리 -->
+														<div class="inner_deList">
+															<input type="text" class="inputTxt" placeholder="물품명을 입력해 주세요.">
+														</div>
+														
+														<button type="button" class="in_toggleBtn">고객이 물품을 분실함(폴리스리포트건)</button><!-- 클릭시 on처리 -->
+														<div class="inner_deList">
+															<input type="text" class="inputTxt" placeholder="물품명을 입력해 주세요.">
+														</div>
+														
+														<button type="button" class="in_toggleBtn">고객이 물품을 분실함</button><!-- 클릭시 on처리 -->
+														<div class="inner_deList">
+															<input type="text" class="inputTxt" placeholder="물품명을 입력해 주세요.">
+														</div>
+														
+														<button type="button" class="in_toggleBtn noneTog">고객이 분실물 추후 받을예정</button><!-- 클릭시 on처리 :: 입력폼 없는경우 noneTog 추가 -->
+													</div>
+												</li>
+												<li>
+													<label class="comRadio"><input type="radio" name="addList"><span>쇼핑</span></label><!-- 클릭시 아래 펼쳐짐 -->
+													
+													<div class="in_detailBox" style="display:none">
+														<button type="button">특정음식 섭취불가 (과민)</button><!-- 클릭시 아래 펼쳐지고 on처리 -->
+														<div class="inner_deList">
+															<button type="button" class="on">육류 (돼지고기, 소고기 등)</button><!-- 선택시 on 처리 -->
+															<button type="button">생선/해산물 (고등어, 새우 등)</button>
+															<button type="button">유제품 (계란, 우유 등)/button>
+															<button type="button">견과류 (땅콩 등)</button>
+														</div>
+													</div>
+												</li>
+												<li>
+													<label class="comRadio"><input type="radio" name="addList"><span>고객요청</span></label><!-- 클릭시 아래 펼쳐짐 -->
+													
+													<div class="in_detailBox short" style="display:none"><!-- 고객요청인경우 short 추가 -->
+														<textarea placeholder="요청사항을 입력해 주세요"></textarea>
+													</div>
+												</li>
+											</ul>
+											
+											<div class="alertBtn_box">
+												<button type="button" class="alertBtn gray">취소</button>
+												<button type="button" class="alertBtn">확인</button>
+											</div>
+										</div>
+									</div>
+									<!-- // 항목선택 팝업 -->
+								</td>
+							</tr>
+							  
+						</tbody>
+					</table>
+				</li>
+				
+				<li>
+					<div class="titBox">
+						<strong>RP1712345678 / 3 / <span class="c_red">A</span></strong>
+						<em><span>L</span>공동행사</em>
+					</div>
+					
+					<table class="personTable">
+						<caption>고객정보 상세표</caption>
+						<colgroup>
+							<col style="width:25%">
+							<col style="width:30%">
+							<col style="width:20%">
+							<col style="width:25%">
+						</colgroup>
+						
+						<tbody>
+							<tr>
+								<th scope="row">이름</th>
+								<td colspan="3">이모두
+									<a href="#" class="rarrBtn">상세정보<span class="c_gray">＞</span></a>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">생년월일</th>
+								<td>1964.01.02 (남)</td>
+								<th scope="row">HC회원</th>
+								<td>회원</td>
+							</tr>
+							<tr>
+								<th scope="row">핸드폰</th>
+								<!-- 휴대폰 미입력인경우 -->
+								<td colspan="3">
+									휴대폰 미입력 <button type="button" class="smallBtnWhite red">입력</button><!-- 20171128 수정버튼 추가 :: 클릭시 팝업노출 -->
+									
+									<!-- 20171128 휴대폰번호 수정/등록 팝업 -->
+									<div class="layerPop02" style="display:none">
+										<div class="">
+											<div class="smPopCont">
+												<h3>고객 휴대폰번호 수정/등록</h3>
+												
+												<ul class="tbList">
+													<li><em>이름</em><div><strong>김하나</strong></div></li>
+													<li><em>생일</em>
+														<div>
+															<strong>1967</strong><i>년</i>
+															<strong>01</strong><i>월</i>
+															<strong>0</strong><span><input type="tel" class="inputSm" placeholder="" maxlength="1"></span><i>일</i>
+														</div>
+													</li>
+													<li><span class="long">휴대폰번호</span><span><input type="tel" class="inputTxt" placeholder="휴대폰 번호를 입력해 주세요"></span></li>
+												</ul>
+												
+												<div class="bBox">
+													<label><input type="checkbox" class="redCheck"> <span>개인정보 수집/이용동의</span></label>
+													<a href="#" class="termsView">전문보기</a>
+												</div>
+												<div class="bBox">
+													<label><input type="checkbox" class="redCheck"> <span>마케팅 활용 동의 (선택)</span></label>
+													<a href="#" class="termsView">전문보기</a>
+												</div>
+											</div>
+											<div class="alertBtn_box">
+												<button type="button" class="alertBtn gray">취소</button>
+												<button type="button" class="alertBtn">다음</button>
+											</div>
+										</div>
+									</div>
+									<!-- // 휴대폰번호 수정/등록 팝업 -->
+									
+									<!--<a href="#" class="phoneBtn">휴대폰 미입력</a--> <!-- 선택시 class="on" 추가되면 css로 아래 펼쳐짐 -->
+									<!--<div class="telWrite">
+										<div class="tBox">
+											<input type="tel" class="inputTxt" title="휴대폰 입력" placeholder="휴대폰 번호 입력">
+											<button type="submit" class="smallBtnGray">완료</button>
+										</div>
+										<div class="bBox">
+											<label><input type="checkbox" class="redCheck"> <span>개인정보 수집/이용동의</span></label>
+											<a href="#" class="termsView">전문보기</a>
+										</div>
+									</div-->
+								</td>
+								<!-- // 휴대폰 미입력인경우 -->
+							</tr>
+							<tr>
+								<th scope="row">HC마일리지</th>
+								<!-- 마일리지 적립여부 -->
+								<td colspan="3">
+									HC회원시 <span class="c_red">19,800마일</span> 적립 <button type="button" class="smallBtnWhite red">가입</button><!-- 20171128 수정버튼 추가 :: 클릭시 팝업노출 -->
+									
+									<!-- 20171128 하나투어 마일리지 클럽 회원가입 팝업 1 -->
+									<div class="layerPop02" style="display:none">
+										<div class="">
+											<div class="smPopCont">
+												<h3>하나투어 마일리지 클럽 회원가입</h3>
+												
+												<ul class="tbList">
+													<li><em>이름</em><div><strong>김하나</strong></div></li>
+													<li><em>생일</em>
+														<div>
+															<strong>1967</strong><i>년</i>
+															<strong>01</strong><i>월</i>
+															<strong>0</strong><span><input type="tel" class="inputSm" placeholder="" maxlength="1"></span><i>일</i>
+														</div>
+													</li>
+													<li><span class="long">휴대폰번호</span><span><input type="tel" class="inputTxt" placeholder="휴대폰 번호를 입력해 주세요"></span></li>
+												</ul>
+												
+											</div>
+											<div class="alertBtn_box">
+												<button type="button" class="alertBtn gray">취소</button>
+												<button type="button" class="alertBtn">다음</button>
+											</div>
+										</div>
+									</div>
+									<!-- // 20171128 하나투어 마일리지 클럽 회원가입 팝업 1 -->
+									
+									<!-- 20171128 하나투어 마일리지 회원일경우 팝업 2 -->
+									<div class="layerPop02" style="display:none">
+										<div class="">
+											<div class="smPopCont">
+												<h3>하나투어 마일리지 클럽 회원가입</h3>
+												
+												<div class="popMileCont">
+													<p><b>김두울</b> 고객 하나투어 마일리지 클럽 회원이십니다.</p>
+													<strong class="numBox">회원번호 (1000 210000)</strong>
+													<p class="mileTxt">이번 여행으로 <span class="c_red">19,800마일</span>을 적립하여 드리겠습니다.
+														<em>아래 마일리지 적립요청을 눌러주세요.</em>
+													</p>
+												</div>
+												
+											</div>
+											<div class="alertBtn_box">
+												<button type="button" class="alertBtn gray">취소</button>
+												<button type="button" class="alertBtn">마일리지 적립요청</button>
+											</div>
+										</div>
+									</div>
+									<!-- //20171128  하나투어 마일리지 회원일경우 팝업2  -->
+									
+									<!-- 20171128 하나투어 마일리지 회원일경우 팝업 3 -->
+									<div class="layerPop02" style="display:none">
+										<div class="">
+											<div class="smPopCont">
+												<h3>하나투어 마일리지 클럽 회원가입</h3>
+												
+												<div class="popMileCont">
+													<p><b>김두울</b> 고객 하나투어 마일리지 클럽 회원이십니다.</p>
+													<strong class="numBox">가입 시 <span class="c_red">19,800마일</span> 적립</strong>
+													
+													<div class="bBox">
+														<label><input type="checkbox" class="redCheck"> <span>마일리지클럽 회원약관</span></label>
+														<a href="#" class="termsView">전문보기</a>
+													</div>
+													<div class="bBox">
+														<label><input type="checkbox" class="redCheck"> <span>개인정보 수집/이용동의</span></label>
+														<a href="#" class="termsView">전문보기</a>
+													</div>
+													<div class="bBox">
+														<label><input type="checkbox" class="redCheck"> <span>개인정보 제 3자 제공 동의</span></label>
+														<a href="#" class="termsView">전문보기</a>
+													</div>
+													<div class="bBox">
+														<label><input type="checkbox" class="redCheck"> <span>마케팅 수신 동의 (선택)</span></label>
+														<a href="#" class="termsView">전문보기</a>
+													</div>
+													<div class="bBox">
+														<label><input type="checkbox" class="redCheck"> <span>마케팅 제3자 제공 (선택)</span></label>
+														<a href="#" class="termsView">전문보기</a>
+													</div>
+												</div>
+												
+											</div>
+											<div class="alertBtn_box">
+												<button type="button" class="alertBtn gray">취소</button>
+												<button type="button" class="alertBtn">다음</button>
+											</div>
+										</div>
+									</div>
+									<!-- //20171128  하나투어 마일리지 회원일경우 팝업3  -->
+									
+									<!-- 20171128 하나투어 마일리지 서명 -->
+									<div class="layerPop02" style="display:none">
+										<div class="">
+											<div class="smPopCont">
+												<canvas class="signBox"></canvas><!-- 서명 -->
+												<p class="signTxt">서명을 해주세요.</p><!-- 서명시 none처리 -->
+											</div>
+											<div class="alertBtn_box">
+												<button type="button" class="alertBtn gray">취소</button>
+												<button type="button" class="alertBtn">입력</button>
+											</div>
+										</div>
+									</div>
+									<!-- //20171128 하나투어 마일리지 서명  -->
+									
+									<!--<a href="#" class="phoneBtn">HC회원시 <span class="c_red">19,800마일</span> 적립</a--> <!-- 선택시 class="on" 추가되면 css로 아래 펼쳐짐 -->
+									<!--div class="telWrite">
+										<div class="tBox">
+											<input type="tel" class="inputTxt" title="휴대폰 입력" placeholder="휴대폰 번호 입력">
+											<button type="submit" class="smallBtnGray">완료</button>
+										</div>
+										<div class="bBox">
+											<label><input type="checkbox" class="redCheck"> <span>개인정보 수집/이용동의</span></label>
+											<a href="#" class="termsView">전문보기</a>
+										</div>
+									</div-->
+								</td>
+								<!-- // 마일리지 적립여부 -->
+							</tr>
+							<tr>
+								<th scope="row">요청사항</th>
+								<td colspan="3"><a href="#" class="inToggle">과일바구니, 선택관광, VIP서비스</a><!-- 클릭시 class="on"추가 :: 아래 <tr> 노출 --></td>
+							</tr>
+							<!-- 요청사항 펼쳐지는 영역 -->
+							<tr class="inTogCont" style="display:none">
+								<td colspan="4">
+									<ul class="inDetailList checkCase"><!-- 20171128 체크박스있는경우 class="checkCase" 추가 -->
+										<li>
+											<strong>과일바구니</strong>
+											<em>멘트: 즐거운 여행되세요.며느리 올림 즐거운 여행되세요.</em>
+											<input type="checkbox" class="checkBtn on" title="체크하기"><!-- 체크될경우 class="on"추가 -->
+										</li>
+										<li>
+											<strong>선택관광</strong>
+											<em>전통안마 2시간</em>
+											<input type="checkbox" class="checkBtn on" title="체크하기"><!-- 체크될경우 class="on"추가 -->
+										</li>
+										<li>
+											<strong>VIP서비스</strong>
+											<input type="checkbox" class="checkBtn on" title="체크하기"><!-- 체크될경우 class="on"추가 -->
+										</li>
+									</ul>
+								</td>
+							</tr>
+							<!-- // 요청사항 펼쳐지는 영역 -->
+							
+							<tr>
+								<th scope="row"><a href="#" class="characteBtn">고객특성<br>정보</a></th>
+								<td colspan="3"><a href="#" class="inToggle">식사, 쇼핑, 건강, 고객요청</a><!-- 클릭시 class="on"추가 :: 아래 <tr> 노출 --></td>
+							</tr>
+							<!-- 고객특성 펼쳐지는 영역 -->
+							<tr class="inTogCont" style="display:none">
+								<td colspan="4">
+									<ul class="inDetailList">
+										<li>
+											<strong>식사</strong>
+											<em>약 복용으로 정식 식사를 드셔야 함</em>
+											<button type="button" class="delBtn" title="삭제하기">삭제</button><!-- 삭제 버튼 -->
+										</li>
+										<li>
+											<strong>고객요청</strong>
+											<em>김하나 고객님께서 요청사항 요청사항 요청사항</em>
+											<button type="button" class="modifyBtn" title="수정하기">수정</button><!-- 수정 버튼 : 20170718 추가 -->
+											<button type="button" class="delBtn" title="삭제하기">삭제</button><!-- 삭제 버튼 -->
+										</li>
+										
+										<!-- 20171128 추가 -->
+										<li class="lastBtnAdd">
+											<button type="button" class="smallBtnPlus gray" title="추가">고객특성정보 추가</button>
+											<p>행사 이전부터 가지고 있던 고객의 특성/성향을 입력</p>
+											
+											<!-- 항목선택 팝업 -->
+											<div class="layerPop02" style="display:none">
+												<div class="">
+													<ul class="smPopRadioCont">
+														<li>
+															<label class="comRadio"><input type="radio" name="addList"><span>건강</span></label><!-- 클릭시 아래 펼쳐짐 :: 한개씩만 펼쳐지게 해주세요 -->
+															
+															<div class="in_detailBox" style="display:none">
+																<button type="button" class="in_normalBtn">건강상 지속적인 케어가 꼭 필요한 고객</button><!-- 선택시 on 토글 -->
+																<button type="button" class="in_normalBtn">정시 복용약으로 케어필요</button>
+																<button type="button" class="in_normalBtn">힘들고 긴 일정 소화가 어려운고객</button>
+																<button type="button" class="in_normalBtn">잦은 화장실로 비행기, 버스앞 배석요망</button>
+																<button type="button" class="in_normalBtn">추위에 약하여 별도 침구, 난방필요 고객</button>
+																<button type="button" class="in_normalBtn">장시간 버스 탑승이 어려운 고객</button>
+																<button type="button" class="in_normalBtn">흡연룸 선호 고객</button>
+															</div>
+														</li>
+														<li>
+															<label class="comRadio"><input type="radio" name="addList"><span>식사</span></label><!-- 클릭시 아래 펼쳐짐 -->
+															
+															<div class="in_detailBox" style="display:none">
+																<button type="button" class="in_toggleBtn">특정음식 섭취불가 (과민)</button><!-- 클릭시 on처리 -->
+																<div class="inner_deList">
+																	<button type="button">육류 (돼지고기, 소고기 등)</button><!-- 선택시 on 처리 -->
+																	<button type="button" class="">생선/해산물 (고등어, 새우 등)</button>
+																	<button type="button">유제품 (계란, 우유 등)</button>
+																	<button type="button">견과류 (땅콩 등)</button>
+																</div>
+																
+																<button type="button" class="in_toggleBtn">특정음식 비 선호</button><!-- 클릭시 on처리 -->
+																<div class="inner_deList">
+																	<button type="button">육류 (돼지고기, 소고기 등)</button><!-- 선택시 on 처리 -->
+																	<button type="button" class="">생선/해산물 (고등어, 새우 등)</button>
+																	<button type="button">유제품 (계란, 우유 등)</button>
+																	<button type="button">견과류 (땅콩 등)</button>
+																</div>
+																
+																<button type="button" class="in_toggleBtn">특정음식 비 선호</button><!-- 클릭시 on처리 -->
+																<div class="inner_deList">
+																	<button type="button">육류 (돼지고기, 소고기 등)</button><!-- 선택시 on 처리 -->
+																	<button type="button" class="">생선/해산물 (고등어, 새우 등)</button>
+																	<button type="button">유제품 (계란, 우유 등)</button>
+																	<button type="button">견과류 (땅콩 등)</button>
+																</div>
+															</div>
+														</li>
+														<li>
+															<label class="comRadio"><input type="radio" name="addList"><span>도난분실</span></label><!-- 클릭시 아래 펼쳐짐 :: 한개씩만 펼쳐지게 해주세요 -->
+															
+															<div class="in_detailBox" style="display:none">
+																<button type="button" class="in_toggleBtn">도난 물품</button><!-- 클릭시 on처리 -->
+																<div class="inner_deList">
+																	<input type="text" class="inputTxt" placeholder="물품명을 입력해 주세요.">
+																</div>
+																
+																<button type="button" class="in_toggleBtn">고객이 물품을 분실함(폴리스리포트건)</button><!-- 클릭시 on처리 -->
+																<div class="inner_deList">
+																	<input type="text" class="inputTxt" placeholder="물품명을 입력해 주세요.">
+																</div>
+																
+																<button type="button" class="in_toggleBtn">고객이 물품을 분실함</button><!-- 클릭시 on처리 -->
+																<div class="inner_deList">
+																	<input type="text" class="inputTxt" placeholder="물품명을 입력해 주세요.">
+																</div>
+																
+																<button type="button" class="in_toggleBtn noneTog">고객이 분실물 추후 받을예정</button><!-- 클릭시 on처리 :: 입력폼 없는경우 noneTog 추가 -->
+															</div>
+														</li>
+														<li>
+															<label class="comRadio"><input type="radio" name="addList"><span>쇼핑</span></label><!-- 클릭시 아래 펼쳐짐 -->
+															
+															<div class="in_detailBox" style="display:none">
+																<button type="button">특정음식 섭취불가 (과민)</button><!-- 클릭시 아래 펼쳐지고 on처리 -->
+																<div class="inner_deList">
+																	<button type="button" class="on">육류 (돼지고기, 소고기 등)</button><!-- 선택시 on 처리 -->
+																	<button type="button">생선/해산물 (고등어, 새우 등)</button>
+																	<button type="button">유제품 (계란, 우유 등)/button>
+																	<button type="button">견과류 (땅콩 등)</button>
+																</div>
+															</div>
+														</li>
+														<li>
+															<label class="comRadio"><input type="radio" name="addList"><span>고객요청</span></label><!-- 클릭시 아래 펼쳐짐 -->
+															
+															<div class="in_detailBox short" style="display:none"><!-- 고객요청인경우 short 추가 -->
+																<textarea placeholder="요청사항을 입력해 주세요"></textarea>
+															</div>
+														</li>
+													</ul>
+													
+													<div class="alertBtn_box">
+														<button type="button" class="alertBtn gray">취소</button>
+														<button type="button" class="alertBtn">확인</button>
+													</div>
+												</div>
+											</div>
+											<!-- // 항목선택 팝업 -->
+										</li>
+										<!-- // 20171128 추가 -->
+									</ul>
+									
+									<!-- 입력창 -->
+									<!-- 20171128 삭제 div class="inWriteBox">
+										<span class="select">
+											<select title="구분 선택" class="selectBox">
+												<option>식사</option>
+												<option>쇼핑</option>
+												<option>건강</option>
+												<option>고객요청</option>
+											</select>
+										</span>
+										<span class="cellPad"></span>
+										<span class="wAuto"><textarea type="text" placeholder="내용을 입력해주세요" title="입력"></textarea></span> textarea 줄바꿈시 자동 늘어짐 :: 늘어질경우 span에 height:추가 
+										<span><button type="submit" class="addBtn"><em>등록</em></button></span>
+									</div-->
+									<!-- // 입력창 -->
+								</td>
+							</tr>
+							<!-- // 고객특성 펼쳐지는 영역 -->
+							
+							<tr>
+								<th scope="row" class="c_red">행사 중<br>특이사항</th>
+								<td colspan="3"><a href="#" class="inToggle">도난분실, 질병상해, 고객칭찬, 고객불만, 기타사항</a><!-- 클릭시 class="on"추가 :: 아래 <tr> 노출 --></td>
+							</tr>
+							<!-- 특이사항 펼쳐지는 영역 -->
+							<tr class="inTogCont" style="display:none">
+								<td colspan="4">
+									<ul class="inDetailList">
+										<li>
+											<strong>고객칭찬</strong>
+											<em>미모가 출중하시다 하니 좋아하심</em>
+											<button type="button" class="delBtn" title="삭제하기">삭제</button><!-- 삭제 버튼 -->
+										</li>
+										<li>
+											<strong>질병사고</strong>
+											<em>둘째날 석식 후 복통과 설사</em>
+											<button type="button" class="delBtn" title="삭제하기">삭제</button><!-- 삭제 버튼 -->
+										</li>
+										
+										<!-- 20171128 추가 -->
+										<li class="lastBtnAdd">
+											<button type="button" class="smallBtnPlus gray" title="추가">행사 중 특이사항 추가</button>
+											<p>이번 행사에 발생한 특이사항을 입력</p>
+											
+											<!-- 항목선택 팝업 -->
+											<div class="layerPop02" style="display:none">
+												<div class="">
+													<ul class="smPopRadioCont">
+														<li>
+															<label class="comRadio"><input type="radio" name="addList"><span>건강</span></label><!-- 클릭시 아래 펼쳐짐 :: 한개씩만 펼쳐지게 해주세요 -->
+															
+															<div class="in_detailBox" style="display:none">
+																<button type="button" class="in_normalBtn">건강상 지속적인 케어가 꼭 필요한 고객</button><!-- 선택시 on 토글 -->
+																<button type="button" class="in_normalBtn">정시 복용약으로 케어필요</button>
+																<button type="button" class="in_normalBtn">힘들고 긴 일정 소화가 어려운고객</button>
+																<button type="button" class="in_normalBtn">잦은 화장실로 비행기, 버스앞 배석요망</button>
+																<button type="button" class="in_normalBtn">추위에 약하여 별도 침구, 난방필요 고객</button>
+																<button type="button" class="in_normalBtn">장시간 버스 탑승이 어려운 고객</button>
+																<button type="button" class="in_normalBtn">흡연룸 선호 고객</button>
+															</div>
+														</li>
+														<li>
+															<label class="comRadio"><input type="radio" name="addList"><span>식사</span></label><!-- 클릭시 아래 펼쳐짐 -->
+															
+															<div class="in_detailBox" style="display:none">
+																<button type="button" class="in_toggleBtn">특정음식 섭취불가 (과민)</button><!-- 클릭시 on처리 -->
+																<div class="inner_deList">
+																	<button type="button">육류 (돼지고기, 소고기 등)</button><!-- 선택시 on 처리 -->
+																	<button type="button" class="">생선/해산물 (고등어, 새우 등)</button>
+																	<button type="button">유제품 (계란, 우유 등)</button>
+																	<button type="button">견과류 (땅콩 등)</button>
+																</div>
+																
+																<button type="button" class="in_toggleBtn">특정음식 비 선호</button><!-- 클릭시 on처리 -->
+																<div class="inner_deList">
+																	<button type="button">육류 (돼지고기, 소고기 등)</button><!-- 선택시 on 처리 -->
+																	<button type="button" class="">생선/해산물 (고등어, 새우 등)</button>
+																	<button type="button">유제품 (계란, 우유 등)</button>
+																	<button type="button">견과류 (땅콩 등)</button>
+																</div>
+																
+																<button type="button" class="in_toggleBtn">특정음식 비 선호</button><!-- 클릭시 on처리 -->
+																<div class="inner_deList">
+																	<button type="button">육류 (돼지고기, 소고기 등)</button><!-- 선택시 on 처리 -->
+																	<button type="button" class="">생선/해산물 (고등어, 새우 등)</button>
+																	<button type="button">유제품 (계란, 우유 등)</button>
+																	<button type="button">견과류 (땅콩 등)</button>
+																</div>
+															</div>
+														</li>
+														<li>
+															<label class="comRadio"><input type="radio" name="addList"><span>도난분실</span></label><!-- 클릭시 아래 펼쳐짐 :: 한개씩만 펼쳐지게 해주세요 -->
+															
+															<div class="in_detailBox" style="display:none">
+																<button type="button" class="in_toggleBtn">도난 물품</button><!-- 클릭시 on처리 -->
+																<div class="inner_deList">
+																	<input type="text" class="inputTxt" placeholder="물품명을 입력해 주세요.">
+																</div>
+																
+																<button type="button" class="in_toggleBtn">고객이 물품을 분실함(폴리스리포트건)</button><!-- 클릭시 on처리 -->
+																<div class="inner_deList">
+																	<input type="text" class="inputTxt" placeholder="물품명을 입력해 주세요.">
+																</div>
+																
+																<button type="button" class="in_toggleBtn">고객이 물품을 분실함</button><!-- 클릭시 on처리 -->
+																<div class="inner_deList">
+																	<input type="text" class="inputTxt" placeholder="물품명을 입력해 주세요.">
+																</div>
+																
+																<button type="button" class="in_toggleBtn noneTog">고객이 분실물 추후 받을예정</button><!-- 클릭시 on처리 :: 입력폼 없는경우 noneTog 추가 -->
+															</div>
+														</li>
+														<li>
+															<label class="comRadio"><input type="radio" name="addList"><span>쇼핑</span></label><!-- 클릭시 아래 펼쳐짐 -->
+															
+															<div class="in_detailBox" style="display:none">
+																<button type="button">특정음식 섭취불가 (과민)</button><!-- 클릭시 아래 펼쳐지고 on처리 -->
+																<div class="inner_deList">
+																	<button type="button" class="on">육류 (돼지고기, 소고기 등)</button><!-- 선택시 on 처리 -->
+																	<button type="button">생선/해산물 (고등어, 새우 등)</button>
+																	<button type="button">유제품 (계란, 우유 등)/button>
+																	<button type="button">견과류 (땅콩 등)</button>
+																</div>
+															</div>
+														</li>
+														<li>
+															<label class="comRadio"><input type="radio" name="addList"><span>고객요청</span></label><!-- 클릭시 아래 펼쳐짐 -->
+															
+															<div class="in_detailBox short" style="display:none"><!-- 고객요청인경우 short 추가 -->
+																<textarea placeholder="요청사항을 입력해 주세요"></textarea>
+															</div>
+														</li>
+													</ul>
+													
+													<div class="alertBtn_box">
+														<button type="button" class="alertBtn gray">취소</button>
+														<button type="button" class="alertBtn">확인</button>
+													</div>
+												</div>
+											</div>
+											<!-- // 항목선택 팝업 -->
+										</li>
+										<!-- // 20171128 추가 -->
+									</ul>
+									
+									<!-- 입력창 -->
+									<!-- 20171128 삭제 div class="inWriteBox">
+										<span class="select02">
+											<select title="구분 선택" class="selectBox">
+												<option>NO-SHOW</option>
+												<option>도난분실</option>
+												<option>질병상해건강</option>
+												<option>고객칭찬</option>
+												<option>고객불만</option>
+												<option>기타사항</option>
+											</select>
+										</span>
+										<span class="cellPad"></span>
+										<span class="wAuto"><textarea type="text" placeholder="내용을 입력해주세요" title="입력"></textarea></span> textarea 줄바꿈시 자동 늘어짐 :: 늘어질경우 span에 height:추가 
+										<span><button type="submit" class="addBtn"><em>등록</em></button></span>
+									</div-->
+									<!-- // 입력창 -->
+								</td>
+							</tr>
+							<!-- // 특이사항 펼쳐지는 영역 -->
+							  
+						</tbody>
+					</table>
+				</li>
+			</ul>
+			<!-- // 고객정보 리스트 -->
+			
+			
+		</section>
+		<!-- // 컨텐츠 -->
+	</div>
+	<!--//wrap-->
+	
+	<!-- 약관 팝업 20170420 추가 -->
+	<div class="layerPop" style="display:none">
+		<div>
+			<h3>개인 정보 관련 안내</h3>
+			<a href="#" class="btn_y_Close" title="닫기"></a>
+			
+			<!-- content -->
+			<div class="pop_y_cont">
+				<ul class="termsTxtList">
+					<li><strong>* 개인정보수집/이용목적 : </strong> 여행서비스 이용고객 확인 및  여행 정보관련  안내</li>
+					<li><strong>* 수집/이용항목 : </strong>성명, 휴대전화번호</li>
+					<li><strong>* 보유 및 이용기간 :</strong>서비스 제공 및 관계법령에 따른 보존기간<br><br>
+						개인정보 주체자는 개인정보 수집, 이용에 대한 동의를 거부할 권리가 있습니다. 동의를 거부할 경우 정보제공 및 일부서비스 이용이 불가함을알려드립니다.
+					</li>
+				</ul>
+			</div>
+			<!-- // content -->
+		</div>
+	</div>
+	<!-- // 약관 팝업 20170420 추가 -->
+	
+	<!-- 20170616 고객특성정보 안내 -->
+	<div class="layerPop" style="display:none">
+		<div>
+			<h3>고객특성정보 작성안내<a href="#" class="btn_y_Close" title="닫기"></a></h3>
+			
+			<!-- content -->
+			<div class="pop_y_cont characteCont"><!-- 고객특성정보 characteCont -->
+				<strong>고객 특성정보는 최대한 순화된 표현으로 작성해주세요.</strong>
+				<p>※ 고객에게 절대로 노출되지 않도록 항상 유의해주세요.</p>
+				
+				<strong>아래 3가지 항목은 기재하지않도록 주의해주세요.</strong>
+				<ul class="termsTxtList">
+					<li>- 직접적인 병명</li>
+					<li>- 복용하는 약명</li>
+					<li>- 신체상 불편한 부위(장애)에 대한 직접적인 표현</li>
+				</ul>
+			</div>
+			<!-- // content -->
+			
+		</div>
+	</div>
+	<!-- // 20170616 고객특성정보 안내 -->
+	
+	<!-- 20170616 고객특성정보 안내 -->
+	<div class="layerPop" style="display:none">
+		<div>
+			<h3>고객특성정보 작성안내<a href="#" class="btn_y_Close" title="닫기"></a></h3>
+			
+			<!-- content -->
+			<div class="pop_y_cont characteCont"><!-- 고객특성정보 characteCont -->
+				<strong>고객 특성정보는 최대한 순화된 표현으로 작성해주세요.</strong>
+				<p>※ 고객에게 절대로 노출되지 않도록 항상 유의해주세요.</p>
+				
+				<strong>아래 3가지 항목은 기재하지않도록 주의해주세요.</strong>
+				<ul class="termsTxtList">
+					<li>- 직접적인 병명</li>
+					<li>- 복용하는 약명</li>
+					<li>- 신체상 불편한 부위(장애)에 대한 직접적인 표현</li>
+				</ul>
+			</div>
+			<!-- // content -->
+			
+		</div>
+	</div>
+	<!-- // 20170616 고객특성정보 안내 -->
+	
+	<!-- 20170718 정보수정 팝업 추가 -->
+	<div class="layerPop" style="display:none">
+		<div>
+			<h3>정보수정 <a href="#" class="btn_y_Close" title="닫기"></a></h3>
+			
+			<!-- content -->
+			<div class="pop_y_cont modifyCont">
+				<select class="selectBox">
+					<option>식사</option>
+					<option>건강</option>
+				</select>
+				
+				<div class="textarea">
+					<textarea></textarea>
+				</div>
+				
+				<div class="btnTwoBox">
+					<a href="#" class="m_btnRed gray">취소</a>
+					<a href="#" class="m_btnRed">확인</a>
+				</div>
+			</div>
+			<!-- // content -->
+			
+		</div>
+	</div>
+	<!-- // 20170718 정보수정 팝업 추가 -->
+</body>
+</html>
+
