@@ -1,0 +1,167 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,form,div,p,h1,h2,h3,h4,h5,h6,dl,dt,dd,ul,ol,li,fieldset,input,textarea,blockquote,th,td {margin:0;padding:0;-webkit-text-size-adjust:none; font-size:1.4rem; font-family:'DroidSansFallback','Apple Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;color:#333;letter-spacing:-1px}
+table {border-spacing:0;border-collapse:collapse;width:100%}
+table caption {font-size:0;line-height:0;width:0;height:0;visibility:hidden;text-indent:-9999px}
+em,cite,address,dfn,var {font-style:normal}
+dl,ul,ol{list-style:none}
+img,fieldset {border:0}
+input, select, img{vertical-align:middle;}
+input, select {-webkit-appearance:none;border-radius:0}
+a {text-decoration:none;color:#333}
+
+html {font-size:10px}
+@media all and (min-width:375px) { /* 아이폰6 */
+html {font-size:11.5px}
+}
+@media all and (min-width:414px) { /* 아이폰6 plus */
+html {font-size:12px}
+}
+
+body {width:100%;overflow-x:hidden;-webkit-text-size-adjust:none;text-size-adjust: none;}
+#wrap {height:100vh;background-color:#3b3b47}
+#wrap.sub {background-color:#fff}
+/* header */
+.loginHeader {text-align:center; padding:30px 4px;background-color:#fff}
+.loginHeader h1 {margin-bottom:17px}
+.loginHeader h1 img {height:72px}
+.loginHeader p {font-size:1.4rem;color:#282828}
+.mainHeader h1 {background: #fff; text-align:center}
+.mainHeader h1 a {display:inline-block;padding:14px 20px}
+.mainHeader h1 img {height:18px}
+.subHeader h1 {background: #fff; text-align:center; position:relative; background-color:#df3a62; font-size:16px; padding:12px 0; color:#fff; font-weight:normal}
+.subHeader .backKey {position:absolute;left:0;top:0; padding:11px 15px}
+.subHeader .backKey img {height:19px}
+
+/* login content */
+.loginCont {padding:20px; text-align:center}
+.loginCont .inputBox {padding-bottom:50px}
+.loginCont .inputBox input[type='text'],.loginCont .inputBox input[type='tel'] {width:100%;border-radius:5px; height:42px; border:1px solid #ccc; box-sizing:border-box; text-indent:10px; font-size:1.4rem}
+.loginCont .inputBox input.name {margin-bottom:10px}
+.loginCont .inputBox input.phone {margin-bottom:15px}
+.loginCont .inputBox .btnLogin {color:#fff;background-color:#df3a62; display:block; border-radius:5px; text-align:center; padding:15px 0; font-size:1.8rem; font-weight:bold; margin-bottom:16px}
+.loginCont .inputBox .check {display:block; text-align:left}
+.loginCont .inputBox .check input {height:22px;width:22px;border:1px solid #ccc;border-radius:3px;background-color:#fff;margin:-2px 10px 0 0}
+.loginCont .inputBox .check input:checked {border:1px solid #c83d67;background:#c83d67 url(../images/bg_check_on.png) no-repeat center center;background-size:14px 11px}
+.loginCont .inputBox .check input+span {color:#fff;font-size:13px}
+.loginCont .btnLoginPop {display:inline-block;text-align:center;font-size:1.5rem; color:#fff; border-bottom:1px solid #9d9da3}
+.loginCont .method {border-top:1px solid #5c5c66;padding-top:17px}
+.loginCont .method dt {font-size:1.5rem;color:#fff;margin-bottom:4px}
+.loginCont .method dd {position:relative;font-size:1.2rem;color:#fff;padding-left:8px}
+.loginCont .method dd:before {content:'';width:2px;height:2px;border-radius:50%;background-color:#fff;position:absolute;left:0;top:6px}
+
+/* main */
+.cardBox {padding:27px 20px}
+.cardBox .boxTop {background:url(../images/bg_boxtop01.png) no-repeat 0 0;background-size:100% 100%; position:relative; border-radius:5px; padding:25px}
+.cardBox .boxTop.bgType01 {background-image:url(../images/bg_boxtop02.png)}
+.cardBox .boxTop.bgType02 {background-image:url(../images/bg_boxtop03.png)}
+.cardBox .boxTop .tit {position:absolute;right:20px;top:25px}
+.cardBox .boxTop .tit img {height:36px}
+.cardBox .boxTop .rating {}
+.cardBox .boxTop .rating img { height:35px}
+.cardBox .boxTop b {font-size:3.5rem; color:#fff; display:block; margin-top:55px}
+.cardBox .boxTop .date {position:absolute;right:20px;bottom:25px; text-align:right; color:#fff}
+.cardBox .boxTop .date span {display:block;font-size:1.0rem;opacity:0.6}
+.cardBox .barcode {background:#fff;margin-top:-40px; padding:55px 30px 20px; border-radius:5px}
+.cardBox .barcode img {width:100%}
+.btmTxt01 {color:#fff;text-align:center;padding:22px 15px 80px}
+
+.benefitSection {position:fixed;left:0;top:100%;width:100%;height:100%; margin-top:-52px; transition:top .4s ease-out, padding-top .4s ease-out; z-index:100}
+.benefitSection.open {padding-top:25vh; margin-top:0;top:0;}
+.benefitSection .btnToggle {display:block;position:relative; text-align:center}
+.benefitSection .btnToggle a {color:#fff;display:inline-block;font-size:16px; padding:12px 50px; font-weight:bold;background-color:#df3a62; border-radius:5px 5px 0 0; margin-bottom:10px; position:relative}
+.benefitSection .btnToggle:before {content:'';width:100%; height:10px; position:absolute;left:0;bottom:0; background-color:#df3a62; border-radius:5px 5px 0 0}
+.benefitSection .btnToggle a:after {content:''; display:inline-block; margin-left:12px;width:13px; height:9px;background:url(../images/ico_toggle_on.png) no-repeat 0 0;background-size:13px 9px; position:relative; top:-2px}
+.benefitSection.open .btnToggle {margin-top:-52px}
+.benefitSection.open .btnToggle a:after {background-image:url(../images/ico_toggle_off.png)}
+.benefitcont {z-index:100; height:75vh; overflow-y:scroll;-webkit-overflow-scrolling: touch; background-color:#fff}
+.benefitcont .inBenefit {padding-bottom:60px;background-color:#df3a62;} /* 개발팀넘길시 padding-bottom:60px 제거 */
+.benefitcont .inBenefit .subList {background-color:#fff}
+.benefitcont .inBenefit .subList li {text-align:left; border-bottom:1px solid #ddd; position:relative}
+.benefitcont .inBenefit .subList li a {display:block; color:#282828; font-size:1.5rem; padding:23px 0 23px 55px; background:no-repeat 20px center; background-size:19px}
+.benefitcont .inBenefit .subList li a.ico01 {background-image:url(../images/ico_sublist01.png)}
+.benefitcont .inBenefit .subList li a.ico02 {background-image:url(../images/ico_sublist02.png)}
+.benefitcont .inBenefit .subList li a.ico03 {background-image:url(../images/ico_sublist03.png)}
+.benefitcont .inBenefit .subList li a.ico04 {background-image:url(../images/ico_sublist04.png)}
+.benefitcont .inBenefit .subList li a.ico05 {background-image:url(../images/ico_sublist05.png)}
+.benefitcont .inBenefit .subList li a:after {content:''; position:absolute;right:20px;top:50%; margin-top:-8px;width:10px; height:17px;background:url(../images/bg_sublist01.png) no-repeat 0 0;background-size:10px 17px; }
+.benefitcont .inBenefit .btmCont { padding-bottom:25px}
+.benefitcont .inBenefit .txtList {padding:15px 10px}
+.benefitcont .inBenefit .txtList li {position:relative; color:#fff; padding:0 0 0 10px; text-align:left; margin-bottom:4px}
+.benefitcont .inBenefit .txtList li:last-child {margin-bottom:15px}
+.benefitcont .inBenefit .txtList li:before { content:'';width:2px; height:2px ;border-radius:50%; background-color:#fff; position:absolute;left:0;top:6px}
+.benefitcont .inBenefit .txtList li a {text-decoration:underline;font-weight:bold; color:#fff; display:inline-block; margin-top:4px}
+.benefitcont .inBenefit .btmCont .logOut {display:block; margin:0 10px; background-color:#464646;font-size:1.8rem; padding:14px 0; color:#fff; font-weight:bold; border-radius:5px; text-align:center;}
+.dim {background:#000; opacity:0.7; position:absolute;top:0;left:0;width:100%; height:100%; z-index:10}
+
+/* sub */
+.subCont {padding:25px 20px 30% 20px}
+.titSub {border-radius:50px; color:#fff; padding:4px 10px; display:inline-block}
+.titSub.bg_c01 {background-color:#9664c8}
+.titSub.bg_c02 {background-color:#969696}
+.titSub.bg_c03 {background-color:#e3855b}
+.titSub.bg_c04 {background-color:#7cb271}
+.inContBox {border-bottom:1px solid #e1e1e3; padding:10px 0 18px; margin-bottom:20px}
+.inContBox.lineNone {border-bottom:0}
+.inContBox.padT0 {padding-top:0}
+.txtList01 li {font-size:1.2rem; margin-bottom:13px; padding-left:8px; position:relative}
+.txtList01 li:before {content:''; width:2px; height:10px; background-color:#df3a62; position:absolute;left:0;top:2px}
+.txtList01 li:last-child {margin-bottom:0}
+.txtList01 li strong {display:block; font-size:1.3rem;margin-bottom:2px}
+.txtList01 li b {font-size:1.3rem}
+.txtList02 li {font-size:1.2rem; padding-left:8px; position:relative; margin-bottom:14px}
+.txtList02 li:before {content:''; width:2px; height:2px; background-color:#df3a62; position:absolute;left:0;top:6px}
+.txtList02 li strong {display:block;font-size:1.3rem; margin-bottom:2px}
+.txtList02 li:last-child {margin-bottom:0}
+.link {color:#2a4cac; text-decoration:underline}
+.btmtxt01 {color:#333; font-size:1.2rem; padding-bottom:20px}
+.bannerBox {position:fixed;left:0;bottom:0;width:100%}
+.bannerBox a {display:block}
+.bannerBox a img {width:100%}
+
+@media all and (min-width:375px) { /* 아이폰6 */
+.txtList01 li:before {top:5px}
+.txtList02 li:before {top:7px}
+}
+
+@media all and (max-width:320px) { /* 아이폰5 */
+.cardBox .boxTop b {margin-top:40px}
+}
+
+/* 팝업 */
+.layerPop {position:absolute;left:0;top:0;margin:50px 0;z-index:150;width:100%}
+.layerPop .innerBox { margin:0 20px;background-color:#fff;border-radius:5px; overflow:hidden;}
+.layerPop h2 {text-align:center;background-color:#f8f8f8;border-bottom:1px solid #ccc;padding:12px 0;font-size:1.8rem; font-weight:normal}
+.layerPop .contBox {padding:35px 15px 15px;text-align:center}
+.layerPop .contBox .txt01 {font-size:1.5rem;line-height:1.9rem;}
+.layerPop .contBox .txt02 {font-size:1.2rem;padding:0 12px 20px; margin-top:-10px; border-bottom:1px solid #ddd}
+.layerPop .contBox .txt03 {font-size:1.4rem; padding-bottom:20px}
+.layerPop .contBox .txt04 {font-size:1.5rem; padding:15px 0 30px}
+.layerPop .contBox .smTxt {display:block;font-size:1.3rem;margin-top:4px;padding-bottom:10px}
+.layerPop .contBox .inTxtBox {border:1px solid #e5e5e5;background-color:#fbfbfb;padding:10px 10px 12px;text-align:left;margin-top:35px}
+.layerPop .contBox .inTxtBox dt {font-size:1.2rem;margin-bottom:4px}
+.layerPop .contBox .inTxtBox dd {font-size:1.1rem;position:relative;padding-left:12px}
+.layerPop .contBox .inTxtBox dd:before {content:'';width:3px;height:3px;border-radius:50%;background-color:#333;position:absolute;left:4px;top:5px}
+.layerPop .contBox .loginTxt {text-align:left; margin-top:-10px}
+.layerPop .contBox .loginTxt li {position:relative; padding-left:12px;margin-bottom:20px}
+.layerPop .contBox .loginTxt li:first-child {padding-bottom:20px;border-bottom:1px solid #ddd}
+.layerPop .contBox .loginTxt li:before {content:'';width:3px;height:3px;border-radius:50%;background-color:#333;position:absolute;left:4px;top:5px}
+.layerPop .contBox .loginTxt li p {font-size:1.1rem;margin-top:4px}
+.layerPop .contBox .termsBox {text-align:left}
+.layerPop .contBox .termsBox > div {overflow:hidden}
+.layerPop .contBox .termsBox > div label {font-size:1.2rem; display:block; margin:20px 0 10px}
+.layerPop .contBox .termsBox > div label strong {color:#df3a62; font-weight:normal}
+.layerPop .contBox .termsBox > div input {height: 22px;width: 22px;border: 1px solid #ccc; border-radius: 3px; background-color: #fff; float:right; margin-top:-2px}
+.layerPop .contBox .termsBox > div input:checked {border:1px solid #464646;background:#464646 url(../images/bg_check_on.png) no-repeat center center;background-size:14px 11px}
+.layerPop .contBox .termsBox > div p {height:75px; overflow-y:scroll;-webkit-overflow-scrolling: touch; border:1px solid #e5e5e5; background-color:#fbfbfb;font-size:1.1rem; padding:10px 8px}
+.layerPop .contBox .termsBox > div p strong {display:block; margin:15px 0 2px}
+.layerPop .contBox .termsBox > div p strong:first-child {margin-top:0}
+.layerPop .contBox .termsBox .termBtmTxt {color:#df3a62; margin-top:10px; font-size:1.1rem; padding-bottom:15px}
+.layerPop .btnConfirm {display:block;background-color:#464646;font-size:1.6rem;color:#fff;text-align:center;border-radius:5px;font-weight:bold;padding:10px 0; margin:0 15px 15px}
+.layerPop .btnClose {display:block;background-color:#df3a62;font-size:1.6rem;color:#fff;text-align:center;border-radius:5px;font-weight:bold;padding:10px 0; margin:0 15px 15px}
+.mask {position: fixed;top: 0;left: 0; width:100%; height:100%;background: #000;opacity: 0.7;z-index: 100;}
+
+.twoBtn {overflow:hidden; padding:0 12px 20px}
+.twoBtn a {float:left;width:49%; margin:0 !important}
+.twoBtn a+a {float:right}
