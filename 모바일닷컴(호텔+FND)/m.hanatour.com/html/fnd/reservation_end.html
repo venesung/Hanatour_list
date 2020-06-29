@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>예약완료 - 현지투어 패스 입장권 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="../../css/fnd.css"><!-- FND 추가 -->
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-2.1.3.min.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common_new.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/swiper.min.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-ui-custom.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/hanatour/ht.calendar.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/free/m.fnd.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+	<header id="header"><!-- 띠배너 보일경우 class="tBanTy" 추가 -->
+		<div class="inner">
+			<h1><a href="#none" data-role="none"><img src="../../images/common/btn_nlogo.png" alt="하나투어"></a></h1>
+			<a href="#none" id="btnMenu" data-role="none"><img src="../../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+			<a href="#none" id="btnMyhome" data-role="none"><img src="../../images/common/btn_hdright.png" alt="마이홈"></a>
+		</div>
+	</header>
+	<div class="headerMargin"></div>
+	
+	<!-- 컨텐츠 영역 -->
+	<div id="container">
+		<h2 class="pagTit">예약완료</h2>
+		<!-- fnd 개편 -->
+		<section class="fndSection">
+			<!-- 현지투어·패스·입장권 예약 -->
+			<div class="reserv_choice">
+				<div class="inChoice">
+					<h3 class="tit_reserv">예약번호 및 결제마감시한 <button type="button" title="토글버튼" class="btn_toggle on"></button></h3><!-- class="on" toggle :: 아래 div none / block -->
+					<div>
+						<ul class="tbList">
+							<li><strong>예약번호</strong><span>RN1720447022<i>(예약일 : 2017-05-26 오전 10:49:58)</i></li>
+							<li><strong>예약상태</strong><span>예약확정 / 발권대기</span></li>
+							<li><strong>결제마감시한</strong><span class="c_red">010-0000-0000</span></li>
+							<li><strong>예약인원</strong><span class="c_red">성인1명 / 아동 1명 / 유아 1명</span></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="inChoice">
+					<h3 class="tit_reserv">예약자 정보<button type="button" title="토글버튼" class="btn_toggle on"></button></h3>
+					<div style="display:n one">
+						<ul class="tbList">
+							<li><strong>예약자명</strong><span>김하나</span></li>
+							<li><strong>생년월일</strong><span>1999년 11월 15일</span></li><!-- 20170921 추가 -->
+							<li><strong>연락처</strong><span>010-0000-0000</span></li>
+							<li><strong>이메일</strong><span>hanatour@hanatour.com</span></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="inChoice">
+					<h3 class="tit_reserv">사용자 정보<button type="button" title="토글버튼" class="btn_toggle on"></button></h3>
+					<div class="in_btnWrite">
+						<!-- 입력되었을경우 -->
+						<div class="writeData">
+							<h4 class="stitWrite">성인1 [대표자]</h4>
+							<ul class="tbList">
+								<li><strong>한글성명</strong><span>홍길동</span></li>
+								<li><strong>영문성명</strong><span>HONG GILDONG</span></li>
+								<li><strong>생년월일</strong><span>1980-01-01</span></li>
+								<li><strong>성별</strong><span>남성</span></li>
+								<li><strong>여권번호</strong><span>M123456789</span></li>
+								<li><strong>여권유효기간</strong><span>2020-0805</span></li>
+								<li><strong>전화번호</strong><span>010-0000-0000</span></li>
+								<li><strong>현지연락처</strong><span>010-0000-0000</span></li><!-- 20171019 추가 -->
+								<li><strong>이메일</strong><span>honggildonghonggildong@hanatour.com</span></li>
+								<li><strong>투숙호텔</strong><span>aaa hotel</span></li><!-- 20171019 추가 -->
+								<li><strong>사용시작일시</strong><span>2017년 08월 01일</span></li><!-- 20171019 추가 -->
+								<li><strong>사용종료일시</strong><span>2017년 08월 05일</span></li><!-- 20171019 추가 -->
+							</ul>
+						</div>
+						
+						<div class="writeData">	
+							<h4 class="stitWrite">성인2</h4>
+							<ul class="tbList">
+								<li><strong>한글성명</strong><span>홍길동</span></li>
+								<li><strong>영문성명</strong><span>HONG GILDONG</span></li>
+								<li><strong>생년월일</strong><span>1980-01-01</span></li>
+								<li><strong>성별</strong><span>남성</span></li>
+								<li><strong>여권번호</strong><span>M123456789</span></li>
+								<li><strong>여권유효기간</strong><span>2020-0805</span></li>
+								<li><strong>전화번호</strong><span>010-0000-0000</span></li>
+								<li><strong>이메일</strong><span>honggildonghonggildong@hanatour.com</span></li>
+							</ul>
+						</div>
+						<!-- // 입력되었을경우 -->
+					</div>
+				</div>
+				
+				<!-- 20171023 추가 -->
+				<div class="inChoice">
+					<h3 class="tit_reserv">탑승정보<button type="button" title="토글버튼" class="btn_toggle on"></button></h3>
+					<div style="display:n one">
+						<ul class="tbList">
+							<li><strong>항공편명</strong><span>KE0551</span></li>
+							<li><strong>출발공항</strong><span>인천국제공항</span></li>
+							<li><strong>도착공항</strong><span>나리타국제공항</span></li>
+							<li><strong>현지도착일시</strong><span class="c_red">2017-10-30 02:00</span></li>
+						</ul>
+					</div>
+				</div>
+				<!-- // 20171023 추가 -->
+				
+				<div class="inChoice">
+					<h3 class="tit_reserv">상품정보 및 결제정보<button type="button" title="토글버튼" class="btn_toggle on"></button></h3><!-- 20170921 수정 -->
+					<div style="display:n one">
+						<ul class="tbList">
+							<li><strong>상품명</strong><span class="c_red">상품코드[123456]<em>[방콕 출발]방콕 담넌사두억 수상시장 +위험한 기찻길 투어</em></span></li>
+							<li><strong>티켓구분</strong><span class="fwNor">실물티켓</span></li>
+							<li><strong>사용일자</strong><span class="c_red fwNor">2017년 08월 01일</span></li>
+							<li><strong>옵션1</strong><span class="fwNor">옵션1 값 입니다.</span></li>
+							<li><strong>미팅장소</strong><span class="fwNor">[08:00] 와이키키내 호텔 픽업</span></li><!-- 20171017 추가 -->
+						</ul>
+						
+						<table class="fnd_prodTable endType"><!-- 완료 class="endType" 추가 -->
+							<caption>선택 상품정보</caption>
+							<colgroup>
+								<col style="width:30%">
+								<col style="width:*">
+							</colgroup>
+							
+							<tfoot>
+								<tr>
+									<th scope="row">최종결제금액
+										<span class="optionTxt">(옵션추가금액 포함)</span><!-- 20171017 추가 -->
+									</th>
+									<td>
+										<strong>5,122,500<span>원</span></strong>
+										<em>(JPY 6,555,555)</em>
+									</td>
+								</tr>
+							</tfoot>
+							
+							<tbody>
+								<tr>
+									<th scope="row">상품가격</th>
+									<td>
+										<ul class="prodMoney">
+											<li>
+												<strong>22,500<span>원 (KRW 22,500)</span></strong>
+												<em>성인 1명 X 22,500원 (KRW 22,500)</em>
+											</li>
+											<li>
+												<strong>22,500<span>원 (KRW 22,500)</span></strong>
+												<em>아동 1명 X 22,500원 (KRW 22,500)</em>
+											</li>
+											<li>
+												<strong>22,500<span>원 (KRW 22,500)</span></strong>
+												<em>유아 1명 X 22,500원 (KRW 22,500)</em>
+											</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">발권수수료</th>
+									<td>
+										<ul class="prodMoney">
+											<li>
+												<strong class="c_red">22,500<span>원 (KRW 22,500)</span></strong>
+												<em>성인 1명 X 9,870원 (EUR 8)</em>
+												<em>아동 1명 X 9,870원 (EUR 8)</em>
+												<em>유아 1명 X 9,870원 (EUR 8)</em>
+											</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">배송비</th>
+									<td>
+										<ul class="prodMoney">
+											<li>
+												<strong>22,500<span>원 (유료배송)</span></strong>
+											</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">미팅금액</th>
+									<td>
+										<ul class="prodMoney">
+											<li>
+												<strong>6,870<span>원 (EUR 6)</span></strong>
+											</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">옵션금액</th>
+									<td>
+										<ul class="prodMoney">
+											<li>
+												<strong>2,870<span>원 (EUR 2)</span></strong>
+											</li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+							
+							
+						</table>
+					</div>
+				</div>
+				
+				<!-- 20170921 추가 -->
+				<div class="inChoice">
+					<h3 class="tit_reserv">결제확인<button type="button" title="토글버튼" class="btn_toggle on"></button></h3>
+					<div style="display:n one">
+						<table class="fnd_prodTable">
+							<caption>결제 확인</caption>
+							<colgroup>
+								<col style="width:30%">
+								<col style="width:*">
+							</colgroup>
+							
+							<tbody>
+								<tr>
+									<th scope="row">총 상품금액</th>
+									<td>
+										<ul class="prodMoney">
+											<li>
+												<strong>22,500<span>원</span></strong>
+												<em>(해외항공발급_현지투어 3% 할인쿠폰 적용)</em>
+											</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">결제된 금액</th>
+									<td>
+										<ul class="prodMoney">
+											<li>
+												<strong>22,500<span>원</span></strong>
+												<em><a href="#" class="">[결제정보 상세보기]</a></em>
+											</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">총 잔여금액</th>
+									<td>
+										<ul class="prodMoney">
+											<li>
+												<strong>0<span>원</span></strong>
+											</li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<p class="money_local">※신용카드 결제 취소 요청은 유선상으로만 가능하오니 도우미 여행사를 통해 취소 신청해 주세요.</p>
+					</div>
+				</div>
+				<!-- // 20170921 추가 -->
+				
+				<!-- 20170921 추가 -->
+				<div class="inChoice">
+					<h3 class="tit_reserv">결제확인<button type="button" title="토글버튼" class="btn_toggle on"></button></h3>
+					<div style="display:n one">
+						<table class="fnd_prodTable">
+							<caption>결제 확인</caption>
+							<colgroup>
+								<col style="width:30%">
+								<col style="width:*">
+							</colgroup>
+							
+							<tbody>
+								<tr>
+									<th scope="row">총 상품금액</th>
+									<td>
+										<ul class="prodMoney">
+											<li>
+												<strong>22,500<span>원</span></strong>
+												<em>(해외항공발급_현지투어 3% 할인쿠폰 적용)</em>
+											</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">결제된 금액</th>
+									<td>
+										<ul class="prodMoney">
+											<li>
+												<strong>12,500<span>원</span></strong>
+											</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">입금은행</th>
+									<td>
+										<ul class="prodMoney">
+											<li><strong>신한은행</strong></li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">가상계좌번호</th>
+									<td>
+										<ul class="prodMoney">
+											<li><strong>000-0000-0000000</strong></li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">총 잔여금액</th>
+									<td>
+										<ul class="prodMoney">
+											<li>
+												<strong>10,000<span>원</span></strong>
+											</li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<p class="money_local">※신용카드 결제 취소 요청은 유선상으로만 가능하오니 도우미 여행사를 통해 취소 신청해 주세요.</p>
+					</div>
+				</div>
+				<!-- // 20170921 추가 -->
+				
+				<div class="inChoice">
+					<h3 class="tit_reserv">수령방법<button type="button" title="토글버튼" class="btn_toggle on"></button></h3>
+					<div style="display:n one">
+						<ul class="tbList">
+							<li><strong>수령방법</strong><span>실물티켓-우편수령</span></li>
+							<li><strong>주소</strong><span>[03161] 서울특별시 종로구 인사동 5길 41</span></li>
+							<li><strong>수령일시</strong><span class="c_red">2017년06월12일(월) 14:00</span></li>
+							<li><strong class="vm">수령방법</strong>
+								<div>
+									<em class="mi_before">이티켓</em>
+									<button type="button" class="miniPop" title="자세히보기" data-role="none"></button><!-- 선택시 class="on" 추가 -->
+									<div class="miniPop_cont" style="display:n one">
+										<button type="button" class="close_mini" title="팝업닫기"></button>
+										<p>예약자 정보에 기입된 이메일로 결제가 완료 되면 이바우처가 발송됩니다. 이메일 안온 경우 예약시 지정되는 도우미여행사에 문의해 주세요.</p>
+									</div>
+								</div>
+							</li>
+							<li><strong>주소</strong><span>hongkildong@hanatour.com</span></li>
+						</ul>
+						
+						<!-- 직접 수령안내 -->
+						<div class="ticketBox endType">
+							<h4>해외입장권 / 패스 직접수령 안내</h4>
+							<h5><strong>부산센텀점</strong>운영시간 : 14:00~17:00 (주말.공휴일 제외)</h5>
+							<span><img src="http://image1.hanatour.com/mobile/common/hanatour/fnd/img_ticke_map01.png" alt=""></span>
+							<p>부산광역시 해운대구 센텀6로 21, 301호<br>(우동, 인텔리움센텀) ※ 무료 주차 불가 (유료주차장)</p>
+							
+							<dl class="inforDesc">
+								<dt>유의사항</dt>
+								<dd>
+									<ul class="comBulTxt">
+										<li>방문일 2일 전 오전 11시까지 결제해야 합니다.<br>(주말.휴일 제외)<br>
+											- 예: 3월 9일 10:59am 결제 ▶ 3월 11일 수령 가능<br>
+											- 예: 3월 9일 11:01am 결제 ▶ 3월 12일 수령 가능
+										</li>
+										<li>평일 기준[토,일,공휴일 제외] 방문예정일 2일전 오후 4시까지 예약 및 결제를 완료하여야 합니다.</li>
+										<li>직접 수령처는 상품 수령만 가능하며 반품, 교환, 환불등 추가적인 문의는 예약시 지정된 도우미여행사에 문의해 주세요.</li>
+									</ul>
+								</dd>
+							</dl>
+						</div>
+						<!-- // 직접수령안내 -->
+					</div>
+				</div>
+				
+				<div class="inChoice">
+					<h3 class="tit_reserv">요청사항<button type="button" title="토글버튼" class="btn_toggle on"></button></h3>
+					<div style="display:n one">
+						<p class="writeTxt">고객요청사항입니다. 100글자까지 입력 가능함 일이삼사오육칠팔구십일이삼사오육칠팔구십 일이삼사오육칠팔구십일이삼사오육칠팔구십 일이삼사오육칠팔구십일이삼사오육칠팔구십 일이삼사오육칠팔구십일이삼사오육칠팔구십</p>					
+					</div>
+				</div>
+				
+				<div class="inChoice">
+					<h3 class="tit_reserv">도우미 여행사<button type="button" title="토글버튼" class="btn_toggle on"></button></h3>
+					<div class="helperCont" style="display:n one">
+						<h4>홍길동여행사 <strong><span>담당자</span>김미소</strong></h4>
+						<a href="tel:02-0000-0000" class="call" data-role="none">02-0000-0000</a>
+						<ul class="helper_infor">
+							<li>[도로명] 서울특별시 종로구 인사동 5길 41</li>
+							<li>[우편번호] 03161</li>
+							<li>[팩스] 02-000-0000</li>
+							<li>[이메일] hanatour@hanatour.com</li>
+						</ul>
+						
+						<dl class="helperTime">
+							<dt>도우미 여행사 업무시간</dt>
+							<dd>평일 기준 09:00 ~ 18:00 / 주말, 공휴일 제외<br>(도우미 여행사에 따라 업무시간이 상이함)</dd>
+						</dl>
+					</div>
+				</div>
+				
+				<!-- 20180514 추가 -->
+				<div class="inChoice">
+					<h3 class="tit_reserv">포켓 와이파이 &amp; USIM<button type="button" title="토글버튼" class="btn_toggle on"></button></h3>
+					<div class="pkUsimCont" style="display:n one">
+						<p>보조배터리 무료 대여 등 하나투어 추가혜택 받고 준비하기</p>
+						<ul>
+							<li class="ico_wifi"><p><em>이럴 땐 포켓 와이파이!</em>한 대의 단말기로 여럿이 함께 이용할 때</p></li>
+							<li class="ico_usim"><p><em>이럴 땐 USIM!</em>별도의 반납 없이 맘 편히 이용!<br>장기간 여행 시 상대적으로 저렴!</p></li>
+						</ul>
+						<a href="#">전 세계 한눈에보기</a>
+					</div>
+				</div>
+				<!-- // 20180514 추가 -->
+			</div>
+			
+			<div class="fndBtnBox">
+				<a href="#" class="cancel" data-role="none">예약취소</a>
+				<a href="#" class="reserv" data-role="none">결제하기</a>
+			</div>
+			<!-- // 현지투어·패스·입장권 예약 -->
+		</section>
+		<!-- // fnd 개편 -->
+		
+	</div>
+	<!-- //컨텐츠 영역 -->
+	
+	<footer class="newFoot">
+		<ul>
+			<li><a href="#none" data-role="none">로그인</a></li>
+			<li><a href="#none" data-role="none">PC버전</a></li>
+			<li><a href="#none" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+		</ul>
+		<div>
+			<a href="#none" data-role="none">이용약관</a>|
+			<a href="#none" data-role="none">개인정보처리방침</a>|
+			<a href="#none" data-role="none">여행약관</a>|
+			<a href="#none" data-role="none">사업자정보확인</a>
+		</div>
+		<address>
+			㈜ 하나투어 | 대표자: 최현석 | 사업자등록번호 : 102-81-39440<br>
+			통신판매업신고번호 : 종로01-1806호 | 개인정보관리 책임자 : 최종윤<br>
+			[110-160]서울특별시 종로구 인사동 5길 41 ㈜ 하나투어<br>
+			하나투어상담센터 : <a href="tel:1577-1233" data-role="none">1577-1233</a> | FAX : 02-734-0392<br>
+			이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> | 호스팅 서비스 사업자 : ㈜하나투어<br>
+			관광사업자 등록번호 : 제1933-000006호 | 영업보증보험 : 22억 1천만원 가입<br>
+			COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+		</address>
+	</footer>
+	
+</div>
+
+</body>
+</html>
+

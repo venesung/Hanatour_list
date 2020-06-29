@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>예약하기 - 현지투어 패스 입장권 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="../../css/fnd.css"><!-- FND 추가 -->
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-2.1.3.min.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common_new.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/swiper.min.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-ui-custom.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/hanatour/ht.calendar.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/free/m.fnd.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+	<header id="header"><!-- 띠배너 보일경우 class="tBanTy" 추가 -->
+		<div class="inner">
+			<h1><a href="#none" data-role="none"><img src="../../images/common/btn_nlogo.png" alt="하나투어"></a></h1>
+			<a href="#none" id="btnMenu" data-role="none"><img src="../../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+			<a href="#none" id="btnMyhome" data-role="none"><img src="../../images/common/btn_hdright.png" alt="마이홈"></a>
+		</div>
+	</header>
+	<div class="headerMargin"></div>
+	
+	<!-- 컨텐츠 영역 -->
+	<div id="container">
+		
+		<!--  fnd 검색결과-->
+		<section class="fnd_search">
+		
+			<div class="searchTop">
+				<a href="#" class="back_red" data-role="none" title="뒤로가기"></a>
+				<strong>오사카유니버셜</strong><strong>2개</strong><!-- 2개이상일경우 strong 추가 -->
+				<em>오사카, 일본</em>
+				<a href="#pop_fnd_main01.html" class="popUpFull" data-role="none">변경</a>
+			</div>
+			<div class="sort_select">
+				<button class="selectBox layerOpen" data-role="none">전체 200개</button>
+				<!-- 선택시 노출 -->
+				<div class="st_layerpop" style="display:none">
+					<div class="innerBox">
+						<h2>상품</h2>
+						<div>
+							<label class="comRadio"><input type="radio" name="sort_prod" class="redCheck" data-role="none" checked><span>전체</span></label>
+							<label class="comRadio"><input type="radio" name="sort_prod" class="redCheck" data-role="none"><span>투어 (4)</span></label>
+							<label class="comRadio"><input type="radio" name="sort_prod" class="redCheck" data-role="none"><span>즐길거리 (2)</span></label>
+							<label class="comRadio"><input type="radio" name="sort_prod" class="redCheck" data-role="none"><span>교통&amp;패스 (10)</span></label>
+							<label class="comRadio"><input type="radio" name="sort_prod" class="redCheck" data-role="none"><span>입장권 (2)</span></label>
+							<label class="comRadio"><input type="radio" name="sort_prod" class="redCheck" data-role="none"><span>렌터카 (10)</span></label>
+						</div>
+						<button type="button" class="btn_layerPop">닫기</button>
+					</div>
+				</div>
+				<!-- // 선택시 노출 -->
+				
+				<a href="#" class="sortBtn">추천순</a><!-- 선택시 class="on" 추가 -->
+				<!-- 선택시 노출 -->
+				<div class="st_inBox" style=" display:none">
+					<ul>
+						<li class="on"><a href="#" data-role="none">추천순</a></li><!-- 선택시 class="on" 추가 -->
+						<li><a href="#" data-role="none">가격 높은순</a></li>
+						<li><a href="#" data-role="none">가격 낮은순</a></li>
+						<li><a href="#" data-role="none">등급 높은순</a></li>
+						<li><a href="#" data-role="none">등급 낮은순</a></li>
+						<li><a href="#" data-role="none">평점 높은순</a></li>
+						<li><a href="#" data-role="none">평점 낮은순</a></li>
+					</ul>
+				</div>
+				<!-- // 선택시 노출 -->
+			</div>
+			
+			<!-- 상품 리스트 -->
+			<ul class="fnd_prodList">
+				<li>
+					<a href="#">
+						<div class="img"><span><img src="http://image1.hanatour.com/mobile/common/img_none_list.jpg" alt=""></span></div>
+						<div>
+							<span class="label">
+								<em>입장권</em>
+								<em>BEST</em>
+								<em>세트할인</em>
+								<em class="yellow">최저가보상</em><!-- 20180323 추가 -->
+							</span>
+							<strong>[오사카] USJ 1일권 + 아베노 하루카스 전망대</strong>
+							<p>상품의 포인트 영역입니다.POINT 내용 추가필요</p><!-- 20171019 추가 -->
+							<em>성인 선착순 40'명 특전제공</em>
+							<div class="prod_money">
+								<b>5%</b>
+								<em>163,100<span>원</span></em>
+								<i>464,510원</i>
+								<span>성인 1인 기준</span>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="img"><span><img src="http://image1.hanatour.com/mobile/common/hanatour/fnd/dummy_prod02.jpg" alt=""></span></div>
+						<div>
+							<span class="label">
+								<em>입장권</em>
+								<em>세트할인</em>
+								<em class="yellow">최저가보상</em><!-- 20180323 추가 -->
+							</span>
+							<strong>[오사카] USJ 1일권 + 아베노 하루카스 전망대</strong>
+							<p>상품의 포인트 영역입니다.POINT 내용 추가필요</p><!-- 20171019 추가 -->
+							<em>성인 선착순 40'명 특전제공</em>
+							<div class="prod_money">
+								<b>5%</b>
+								<em>163,100<span>원</span></em>
+								<i>464,510원</i>
+								<span>성인 1인 기준</span>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="img"><span><img src="http://image1.hanatour.com/mobile/common/hanatour/fnd/dummy_prod03.jpg" alt=""></span></div>
+						<div>
+							<span class="label">
+								<em>패스</em>
+							</span>
+							<strong>[오사카] USJ 1일권 + 아베노 하루카스 전망대</strong>
+							<p>상품의 포인트 영역입니다.POINT 내용 추가필요</p><!-- 20171019 추가 -->
+							<em>성인 선착순 40'명 특전제공</em>
+							<div class="prod_money">
+								<b>5%</b>
+								<em>163,100<span>원</span></em>
+								<i>464,510원</i>
+								<span>성인 1인 기준</span>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="img"><span><img src="http://image1.hanatour.com/mobile/common/hanatour/fnd/dummy_prod01.jpg" alt=""></span></div>
+						<div>
+							<span class="label">
+								<em>입장권</em>
+								<em>세트할인</em>
+							</span>
+							<strong>[오사카] USJ 1일권 + 아베노 하루카스 전망대</strong>
+							<p>상품의 포인트 영역입니다.POINT 내용 추가필요</p><!-- 20171019 추가 -->
+							<em>성인 선착순 40'명 특전제공</em>
+							<div class="prod_money">
+								<b>5%</b>
+								<em>163,100<span>원</span></em>
+								<i>464,510원</i>
+								<span>성인 1인 기준</span>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="img"><span><img src="http://image1.hanatour.com/mobile/common/hanatour/fnd/dummy_prod02.jpg" alt=""></span></div>
+						<div>
+							<span class="label">
+								<em>입장권</em>
+								<em>세트할인</em>
+							</span>
+							<strong>[오사카] USJ 1일권 + 아베노 하루카스 전망대</strong>
+							<p>상품의 포인트 영역입니다.POINT 내용 추가필요</p><!-- 20171019 추가 -->
+							<em>성인 선착순 40'명 특전제공</em>
+							<div class="prod_money">
+								<b>5%</b>
+								<em>163,100<span>원</span></em>
+								<i>464,510원</i>
+								<span>성인 1인 기준</span>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="img"><span><img src="http://image1.hanatour.com/mobile/common/hanatour/fnd/dummy_prod03.jpg" alt=""></span></div>
+						<div>
+							<span class="label">
+								<em>패스</em>
+							</span>
+							<strong>[오사카] USJ 1일권 + 아베노 하루카스 전망대</strong>
+							<em>성인 선착순 40'명 특전제공</em>
+							<div class="prod_money">
+								<b>5%</b>
+								<em>163,100<span>원</span></em>
+								<i>464,510원</i>
+								<span>성인 1인 기준</span>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<!-- // 상품 리스트 -->
+		</section>
+		<!-- // fnd 검색결과 -->
+		
+	</div>
+	<!-- //컨텐츠 영역 -->
+	
+	<footer class="newFoot">
+		<ul>
+			<li><a href="#none" data-role="none">로그인</a></li>
+			<li><a href="#none" data-role="none">PC버전</a></li>
+			<li><a href="#none" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+		</ul>
+		<div>
+			<a href="#none" data-role="none">이용약관</a>|
+			<a href="#none" data-role="none">개인정보처리방침</a>|
+			<a href="#none" data-role="none">여행약관</a>|
+			<a href="#none" data-role="none">사업자정보확인</a>
+		</div>
+		<address>
+			㈜ 하나투어 | 대표자: 최현석 | 사업자등록번호 : 102-81-39440<br>
+			통신판매업신고번호 : 종로01-1806호 | 개인정보관리 책임자 : 최종윤<br>
+			[110-160]서울특별시 종로구 인사동 5길 41 ㈜ 하나투어<br>
+			하나투어상담센터 : <a href="tel:1577-1233" data-role="none">1577-1233</a> | FAX : 02-734-0392<br>
+			이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> | 호스팅 서비스 사업자 : ㈜하나투어<br>
+			관광사업자 등록번호 : 제1933-000006호 | 영업보증보험 : 22억 1천만원 가입<br>
+			COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+		</address>
+	</footer>
+	
+</div>
+
+<!-- 20190313 유럽패스 로딩시 bgEur 추가 -->
+<div class="fnd_pageLoding" style="display:">
+	<span><img src="http://image1.hanatour.com/mobile/common/air/airsearch_loading_ani.gif" alt="실시간으로 최저가 항공권 요금을 조회중입니다."></span>
+</div>
+<!-- // 20190313 추가 -->
+
+</body>
+</html>
+

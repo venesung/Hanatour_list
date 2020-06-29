@@ -1,0 +1,202 @@
+
+<script type="text/javascript">
+	if (jQuery !== undefined) {
+		jQuery(document).ready(function () {
+			if (WTab !== undefined) {
+				var tab = new WTab();
+				tab.init({target: $('.pop_innerComm'), selector: 'ul.sc_popTab > li > a', onTag: 'li', content: $('.pop_innerComm'), contentSelector: '> div', onChange: function (data) {
+					if (SCHEDULE !== undefined && typeof SCHEDULE.resetSwiper === 'function') SCHEDULE.resetSwiper(data.content);
+				}});
+			}
+
+			if (SCHEDULE !== undefined && typeof SCHEDULE.initGallerySwiper === 'function') SCHEDULE.initGallerySwiper($('.pop_innerComm .swiper-container').not('.icoList'));
+			if (SCHEDULE !== undefined && typeof SCHEDULE.initFreeSwiper === 'function') SCHEDULE.initFreeSwiper($('.pop_innerComm .swiper-container.icoList'), {slidesPerView: 6, spaceBetween: 0});
+		});
+
+		$('#overlayPanel').on('open.loadpop', function (e, data) {
+			if (SCHEDULE !== undefined && typeof SCHEDULE.resetSwiper === 'function') SCHEDULE.resetSwiper($('.pop_innerComm'));
+		});
+	}
+</script>
+
+<!-- pop start  -->
+
+	<div class="fullPopCommon">
+		<div class="header">
+			<h3>호텔 정보<a href="#" class="closeOverlayPanel" data-role="none" title="레이어닫기"></a></h3>
+		</div>
+		
+		<div class="innerScroller">
+			<div class="pop_innerComm">
+				
+				<b class="popLabel">확정</b><!-- 대기일경우 class="wait" 추가 -->
+				<strong class="popStit">
+					노보텔 방콕 수바납후미 에어포트 호텔
+					<span class="star num80"></span><!-- 별 갯수대로 class="num + xx" ex : 100 기준으로 1개당20. 별 4개면 80 :: 4.5개면 90 -->
+				</strong>
+				<em class="popStitEng">NOVOTEL BANGKOK SUVARNABHUMI AIRPORT HOTEL</em>
+				
+				<ul class="sc_popTab three"><!-- 3개일경우 class="three"추가 -->
+					<li class="on"><a href="#" data-role="none">기본정보</a></li><!-- 선택 class="on" -->
+					<li><a href="#" data-role="none">부대시설</a></li>
+					<li><a href="#" data-role="none">객실시설</a></li>
+				</ul>
+				
+				<!-- 기본정보 -->
+				<div>
+					<!-- 스와이프 -->
+					<div class="swiper-container">
+						<a href="#" class="big5_prev" data-role="none"></a>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia01.png" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia02.png" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia03.png" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia04.png" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia05.png" alt=""></div>
+						</div>
+						<div class="swiper-pagination" style="display:none"></div>
+						<div class="swiper-pag-num"><span>1</span> / 13</div>
+						<a href="#" class="big5_next" data-role="none"></a>
+					</div>
+					<!-- // 스와이프 -->
+				
+					<p class="popTxt01">Suvarnabhumi International Airport 정문에서 300미터 앞으로 나가면 에어포트 호텔의 새로운 역사인 노보텔 수완나품 호텔이 있습니다. 총 2.8 헥타르에 달하는 면적에 2개의 동이 각각 5층으로 나누어져 구성된 최신식 스타일의 호텔입니다.</p>
+					
+					<!-- 호텔아이콘 스와이프 -->
+					<div class="swiper-container icoList">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide h_ico01">무료WiFi</div>
+							<div class="swiper-slide h_ico02">수영장</div>
+							<div class="swiper-slide h_ico03">스파</div>
+							<div class="swiper-slide h_ico04">무료셔틀</div>
+							<div class="swiper-slide h_ico05">피트니스<br>클럽</div>
+							<div class="swiper-slide h_ico06">무료조식</div>
+							<div class="swiper-slide h_ico07">키즈클럽</div>
+							<div class="swiper-slide h_ico08">무료주차</div>
+							<div class="swiper-slide h_ico09">비즈니스<br>센터</div>
+							<div class="swiper-slide h_ico10">해변</div>
+						</div>
+					</div>
+					<!-- // 호텔아이콘 스와이프 -->
+					
+					<dl class="popDefine">
+						<dt>주요 명소</dt>
+						<dd>
+							<ul class="listDott">
+								<li>카오산로드 (0.3km)</li>
+								<li>차오프라야강 (0.5km)</li>
+								<li>수완나폼 공항 (0.9km)</li>
+								<li>차오프라야강 (0.3km)</li>
+							</ul>	
+						</dd>
+						<dt>연락처</dt>
+						<dd>66-2-131-1111</dd>
+						<dt>홈페이지</dt>
+						<dd><a href="http://www.thaiasiatique.com" target="_blank" title="새창" class="web" data-role="none">www.thaiasiatique.com</a></dd>
+						<dt>체크인/체크아웃</dt>
+						<dd>체크인 : 1PM / 체크아웃 : 12N</dd>
+						<dt>주소</dt>
+						<dd>999 Suvarnabhumi Airport Moo 1 Nongprue Bang Phli Samutprakarn 10540 Bangkok Thailand</dd>
+						<dt>위치</dt>
+						<dd>공항근처  Suvarnabhumi Airport 에서 걸어서 10분 가량 소요</dd>
+					</dl>
+				</div>
+				<!-- // 기본정보 -->
+				
+				<!-- 부대시설 -->
+				<div style="display:none">
+					<!-- 스와이프 -->
+					<div class="swiper-container">
+						<a href="#" class="big5_prev" data-role="none"></a>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia01.png" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia02.png" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia03.png" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia04.png" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia05.png" alt=""></div>
+						</div>
+						<div class="swiper-pagination" style="display:none"></div>
+						<div class="swiper-pag-num"><span>1</span> / 13</div>
+						<a href="#" class="big5_next" data-role="none"></a>
+					</div>
+					<!-- // 스와이프 -->
+				
+					
+					<dl class="popDefine lineNone">
+						<dt>레스토랑 &amp; 바</dt>
+						<dd>
+							<ul class="listDott">
+								<li>SALA THAI (12:00~15:00 / 18:00~23:00)</li>
+								<li>THE SQUARE (24시간)</li>
+								<li>KAM KOK HIN (12:00~15:00 / 18:00~23:00)</li>
+								<li>일식당 KINSEN (12:00~15:00 / 18:00~23:00)</li>
+								<li>ATRIUM TERRACE BAR (10:00~02:00)</li>
+								<li>SPLASH POOL BAR (10:00~20:00)</li>
+							</ul>	
+						</dd>
+						
+						<dt>기타시설 및 서비스</dt>
+						<dd>
+							<ul class="listDott">
+								<li>회의실</li>
+								<li>주차시설</li>
+								<li>환전</li>
+								<li>드라이 클리닝 서비스</li>
+								<li>컨시어지</li>
+								<li>안전금고</li>
+							</ul>	
+						</dd>
+					</dl>
+				</div>
+				<!-- // 부대시설 -->
+				
+				<!-- 객실시설 -->
+				<div style="display:none">
+					<!-- 스와이프 -->
+					<div class="swiper-container">
+						<a href="#" class="big5_prev" data-role="none"></a>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia01.png" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia02.png" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia03.png" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia04.png" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia05.png" alt=""></div>
+						</div>
+						<div class="swiper-pagination" style="display:none"></div>
+						<div class="swiper-pag-num"><span>1</span> / 13</div>
+						<a href="#" class="big5_next" data-role="none"></a>
+					</div>
+					<!-- // 스와이프 -->
+				
+					
+					<dl class="popDefine lineNone">
+						<dt>객실 종류</dt>
+						<dd>
+							<ul class="listDott">
+								<li>디럭스룸 (578개객실 34.5sqm)</li>
+								<li>주니어 스윗룸 (23개객실 56.5sqm) </li>
+								<li>익스큐티브 스윗룸 (7개객실 63.6sqm) </li>
+							</ul>	
+						</dd>
+						<dt>객실 공통 시설</dt>
+						<dd>TV, 커피 메이커, 미니바, 에어컨, 개인금고, 데스크, WI-FI 서비스</dd>
+					</dl>
+				</div>
+				<!-- // 객실시설 -->
+				
+				<!-- 20170623 추가 -->
+				<dl class="surelyTxt02">
+					<dt>유의사항</dt>
+					<dd>
+						<ul class="listDott">
+							<li>현재 국제적으로 통용되는 호텔 등급의 표기 기준은 없으며 일부 국가에서는 자국의 기준에 따라 등급표기를 하는 경우가 있습니다. 당사 일정표 및 호텔정보에 표기되는 호텔의 등급표기는 현지 호텔측으로부터 받은 등급 기준을 반영하여 정한 것으로 국제적으로 통용되는 등급은 아니며, 고객님의 선택의 편의를 도모하기 위함임을 양해바랍니다.</li>
+							<li>본 정보는 호텔에 대한 전반적인 안내를 위한 것이며, 실제로 사용하시는 시설과는 이미지가 다를 수 있습니다.</li>
+						</ul>
+					</dd>
+				</dl>
+				<!-- // 20170623 추가 -->
+			</div>
+		</div>
+		
+	</div>
+

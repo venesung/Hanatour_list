@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>쿠폰 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="../../css/hotel.css"> <!-- 호텔 CSS -->
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-2.1.3.min.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery.mobile-1.4.5.min.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-ui-custom.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery.lazyload.js?v=1.9.1"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/etc/iscroll.carousel.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/swiper.min.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/etc/fixedPostiion.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/etc/fastclick.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common_new.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/hanatour/ht.calendar.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/free/lodge.js" type="text/javascript"></script>
+<!-- 쿠폰 버튼 스크립트 20160404 -->
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".listBtm a").click(function(){
+   $(this).toggleClass("open");
+  });
+});
+</script>
+<!-- // 쿠폰 버튼 스크립트 20160404 -->
+</head>
+
+<body>
+
+<div id="wrap">
+	<header id="header"><!-- 띠배너 보일경우 class="tBanTy" 추가 -->
+		<div class="inner">
+			<h1><a href="#" data-role="none"><img src="http://image1.hanatour.com/mobile/common/hotel/btn_hotel_logo.png" alt="하나투어 호텔"></a></h1>
+			<a href="#" id="btnMenu" data-role="none"><img src="../../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+			<a href="#" id="btnMyhome" data-role="none"><img src="../../images/common/btn_hdright.png" alt="마이홈"></a>
+			<a href="#" id="btnSearch" data-role="none"><img src="http://image1.hanatour.com/mobile/common/search/btn_hdsearch.png" alt="통합검색"></a><!-- 20151201 통합검색 추가 -->
+		</div>
+	</header>
+	<div class="headerMargin"></div>
+
+	<!-- 컨텐츠 영역 -->
+	<div id="container"> 
+		<!-- 호텔 신규 -->
+		<h2 class="pagTit">자주하는 질문</h2>
+		
+		 <dl class="ht_faqList">
+		 	<dt class="open"><a href="#" data-role="none">[특전] 알림 배너 안에 '조기예약할인' 이라고 되어있는데 어떻게 할인 받는 건가요?</a></dt><!-- open 추가시 dd 블락처리 -->
+			<dd>지금 고객님께서 보시는 요금이 이미 조기예약할인 특전이 적용되어 보여지는 금액입니다.</dd>
+			
+			<dt><a href="#" data-role="none">일본 지역 호텔 예약시 '세미 더블 (SEMI DOUBLE)' 객실은 무엇인가요</a></dt>
+			<dd>일본 지역 호텔의 경우 'SEMI DOUBLE '이란 객실 타입이 있습니다. 이는 일반적인 'DOUBLE' 객실 보다 객실 크기 및 침대 사이즈가 작은 객실로 조금 더 경제적으로 이용하실 수 있는 2인실 입니다.</dd>
+			
+			<dt><a href="#" data-role="none">트윈 객실로 꼭 투숙해야 합니다. 사전에 미리 확정 받고 갈 수 있나요?</a></dt>
+			<dd>2인실 예약시, 트윈 또는 더블 침대 타입의 배정은 요청사항입니다. 최대한 고객님의 요청사항대로 호텔 측에 전달하지만 100% 사전 보장은 어려우므로 호텔 체크인 시 다시 한번 직접 호텔에 재 요청 해주시는 것이 좋습니다.</dd>
+			
+			<dt><a href="#" data-role="none">두 개의 객실을 예약했는데 내부가 연결된 방(Connecting Room)으로 사전에 미리 확정 받고 갈 수 있나요?</a></dt>
+			<dd>예약 담당 도우미에게 두 개의 예약코드와 함께 요청해주시기 바랍니다. 하지만 해당 요청 사항은100% 사전 보장은 불가능하며, 대부분의 호텔에서는 커넥팅 룸 불가시 최대한 가까운 객실로 배정 해드립니다.</dd>
+			
+			<dt><a href="#" data-role="none">금연실or흡연실, 고층or저층, 아기침대 요청 등의 요청사항은 사전에 미리 확정 받고 갈 수 있나요?</a></dt>
+			<dd>해당 요청사항들의 경우, 최대한 고객님의 요청사항대로 호텔 측에 전달하지만 100% 사전 보장은 어려우므로 호텔 체크인 시 다시 한번 직접 호텔에 재 요청 해주시는 것이 좋습니다.</dd>
+			
+			<dt><a href="#" data-role="none">식사가 포함되지 않은 요금일 경우, 사전에 식사를 추가해서 갈 수 있나요?</a></dt>
+			<dd>식사 불포함 요금의 경우, 호텔이나 요금에 따라 사전에 추가 가능 여부가 다르니 예약 담당자에게 문의 바랍니다. 단, 미주/캐나다 지역의 경우는 대부분 식사 추가가 불가능하니 참고 바랍니다.</dd>
+			
+			<dt><a href="#" data-role="none">아동 동반 시 추가 요금이 있나요?</a></dt>
+			<dd>아동 규정에 경우 일반적으로는, 동남아시아/남태평양 지역은 만 12세 미만의 아동의 경우 1~2명 무료 투숙 가능 &amp; 미주/캐나다 지역은 만 18세 미만 아동의 경우 1~2명 무료 투숙 가능 & 일본 지역(료칸의 경우는 아동도 유료)/ 유럽의 경우에는 만 7세 미만의 경우 아동 1명 동반 가능하거나 불가능합니다.<br>하지만 해당 지역들의 각 호텔에 따라서 아동 동반 규정이 다를 수 있으니, 사전에 예약 담당 도우미에게 아동 나이와 함께 정확한 확인 바랍니다.</dd>
+			
+			<dt><a href="#" data-role="none">객실 요금은 1인당 금액인가요? 그리고 금액에 세금 봉사료가 포함된 요금인가요?</a></dt>
+			<dd>하나투어 호텔예약의 모든 요금은 객실당 기준이며, 객실 요금에는 세금과 봉사료가 포함되어 있습니다. 예를 들어, 두 분이서 객실 한 개를 이용하실 경우 2인실 1개를 예약하시면 됩니다.</dd>
+			
+			<dt><a href="#" data-role="none">공항에서 호텔로 이동하는 픽업 서비스를 예약하고 싶은데 가능한가요?</a></dt>
+			<dd>하나투어에서는 객실 예약만 대행이 가능합니다. 픽업, 공항 셔틀, 레스토랑, 스파 등의 추가 예약 사항은 객실 확정 후 호텔로 직접 연락하셔서 예약 후 이용하시면 됩니다.</dd>
+			
+			<dt><a href="#" data-role="none">예약은 전화로만 가능한가요?</a></dt>
+			<dd>하나투어 닷컴 홈페이지의 "호텔" 페이지에서 호텔 요금 조회 및 예약이 가능합니다. 또한 모바일 앱 "하나투어닷컴", "하나투어호텔", "하나프리" 를 설치하시면 모바일로도 예약이 가능합니다. </dd>
+			
+			<dt><a href="#" data-role="none">예약을 하면 바로 확정이 되는 건가요?</a></dt>
+			<dd>하나투어 닷컴에서 요금 조회 시, '바로 확정' 이라고 되어 있는 요금의 경우 예약과 동시에 확정이 가능하지만 '예약 처리 중' 이라고 나오는 요금은 예약 후 아시아 지역은 당일, 미주/유럽지역은 24시간 이내 (업무일 기준)에 회신 드립니다. 단, 모바일 앱에서는 '바로 확정' 요금만 조회 및 예약 가능합니다.</dd>
+			
+			<dt><a href="#" data-role="none">예약을 하면 바로 결제를 해야 하나요?</a></dt>
+			<dd>각 예약 건 마다 취소 마감일이 주어지는데 그 날까지만 결제를 완료해 주시면 됩니다.</dd>
+			
+			<dt><a href="#" data-role="none">항공예약 완료 후 받은 호텔 할인 쿠폰이 있습니다. 어떻게 사용하면 되나요?</a></dt>
+			<dd>발급 받으신 호텔 할인 쿠폰은 PC/모바일 웹/앱 마이페이지 쿠폰조회에서 확인 가능하시며 예약하신 호텔 결제 시 [적용 가능한 쿠폰조회] 란에서 할인적용 가능하십니다.</dd>
+			
+			<dt><a href="#" data-role="none">취소 마감일이 지난 객실을 예약하려고 했더니 결제까지 진행해야만 하는데, 결제 없이 우선 예약만은 불가능 한가요?</a></dt>
+			<dd>취소 마감일이 지난 객실은 예약과 동시에 결제가 이루어져야만 합니다. 또한 취소마감일이 지난 예약에 결제까지 완료한 건은 취소 및 변경이 불가능합니다. 이점 유의하시기 바랍니다. <br>대기 예약의 경우 확정을 받지 못하면 결제한 내역은 취소 처리가 됩니다.</dd>
+			
+			<dt><a href="#" data-role="none">주말인데 당장 월요일 체크인으로 예약이 가능한가요?</a></dt>
+			<dd>요금 조회시 확정 가능한 요금이 있을 경우, 예약 진행이 가능합니다.</dd>
+			
+			<dt><a href="#" data-role="none">어제 확정되는 요금을 확인했는데 지금은 그 요금이 없습니다. 당시 요금으로 예약 할 수 있을까요?</a></dt>
+			<dd>하나투어 호텔의 객실요금 및 예약상태는 실시간으로 반영됩니다. 예약도중 실시간 통신으로 인해 호텔 요금과 예약상태가 변경되어 확정이 불가할 수 있습니다. 반드시 예약완료 후 정확한 예약상태를 확인하시기 바랍니다.</dd>
+			
+			<dt><a href="#" data-role="none">찾는 호텔이 조회되지 않거나, 요금이 없는데 어떻게 하죠?</a></dt>
+			<dd>요금 조회시 찾으시는 호텔이 조회되지 않을 경우, 예약 가능한 요금이 없는 경우 이거나 호텔이 등록 되어 있지 않는 경우이니 예약 담당 도우미에게 문의 주시면 확인하여 도와드리겠습니다.</dd>
+			
+			<dt><a href="#" data-role="none">결제를 호텔에 가서 직접 해도 되나요?</a></dt>
+			<dd>하나투어 호텔 예약은 선불제 호텔입니다. 모든 예약은 하나투어로 사전에 지불이 완료가 되어야만 하며 호텔에서 직접 결제하시는 것은 불가능 합니다.</dd>
+			
+			<dt><a href="#" data-role="none">법인카드 결제는 어떻게 하나요?</a></dt>
+			<dd>법인 명으로 되어 있는 법인카드 결제는 예약 담당자에게 카드번호/유효기간/법인 명을 알려주시고 결제 요청하시면 됩니다. 단, 기명 법인카드(사람 이름이 명기된 법인 카드)의 경우 개인카드와 동일하게 ARS 결제를 하셔야 합니다.</dd>
+			
+			<dt><a href="#" data-role="none">현금 영수증은 어떻게 발행하나요?</a></dt>
+			<dd>예약 담당 도우미에게 요청하시면 현금 영수증 발행 처리를 해 드립니다.</dd>
+			
+			<dt><a href="#" data-role="none">환율은 무슨 기준으로 적용되나요?</a></dt>
+			<dd>외환은행 최초 고시 (1차) 현찰 살 때 환율로 하루에 한번 적용됩니다.</dd>
+			
+			<dt><a href="#" data-role="none">호텔 예약 후에 취소하면 취소료가 부과되나요?</a></dt>
+			<dd>예약 건 마다 취소 마감일이 있어 마감일 이전 예약 취소에 대해서는 별도의 취소료가 없습니다. 하지만 취소 마감일 이후에 취소를 하시는 경우 일반적으로 1박에 해당하는 호텔 비용 100%를 취소료가 부과됩니다. 호텔이나 투숙 기간에 따라서는 전 일정 요금에 대해 취소료를 부과하기도 하니 미리 사전에 확인하시어 유의하시기 바랍니다.</dd>
+			
+			<dt><a href="#" data-role="none">취소나 변경을 하고 싶은데 어떻게 하면 되나요?</a></dt>
+			<dd>취소 마감일 이전에는 취소나 변경이 가능합니다. 취소는 바로 온라인 상에서 가능하며 변경은 예약 담당 도우미에게 요청 주시면 됩니다. 단, 예약규정에 따라 변경이 불가능한 예약도 있으니 참고 바랍니다.</dd>
+			
+			<dt><a href="#" data-role="none">예정보다 빨리 돌아오게 됐는데 남은 기간의 호텔 금액이 전액 환불 가능한가요?</a></dt>
+			<dd>호텔의 규정마다 틀릴 수 있으므로 예정보다 일찍 돌아오게 되는 경우 호텔 프론트 데스크 직원에게 설명하고 환불이 가능하다는 확인서를 직접 받아오시어 예약 담당 도우미에게 전달 해주시면 예약 담당 도우미가 재확인하여 환불 처리 도와드립니다. 이 확인서를 받지 못한 경우에는 환불이 불가능 할 수도 있습니다.</dd>
+			
+			<dt><a href="#" data-role="none">천재지변 발생 시 호텔 취소 조치는 어떻게 하나요?</a></dt>
+			<dd>일반적으로 태풍이나 기상 악화 등의 천재지변으로 인해 항공편이 결항된 경우, 호텔 예약은 다음과 같은 취소요청 절차가 반드시 필요합니다. 영업일 업무시간 내에 연락이 가능하시다면 예약 담당 도우미에게 연락을 주시기 바랍니다. 연락이 불가능할 경우, 호텔 숙박권 상에 기재된 호텔 연락처로 직접 연락하시어 고객님의 예약을 취소(혹은 변경)하시고, 통화하신 담당자의 이름을 확인 받으시기 바랍니다. 다음 영업일에 예약 담당 도우미에게 연락주시어 고객님과 통화한 담당자의 이름을 알려주시면, 취소(혹은 변경) 확인과 함께 투숙하지 못한 숙박비의 환불 여부를 최종 확인 해드리겠습니다. 
+통상적으로 태풍 등의 사유로 항공이 결항된 경우, 호텔은 환불을 받을 수 있는 경우가 대부분이나 극히 드물게 불가능한 경우가 발생하기도 합니다. 따라서 항공 결항이 발생한 경우, 최대한 빨리 호텔 측에 연락하여 취소(혹은 변경) 절차를 진행하는 것이 좋습니다.</dd>
+			
+			<dt><a href="#" data-role="none">예약 확정서와 바우처는 무엇인가요?</a></dt>
+			<dd>확정서는 호텔 예약이 확정되었다는 확인서이고, 바우처는 결제를 완료하면 발행되는 호텔 숙박권입니다. 호텔 체크인시에는 호텔 바우처를 꼭 지참하셔야 합니다.</dd>
+			
+			<dt><a href="#" data-role="none">예약확정서나 바우처는 어디서 확인 할 수 있나요?</a></dt>
+			<dd>예약 내역에서 예약 세부사항을 볼 수 있으며 예약 확정서와 바우처 및 결제 내역 확인 가능합니다. 가능하면 호텔 바우처를 직접 출력하여 가시기를 권장합니다. </dd>
+			
+			<dt><a href="#" data-role="none">호텔 예약을 완료했는데 호텔에 체크인 할 때 무엇이 필요한가요?</a></dt>
+			<dd>호텔 예약 완료 후 결제하시면 해당 호텔의 바우처를 받으실 수 있습니다. 체크인 시 호텔 바우처와 여권을 호텔 프론트 데스크에 제시하시면 됩니다.</dd>
+			
+			<dt><a href="#" data-role="none">호텔 바우처 없이 체크인이 가능한가요?</a></dt>
+			<dd>호텔 바우처가 없다고 해서 체크인이 되지 않는 것은 아니나 빠른 예약 확인과 혹시 모를 예약 사고에 대비하여 소지 하시는 것이 좋습니다. 만약 부득이하게 바우처가 없이 떠나시는 경우 미리 호텔이나 예약담당자에 연락하셔서 'NO VOUCHER' 처리를 해두기를 권장합니다.</dd>
+			
+			<dt><a href="#" data-role="none">밤 늦게 호텔에 체크 인 할 수 있나요?</a></dt>
+			<dd>호텔에 따라 체크 인 당일 오후 늦게까지 투숙객이 도착하지 않을 경우 객실 예약을 임의로 취소하는 경우도 있습니다. 따라서, 오후 6시 이후 체크인하실 경우 반드시 호텔 또는 예약 담당 도우미에게 연락하여 예상 체크인 시간을 알려 주시기 바랍니다.</dd>
+			
+			<dt><a href="#" data-role="none">호텔에서 바우처를 보여주고 체크인 하는데 카드 결제를 하라고 합니다.</a></dt>
+			<dd>호텔 체크인 시 대부분의 호텔에서는 보증금의 목적으로 일부 금액을 받습니다. 이를 'DEPOSIT
+이라고 하며 카드 및 현금으로 가능합니다. 이것은 미리 결제하신 객실 요금에 대해 중복으로 결제를 하는 것이 아니라 투숙 기간 동안 발생할 수 있는 비용 (미니바, 전화 요금 등)에 대비하여 일부 금액을 가 승인해 두는 것으로 체크 아웃 시 확인하여 별도 비용이 발생한 기록이 없으면 승인을 취소하거나 현금을 환불해드립니다. 해외 카드결제 승인 취소 처리 기간은 지역에 따라 2~3주 이상 소요 되는 경우도 있으니 참고 바랍니다.</dd>
+			
+			<dt><a href="#" data-role="none">호텔 멤버쉽 (Hilton Honors, SPG) 에 가입되어 있는데 해당 마일리지 적립이 가능할까요?</a></dt>
+			<dd>호텔 브랜드 멤버쉽 마일리지의 경우 보통 여행사를 통한 예약은 적립대상에서 제외됩니다. 그러나 간혹 호텔마다 가능한 경우도 있으니, 해당 부분은 호텔 체크인 시 직접 호텔에 문의 바랍니다.</dd>
+			
+			<dt><a href="#" data-role="none">호텔 예약 후, 하나투어 마일리지 적립이 가능 할까요?</a></dt>
+			<dd>하나투어 마일리지 클럽에 가입되어 있는 분의 성함을 대표자로 예약을 하고, 예약 담당 도우미에게 주민번호 기입을 요청하시면 됩니다. 하나투어 마일리지의 경우 결제 금액의 1%가 투숙자 대표에게 출발일 기준 7일 후에 자동 적립됩니다.</dd>
+		 </dl>
+		
+		</div>
+		<!-- // 호텔 신규 -->
+		
+		<footer class="newFoot">
+			<ul>
+				<li><a href="#" data-role="none">로그인</a></li>
+				<li><a href="#" data-role="none">PC버전</a></li>
+				<li><a href="#" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+			</ul>
+			<div>
+				<a href="#" data-role="none">이용약관</a>|
+				<a href="#" data-role="none">개인정보처리방침</a>|
+				<a href="#" data-role="none">여행약관</a>|
+				<a href="#" data-role="none">사업자정보확인</a>
+			</div>
+			<address>
+					㈜ 하나투어 | 대표자: 김진국 | 사업자등록번호 : 102-81-39440<br>
+					통신판매업신고번호 : 종로01-1806호 | 개인정보관리 책임자 : 박성재<br>
+					[110-160]서울특별시 종로구 인사동 5길 41 ㈜ 하나투어<br>
+					하나투어상담센터 : <a href="tel:1577-1233" data-role="none">1577-1233</a> | FAX : 02-734-0392<br>
+					이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> | 호스팅 서비스 사업자 : ㈜하나투어<br>
+					관광사업자 등록번호 : 제1933-000006호 | 영업보증보험 : 22억 1천만원 가입<br>
+					COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+
+			</address>
+		</footer>
+
+	</div>
+</div>
+
+
+</body>
+</html>
+

@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>유럽패스 구간열차 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="../../css/fnd.css"><!-- FND 추가 -->
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-2.1.3.min.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common_new.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/swiper.min.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-ui-custom.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/hanatour/ht.calendar.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/free/m.fnd.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+	<header id="header"><!-- 띠배너 보일경우 class="tBanTy" 추가 -->
+		<div class="inner">
+			<h1><a href="#none" data-role="none"><img src="../../images/common/btn_nlogo.png" alt="하나투어"></a></h1>
+			<a href="#none" id="btnMenu" data-role="none"><img src="../../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+			<a href="#none" id="btnMyhome" data-role="none"><img src="../../images/common/btn_hdright.png" alt="마이홈"></a>
+		</div>
+	</header>
+	<div class="headerMargin07"></div>
+	
+	<!-- fnd tab -->
+	<nav class="fndTab">
+		<ul>
+			<li class="on"><a href="#"><span>현지투어 · 패스 · 입장권</span></a></li>
+			<li><a href="#"><span>유럽패스 · 구간열차</span></a></li>
+		</ul>
+	</nav>
+	<!-- // fnd tab -->
+	
+	<!-- 컨텐츠 영역 -->
+	<div id="container">
+		
+		<!-- fnd 개편 -->
+		<section class="fndSection">
+			
+			<!-- 유럽 메인 -->	
+			<div class="eur_mainSearch pb_toggle">
+				<ul class="tabList">
+					<li class="on"><a href="#">유럽패스</a></li>
+					<li><a href="#">유럽구간열차</a></li>
+				</ul>
+				
+				<!-- 유럽패스 -->
+				<div class="tabCont in_pass">
+					<div class="eurMainCell">
+						<a href="#pop_pass_select.html" class="popUpFull"><strong class="inStit"><b>유럽패스</b><span>패스 종류를 선택해주세요.</span></strong></a>	
+					</div>
+					
+					<div class="sideOne"><span></span></div><!-- 투명 반원 영역 -->
+					
+					<!-- 다국가패스선택시 노출 -->
+					<div class="passTxt" style="display:none">
+						<p>다국가패스는 국가를<br>선택하지 않아도 됩니다.</p>
+					</div>
+					<!-- // 다국가패스선택시 노출 -->
+					
+					<div class="eurMainCell">
+						<a href="#pop_nation.html" class="popUpFull"><strong class="inStit"><b>국가</b><span>국가를 선택해주세요.</span></strong></a>	
+					</div>
+					
+					<div class="eurMainCell bdTop"><!-- 보더있는경우 bdTop 추가 -->
+						<a href="#pop_people.html" class="popUpFull"><strong class="inStit"><b>인원</b><span>인원을 선택해주세요.</span></strong></a>
+					</div>
+					<a href="#" class="m_btnRed">유럽패스 검색</a>
+				</div>
+				<!-- // 유럽패스 -->
+				
+				<!-- 유럽구간열차 -->
+				<div class="tabCont in_train" style="display:none">
+					<div class="pb_toggle">
+						<ul class="tabList pinkTab">
+							<li class="on"><a href="#">편도</a></li>
+							<li><a href="#">왕복</a></li>
+						</ul>
+						
+						<!-- 편도 -->
+						<div class="tabCont">
+							<!-- 도시선택 -->
+							<div class="eurCityCell">
+								<a href="#pop_eur_city.html" class="popUpFull" title="도시검색">런던</a>
+								<div><button type="button" title="출/도착 바꾸기"></button></div>
+								<a href="#pop_eur_city.html" class="popUpFull" title="도시검색">파리</a>
+							</div>
+							<!-- // 도시선택 -->
+							
+							<!-- 날짜선택 편도 -->
+							<div class="eurDay">
+								<a href="#pop_calender.html" class="popUpFull">
+									<span class="icoCal">가는일시</span>
+									<b>날짜선택</b>
+								</a>
+							</div>
+							<!-- // 날짜선택 편도 -->
+							
+							<div class="eurMainCell">
+								<a href="#pop_people.html" class="popUpFull"><strong class="inStit"><b>인원</b><span>인원을 선택해주세요.</span></strong></a>
+							</div>
+							
+							<a href="#pop_pass_check.html" class="popUpFull passCheck"><!-- 팝업에서 동의하면 checked로 변경 -->
+								<input type="checkbox" class="redCheck" disabled>관련패스 소지자 (할인요금 적용)
+							</a>
+						</div>
+						<!-- // 편도 -->
+						
+						<!-- 왕복 -->
+						<div class="tabCont" style="display:none">
+							<!-- 도시선택 -->
+							<div class="eurCityCell">
+								<a href="#pop_eur_city.html" class="popUpFull" title="출발도시선택 팝업">런던</a>
+								<div><button type="button" title="출/도착 바꾸기"></button></div>
+								<a href="#pop_eur_city.html" class="popUpFull" title="도착도시선택 팝업">파리</a>
+							</div>
+							<!-- // 도시선택 -->
+							
+							<!-- 날짜선택 왕복 -->
+							<div class="eurDay multi"><!-- 왕복 multi 추가 -->
+								<a href="#pop_calender_multi.html" class="popUpFull"><!-- 팝업 왕복 pop_calender_multi -->
+									<span class="icoCal">가는일시</span>
+									<strong>2017.05.18(금)</strong>
+									<i>12:00 - 17:00</i>
+								</a>
+								<a href="#pop_calender_multi.html" class="popUpFull">
+									<span class="icoCal back">오는일시</span><!-- 오는경우 class back -->
+									<b>날짜선택</b>
+								</a>
+							</div>
+							<!-- // 날짜선택 왕복 -->
+							
+							<div class="eurMainCell">
+								<a href="#pop_people.html" class="popUpFull"><strong class="inStit"><b>인원</b><span>인원을 선택해주세요.</span></strong></a>
+							</div>
+							
+							<a href="#pop_pass_check.html" class="popUpFull passCheck"><!-- 팝업에서 동의하면 checked로 변경 -->
+								<input type="checkbox" class="redCheck" disabled>관련패스 소지자 (할인요금 적용)
+							</a>
+						</div>
+						<!-- // 왕복 -->
+					</div>
+					<a href="#pop_eur_caution.html" class="popUpFull m_btnRed">유럽 구간 열차 검색</a>
+				</div>
+				<!-- // 유럽구간열차 -->
+				
+			</div>
+			<!-- // 유럽 메인 -->	
+			
+			<!-- 유럽 메인 배너 20171103 수정 -->	
+			<div class="swiper-container global-swiper eur_mainBanner">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="#">
+							<div class="eurin_txt">
+								<span>전세계 인기 쇼 총 집합!</span>
+								<strong>특전까지 챙기세요 Show me the Show!</strong>
+							</div>
+							<div class="eurin_img"><img src="http://image5.hanatour.com/CMS/2017/07/04/20170704000181_0.jpg" alt=""></div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<div class="eurin_txt">
+								<span>자유여행 대세 해외 렌터카 여행!</span>
+								<strong>미리 준비하면 훨씬 좋다는데?</strong>
+							</div>
+							<div class="eurin_img"><img src="http://image5.hanatour.com/CMS/2017/10/12/20171012000214_0.jpg" alt=""></div>
+						</a>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+			<!-- // 유럽 메인 배너 -->	
+			
+		</section>
+		<!-- // fnd 개편 -->
+		
+	</div>
+	<!-- //컨텐츠 영역 -->
+	
+	<footer class="newFoot">
+		<ul>
+			<li><a href="#none" data-role="none">로그인</a></li>
+			<li><a href="#none" data-role="none">PC버전</a></li>
+			<li><a href="#none" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+		</ul>
+		<div>
+			<a href="#none" data-role="none">이용약관</a>|
+			<a href="#none" data-role="none">개인정보처리방침</a>|
+			<a href="#none" data-role="none">여행약관</a>|
+			<a href="#none" data-role="none">사업자정보확인</a>
+		</div>
+		<address>
+			㈜ 하나투어 | 대표자: 최현석 | 사업자등록번호 : 102-81-39440<br>
+			통신판매업신고번호 : 종로01-1806호 | 개인정보관리 책임자 : 최종윤<br>
+			[110-160]서울특별시 종로구 인사동 5길 41 ㈜ 하나투어<br>
+			하나투어상담센터 : <a href="tel:1577-1233" data-role="none">1577-1233</a> | FAX : 02-734-0392<br>
+			이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> | 호스팅 서비스 사업자 : ㈜하나투어<br>
+			관광사업자 등록번호 : 제1933-000006호 | 영업보증보험 : 22억 1천만원 가입<br>
+			COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+		</address>
+	</footer>
+	
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,1287 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>이달의 도시 두바이 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<script type="text/javascript" src="../js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="../js/city/city_1605.js"></script><!-- 이달의 도시 js -->
+<script type="text/javascript" src="../js/swiper.min.js"></script>
+</head>
+<body>
+
+<div id="wrap"> 
+	<header id="header"><!-- 띠배너 보일경우 class="tBanTy" 추가 -->
+		<div class="inner">
+			<h1><a href="#" data-role="none"><img src="../../images/common/btn_nlogo.png" alt="하나투어"></a></h1>
+			<a href="#" id="btnMenu" data-role="none"><img src="../../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+			<a href="#" id="btnMyhome" data-role="none"><img src="../../images/common/btn_hdright.png" alt="마이홈"></a>
+		</div>
+	</header>
+	<div style="height:52px"></div>
+	
+	<!-- 컨텐츠 영역 -->
+	<style type="text/css">
+	
+	.selectBox {width:100%;border:1px solid #ddd;background:#fff url(http://image1.hanatour.com/mobile/common/thismonth/201609/bg_select_bgray.png) no-repeat 95% center; background-size:16px 9px; height:40px; padding-left:8px;color:#222;font-size:14px}
+	.recom_inCont {background-color:#f1f5f7;padding:10px 12px 0;overflow:hidden}
+	
+	.btnPink {display:block;background-color:#ff6796;border:1px solid #ff6796;text-align:center;color:#fff;padding:11px 0; border-radius:3px;margin-bottom:15px; font-size:14px}
+	.btnPink:after {content:'';width:6px;height:10px;background:url(http://image1.hanatour.com/mobile/common/thismonth/201609/btn_rarr01.png) no-repeat 0 0; background-size:6px 10px; display:inline-block;margin-left:9px}
+	.btnBox02 {padding:0 12px;overflow:hidden;margin-top:15px}
+	.btnBox02 a {float:left;width:48%;padding:4px 15px;font-size:13px;margin-bottom:0;text-align:left;box-sizing:border-box;position:relative}
+	.btnBox02 a+a {float:right}
+	.btnBox02 .btnPink:after {position:absolute;right:10px;top:50%;margin-top:-5px}
+	
+	.thisMonthTop {background:url(http://image1.hanatour.com/mobile/common/thismonth/201609/bg_thismonth_top.jpg) no-repeat 0 0;background-size:100% 100%;padding:28px 0 35px; position:relative}
+	.thisMonthTop h2 {text-align:center;padding-bottom:35px}
+	.thisMonthTop h2 img {height:144px}
+	.cityInfoList {overflow:hidden;margin:0 15px}
+	.cityInfoList li {float:left;width:25%;text-align:center}
+	.cityInfoList li > div {border-radius:50%;background:rgba(0,0,0,0.8);height:72px;width:72px;margin:0 auto; color:#fff}
+	.cityInfoList li strong {font-size:11px; display:inline-block; margin:9px 0 10px; line-height:11px}
+	.cityInfoList li:nth-child(3) strong,.cityInfoList li:nth-child(4) strong {margin:9px 0 5px}
+	.cityInfoList li strong:before {content:''; display:inline-block; background:no-repeat 0 0;margin-right:3px;vertical-align:bottom; height:18px}
+	.cityInfoList li strong.bgStit01:before {background-image:url(http://image1.hanatour.com/mobile/common/thismonth/201609/bg_stit_cebu01.png);background-size:100% 18px; width:13px;}
+	.cityInfoList li strong.bgStit02:before {background-image:url(http://image1.hanatour.com/mobile/common/thismonth/201609/bg_stit_cebu02.png);background-size:100% 18px; width:8px;}
+	.cityInfoList li strong.bgStit03:before {background-image:url(http://image1.hanatour.com/mobile/common/thismonth/201609/bg_stit_cebu03.png);background-size:100% 18px; width:13px;}
+	.cityInfoList li strong.bgStit04:before {background-image:url(http://image1.hanatour.com/mobile/common/thismonth/201609/bg_stit_cebu04.png);background-size:100% 18px; width:12px;}
+	.cityInfoList li p {color:#fff;font-size:12px;font-weight:bold;display:table;vertical-align:middle; width:100%; line-height:11px}
+	.cityInfoList li:nth-child(4) p {font-size:11px}
+	.cityInfoList li p span {font-size:11px; display:block; font-weight:normal;line-height:9px; margin-top:2px}
+	.cityInfoList li:nth-child(4) p span {font-size:10px}
+	.cityInfoList li .time p {font-size:10px;}
+	.cityInfoList li .time p span {display:inline; font-size:9px}
+	.cityInfoList.num3 li {width:33.3%}
+	.cityInfoList.num3 li:nth-child(2) {width:33.4%}
+	
+	.monthShare {padding:20px 12px; position:relative; background-color:#f1f5f7}
+	.monthShare strong {background:url(http://image1.hanatour.com/mobile/common/thismonth/201609/bg_share_tit.png) no-repeat 0 2px;background-size:14px 14px; padding:1px 0 1px 18px; display:block}
+	.monthShare div {position:absolute;right:12px;top:50%; margin-top:-15px}
+	.monthShare div a {float:left; margin-left:8px}
+	.monthShare div a img {width:30px}
+	
+	.contTop01 {background:url(http://image1.hanatour.com/mobile/common/thismonth/201609/bg_cont_top01.jpg) no-repeat 0 0;background-size:100% 100%; text-align:center; margin:-10px -12px 0; padding:30px 0 65px}
+	.contTop01 h3 img {height:75px}
+	.contTop01 p {color:#fff; font-size:13px; line-height:17px; margin-bottom:20px}
+	.contTop01 a {margin:0 20px}
+	
+	.contTop02 {background:url(http://image1.hanatour.com/mobile/common/thismonth/201609/bg_cont_top02.jpg) no-repeat 0 0;background-size:100% 100%; text-align:center; margin:-10px -12px 0; padding:30px 24px 80px}
+	.contTop02.bg_def {background-image:url(http://image1.hanatour.com/mobile/common/thismonth/201609/bg_cont_top02_02.jpg)}
+	.contTop02 h3 {margin-bottom:15px}
+	.contTop02 h3 img {height:58px}
+	.contTop02 p {color:#fff; font-size:13px; line-height:17px;}
+	.contTop02 p span {display:block; margin-bottom:10px}
+	
+	.contTop03 {background:url(http://image1.hanatour.com/mobile/common/thismonth/201609/bg_cont_top03.jpg) no-repeat 0 0;background-size:100% 100%; text-align:center; margin:-10px -12px 0; padding:25px 0 45px}
+	.contTop03.bgtype2 {background-image:url(http://image1.hanatour.com/mobile/common/thismonth/201609/bg_cont_top03_2.jpg); padding-bottom:36px}
+	.contTop03 h3 img {height:24px; margin-bottom:12px}
+	.contTop03.bgtype2 h3 img {height:50px}
+	.contTop03 p {color:#fff; font-size:13px; line-height:17px; margin-bottom:20px}
+	
+	.monthCityList {margin-top:-45px}
+	.monthCityList.marT10 {margin-top:15px}
+	.monthCityList > li {border:1px solid #ddd; margin-bottom:10px}
+	.monthCityList > li .btnPink {margin-bottom:0; margin-top:20px}
+	.monthCityList > li:last-child {margin-bottom:20px}
+	.monthCityList li h4 {display:block; background-color:#fff; color:#222; padding:7px 12px; font-size:17px}
+	.monthCityList li h4.gray {background-color:#4a505e; color:#fff;font-size:14px}
+	.monthCityList li h4.puple {background-color:#690160; color:#fff;font-size:14px; font-weight:normal}
+	.monthCityList li h4 span {font-size:12px; display:block}
+	.monthCityList li .imgBox img {width:100%}
+	.monthCityList li .txtCont {background-color:#fff; padding:15px 12px 20px}
+	.monthCityList li .txtCont .storyTit {display:block; color:#ff6796; font-size:12px; font-weight:bold; margin-bottom:8px}
+	.monthCityList li .txtCont strong {color:#222;font-size:14px; display:block; margin-bottom:8px}
+	.monthCityList li .txtCont strong span {display:block; font-size:12px}
+	.monthCityList li .txtCont p {color:#666; font-size:13px;}
+	.monthCityList li .txtCont dl {margin-top:15px; padding-top:15px; border-top:1px solid #ddd}
+	.monthCityList li .txtCont dl dt {color:#ed4f8f; font-size:15px; margin-bottom:10px; font-weight:bold}
+	.monthCityList li .txtCont dl dd {color:#666; font-size:13px; position:relative; padding-left:8px}
+	.monthCityList li .txtCont dl dd:before {content:''; width:2px; height:2px; position:absolute;left:0;top:5px; background-color:#333; border-radius:50%}
+	.monthCityList li .logoBox { text-align:center; background-color:#dee2e4}
+	.monthCityList li .logoBox img { height:35px}
+	.monthCityList li .txtCont ul li {position:relative; padding-left:8px; margin-bottom:4px; font-size:13px; color:#666}
+	.monthCityList li .txtCont ul li:after { content:''; width:2px; height:2px; background-color:#ff6796; position:absolute;left:0;top:5px}
+	
+	.benefitBanner {margin:0 -12px}
+	.benefitBanner a {display:block;background:#8f94a4 no-repeat 12px 15px;background-size:42px 42px; color:#fff; padding:15px 12px 15px 70px}
+	.benefitBanner a.bgico01 {background-image:url(http://image1.hanatour.com/mobile/common/thismonth/201609/bg_art_banner01.png)}
+	.benefitBanner a.bgico02 {background-image:url(http://image1.hanatour.com/mobile/common/thismonth/201609/bg_art_banner02.png); border-top:1px solid #fff}
+	.benefitBanner a strong {font-size:17px;}
+	.benefitBanner a p {color:#fff; font-size:12px; margin-top:6px}
+	
+	.txtinBtn {background-color:#fff; overflow:hidden; margin:0 -12px; padding:25px 12px 10px}
+	.txtinBtn span { display:block; margin-bottom:10px}
+	
+	.areaTab {overflow:hidden;border-bottom:1px solid #ddd;border-top:1px solid #ddd;}
+	.areaTab li {float:left;width:16.5%;}
+	.areaTab li:first-child {width:17.5%}
+	.areaTab li a {display:block;padding:24px 0;line-height:15px; text-align:center; color:#666;border-right:1px solid #ddd; font-size:14px; height:62px; box-sizing:border-box}
+	.areaTab li:last-child a {border-right:none}
+	.areaTab li.on a {color:#fff;background-color:#c83d67; font-weight:bold}
+	.areaTab li.twoLine a {padding:17px 0}
+	.areaTab li.thLine a {padding:4px 0 8px}
+	
+	.areaCardList {overflow:hidden; margin:0 -4px}
+	.areaCardList > li {float:left;width:50%;box-sizing:border-box; padding:0 4px; text-align:left; margin-bottom:15px}
+	.areaCardList > li h3 {position:relative; font-size:17px; padding:2px 3px 8px; margin-bottom:4px; height:28px;box-sizing:border-box;}
+	.areaCardList > li h3 a {position:absolute;right:3px;top:0; color:#ff6796; border:1px solid #ff6796; border-radius:3px; padding:6px; font-size:12px; line-height:12px}
+	.areaCardList .img {position:relative; display:block}
+	.areaCardList .img img {width:100%;height:100px;}
+	@media all and (min-width:360px) {	/* 360이상일 경우*/
+	.areaCardList .img img {height:115px;}
+	}
+	@media all and (min-width:414px) {	/* 414이상일 경우*/
+	.areaCardList .img img {height:130px;}
+	}
+	.areaCardList .img em {position:absolute;left:0;top:0; text-align:center; color:#fff; font-size:12px; background-color:#c83d67;box-sizing:border-box;padding:8px 2px;line-height:11px;width:78px}
+	.areaCardList > li .inBox {border:1px solid #ccc; border-radius:3px; overflow:hidden; display:block;background-color:#fff}
+	.areaCardList > li .inBox div {padding:12px;box-sizing:border-box}
+	.areaCardList > li .inBox div .tit {display:block;overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical;height:15px; line-height:16px; margin-bottom:5px; font-size:15px}
+	.areaCardList > li .inBox div .money {font-size:18px}
+	.areaCardList > li .inBox div .money span {font-size:13px}
+	.areaCardList > li .inBox div p {overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;height:32px; line-height:15px; color:#666; font-size:13px; margin-bottom:10px}
+	
+	.cont_inTab,.cont_inTab02 {overflow:hidden; background-color:#fff; margin:-10px -12px 15px; border-bottom:1px solid #858585; position:relative}
+	.cont_inTab:before,.cont_inTab02:before {content:''; width:1px; height:18px; background-color:#dddddd; position:absolute; left:50%; top:50%; margin-top:-9px}
+	.cont_inTab li,.cont_inTab02 li {float:left;width:50%; text-align:center; position:relative}
+	.cont_inTab li a,.cont_inTab02 li a {display:block; padding:14px 0;font-weight:bold; font-size:13px}
+	.cont_inTab li.on a,.cont_inTab02 li.on a {color:#c83d67}
+	.cont_inTab li.on a:after {content:''; width:150px; height:4px; background-color:#c83d67; position:absolute; left:50%;bottom:0; margin-left:-75px}
+	.cont_inTab02 li.on a:after {content:''; width:120px; height:4px; background-color:#c83d67; position:absolute; left:50%;bottom:0; margin-left:-60px}
+	.cont_inTab02 li+li.on a:after { width:130px; margin-left:-65px}
+	
+	.resortList {padding:20px 12px 20px; background-color:#fff; margin:0 -12px -10px;}
+	.resortList > ul {}
+	.resortList > ul > li {text-align:center;border:1px solid #ddd; margin-bottom:10px; padding:0 12px; background-color:#fff}
+	.resortList > ul > li .imgBox {margin:0 -12px;display:block}
+	.resortList > ul > li .imgBox img {width:100%}
+	.resortList > ul > li .bestTxt {color:#c83d67; font-size:13px; border:1px solid #c83d67; border-radius:50px; display:inline-block; padding:3px 7px; font-weight:bold; margin:15px 0;}
+	.resortList > ul > li > strong { display:block; font-size:17px;letter-spacing:-0.05em; padding:0 10px;}
+	.resortList > ul > li > p { color:#666; font-size:13px;margin:8px 0; padding:0 12px}
+	.resortList > ul > li > a { display:inline-block; color:#fff; padding:10px 22px; border-radius:3px; background-color:#ff6796; font-weight:bold; margin:15px 0; font-size:15px}
+	.resortList > ul > li > a.mar0 {margin:0}
+	.resortList > ul > li > a.mar02 {margin:0 0 15px}
+	.resortList ul li .starBox strong {color:#f9b013; font-size:13px; vertical-align:top}
+	.resortList ul li .starBox span {background:url(http://image1.hanatour.com/mobile/common/thismonth/201609/img_resort_star.png) repeat-x 0 0;background-size:13px 13px; display:inline-block; height:13px;text-indent:-9999px; position:relative;bottom:-1px}
+	.resortList ul li .starBox span.num1 {width:13px}
+	.resortList ul li .starBox span.num2 {width:26px}
+	.resortList ul li .starBox span.num3 {width:39px}
+	.resortList ul li .starBox span.num3_50 {width:46px}
+	.resortList ul li .starBox span.num4 {width:52px}
+	.resortList ul li .starBox span.num5 {width:65px}
+	
+	.benefitBox {background-color:#fff;padding:30px 12px; margin:0 -12px}
+	.benefitBox h3 {text-align:center;margin-bottom:20px}
+	.benefitBox h3 img { height:18px;}
+	@media all and (max-width:320px) {	/* 320이하일 경우*/
+	.benefitBox h3 img {width:100%;height:auto}
+	}
+	.benefitBox ul {overflow:hidden; margin:0 -4px}
+	.benefitBox ul li {float:left;width:50%;box-sizing:border-box;margin-bottom:10px;text-align:center; padding:0 4px}
+	.benefitBox ul li div {border:1px solid #ccc; border-radius:3px; overflow:hidden;}
+	.benefitBox ul li span img {width:100%}
+	.benefitBox ul li p {font-size:12px; padding:12px 5px; box-sizing:border-box; line-height:14px}
+	.benefitBox ul li p.oneLine { padding:19px 5px}
+	.benefitBox ul li p.txtLong { padding:7px 5px; height:70px}
+	.benefitBox ul li p.txtLong02 {padding:21px 5px;height:70px}
+	.benefitBox > p { font-size:12px}
+	
+	.eventSnsCont {margin:-15px -12px 0}
+	.eventSnsCont .insnsTop {text-align:center;background:url(http://image1.hanatour.com/mobile/common/thismonth/201609/bg_eventsnscont01.png) no-repeat 0 0;background-size:100% 100%;padding:25px 12px 48px}
+	.eventSnsCont .insnsTop h3 {padding-bottom:12px}
+	.eventSnsCont .insnsTop h3 img {height:101px}
+	.eventSnsCont .insnsTop p {color:#fff;font-size:13px;line-height:20px; text-align:left; width:250px; margin:0 auto}
+	.eventSnsCont .insnsTop p strong { font-weight:normal; background-color:#0f5a9d; padding:2px 5px}
+	.eventSnsCont a {margin:15px 24px}
+	.eventSnsCont .btmBox { margin:0 12px 20px}
+	.eventSnsCont .btmBox span img {width:100%}
+	
+	.eventSmCont {background:#ffbcce; margin:-15px -12px 0;padding:0 12px 0; overflow:hidden}
+	.eventSmCont h3 {margin:0 -12px;text-align:center;background:url(http://image1.hanatour.com/mobile/common/thismonth/201609/bg_eventsnscont02.jpg) no-repeat 0 0;background-size:100% 100%; padding:27px 0 45px}
+	.eventSmCont h3 img {height:135px}
+	.eventSmCont .pinkz {display:inline-block;color:#fff;padding:10px;border-radius:3px;background-color:#ff6796;font-weight:bold;font-size:18px; width:150px; text-align:center}
+	.eventSmCont .dottBox {margin:20px 25px 0;padding-top:20px;background:url(http://image1.hanatour.com/mobile/common/thismonth/201609/bg_dottline.png) repeat-x 0 0;background-size:4px 1px}
+	.eventSmCont .dottBox p {margin:0 -15px 8px}
+	.eventSmCont .dottBox p span {display:block;margin-top:5px}
+	.eventSmCont .special {text-align:center;background-color:#fff;border:1px solid #ddd;margin-bottom:10px}
+	.eventSmCont .special h4 {background-color:#c83d67;color:#fff;font-size:15px;padding:10px 0}
+	.eventSmCont .special img,.swiper-slide img {width:100%}
+	
+	.airBtmTxt { font-size:13px; color:#666; padding:0 10px 40px; margin-top:-10px}
+	.airBtmTxt strong { color:#333; display:block}
+	
+	/* swiper */
+	.swiper-slide {text-align: center;font-size: 18px;display:-webkit-box;display:-ms-flexbox;display: -webkit-flex;display:flex;-webkit-box-pack: center;-ms-flex-pack: center;-webkit-justify-content: center;justify-content:center;-webkit-box-align: center;-ms-flex-align: center;-webkit-align-items:center;align-items: center;}
+	.swiper-slide img {width:100%}
+	.swiper-container {margin:0 auto;position:relative;overflow:hidden;z-index:1;width: 100%;}
+	.swiper-container a.big5_prev {width:23px; height:42px;background:url(http://image1.hanatour.com/mobile/common/thismonth/201605/btn_slider_left.png); position:absolute;left:12px;top:50%;margin-top:-21px;background-size:23px 43px; z-index:100; opacity:0.8}
+	.swiper-container a.big5_next {width:23px; height:42px;background:url(http://image1.hanatour.com/mobile/common/thismonth/201605/btn_slider_right.png); position:absolute;right:12px;top:50%;margin-top:-21px;background-size:23px 43px; z-index:100;opacity:0.8}
+	
+	.swiper-container-no-flexbox .swiper-slide{float:left}.swiper-container-vertical>.swiper-wrapper{-webkit-box-orient:vertical;-moz-box-orient:vertical;-ms-flex-direction:column;-webkit-flex-direction:column;flex-direction:column}.swiper-wrapper{position:relative;width:100%;height:;z-index:1;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-transition-property:-webkit-transform;-moz-transition-property:-moz-transform;-o-transition-property:-o-transform;-ms-transition-property:-ms-transform;transition-property:transform;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}.swiper-container-android .swiper-slide,.swiper-wrapper{-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-o-transform:translate(0,0);-ms-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.swiper-container-multirow>.swiper-wrapper{-webkit-box-lines:multiple;-moz-box-lines:multiple;-ms-flex-wrap:wrap;-webkit-flex-wrap:wrap;flex-wrap:wrap}.swiper-container-free-mode>.swiper-wrapper{-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out;margin:0 auto}.swiper-slide{-webkit-flex-shrink:0;-ms-flex:0 0 auto;flex-shrink:0;width:100%;position:relative}.swiper-container .swiper-notification{position:absolute;left:0;top:0;pointer-events:none;opacity:0;z-index:-1000}.swiper-wp8-horizontal{-ms-touch-action:pan-y;touch-action:pan-y}.swiper-wp8-vertical{-ms-touch-action:pan-x;touch-action:pan-x}.swiper-button-next,.swiper-button-prev{position:absolute;top:50%;width:27px;height:44px;margin-top:-22px;z-index:10;cursor:pointer;-moz-background-size:27px 44px;-webkit-background-size:27px 44px;background-size:27px 44px;background-position:center;background-repeat:no-repeat}.swiper-button-next.swiper-button-disabled,.swiper-button-prev.swiper-button-disabled{opacity:.35;cursor:auto;pointer-events:none}.swiper-button-prev,.swiper-container-rtl .swiper-button-next{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");left:10px;right:auto}.swiper-button-prev.swiper-button-black,.swiper-container-rtl .swiper-button-next.swiper-button-black{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E")}.swiper-button-prev.swiper-button-white,.swiper-container-rtl .swiper-button-next.swiper-button-white{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")}.swiper-button-next,.swiper-container-rtl .swiper-button-prev{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");right:10px;left:auto}.swiper-button-next.swiper-button-black,.swiper-container-rtl .swiper-button-prev.swiper-button-black{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E")}.swiper-button-next.swiper-button-white,.swiper-container-rtl .swiper-button-prev.swiper-button-white{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")}.swiper-pagination{position:absolute;text-align:center;-webkit-transition:.3s;-moz-transition:.3s;-o-transition:.3s;transition:.3s;-webkit-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0);z-index:10}.swiper-pagination.swiper-pagination-hidden{opacity:0}.swiper-pagination-bullet{width:8px;height:8px;display:inline-block;border-radius:100%;}button.swiper-pagination-bullet{border:none;margin:0;padding:0;box-shadow:none;-moz-appearance:none;-ms-appearance:none;-webkit-appearance:none;appearance:none}.swiper-pagination-clickable .swiper-pagination-bullet{cursor:pointer}.swiper-pagination-white .swiper-pagination-bullet{background:#fff}.swiper-pagination-bullet-active{opacity:1;background:#007aff}.swiper-pagination-white .swiper-pagination-bullet-active{background:#fff}.swiper-pagination-black .swiper-pagination-bullet-active{background:#000}.swiper-container-vertical>.swiper-pagination{right:10px;top:50%;-webkit-transform:translate3d(0,-50%,0);-moz-transform:translate3d(0,-50%,0);-o-transform:translate(0,-50%);-ms-transform:translate3d(0,-50%,0);transform:translate3d(0,-50%,0)}.swiper-container-vertical>.swiper-pagination .swiper-pagination-bullet{margin:5px 0;display:block}.swiper-container-horizontal>.swiper-pagination{bottom:10px;left:0;width:100%}.swiper-container-horizontal>.swiper-pagination .swiper-pagination-bullet{margin:0 5px}.swiper-container-3d{-webkit-perspective:1200px;-moz-perspective:1200px;-o-perspective:1200px;perspective:1200px}.swiper-container-3d .swiper-cube-shadow,.swiper-container-3d .swiper-slide,.swiper-container-3d .swiper-slide-shadow-bottom,.swiper-container-3d .swiper-slide-shadow-left,.swiper-container-3d .swiper-slide-shadow-right,.swiper-container-3d .swiper-slide-shadow-top,.swiper-container-3d .swiper-wrapper{-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;-ms-transform-style:preserve-3d;transform-style:preserve-3d}.swiper-container-3d .swiper-slide-shadow-bottom,.swiper-container-3d .swiper-slide-shadow-left,.swiper-container-3d .swiper-slide-shadow-right,.swiper-container-3d .swiper-slide-shadow-top{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:10}.swiper-container-3d .swiper-slide-shadow-left{background-image:-webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(right,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-moz-linear-gradient(right,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(right,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to left,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-container-3d .swiper-slide-shadow-right{background-image:-webkit-gradient(linear,right top,left top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(left,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-moz-linear-gradient(left,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(left,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-container-3d .swiper-slide-shadow-top{background-image:-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(bottom,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-moz-linear-gradient(bottom,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(bottom,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to top,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-container-3d .swiper-slide-shadow-bottom{background-image:-webkit-gradient(linear,left bottom,left top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(top,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-moz-linear-gradient(top,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(top,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-container-coverflow .swiper-wrapper{-ms-perspective:1200px}.swiper-container-fade.swiper-container-free-mode .swiper-slide{-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out}.swiper-container-fade .swiper-slide{pointer-events:none}.swiper-container-fade .swiper-slide .swiper-slide{pointer-events:none}.swiper-container-fade .swiper-slide-active,.swiper-container-fade .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-container-cube{overflow:visible}.swiper-container-cube .swiper-slide{pointer-events:none;visibility:hidden;-webkit-transform-origin:0 0;-moz-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;backface-visibility:hidden;width:100%;height:100%;z-index:1}.swiper-container-cube.swiper-container-rtl .swiper-slide{-webkit-transform-origin:100% 0;-moz-transform-origin:100% 0;-ms-transform-origin:100% 0;transform-origin:100% 0}.swiper-container-cube .swiper-slide-active,.swiper-container-cube .swiper-slide-next,.swiper-container-cube .swiper-slide-next+.swiper-slide,.swiper-container-cube .swiper-slide-prev{pointer-events:auto;visibility:visible}.swiper-container-cube .swiper-slide-shadow-bottom,.swiper-container-cube .swiper-slide-shadow-left,.swiper-container-cube .swiper-slide-shadow-right,.swiper-container-cube .swiper-slide-shadow-top{z-index:0;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;backface-visibility:hidden}.swiper-container-cube .swiper-cube-shadow{position:absolute;left:0;bottom:0;width:100%;height:100%;background:#000;opacity:.6;-webkit-filter:blur(50px);filter:blur(50px);z-index:0}.swiper-scrollbar{border-radius:10px;position:relative;-ms-touch-action:none;background:rgba(0,0,0,.1)}.swiper-container-horizontal>.swiper-scrollbar{position:absolute;left:1%;bottom:3px;z-index:50;height:5px;width:98%}.swiper-container-vertical>.swiper-scrollbar{position:absolute;right:3px;top:1%;z-index:50;width:5px;height:98%}.swiper-scrollbar-drag{height:100%;width:100%;position:relative;background:rgba(0,0,0,.5);border-radius:10px;left:0;top:0}.swiper-scrollbar-cursor-drag{cursor:move}.swiper-lazy-preloader{width:42px;height:42px;position:absolute;left:50%;top:50%;margin-left:-21px;margin-top:-21px;z-index:10;-webkit-transform-origin:50%;-moz-transform-origin:50%;transform-origin:50%;-webkit-animation:swiper-preloader-spin 1s steps(12,end) infinite;-moz-animation:swiper-preloader-spin 1s steps(12,end) infinite;animation:swiper-preloader-spin 1s steps(12,end) infinite}.swiper-lazy-preloader:after{display:block;content:"";width:100%;height:100%;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%236c6c6c'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");background-position:50%;-webkit-background-size:100%;background-size:100%;background-repeat:no-repeat}.swiper-lazy-preloader-white:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%23fff'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")}@-webkit-keyframes swiper-preloader-spin{100%{-webkit-transform:rotate(360deg)}}@keyframes swiper-preloader-spin{100%{transform:rotate(360deg)}}
+	
+	
+	.swiper-pag-num {bottom:10px; left:50%; color:#fff; font-size:13px; background:rgba(0,0,0,0.8); padding:5px 12px; border-radius:50px; position:absolute; text-align:center; z-index:100; font-weight:bold; margin-left:-25px;right:initial}
+	
+	</style>
+	<div id="container" class="thisMonthCont">
+		<div class="thisMonthTop">
+			<h2><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/tit_thismonth_top.png" alt=""></h2>
+			<ul class="cityInfoList">
+				<li>
+					<div class="time">
+						<strong class="bgStit01">비행시간</strong>
+						<p><span>약 </span>9~10시간</p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<strong class="bgStit02">환율</strong>
+						<p>1디르함=<br>약 300원</p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<strong class="bgStit03">전압</strong>
+						<p>220V<span>별도로 3코<br>어댑터 필요함</span></p>
+					</div>
+				</li>
+				<li>
+					<div> 
+						<strong class="bgStit04">비자</strong>
+						<p>무비자<span>최대 30일<br>체류 가능</span></p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+		<!-- 공유하기 -->
+		<div class="monthShare">
+			<strong>공유하기</strong>
+			<div>
+				<a href="#" data-role="none"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_share_sns01.png" alt="페이스북"></a>
+				<a href="#" data-role="none"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_share_sns02.png" alt="트위터"></a>
+				<a href="#" data-role="none"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_share_sns03.png" alt="카카오톡"></a>
+			</div>
+		</div>
+		<!-- // 공유하기 -->
+		
+		<!-- tabCont -->
+		<ul class="areaTab">
+			<li class="twoLine on"><a href="#" data-role="none">베스트<br>셀러</a></li><!-- 선택시 class="on" -->
+			<li class="twoLine"><a href="#" data-role="none">Unique<br>두바이</a></li>
+			<li class="twoLine"><a href="#" data-role="none">Magical<br>두바이</a></li>
+			<li class="twoLine"><a href="#" data-role="none">Exciting<br>두바이</a></li>
+			<li class="twoLine"><a href="#" data-role="none">Enjoy<br>두바이</a></li>
+			<li><a href="#" data-role="none">이벤트</a></li>
+		</ul>
+		<!-- // tabCont -->
+		
+		<!-- 베스트셀러 -->
+		<div class="recom_inCont" style="display:no ne">
+			
+			<select data-role="none" title="상품종류 선택" class="selectBox" style="margin-bottom:10px">
+				<option value="">두바이 인기 패키지</option>
+				<option value="">두바이 연계 패키지</option>
+				<option value="">허니문</option>
+				<option value="">에어텔</option>
+				<option value="">럭셔리&amp;단품상품</option>
+			</select>
+			
+			<!-- 셀렉 탭1 -->
+			<div>
+				<ul class="areaCardList">
+					<li>
+						<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=EAP302&packageMasterStartMonth=201609&start_air_code=KE&subject=HYATT" class="inBox" data-role="none">
+							<span class="img">
+								<img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_bestseller01.jpg" alt="">
+								<em>패키지</em>
+							</span>
+							<div>
+								<strong class="tit">두바이/아부다비 5일</strong>
+								<p>하얏트 호텔+사막 사파리</p>
+								<strong class="money">1,990,000<span>원~</span></strong>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=EAP302&packageMasterStartMonth=201609&start_air_code=KE&subject=☆" class="inBox" data-role="none">
+							<span class="img">
+								<img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_bestseller02.jpg" alt="">
+								<em>패키지</em>
+							</span>
+							<div>
+								<strong class="tit">[자유일정 포함]두바이 5일</strong>
+								<p>사막 사파리+2일 자유일정</p>
+								<strong class="money">1,490,000<span>원~</span></strong>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=EAP302&packageMasterStartMonth=201609&start_air_code=EK&subject=%EB%A1%9C%EB%A7%A8%ED%8B%B1" class="inBox" data-role="none">
+							<span class="img">
+								<img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_bestseller03.jpg" alt="">
+								<em>패키지</em>
+							</span>
+							<div>
+								<strong class="tit">[클래식]두바이 5일</strong>
+								<p>로맨틱 분수쇼 디너+5성급 럭셔리</p>
+								<strong class="money">1,490,000<span>원~</span></strong>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=EAP302&packageMasterStartMonth=201609&start_air_code=EK&subject=%ED%8C%9C%EC%95%84%EC%9D%BC%EB%9E%9C%EB%93%9C" class="inBox" data-role="none">
+							<span class="img">
+								<img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_bestseller04.jpg" alt="">
+								<em>패키지</em>
+							</span>
+							<div>
+								<strong class="tit">[캐주얼]두바이 5일</strong>
+								<p>사막의 기적 팜 아일랜드</p>
+								<strong class="money">8,490,000<span>원~</span></strong>
+							</div>
+						</a>
+					</li>
+				</ul>
+				
+				<p style="margin-bottom:15px">※유류할증료 / 텍스 포함 총 금액기준</p>
+				
+				<a href="http://m.hanatour.com/application/package/package_masterList.jsp?packageRegionId=EA&packageRegionName=유럽&packageNationId=AE&packageCityName=두바이&packageCategoryId=P&packageStartDate=20160901&packageEndDate=20160930" data-role="none" class="btnPink">상품 더보기</a>
+				
+				<div class="benefitBox">
+					<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/stit_benefit01.png" alt="기분 좋은 혜택 추천 상품 특전"></h3>
+					<ul>
+						<li>
+							<div>
+								<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_benefit01.png" alt=""></span>
+								<p>[클래식]<br>알키미아비누+수분크림</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_benefit02.png" alt=""></span>
+								<p>[캐주얼]<br>알키미아 수제비누</p>
+							</div>
+						</li>
+					</ul>
+					<p>* 증정상품은 방당 제공 기준,  자세한 사항은 일정표를 통해 확인 부탁드립니다.</p>
+				</div>
+			</div>
+			<!-- // 셀렉 탭1 -->
+			
+			<!-- 셀렉 탭2 -->
+			<div style="display:none">
+				<ul class="areaCardList">
+					<li>
+						<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=EMP361&packageMasterStartMonth=201611&start_air_code=EK&subject=1" class="inBox" data-role="none">
+							<span class="img">
+								<img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_bestseller05.jpg" alt="">
+								<em>패키지</em>
+							</span>
+							<div>
+								<strong class="tit">[클래식]두바이+스/포/모 11일</strong>
+								<p>모로코1박특급, 중간항공 2회</p>
+								<strong class="money">3,163,000<span>원~</span></strong>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=EMP361&packageMasterStartMonth=201611&start_air_code=EK&subject=2" class="inBox" data-role="none">
+							<span class="img">
+								<img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_bestseller06.jpg" alt="">
+								<em>패키지</em>
+							</span>
+							<div>
+								<strong class="tit">[캐주얼]두바이+스/포/모 11일</strong>
+								<p>4성급 호텔 5박, 중간항공 1회</p>
+								<strong class="money">2,553,000<span>원~</span></strong>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="http://m.hanatour.com/application/package/package_schedule.jsp" class="inBox" data-role="none">
+							<span class="img">
+								<img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_bestseller07.jpg" alt="">
+								<em>패키지</em>
+							</span>
+							<div>
+								<strong class="tit">두바이+스페인/포르투갈 10일</strong>
+								<p>미슐랭 레스토랑 특식</p>
+								<strong class="money">2,653,000<span>원~</span></strong>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=EAP312&packageMasterStartMonth=201609&start_air_code=KE" class="inBox" data-role="none">
+							<span class="img">
+								<img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_bestseller08.jpg" alt="">
+								<em>패키지</em>
+							</span>
+							<div>
+								<strong class="tit">[클래식]두바이+요르단 6일</strong>
+								<p>두바이 맛보기+페트라와 와디럼</p>
+								<strong class="money">2,790,000<span>원~</span></strong>
+							</div>
+						</a>
+					</li>
+				</ul>
+				
+				<p style="margin-bottom:15px">※유류할증료 / 텍스 포함 총 금액기준</p>
+				
+				<a href="http://m.hanatour.com/application/package/package_masterList.jsp?packageRegionId=EA&packageRegionName=유럽&packageNationId=AE&packageCityName=두바이&packageCategoryId=P&packageStartDate=20160901&packageEndDate=20160930" data-role="none" class="btnPink">상품 더보기</a>
+				
+				<div class="benefitBox">
+					<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/stit_benefit01.png" alt="기분 좋은 혜택 추천 상품 특전"></h3>
+					<ul>
+						<li>
+							<div>
+								<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_benefit01.png" alt=""></span>
+								<p>[클래식]<br>알키미아비누+수분크림</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_benefit02.png" alt=""></span>
+								<p>[캐주얼]<br>알키미아 수제비누</p>
+							</div>
+						</li>
+					</ul>
+					<p>* 증정상품은 방당 제공 기준,  자세한 사항은 일정표를 통해 확인 부탁드립니다.</p>
+				</div>
+			</div>
+			<!-- // 셀렉 탭2 -->
+			
+			<!-- 셀렉 탭3 -->
+			<div style="display:none">
+				<ul class="areaCardList">
+					<li>
+						<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=FCW310&packageMasterStartMonth=201612&subject=5" class="inBox" data-role="none">
+							<span class="img">
+								<img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_bestseller09.jpg" alt="">
+								<em>허니문</em>
+							</span>
+							<div>
+								<strong class="tit">[럭스벨마]두바이/모리셔스</strong>
+								<p>두바이 투어+플락몰 마트 셔틀</p>
+								<strong class="money">2,738,000<span>원~</span></strong>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=FCW321&packageMasterStartMonth=201612&subject=5" class="inBox" data-role="none">
+							<span class="img">
+								<img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_bestseller10.jpg" alt="">
+								<em>허니문</em>
+							</span>
+							<div>
+								<strong class="tit">[포시즌]두바이/모리셔스</strong>
+								<p>두바이 투어+플락몰 마트 셔틀</p>
+								<strong class="money">3,010,000<span>원~</span></strong>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=FCW322&packageMasterStartMonth=201612&subject=5" class="inBox" data-role="none">
+							<span class="img">
+								<img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_bestseller11.jpg" alt="">
+								<em>허니문</em>
+							</span>
+							<div>
+								<strong class="tit">[트루오비쉬]두바이/모리셔스</strong>
+								<p>두바이 사막투어+카타마란 투어</p>
+								<strong class="money">2,670,000<span>원~</span></strong>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=EAW304&packageMasterStartMonth=201612" class="inBox" data-role="none">
+							<span class="img">
+								<img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_bestseller12.jpg" alt="">
+								<em>허니문</em>
+							</span>
+							<div>
+								<strong class="tit">[연합]허니문 두바이 일주</strong>
+								<p>엄선된 호텔+럭셔리 리조트 휴양</p>
+								<strong class="money">2,399,000<span>원~</span></strong>
+							</div>
+						</a>
+					</li>
+				</ul>
+				
+				<p style="margin-bottom:15px">※유류할증료 / 텍스 포함 총 금액기준</p>
+				
+				<a href="http://m.hanatour.com/application/package/package_masterList.jsp?packageRegionId=E&packageNationId=AE&packageCityId=DXB&packageCategoryId=W&packageOverseasStartId=JCN" data-role="none" class="btnPink">상품 더보기</a>
+				
+				<div class="benefitBox">
+					<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/stit_benefit01.png" alt="기분 좋은 혜택 추천 상품 특전"></h3>
+					<ul>
+						<li>
+							<div>
+								<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_benefit03.png" alt=""></span>
+								<p>프렌치 베이커리<br>PAUL조식</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_benefit02.png" alt=""></span>
+								<p>알키미아 수제비누<br>&nbsp;</p>
+							</div>
+						</li>
+					</ul>
+					<p>* 증정상품은 방당 제공 기준,  자세한 사항은 일정표를 통해 확인 부탁드립니다.</p>
+				</div>
+			</div>
+			<!-- // 셀렉 탭3 -->
+			
+			<!-- 셀렉 탭4 -->
+			<div style="display:none">
+				<ul class="areaCardList">
+					<li>
+						<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=EMA332&packageMasterStartMonth=201609" class="inBox" data-role="none">
+							<span class="img">
+								<img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_bestseller13.jpg" alt="">
+								<em>에어텔</em>
+							</span>
+							<div>
+								<strong class="tit">[호텔팩]두바이 5일</strong>
+								<p>아시아나호텔 + 사막 사파리</p>
+								<strong class="money">1,311,700<span>원~</span></strong>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=EWA380&packageMasterStartMonth=201609" class="inBox" data-role="none">
+							<span class="img">
+								<img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_bestseller14.jpg" alt="">
+								<em>에어텔</em>
+							</span>
+							<div>
+								<strong class="tit">[호텔팩]두바이/이태리 9일</strong>
+								<p>두바이 1박 + 시티투어</p>
+								<strong class="money">2,281,500<span>원~</span></strong>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=EMA381&packageMasterStartMonth=201609" class="inBox" data-role="none">
+							<span class="img">
+								<img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_bestseller15.jpg" alt="">
+								<em>에어텔</em>
+							</span>
+							<div>
+								<strong class="tit">[호텔팩]두바이/그리스 8일</strong>
+								<p>두바이 1박 + 시티투어</p>
+								<strong class="money">2,213,000<span>원~</span></strong>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=EEA381&packageMasterStartMonth=201609" class="inBox" data-role="none">
+							<span class="img">
+								<img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_bestseller16.jpg" alt="">
+								<em>에어텔</em>
+							</span>
+							<div>
+								<strong class="tit">[호텔팩]두바이/동유럽 9일</strong>
+								<p>두바이 1박 + 시티투어</p>
+								<strong class="money">2,178,500<span>원~</span></strong>
+							</div>
+						</a>
+					</li>
+				</ul>
+				
+				<p style="margin-bottom:15px">※유류할증료 / 텍스 포함 총 금액기준</p>
+				
+				<a href="http://mhanafree.hanatour.com/" data-role="none" class="btnPink">상품 더보기</a>
+				
+				<div class="benefitBox">
+					<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/stit_benefit01.png" alt="기분 좋은 혜택 추천 상품 특전"></h3>
+					<ul>
+						<li style="width:100%">
+							<div>
+								<span style=" display:block;background-color:#eeeeee"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_benefit04.png" alt="" style="width:auto;height:89px"></span>
+								<p>첫날 공항 &rarr; 호텔 픽업서비스</p>
+							</div>
+						</li>
+					</ul>
+					<p>* 증정상품은 방당 제공 기준,  자세한 사항은 일정표를 통해 확인 부탁드립니다.</p>
+				</div>
+			</div>
+			<!-- // 셀렉 탭4 -->
+			
+			<!-- 셀렉 탭5 -->
+			<div style="display:none">
+				<ul class="areaCardList">
+					<li>
+						<a href="http://zeus.hanatour.com/asp/booking/productPackage/pk-11001.asp?pkg_mst_code=EAP380#none" class="inBox" data-role="none">
+							<span class="img">
+								<img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_bestseller17.jpg" alt="">
+								<em>제우스</em>
+							</span>
+							<div>
+								<strong class="tit">[제우스]두바이/아부다비</strong>
+								<p>비즈니스 항공좌석 이용</p>
+								<strong class="money">10,950,000<span>원~</span></strong>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="http://zeus.hanatour.com/asp/booking/productPackage/pk-11001.asp?pkg_mst_code=EAP382" class="inBox" data-role="none">
+							<span class="img">
+								<img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_bestseller18.jpg" alt="">
+								<em>제우스</em>
+							</span>
+							<div>
+								<strong class="tit">[제우스]두바이 골프여행</strong>
+								<p>비즈니스 항공좌석 이용</p>
+								<strong class="money">10,950,000<span>원~</span></strong>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="http://mhanafree.hanatour.com/" class="inBox" data-role="none">
+							<span class="img">
+								<img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_bestseller19.jpg" alt="">
+								<em>단품</em>
+							</span>
+							<div>
+								<strong class="tit">[단품상품]사막 사파리</strong>
+								<p>거친 사막에서의 짜릿한 경험</p>
+								<strong class="money">88 USD~<span> (약 103,000원 상당)</span></strong>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="http://mhanafree.hanatour.com/" class="inBox" data-role="none">
+							<span class="img">
+								<img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_bestseller20.jpg" alt="">
+								<em>단품</em>
+							</span>
+							<div>
+								<strong class="tit">[단품상품]]오전 시내투어</strong>
+								<p>중동의 뉴욕, 두바이 즐기기</p>
+								<strong class="money">65 USD~<span> (약 7,700원 상당)</span></strong>
+							</div>
+						</a>
+					</li>
+				</ul>
+				
+				<p style="margin-bottom:15px">※유류할증료 / 텍스 포함 총 금액기준</p>
+				
+				<a href="http://mhanafree.hanatour.com/" data-role="none" class="btnPink">상품 더보기</a>
+				
+				<div class="benefitBox">
+					<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/stit_benefit01.png" alt="기분 좋은 혜택 추천 상품 특전"></h3>
+					<ul>
+						<li>
+							<div>
+								<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_benefit05.png" alt=""></span>
+								<p>[ZEUS]강남 노보텔<br>엠베서더 호텔 뷔페 식사권</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_benefit06.png" alt=""></span>
+								<p>[현지투어] 하나투어<br>마일리지 1만 마일 증정</p>
+							</div>
+						</li>
+					</ul>
+					<p>* [ZEUS]상품의 경우 뷔페 식사권 대신  SM면세점 만원 쿠폰으로 변경 가능합니다</p>
+				</div>
+			</div>
+			<!-- // 셀렉트 5 -->
+			
+			<article class="benefitBanner">
+				<a href="http://mair.hanatour.com/promotion/eventPromotionDetail?eventCode=MB0429&eventCodeType=M&utm_source=mpflight&utm_medium=banner&utm_term=mobilepgflight&utm_content=mobile&utm_campaign=dubai" data-role="none" class="bgico01">
+					<strong>두바이, 최저가 항공권</strong>
+					<p>최저가가 아니면, 차액의 300% 보상!<br>하나투어 1만 마일리지 추가적립</p>
+				</a>
+				<a href="http://m.hanatour.com/application/travelingEvent/travelingEvent_promotionHotelDetail.jsp?prdCode=H01595&utm_source=mphotel&utm_medium=banner&utm_term=mobilephotel&utm_content=mobile&utm_campaign=dubai" data-role="none" class="bgico02">
+					<strong>두바이 추천 호텔</strong>
+					<p>하나투어 마일리지 1만 마일 추가적립</p>
+				</a>
+			</article>
+		</div>
+		<!-- // 베스트셀러 -->
+			
+		
+		<!-- 두바이1 -->
+		<div class="recom_inCont" style="display:none">
+			<div class="contTop01">
+				<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/tit_cont_top01.png" alt=""></h3>
+				<p>두바이만의 특별함으로 가득한 관광지들,<br>대표명소 둘러보기!</p>
+			</div>
+			
+			<ul class="monthCityList marT10">
+				<li>
+					<h4 class="puple">버즈 칼리파 &amp; 두바이몰<span>(Burj Khalifa&amp;The Dubai Mall)</span></h4>
+					<!-- 이미지 슬라이더 -->
+					<div class="swiper-container global_swiper">
+						<a href="#" class="big5_prev" data-role="none"></a>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_city01_01.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_city01_02.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_city01_03.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_city01_04.jpg" alt=""></div>
+						</div>
+						<div class="swiper-pagination" style="display:none"></div>
+						<div class="swiper-pag-num"><span>1</span> / 2</div>
+						<a href="#" class="big5_next" data-role="none"></a>
+					</div>
+					<!-- // 이미지 슬라이더 -->
+					<div class="txtCont">
+						<p>163층 828m로 세계에서 가장 높은 빌딩,1분만에 올라갈 수 있는 124층 버즈 칼리파 전망대에서 바라보는 두바이 전경은 가히 숨이 멎을 듯하다. 두바이몰은 크기 만큼이나 다양한 엔터테인먼트를 즐길수 있으며 세계최대규모의 아쿠아리움과 분수쇼로 특히 유명하다.</p>
+					</div>
+					
+				</li>
+				
+				<li>
+					<h4 class="puple">버즈 알 아랍 &amp; 주메이라 퍼블릭 비치<span>(Burj Al Arab &amp; Jumeirah Public Beach)</span></h4>
+					<!-- 이미지 슬라이더 -->
+					<div class="swiper-container global_swiper">
+						<a href="#" class="big5_prev" data-role="none"></a>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_city01_05.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_city01_06.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_city01_07.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_city01_08.jpg" alt=""></div>
+						</div>
+						<div class="swiper-pagination" style="display:none"></div>
+						<div class="swiper-pag-num"><span>1</span> / 2</div>
+						<a href="#" class="big5_next" data-role="none"></a>
+					</div>
+					<!-- // 이미지 슬라이더 -->
+					<div class="txtCont">
+						<p>세계에서 가장 높은 호텔로 9개의 레스토랑,202개의 복층&amp;바다전망(Seaview)의 객실을 갖추고 있다. 맑고 깨끗한 바다와 백사장 풍경이 어우러진 주메이라 퍼블릭 비치 위로 버즈 알 아랍 호텔이 우뚝 솟아있는 멋진 전경은 두바이를 대표하는 풍경 중 하나이다.</p>
+					</div>
+					
+				</li>
+				
+				<li>
+					<h4 class="puple">아틀란티스 더 팜<span>(Atlantis The Palm)</span></h4>
+					<!-- 이미지 슬라이더 -->
+					<div class="swiper-container global_swiper">
+						<a href="#" class="big5_prev" data-role="none"></a>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_city01_09.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_city01_10.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_city01_11.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_city01_12.jpg" alt=""></div>
+						</div>
+						<div class="swiper-pagination" style="display:none"></div>
+						<div class="swiper-pag-num"><span>1</span> / 2</div>
+						<a href="#" class="big5_next" data-role="none"></a>
+					</div>
+					<!-- // 이미지 슬라이더 -->
+					<div class="txtCont">
+						<p>전설속의 대륙 '아틀란티스'를 형상화한 인공섬인 팜 주메이라 끝 자락에 1조 7천억을 들여 지어놓은 호텔, 수족관, 워터파크 리조트 일대를 뜻한다. 수족관엔 65,000 마리의 물고기가 노니며 호텔까지 가는 모노레일에서는 야자수 모양의  팜 아일랜드를 볼 수 있다.</p>
+					</div>
+					
+				</li>
+				
+				<li>
+					<h4 class="puple">텍스타일 수크, 스파이스 수크, 골드 수크<span>(Texile, Spice, Gold Souk)</span></h4>
+					<!-- 이미지 슬라이더 -->
+					<div class="swiper-container global_swiper">
+						<a href="#" class="big5_prev" data-role="none"></a>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_city01_13.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_city01_14.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_city01_15.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_city01_16.jpg" alt=""></div>
+						</div>
+						<div class="swiper-pagination" style="display:none"></div>
+						<div class="swiper-pag-num"><span>1</span> / 2</div>
+						<a href="#" class="big5_next" data-role="none"></a>
+					</div>
+					<!-- // 이미지 슬라이더 -->
+					<div class="txtCont">
+						<p>상상할 수 있는 모든 컬러와 빛깔의 실크, 새틴, 보일, 파시미나 천을 살 수 있는 텍스타일 수크(직물 전통 시장)와 샤프란, 시나몬, 넛메그 등 이국적인 향신료와 엄청난 규모의 금들이 넘쳐나는 스파이스&골드 수크(향신료 및 
+금 시장)를 둘러볼 수 있다.</p>
+					</div>
+					
+				</li>
+				<li>
+					<h4 class="puple">수크 마디낫 주메이라<span>(Souk Madinat Jumeirah)</span></h4>
+					<!-- 이미지 슬라이더 -->
+					<div class="swiper-container global_swiper">
+						<a href="#" class="big5_prev" data-role="none"></a>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_city01_17.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_city01_18.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_city01_19.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_city01_20.jpg" alt=""></div>
+						</div>
+						<div class="swiper-pagination" style="display:none"></div>
+						<div class="swiper-pag-num"><span>1</span> / 2</div>
+						<a href="#" class="big5_next" data-role="none"></a>
+					</div>
+					<!-- // 이미지 슬라이더 -->
+					<div class="txtCont">
+						<p>럭셔리한 아리비안 양식의 리조트인 마디낫 주메이라는 두바이 대표 추천 숙박 장소로 유명하다. 리조트 안에는 1000년 역사를 간직한 아랍의 전통시장을 현대식으로 재해석한 세련된 전통시장이 있어 각종 전통 문양의 기념품을 구입할 수 있다.</p>
+					</div>
+					
+				</li>
+			</ul>
+		</div>
+		<!-- // 두바이1 -->
+		
+		<!-- 두바이2 -->
+		<div class="recom_inCont" style="display:none">
+			<div class="contTop02">
+				<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/tit_cont_top02.png" alt=""></h3>
+				<p>전통과 현대의 만남,<br>그 특별한 장소에서 깊어지는 추억</p>
+			</div>
+			
+			<ul class="monthCityList marT10">
+				<li>
+					<!-- 이미지 슬라이더 -->
+					<div class="swiper-container global_swiper">
+						<a href="#" class="big5_prev" data-role="none"></a>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_best_ty01.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_best_ty02.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_best_ty03.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_best_ty04.jpg" alt=""></div>
+						</div>
+						<div class="swiper-pagination" style="display:none"></div>
+						<div class="swiper-pag-num"><span>1</span> / 2</div>
+						<a href="#" class="big5_next" data-role="none"></a>
+					</div>
+					<!-- // 이미지 슬라이더 -->
+					<div class="txtCont">
+						<strong>음악 분수쇼<span>(Fountain Show)</span></strong>
+						<p>세계 최고 높이, 건물 50층 높이까지 물살이 치솟는 분수쇼. 매일 낮과 저녁 6시~11시까지 30분 간격으로 다양한 음악에 맞춰 6천 6백개의 조명에 의해 환상적인 분수쇼가 연출된다. 우주에서 보면 중동지역에서 가장 밝은 점으로 보인다고 할 정도로 매우 아름답다.</p>
+					</div>
+				</li>
+				<li>
+					<!-- 이미지 슬라이더 -->
+					<div class="swiper-container global_swiper">
+						<a href="#" class="big5_prev" data-role="none"></a>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_best_ty05.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_best_ty06.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_best_ty07.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_best_ty08.jpg" alt=""></div>
+						</div>
+						<div class="swiper-pagination" style="display:none"></div>
+						<div class="swiper-pag-num"><span>1</span> / 2</div>
+						<a href="#" class="big5_next" data-role="none"></a>
+					</div>
+					<!-- // 이미지 슬라이더 -->
+					<div class="txtCont">
+						<strong>주메이라 비치 레지던스<span>(JBR-Jumeirah Beach Residence)</span></strong>
+						<p>두바이에서 가장 살기 좋은 지역 1위로 선정된 JBR은 매력적인 숍들과 고급레스토랑, 카페, 호텔 등이 해변에 인접해 있는 곳으로 유럽 분위기가 물씬 풍겨 많은 관광객이 찾는다. 해변의 선셋을 바라보며 테라스에서 식사를 하거나 여유롭게 해변 산책을 즐길 수 있다.</p>
+					</div>
+				</li>
+				<li>
+					<!-- 이미지 슬라이더 -->
+					<div class="swiper-container global_swiper">
+						<a href="#" class="big5_prev" data-role="none"></a>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_best_ty09.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_best_ty10.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_best_ty11.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_best_ty12.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_best_ty13.jpg" alt=""></div>
+						</div>
+						<div class="swiper-pagination" style="display:none"></div>
+						<div class="swiper-pag-num"><span>1</span> / 2</div>
+						<a href="#" class="big5_next" data-role="none"></a>
+					</div>
+					<!-- // 이미지 슬라이더 --> 
+					<div class="txtCont">
+						<strong>알 파하디 역사지구<span>(Al Fahidi Historical District, 구 바스타키야)</span></strong>
+						<p>두바이에서 가장 오래된 역사 유적지, 두바이의 민속촌 바스타키야 19세기 초 이란 남부 바스탁 지역에서 이주해 온 상인들이 정착해 살던 곳으로, 당시 부를 누렸던 상인들의 전통 가옥을 살펴볼 수 있다. 박물관, 갤러리, 로컬 호텔 및 까페, 레스토랑 등 소소한 볼거리가 많다. </p>
+					</div>
+				</li>
+				<li>
+					<!-- 이미지 슬라이더 -->
+					<div class="swiper-container global_swiper">
+						<a href="#" class="big5_prev" data-role="none"></a>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_best_ty14.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_best_ty15.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_best_ty16.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_best_ty17.jpg" alt=""></div>
+						</div>
+						<div class="swiper-pagination" style="display:none"></div>
+						<div class="swiper-pag-num"><span>1</span> / 2</div>
+						<a href="#" class="big5_next" data-role="none"></a>
+					</div>
+					<!-- // 이미지 슬라이더 -->
+					<div class="txtCont">
+						<strong>아브라 수상택시<span>(Abra Ride across the Dubai Creek)</span></strong>
+						<p>두바이는 바닷물로 이루어진 만(크릭)을 중심으로 데이라 지역과 브루두바이 지역으로 나뉘어지는데 이때 건너편 지역으로 이동시켜주는 수상택시를 아브라(ABRA) 라고 부른다. 크릭 주변에는  두바이의 전통 시장(수크)인 텍스타일수크, 스파이스수크, 골드 수크가 위치해 있다.</p>
+					</div>
+				</li>
+			</ul>
+			
+		</div>
+		<!-- // 두바이2 -->
+		
+		<!-- 두바이3 -->
+		<div class="recom_inCont" style="display:none">
+			<div class="contTop02 bg_def">
+				<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/tit_cont_top03.png" alt=""></h3>
+				<p>규모와 스케일이 남다르다<br>두바이라 더욱 새로운 어드벤처 체험</p>
+			</div>
+			
+			<ul class="monthCityList marT10">
+				<li>
+					<h4 class="gray">IMG 월드 오브 어드벤처<span>(IMG World of Adventures)</span></h4>
+					<!-- 이미지 슬라이더 -->
+					<div class="swiper-container global_swiper">
+						<a href="#" class="big5_prev" data-role="none"></a>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience01.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience02.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience03.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience04.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience05.jpg" alt=""></div>
+						</div>
+						<div class="swiper-pagination" style="display:none"></div>
+						<div class="swiper-pag-num"><span>1</span> / 2</div>
+						<a href="#" class="big5_next" data-role="none"></a>
+					</div>
+					<!-- // 이미지 슬라이더 -->
+					<div class="txtCont">
+						<p>2016년 8월 31일 오픈. 전세계 최대 규모의 실내 테마파크로 '카툰 네트워크', '마블', '로스트 벨리 – 다이노소어 어드벤처'까지 한데 모은 명실상부한 세계 최초의 레저명소로 자리매김 할 예정이다.</p>
+						<a href="http://www.imgworlds.com" class="btnPink" target="_blank" data-role="none">연관 상품 보기</a>
+					</div>
+				</li>
+				<li>
+					<h4 class="gray">두바이 사파리 파크<span>(Dubai Safari Park)</span></h4>
+					<!-- 이미지 슬라이더 -->
+					<div class="swiper-container global_swiper">
+						<a href="#" class="big5_prev" data-role="none"></a>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience06.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience07.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience08.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience09.jpg" alt=""></div>
+						</div>
+						<div class="swiper-pagination" style="display:none"></div>
+						<div class="swiper-pag-num"><span>1</span> / 2</div>
+						<a href="#" class="big5_next" data-role="none"></a>
+					</div>
+					<!-- // 이미지 슬라이더 -->
+					<div class="txtCont">
+						<p>2016년 3분기 오픈 예정. 두바이 최대 규모의 사파리 파크로 사파리 마을, 아라비아 마을, 어린이 동물원, 나비공원, 식물원 등으로 구성된다. 약 350종의 희귀 동물 및 멸종 위기 동물 등 1000여 마리의 동물, 조류의 보금자리가 될 것이다.</p>
+					</div>
+				</li>
+				<li>
+					<h4 class="gray">두바이 파크 &amp; 리조트<span>(Dubai Parks &amp; Resorts)</span></h4>
+					<!-- 이미지 슬라이더 -->
+					<div class="swiper-container global_swiper">
+						<a href="#" class="big5_prev" data-role="none"></a>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience10.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience11.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience33.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience34.jpg" alt=""></div>
+						</div>
+						<div class="swiper-pagination" style="display:none"></div>
+						<div class="swiper-pag-num"><span>1</span> / 2</div>
+						<a href="#" class="big5_next" data-role="none"></a>
+					</div>
+					<!-- // 이미지 슬라이더 -->
+					<div class="txtCont">
+						<p>2016년 10월 오픈 예정. 놀이기구와 공연장 등이 갖춰진 익사이팅 테마파크, 레고랜드, 볼리우드 파크, 모션 게이트로 구성된 두바이 파크 &amp; 리조트는 어린이부터 성인까지 모두를 만족시키는 최고의 테마 파크가 될 예정이다.</p>
+						<a href="http://www.dubaiparksandresorts.com" class="btnPink" target="_blank" data-role="none">연관 상품 보기</a>
+					</div>
+				</li>
+				<li>
+					<h4 class="gray">블루워터 아일랜드 &amp; 두바이 아이<span>(Bluewaters island &amp; Dubai Eye)</span></h4>
+					<!-- 이미지 슬라이더 -->
+					<div class="swiper-container global_swiper">
+						<a href="#" class="big5_prev" data-role="none"></a>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience12.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience13.jpg" alt=""></div>
+						</div>
+						<div class="swiper-pagination" style="display:none"></div>
+						<div class="swiper-pag-num"><span>1</span> / 2</div>
+						<a href="#" class="big5_next" data-role="none"></a>
+					</div>
+					<!-- // 이미지 슬라이더 -->
+					<div class="txtCont">
+						<p>2017년 오픈 예정. JBR 해안가로부터 약 500m 떨어진 곳에 지어질 인공섬. 엔터테인먼트, 부티크 샵, 레스토랑, 카페 등으로 구성될 뿐 아니라 전세계에서 가장 높은 회전 관람차인 '두바이 아이'에서는 두바이의 멋진 경관을 210m 높이에서 즐길 수 있다.</p>
+					</div>
+				</li>
+			</ul>
+			
+		</div>
+		<!-- // 두바이3 -->
+		
+		<!-- 두바이4 -->
+		<div class="recom_inCont" style="display:none">
+			<ul class="cont_inTab" style="margin-bottom:10px">
+				<li class="on"><a href="#" data-role="none">페스티벌</a></li>
+				<li class=""><a href="#" data-role="none">이색체험</a></li>
+			</ul>
+			
+			<!-- 페스티벌 -->
+			<div>
+				<div class="contTop03">
+					<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/tit_cont4_top01.png" alt=""></h3>
+					<p>두바이만의 특별한 페스티벌<br>미리 알고 떠나기!</p>
+				</div>
+				<ul class="monthCityList marT10">
+					<li>
+						<!-- 이미지 슬라이더 -->
+						<div class="swiper-container global_swiper">
+							<a href="#" class="big5_prev" data-role="none"></a>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience14.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience15.jpg" alt=""></div>
+							</div>
+							<div class="swiper-pagination" style="display:none"></div>
+							<div class="swiper-pag-num"><span>1</span> / 2</div>
+							<a href="#" class="big5_next" data-role="none"></a>
+						</div>
+						<!-- // 이미지 슬라이더 --> 
+						<div class="txtCont">
+							<strong>두바이 모토 페스티벌<span>기간 : 2016. 11. 10 ~ 19</span></strong>
+							<p>모터 페스티벌은 특히 자동차 매니아들이라면 놓쳐서는 안될 대형 이벤트. 모터쇼를 비롯, 수퍼카 퍼레이드, 수퍼카 택시를 타는 경험, F1 경주와 F1마스터 클라스, 사막 랠리에 이르기까지 자동차로 즐길 수 있는 다양한 행사가 2주간 끊이지 않고 진행된다.</p>
+							<a href="http://www.visitdubai.com/en/discover/festivals/dubai-motor-festival" target="_blank" class="btnPink" data-role="none">연관 상품 보기</a>
+						</div>
+					</li>
+					<li>
+						<!-- 이미지 슬라이더 -->
+						<div class="swiper-container global_swiper">
+							<a href="#" class="big5_prev" data-role="none"></a>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience16.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience17.jpg" alt=""></div>
+							</div>
+							<div class="swiper-pagination" style="display:none"></div>
+							<div class="swiper-pag-num"><span>1</span> / 2</div>
+							<a href="#" class="big5_next" data-role="none"></a>
+						</div>
+						<!-- // 이미지 슬라이더 --> 
+						<div class="txtCont">
+							<strong>두바이 쇼핑 페스티벌<span>기간 : 2016. 12. 26 ~ 2017. 1. 28</span></strong>
+							<p>전 세계에서 가장 큰 규모를 자랑하는 두바이몰을 포함해 95개의 쇼핑몰이 있는 두바이에는 수천 개의 매장에서 연일 대규모의 세일이 열리며, 운이 좋으면 람보르기니, 벤틀리, 아파트, 금, 현금 등의 경품에 당첨될 수도 있다.</p>
+							<a href="http://www.visitdubai.com/en/events/dubai-shopping-festival-2017 " target="_blank" class="btnPink" data-role="none">연관 상품 보기</a>
+						</div>
+					</li>
+					<li>
+						<!-- 이미지 슬라이더 -->
+						<div class="swiper-container global_swiper">
+							<a href="#" class="big5_prev" data-role="none"></a>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience18.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience19.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience32.jpg" alt=""></div>
+							</div>
+							<div class="swiper-pagination" style="display:none"></div>
+							<div class="swiper-pag-num"><span>1</span> / 2</div>
+							<a href="#" class="big5_next" data-role="none"></a>
+						</div>
+						<!-- // 이미지 슬라이더 --> 
+						<div class="txtCont">
+							<strong>두바이 푸드 페스티벌<span>기간 : 2017. 2. 5 ~ 18</span></strong>
+							<p>무려 2천여 곳이 넘는 레스토랑이 있는 두바이. 두바이 음식 카니발, 미스터리 요리 버스 투어, 고메 트레일 및 스트릿 나잇 등 다양한 행사는 물론, 유명 요리사의 시연회나 마스터 클라스, 시식의 기회가 두바이 거리 곳곳에서 제공된다. 미식가라면 놓치지 말아야 할 기회!</p>
+							<a href="http://www.gulfood.com/Content/Dubai-Food-Festival/39_282/" target="_blank" class="btnPink" data-role="none">연관 상품 보기</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- // 페스티벌 -->
+			
+			<!-- 이색체험 -->
+			<div style="display:none">
+				<div class="contTop03 bgtype2">
+					<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/tit_cont4_top02.png" alt=""></h3>
+					<p>진짜 사막을 만나다, 모래위에서 즐기는 다양한 액티비티</p>
+				</div>
+				<ul class="monthCityList marT10">
+					<li>
+						<!-- 이미지 슬라이더 -->
+						<div class="swiper-container global_swiper">
+							<a href="#" class="big5_prev" data-role="none"></a>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience20.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience21.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience22.jpg" alt=""></div>
+							</div>
+							<div class="swiper-pagination" style="display:none"></div>
+							<div class="swiper-pag-num"><span>1</span> / 2</div>
+							<a href="#" class="big5_next" data-role="none"></a>
+						</div>
+						<!-- // 이미지 슬라이더 --> 
+						<div class="txtCont">
+							<strong>모래언덕 질주(Dune Bashing)</strong>
+							<p>롤러코스터를 타는 짜릿함을 사막에서 경험해볼 수 있는 모래 언덕 질주. 황금빛 모래 사막을 스릴 넘치는 사륜구동 차량을 타고 이동해 사막 한 가운데서 무한 질주를 체험하는 이색 체험이다.</p>
+						</div>
+					</li>
+					<li>
+						<!-- 이미지 슬라이더 -->
+						<div class="swiper-container global_swiper">
+							<a href="#" class="big5_prev" data-role="none"></a>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience23.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience24.jpg" alt=""></div>
+							</div>
+							<div class="swiper-pagination" style="display:none"></div>
+							<div class="swiper-pag-num"><span>1</span> / 2</div>
+							<a href="#" class="big5_next" data-role="none"></a>
+						</div>
+						<!-- // 이미지 슬라이더 --> 
+						<div class="txtCont">
+							<strong>헤나 페인팅</strong>
+							<p>사막중심에 위치한 베드윈 캠프사이트 (Bedouin Campsite)에서 헤나 페인팅을 즐겨볼 수 있다. </p>
+						</div>
+					</li>
+					<li>
+						<!-- 이미지 슬라이더 -->
+						<div class="swiper-container global_swiper">
+							<a href="#" class="big5_prev" data-role="none"></a>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience25.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience26.jpg" alt=""></div>
+							</div>
+							<div class="swiper-pagination" style="display:none"></div>
+							<div class="swiper-pag-num"><span>1</span> / 2</div>
+							<a href="#" class="big5_next" data-role="none"></a>
+						</div>
+						<!-- // 이미지 슬라이더 --> 
+						<div class="txtCont">
+							<strong>밸리댄스 쇼</strong>
+							<p>세계 각지에서 찾아온 관광객들은 밸리 댄서의 매혹적인 춤과 토착민인 베두인의 식사를 함께하며 신비로움 가득한 아라비안 나이트를 보낼 수 있다.</p>
+						</div>
+					</li>
+					<li>
+						<!-- 이미지 슬라이더 -->
+						<div class="swiper-container global_swiper">
+							<a href="#" class="big5_prev" data-role="none"></a>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience27.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience28.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience29.jpg" alt=""></div>
+							</div>
+							<div class="swiper-pagination" style="display:none"></div>
+							<div class="swiper-pag-num"><span>1</span> / 2</div>
+							<a href="#" class="big5_next" data-role="none"></a>
+						</div>
+						<!-- // 이미지 슬라이더 --> 
+						<div class="txtCont">
+							<strong>팔콘 쇼</strong>
+							<p>우리말로 송골매라 불리는 팔콘, 사막 한 가운데에서 놀라운 속도로 움직이는 팔콘의 움직임,  순식간에 먹이를 낚아채는 팔콘의 모습은 감탄을 자아내게 한다.</p>
+						</div>
+					</li>
+					<li>
+						<!-- 이미지 슬라이더 -->
+						<div class="swiper-container global_swiper">
+							<a href="#" class="big5_prev" data-role="none"></a>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience30.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_experience31.jpg" alt=""></div>
+							</div>
+							<div class="swiper-pagination" style="display:none"></div>
+							<div class="swiper-pag-num"><span>1</span> / 2</div>
+							<a href="#" class="big5_next" data-role="none"></a>
+						</div>
+						<!-- // 이미지 슬라이더 --> 
+						<div class="txtCont">
+							<strong>바베큐 디너</strong>
+							<p>저녁이 되면 사막 캠프에서 럭셔리한 뷔페 식사와 바베큐를 즐길 수 있다.커피와 차도 후식으로 제공되어 사막 특유의 낭만 가득한 밤을 만끽할 수 있다.</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- // 이색체험 -->
+		</div>
+		<!-- // 두바이4 -->
+		
+		<!-- 이벤트 -->
+		<div class="recom_inCont" style="display:none">
+			<ul class="cont_inTab02">
+				<li class="on"><a href="#" data-role="none">SNS 공유하기</a></li>
+				<li><a href="#" data-role="none">SM면세점</a></li>
+			</ul>
+			
+			<!-- sns공유 -->
+			<div class="eventSnsCont">
+				<div class="insnsTop">
+					<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/tit_event01.png" alt=""></h3>
+					<p><strong>응모기간</strong> : 2016.09.01(목) ~ 2016.09.30(금)<br><strong>당첨자 발표</strong> : 2016.10.14(금)</p>
+					
+				</div>
+				<a href="http://m.hanatour.com/application/eventCoupon/eventCoupon_comment.jsp?eventNum=22772" data-role="none" target="_blank" title="새창" class="btnPink">이벤트 바로가기</a>
+				<div class="btmBox"><span><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_event01.png" alt=""></span></div>
+			</div>
+			<!-- // sns공유 -->
+			
+			<!-- sm면세점 -->
+			<div class="eventSmCont" style="display:none">
+				<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/tit_event02.png" alt=""></h3>
+				
+				<div class="special" style="margin-top:-28px">
+					<h4>특별 적립금</h4>
+					<a href="http://www.smdutyfree.com/fpr105.do?goTo=eventDetail&evtCd=20160300121&smdfExhCode=mha_he" data-role="none" target="_blank" title="새창"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_event02_01.png" alt=""></a>
+				</div>
+				
+				<div class="special">
+					<h4>할인</h4>
+					<a href="http://www.smdutyfree.com/fpr105.do?goTo=eventDetail&evtCd=20160300132&smdfExhCode=HNT_msign" data-role="none" target="_blank" title="새창"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_event02_02.png" alt=""></a>
+				</div>
+				
+				<div class="special">
+					<h4>금액추가 할인권</h4>
+					<a href="http://m.hanatour.com/sm/benefit.hnt" data-role="none" target="_blank" title="새창"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_event02_03.png" alt=""></a>
+				</div>
+				
+				<div class="special">
+					<h4>추천 면세품</h4>
+					<a href="http://www.smdutyfree.com/fpr105.do?goTo=eventDetail&evtCd=20160800291&smdfExhCode=mha_te" data-role="none" target="_blank" title="새창"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_event02_04.png" alt=""></a>
+				</div>
+				
+				<div class="special">
+					<h4>스마트오더</h4>
+					<a href="http://shop.smdutyfree.com" data-role="none" target="_blank" title="새창"><img src="http://image1.hanatour.com/mobile/common/thismonth/201609/img_event02_05.png" alt=""></a>
+				</div>
+				
+			</div>
+			<!-- // sm면세점 -->
+		
+		</div>
+		<!-- // 이벤트 -->
+		
+		
+	</div>
+	<!-- //컨텐츠 영역 -->
+	
+	<footer class="newFoot">
+		<ul>
+			<li><a href="#" data-role="none">로그인</a></li>
+			<li><a href="#" data-role="none">PC버전</a></li>
+			<li><a href="#" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+		</ul>
+		<div>
+			<a href="#" data-role="none">이용약관</a>|
+			<a href="#" data-role="none">개인정보처리방침</a>|
+			<a href="#" data-role="none">여행약관</a>|
+			<a href="#" data-role="none">사업자정보확인</a>
+		</div>
+		<address>
+				㈜ 하나투어 | 대표자: 김진국 | 사업자등록번호 : 102-81-39440<br>
+				통신판매업신고번호 : 종로01-1806호 | 개인정보관리 책임자 : 박성재<br>
+				[110-160]서울특별시 종로구 인사동 5길 41 ㈜ 하나투어<br>
+				하나투어상담센터 : <a href="tel:1577-1233" data-role="none">1577-1233</a> | FAX : 02-734-0392<br>
+				이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> | 호스팅 서비스 사업자 : ㈜하나투어<br>
+				관광사업자 등록번호 : 제1933-000006호 | 영업보증보험 : 22억 1천만원 가입<br>
+				COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+		</address>
+	</footer>
+	
+</div>
+
+
+</body>
+</html>
+

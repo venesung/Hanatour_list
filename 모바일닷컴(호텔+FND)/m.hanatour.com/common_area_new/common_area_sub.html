@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+</head>
+<body style="padding:0; margin:0">
+
+	<!-- 공통 분리영역 서브 -->
+	<link rel="stylesheet" type="text/css" href="common_area_main.css">
+	<link rel="stylesheet" type="text/css" href="common_area_sub.css">
+	<script type="text/javascript">
+		(function (scope) {
+		    if (scope.JDotcomASP !== undefined) return;
+
+		    var JDotcomASP = {
+		    	/* 스크롤 비활성화 ClassName */
+		    	unScrollClassName : 'un_scroll',
+
+		    	/* 딤드 요소 Selector */
+		    	dimmedSelector : 'div.commArea_mask',
+
+		    	/**
+		    	 * toggle slide menu
+		    	 * 
+		    	 * @param  {DOMElement} element  컨트롤 하고자하는 요소 
+		    	 * @param  {Boolean} 	toggle   토글값 [default: undefined]
+		    	 */
+		    	toggleSlideMenu: function (element, toggle) {
+		    		var body = document.querySelector('body');
+		    		var dimmedDIV = document.querySelector(JDotcomASP.dimmedSelector);
+			    	var target = element || null;
+
+			    	if (target === null) return;
+
+			    	var handlerClassName = target.getAttribute('data-handler');
+			    	var handlerBUTTON = (handlerClassName !== null) ? document.querySelector('.' + handlerClassName) : null;
+			    	var styleName = target.getAttribute('data-css');
+			    	var unit = styleName === 'left' ? '%' : 'px';
+			    	var sw = toggle || target.style.display !== 'block';
+
+			    	if (sw) {
+			    		//open
+			    		target.style.display = 'block';
+			    		if (dimmedDIV !== null) dimmedDIV.style.display = 'block';
+			    		if (handlerBUTTON !== null) handlerBUTTON.classList.add('on');
+			    		setTimeout(function () {
+			    			target.style[styleName] = '0' + unit;
+			    		}, 5);
+
+			    		if (JDotcomASP.unScrollClassName !== undefined) body.classList.add(JDotcomASP.unScrollClassName);
+			    	} else {
+			    		//close
+			    		target.style[styleName] = '';
+			    		if (dimmedDIV !== null) dimmedDIV.style.display = '';
+			    		if (handlerBUTTON !== null) handlerBUTTON.classList.remove('on');
+
+			    		if (JDotcomASP.unScrollClassName !== undefined) body.classList.remove(JDotcomASP.unScrollClassName);
+			    	}
+		    	}
+			};
+
+		    scope.JDotcomASP = JDotcomASP;
+		})(window);
+
+		document.addEventListener('DOMContentLoaded', function(e) {
+		    var allMenuBUTTON = document.querySelector('button.allMenu');
+		    var allMenuDIV = document.querySelector('div#commArea_leftMenu');
+		    var allMenuCloseBUTTON = (allMenuDIV !== null) ? allMenuDIV.querySelector('button.closeSlide') : null;
+
+		    var myMenuBUTTON = document.querySelector('button.myHome');
+		    var myMenuDIV = document.querySelector('div#commArea_rightMenu');
+
+			var subHEADER = document.querySelector('header#commonArea_header_sub');
+		    var subNaviBUTTON =  document.querySelector('button.subMenuBtn');
+		    var subNaviNAV = document.querySelector('nav#commonArea_sub_navi');
+
+		    var dimmedDIV = document.querySelector(JDotcomASP.dimmedSelector);
+
+		    var handlerArr = [allMenuBUTTON, myMenuBUTTON, subNaviBUTTON];
+		    var menuArr = [allMenuDIV, myMenuDIV, subNaviNAV];
+		    var kindArr = ['left', 'right', 'bottom'];
+
+	    	//init button
+	    	if (handlerArr !== null) {
+				handlerArr.forEach(function (target, idx) {
+					if (target !== null) {
+						//open slidemenu
+				    	target.addEventListener('click', function (e) {
+				    		defaultSlideMenu();
+
+				    		JDotcomASP.toggleSlideMenu(menuArr[idx]);
+
+				    		e.preventDefault();
+				    	});
+					}
+				});
+	    	}
+
+			//init div
+			menuArr.forEach(function (target, idx) {
+				if (target !== null) {
+					target.classList.add('tween');
+					target.setAttribute('data-css', kindArr[idx]);
+					if (handlerArr[idx] !== undefined && handlerArr[idx].classList.length > 0) target.setAttribute('data-handler', handlerArr[idx].classList[0]);
+					
+					//callback transition end 
+					target.addEventListener('transitionend', function () {
+						var isOpen = this.style[this.getAttribute('data-css')] !== '';
+
+						if (!isOpen) this.style.display = '';
+					});
+
+					//x button
+					var closeBtn = target.querySelector('button.close');
+					if (closeBtn !== null) {
+						closeBtn.addEventListener('click', function (e) {
+				    		defaultSlideMenu();
+
+							e.preventDefault();
+						});
+					}
+				}
+			});
+
+			//click dimmed
+			if (dimmedDIV !== null) {
+				dimmedDIV.addEventListener('click', function (e) {
+		    		defaultSlideMenu();
+
+		    		e.preventDefault();
+				});
+			}
+
+			//close block menu
+			function defaultSlideMenu() {
+	    		menuArr.forEach(function (currentValue, index, arr) {
+					if (currentValue !== null && currentValue.style.display === 'block') JDotcomASP.toggleSlideMenu(currentValue);
+	    		});
+			}
+
+			//scroll event
+			window.addEventListener('scroll', function (e) {
+				var scrollYpos = (document.documentElement.scrollTop !== 0) ? document.documentElement.scrollTop : document.body.scrollTop;
+
+				if (subHEADER !== null) {
+					scrollYpos !== 0 ? subHEADER.classList.add('scrolling') : subHEADER.classList.remove('scrolling');
+				} 
+			});
+		});
+	</script>
+	
+	
+	
+	<!-- 헤더 -->
+	<header id="commonArea_header_sub" class=""><!-- 스크롤시 class="scrolling"추가 -->
+		<h1><button type="button" class="subMenuBtn" title="서브메뉴 더보기" data-role="none">회원가입</button></h1><!-- 서브메인일경우 button 태그 추가 :: 클릭시 class="on"추가되고 하단 commonArea_sub_navi 노출 -->
+		<a href="#" class="backPageBtn" data-role="none" title="뒤로가기"></a>
+		<a href="#" class="search" data-role="none" title="통합검색"></a>
+	</header>
+	<!-- // 헤더 -->
+	
+	
+	
+	<!-- 컨텐츠 -->
+	<section class="container" style="height:500px">
+	컨텐츠 샘플
+
+	</section>
+	<!-- // 컨텐츠 -->
+	
+	
+	<!-- 메인 하단 navi bar -->
+	<nav id="commonArea_main_naviBar">
+		<a href="#" class="mainHome"><span>홈</span></a>
+		<button type="button" class="allMenu" data-role="none"><span>전체메뉴</span></button><!-- 선택시 class="on" -->
+		<button type="button" class="myHome" data-role="none"><span>마이페이지</span></button>
+		<a href="#" class="latestProd"><span>최근본상품</span></a>
+	</nav>
+	<!-- // 메인 하단 navi bar -->
+	
+	<!-- 서브메인 네비 -->
+	<nav id="commonArea_sub_navi" style="display:no ne;"><!-- 노출시 하단에서 위로 올라옴 -->
+		<button type="button" class="closeSubNavi close" title="닫기" data-role="none"></button>
+		<ul class="subMenuList">
+			<li class="on"><a href="#" data-role="none">패키지</a></li><!-- 활성화 class="on" -->
+			<li><a href="#" data-role="none">항공</a></li>
+			<li><a href="#" data-role="none">호텔</a></li>
+			<li><a href="#" data-role="none">에어텔</a></li>
+			<li><a href="#" data-role="none">허니문</a></li>
+			<li><a href="#" data-role="none">골프</a></li>
+			<li><a href="#" data-role="none">현지투어</a></li>
+			<li><a href="#" data-role="none">패스/입장권</a></li>
+			<li><a href="#" data-role="none">유럽패스</a></li>
+			<li><a href="#" data-role="none">국내여행</a></li>
+		</ul>
+	</nav>
+	<div class="commArea_mask" style="display:bl ock"></div><!-- 딤처리 -->
+	<!-- // 서브메인 네비 -->
+	
+	
+	<!-- 푸터 -->
+	<footer id="commonArea_footer">
+		<ul class="foot_topList">
+			<li><a href="#" data-role="none">로그인</a></li>
+			<li style="display:none"><a href="#" data-role="none">로그아웃</a></li>
+			<li><a href="#" data-role="none">PC버전</a></li>
+			<li><button type="button" class="scrollTop" data-role="none" title="상단 바로가기">TOP</button></li>
+		</ul>
+		<div class="foot_termsLink">
+			<a href="#" data-role="none">이용약관</a>
+			<a href="#" data-role="none"><strong>개인정보처리방침</strong></a>
+			<a href="#" data-role="none">여행약관</a>
+			<a href="#" data-role="none">사업자정보확인</a>
+		</div>
+		<address>
+			(주) 하나투어 | 대표자: 김진국 | 사업자등록번호 : <span class="num">102-81-39440</span><br>
+			통신판매업신고번호 : 종로<span class="num">01-1806</span>호 | 개인정보관리 책임자 : 박성재<br>
+			<span class="num">[03161]</span>서울특별시 종로구 인사동 5길 41<br>
+			하나투어상담센터 : <a href="tel:1577-1233" class="num" data-role="none">1577-1233</a> | FAX : <span class="num">02-734-0392</span><br>
+			이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> |
+			호스팅 서비스 사업자 : (주) 하나투어<br>
+			관광사업자 등록번호 : 제<span class="num">1993-000006</span>호 | 영업보증보험 : 22억 1천만원 가입
+			<p>COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED</p>
+		</address>
+	</footer>
+	<!-- //푸터 -->
+
+	
+	<!-- // 공통 분리영역 서브 -->
+
+
+</body>
+</html>
+

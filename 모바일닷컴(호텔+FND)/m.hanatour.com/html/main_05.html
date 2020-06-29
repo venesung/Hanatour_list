@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="../../favicon/HanaFree/114×114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72×72" href="./icon/72×72.png">
+<link rel="apple-touch-icon-precomposed" href="icon/57×57.png">
+<title>메인 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-2.1.3.min.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery.mobile-1.4.5.min.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery.lazyload.js?v=1.9.1"></script><!-- 2015-04-06 추가 -->
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/etc/iscroll.carousel.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/etc/iscroll.swipeview.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/etc/fixedPostiion.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/etc/fastclick.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/main.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/swiper.min.js" type="text/javascript"></script><!-- 20151208 추가 -->
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common_new.js" type="text/javascript"></script><!-- 20151208 추가 -->
+</head>
+
+<body>
+
+<div id="wrap">
+	
+	<header id="header" class=""><!-- 20150528 띠배너 보일경우 class="tBanTy" 추가 -->
+		<div class="inner">
+			<h1><a href="#" data-role="none"><img src="../images/common/btn_nlogo.png" alt="하나투어"></a></h1>
+			<a href="#" id="btnMenu" data-role="none"><img src="../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+			<a href="#" id="btnMyhome" data-role="none"><img src="http://image1.hanatour.com/mobile/common/hanatour/common/btn_hdright.png" alt="마이홈"></a>
+			<a href="#" id="btnSearch" data-role="none"><img src="http://image1.hanatour.com/mobile/common/search/btn_hdsearch.png" alt="통합검색"></a><!-- 20151201 통합검색 추가 -->
+		</div>
+	</header>
+	
+	<!-- 메인개편 gnb수정 -->
+	<nav id="gnb" class="swiper-container"><!-- 20150528 띠배너 보일경우 class="tBanTy" 추가 -->
+		<ul class="gnb-wrapper">
+			<li class="gnb-slide on"><a href="#" data-role="none">홈</a></li>
+			<li class="gnb-slide"><a href="#" data-role="none">패키지</a></li>
+			<li class="gnb-slide"><a href="#" data-role="none">항공</a></li>
+			<li class="gnb-slide"><a href="#" data-role="none">호텔</a></li>
+			<li class="gnb-slide"><a href="#" data-role="none">국내여행</a></li>
+			<li class="gnb-slide"><a href="#" data-role="none">여행정보</a></li>
+		</ul>
+		<!--div class="focusBar"></div--><!-- 20150910 삭제 -->
+		
+		<a href="#" class="btn_navAll" data-role="none" title="전체메뉴보기"></a><!-- 선택시 class="on" 추가 :: 20170112 추가 -->
+		
+		<!-- 20170112 추가 -->
+		<div class="allDepBox" style="display:none;">
+			<ul class="navAllDep">
+				<li class="on"><a href="#" data-role="none">홈</a></li><!-- 해당 관일시 class="on" 추가 -->
+				<li><a href="#" data-role="non e">패키지</a></li>
+				<li><a href="#" data-role="none">항공</a></li>
+				<li><a href="#" data-role="none">호텔</a></li>
+				<li><a href="#" data-role="none">국내여행</a></li>
+				<li><a href="#" data-role="none">여행정보</a></li>
+				<li><a href="#" data-role="none">테마여행</a></li>
+				<li class="etc"><a href="#" data-role="none">슈퍼세이브</a></li>
+				<li class="etc"><a href="#" data-role="none">추천기획전</a></li>
+			</ul>
+		</div>
+		<!-- 20170112 추가 -->
+	</nav>
+	<!-- // 메인개편 gnb수정 -->
+	
+	<div class="headerMargin"></div> <!-- 네비없을경우 class="headerMargin02". 상단 띠배너 노출일경우 class="headerMargin03" -->
+
+
+	<div id="container">
+<!-- 컨텐츠 영역 -->
+
+		<div id="mainSlider" class="sliderWrap">
+			<div class="scroller">
+				
+				<!-- 국내여행 -->
+				<section id="page_05" class="page">
+					<div class="scrollArea">
+						<!-- 빠른검색 20180108 수정 start -->
+						<ul class="m5_linkBox">
+							<li><a href="#" data-role="none" class="bgTy01">국내항공</a></li>
+							<li><a href="#" data-role="none" class="bgTy02">국내숙박</a></li>
+							<li><a href="#" data-role="none" class="bgTy03">제주여행</a></li>
+							<li><a href="#" data-role="none" class="bgTy04">기차여행<br> 만들기</a></li>
+							<!--li><a href="#" data-role="none" class="plusBtn">더보기</a></li-->
+							<li><a href="#" data-role="none" class="bgTy05">내륙여행</a></li>
+							<li><a href="#" data-role="none" class="bgTy06">내나라여행</a></li>
+							<li><a href="#" data-role="none" class="bgTy07">제주여행<br> 만들기</a></li>
+							<li><a href="#" data-role="none" class="bgTy08">입장권</a></li>
+							<li><a href="#" data-role="none" class="bgTy09">렌터카</a></li>
+							<li><a href="#" data-role="none" class="bgTy10">국내여행<br> 만들기</a></li><!-- 신규추가 -->
+							<!--li><a href="#" data-role="none" class="closeBtn">닫기</a></li-->
+						</ul>
+						<!-- // 빠른검색 20180108 수정 end  -->
+						
+						<!-- 배너 스와이프 20161108 -->
+						<style type="text/css">
+						.imgSwipBanner .swiper-container {overflow:visible}
+						.imgSwipBanner .swiper-pagination {bottom:-17px}
+						.imgSwipBanner .swiper-pagination-bullet {border:1px solid #c83d67}
+						.imgSwipBanner .swiper-pagination-bullet-active {background-color:#c83d67}
+						</style>
+						<div class="imgSwipBanner">
+							<div class="swiper-container global-swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide"><a href="#" link="simple" url="http://mdom.hanatour.com/GEvent/ev_detail.asp?eIdx=2793" data-role="none" class="imgBox100"><img src="http://image1.hanatour.com/mobile/common/expo2016/banner/img_korea_banner.jpg"></a></div>
+									<div class="swiper-slide"><a href="#" link="simple" url="http://mdom.hanatour.com/GEvent/ev_detail.asp?eIdx=2762" data-role="none" class="imgBox100"><img src="http://image1.hanatour.com/ad/2016/08_tmark/640x140_ktravel.jpg"></a></div>
+								</div>
+								
+								<div class="swiper-pagination"></div>
+							</div>
+						</div>
+						<!-- // 배너 스와이프 20161108 -->
+						
+						<h2 class="stit05"><strong><span><img src="../images/main/txt_mainhot.png" alt="HOT"></span>소셜보다 저렴한</strong> HOT 특가제품</h2>
+						
+						<!-- 국내여행 리스트 -->
+						<ul class="main_hotel korea"> <!-- 국내여행일경우 class="korea"추가 -->
+							<li>
+								<a href="#" data-role="none">
+									<div class="saleImgBox">
+										<img class="lazy" src="../images/main/img_maincont05_01.jpg" alt="">
+										<span><strong class="countNum" data-num="52">0</strong>%</span> <!-- 스크립터 : 할인율을 data-num 에 넣어주세요 -->
+									</div>
+									<div class="saleContBox">
+										<em>내륙여행 - 당일</em>
+										<strong>4월의 여왕! 제 53회 진해군항제 벚꽃 축제</strong>
+										<span>21,000원 <em>34,000원</em></span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" data-role="none">
+									<div class="saleImgBox">
+										<img class="lazy" src="../images/main/img_maincont05_02.jpg" alt="">
+										<span><strong class="countNum" data-num="52">0</strong>%</span> <!-- 스크립터 : 할인율을 data-num 에 넣어주세요 -->
+									</div>
+									<div class="saleContBox">
+										<em>국내숙박 - 3월 얼리버드 특가</em>
+										<strong>환상적인 설경! 덕유산 눈꽃트레킹</strong>
+										<span>142,000원 <em>234,000</em></span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" data-role="none">
+									<div class="saleImgBox">
+										<img class="lazy" src="../images/main/img_maincont05_03.jpg" alt="">
+										<span><strong class="countNum" data-num="52">0</strong>%</span> <!-- 스크립터 : 할인율을 data-num 에 넣어주세요 -->
+									</div>
+									<div class="saleContBox">
+										<em>내나라여행 - 당일</em>
+										<strong>전주 한옥 마을</strong>
+										<span>19,000원 <em>34,000원</em></span>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<!-- 국내여행 리스트 end -->
+						
+						<div class="btmBanner05">
+							<a href="#" data-role="none" class="imgBox100"><img src="../images/main/img_maincont05_web.png" alt=""></a><!-- 웹투나잇 -->
+							<a href="#" data-role="none" class="imgBox100"><img src="../images/main/img_maincont05_jeju.jpg" alt=""></a><!-- 제주여행 -->
+						</div>
+						
+						<!-- 하단 광고 start --> 
+						<a href="#" class="mainfootBan" data-role="none">	
+							<img src="../images/main/img_mainfoot.png" alt="자기! 난 챙길 물건이 많다고! 대용량 여행가방 선착순 증정">
+						</a>
+						<!-- //하단 광고 end -->
+						
+						<footer class="newFoot">
+							<ul>
+								<li><a href="#" data-role="none">로그인</a></li><!-- 20150427 추가 -->
+								<li><a href="#" data-role="none">PC버전</a></li>
+								<li><a href="#" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+							</ul>
+							<div>
+								<a href="#" data-role="none">이용약관</a>|
+								<a href="#" data-role="none">개인정보처리방침</a>|
+								<a href="#" data-role="none">여행약관</a>|
+								<a href="#" data-role="none">사업자정보확인</a>
+							</div>
+							<address>
+									㈜ 하나투어 | 대표자: 김진국 | 사업자등록번호 : 102-81-39440<br>
+									통신판매업신고번호 : 종로01-1806호 | 개인정보관리 책임자 : 최종윤<br>
+									[110-160]서울특별시 종로구 인사동 5길 41 ㈜ 하나투어<br>
+									하나투어상담센터 : <a href="tel:1577-1233" data-role="none">1577-1233</a> | FAX : 02-734-0392<br>
+									이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> | 호스팅 서비스 사업자 : ㈜하나투어<br>
+									관광사업자 등록번호 : 제1933-000006호 | 영업보증보험 : 22억 1천만원 가입<br>
+									COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+						
+							</address>
+						</footer>
+						
+					</div>
+				</section>
+
+			</div>
+		</div>
+		
+		<a href="#" id="topBtn01" data-role="none" data-scroller="window" data-target="" data-attach="" data-direction="fade" data-margin="" class="topBtn01 posFixed loaded scrollTop"><img src="../images/common/btn_top01.png" alt="TOP"></a>
+<!-- //컨텐츠 영역 -->
+
+	</div>
+</div>
+
+
+
+<!-- 좌측메뉴 -->
+<div id="menuPanel">
+	<a href="#" data-role="none" class="closeSlide" title="닫기"></a><!-- 20150526 추가 -->
+	<div class="innerScroller">
+		<div class="nleftMenu">
+			<h2>해외 패키지 여행 - 패키지</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">하나Pack</a></li>
+				<li><a href="#" data-role="none">허니문</a></li>
+				<li><a href="#" data-role="none">골프</a></li>
+				<li><a href="#" data-role="none">크루즈</a></li>
+				<li><a href="#" data-role="none">트레킹</a></li>
+				<li><a href="#" data-role="none">레포츠</a></li>
+				<li><a href="#" data-role="none">박람회</a></li>
+				<li><a href="#" data-role="none">제우스[럭셔리여행]</a></li>
+				<li><a href="#" data-role="none">성지순례</a></li>
+				<li><a href="#" data-role="none">특수지역</a></li>
+			</ul>
+			
+			<h2>해외 자유여행 - 하나Free</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">항공</a></li>
+				<li><a href="#" data-role="none">해외호텔</a></li><!-- 20150910 메뉴명변경 -->
+				<li><a href="#" data-role="none">에어텔/자유여행</a></li>
+				<li><a href="#" data-role="none">배낭여행</a></li>
+				<li><a href="#" data-role="none">교통패스</a></li>
+				<li><a href="#" data-role="none">유럽구간철도</a></li>
+				<li><a href="#" data-role="none">현지투어</a></li>
+				<li><a href="#" data-role="none">입장권</a></li>
+			</ul>
+			
+			<h2>국내여행</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">항공</a></li>
+				<li><a href="#" data-role="none">숙박</a></li>
+				<li><a href="#" data-role="none">내륙/제주여행</a></li>
+				<li><a href="#" data-role="none">입장권</a></li>
+				<li><a href="#" data-role="none">골프</a></li>
+			</ul>
+			
+			<h2>여행정보</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">E-Book</a></li>
+				<li><a href="#" data-role="none">트레블웹진</a></li>
+				<li><a href="#" data-role="none">블로그</a></li>
+				<li><a href="#" data-role="none">트위터</a></li>
+				<li><a href="#" data-role="none">페이스북</a></li>
+				<li><a href="#" data-role="none">카페</a></li>
+				<li><a href="#" data-role="none">스티커</a></li>
+				<li><a href="#" data-role="none">날씨정보</a></li>
+				<li><a href="#" data-role="none">환율정보</a></li>
+				<li><a href="#" data-role="none">시차정보</a></li>
+			</ul>
+			
+			<h2>연계서비스</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">공연/영화</a></li>
+				<li><a href="#" data-role="none">기업출장/단체</a></li><!-- 20150810 수정 -->
+				<li><a href="#" data-role="none">하나샵</a></li>
+				<li><a href="#" data-role="none">웨딩플래너</a></li>
+				<li><a href="#" data-role="none">무료가이드북</a></li>
+			</ul>
+			
+			<div class="allmenu_btm">
+				<a href="#" data-role="none">추천기획전</a>
+				<a href="#" data-role="none">이벤트</a>
+				<a href="#" data-role="none">쿠폰</a>
+				<a href="#" data-role="none">하나투어 모바일앱</a>
+			</div>
+			
+			<ul class="allmenu_app">
+				<li><a href="#" data-role="none">하나투어 패키지</a></li>
+				<li><a href="#" data-role="none">하나Free항공</a></li>
+				<li><a href="#" data-role="none">하나Free호텔</a></li>
+				<li><a href="#" data-role="none">하나Free에어텔</a></li>
+				<li><a href="#" data-role="none">하나Free</a></li>
+				<li><a href="#" data-role="none">하나Free 국내숙박</a></li>
+			</ul>
+			
+			<a href="#" data-role="none" class="allmenu_event"><img src="../images/common/img_allmenu_banner.jpg" alt="특별한 공연티켓 예매 하나 Free티켓 하나투어마일리지는 원래 이렇게쓰는겁니다."></a>
+		</div>
+	</div>
+</div>
+
+
+<!-- 우측메뉴 20150421 추가 -->
+<div id="userPanel">
+	<a href="#" data-role="none" class="closeSlide" title="닫기"></a><!-- 20150526 추가 -->
+	<div class="innerScroller">
+		<!-- 비로그인 -->
+		<div class="nRightMe_out" style="display:none">
+			<p><strong>회원님, 안녕하세요!</strong>
+				예약내역과 마일리지를<br> 확인하시려면 로그인 해주세요.
+			</p>
+			<div>
+				<a href="#" data-role="none" class="rlogin">로그인</a>
+				<a href="#" data-role="none" class="rjoin">회원가입</a>
+			</div>
+		</div>
+		<!-- 비로그인 end -->
+		
+		<!-- 로그인 -->
+		<div class="nRightMe_in" style="display:no ne">
+			<h2><strong>김하나</strong> 님 안녕하세요
+				<!-- 20150427 삭제 a href="#" data-role="none">로그아웃</a-->
+			</h2>
+			
+			<a href="#" data-role="none" class="bgRightM01">마일리지 현황</a>
+			<div class="mileBox">
+				<ul>
+					<li>회원번호<span>102-494-504</span></li>
+					<li>가용 마일리지<span>10,000 <img src="../images/common/img_mailbig.png" alt="마일리지"></span></li>
+					<li>총 적립 마일리지<span>10,000 <img src="../images/common/img_mailbig.png" alt="마일리지"></span></li>
+				</ul>
+				<span class="milebtnBox"><a href="#" data-role="none">누적 마일리지 적립</a></span>
+			</div>
+			
+			<a href="#" data-role="none" class="bgRightM02">장바구니<span>25개</span></a>
+			<a href="#" data-role="none" class="bgRightM03">예약내역<span>25개</span></a>
+			<a href="#" data-role="none" class="bgRightM04">참여내역<span>25개</span></a>
+			<a href="#" data-role="none" class="bgRightM05">메시지함</a>
+			<a href="#" data-role="none" class="bgRightM06">개인정보보기</a>
+		</div>
+		<!-- 로그인 end -->
+		
+		<!-- 광고배너-->
+		<a href="#" data-role="none" class="allmenu_event"><img src="../images/common/img_allmenu_banner.jpg" alt="특별한 공연티켓 예매 하나 Free티켓 하나투어마일리지는 원래 이렇게쓰는겁니다."></a>
+		<!-- 광고배너 end -->
+	</div>
+</div>
+
+<!-- Picker 창 -->
+<div id="overlayPanel">
+</div>
+</body>
+</html>
+

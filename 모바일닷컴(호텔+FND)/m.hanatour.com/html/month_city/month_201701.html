@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>이달의 도시 알버타 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-2.1.3.min.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/city/city_1701.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/swiper.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div id="wrap"> 
+	<header id="header"><!-- 띠배너 보일경우 class="tBanTy" 추가 -->
+		<div class="inner">
+			<h1><a href="#" data-role="none"><img src="../../images/common/btn_nlogo.png" alt="하나투어"></a></h1>
+			<a href="#" id="btnMenu" data-role="none"><img src="../../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+			<a href="#" id="btnMyhome" data-role="none"><img src="../../images/common/btn_hdright.png" alt="마이홈"></a>
+		</div>
+	</header>
+	<div style="height:52px"></div>
+	
+	<!-- 컨텐츠 영역 -->
+	<style type="text/css">
+	html {font-size:10px}
+	@media all and (min-width:375px) { /* 아이폰6 */
+	html {font-size:11.5px}
+	}
+	.thisMonthCont {font-size:1.3rem;background-color:#ddd; overflow:hidden}
+	
+	.btnPink {display:block;background-color:#ff6796;border:1px solid #ff6796;text-align:center;color:#fff;padding:11px 0; border-radius:3px;margin-bottom:15px; font-size:14px}
+	.btnPink:after {content:'';width:6px;height:10px;background:url(http://image1.hanatour.com/mobile/common/thismonth/201701/btn_rarr01.png) no-repeat 0 0; background-size:6px 10px; display:inline-block;margin-left:9px}
+	.btnBox02 {padding:0 12px;overflow:hidden;margin-top:15px}
+	.btnBox02 a {float:left;width:48%;padding:4px 15px;font-size:13px;margin-bottom:0;text-align:left;box-sizing:border-box;position:relative}
+	.btnBox02 a+a {float:right}
+	.btnBox02 .btnPink:after {position:absolute;right:10px;top:50%;margin-top:-5px}
+	
+	.thisMonthTop {background:url(http://image1.hanatour.com/mobile/common/thismonth/201701/bg_thismonth_top.jpg) no-repeat 0 0;background-size:100% 100%;padding:40px 0 0; position:relative}
+	.thisMonthTop h2 {text-align:center; margin-bottom:65px}
+	.thisMonthTop h2 img {height:152px}
+	.cityInfoList {overflow:visible !important}
+	.cityInfoList .swiper-slide {float:left; width:auto; padding:15px 0}
+	.cityInfoList .swiper-slide > div {text-align:left; border-right:1px solid #666; padding:0 20px}
+	.cityInfoList .swiper-slide:last-child > div {border-right:none}
+	.cityInfoList strong {color:#fff; font-size:1.1rem; display:block; margin-bottom:3px}
+	.cityInfoList strong:before {content:''; display:inline-block; background:no-repeat 0 0;margin-right:3px; position:relative; bottom:-2px}
+	.cityInfoList strong.bgStit01:before {background-image:url(http://image1.hanatour.com/mobile/common/thismonth/201701/bg_stit_cebu01.png);background-size:13px 11px; width:13px;height:11px}
+	.cityInfoList strong.bgStit02:before {background-image:url(http://image1.hanatour.com/mobile/common/thismonth/201701/bg_stit_cebu02.png);background-size:15px 12px; width:15px;height:12px}
+	.cityInfoList strong.bgStit03:before {background-image:url(http://image1.hanatour.com/mobile/common/thismonth/201701/bg_stit_cebu03.png);background-size:20px 12px; width:20px;height:12px}
+	.cityInfoList strong.bgStit04:before {background-image:url(http://image1.hanatour.com/mobile/common/thismonth/201701/bg_stit_cebu04.png);background-size:18px 14px; width:18px;height:14px}
+	.cityInfoList span {color:#fff}
+	.cityInfoList .swipeBar {position:absolute;left:0;top:0;width:100%;height:3px;background:rgba(255,255,255,0.4)}
+	.cityInfoList .swipeBar:before {content:'';width:100%; position:absolute;top:-2px;left:0;height:1px;background:rgba(255,255,255,0.4); z-index:1}
+	.cityInfoList .swipeBar .bar {position:absolute;left:0;top:0;width:34%;background-color:#fff;box-sizing:border-box;height:3px}
+	
+	.monthShare {padding:20px 12px;position:relative;background-color:#f1f5f7}
+	.monthShare strong {background:url(http://image1.hanatour.com/mobile/common/thismonth/201701/bg_share_tit.png) no-repeat 0 2px;background-size:14px 14px;padding:1px 0 1px 18px;display:block}
+	.monthShare div {position:absolute;right:12px;top:50%; margin-top:-15px}
+	.monthShare div a {float:left;margin-left:8px}
+	.monthShare div a img {width:30px}
+	
+	.contBox {text-align:center;  padding:0 5px; overflow:hidden}
+	.contBox .incont_top {background:url(http://image1.hanatour.com/mobile/common/thismonth/201701/bg_incont_top.jpg) no-repeat 0 0;background-size:100% 100%; padding:28px 0 105px; margin:0 -5px}
+	.contBox .incont_top h3 { margin-bottom:10px}
+	.contBox .incont_top h3 img { height:24px}
+	.contBox .incont_top p {color:#fff; font-size:1.1rem}
+	
+	.productCont {background-color:#fff;padding:20px 10px 0; margin-bottom:5px}
+	.productCont h3 {font-size:1.7rem;padding-top:10px; position:relative}
+	.productCont h3:before { content:'';width:36px; height:1px; background-color:#000; position:absolute;left:50%;top:0; margin-left:-18px}
+	.productCont h3 span {color:#04c3a3}
+	.productCont > p {font-weight:bold; margin-bottom:18px}
+	.productCont .pTxt {text-align:left; padding:10px 0 15px}
+	.productCont .pTxt strong { font-size:1.4rem}
+	.productCont .pTxt p { color:#646464; font-size:1.2rem}
+	.productCont .pTxt .label { margin-top:10px}
+	.productCont .pTxt .label span {font-size:1.1rem; display:inline-block}
+	.productCont .pTxt .label span:first-child {margin-right:20px; }
+	.productCont .pTxt .label span em {color:#fff; display:inline-block; padding:2px 7px; margin-right:3px}
+	.productCont .pTxt .label em.blue {background-color:#6288e2}
+	.productCont .pTxt .label em.green {background-color:#3dad77}
+	.productCont ul li .img {display:block; position:relative}
+	.productCont ul li .img img {width:100%}
+	.productCont ul li .img strong {position:absolute;left:5px;top:0;width:44px;height:47px;background:url(http://image1.hanatour.com/mobile/common/thismonth/201701/bg_label_img.png) no-repeat 0 0;background-size:44px 47px; color:#fff; font-size:20px; box-sizing:border-box; padding-top:6px; line-height:1.6rem}
+	.productCont ul li .img strong span {display:block; font-weight:normal; font-size:12px}
+	.productCont ul li .img em {position:absolute;right:0;top:5px; background:#e85555; font-size:11px; padding:2px 10px; color:#fff}
+	
+	.tbMoney dt { background-color:#e4e4e4; font-size:1.1rem; border-top:3px solid #bbb; padding:12px 0}
+	.tbMoney dd.mo01 {font-size:1.2rem; padding:16px 0;border-top:1px solid #bbb;border-bottom:1px solid #bbb}
+	.tbMoney dd.mo01 strong { color:#e6376c; font-size:1.7rem}
+	.tbMoney dd.mo02 {text-align:right; color:#646464; font-size:1.1rem; padding:5px 0 20px}
+	
+	.btmCont01 {background:url(http://image1.hanatour.com/mobile/common/thismonth/201701/bg_btmcont01.png) no-repeat 0 0;background-size:100% 100%; padding:20px 15px; text-align:center;margin-bottom:5px}
+	.btmCont01 * {color:#fff}
+	.btmCont01 > h3 {font-size:1.7rem; font-weight:normal; padding-top:10px; position:relative; margin-bottom:5px}
+	.btmCont01 > h3:before { content:'';width:36px; height:1px; background-color:#fff; position:absolute;left:50%;top:0; margin-left:-18px}
+	.btmCont01 > h3 span { color:#ffae44}
+	.btmCont01 > strong {}
+	.btmCont01 ul {background:url(http://image1.hanatour.com/mobile/common/thismonth/201701/bg_btmcont01_in.png) no-repeat 0 0;background-size:100% 100%; margin:25px 0 15px; overflow:hidden}
+	.btmCont01 ul li {float:left;width:50%; padding:15px 0 10px; box-sizing:border-box; overflow:hidden}
+	.btmCont01 ul li:nth-child(2n+2) {border-left:1px solid #816dd2}
+	.btmCont01 ul li+li+li {border-top:1px solid #816dd2}
+	.btmCont01 ul li span img {height:90px}
+	.btmCont01 ul li strong {display:block; font-size:1.2rem; margin:10px 0 3px}
+	.btmCont01 ul li em {font-size:1.0rem}
+	.btmCont01 > p {font-size:1.0rem; text-align:left}
+	
+	.btmCont02 {margin-bottom:5px}
+	.btmCont02 a { display:block;}
+	.btmCont02 a * {color:#fff;font-weight:bold}
+	.btmCont02 a.ban01 {background:url(http://image1.hanatour.com/mobile/common/thismonth/201701/btmcont02_01.jpg) no-repeat 0 0;background-size:100% 100%;padding-right:50%}
+	.btmCont02 a.ban02 {background:url(http://image1.hanatour.com/mobile/common/thismonth/201701/btmcont02_02.jpg) no-repeat 0 0;background-size:100% 100%;padding-left:50%}
+	.btmCont02 a.ban01 div {background:rgba(63,128,223,0.9); padding:17px 0 17px 15px}
+	.btmCont02 a.ban02 div {background:rgba(122,104,174,0.9);padding:17px 0 17px 15px}
+	.btmCont02 a strong { font-size:1.5rem}
+	.btmCont02 a em {font-size:1.2rem; display:block;}
+	.btmCont02 a p {font-size:1.0rem; margin:10px 0 14px; font-weight:normal}
+	.btmCont02 a span {font-size:1.0rem}
+	.btmCont02 a span:after {content:'';width:5px;height:8px;background:url(http://image1.hanatour.com/mobile/common/thismonth/201701/btn_rarr02.png) no-repeat 0 0; background-size:5px 8px; display:inline-block;margin-left:9px}
+	
+	.btmCont03 {overflow:hidden}
+	.btmCont03 a {float:left;width:50%; padding:25px 15px 95px; box-sizing:border-box}
+	.btmCont03 a.ban01 {background:#e35a62 url(http://image1.hanatour.com/mobile/common/thismonth/201701/btmcont03_01.png) no-repeat right bottom; background-size:112px 95px}
+	.btmCont03 a.ban02 {background:#001532 url(http://image1.hanatour.com/mobile/common/thismonth/201701/btmcont03_02.png) no-repeat right bottom; background-size:126px 105px}
+	.btmCont03 a strong {color:#fff;font-size:1.1rem}
+	.btmCont03 a p {color:#fff;font-size:1.3rem; margin-top:5px}
+	
+	/* swiper */
+	.swiper-slide {text-align: center;font-size: 18px;display:-webkit-box;display:-ms-flexbox;display: -webkit-flex;display:flex;-webkit-box-pack: center;-ms-flex-pack: center;-webkit-justify-content: center;justify-content:center;-webkit-box-align: center;-ms-flex-align: center;-webkit-align-items:center;align-items: center;}
+	.swiper-slide img {width:100%}
+	.swiper-container {margin:0 auto;position:relative;overflow:hidden;z-index:1;width: 100%;}
+	.swiper-container a.big5_prev {width:23px; height:42px;background:url(http://image1.hanatour.com/mobile/common/thismonth/201701/btn_slider_left.png); position:absolute;left:12px;top:50%;margin-top:-21px;background-size:23px 43px; z-index:100; opacity:0.8}
+	.swiper-container a.big5_next {width:23px; height:42px;background:url(http://image1.hanatour.com/mobile/common/thismonth/201701/btn_slider_right.png); position:absolute;right:12px;top:50%;margin-top:-21px;background-size:23px 43px; z-index:100;opacity:0.8}
+	
+	.swiper-container-no-flexbox .swiper-slide{float:left}.swiper-container-vertical>.swiper-wrapper{-webkit-box-orient:vertical;-moz-box-orient:vertical;-ms-flex-direction:column;-webkit-flex-direction:column;flex-direction:column}.swiper-wrapper{position:relative;width:100%;height:;z-index:1;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-transition-property:-webkit-transform;-moz-transition-property:-moz-transform;-o-transition-property:-o-transform;-ms-transition-property:-ms-transform;transition-property:transform;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}.swiper-container-android .swiper-slide,.swiper-wrapper{-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-o-transform:translate(0,0);-ms-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.swiper-container-multirow>.swiper-wrapper{-webkit-box-lines:multiple;-moz-box-lines:multiple;-ms-flex-wrap:wrap;-webkit-flex-wrap:wrap;flex-wrap:wrap}.swiper-container-free-mode>.swiper-wrapper{-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out;margin:0 auto}.swiper-slide{-webkit-flex-shrink:0;-ms-flex:0 0 auto;flex-shrink:0;width:100%;position:relative}.swiper-container .swiper-notification{position:absolute;left:0;top:0;pointer-events:none;opacity:0;z-index:-1000}.swiper-wp8-horizontal{-ms-touch-action:pan-y;touch-action:pan-y}.swiper-wp8-vertical{-ms-touch-action:pan-x;touch-action:pan-x}.swiper-button-next,.swiper-button-prev{position:absolute;top:50%;width:27px;height:44px;margin-top:-22px;z-index:10;cursor:pointer;-moz-background-size:27px 44px;-webkit-background-size:27px 44px;background-size:27px 44px;background-position:center;background-repeat:no-repeat}.swiper-button-next.swiper-button-disabled,.swiper-button-prev.swiper-button-disabled{opacity:.35;cursor:auto;pointer-events:none}.swiper-button-prev,.swiper-container-rtl .swiper-button-next{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");left:10px;right:auto}.swiper-button-prev.swiper-button-black,.swiper-container-rtl .swiper-button-next.swiper-button-black{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E")}.swiper-button-prev.swiper-button-white,.swiper-container-rtl .swiper-button-next.swiper-button-white{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")}.swiper-button-next,.swiper-container-rtl .swiper-button-prev{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");right:10px;left:auto}.swiper-button-next.swiper-button-black,.swiper-container-rtl .swiper-button-prev.swiper-button-black{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E")}.swiper-button-next.swiper-button-white,.swiper-container-rtl .swiper-button-prev.swiper-button-white{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")}.swiper-pagination{position:absolute;text-align:center;-webkit-transition:.3s;-moz-transition:.3s;-o-transition:.3s;transition:.3s;-webkit-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0);z-index:10}.swiper-pagination.swiper-pagination-hidden{opacity:0}.swiper-pagination-bullet{width:8px;height:8px;display:inline-block;border-radius:100%;}button.swiper-pagination-bullet{border:none;margin:0;padding:0;box-shadow:none;-moz-appearance:none;-ms-appearance:none;-webkit-appearance:none;appearance:none}.swiper-pagination-clickable .swiper-pagination-bullet{cursor:pointer}.swiper-pagination-white .swiper-pagination-bullet{background:#fff}.swiper-pagination-bullet-active{opacity:1;background:#007aff}.swiper-pagination-white .swiper-pagination-bullet-active{background:#fff}.swiper-pagination-black .swiper-pagination-bullet-active{background:#000}.swiper-container-vertical>.swiper-pagination{right:10px;top:50%;-webkit-transform:translate3d(0,-50%,0);-moz-transform:translate3d(0,-50%,0);-o-transform:translate(0,-50%);-ms-transform:translate3d(0,-50%,0);transform:translate3d(0,-50%,0)}.swiper-container-vertical>.swiper-pagination .swiper-pagination-bullet{margin:5px 0;display:block}.swiper-container-horizontal>.swiper-pagination{bottom:10px;left:0;width:100%}.swiper-container-horizontal>.swiper-pagination .swiper-pagination-bullet{margin:0 5px}.swiper-container-3d{-webkit-perspective:1200px;-moz-perspective:1200px;-o-perspective:1200px;perspective:1200px}.swiper-container-3d .swiper-cube-shadow,.swiper-container-3d .swiper-slide,.swiper-container-3d .swiper-slide-shadow-bottom,.swiper-container-3d .swiper-slide-shadow-left,.swiper-container-3d .swiper-slide-shadow-right,.swiper-container-3d .swiper-slide-shadow-top,.swiper-container-3d .swiper-wrapper{-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;-ms-transform-style:preserve-3d;transform-style:preserve-3d}.swiper-container-3d .swiper-slide-shadow-bottom,.swiper-container-3d .swiper-slide-shadow-left,.swiper-container-3d .swiper-slide-shadow-right,.swiper-container-3d .swiper-slide-shadow-top{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:10}.swiper-container-3d .swiper-slide-shadow-left{background-image:-webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(right,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-moz-linear-gradient(right,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(right,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to left,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-container-3d .swiper-slide-shadow-right{background-image:-webkit-gradient(linear,right top,left top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(left,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-moz-linear-gradient(left,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(left,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-container-3d .swiper-slide-shadow-top{background-image:-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(bottom,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-moz-linear-gradient(bottom,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(bottom,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to top,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-container-3d .swiper-slide-shadow-bottom{background-image:-webkit-gradient(linear,left bottom,left top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(top,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-moz-linear-gradient(top,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(top,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-container-coverflow .swiper-wrapper{-ms-perspective:1200px}.swiper-container-fade.swiper-container-free-mode .swiper-slide{-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out}.swiper-container-fade .swiper-slide{pointer-events:none}.swiper-container-fade .swiper-slide .swiper-slide{pointer-events:none}.swiper-container-fade .swiper-slide-active,.swiper-container-fade .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-container-cube{overflow:visible}.swiper-container-cube .swiper-slide{pointer-events:none;visibility:hidden;-webkit-transform-origin:0 0;-moz-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;backface-visibility:hidden;width:100%;height:100%;z-index:1}.swiper-container-cube.swiper-container-rtl .swiper-slide{-webkit-transform-origin:100% 0;-moz-transform-origin:100% 0;-ms-transform-origin:100% 0;transform-origin:100% 0}.swiper-container-cube .swiper-slide-active,.swiper-container-cube .swiper-slide-next,.swiper-container-cube .swiper-slide-next+.swiper-slide,.swiper-container-cube .swiper-slide-prev{pointer-events:auto;visibility:visible}.swiper-container-cube .swiper-slide-shadow-bottom,.swiper-container-cube .swiper-slide-shadow-left,.swiper-container-cube .swiper-slide-shadow-right,.swiper-container-cube .swiper-slide-shadow-top{z-index:0;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;backface-visibility:hidden}.swiper-container-cube .swiper-cube-shadow{position:absolute;left:0;bottom:0;width:100%;height:100%;background:#000;opacity:.6;-webkit-filter:blur(50px);filter:blur(50px);z-index:0}.swiper-scrollbar{border-radius:10px;position:relative;-ms-touch-action:none;background:rgba(0,0,0,.1)}.swiper-container-horizontal>.swiper-scrollbar{position:absolute;left:1%;bottom:3px;z-index:50;height:5px;width:98%}.swiper-container-vertical>.swiper-scrollbar{position:absolute;right:3px;top:1%;z-index:50;width:5px;height:98%}.swiper-scrollbar-drag{height:100%;width:100%;position:relative;background:rgba(0,0,0,.5);border-radius:10px;left:0;top:0}.swiper-scrollbar-cursor-drag{cursor:move}.swiper-lazy-preloader{width:42px;height:42px;position:absolute;left:50%;top:50%;margin-left:-21px;margin-top:-21px;z-index:10;-webkit-transform-origin:50%;-moz-transform-origin:50%;transform-origin:50%;-webkit-animation:swiper-preloader-spin 1s steps(12,end) infinite;-moz-animation:swiper-preloader-spin 1s steps(12,end) infinite;animation:swiper-preloader-spin 1s steps(12,end) infinite}.swiper-lazy-preloader:after{display:block;content:"";width:100%;height:100%;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%236c6c6c'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");background-position:50%;-webkit-background-size:100%;background-size:100%;background-repeat:no-repeat}.swiper-lazy-preloader-white:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%23fff'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")}@-webkit-keyframes swiper-preloader-spin{100%{-webkit-transform:rotate(360deg)}}@keyframes swiper-preloader-spin{100%{transform:rotate(360deg)}}
+	
+	
+	.swiper-pag-num {bottom:10px; left:50%; color:#fff; font-size:13px; background:rgba(0,0,0,0.8); padding:5px 12px; border-radius:50px; position:absolute; text-align:center; z-index:100; font-weight:bold; margin-left:-25px;right:initial}
+	
+	</style>
+	<div id="container" class="thisMonthCont">
+		<div class="thisMonthTop">
+			<h2><img src="http://image1.hanatour.com/mobile/common/thismonth/201701/tit_thismonth_top.png" alt="1월 추천 여행지 알버타 - 평생 한번쯤은 꼭 해보고 싶은일, 알버타를 무대로 경험해 보세요."></h2>
+			
+			<!-- 스와이프 -->
+			<div class="swiper-container cityInfoList">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div>
+							<strong class="bgStit01">비행시간</strong>
+							<span>약 11시간</span>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div>
+							<strong class="bgStit02">환율</strong>
+							<span>1CAD = 약 884.51원</span>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div>
+							<strong class="bgStit03">전압</strong>
+							<span>110V. 60Hz 어댑터 필요</span>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div>
+							<strong class="bgStit04">비자</strong>
+							<span>ETA신청 필수</span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="swipeBar"><span class="bar"></span></div>
+			</div>
+			<!-- // 스와이프 -->
+		</div>
+		
+		<!-- 공유하기 -->
+		<div class="monthShare">
+			<strong>공유하기</strong>
+			<div>
+				<a href="#" data-role="none"><img src="http://image1.hanatour.com/mobile/common/thismonth/201701/img_share_sns01.png" alt="페이스북"></a>
+				<a href="#" data-role="none"><img src="http://image1.hanatour.com/mobile/common/thismonth/201701/img_share_sns02.png" alt="트위터"></a>
+				<a href="#" data-role="none"><img src="http://image1.hanatour.com/mobile/common/thismonth/201701/img_share_sns03.png" alt="카카오톡"></a>
+			</div>
+		</div>
+		<!-- // 공유하기 -->
+		
+		<!-- 컨텐츠 -->
+		<div class="contBox">
+			<div class="incont_top">
+				<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201701/stit_incont_top.png" alt=""></h3>
+				<p>다른 곳에서는 경험할 수 없는 모험이 가득한 이 곳 알버타!<br>새하얀 만년설과 빙하를 머리에 이고 있는 웅장한 산맥의 품 속에서<br>때묻지 않은 자연을 마주할 수 있는, 대자연은 물론<br>대도시까지 매력적인 알버타로 여러분을 초대합니다.
+			</div>
+			
+			<div class="productCont">
+				<h3>알버타 <span>1월 예약 한정!</span></h3>
+				<p>초특가 상품을 만날 수 있는 절호의 기회!</p>
+				
+				<ul>
+					<li>
+						<span class="img">
+							<strong>1<span>TOP</span></strong>
+							<img src="http://image1.hanatour.com/mobile/common/thismonth/201701/img_product01.jpg" alt="">
+							<em>최대 30만원 할인</em>
+						</span>
+						
+						<div class="pTxt">
+							<strong>시애틀 &amp; 캐나다 밴쿠버 / 로키일주 7일</strong>
+							<p>가성비를 추구하는 합리적인 당신에게!</p>
+							<div class="label">
+								<span><em class="blue">여행기간</em>5박 7일</span>
+								<span><em class="green">대표특전</em>밴프 설파산 곤돌라 탑승</span>
+							</div>
+						</div>
+						<a href="#" data-role="none" target="_blank" title="새창" class="btnPink">상품보러가기</a>
+						
+						<dl class="tbMoney">
+						 	<dt>1~6월 매주 월, 금요일</dt>
+							<dd class="mo01">최저가<strong>1,390,000</strong> 원</dd>
+							<dd class="mo02">(성인/아동 기준, 유아 예약시 문의)</dd>		
+						</dl>
+					</li>
+					
+					<li>
+						<span class="img">
+							<strong>2<span>TOP</span></strong>
+							<img src="http://image1.hanatour.com/mobile/common/thismonth/201701/img_product02.jpg" alt="">
+							<em>최대 30만원 할인</em>
+						</span>
+						
+						<div class="pTxt">
+							<strong>캐나다 항공일주 8일</strong>
+							<p>캐나다 영원한 베스트셀러</p>
+							<div class="label">
+								<span><em class="blue">여행기간</em>6박 8일</span>
+								<span><em class="green">대표특전</em>로키의 중심! 밴프지역 숙박</span>
+							</div>
+						</div>
+						<a href="#" data-role="none" target="_blank" title="새창" class="btnPink">상품보러가기</a>
+						
+						<dl class="tbMoney">
+						 	<dt>1~6월 매주 월, 금요일</dt>
+							<dd class="mo01">최저가<strong>1,990,000</strong> 원</dd>
+							<dd class="mo02">(성인/아동 기준, 유아 예약시 문의)</dd>		
+						</dl>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- // 컨텐츠 -->
+		
+		<!-- 선정기념 -->
+		<div class="btmCont01">
+			<h3>1월 추천여행지 <span>'알버타'</span>선정기념</h3>
+			<strong>특별한 혜택</strong>
+			
+			<ul>
+				<li>
+					<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201701/img_btmlist01.png" alt=""></span>
+					<strong>6인 이상 예약시<br>팀당 100만원 할인</strong>
+					<em>※ 일부상품 한정</em>
+				</li>
+				<li>
+					<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201701/img_btmlist02.png" alt=""></span>
+					<strong>동반아동<br>50만원 할인</strong>
+					<em>※ 일부상품 한정</em>
+				</li>
+				<li>
+					<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201701/img_btmlist03.png" alt=""></span>
+					<strong>하나투어 5만 마일<br>추가적립</strong>
+					<em>※ 클래식, 일부 상품 한정</em>
+				</li>
+				<li>
+					<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201701/img_btmlist04.png" alt=""></span>
+					<strong>SM면세점 10만원<br>SM카드 증정</strong>
+					<em>※ 서울점 $300이상 구매시<br>사용가능</em>
+				</li>
+			</ul>
+			
+			<p>※ 기내용 슬리퍼 1인당 1개 제공<br>※ 상품별 특전 상이하며, 자세한 내용은 일정표를 통해 확인해주시면 됩니다.</p>	
+		</div>
+		<!-- // 선정기념 -->
+		
+		<!-- 하단배너1 -->
+		<div class="btmCont02">
+			<a href="http://m.blog.naver.com/PostList.nhn?blogId=alberta_blog&categoryNo=34" data-role="none" target="_blank" title="새창" class="ban01">
+				<div>
+					<strong>#여행정보</strong>
+					<em>알버타 in Canada</em>
+					<p>멋진 이야기 속에는<br>멋진 무대가 있습니다.</p>
+					<span>바로가기</span>
+				</div>
+			</a>
+			<a href="http://m.blog.naver.com/PostList.nhn?blogId=alberta_blog&categoryNo=26&currentPage=2" data-role="none" target="_blank" title="새창" class="ban02">
+				<div>
+					<strong>#사진정보</strong>
+					<em>알버타 in Canada</em>
+					<p>지금 이 풍경,<br>지구 어딘가에 진짜 있습니다.</p>
+					<span>바로가기</span>
+				</div>
+			</a>
+		</div>
+		<!-- // 하단배너1 -->
+		
+		<!-- 하단배너2 -->
+		<div class="btmCont03">
+			<a href="http://mhanafreeair.hanatour.com/promotion/eventPromotionDetail?eventCode=MB0516&eventCodeType=M" data-role="none" target="_blank" title="새창" class="ban01">
+				<strong>하나투어항공</strong>
+				<p>하나투어마일리지<br>1만 마일 추가 적립</p>
+			</a>
+			<a href="http://mhotel.hanatour.com/application/travelingEvent/travelingEvent_promotionHotelDetail.jsp?prdCode=H01641" data-role="none" target="_blank" title="새창" class="ban02">
+				<strong>하나투어호텔</strong>
+				<p>하나투어마일리지<br>1만 마일 추가 적립</p>
+			</a>
+		</div>
+		<!-- // 하단배너2 -->
+		
+	</div>
+	<!-- //컨텐츠 영역 -->
+	
+	<footer class="newFoot">
+		<ul>
+			<li><a href="#" data-role="none">로그인</a></li>
+			<li><a href="#" data-role="none">PC버전</a></li>
+			<li><a href="#" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+		</ul>
+		<div>
+			<a href="#" data-role="none">이용약관</a>|
+			<a href="#" data-role="none">개인정보처리방침</a>|
+			<a href="#" data-role="none">여행약관</a>|
+			<a href="#" data-role="none">사업자정보확인</a>
+		</div>
+		<address>
+				㈜ 하나투어 | 대표자: 김진국 | 사업자등록번호 : 102-81-39440<br>
+				통신판매업신고번호 : 종로01-1806호 | 개인정보관리 책임자 : 박성재<br>
+				[110-160]서울특별시 종로구 인사동 5길 41 ㈜ 하나투어<br>
+				하나투어상담센터 : <a href="tel:1577-1233" data-role="none">1577-1233</a> | FAX : 02-734-0392<br>
+				이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> | 호스팅 서비스 사업자 : ㈜하나투어<br>
+				관광사업자 등록번호 : 제1933-000006호 | 영업보증보험 : 22억 1천만원 가입<br>
+				COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+		</address>
+	</footer>
+	
+</div>
+
+
+</body>
+</html>
+

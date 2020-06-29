@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>로그인 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="../../css/member_2018.css"><!-- 로그인,회원가입 개편 신규 css -->
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-2.1.3.min.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common_new.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/swiper.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('.loginCheckBox').on('click.member', 'a.keboardView', function (e) {
+			$(this).toggleClass('on');
+		});
+	});
+</script>
+</head>
+<body>
+
+<div id="wrap"> 
+
+	<!-- 헤더 신규 -->
+	<header id="commonArea_newHeader" class=""><!-- 스크롤시 class= fixed추가 -->
+		<h1>로그인</h1>
+		<a href="#" class="backPageBtn" data-role="none" title="뒤로가기"></a>
+	</header>
+	<!-- // 헤더 신규 -->
+	
+	<!-- 컨텐츠 영역 -->
+	<div id="container">
+		
+		<!-- 로그인 회원가입 신규 2018 -->
+		<section class="member_afresh_sect">
+			
+			<!-- 로그인 -->
+			<div class="loginCont_main">
+				
+				<!-- 탭영역 -->
+				<div class="loginMainTab pb_toggle">
+					<ul class="tabList">
+						<li class="on"><a href="#">하나투어 회원</a></li>
+						<li><a href="#">비회원(예약조회)</a></li>
+					</ul>
+					
+					<!-- 회원 -->
+					<div class="tabCont selectRadio_tabCont">
+						<!-- 아이디 로그인 -->
+						<input type="radio" class="radio_tab idTxt" name="loginType" title="아이디 로그인" checked>
+						<div class="id_loginCont" style="display:no ne">
+							<div class="idBox">
+								<input type="text" class="login_input" title="이메일 아이디 또는 휴대폰 번호" placeholder="이메일 아이디 또는 휴대폰 번호">
+								<button type="button" title="삭제하기" class="delBtn"></button>
+							</div>
+							<div class="idBox">
+								<input type="password" class="login_input" title="비밀번호" placeholder="비밀번호">
+								<button type="button" title="삭제하기" class="delBtn"></button>
+							</div>
+							<p class="errorTxt">아이디와 패스워드를 확인하세요.</p><!-- 오류 메시지 -->
+							
+							<div class="loginCheckBox" style="display:">
+								<label><input type="checkbox" class="redCheck" data-role="none"><span>자동로그인</span></label>
+								<label><input type="checkbox" class="redCheck" data-role="none"><span>아이디저장</span></label>
+								
+								<a href="#" data-role="none" class="keboardView">한글자판보기</a><!-- 선택시 class=on 추가 되면 이미지 블락처리됨  -->
+								<div class="keyboard_img"><img src="http://image1.hanatour.com/mobile/common/member/img_keybord.png" alt="자판이미지"></div>
+							</div>
+							
+							<!-- 캡챠 영역 -->
+							<div id="" class="subLayoutCaptcha" style="display:no ne">
+								<p>아래 이미지를 보이는 대로 입력해주세요.</p>
+								<div class="captchaBox">
+									<span class="img" style="display:none"><img id="captchaImage" src="http://mdev.hanatour.com/api/captcha/b8U2bcHx4DQ7z6c0/image.hnt"></span><!--이미지일경우 -->
+									<span class="vol">음성으로 안내되고 있습니다.</span><!-- 음성일경우 -->
+									<div>
+										<a href="#" id="resetCaptcha" class="repair" data-role="none">새로고침</a>
+										<a href="#" class="vol" data-role="none">음성으로 듣기</a>
+										<a href="#" class="pic" data-role="none" style="display:non e">이미지로 보기</a><!-- 이미지로보기 -->
+									</div>
+								</div>
+								<div class="txtWrite">
+									<input id="captcha" type="text" data-role="none" title="보안문자" placeholder="보안문자">
+									<input id="captchaKey" type="hidden" data-role="none" value="s5hSbsqJC7IPsZn1">
+									<p class="errorTxt">보안문자를 입력해 주세요.</p><!-- 오류 메시지 -->
+								</div>
+							</div>
+							<!-- // 캡챠 영역 -->
+							
+							<a href="#" data-role="none" class="m_btnRed">로그인</a>
+							
+							<div class="btm_linkBox">
+								<a href="#" data-role="none">아이디 찾기</a>
+								<a href="#" data-role="none">비밀번호 찾기</a>
+								<a href="#" data-role="none">회원가입</a>
+							</div>
+							
+							<div class="snsLogin_btnBox">
+								<a href="#" data-role="none" class="naverBtn">네이버로 로그인</a>
+								<a href="#" data-role="none" class="facebookBtn">페이스북으로 로그인</a>
+								<a href="#" data-role="none" class="kakaoBtn">카카오로 로그인</a>
+								<p>기존 하나투어 아이디를 보유중인 고객님께서는<br>소셜 계정에 연결하여 로그인 하실 수 있습니다.</p>
+							</div>
+						</div>
+						<!-- // 아이디 로그인 -->
+						
+						<!-- 지문 로그인 -->
+						<input type="radio" class="radio_tab fingerTxt" name="loginType" title="지문로그인">
+						<div class="finger_loginCont">
+							<p class="txt_finger_login">지문 로그인을 통해 내 스마트폰에 등록된<br>지문으로 빠르게 로그인 하실 수 있습니다.</p>
+							<a href="#" data-role="none" class="m_btnRed">지문로그인 설정</a>
+							<ul class="comBulTxt">
+								<li>지문 등록/삭제는 <span class="c_red">'스마트폰 &gt; 설정 &gt; 잠금화면 및 보안 &gt; 지문'</span> 에서 변경하실 수 있습니다.</li>
+								<li>지문 로그인 설정 해제는 로그인 후 <span class="c_red">'하나투어 앱 &gt; 설정 &gt; 지문로그인'</span> 에서 변경하실 수 있습니다.</li>
+							</ul>
+						</div>
+						<!-- // 지문 로그인 -->
+						
+					</div>
+					<!-- // 회원 -->
+					
+					<!-- 비회원 -->
+					<div class="tabCont selectRadio_tabCont" style="display:none">
+						<!-- 여행상품 -->
+						<input type="radio" class="radio_tab reservTxt01" name="codeType" title="여행상품" checked>
+						<div class="pack_reservCont">
+							<input type="text" class="login_input" title="이름" placeholder="이름">
+							<p class="errorTxt">이름을 입력해 주세요.</p><!-- 오류 메시지 -->
+							<div class="placeholderBox idBox">
+								<label for="reservNum01" class="placeholderTxt">예약번호 <span>(9자리 또는 12자리)</span></label><!-- for = id값 동일하게 맞춰주세요. 입력시 none처리 필요 -->
+								<input type="text" class="login_input" id="reservNum01" title="예약번호" placeholder="">
+								<button type="button" title="삭제하기" class="delBtn"></button>
+							</div>
+							<p class="errorTxt">이름을 입력해 주세요.</p><!-- 오류 메시지 -->
+							<div class="phoneBox">
+								<select title="연락처 앞번호 선택">
+									<option disabled selected>연락처</option>
+									<option>010</option>
+								</select>
+								<input type="tel" class="login_input" title="연락처" placeholder="">
+							</div>
+							<p class="errorTxt">이름을 입력해 주세요.</p><!-- 오류 메시지 -->
+							
+							<a href="#" data-role="none" class="m_btnRed">예약 조회</a>
+							
+							<div class="btm_linkBox">
+								<a href="#" data-role="none">아이디 찾기</a>
+								<a href="#" data-role="none">비밀번호 찾기</a>
+								<a href="#" data-role="none">회원가입</a>
+							</div>
+							
+							<ul class="comBulTxt">
+								<li>이름, 연락처, 이메일은 예약 시 입력한 고객님의 정보를 입력해 주시기 바랍니다. </li>
+								<li>일부 예약의 경우, 모바일에서 확인이 불가할 수 있습니다. </li>
+								<li>예약 데이터에 해당 고객의 연락처 또는 이메일 정보가 없는 경우, 유선을 통한 예약확인만 가능합니다.<br>(예약관리 대리점으로 문의하시면 조회 가능합니다.)</li>
+							</ul>
+							
+						</div>
+						<!-- // 여행상품 -->
+						
+						<!-- 항공/호텔/숙박 -->
+						<input type="radio" class="radio_tab reservTxt02" name="codeType" title="항공/호텔/숙박">
+						<div class="airhotel_reservCont">
+							<input type="text" class="login_input" title="이름" placeholder="이름">
+							<div class="placeholderBox idBox">
+								<label for="reservNum02" class="placeholderTxt">예약번호 <span>(9자리 또는 12자리)</span></label><!-- for = id값 동일하게 맞춰주세요. 입력시 none처리 필요 -->
+								<input type="text" class="login_input" id="reservNum02" title="예약번호" placeholder="">
+								<button type="button" title="삭제하기" class="delBtn"></button>
+							</div>
+							<p class="errorTxt">이름을 입력해 주세요.</p><!-- 오류 메시지 -->
+							
+							<a href="#" data-role="none" class="m_btnRed">예약 조회</a>
+							<a href="#" data-role="none" class="m_btnAir_gray">해외출발 항공 예약조회</a>
+							<a href="#" data-role="none" class="m_btnAir_gray">글로벌 항공 예약조회 For foreigner / <span lang="zh-CN">全球飞行</span></a>
+							
+							<div class="btm_linkBox">
+								<a href="#" data-role="none">아이디 찾기</a>
+								<a href="#" data-role="none">비밀번호 찾기</a>
+								<a href="#" data-role="none">회원가입</a>
+							</div>
+						</div>
+						<!-- // 항공/호텔/숙박 -->
+					</div>
+					<!-- // 비회원 -->
+				
+				</div>
+				<!-- // 탭영역 -->
+				
+				
+				
+				
+				
+			</div>
+			<!-- // 로그인 -->
+		</section>
+		<!-- // 로그인 회원가입 신규 2018 -->
+		
+	</div>
+	<!-- //컨텐츠 영역 -->
+	
+	<footer class="newFoot">
+		<ul>
+			<li><a href="#" data-role="none">로그인</a></li>
+			<li><a href="#" data-role="none">PC버전</a></li>
+			<li><a href="#" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+		</ul>
+		<div>
+			<a href="#" data-role="none">이용약관</a>|
+			<a href="#" data-role="none">개인정보처리방침</a>|
+			<a href="#" data-role="none">여행약관</a>|
+			<a href="#" data-role="none">사업자정보확인</a>
+		</div>
+		<address>
+				㈜ 하나투어 | 대표자: 김진국 | 사업자등록번호 : 102-81-39440<br>
+				통신판매업신고번호 : 종로01-1806호 | 개인정보관리 책임자 : 박성재<br>
+				[110-160]서울특별시 종로구 인사동 5길 41 ㈜ 하나투어<br>
+				하나투어상담센터 : <a href="tel:1577-1233" data-role="none">1577-1233</a> | FAX : 02-734-0392<br>
+				이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> | 호스팅 서비스 사업자 : ㈜하나투어<br>
+				관광사업자 등록번호 : 제1933-000006호 | 영업보증보험 : 22억 1천만원 가입<br>
+				COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+		</address>
+	</footer>
+	
+</div>
+
+
+</body>
+</html>
+

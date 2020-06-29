@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>예약내역상세 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="../../css/common_reserv.css"><!-- 예약관련 공통컨텐츠 신규생성 -->
+
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-2.1.3.min.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common_new.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/pack/m.booking.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+	<header id="header"><!-- 띠배너 보일경우 class="tBanTy" 추가 -->
+		<div class="inner">
+			<h1><a href="#none" data-role="none"><img src="../../images/common/btn_nlogo.png" alt="하나투어"></a></h1>
+			<a href="#none" id="btnMenu" data-role="none"><img src="../../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+			<a href="#none" id="btnMyhome" data-role="none"><img src="../../images/common/btn_hdright.png" alt="마이홈"></a>
+		</div>
+	</header>
+	<div class="headerMargin"></div>
+	
+	<!-- 컨텐츠 영역 -->
+	<div id="container">
+		<h2 class="pagTit">결제상세</h2>
+		
+		<!-- 예약결제 간소화 simplify -->
+		<section class="reserv_section simplify"><!-- 하단 버튼있는경우 padB0 추가 -->
+			<!-- 예약코드 -->
+			<div class="topCode">
+				<strong>예약코드</strong>
+				<b>RP1617379191</b>
+			</div>
+			<!-- // 예약코드 -->
+			
+			<!-- 예약상품정보 -->
+			<div class="reserv_content">
+				<h3 class="tit_reserv">결제상세정보</h3>
+				
+				<div class="pay_togCont">
+					<!-- 하나투어상품권 -->
+					<div class="stit_payBox">
+						<h4 class="payDay">하나투어상품권<span class="inRig"></span></h4>
+						<button type="button" title="자세히보기 펼치기/닫기" class="btn_toggle on"></button><!-- 버튼 클릭시 아래 rsv_inTogCont toggle -->
+					</div>
+					
+					<div class="payTog_inner" style="display:no ne">
+						<ul class="paymn_endList">
+							<li><em>사용일</em><strong>2017.12.07</strong></li>
+							<li><em>입금액</em><strong class="c_red"><b>130,000</b><span>원</span></strong></li>
+							<li><em>상품권 정보</em><strong>214523153423</strong></li>
+						</ul>
+						
+						<!-- 환불정보 추가 20171218 -->
+						<div class="refundCheck">
+							<label for="refund">환불정보</label><!-- for id값 꼭 맞춰주세여 -->
+							<input type="checkbox" id="refund" checked><!-- checked시 ul css로 하단열림 -->
+							<ul class="refundDetail">
+								<li><span>환불방법</span><em>계좌이체</em></li>
+								<li><span>환불계좌</span><em>광주은행 123414713471238<br>(예금주:박하나)</em></li>
+								<li><span>환불상태</span><em class="c_red">환불중</em></li>
+							</ul>
+						</div>
+						<!-- // 환불정보 추가 20171218 -->
+					</div>
+					<!-- // 하나투어상품권 -->
+					
+					<!-- 하나투어마일리지 -->
+					<div class="stit_payBox">
+						<h4 class="payDay">하나투어마일리지<span class="inRig"></span></h4>
+						<button type="button" title="자세히보기 펼치기/닫기" class="btn_toggle on"></button><!-- 버튼 클릭시 아래 rsv_inTogCont toggle -->
+					</div>
+					
+					<div class="payTog_inner" style="display:no ne"> 
+						<ul class="paymn_endList">
+							<li><em>승인일</em><strong>2017.12.07</strong></li>
+							<li><em>마일리지 소유자</em><strong>김하나</strong></li>
+							<li><em>사용한 마일리지</em><strong class="c_red ico_mp mile"><b>1,000</b></strong></li>
+							<li><em>승인번호</em><strong>3003333</strong></li>
+							<li><button type="button" id="mlgId" tid="061417129" data-role="none" class="btn1" readonly>승인완료</button></li>
+						</ul>
+						<ul class="paymn_endList">
+							<li><em>승인일</em><strong>2017.12.07</strong></li>
+							<li><em>마일리지 소유자</em><strong>김하나</strong></li>
+							<li><em>사용한 마일리지</em><strong class="c_red ico_mp mile"><b>1,000</b></strong></li>
+							<li><em>승인번호</em><strong>3003333</strong></li>
+							<li><button type="button" id="mlgId" tid="061417129" data-role="none" class="btn1">승인취소요청</button></li>
+						</ul>
+						<ul class="paymn_endList">
+							<li><em>승인일</em><strong>2017.12.07</strong></li>
+							<li><em>마일리지 소유자</em><strong>김하나</strong></li>
+							<li><em>사용한 마일리지</em><strong class="c_red ico_mp mile"><b>1,000</b></strong></li>
+							<li><em>승인번호</em><strong>3003333</strong></li> 
+							<li><button type="button" id="mlgId" tid="061417129" data-role="none" class="btn1" disabled>승인취소불가</button></li>
+						</ul>
+						
+						<ul class="paymn_endList total">
+							<li><em><b>잔여마일리지</b></em><strong class="c_red ico_mp mile"><b>500,000</b></strong></li>
+						</ul>
+					</div>
+					<!-- // 하나투어마일리지 -->
+					
+					<!-- 신용카드 -->
+					<div class="stit_payBox">
+						<h4 class="payDay">신용카드<span class="inRig"></span></h4>
+						<button type="button" title="자세히보기 펼치기/닫기" class="btn_toggle on"></button><!-- 버튼 클릭시 아래 rsv_inTogCont toggle -->
+					</div>
+					
+					<div class="payTog_inner" style="display:no ne"> 
+						<ul class="paymn_endList">
+							<li><em>결제 승인일</em><strong>2017.12.07</strong></li>
+							<li><em>결제금액</em><strong class="c_red"><b>70,000</b><span>원</span></strong></li>
+							<li><em>결제카드</em><strong>국민카드 일시불</strong></li>
+							<li><em>승인번호</em><strong>3003333</strong></li>
+							<li><button type="button" id="mlgId" tid="061417129" data-role="none" class="btn1">승인취소요청</button></li>
+						</ul>
+					</div>
+					<!-- // 신용카드 -->
+					
+					<!-- OK캐쉬백 -->
+					<div class="stit_payBox">
+						<h4 class="payDay">OK캐쉬백<span class="inRig"></span></h4>
+						<button type="button" title="자세히보기 펼치기/닫기" class="btn_toggle on"></button><!-- 버튼 클릭시 아래 rsv_inTogCont toggle -->
+					</div>
+					
+					<div class="payTog_inner" style="display:no ne"> 
+						<ul class="paymn_endList">
+							<li><em>승인일</em><strong>2017.12.07</strong></li>
+							<li><em>입금액</em><strong class="c_red ico_mp point"><b>500</b></strong></li>
+							<li><em>승인번호</em><strong>12345123832</strong></li>
+							<li><button type="button" id="mlgId" tid="061417129" data-role="none" class="btn1" readonly>승인완료</button></li>
+						</ul>
+					</div>
+					<!-- // OK캐쉬백 -->
+				</div>
+			</div>
+			<!-- // 예약상품정보 -->
+			
+			<a href="#" class="m_btnRed">예약상세 확인하기</a>
+			
+		</section>
+		<!-- // 예약결제 간소화 -->
+		
+	</div>
+	<!-- //컨텐츠 영역 -->
+	
+	<footer class="newFoot">
+		<ul>
+			<li><a href="#none" data-role="none">로그인</a></li>
+			<li><a href="#none" data-role="none">PC버전</a></li>
+			<li><a href="#none" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+		</ul>
+		<div>
+			<a href="#none" data-role="none">이용약관</a>|
+			<a href="#none" data-role="none">개인정보처리방침</a>|
+			<a href="#none" data-role="none">여행약관</a>|
+			<a href="#none" data-role="none">사업자정보확인</a>
+		</div>
+		<address>
+			㈜ 하나투어 | 대표자: 최현석 | 사업자등록번호 : 102-81-39440<br>
+			통신판매업신고번호 : 종로01-1806호 | 개인정보관리 책임자 : 최종윤<br>
+			[110-160]서울특별시 종로구 인사동 5길 41 ㈜ 하나투어<br>
+			하나투어상담센터 : <a href="tel:1577-1233" data-role="none">1577-1233</a> | FAX : 02-734-0392<br>
+			이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> | 호스팅 서비스 사업자 : ㈜하나투어<br>
+			관광사업자 등록번호 : 제1933-000006호 | 영업보증보험 : 22억 1천만원 가입<br>
+			COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+		</address>
+	</footer>
+	
+</div>
+
+</body>
+</html>
+

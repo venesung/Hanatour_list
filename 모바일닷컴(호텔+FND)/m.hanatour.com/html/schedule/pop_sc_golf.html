@@ -1,0 +1,93 @@
+<script type="text/javascript">
+	if (jQuery !== undefined) {
+		jQuery(document).ready(function () {
+			if (WTab !== undefined) {
+				var tab = new WTab();
+				tab.init({target: $('.pop_innerComm'), selector: 'ul.sc_popTab > li > a', onTag: 'li', content: $('.pop_innerComm'), contentSelector: '.popBtmTabBox > div'});
+			}
+
+			if (SCHEDULE !== undefined && typeof SCHEDULE.initGallerySwiper === 'function') SCHEDULE.initGallerySwiper($('.pop_innerComm .swiper-container').not('.icoList'));
+		});
+
+		$('#overlayPanel').on('open.loadpop', function (e, data) {
+			if (SCHEDULE !== undefined && typeof SCHEDULE.resetSwiper === 'function') SCHEDULE.resetSwiper($('.pop_innerComm'));
+		});
+	}
+</script>
+
+<!-- pop start  -->
+
+	<div class="fullPopCommon">
+		<div class="header">
+			<h3>골프장 정보<a href="#" class="closeOverlayPanel" data-role="none" title="레이어닫기"></a></h3>
+		</div>
+		
+		<div class="innerScroller">
+			<div class="pop_innerComm">
+				
+				<b class="popLabel wait">대기</b><!-- 대기일경우 class="wait" 추가 -->
+				<strong class="popStit">라구나 랑코 골프 클럽</strong>
+				<em class="popStitEng">LAGUNA LANG CO GOLF CLUB</em>
+				
+				<!-- 스와이프 -->
+				<div class="swiper-container">
+					<a href="#" class="big5_prev" data-role="none"></a>
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia01.png" alt=""></div>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia02.png" alt=""></div>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia03.png" alt=""></div>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia04.png" alt=""></div>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia05.png" alt=""></div>
+					</div>
+					<div class="swiper-pagination" style="display:none"></div>
+					<div class="swiper-pag-num"><span>1</span> / 13</div>
+					<a href="#" class="big5_next" data-role="none"></a>
+				</div>
+				<!-- // 스와이프 -->
+				
+				<p class="popTxt01">세계 우수의 리조트 체인 업체인 반얀트리에서 운영하는 종합 레져 공간으로 골프장과 고급빌라를 동시에 함께 운영함으로 베트남에서 가장 현대적인 종합 서비스를 기대할 수 있는 최상의 골프장입니다. 다낭시로 부터 북쪽으로 약1시간, 후에시로 부터 남쪽으로 약 1시간15분 거리에 위치하고 있으며. SIR NICK FALDO가 디자인 한 18홀 골프장으로,  laguna lang co 종합 리조트에 속해 있습니다.</p>
+				
+				<dl class="popDefine">
+					<dt>주요 명소</dt>
+					<dd>베트남 중부, 국제 공항 다낭부터 북쪽으로 55km, 1시간거리, 후에시부터 남쪽으로 70 km.</dd>
+					<dt>연락처</dt>
+					<dd>Cu Du Village, Loc Vinh Commune, Phu Loc District, Thua Thien Hue Province, Viet Nam</dd>
+					<dt>규모</dt>
+					<dd>Xxxxx야드 xxx파 xxx홀</dd>
+					<dt>주소</dt>
+					<dd>SIR NICK FALDO</dd>
+					<dt>개장시기</dt>
+					<dd>2012/12</dd>
+					<dt>홈페이지</dt>
+					<dd><a href="http://www.thaiasiatique.com" target="_blank" title="새창" class="web" data-role="none">www.thaiasiatique.com</a></dd>
+					<dt>전화번호</dt>
+					<dd>+84(0) 54 3695-880</dd>
+					<dt>팩스번호</dt>
+					<dd>+84(0) 54 3695-980</dd>
+					<dt>부대시설</dt>
+					<dd>드라이빙 체인지, 라커, 카트, 캐디, 클럽하우스</dd>
+				</dl>
+				
+				<div class="popBtmTabBox">
+					<ul class="sc_popTab">
+						<li class="on"><a href="#" data-role="none">코스 정보</a></li><!-- 선택 class="on" -->
+						<li><a href="#" data-role="none">홀 정보</a></li>
+					</ul>
+					
+					<!-- 코스정보 -->
+					<div class="btmTabTxt">
+						세계 우수의 리조트 체인 업체인 반얀트리에서 운영하는 종합 레져 공간으로 골프장과 고급빌라를 동시에 함께	운영함으로 베트남에서 가장 현대적인 종합 서비스를 기대할 수 있는 최상의 골프장입니다. 다낭시로 부터 북쪽으로 약1시간, 후에시로 부터 남쪽으로 약 1시간15분 거리에 위치하고 있으며. SIR NICK FALDO가 디자인 한 18홀 골프장으로,  laguna lang co 종합 리조트에 속해 있습니다. 
+					</div>
+					<!-- // 코스정보 -->
+					
+					<!-- 홀정보 -->
+					<div class="btmTabTxt" style="display:none">
+						세계 우수의 리조트 체인 업체인 반얀트리에서 운영하는 종합 레져 공간으로 골프장과 고급빌라를 동시에 함께	운영함으로 베트남에서 가장 현대적인 종합 서비스를 기대할 수 있는 최상의 골프장입니다.  
+					</div>
+					<!-- // 홀정보 -->
+				</div>
+				
+			</div>
+		</div>
+		
+	</div>

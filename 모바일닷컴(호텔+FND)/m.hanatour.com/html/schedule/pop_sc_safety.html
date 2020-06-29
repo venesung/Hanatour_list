@@ -1,0 +1,195 @@
+<script type="text/javascript">
+	if (jQuery !== undefined) {
+		jQuery(document).ready(function () {
+			if (WTab !== undefined) {
+				var popTab = new WTab();
+			    popTab.init({target: $('.pop_innerComm'), selector: '.checkTab > li > a', onTag: 'a', content: $('.pop_innerComm'), contentSelector: '.tabCont', onChange: function (data) {
+			        //해외안전소식 탭 변경되면 내부 탭 적용
+			        if ($('.pop_innerComm .safetyDist01 > dd').length > 1) {
+			            var safetyTab = new WTab();
+			            safetyTab.init({target: $('.pop_innerComm dl.safetyDist01'), selector: '> dt > a', onTag: 'dt', onlyOpen: false});
+			        }
+			    }});
+			}
+
+			$('#overlayPanel').on('open.loadpop', function (e, data) {
+	            if (data.target !== undefined && data.target.closest('.safetyBtn').length > 0) {
+	                var idx = Math.floor(data.target.index() / 2);
+	                var tabIns = $('.pop_innerComm').getInstance();
+	                
+	                if (tabIns !== undefined) {
+	                    tabIns.setCloseAll();
+	                    tabIns.setOpen(idx);
+	                }
+	            }
+			});
+		});
+	}
+</script>
+
+<!-- pop start  -->
+
+	<div class="fullPopCommon">
+		<div class="header">
+			<h3>해외여행 안전정보<a href="#" class="closeOverlayPanel" data-role="none" title="레이어닫기"></a></h3>
+		</div>
+		
+		<div class="innerScroller">
+			<div class="pop_innerComm">
+				<select title="국가선택" class="btnselRed">
+					<option>태국</option>
+					<option>베트남</option>
+					<option>아르헨티나</option>
+				</select>
+				
+				<ul class="sccheckTab tab03">
+					<li><a href="#" class="on" data-role="none">해외안전소식</a></li>
+					<li><a href="#" data-role="none">사건사고</a></li>
+					<li><a href="#" data-role="none">현지연락처</a></li>
+				</ul>
+				
+				<p class="safetyTxt">외교부(http://www.0404.go.kr)에 공지된 최근 6개월의 공지사항입니다. </p>
+				
+				<!-- 해외안전소식 -->
+				<div class="tabCont ch_cont1">
+					<dl class="safetyDist01">
+						<dt><a href="#" data-role="none">태국 방콕 폭발 관련 안전공지(2)<span>2015-09-14</span></a></dt> <!-- 선택시 dt class="on" -->
+						<dd>
+							<p>1. 8.17. 태국 방콕시내에서의 폭탄 폭발사건으로 140여명의 사상자가 발생하였으며 이것은 올해 들어 방콕에서 발생한 3번째의 폭발사건입니다. 아직 사건의 배후가 정확히 밝혀지지 않았으나, 태국을 방문하는 외국인 관광객을 목표로 한 테러공격일 가능성이 매우 높습니다.</p>
+							<p>2. 이러한 상황에 미루어 방콕에 거주하거나 체류하는 외국인은 상당 수준의 테러위협에 노출되어 있는 것으로 판단되니 방콕의 관광지와 번화가 등 사람이 많이 모이는 장소에 접근하지 말고 신변안전에 유의하여 주시기 바랍니다.</p>
+						</dd>
+						<dt><a href="#" data-role="none">태국 방콕 폭발 관련 안전 공지<span>2015-09-14</span></a></dt> <!-- 선택시 dt class="on" -->
+						<dd>
+							<p>1. 8.17. 태국 방콕시내에서의 폭탄 폭발사건으로 140여명의 사상자가 발생하였으며 이것은 올해 들어 방콕에서 발생한 3번째의 폭발사건입니다. 아직 사건의 배후가 정확히 밝혀지지 않았으나, 태국을 방문하는 외국인 관광객을 목표로 한 테러공격일 가능성이 매우 높습니다.</p>
+							<p>2. 이러한 상황에 미루어 방콕에 거주하거나 체류하는 외국인은 상당 수준의 테러위협에 노출되어 있는 것으로 판단되니 방콕의 관광지와 번화가 등 사람이 많이 모이는 장소에 접근하지 말고 신변안전에 유의하여 주시기 바랍니다.</p>
+						</dd>
+						<dt><a href="#" data-role="none">태국 방콕 폭발 관련 안전 공지<span>2015-09-14</span></a></dt> <!-- 선택시 dt class="on" -->
+						<dd>
+							<p>1. 8.17. 태국 방콕시내에서의 폭탄 폭발사건으로 140여명의 사상자가 발생하였으며 이것은 올해 들어 방콕에서 발생한 3번째의 폭발사건입니다. 아직 사건의 배후가 정확히 밝혀지지 않았으나, 태국을 방문하는 외국인 관광객을 목표로 한 테러공격일 가능성이 매우 높습니다.</p>
+							<p>2. 이러한 상황에 미루어 방콕에 거주하거나 체류하는 외국인은 상당 수준의 테러위협에 노출되어 있는 것으로 판단되니 방콕의 관광지와 번화가 등 사람이 많이 모이는 장소에 접근하지 말고 신변안전에 유의하여 주시기 바랍니다.</p>
+						</dd>
+						<dt><a href="#" data-role="none">태국 방콕 폭발 관련 안전 공지<span>2015-09-14</span></a></dt> <!-- 선택시 dt class="on" -->
+						<dd>
+							<p>1. 8.17. 태국 방콕시내에서의 폭탄 폭발사건으로 140여명의 사상자가 발생하였으며 이것은 올해 들어 방콕에서 발생한 3번째의 폭발사건입니다. 아직 사건의 배후가 정확히 밝혀지지 않았으나, 태국을 방문하는 외국인 관광객을 목표로 한 테러공격일 가능성이 매우 높습니다.</p>
+							<p>2. 이러한 상황에 미루어 방콕에 거주하거나 체류하는 외국인은 상당 수준의 테러위협에 노출되어 있는 것으로 판단되니 방콕의 관광지와 번화가 등 사람이 많이 모이는 장소에 접근하지 말고 신변안전에 유의하여 주시기 바랍니다.</p>
+						</dd>
+					</dl>
+				</div>
+				<!-- // 해외안전소식 -->
+				
+				<!-- 사건사고 -->
+				<div class="tabCont ch_cont2" style="display:none">
+					<dl class="safetyDist02">
+						<dt>사건·사고통계</dt>
+						<dd>
+							<table class="safetyTable">
+								<caption>사건·사고통계</caption>
+								<colgroup>
+									<col style="width:24%">
+									<col style="width:19%" span="4">
+								</colgroup>
+								
+								<thead>
+									<tr>
+										<th scope="col">구분</th>
+										<th scope="col">2011년</th>
+										<th scope="col">2012년</th>
+										<th scope="col">2013년</th>
+										<th scope="col">2014년</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>도난, 분실</td>
+										<td>54</td>
+										<td>86</td>
+										<td>40</td>
+										<td>77</td>
+									</tr>
+									<tr>
+										<td>강도, 폭행</td>
+										<td>14</td>
+										<td>24</td>
+										<td>44</td>
+										<td>13</td>
+									</tr>
+									<tr>
+										<td>총계</td>
+										<td>68</td>
+										<td>110</td>
+										<td>56</td>
+										<td>90</td>
+									</tr>
+								</tbody>
+							</table>
+							<span class="smtxy">* 한국인 피해 통계</span>
+						</dd>
+						
+						<dt>사건·사고예방을 위한 일반 수칙</dt>
+						<dd>[1. 방문국존중]
+							<ul class="safetyList01">
+								<li>태국인들은 오랜 역사와 문화, 많은 유적과 아울러 한 번도 외세의 지배를 받지 않았다는 점 등에 대해 자랑스러워하고 또한 자존심이 높습니다. 방문국의 문화와 국민을 존중하는 것은 외국을 방문하는 관광객이 반드시 지녀야 하는 마음가짐입니다.</li>
+								<li>방문기간 중 태국인들이 소중히 여기는 왕실, 종교, 문화, 유적, 관습 등을 공공연히 비하하거나 조롱하는 언행은 자칫 사건사고 발생의 원인이 될 수 있습니다.</li>
+							</ul>
+						</dd>
+						
+						<dd>[2. &quot;자국민 우선&quot; 명심]
+							<ul class="safetyList01">
+								<li>외국인과 내국인을 차별대우해서는 안 되는 것이 원칙이나 사실상 어느 나라든 내외국인간 시비가 발생하면 경찰 등의 공무원이 가급적 자국인에게 다소 호의적으로 처리하려는 것은 인지상정입니다. 따라서 외국을 방문 중에 현지인과 시비가 발생할 경우 불리한 입장에 처할 가능성이 있으므로 항상 언행에 주의하여 애초에 시비 거리가 발생하지 않도록 하는 것이 가장 바람직합니다.</li>
+								<li>만약 시비가 발생하여 경찰 등의 공무원이 자신에게 불리하게 일처리를 하고 있다는 생각이 들 경우에도 큰소리로 고함을 지르며 항의하거나 물리적인 저항을 자제하시고 침착한 가운데 논리적인 반박을 하셔야 하며, 대사관의 도움이 필요한 경우 즉시 전화 등으로 조력을 요청하십시오.</li>
+							</ul>
+						</dd>
+						<dd>[3. 지나친 음주 자제]
+							<ul class="safetyList01">
+								<li>태국내 아국인 관광객 관련 사건사고는 야간에 음주상태에서 발생하는 경우가 대부분입니다. 간혹 여행 분위기에 편승하여 지나친 음주와 고성 등으로 인해 술집 등에서 타인과 언쟁을 하거나 물리적인 충돌이 발생, 피해를</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+				<!-- // 사건사고 -->
+				
+				<!-- 현지연락처 -->
+				<div class="tabCont ch_cont3" style="display:none">
+					<dl class="safetyDist02">
+						<dt>긴급연락처</dt>
+						<dd>
+							<ul class="safetyList01">
+								<li>방콕 기동경찰(사건ㆍ사고 신고센터) : 191</li>
+								<li>관광경찰 : 1155(영어, 무료)</li>
+								<li>테러관련 신고 : 1195</li>
+								<li>교통사고 신고 : 1669</li>
+								<li>자연재해(지진, 해일, 폭풍 등) 신고 : 1860</li>
+								<li>화재신고 : 199 </li>
+								<li>고속도로경찰 : 1193(고속도로, 국도상에서 사건ㆍ사고발생시)</li>
+								<li>긴급의료지원 요청 : 02-207-6000(경찰병원)</li>
+								<li>앰블러스 요청 : 1691, 02-354-8222(경찰병원)</li>
+								<li>택시 등 대중교통 피해신고 : 1197 </li>
+							</ul>
+						</dd>
+						
+						<dt>의료기관 연락처</dt>
+						<dd>
+							<ul class="safetyList01">
+								<li>영어 사용이 가능한 방콕 소재 병원<br>- Bangkok General Hospital (02-310-3000, 한국어 통역원 보유)<br>- Samitivej Hospital (02-392-0011, 한국어 통역원 보유)<br>- Bumrungrad Hospital (02-667-1000, 한국어 통역원 보유)</li>
+							</ul>
+						</dd>
+						
+						<dt>대사관 연락처</dt>
+						<dd>
+							<ul class="safetyList01">
+								<li>주소 : 23 Thiam-Ruammit Road, Ratchadapisek, Huay-Kwang, Bangkok 10310, Thailand</li>
+								<li>대사관 약도</li>
+								<li>홈페이지 : tha.mofa.go.kr</li>
+								<li>교통사고 신고 : 1669</li>
+								<li>이메일 : koembth@gmail.com</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+				<!-- // 현지연락처 -->
+						
+				
+			</div>
+		</div>
+		
+	</div>

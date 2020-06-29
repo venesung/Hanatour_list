@@ -1,0 +1,64 @@
+
+<!-- pop start  -->
+
+	<div class="fullPopCommon">
+		<div class="header">
+			<h3>탑승정보 입력<button type="button" class="closeOverlayPanel" title="팝업닫기"></button></h3>
+		</div>
+		
+		<div class="innerScroller">
+			<!-- pop cont -->
+			<div class="pop_innerComm">
+				
+				<ul class="inputCell">
+					<li>
+						<label for="air_name">항공편명<sup>*</sup></label><!-- for = id 값 동일하게 맞춰주세요 -->
+						<div><input type="text" id="air_name" class="inputTxt" title="항공편명" placeholder="예) KE 0551"></div>
+					</li>
+					<li>
+						<label for="airport_go">출발공항<sup>*</sup></label>
+						<div><input type="text" id="airport_go" class="inputTxt" title="출발공항" placeholder="예) 인천 국제공항"></div>
+					</li>
+					<li>
+						<label for="airport_bk">도착공항<sup>*</sup></label>
+						<div><input type="text" id="airport_bk" class="inputTxt" title="도착공항" placeholder="예) 나리타 국제공항"></div>
+					</li>
+					<li>
+						<label for="time_start">현지 도착일시<sup>*</sup></label>
+						<div>
+							<div class="inTable">
+								<span style="width:41.5%">
+									<input type="date" id="time_start" class="inputTxt" title="년월일">
+								</span>
+								<span class="cellPad"></span>
+								<span style="width:28%">
+									<select class="selectBox" title="시 선택" data-role="none">
+										<option selected disabled>시</option>
+										<option>1시</option>
+										<option>2시</option>
+										<option>3시</option>
+										<option>4시</option>
+										<option>5시</option>
+									</select>
+								</span>
+								<span class="cellPad"></span>
+								<span style="width:28%">
+									<select class="selectBox" title="분 선택" data-role="none">
+										<option selected disabled>분</option>
+										<option>0분</option>
+										<option>5분</option>
+										<option>10분</option>
+									</select>
+								</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+				
+				<a href="#" class="m_btnRed short">확인</a>
+			</div>
+			<!-- // pop cont -->
+		</div>
+		
+	</div>
+

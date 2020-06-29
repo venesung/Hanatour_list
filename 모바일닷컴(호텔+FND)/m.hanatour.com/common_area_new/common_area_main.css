@@ -1,0 +1,154 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* 헤더 */
+body.un_scroll {overflow: hidden}
+#commonArea_header_main {margin:0;padding:0;text-align:center;background: #fff;border-bottom:1px solid #ccc;box-sizing:border-box; position:relative}
+#commonArea_header_main * {font-family:'DroidSansFallback','Apple Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;-webkit-text-size-adjust:none; margin:0; padding:0}
+#commonArea_header_main .inHead {position:relative}
+#commonArea_header_main h1 {margin:0;padding:0; font-size:0}
+#commonArea_header_main h1 a {display:inline-block;padding:15px 25px;height:48px;box-sizing:border-box}
+#commonArea_header_main h1 img {height:21px;vertical-align:top}
+#commonArea_header_main .search {position:absolute;top:11px;z-index:10;border:none;width:30px;height:30px;box-sizing:border-box; background:none; padding:0;right:10px}
+#commonArea_header_main .search:before {content:''; position:absolute;left:0;top:0;width:30px; height:30px;background:url(common_area_img/ico_head_search.png) no-repeat 0 0 / 30px 30px}
+
+#commonArea_header_main .inBanner {height:56px;background-color:#747b8e; display:table;width:100%; z-index:100; margin:0; padding:0; position:relative}
+#commonArea_header_main .inBanner .downAppBan {font-family:'DroidSansFallback','Apple Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;color:#fff;display:table-cell; width:100%;text-align:left;text-shadow:none;font-size:12px;position:relative;background:url(common_area_img/bg_top_app.png) 9px center no-repeat; background-size:28px 27px; vertical-align:middle; height:100%; padding:0 43px 0 45px; text-decoration:none}
+#commonArea_header_main .inBanner .downAppBan span {font-size:12px;position:absolute;right:43px;top:15px;}
+#commonArea_header_main .inBanner .downAppBan span img {height:28px}
+#commonArea_header_main .inBanner .closeBan {position:absolute;right:0;top:0;width:43px;height:100%;background:url(common_area_img/img_top_banclose.png) center center no-repeat; background-size:16px 16px; z-index:10;border:none;cursor:pointer}
+
+#commonArea_header_main.headFixed,#commonArea_header_main.headFixed02 {position:fixed;left:0;top:0;width:100%; z-index:100}
+#commonArea_header_main.headFixed+* {margin-top:48px !important}
+#commonArea_header_main.headFixed02+* {margin-top:104px !important}
+
+/* 하단 네비 */
+#commonArea_main_naviBar {position:fixed;left:0;bottom:0;width:100%; z-index:600; background-color:#fff; height:54px; border-top:1px solid #c7cace; overflow:hidden; box-sizing:border-box}
+#commonArea_main_naviBar * {font-family:'DroidSansFallback','Apple Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;-webkit-text-size-adjust:none; margin:0; padding:0}
+#commonArea_main_naviBar > * {float:left;width:25%; vertical-align:middle; text-align:center; font-size:11px; color:#111;height:54px; position:relative}
+#commonArea_main_naviBar > a {text-decoration:none;}
+#commonArea_main_naviBar > button {border:none;background:none; cursor:pointer}
+#commonArea_main_naviBar > * span {position:absolute;bottom:5px;left:0;width:100%}
+#commonArea_main_naviBar > *.on span {color:#c83d67}
+#commonArea_main_naviBar > *:before {content:'';width:25px; height:23px;background:no-repeat 0 0 / 25px 46px; position:absolute;left:50%;top:10px;transform:translate(-50% ,0); -webkit-transform:translate(-50%, 0); }
+#commonArea_main_naviBar > *.on:before {background-position:0 -23px}
+#commonArea_main_naviBar .mainHome:before {background-image:url(common_area_img/ico_main_navibar_home.png); background-size:25px 23px}
+#commonArea_main_naviBar .mainHome.on:before {background-position:0 0}
+#commonArea_main_naviBar .allMenu:before {background-image:url(common_area_img/ico_main_navibar_menu.png)}
+#commonArea_main_naviBar .myHome:before {background-image:url(common_area_img/ico_main_navibar_myhome.png)}
+#commonArea_main_naviBar .latestProd:before {background-image:url(common_area_img/ico_main_navibar_prod.png)}
+
+/* 푸터 */
+#commonArea_footer {background-color:#fff; padding-bottom:50px}
+#commonArea_footer * {font-family:'DroidSansFallback','Apple Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;-webkit-text-size-adjust:none; margin:0; padding:0}
+#commonArea_footer .foot_topList {overflow:hidden;border-top:1px solid #666; margin:0; padding:0}
+#commonArea_footer .foot_topList li {float:left;width:37%;border-bottom:1px solid #aaa;height:40px; list-style:none}
+#commonArea_footer .foot_topList li a {display:block;width:100%;text-align:center;padding:12px 0 13px;border-right:1px solid #aaa;font-size:13px;font-weight:bold; text-decoration:none; color:#333;letter-spacing:-1px;}
+#commonArea_footer .foot_topList li:last-child {width:26%}
+#commonArea_footer .foot_topList .scrollTop {position:relative; border:none; background:none;width:100%;height:100%; font-weight:bold; cursor:pointer; font-size:12px}
+#commonArea_footer .foot_topList .scrollTop:after {content:''; display:inline-block;width:10px; height:100%; position:absolute;left:50%;top:0;background:url(common_area_img/bg_footop.png) no-repeat 0 center;background-size:10px 5px; margin-left:17px}
+
+#commonArea_footer .foot_termsLink {margin-top:10px;text-align:center}
+#commonArea_footer .foot_termsLink a {font-size:13px;display:inline-block;margin:0;padding:12px 8px 12px 1px;text-decoration:none; color:#333; position:relative;}
+#commonArea_footer .foot_termsLink a:after {content:'';width:1px;height:10px; position:absolute;right:0;top:50%;background-color:#333; margin-top:-5px}
+#commonArea_footer .foot_termsLink a:last-child {padding-right:0}
+#commonArea_footer .foot_termsLink a:last-child:after {content:none}
+#commonArea_footer address {font-size:12px;color:#666;padding:0 8px 25px 8px;line-height:19px;letter-spacing:-1px;text-align:center; font-style:normal}
+#commonArea_footer address a {text-decoration:none; color:#666}
+#commonArea_footer address .num {letter-spacing:0}
+#commonArea_footer address .mailto {color:#c83d67; letter-spacing:0}
+#commonArea_footer address p {margin:8px 0 0}
+
+@media all and (max-width:320px) {	/* 320이하일 경우*/
+	#commonArea_footer address {font-size:11px;line-height:17px}
+	#commonArea_footer .foot_termsLink a {font-size:12px}
+}
+
+/* 좌측메뉴 */
+#commArea_leftMenu {display:none;position:fixed;top:0;left:-100%;width:100%;height: 100%;z-index: 500;background: #dbdce1; height: calc(100% - 50px);height: -webkit-calc(100% - 50px)}
+#commArea_leftMenu * {font-family:'DroidSansFallback','Apple Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;-webkit-text-size-adjust:none; margin:0; padding:0}
+#commArea_leftMenu ul,#commArea_leftMenu ul li {list-style:none; margin:0; padding:0}
+#commArea_leftMenu a {text-decoration:none; color:#333}
+#commArea_leftMenu h2 {position:absolute; padding:18px 12px 12px; font-size:17px; background-color:#fff;width: 100%;box-sizing: border-box; left:0;top:0; z-index:10; height:51px; border-bottom:1px solid #dbdce1; margin:0}
+#commArea_leftMenu h2 .closeSlide {position:absolute;right:0;top:0;background:url(common_area_img/btn_hanamenu_close.png) no-repeat center 20px;width:51px; height:51px; background-size:18px 18px; border:none; cursor:pointer}
+#commArea_leftMenu .innerScroller {-webkit-overflow-scrolling: touch;width: 100%; height: 100%;overflow-y:scroll;}
+#commArea_leftMenu .hanaMenuList {background-color:#fff; margin-bottom:9px; border-bottom:1px solid #ccc; margin-top:55px}
+#commArea_leftMenu .hanaMenuList h3 {font-size:13px;padding:16px 12px 16px 50px;background:no-repeat 12px center;background-size:30px 27px; color:#333; border-top:1px solid #ccc; position:relative; margin:0}
+#commArea_leftMenu .hanaMenuList h3 .wifiBtn {font-size:12px; color:#666; position:absolute;right:12px;top:0; font-weight:normal; padding:10px 13px 10px 20px;background:url(http://image1.hanatour.com/mobile/common/hanatour/main/ico_wifi.png) no-repeat left center,url(http://image1.hanatour.com/mobile/common/hanatour/main/ico_rarr.png) no-repeat right center; background-size:15px 10px, 5px 9px}
+#commArea_leftMenu .hanaMenuList h3 .wifiBtn strong {display:block;color:#333}
+#commArea_leftMenu .hanaMenuList h3:before {content:''; position:absolute;left:12px;top:50%; margin-top:-14px;width:30px; height:27px;background:url(common_area_img/bg_hanamenulist_sprite.png) no-repeat;background-size:350px 27px;}
+#commArea_leftMenu .hanaMenuList h3.bgMenu01:before {background-position:0 0}
+#commArea_leftMenu .hanaMenuList h3.bgMenu02:before {background-position:-40px 0}
+#commArea_leftMenu .hanaMenuList h3.bgMenu03:before {background-position:-80px 0}
+#commArea_leftMenu .hanaMenuList h3.bgMenu04:before {background-position:-120px 0}
+#commArea_leftMenu .hanaMenuList h3.bgMenu05:before {background-position:-160px 0}
+#commArea_leftMenu .hanaMenuList h3.bgMenu06:before {background-position:-200px 0}
+#commArea_leftMenu .hanaMenuList h3.bgMenu07:before {background-position:-240px 0}
+#commArea_leftMenu .hanaMenuList h3.bgMenu08:before {background-position:-280px 0}
+#commArea_leftMenu .hanaMenuList h3.bgMenu09:before {background-position:-320px 0}
+#commArea_leftMenu .hanaMenuList .innerMenuBox {overflow:hidden;background-color:#eef0f4;}
+#commArea_leftMenu .hanaMenuList .innerMenuBox li {width:33.3%; float:left;}
+#commArea_leftMenu .hanaMenuList .innerMenuBox li:nth-child(3n+2) {width:33.4%}
+#commArea_leftMenu .hanaMenuList .innerMenuBox li a {display:block;font-size:13px;padding:14px 4px 14px 12px; height:44px; box-sizing:border-box;border-right:1px solid #dfe2e6;}
+#commArea_leftMenu .hanaMenuList .innerMenuBox li a.two {padding:7px 10px 7px 12px; line-height:14px}
+#commArea_leftMenu .hanaMenuList .innerMenuBox li+li+li+li a {border-top:1px solid #dfe2e6;}
+#commArea_leftMenu .hanaMenuList .innerMenuBox li:nth-child(3n+3) a {border-right:none}
+#commArea_leftMenu .hanaAppList {background-color:#fff;border-bottom:1px solid #ccc; margin-bottom:10px; padding-bottom:6px}
+#commArea_leftMenu .hanaAppList strong {display:block;padding:20px 12px 15px}
+#commArea_leftMenu .hanaAppList ul {overflow:hidden}
+#commArea_leftMenu .hanaAppList ul li {float:left;width:50%; margin-bottom:10px}
+#commArea_leftMenu .hanaAppList ul li a {display:block; font-size:13px; color:#666; background:no-repeat 12px 0; background-size:48px 48px; box-sizing:border-box; height:48px; padding:18px 0 0 65px; position:relative}
+#commArea_leftMenu .hanaAppList ul li a:before {content:''; position:absolute;left:12px;top:50%; margin-top:-24px;width:48px;height:48px;background:url(common_area_img/bg_hana_appList_sprite.png) no-repeat;background-size:280px 48px}
+#commArea_leftMenu .hanaAppList ul li a.bgApp01:before {background-position:0 0}
+#commArea_leftMenu .hanaAppList ul li a.bgApp02:before {background-position:-58px 0}
+#commArea_leftMenu .hanaAppList ul li a.bgApp03:before {background-position:-116px 0}
+#commArea_leftMenu .hanaAppList ul li a.bgApp04:before {background-position:-174px 0}
+#commArea_leftMenu .hanaAppList ul li a.bgApp05:before {background-position:-232px 0}
+@media all and (min-width:375px) {	/* 375이상일 경우*/
+#commArea_leftMenu .hanaMenuList h3 {font-size:14px}
+#commArea_leftMenu h2 {font-size:19px}
+#commArea_leftMenu .hanaMenuList .innerMenuBox li a {font-size:14px}
+#commArea_leftMenu .hanaAppList strong {font-size:15px}
+#commArea_leftMenu .hanaAppList ul li a {font-size:14px}
+}
+#commArea_leftMenu.tween {-webkit-transition: left 0.6s cubic-bezier(0.230,  1.000, 0.320, 1.000);}
+
+/* 우측메뉴 */
+#commArea_rightMenu {display:none;position:fixed;right:-280px;top:0;width: 280px;height: 100%;z-index:500;background: #fff;height: calc(100% - 50px);height: -webkit-calc(100% - 50px)}
+#commArea_rightMenu * {font-family:'DroidSansFallback','Apple Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;-webkit-text-size-adjust:none; margin:0; padding:0}
+#commArea_rightMenu .innerScroller {-webkit-overflow-scrolling:touch;overflow-y:scroll;width:100%;height:100%}
+#commArea_rightMenu .rightMe_out {text-align:center;background-color:#f7f7f7;padding-top:80px}
+#commArea_rightMenu .rightMe_out h2 {font-size:22px; margin:0 0 20px}
+#commArea_rightMenu .rightMe_out p {text-align:center; margin:0; font-size:14px}
+#commArea_rightMenu .rightMe_out div {text-align:center;padding:30px 0 80px}
+#commArea_rightMenu .rightMe_out div a {display:inline-block;width:200px;color:#fff;padding:14px 0; border-radius:5px; font-size:15px; text-decoration:none}
+#commArea_rightMenu .rightMe_out div .rlogin {border:1px solid #c83d67;background-color:#c83d67}
+#commArea_rightMenu .rightMe_out div .rjoin {border:1px solid #a6acbd;background-color:#a6acbd;margin-top:10px}
+
+#commArea_rightMenu .rightMe_in {margin-bottom:5px}
+#commArea_rightMenu .rightMe_in h2 {background-color:#c83d67;color:#fff;padding:20px 65px 20px 20px;position:relative; margin:0; font-size:14px}
+#commArea_rightMenu .rightMe_in h2 strong {font-size:22px}
+#commArea_rightMenu .rightMe_in > a {padding:20px 20px 20px 56px;display:block;font-size:15px; background:20px center no-repeat; background-size:20px 18px; border-bottom:1px solid #ccc; position:relative; overflow:hidden; text-decoration:none; color:#333}
+#commArea_rightMenu .rightMe_in > a:after {content:''; width:10px; height:100%;right:24px;top:0; background:url(common_area_img/bg_right_bul.png) no-repeat 0 center; background-size:10px 17px; position:absolute}
+#commArea_rightMenu .rightMe_in > a span {float:right; font-size:15px; color:#888; margin-right:24px}
+#commArea_rightMenu .rightMe_in > a:before {content:''; width:20px; height:18px; position:absolute;left:20px;top:50%; margin-top:-9px;background:url(common_area_img/bg_rightmenu_sprite.png) no-repeat 0 center; background-size:200px 18px}
+#commArea_rightMenu .rightMe_in > a.bgRight01:before {background-position:0 0}
+#commArea_rightMenu .rightMe_in > a.bgRight02:before {background-position:-30px 0}
+#commArea_rightMenu .rightMe_in > a.bgRight03:before {background-position:-60px 0}
+#commArea_rightMenu .rightMe_in > a.bgRight04:before {background-position:-90px 0}
+#commArea_rightMenu .rightMe_in > a.bgRight05:before {background-position:-120px 0}
+#commArea_rightMenu .rightMe_in > a.bgRight06:before {background-position:-150px 0}
+#commArea_rightMenu .rightMe_in > a.bgRight07:before {background-position:-180px 0}
+
+#commArea_rightMenu .rightMe_in .mileBox {background-color:#f7f7f7;border-bottom:1px solid #ccc}
+#commArea_rightMenu .rightMe_in .mileBox ul {padding:13px 20px; margin:0}
+#commArea_rightMenu .rightMe_in .mileBox ul li {overflow:hidden;position:relative;padding-left:8px;color:#666; font-size:14px}
+#commArea_rightMenu .rightMe_in .mileBox ul li+li {margin-top:10px}
+#commArea_rightMenu .rightMe_in .mileBox ul li:before {content:'';width:4px;height:4px;display:block;position:absolute;left:0;top:50%; margin-top:-3px;background:#ccc;border-radius:50%}
+#commArea_rightMenu .rightMe_in .mileBox ul span {float:right; font-size:15px; font-weight:bold; padding-right:2px; letter-spacing:0}
+#commArea_rightMenu .rightMe_in .mileBox ul span img {width:16px;margin-left:3px; vertical-align:middle}
+#commArea_rightMenu .rightMe_in .mileBox .milebtnBox {display:block;text-align:center; margin-bottom:15px}
+#commArea_rightMenu .rightMe_in .mileBox .milebtnBox a {display:inline-block; font-size:12px; border-radius:3px;background: -moz-linear-gradient(top,#fff 0%,#efefef);background: -webkit-gradient(linear, left top, left bottom, from(#fff),to(#efefef)); border:1px solid #ccc; padding:5px 11px}
+.commArea_mask {display:none; position: fixed;top: 0;left: 0;width:100%; height:100%;background:rgba(0,0,0,0.7);z-index: 100;}
+#commArea_rightMenu.tween {-webkit-transition: right 0.6s cubic-bezier(0.230,  1.000, 0.320, 1.000);}

@@ -1,0 +1,821 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* --------- 닷컴 예약관련 공통 --------- */
+body,form,div,p,h1,h2,h3,h4,h5,h6,dl,dt,dd,ul,ol,li,fieldset,input,textarea,button,blockquote,th,td {font-size:1.3rem;letter-spacing:-0.02em;}
+
+.comBulTxt.c_gray {margin-top:15px}
+.comBulTxt.c_gray li {color:#888}
+.textLink {text-decoration:underline;}
+a.selectBox {height:45px}
+input[type='checkbox'].redCheck {margin-right:5px}
+.inputTxt.pw {-webkit-text-security:disc;text-security:disc}
+textarea:disabled {background:#f6f6f6 !important;color:#aaa;opacity:1}
+
+.notFixed #commonArea_header,.notFixed .reserv_section > .m_btnRed.fixed {position:static !important} /* 20180209 추가 */
+.notFixed #commonArea_header.headFixed+* {margin-top:0 !important}/* 20180209 추가 */
+
+.reserv_section {background-color:#dbdce1;overflow:hidden; padding-bottom:10px}
+.reserv_section > div {background-color:#fff}
+.reserv_content {border-bottom:1px solid #ccc;margin-bottom:10px}
+.reserv_content > div {padding:15px 15px 20px;border-top:1px solid #e0e0e0}
+.reserv_content .serviceType {border-top:none; padding-top:0}
+.reserv_content .pay_togCont {padding:0;border-top:none}
+
+.tit_reserv {padding:15px;position:relative;font-size:1.5rem}
+.tit_reserv .inRig {position:absolute;right:45px;top:50%;font-weight:normal; color:#c83d67; transform:translate(0, -50%);-webkit-transform:translate(0, -50%);overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical;width:45%; text-align:right; font-size:1.3rem}
+.tit_reserv .inRig.noAco {right:15px;width:50%}
+.tit_reserv sup {color:#c83d67;vertical-align:top; position:relative;top:-2px}
+
+.reserv_section > .m_btnRed {margin:15px 15px 20px; font-size:1.7rem}
+.reserv_section > .m_btnRed.fixed {position:fixed; left:0;bottom:0;width:100%; margin:0; border-radius:0;padding:16px 0;} /* 20180416 예약결제 고도화 : 수정 */
+.reserv_section .comBulTxt {padding:0}
+
+.unipStit {color:#666; display:block; margin:12px 0 8px}
+.textarea {width:100%;height:80px; padding:12px 15px;border:1px solid #ccc; box-sizing:border-box}
+
+.topCode {display:table;width:100%; height:40px; box-sizing:border-box; padding:0 15px; border-bottom:1px solid #ccc; margin-bottom:10px}
+.topCode strong {display:table-cell;width:50%;vertical-align:middle;font-size:1.5rem}
+.topCode b {display:table-cell;width:50%;vertical-align:middle; text-align:right; color:#c83d67; font-size:1.4rem}
+.stitProd {display:block;font-size:1.4rem; margin-bottom:15px}
+
+.mnTotal {border-top:1px solid #333;margin-top:15px; padding:15px 0 20px; text-align:right; position:relative;}
+.mnTotal.payType {border-top:none;margin-top:0; padding-bottom:0}
+.mnTotal .mnTit {position:absolute;left:0;top:18px; font-size:1.6rem}
+.mnTotal b {color:#c83d67;font-size:2rem}
+.mnTotal b span {font-size:1.6rem; font-weight:normal}
+.mnTotal p {color:#666; margin:2px 0 0}
+.mnTotal em {display:block; margin-top:8px}
+.mnTotal.bgPink {background:#fdf2f5; margin:0 -15px -20px; padding:15px 15px 20px; border-top:1px solid #fadce6}
+.mnTotal.bgPink .mnTit {left:15px; color:#c83d67; font-size:1.3rem; font-weight:normal}
+
+
+
+/* 약관 */
+.termsBox {background-color:#fff; padding:20px 15px;border-bottom:1px solid #ccc}
+.termsCont .all_ch {display:block;margin-bottom:12px; font-size:1.4rem; padding-top:4px}
+.termsCont .all_ch input[type='checkbox'].redCheck {margin-top:-4px}
+.termsCont .inner_terms {border:1px solid #ccc; margin:15px 0 20px}
+.termsCont .inner_terms > li {position:relative;border-bottom:1px solid #e0e0e0;}
+.termsCont .inner_terms > li label {display:table-cell;width:100%;padding:3px 45px 0; color:#333; position:relative; height:50px; box-sizing:border-box;  vertical-align:middle}
+.termsCont .inner_terms > li label input {position:absolute;left:15px;top:50%; margin-top:-11px}
+.termsCont .inner_terms > li:last-child {border-bottom:none}
+.termsCont .inner_terms > li .termsTog {position:absolute;right:0;top:0; color:#666; font-size:12px;background-color:#fff; width:46px; height:50px; border:none; cursor:pointer}
+.termsCont .inner_terms > li .termsTog:before {content:'';display:inline-block;width:15px; height:8px;background: url(http://image1.hanatour.com/mobile/common/btn_acodi_tog_3017.png) no-repeat center center / 15px 8px}
+.termsCont .inner_terms > li .termsTog.open:before {transform:rotate(180deg)}
+.termsCont .inner_terms > li .in_termsScrBox {display:none;max-height:250px; overflow-y:scroll;-webkit-overflow-scrolling: touch; background-color:#f9f9f9; padding:10px 15px; box-sizing:border-box;border-top:1px solid #e0e0e0}
+.termsCont .inner_terms > li .termsTog.open+.in_termsScrBox {display:block}
+.termsCont .inner_terms > li .in_termsScrBox > p {font-size:1.2rem; margin-bottom:5px}
+.termsCont .inner_terms > li .termsListCont dt {margin-bottom:5px;font-weight:bold; color:#333}
+.termsCont .inner_terms > li .termsListCont dd {font-size:1.2rem;margin-bottom:8px;color:#666}
+.termsCont .inner_terms > li .termsListCont dd * {font-size:1.2rem;color:#666}
+.termsCont .inner_terms > li .termsListCont dd p {margin-bottom:3px}
+.termsCont .inner_terms > li .in_termsScrBox li {margin-bottom:3px;font-size:1.2rem;}
+.termsCont .inner_terms > li .in_termsScrBox strong {font-size:1.2rem; color:#333}
+.termsCont .inner_terms > li .termsComTable {margin:5px 0; background-color:#fff}
+.termsCont .inner_terms > li .termsComTable th {background-color:#f9f9f9; padding:5px 2px; border:1px solid #ccc;font-size:1.1rem; text-align:center}
+.termsCont .inner_terms > li .termsComTable td {border:1px solid #ccc; padding:7px 2px; text-align:center; font-size:1.1rem}
+.termsCont .inner_terms > li .termsComTable td a {color:#2489ce; font-weight:bold}
+
+.pageStep {overflow:hidden; display:table;width:100%;border-bottom:1px solid #ccc; margin-bottom:5px}
+.pageStep li {display:table-cell;width:32.5%; color:#ccc; background-color:#f7f7f7; text-align:center;height:35px; vertical-align:middle; position:relative; }
+.pageStep li:nth-child(2) {text-indent:12px}
+.pageStep li:nth-child(3) {width:35%;text-indent:10px}
+.pageStep li:last-child:after {content:none}
+.pageStep li.on {color:#c83d67; background-color:#fff; font-weight:bold}
+.pageStep li+li.on:before {content:''; position:absolute;left:0;top:0;width:11px; height:35px;background:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/bg_step_before.png) no-repeat 0 0 / 11px 35px; z-index:2}
+.pageStep li:after {content:''; position:absolute;right:-11px;top:0;width:11px; height:35px;background:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/bg_step_after.png) no-repeat -11px 0 / 22px 35px; z-index:1}
+.pageStep li.on:after {background-position:0 0}
+
+.tbList {}
+.tbList li {position:relative; display:table;width:100%}
+.tbList li+li {margin-top:12px}
+.tbList li > * {display:table-cell;position:relative;vertical-align:top}
+.tbList li .titCell {width:92px;color:#666; font-weight:normal;}
+.tbList li .contCell {width:auto;font-size:1.4rem; word-break:break-word}
+.tbList li .cm_miniPop_cont {margin-left:-45px}
+.tbList.airTime {background-color:#f7f7f7; margin:10px -15px 15px; padding:10px 15px}
+.tbList.airTime li+li {margin-top:8px}
+.tbList.airTime .contCell {font-size:1.3rem; letter-spacing:-0.04em}
+.tbList li .cancleDay {font-size:1.4rem; color:#c83d67}
+.tbList li .cancleDay span {font-size:1.2rem; color:#888; display:inline-block; margin-left:8px; font-weight:normal}
+
+.mailSend {color:#c83d67;background:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/btn_rarr_red.png) no-repeat right center / 7px 12px; padding-right:9px; float:right}
+
+.tit_reserv.pinkType {color:#fff; background-color:#e45b85; margin-bottom:-1px}
+.tit_reserv.pinkType .inRig {color:#fff; font-weight:bold; font-size:1.5rem}
+.tit_reserv.pinkType .inRig span {font-size:1.2rem; font-weight:normal}
+.tit_reserv.pinkType .btn_toggle {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/fnd/bg_wh_close.png)}
+
+.stit_boxf7 {background-color:#f7f7f7;position:relative; padding:10px 15px; margin:15px -15px 0; border-top:1px solid #e0e0e0; margin-bottom:15px}
+.stit_boxf7 .stitPp {font-size:1.4rem}
+.stit_boxf7 .stitPp02 {font-size:1.4rem;color:#888;font-weight:normal}
+.stit_boxf7 .stitPp02 .inRig {position:absolute;right:40px;top:50%;color:#333;transform:translate(0, -50%);-webkit-transform:translate(0, -50%);overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical;width:45%; text-align:right}
+.stit_boxf7 .inner_mn {color:#c83d67;display:inline-block; margin-left:10px}
+.stit_boxf7 .inner_mn span {font-size:1.2rem;font-weight:normal}
+.stit_boxf7 .rigCheck {position:absolute;right:15px;top:50%;transform:translate(0, -50%);-webkit-transform:translate(0, -50%)}
+.stit_boxf7 .rigCheck span {margin-right:10px;}
+.stit_boxf7 .rigCheck input[type='checkbox'].redCheck {margin-right:0}
+.stit_boxf7 .btn_toggle {background-size:13px 7px}
+.stit_boxf7.togType {margin-bottom:-20px; background:#8f94a4}
+.stit_boxf7.togType .stitPp02,.stit_boxf7.togType .stitPp02 .inRig {color:#fff}
+.stit_boxf7.togType .btn_toggle {background:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/btn_white_toggle.png) no-repeat center center / 13px 7px}
+
+.rsv_inTogCont {margin-top:20px; padding-top:15px}
+
+.airLogo img {height:15px;margin-top:-3px}
+.airCode {color:#5e9acd;display:inline-block; margin-left:4px}
+.bTxt01 {margin-bottom:10px}
+.sTxt01 {font-size:1.2rem;color:#888}
+.sTxt01.mrType {margin:20px 0 30px}
+
+.contractCont p {font-size:1.4rem; margin-bottom:15px}
+.contractCont p:before {content:'';display:inline-block;width:24px; height:24px;background:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/ico_check_big.png) no-repeat 0 0 / 24px 24px; margin-bottom:-6px; margin-right:10px}
+.contractCont a { display:inline-block; padding:7px 24px 7px 12px; border:1px solid #ccc; border-radius:3px; position:relative}
+.contractCont a:after {content:'';width:8px; height:11px; position:absolute;right:10px; top:50%; background:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/btn_rarr_gray.png) no-repeat 0 0 / 8px 11px;transform:translate(0, -50%);-webkit-transform:translate(0, -50%)}
+
+.mnList {}
+.mnList li {display:table;width:100%}
+.mnList li+li {margin-top:10px}
+.mnList li > * {display:table-cell;vertical-align:middle}
+.mnList li em {width:60%; color:#666; }
+.mnList li em span {font-size:1.4rem; color:#333; display:inline-block; margin-left:8px}
+.mnList li strong {width:40%;font-size:1.4rem; text-align:right; letter-spacing:0}
+.mnList li strong span {font-size:1.2rem;font-weight:normal}
+
+.rsv_end_list { padding-bottom:10px}
+.rsv_end_list li {border-top:1px solid #333; padding:10px;display:table;width:100%; box-sizing:border-box; height:38px}
+.rsv_end_list li+li {border-color:#e0e0e0}
+.rsv_end_list li > * {display:table-cell; vertical-align:middle}
+.rsv_end_list li em {width:85px;color:#666}
+.rsv_end_list li span {font-size:1.4rem; width:auto}
+.rsv_end_list li span.c_red {font-weight:bold}
+.txt_zigzag {padding:30px 15px 20px;background:#fff url(http://image1.hanatour.com/mobile/common/hanatour/reservation/bg_zigzag_line.png) repeat-x 0 0 / 14px 10px;  border-bottom:1px solid #ccc}
+.txt_zigzag span {display:block; margin-top:8px}
+.helperStep {background-color:#f7f7f7 !important; padding:15px 15px 30px;}
+.helperStep strong {color:#c83d67;}
+.helperStep strong:before {content:''; display:inline-block; width:12px; height:16px; margin-right:5px;background:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/ico_helper.png) no-repeat 0 0;background-size:12px 16px; position:relative; bottom:-3px}
+.helperStep em {display:block; margin:5px 0 15px;}
+.helperStep ol {}
+.helperStep ol li {border:1px solid #e0e0e0; background-color:#fff; display:table;width:100%; padding:12px 15px; box-sizing:border-box; position:relative}
+.helperStep ol li > * {display:table-cell; vertical-align:middle}
+.helperStep ol li+li {margin-top:5px}
+.helperStep ol li.on {border-color:#c83d67}
+.helperStep ol li.on:after {content:''; position:absolute;right:15px; top:50%; margin-top:-6px;width:13px; height:12px;background:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/ico_helperstep_on.png) no-repeat 0 0 / 13px 12px;}
+.helperStep ol li em {width:70px; color:#888; font-size:1.2rem}
+.helperStep ol li.on em {color:#c83d67}
+.helperStep ol li span {width:auto;}
+
+.hanaClubSearch .clubNum {font-size:1.4rem}
+.hanaClubSearch p {font-size:1.4rem; color:#666}
+.hanaClubSearch .inMile {margin-top:4px; font-size:1.3rem}
+.hanaClubSearch .inMile span {font-weight:normal}
+.hanaClubSearch button {color:#c83d67;background:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/btn_rarr_red.png) no-repeat right center / 7px 12px; padding-right:9px; margin-top:4px}
+.notMember {position:relative; margin-top:4px}
+.notMember em {color:#666;}
+
+.accountCont p {color:#666;}
+.accountCont ul {margin-top:20px}
+.accountCont ul li+li {margin-top:10px}
+.accountCont ul li strong {display:inline-block;margin-left:8px; padding-left:12px; position:relative}
+.accountCont ul li strong:before {content:'';position:absolute;left:0;top:50%; background-color:#ccc; width:1px; height:10px; margin-top:-5px}
+
+.benefitList {}
+.benefitList li {display:table;width:100%}
+.benefitList li > div {display:table-cell;width:50%}
+
+.helperCont { padding-bottom:15px}
+.helperCont strong {font-size:1.4rem}
+.helperCont p {color:#666; margin:5px 0 8px}
+.helperCont h4 {position:relative;}
+.helperCont ul {margin-top:10px; line-height:1.9rem}
+.call {color:#c83d67; font-weight:bold;letter-spacing:0; display:inline-block; }
+.call:before {content:''; display:inline-block; width:20px; height:20px; margin-right:5px;background:url(http://image1.hanatour.com/mobile/common/hanatour/fnd/bg_reser_tel.png) no-repeat 0 0;background-size:20px 20px; position:relative; bottom:-4px}
+.call.fl_r {float:right; top:-6px; position:relative}
+.helperTime {margin-top:15px}
+.helperTime dt {position:relative;padding-left:10px; margin-bottom:4px; color:#888}
+.helperTime dt:before {content:'';width:3px; height:3px;border-radius:50%; background-color:#999; position:absolute;left:0;top:6px}
+.helperTime dd {color:#888; font-size:1.2rem;padding-left:10px;}
+
+.tableRow {border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin-bottom:15px}
+.tableRow th {background-color:#f7f7f7; text-indent:16px; text-align:left;border-bottom:1px solid #ccc; font-weight:normal}
+.tableRow td {color:#666; padding:12px 5px 12px 15px;border-bottom:1px solid #ccc}
+
+.poketCont {}
+.poketCont ul {margin:0 -15px 15px; padding:12px 15px; display:table;width:100%; background-color:#f7f7f7}
+.poketCont ul li {display:table-cell;width:33.3%; text-align:center; box-sizing:border-box; padding:8px 0}
+.poketCont ul li+li {border-left:1px solid #ccc}
+.poketCont ul li:nth-child(2) {width:33.4%}
+
+.cancle_infor {padding:15px 15px 20px; border-bottom:1px solid #ccc}
+.cancle_infor h3 {font-size:1.4rem; margin-bottom:15px;background:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/ico_cancle_infor.png) no-repeat left center / 15px 15px; padding-left:20px}
+
+.titCell .cm_miniBtn {position:absolute;right:24px;top:-2px}
+.inputCell li > label a.cm_miniBtn {position:absolute;right:24px;top:0}
+.inputCell .cm_miniPop_cont {-webkit-transform:translate(-20%, 0);transform:translate(-20%, 0); padding:12px 25px 12px 10px; margin-top:0; top:32px}
+/* 20180508 APIS 정보 추가 : 추가 */
+.tbList .titCell .cm_miniPop_cont {-webkit-transform:translate(-20%, 0);transform:translate(-20%, 0); padding:12px 25px 12px 10px; margin-top:0; top:25px;margin-left:0;}
+.inputCell .cm_miniBtn.vaTop {vertical-align:top;}
+/* // 20180508 APIS 정보 추가 : 추가 */
+
+@media all and (min-width:320px) { /* 320이상 */
+ .inputCell li > label .cm_miniBtn {top:-5px}
+}
+@media all and (min-width:360px) { /* 360 이상 */
+ .tbList li .titCell {width:105px;}
+ .tbList li .titCell br,.inputCell li > label br {display:none}
+ .titCell .cm_miniBtn {position:relative;right:-3px;top:-3px; vertical-align:top}
+ .inputCell li > label a.cm_miniBtn {position:relative;right:-3px;top:-3px; vertical-align:top}
+ .titCell .cm_miniBtn {top:0}
+ .btn_titRig  {width:68px}
+}
+@media all and (min-width:375px) { /* 375이상 */
+ .tbList li .titCell {width:115px;}
+ .titCell .cm_miniBtn {top:0}
+ .inputCell li > label .cm_miniBtn {top:-4px}
+ .inputCell li > label a.cm_miniBtn {top:-3px;}
+}
+@media all and (min-width:414px) { /* 아이폰6 plus */
+ .tbList li .titCell {width:117px;}
+}
+
+.pinkTab {overflow:hidden;margin-bottom:15px}
+.pinkTab li {float:left;width:50%}
+.pinkTab li a {display:block; color:#666; background-color:#f1f1f3; border:1px solid #ccc; text-align:center; padding:8px 0}
+.pinkTab li+li a {border-left:none}
+.pinkTab li.on {position:relative}
+.pinkTab li+li.on {border-left:1px solid #e45b85; margin-left:-1px}
+.pinkTab li.on a {color:#e45b85; border-color:#e45b85; background-color:#fff; font-weight:bold}
+.pinkTab.type3 {padding:0}
+.pinkTab.type3 li {width:33.3%}
+.pinkTab.type3 li:nth-child(2) {width:33.4%}
+
+.pay_togCont .stit_payBox {background-color:#f7f7f7;position:relative; padding:10px 15px;border-top:1px solid #e0e0e0;}
+.pay_togCont .stit_payBox .payDay {font-weight:normal;font-size:1.4rem; color:#888}
+.pay_togCont .stit_payBox .payDay .inRig {position:absolute;right:40px;top:50%;color:#333;transform:translate(0, -50%);-webkit-transform:translate(0, -50%);overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical;width:45%; text-align:right}
+.pay_togCont .stit_payBox .payDay .inRig em {color:#c83d67}
+.pay_togCont .stit_payBox .payDay .inRig i {color:#5e9acd; font-style:normal}
+.pay_togCont .payTog_inner {padding:15px 15px 20px}
+
+.useTable {border-top:1px solid #ccc}
+.useTable th {background-color:#f7f7f7;font-weight:normal}
+.useTable thead th {border-bottom:1px solid #ccc;height:38px}
+.useTable thead th+th {border-left:1px solid #ccc}
+.useTable tbody th,.useTable tbody td {height:40px; padding:5px 5px 5px 14px;text-align:left;border-bottom:1px solid #ccc}
+.useTable tbody td {color:#666;border-left:1px solid #e0e0e0}
+
+.callBox {position:relative}
+.callBox .telBtn {width:62px;background-color:#fff;border:1px solid #ccc;font-size:1.3rem;padding:5px 2px; border-radius:2px; position:absolute;right:15px; top:50%;transform:translate(0, -50%);-webkit-transform:translate(0, -50%); font-weight:normal;box-sizing:border-box; text-align:center}
+
+/*  인풋 리스트 */
+.inputCell {}
+.inputCell li {display:table;width:100%}
+.inputCell li+li {margin-top:12px}
+.inputCell li > label {display:table-cell;width:92px; vertical-align:top; line-height:1.3rem; position:relative; padding-top:12px}
+.inputCell li.vaTop > label {vertical-align:top; padding-top:3px}
+.inputCell li sup {color:#c83d67; display:inline-block; height:20px;vertical-align:unset; position:relative; top:-5px}
+.inputCell li .smTxt {display:block; font-size:12px; color:#888}
+.inputCell li > div {display:table-cell;width:auto; vertical-align:middle}
+.inputCell li .inputTxt,.inputCell li .selectBox {height:40px}
+.inputCell li .inTable {display:table;width:100%}
+.inputCell li .inTable > span {display:table-cell; vertical-align:top}
+.inputCell li .inTable .cellPad {width:5px}
+.inputCell li .inTable .cellPad10 {width:2%; padding:0 4px; text-align:center; vertical-align:middle; color:#888}
+.inputCell li .inTable .w30 {width:32%}
+.inputCell li .inTable .w35 {width:34%}
+.inputCell li .inTable .w50 {width:49%}
+.inputCell li .inTable .w65 {width:64%}
+.inputCell li .radioBox {overflow:hidden; padding-top:5px}
+.inputCell li .radioBox label {float:left;width:50%}
+.inputCell li .redSmaTxt {color:#c83d67; font-size:1.2rem; padding-left:10px; position:relative; margin-top:8px}
+.inputCell li .redSmaTxt:before {content:''; width:3px; height:3px; position:absolute;left:0;top:7px; background-color:#c83d67; border-radius:50%}
+.tbList+.inputCell { margin-top:12px}
+.tbList+.inputCell li > label {color:#666}
+@media all and (min-width:360px) { /* 360 이상 */
+ .inputCell li > label {width:105px;}
+}
+@media all and (min-width:375px) { /* 375이상 */
+ .inputCell li > label {width:115px;}
+}
+@media all and (min-width:414px) { /* 아이폰6 plus */
+ .inputCell li > label {width:117px;}
+}
+
+.halfSelectBox {display:table;width:100%;margin-top:5px}
+.halfSelectBox a,.halfSelectBox span {display:table-cell;width:49%}
+.halfSelectBox em {display:table-cell;width:2%}
+.halfSelectBox span select {height:44px}
+
+.ico_qtxt {background:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/ico_qtxt.png) no-repeat 0 1px / 13px 13px; font-size:1.2rem; color:#888; padding-left:18px}
+.ico_qtxt.red {background-image:url(http://image1.hanatour.com/mobile/common/hotel/ico_txt_point.png); color:#666}
+
+/* 결제 */
+.beneDiscount {position:relative}
+.beneDiscount+.beneDiscount {margin-top:15px}
+.beneDiscount h4 {color:#333; font-weight:normal}
+.beneDiscount .cm_miniBtn {vertical-align:bottom; margin:0 0 -1px 5px}
+.beneDiscount .bd_inrig {position:absolute;right:0;top:0}
+.beneDiscount .bd_inrig strong {font-size:1.4rem; letter-spacing:0;}
+.beneDiscount .bd_inrig strong span {font-size:1.2rem; font-weight:normal}
+.beneDiscount .bd_inrig .miniBtn02 {margin-left:5px; vertical-align:top}
+.beneDis_btmCont {margin-top:10px;}
+.beneDis_btmCont > div {background-color:#f7f7f7; border-top:1px solid #e0e0e0; padding:15px; position:relative}
+.beneDis_btmCont h5 {font-weight:normal}
+.beneDis_btmCont .rigBtn01 {position:relative;padding-right:77px}
+.beneDis_btmCont .rigBtn02 {position:relative;padding-right:105px; margin-bottom:20px}
+.beneDis_btmCont .rigBtn02 .smBtn {right:50px;width:45px}
+.beneDis_btmCont .rigCheck01 {position:relative;padding-right:130px; margin:10px 0 0}
+.beneDis_btmCont .rigCheck01 label {position:absolute;right:15px; top:50%;-webkit-transform:translate(0, -50%);transform:translate(0, -50%);}
+.beneDis_btmCont .rigCheck01 label span { position:relative;top:1px}
+.beneDis_btmCont .sTxt01 {margin-top:5px}
+.beneDis_btmCont .stit_ip {display:inline-block;margin-bottom:5px}
+.beneDis_btmCont strong span {font-weight:normal}
+
+.beneDis_btmCont .selectBox,.beneDis_btmCont .inputTxt {height:32px}
+.beneDis_btmCont .selectBox {text-indent:5px}
+.beneDis_btmCont .smBtn {position:absolute;right:0;top:0; height:32px; background-color:#fff;border-radius:2px;width:67px;border:1px solid #ccc; font-size:1.3rem}
+.beneDis_btmCont .addBtn {background:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/btn_add.png) no-repeat 0 center / 20px 20px; height:20px; padding-left:25px; margin-top:15px;font-size:1.3rem}
+.beneDis_btmCont .delBtn {position:absolute;right:10px;top:15px;width:24px;height:24px;background:#fff url(http://image1.hanatour.com/mobile/common/hanatour/reservation/btn_delete.png) no-repeat center center / 12px 12px; border-radius:5px; border:1px solid #ccc}
+.beneDis_btmCont .refundCont h5 {margin-bottom:15px}
+.beneDis_btmCont .refundCont .sTxt01 {margin-top:0}
+.beneDis_btmCont .refundCont .inputTxt,.beneDis_btmCont .refundCont .selectBox {margin-bottom:6px}
+.beneDis_btmCont .refundCont .inputTxt:last-child {margin-bottom:0}
+.beneDis_btmCont .refundCont .refundSelect {position:absolute;right:0;top:13px}
+.beneDis_btmCont .refundCont input[type='tel'] {font-weight:normal}
+.beneDis_btmCont .refundCont .refund_inTab {padding-top:12px}
+.beneDis_btmCont .refundCont .refund_inTab h6 {font-weight:normal; margin-bottom:5px}
+.beneDis_btmCont .refundCont .addressBox {position:relative; padding-right:78px}
+.beneDis_btmCont .refundCont .addressBox a {width:70px;background-color:#fff;border:1px solid #ccc;font-size:1.3rem;padding:6px 2px; border-radius:2px; position:absolute;right:0;top:0;font-weight:normal;box-sizing:border-box; text-align:center; height:32px}
+
+.ico_mp {display:inline-block;height:18px;padding-right:20px;background:no-repeat right bottom / 16px 16px}
+.ico_mp.mile {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/ico_mile.png)}
+.ico_mp.point {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/ico_point.png)}
+.ico_mp.mile_b {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/ico_pay_mile.png)}
+.ico_mp.point_b {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/ico_pay_point.png)}
+.ico_ip {padding-right:20px;background:no-repeat right center / 16px 16px; position:relative}
+.ico_ip.mile {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/ico_input_mile.png)}
+.ico_ip.point {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/ico_input_point.png)}
+.ico_ip span {position:absolute;right:0;top:50%;-webkit-transform:translate(0, -50%);transform:translate(0, -50%);}
+.stitBtn {display:inline-block;width:80px;margin-left:2px; text-align:center;padding:3px 0;background-color:#fff;border-radius:2px;border:1px solid #ccc; font-size:1.3rem}
+.payTotal_box {display:table;width:100%;position:relative; margin-bottom:15px}
+.payTotal_box > div {display:table-cell;width:auto;margin-right:18px}
+.payTotal_box > div .comRadio input {margin-top:0}
+.payTotal_box > div .comRadio input[type='radio']+span {margin-right:0}
+.payTotal_box > div button.cm_miniBtn {top:-2px}
+
+
+/* 20180601 간편결제 모듈추가-삼성페이제거 : 수정 */
+.paySelect {margin-bottom:15px;border-bottom:1px solid #e0e0e0;border-right:1px solid #e0e0e0;}
+.paySelect:after {display:block;content:'';clear:both;}
+.paySelect li {position:relative;float:left;width:50%;border-top:1px solid #e0e0e0;border-left:1px solid #e0e0e0;box-sizing:border-box;}
+/*.paySelect li:nth-child(2) {width:33.4%}*/
+.paySelect li.empty {height:74px;}
+.paySelect li.on:after {z-index:2;content:'';position:absolute;left:-1px;top:-1px;display:block;width:100%;height:100%;border:1px solid #c83d67;}
+.paySelect li.on a {color:#c83d67}
+.paySelect a {display:block;position:relative; background:no-repeat center 10px / auto 26px; height:72px; padding-top:43px; text-align:center; box-sizing:border-box}
+.paySelect .ico_pay01 {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/ico_payselect01.png)}
+.paySelect .ico_pay02 {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/ico_payselect02.png)}
+.paySelect .ico_pay03 {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/ico_payselect03.png)}
+.paySelect .ico_pay04 {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/ico_payselect04.png)}
+.paySelect .ico_pay05 {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/ico_payselect05.png);background-size:58px 13px;background-position:center 18px;} /* 20180720 간편결제추가수정 */
+/*.paySelectCont .selectBox + label {display:block;margin-top:5px;}*/ /* 20181016 M포인트 적용 : 제거 */
+/* 20181016 M포인트 적용 : 추가 */
+.mPointUse {padding-top:10px;}
+.mPointUse a {vertical-align:middle;}
+/* // 20181016 M포인트 적용 : 추가 */
+/* // 20180601 간편결제 모듈추가-삼성페이제거 : 수정 */
+
+.paySelectCont .comBulTxt {margin-top:10px}
+.paySelectCont .comBulTxt li {color:#888}
+.paySelectCont .btnType li.inBtn:before {top:9px}
+.paySelectCont .selectBox,.paySelectCont .inputTxt {height:40px}
+.paySelectCont .selectBox {text-indent:5px}
+.paySelectCont p.c_red {font-size:1.2rem; margin-top:2px}
+.paySelectCont .bank_account {background-color:#f7f7f7; border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0; margin:15px -15px 0; padding:15px}
+.paySelectCont .bank_account li {}
+.paySelectCont .bank_account li+li {margin-top:5px}
+.paySelectCont .bank_account li em {display:inline-block;width:30%; color:#666}
+.paySelectCont .bank_account li span {}
+
+.payTotal_money {margin:0 -15px -20px;}
+.payTotal_money li {text-align:right; position:relative; padding:0 15px 0 45%}
+.payTotal_money li+li {margin-top:10px}
+.payTotal_money li:last-child {background-color:#fdf2f5; padding:15px;border-top:1px solid #fadce6}
+/* 20180416 예약결제 고도화 : 수정 */
+.payTotal_money li .inputTxt {height:32px;padding-right:10px;text-align:right!important;font-weight:bold}
+.payTotal_money li .withBtn .inputTxt {padding-right:30px;}
+.payTotal_money li .inputDelBtn {display:none;}
+.payTotal_money li .withBtn .inputDelBtn {display:block;}
+/* // 20180416 예약결제 고도화 : 수정 */
+.payTotal_money li em {position:absolute;left:15px;top:50%;-webkit-transform:translate(0, -50%);transform:translate(0, -50%)}
+.payTotal_money li strong {font-size:1.4rem}
+.payTotal_money li strong span {font-weight:normal;font-size:1.2rem}
+.payTotal_money li:last-child strong {font-size:1.8rem}
+.payTotal_money li:last-child strong span {font-weight:normal; font-size:1.4rem}
+
+.paymn_endList {padding:0 0 20px 0;}
+.paymn_endList+.paymn_endList {padding:15px 0 20px;border-top:1px dashed #ccc;}
+.paymn_endList:last-child {margin-bottom:0; padding-bottom:10px}
+.paymn_endList li {position:relative; text-align:right;}
+.paymn_endList li+li {margin-top:6px}
+.paymn_endList li em {position:absolute;left:0;top:1px}
+.paymn_endList li strong {position:relative;font-size:1.4rem; font-weight:normal}  /* 20180416 예약결제 고도화 : 수정 */
+.paymn_endList li strong span {font-weight:normal; font-size:1.2rem}
+.paymn_endList.total {border-top:1px solid #ccc}
+.paymn_endList .in_sale {border-top:1px dashed #ccc; padding:15px 5px; margin-top:10px;border-bottom:1px solid #ccc}
+.paymn_endList .in_sale em {color:#666}
+.paymn_endList .in_sale strong {font-weight:normal}
+.paymn_endList .btn1 {display:inline-block;margin-left:5px;padding:3px 15px 3px 6px;border-radius:2px;border:1px solid #ccc;font-size:1.3rem; position:relative}
+.paymn_endList .btn1:disabled {color:#888; background-color:#f7f7f7;padding:3px 6px; border-color:#e8e8e8}
+.paymn_endList .btn1[readonly] {color:#888;padding:3px 6px}
+.paymn_endList .btn1:after {content:'';width:5px; height:9px; position:absolute;right:6px; top:50%; background:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/btn_rarr_sm.png) no-repeat 0 0 / 5px 9px;transform:translate(0, -50%);-webkit-transform:translate(0, -50%)}
+.paymn_endList .btn1:disabled:after,.paymn_endList .btn1[readonly]:after {content:none;}
+
+.refundCheck {position:relative; margin-top:-10px}
+.refundCheck label {display:inline-block;cursor:pointer}
+.refundCheck input {width:9px; height:18px; display:inline-block;background:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/ico_barr.png) no-repeat 0 center / 9px 5px; position:relative; top:-1px;cursor:pointer; border:none}
+.refundCheck input:checked {-webkit-transform:rotate(-180deg);transform:rotate(-180deg)}
+.refundCheck ul {background-color:#f7f7f7; padding:15px 10px; display:none; margin-top:10px}
+.refundCheck input:checked+ul {display:block}
+.refundCheck ul li {display:table;width:100%}
+.refundCheck ul li+li {margin-top:8px}
+.refundCheck ul li span {display:table-cell;width:25%; color:#888}
+.refundCheck ul li em {display:table-cell;width:auto}
+
+/* 20180601 간편결제 모듈추가-삼성페이제거 : 수정 */
+.card_breakdown {background:#f7f7f7; padding:15px; line-height:1.8rem}
+.card_breakdown em {display:block; margin-bottom:4px;}
+.card_breakdown .won {font-size:1.2rem}
+.card_breakdown em.ico_kakao:before, .paymn_endList strong.ico_kakao:before {width:44px; height:14px; background:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/ico_kakao_pay02.png) no-repeat 0 0 / 44px 14px}
+/* // 20180601 간편결제 모듈추가-삼성페이제거 : 수정 */
+
+/* 20180601 간편결제 모듈추가-삼성페이제거 : 추가 */
+.card_breakdown em.ico_pay, .paymn_endList strong.ico_pay {display:flex;display: -webkit-box;display: -ms-flexbox;display: -webkit-flex;align-items:center;}
+.paymn_endList strong.ico_pay {justify-content:flex-end;}
+.card_breakdown > em:before, .paymn_endList strong:before {content:''; display:inline-block;margin-right:5px;}
+.card_breakdown em.ico_samsung:before, .paymn_endList strong.ico_samsung:before {width:84px; height:12px; background:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/ico_samsung_pay.png) no-repeat 0 0 / 84px 12px}
+.card_breakdown em.ico_payco:before, .paymn_endList strong.ico_payco:before {width:48px; height:11px; background:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/ico_payco.png) no-repeat 0 0 / 48px 11px}
+/* // 20180601 간편결제 모듈추가-삼성페이제거 : 추가 */
+
+.card_breakdown strong {font-size:1.2rem}
+.card_breakdown strong > span {color:#666;font-weight:normal;display:inline-block}
+.card_breakdown b {display:block;font-size:1.2rem}
+.card_breakdown b span {color:#666;font-weight:normal}
+.cash_day {margin-top:5px;color:#888;font-size:1.2rem}
+
+.reserv_end {padding:30px 15px}
+.reserv_end02 {padding:30px 15px 0; border-bottom:1px solid #e0e0e0}
+.reserv_cancle {padding:15px; border-bottom:1px solid #e8e8e8}
+.reserv_fail {padding-bottom:30px}
+.txt_reserv_fail { color:#666; text-align:center; margin-bottom:30px}
+.tit_reserv_end {background:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/bg_reserv_end.png) no-repeat center 0 / 165px 80px; font-size:2.0rem; text-align:center; padding:95px 0 30px}
+.tit_reserv_cancle {background:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/bg_reserv_cancle.png) no-repeat center 0 / 80px 80px; font-size:2.0rem; text-align:center; padding:95px 0 15px; margin-top:30px}
+.tit_reserv_fail {background:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/bg_reserv_fail.png) no-repeat center 50px / 80px 80px; font-size:2.0rem; text-align:center; padding:145px 0 30px}
+
+/* 버튼 */
+.btmBtnBox {display:table;width:100%; position:fixed; left:0;bottom:0;z-index:10} /* 20180702 수정 */
+.btmBtnBox.static {position:static;}
+.btmBtnBox a {display:table-cell;color:#fff;font-size:1.7rem;text-align:center; vertical-align:middle;padding:17px 0;font-weight:bold}  /* 20180416 예약결제 고도화 : 수정 */
+.btmBtnBox a.basket {width:40%; background-color:#e15e86}
+.btmBtnBox a.reserv {width:60%; background-color:#c83d67}
+.btmBtnBox a.cancel {width:40%; background-color:#8f94a4}
+/* 20180416 예약결제 고도화 : 추가 */
+.btmBtnBox.static.withPad {box-sizing:border-box;width:calc(100% - 30px);margin:15px 15px 25px;background-color:transparent;}
+.btmBtnBox.static.withPad a {display:inline-block;width:50%;padding:10px 0;border-radius:3px;}
+.btmBtnBox.static.withPad a + a {width:calc(50% - 5px);margin-left:5px;}
+/* // 20180416 예약결제 고도화 : 추가 */
+
+.btn_write {display:block; padding:15px 0 30px; text-align:center}
+.btn_write:before {content:''; display:inline-block;width:30px;height:30px;background:url(http://image1.hanatour.com/mobile/common/hanatour/fnd/btn_write.png) no-repeat 0 0;background-size:30px 30px; margin-right:10px}
+.btn_write span {position:relative; top:-10px}
+
+.btnDelInputCell {position:absolute;right:0;top:0;width:50px;height:100%;}
+.btnDelInputCell:before {content:'';width:20px;height:20px;position:absolute;left:50%;top:50%;transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);-o-transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);box-sizing:border-box;border:1px solid #e0e0e0;border-radius:2px;}
+.btnDelInputCell:after {content:'';width:8px;height:2px;position:absolute;left:50%;top:50%;transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);-o-transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);background-color:#666}
+
+.btn_toggle {position:absolute;right:0;top:0;width:45px;height:100%;background:url(http://image1.hanatour.com/mobile/common/hanatour/fnd/btn_toggle.png) no-repeat center center / 16px 9px;opacity:0.8}
+.btn_toggle.on {-webkit-transform:rotate(-180deg);transform:rotate(-180deg); opacity:1}
+.btn_toggle.on+.inRig, .btn_toggle.on + h4 .inRig {display:none} /* 20180416 예약결제 고도화 : 수정 */
+
+.miniBtn02 {position:relative;width:20px; height:20px; border:1px solid #c83d67; border-radius:2px; display:inline-block}
+.miniBtn02:before {content:''; position:absolute;left:0;top:50%;width:100%; height:5px; margin-top:-2px;background:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/ico_barr.png) no-repeat center 0 / 9px 5px}
+.miniBtn02.on {-webkit-transform:rotate(-180deg);transform:rotate(-180deg);}
+
+.sbtn_left {display:inline-block; border:1px solid #ccc; border-radius:3px; padding:7px 12px; margin:10px 0 0}
+.sbtn_left.complete {border-color:#333; color:#333}
+.sbtn_left:disabled { color:#ccc; background-color:#f7f7f7;border-color:#e8e8e8}
+
+.btn_titRig {width:62px;background-color:#fff;border:1px solid #ccc;font-size:1.3rem;padding:5px 2px; border-radius:2px; position:absolute;right:15px; top:50%;transform:translate(0, -50%);-webkit-transform:translate(0, -50%); font-weight:normal;box-sizing:border-box; text-align:center}
+.btn_titRig+.btn_titRig {right:82px}
+.btn_titRig.redTy {border-color:#c83d67; color:#c83d67}
+.btn_change {display:block; text-align:center; padding:20px 0;border-top:1px dashed #ccc}
+.btn_change:before {content:'';display:inline-block;width:20px;height:20px;background:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/btn_change_gray.png) no-repeat 0 0 / 20px 20px; margin-right:5px}
+.btn_change span {position:relative; top:-4px}
+.btn_redLine {text-align:center; padding-top:20px}
+.btn_redLine a {display:inline-block;border:1px solid #c83d67; color:#c83d67; font-size:1.5rem; padding:11px 0 10px; border-radius:3px;width:162px} /* 20180416 예약결제 고도화 : 수정 */
+.btn_redLine.twoType {overflow:hidden}
+.btn_redLine.twoType a {float:left;width:48%;}
+.btn_redLine.twoType a+a {float:right}
+
+.btn_terms {display:block;width:100%; background-color:#888; border:1px solid #888; text-align:center; font-size:1.7rem;color:#fff; padding:11px 0; border-radius:3px;font-weight:bold; margin:8px 0 0;}
+.btn_terms.on {background-color:#c83d67; border-color:#c83d67}
+
+/* 공통 풀 팝업 */
+.fullPopCommon .header {position:fixed; width:100%; left:0;top:0; z-index:1}
+.fullPopCommon .header h3 {background-color:#6d7588; position:relative; color:#fff; height:48px; padding:15px 0 0 12px; font-size:18px; box-sizing:border-box}
+.fullPopCommon .header h3 .closeOverlayPanel {position:absolute; right:0;top:0;background:url(http://image1.hanatour.com/mobile/common/schedule/btn_close01.png) no-repeat center center; background-size:19px 19px; width:50px; height:48px; padding:16px 12px; box-sizing:border-box}
+.fullPopCommon .innerScroller {-webkit-overflow-scrolling: touch;width: 100%; height: 100%;overflow-y:auto; margin-top:48px}
+.pop_innerComm {padding:15px 15px 30px}
+.pop_innerComm.sidePadNo {padding:0 0 30px}
+.pop_innerComm .m_btnRed.short {width:55%; margin:0 auto; padding:11px 10px}
+.pop_innerComm .sideNoneBox {margin:0 -15px}
+.fullPopCommon sup {font-weight:normal; vertical-align:top; position:relative;top:-2px}
+
+.peoplePop {margin:-10px 0 15px}
+.peoplePop li {display:table;width:100%;border-bottom:1px solid #dcdcdc; height:62px}
+.peoplePop li > * {display:table-cell;vertical-align:middle}
+.peoplePop li em {width:55%;font-size:1.4rem}
+.peoplePop li em span {font-size:1.2rem;color:#888;display:inline-block; margin-left:3px}
+.peoplePop + .ico_qtxt.red {margin-bottom:30px;} /* 20180314 예약 인원선택 버튼위치 수정 : 추가 */
+.peoplePop .ppSelect {width:45%; text-align:right;box-sizing:border-box;padding-right:5px}
+.peoplePop .ppSelect strong {vertical-align:35%;display:inline-block;padding:0 20px;width: 55px;box-sizing: border-box; text-align:center}
+.peoplePop .ppSelect button {border:1px solid #c83d67; border-radius:2px;width:30px; height:30px; background:#fff no-repeat 50% 50% / 11px 11px;}
+.peoplePop .ppSelect .plus {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/fnd/btn_plus.png)}
+.peoplePop .ppSelect .minus {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/fnd/btn_minus.png)}
+
+.ageDivision {margin:30px 0}
+.ageDivision dt {font-size:1.4rem; font-weight:bold; margin-bottom:10px}
+.ageDivision dd li {position:relative; color:#676767; padding-left:8px;margin-bottom:10px}
+.ageDivision dd li:before {content:'';width:3px; height:3px; border-radius:50%; background-color:#767676; position:absolute;left:0;top:6px}
+.ageDivision dd li span {color:#333}
+.ageDivision dd li em {padding-left:40px; display:block}
+.ageDivision dd:last-child {color:#666; font-size:1.2rem}
+
+.helperPop {padding:0 0 20px}
+.helperPop p {margin-bottom:10px}
+.addressPop {padding:0 0 20px}
+.addressPop p {color:#888;font-size:1.2rem; margin-top:8px}
+.city_select {overflow:hidden;margin:0 0 5px;}
+.city_select select {width:49%;float:left; height:40px}
+.city_select select+select {float:right}
+.city_input {position:relative}
+.city_input input {height:40px;padding-right:44px}
+.city_input button {width:100%;background-color:#c83d67; border:1px solid #c83d67;font-size:1.5rem; color:#fff;border-radius:3px;font-weight:bold; margin:8px 0 10px; height:44px}
+.city_input button:before {content:'검색'}
+
+.stitSearch {background:#dbdce1; padding:15px 15px 10px;border-top:1px solid #ccc; font-weight:normal}
+.searchNonePop {margin-top:60px; padding:85px 0;background:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/bg_search_none.png) no-repeat center top / 70px 70px; text-align:center; font-size:1.6rem; position:relative}
+.searchNonePop:before {content:''; position:absolute;left:0;top:-60px;width:100%; height:10px; border-top:1px solid #ccc; background:#dbdce1}
+.helper_addressList {background-color:#dbdce1}
+.helper_addressList li {border-bottom:1px solid #ccc; margin-bottom:5px}
+.helper_addressList .linkAddress {display:block; border-bottom:1px solid #e0e0e0; padding:12px 15px 20px; background-color:#fff}
+.helper_addressList .linkAddress strong {font-size:1.4rem}
+.helper_addressList .linkAddress strong b {color:#c83d67; font-size:1.1rem; display:inline-block; margin-left:6px}
+.helper_addressList .linkAddress strong b:before {content:'';width:11px; height:16px; display:inline-block;background:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/ico_ranking.png) no-repeat 0 0 / 11px 16px; margin-right:2px; margin-bottom:-2px}
+.helper_addressList .linkAddress em {color:#666;display:block; margin-top:8px}
+.helper_addressList .btnAddress {overflow:hidden;background-color:#f7f7f7; display:table;width:100%}
+.helper_addressList .btnAddress > * {text-align:center; height:34px; display:table-cell; vertical-align:middle}
+.helper_addressList .btnAddress .tel {width:50%;box-sizing:border-box; border-right:1px solid #e0e0e0}
+.helper_addressList .btnAddress .tel:before {content:'';width:12px; height:12px; display:inline-block;background:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/ico_tel.png) no-repeat 0 0 / 12px 12px; margin-right:5px}
+.helper_addressList .btnAddress .mapToggle {width:100%}
+.helper_addressList .btnAddress .mapToggle:before {content:'';width:12px; height:16px; display:inline-block;background:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/ico_map.png) no-repeat 0 0 / 12px 16px; margin-right:5px; margin-bottom:-2px}
+.helper_addressList .btnAddress .mapToggle:after {content:'';width:12px; height:7px;display:inline-block;background:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/btn_map_toggle.png) no-repeat 0 0 / 12px 14px; margin-left:4px; margin-bottom:2px}
+.helper_addressList .btnAddress .mapToggle.on {color:#c83d67}
+.helper_addressList .btnAddress .mapToggle.on:after { background-position:0 -7px}
+.helper_addressList .map_loaction {position:relative; height:160px; overflow:hidden;border-top:1px solid #ccc}
+.helper_addressList .map_loaction .in_icon {position:absolute; left:50%;top:50%}
+.helper_addressList .map_loaction .in_icon img {width:25px}
+
+.pop_addressList {background-color:#dbdce1}
+.pop_addressList li {margin-bottom:5px; background:#fff; display:table;width:100%; min-height:60px}
+.pop_addressList li a {display:table-cell; padding:10px 80px 10px 15px;border-bottom:1px solid #ccc; position:relative;vertical-align:middle}
+.pop_addressList li a em {}
+.pop_addressList li a span { position:absolute;right:15px;top:50%;transform:translate(0, -50%);-webkit-transform:translate(0, -50%); color:#888}
+
+.hanaMilePop {padding-bottom:30px}
+.hanaMilePop dt {font-size:1.4rem; font-weight:bold; margin-bottom:8px}
+.hanaMilePop dd {color:#666; position:relative;padding-left:8px; margin-bottom:10px}
+.hanaMilePop dd:before {content:'';width:3px; height:3px; border-radius:50%; background-color:#767676; position:absolute;left:0;top:6px}
+.hanaMilePop02 {padding-bottom:30px}
+.hanaMilePop02 dt {font-size:1.4rem; font-weight:bold; margin-bottom:8px}
+.hanaMilePop02 dd {color:#666;margin-bottom:10px}
+.hanaMilePop02 dd strong {color:#666}
+.hanaMilePop02 dd strong .stitBtn {font-weight:normal; margin-left:10px}
+.hanaMilePop02 dd p {margin-top:4px; color:#666}
+.hanaMilePop dd:last-child,.hanaMilePop02 dd:last-child {margin-bottom:0}
+.hanaMilePop03 {padding-bottom:30px}
+.hanaMilePop03 dt {font-size:1.4rem; font-weight:bold; margin-bottom:8px}
+.hanaMilePop03 dd span {color:#666; font-size:1.2rem; display:block}
+.hanaMilePop03 dd span:first-child {margin-top:6px}
+.hanaMilePop03 dd span a {color:#666}
+
+.contractSection {}
+.contractSection .smGray { font-size:1.2rem; color:#888}
+.contractSection p.smGray {margin-top:4px}
+.contractTop {padding:0 15px 20px;border-bottom:1px solid #333}
+.contractTop .topTxt {font-size:1.2rem; color:#e45b85; background-color:#fdf2f5;border-bottom:1px solid #fadce6; padding:10px 15px; margin:0 -15px}
+.contractTop h4 {text-align:center;font-size:1.8rem; padding:25px 0 15px}
+.contractTop .midTxt {color:#666;margin-bottom:20px}
+.contractTop div strong {display:block}
+.contractTop div strong span {color:#c83d67;display:inline-block; margin-left:10px}
+.contractTop div strong+strong {margin-top:10px}
+.contractTop div strong+strong span { color:#5e9acd}
+.contract_dList {}
+.contract_dList dt {background-color:#f7f7f7; font-size:1.2rem; color:#888; padding:7px 15px; font-weight:bold}
+.contract_dList dd {padding:10px 15px 15px; position:relative}
+.contract_dList dd .btnBox {position:relative;padding-right:110px}
+.contract_dList dd .insur_img {overflow-y:scroll; height:338px;-webkit-overflow-scrolling: touch; margin:15px -15px 0}
+.contract_dList dd .insur_img img {width:100%}
+.contract_dList dd .btn_titRig {width:auto;padding:5px 10px;right:0}
+.contract_dList dd button.btn_titRig:after {content:'';width:12px; height:7px;display:inline-block;background:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/btn_map_toggle.png) no-repeat 0 0 / 12px 14px; margin-left:4px}
+.contract_dList dd button.btn_titRig.on {color:#c83d67}
+.contract_dList dd button.btn_titRig.on:after { background-position:0 -7px}
+.contract_dList dd a.btn_titRig {right:15px}
+.contract_dList dd .contr_mn {font-size:1.5rem; margin-bottom:15px; display:block}
+.contract_dList dd .contr_mn_list li { color:#666; line-height:1.9rem}
+
+.contract_uList {overflow:hidden}
+.contract_uList li {float:left;width:50%}
+.contract_uList li:nth-child(even) {border-left:1px solid #fff; box-sizing:border-box}
+.contract_uList li strong {background:#f7f7f7; display:block; font-size:1.2rem; color:#888; padding:7px 15px}
+.contract_uList li em {padding:10px 15px 15px; display:block}
+
+.btm_pTxtBox {padding:15px 15px 20px; border-bottom:1px solid #ccc}
+.btm_pTxtBox p { line-height:1.7rem}
+.btm_pTxtBox p+p {margin-top:12px !important}
+.btm_pTxtBox .textLink {color:#5e9acd; text-decoration:underline}
+.btm_pTxtBox i {color:#0e9acd; font-style:normal}
+
+.contract_dList02 {padding:20px 15px 30px}
+.contract_dList02 dt {font-weight:bold; margin-bottom:10px}
+.contract_dList02 dt+dd+dt {margin-top:30px}
+.contract_dList02 dd {}
+.contract_dList02 dd li {position:relative; padding-left:65px; min-height:18px}
+.contract_dList02 dd li+li {margin-top:8px}
+.contract_dList02 dd li em {position:absolute;left:0;top:0; color:#888}
+
+.rentalPop {border-top:1px solid #ccc;margin-bottom:30px}
+.rentalPop th {border-bottom:1px solid #ccc;font-size:1.2rem;background-color:#f7f7f7}
+.rentalPop thead th {padding:5px 0}
+.rentalPop thead th:first-child { background-color:#efefef}
+.rentalPop tbody th {color:#666; font-weight:normal;}
+.rentalPop tbody th.bdLeft {border-left:1px solid #ccc}
+.rentalPop tbody td {font-size:1.1rem; padding:15px 0; border-bottom:1px solid #ccc; text-align:center}
+
+.carPopBene {margin-bottom:30px}
+.carPopBene .table_cardBene {width:100%; margin-bottom:30px}
+.carPopBene .table_cardBene thead th {background-color:#f7f7f7; padding:8px; font-size:1.2rem; border:1px solid #e0e0e0}
+.carPopBene .table_cardBene tbody td {text-align:center; font-size:1.1rem;border:1px solid #e0e0e0; padding:5px 0}
+.carPopBene .table_cardBene tbody td.logo img {height:30px}
+.carPopBene .table_cardBene thead th:first-child,.table_cardBene tbody td:first-child {border-left:none}
+.carPopBene .table_cardBene thead th:last-child,.table_cardBene tbody td:last-child {border-right:none}
+.carPopBene .attention {border-top:1px solid #ccc; margin:0 -12px;}
+.carPopBene .attention dt { background-color:#f7f7f7;}
+.carPopBene .attention dt a {display:block; padding:12px 0 12px 22px; margin:0 12px; position:relative; font-weight:bold;background:url(http://image1.hanatour.com/mobile/common/ico_aco_after.png) no-repeat 0 center;background-size:18px 18px}
+.pop_cplistBox .listTop {background:#f7f7f7 url(http://image1.hanatour.com/mobile/common/smc/bg_smc_dot.png) repeat-x 0 0;background-size:5px 1px;}
+.carPopBene .attention dd {padding:12px}
+.carPopBene .attention dd li {font-size:1.3rem; position:relative; padding-left:7px}
+.carPopBene .attention dd li+li {margin-top:5px}
+.carPopBene .attention dd li.c_red {color:#c83d67}
+.carPopBene .attention dd li:before { content:'';width:2px; height:2px; background-color:#333; position:absolute;left:0;top:6px}
+.carPopBene .attention dd li.c_red:before {background-color:#c83d67}
+.carPopBene .cardSectCont { padding:25px 0}
+.carPopBene .cardSectCont+.cardSectCont {border-top:1px solid #ccc}
+.carPopBene .cardSectCont .img { display:block; text-align:center; margin-bottom:18px}
+.carPopBene .cardSectCont .img img {width:120px}
+.carPopBene .cardSectCont strong {display:block;}
+.carPopBene .cardSectCont strong a { font-weight:normal}
+.carPopBene .cardSectCont ul {margin-top:8px}
+.carPopBene .cardSectCont ul li {font-size:1.3rem; position:relative; padding-left:7px}
+.carPopBene .cardSectCont ul li+li {margin-top:5px}
+.carPopBene .cardSectCont ul li:before { content:'';width:2px; height:2px; background-color:#333; position:absolute;left:0;top:6px}
+.carPopBene .allianceList {}
+.carPopBene .allianceList li {display:table;width:100%;  box-sizing:border-box; margin-bottom:10px}
+.carPopBene .allianceList li span {display:table-cell;width:75%;text-align:center;vertical-align:middle;border:1px solid #ddd;border-right:none}
+.carPopBene .allianceList li span img { height:80px}
+.carPopBene .allianceList li a {display:table-cell;width:25%;text-align:center;vertical-align:middle; font-size:1.1rem; color:#e45b85;position:relative; border:1px solid #ddd; border-left:none}
+.carPopBene .allianceList li a:before {content:''; display:block;width:100%; margin-bottom:5px; height:19px; background:url(http://image1.hanatour.com/mobile/common/ico_cp_rarr.png) no-repeat center 0;background-size:19px 19px; }
+.carPopBene .allianceList li a:after {content:''; position:absolute;left:0;top:-1px; height:100%;width:10px;background:url(http://image1.hanatour.com/mobile/common/bg_cp_line.png) no-repeat 0 0;background-size:10px 100%; padding:1px 0}
+
+/* 20180416 예약결제 고도화 : 수정 */
+.okcash_inp {padding:15px 15px 30px}
+.okcash_inp h4 {font-size:1.4rem; font-weight:normal; margin-bottom:8px}
+.okcash_inp .ok_cardNum {width:100%;margin-bottom:15px;overflow-y:auto;/* 일부 아이폰8에서 화면백지화되는 이슈있어 overflow-y 지정해둠 */}
+.okcash_inp .ok_cardNum:after {display:block;clear:both;content:'';}
+.okcash_inp .ok_cardNum > div {float:left;width:23.5%;padding-right:2%;}
+.okcash_inp .ok_cardNum > div:last-child {padding-right:0;}
+.okcash_inp .ok_cardPw {overflow-y:auto;padding-right:100px; margin-bottom:20px} /* 20180720 간편결제추가수정 */
+.okcash_inp .inputTxt {height:40px}
+.okcash_inp dl {margin-bottom:20px}
+.okcash_inp dl dt {margin-bottom:8px; color:#666}
+.okcash_inp dl dd {border:1px solid #ccc;background-color:#f7f7f7; padding:7px 15px; height:170px; overflow-y:scroll;-webkit-overflow-scrolling: touch;}
+/* // 20180416 예약결제 고도화 : 수정 */
+
+.hanaGiftPop dt {font-weight:bold; font-size:1.4rem; margin-bottom:15px}
+.hanaGiftPop ol {margin:10px 0 15px; overflow:hidden}
+.hanaGiftPop ol li { position:relative; padding-left:20px}
+.hanaGiftPop ol li+li {margin-top:10px}
+.hanaGiftPop ol li strong {width:16px;height:16px; position:absolute;left:0;top:2px;border-radius:50%; background-color:#c83d67; color:#fff; font-size:11px; text-align:center; box-sizing:border-box; padding-top:1px}
+.hanaGiftPop ol.typeLeft {margin-bottom:30px}
+.hanaGiftPop ol.typeLeft li {float:left;}
+.hanaGiftPop ol.typeLeft li+li {margin:0 0 0 20px}
+.hanaGiftPop02 {padding-bottom:30px}
+.hanaGiftPop02 dt {background:url(http://image1.hanatour.com/mobile/common/hotel/ico_txt_point.png) no-repeat 0 center / 13px 13px;color:#888; padding-left:18px; color:#c83d67; margin-bottom:10px}
+.hanaGiftPop02 dd {color:#666; position:relative;padding-left:8px; margin-bottom:4px; font-size:1.2rem}
+.hanaGiftPop02 dd:before {content:'';width:3px; height:3px; border-radius:50%; background-color:#767676; position:absolute;left:0;top:6px}
+
+.tourloanCont > p {margin:0 0 4px; color:#666;}
+.tourloanCont > strong {font-weight:normal;font-size:1.4rem}
+.tourloanCont .tourloanTable {padding-top:20px}
+.tourloanCont .tourloanTable h4 {margin:0;font-size:1.5rem;font-weight:normal}
+.tourloanCont .tourloanTable table {width:100%;text-align:center;border-spacing:0;border-collapse:collapse;margin-top:10px;border-bottom:1px solid #ccc; margin-bottom:15px}
+.tourloanCont .tourloanTable table th {background-color:#f7f7f7;padding:10px 0; border-top:1px solid #ccc}
+.tourloanCont .tourloanTable table td {color:#666;padding:10px 0;border-top:1px solid #ccc}
+.tourloanCont .btnTwoBox {margin:0;}
+.tourloanCont .btnTwoBox a {margin-bottom:0}
+.tourloanCont dl dt {margin:20px 0 10px;font-weight:bold}
+.tourloanCont dl dt.telTit {color:#c83d67;background:url(http://image1.hanatour.com/mobile/common/comm/bg_tourtel.png) no-repeat 0 center; padding-left:18px; background-size:14px}
+.tourloanCont dl dd {margin:0 0 8px; color:#666;font-size:1.2rem; position:relative; padding-left:8px; line-height:15px}
+.tourloanCont dl dd:before {content:'';width:3px; height:3px; border-radius:50%; background-color:#666; position:absolute;left:0;top:6px}
+
+/* 공통 미니버튼, 팝업 */
+.cm_miniBtn:before {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/ico_question_mark.png)}
+.cm_miniPop_cont .cm_miniClose {background-image:url(http://image1.hanatour.com/mobile/common/schedule/btn_qnapop_close.png)}
+.selectBox {background-image:url(http://image1.hanatour.com/mobile/common/bg_select_rpad.png)}
+input[type='checkbox'].redCheck:checked {background-image:url(http://image1.hanatour.com/mobile/common/idpw/bg_check_on.png)}
+.crack {height:10px;border-top:1px solid #ccc; background-color:#dbdce1; margin:0 -15px; box-sizing:border-box}
+.terms_strong,.terms_strong_all * {font-size:1.4rem !important; font-weight:bold !important}
+.cm_miniPop_cont ul li {color:#666}
+
+.terms_scrollBox {overflow-y:scroll; height:130px;-webkit-overflow-scrolling: touch; padding:15px; box-sizing:border-box; border:1px solid #ccc; margin-bottom:20px}
+.terms_scrollBox dt {margin-bottom:5px;font-weight:bold;color:#666; font-size:1.2rem;}
+.terms_scrollBox dd {font-size:1.2rem;margin-bottom:8px;color:#666}
+.terms_scrollBox dd * {font-size:1.2rem;color:#666}
+.terms_scrollBox dd p {margin-bottom:3px}
+.checkLabel {display:inline-block; margin:20px 0 5px}
+.cm_miniPop_cont ul li {color:#666}
+/* 20180416 예약결제 고도화 : 추가 */
+.paymn_endList .cm_miniPop_cont {left:auto;right:0;max-width:300px;transform:translate(0,0);text-align:left;}
+.paymn_endList .cm_miniPop_cont p + b {display:block;margin-top:10px;}
+/* 공통 인풋값 삭제버튼 */
+.inputDelBtn {position:absolute;right:0;top:0;width:35px; height:100%; background:url(http://image1.hanatour.com/mobile/common/member/ico_searbtn.png) no-repeat center center; background-size:16px 16px}
+.ico_ip .inputDelBtn {right:20px;}
+/* // 20180416 예약결제 고도화 : 추가 */
+
+/* 20180514 포켓와이파이 추가 */
+.pkUsimCont {text-align:center}
+.pkUsimCont > p {text-align:left; font-size:1.4rem; margin-bottom:25px}
+.pkUsimCont ul {margin-bottom:20px}
+.pkUsimCont ul li {display:table;width:100%;text-align:left; background:no-repeat 0 0 / 52px 52px;padding-left:72px;box-sizing:border-box}
+.pkUsimCont ul li.ico_wifi {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/ico_reservend_poket.png)}
+.pkUsimCont ul li.ico_usim {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/reservation/ico_reservend_usim.png)}
+.pkUsimCont ul li+li {margin-top:20px}
+.pkUsimCont ul li p {display:table-cell;vertical-align:middle;height:52px; color:#666; font-size:1.3rem;}
+.pkUsimCont ul li em {color:#333; display:block}
+.pkUsimCont a {display:inline-block; border-radius:2px; border:1px solid #c83d67; color:#c83d67; font-size:1.5rem; padding:10px 14px}
+
+/* 20180702 촬영버튼 추가 */
+.right_Scanner {padding-right:110px; position:relative}
+.right_Scanner .btnScan {position:absolute;width:100px; right:0;top:0; color:#c83d67; border:1px solid #c83d67; border-radius:3px; height:40px; font-size:0; text-indent:-9999px; outline:none; box-sizing:border-box; cursor:pointer}
+.right_Scanner .btnScan:after {content:'촬영하기'; display:block; position:absolute;left:0;top:0; color:#c83d67; font-size:15px;text-indent:0; text-align:center;height:100%; width:100%; padding-top:10px; box-sizing:border-box; background-color:#fff; border-radius:3px; z-index:1}
+
+/* 20180906 특별약관 부분 추가 */
+.termsCheckLink {display:block; padding-bottom:12px; font-size:1.4rem; position:relative}
+.termsCheckLink:before {content:'';position:absolute; position:absolute;left:-3px;top:-5px; width:30px; height:30px; z-index:1}
+.termsCheckLink input {margin-top:-4px}
+.in_termsCheckLink {display:table-cell;width:100%;padding:3px 45px 0; color:#333; position:relative; height:50px; box-sizing:border-box;  vertical-align:middle; font-weight:bold; font-size:1.4rem}
+.in_termsCheckLink:before {content:'';position:absolute; position:absolute;left:12px;top:10px; width:30px; height:30px; z-index:1}
+.in_termsCheckLink input {position:absolute;left:15px;top:50%; margin-top:-11px}
+.terms_strongCont strong {display:block; margin-bottom:8px}
+.terms_strongCont strong:last-child {margin-bottom:0}
+.pop_termsListCont {margin-top:20px; border-top:1px solid #e0e0e0}
+.pop_termsListCont dt {font-size:1.6rem; font-weight:bold; margin:30px 0 15px}
+.pop_termsListCont dt:first-child {margin-top:20px}
+.pop_termsListCont .comBulTxt {padding:0}
+.pop_termsListCont .comBulTxt li {color:#333;}
+.pop_termsListCont .comBulTxt li+li {margin-top:12px}
+.pop_termsListCont .terms_strongCont {padding:20px 0}
+.checkBtnBox {margin:30px 0 0}
+.checkBtnBox label {display:block; text-align:center; position:relative;cursor:pointer}
+.checkBtnBox label+label {margin-top:10px}
+.checkBtnBox label input {border:1px solid #ccc; display:block;width:100%; height:48px; border-radius:3px; background-color:#fff;cursor:pointer}
+.checkBtnBox label input:checked {border-color:#c83d67}
+.checkBtnBox label span {position:absolute;left:0;top:50%;transform:translate(0, -50%);-webkit-transform:translate(0, -50%);width:100%; font-size:1.5rem}
+.checkBtnBox label span:before {content:''; display:inline-block;width:17px; height:16px;background:url(http://image1.hanatour.com/mobile/common/member/ico_pop_btn_check.png) no-repeat 0 0 / 34px 16px; margin:0 10px -3px 0}
+.checkBtnBox label input:checked+span {color:#c83d67}
+.checkBtnBox label input:checked+span:before { background-position:-17px 0}
+
+/*20180928 여행자계약서 우수여행마크추가 : 추가*/
+.contractBestLogoDesc {margin-top:20px;font-size: 1.3rem;}
+.contractBestLogoDesc img {width:16px;}
+.contract_dList .contractBestLogo {display:flex;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;-webkit-box-align: center;-ms-flex-align: center;-webkit-align-items:flex-start;align-items: center;min-height:33px;padding-left:55px;background: url(http://image1.hanatour.com/etc/bestlogo_5.jpg) 15px 10px / 33px 33px no-repeat;}
+/* // 20180928 여행자계약서 우수여행마크추가 : 추가*/
+
+/* 20181120 여행자계약서 스타일변경 팝업추가 */
+#overlayPanel.innerType {position:fixed;left:0;top:0;height:100% !important;min-height:100%;background: rgba(0,0,0,0.5);overflow: visible;overflow-x: hidden;z-index: 999;overflow-y: auto;padding:45px 15px;box-sizing: border-box;}
+#overlayPanel.innerType .fullPopCommon {background:#fff; height:100%; padding:48px 0 0; box-sizing:border-box}
+#overlayPanel.innerType .fullPopCommon .header {padding:45px 15px; box-sizing:border-box}
+#overlayPanel.innerType .fullPopCommon .innerScroller {margin-top:0}
+#overlayPanel.innerType .pop_innerComm.sidePadNo {padding-bottom:45px}
+#overlayPanel.innerType .btmFixed_btn {position:fixed; left:0;bottom:45px;width:100%; padding:0 15px; box-sizing:border-box;z-index:1}
+#overlayPanel.innerType .btmFixed_btn .m_btnRed.short {width:100%; box-sizing:border-box; border-radius:0; margin:0}

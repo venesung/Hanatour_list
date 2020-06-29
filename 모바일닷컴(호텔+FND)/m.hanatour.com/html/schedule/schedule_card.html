@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>일정표 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/sub.css">
+<link rel="stylesheet" type="text/css" href="../css/schedule.css"><!-- 일정표 추가 -->
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-2.1.3.min.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common_new.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/swiper.min.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-ui-custom.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/hanatour/ht.calendar.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/pack/schedule.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		//아래서 올라오는 팝업 띄우면 <div id="overlayPanel" 가 생성되고 그 div 에 'open.loadpop' 을 trigger 시키니 아래처럼 받아 data.url 로 구별 하시면 됩니다.
+		//닫을때 필요하시면 'close.loadpop' 로 받으시면 됩니다.
+		$('body').on('open.loadpop', '#overlayPanel', function (e, data) {
+			console.log(data);
+		});
+	});
+</script>
+</head>
+
+<body>
+
+<div id="wrap">
+	
+	
+	<!-- 컨텐츠 영역 -->
+	<div id="container">
+		
+		<!-- 일정표 개편 start -->
+		<div class="scheduleBox">
+			
+			<!-- 하단 탭영역 -->
+			<div class="scheduleTabSect">
+				
+				<!-- 일정 -->
+				<div class="sche_tabCont" style="display:no ne">
+					
+					<dl class="scDayList">
+						<dt class="open"><a href="#none" data-role="none"><strong>1일차</strong><span>2015.10.03(토)</span></a></dt><!-- class="open" 추가시 dd block 처리되있음 :: 2일차 이상일경우 class="twoDays" 추가 -->
+						<dd>
+							
+							<ul class="detailTxt">
+								
+								<!-- 복수 이미지의 경우 -->
+								<li>
+									<div class="de_inBox02">
+										<div class="imgCell">
+											<span class="img"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+											<span class="binCell"></span><!-- 빈영역 -->
+											<span class="img"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+											<span class="binCell"></span><!-- 빈영역 -->
+											<span class="img"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+										</div>
+										<a href="pop_sc_travel.html" class="imgCellTxt popUpFull" data-role="none">
+											<strong>파라세일링 &amp; 제트스키</strong>
+											<b>에메랄드 빛 바다와 천혜의 모래 해변</b>
+											<span>소요시간 : 약 3시간</span>
+										</a>
+									</div>
+								</li>
+								<!-- // 복수 이미지의 경우 -->
+								
+								<li>
+									<div class="de_inBox02">
+										<a href="pop_sc_travel.html" class="popUpFull" data-role="none">
+											<span class="sc_imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+											<p>
+												<strong >아시아티크</strong>
+												<b>강변을 따라 조성된 새로운 야시장</b>
+												<span>관광시간 : 약 30분</span>
+											</p>
+										</a>
+										<!-- 하단문구 -->
+										<div class="btmTxtBox">
+											<strong class="c_red">하나투어 특전</strong>
+											<ul class="listNum">
+												<li>1. 운치있는 짜오프라야 강변에서의 자유 시간 즐기기</li>
+												<li>2. 맥주 또는 음료1병 제공</li>
+											</ul>
+										</div>
+										<!--//하단문구 -->
+									</div>
+								</li>
+								
+								<li>
+									<div class="de_inBox02">
+										<a href="pop_sc_travel.html" class="popUpFull" data-role="none">
+											<span class="sc_imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+											<p>
+												<strong>아시아티크</strong>
+												<b>강변을 따라 조성된 새로운 야시장</b>
+												<span>관광시간 : 약 30분</span>
+											</p>
+										</a>
+										<!-- 하단문구 -->
+										<div class="btmTxtBox">
+											<strong class="c_red">주의사항</strong>
+											<ul class="listNum">
+												<li>민소매,반바지,슬리퍼,찢어진 청바지 왕궁 입장 불가</li>
+											</ul>
+										</div>
+										<!--//하단문구 -->
+									</div>
+								</li>
+								<li>
+									<div class="de_inBox02">
+										<a href="pop_sc_travel.html" class="popUpFull" data-role="none">
+											<span class="sc_imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+											<p>
+												<strong>왕국</strong>
+												<b>장엄한 태국의 역사가 녹아 있는 방콕의 최대 관광지</b>
+												<span>관광시간 : 약 30분</span>
+											</p>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="de_inBox02">
+										<a href="pop_sc_travel.html" class="popUpFull" data-role="none">
+											<span class="sc_imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+											<p>
+												<strong>왓 아룬 (새벽사원)</strong>
+												<b>신비로운 새벽사원</b>
+												<span>관광시간 : 약 30분<em class="c_red">외관관광</em></span>
+											</p>
+										</a>
+									</div>
+								</li>
+								
+								<!-- 타이틀이 위에 있는 경우 -->
+								<li class="topStit">
+									<strong>중식 (선상 부페식)</strong>
+									<div class="de_inBox02">
+										<a href="pop_sc_travel.html" class="popUpFull" data-role="none">
+											<span class="sc_imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+											<p>
+												<strong>왓 아룬 (새벽사원)</strong>
+												<b>신비로운 새벽사원</b>
+												<span>관광시간 : 약 30분<em class="c_red">외관관광</em></span>
+											</p>
+										</a>
+									</div>
+								</li>
+								<!-- // 타이틀이 위에있는 경우 -->
+								
+								
+								<!-- 타이틀이 위에 있는 경우 -->
+								<li class="topStit">
+									<strong>석식 (스페셜 수끼)</strong>
+									<div class="de_inBox02">
+										<a href="pop_sc_travel.html" class="popUpFull" data-role="none">
+											<span class="sc_imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+											<p>
+												<strong>왓 아룬 (새벽사원)</strong>
+												<b>신비로운 새벽사원</b>
+											</p>
+										</a>
+									</div>
+								</li>
+								<!-- // 타이틀이 위에있는 경우 -->
+								
+								<!-- 묶음박스 class="bundleBox" 추가 -->
+								<li class="topStit bundleBox">
+									<strong>파타야를 대표하는 쇼 관람 (티파니쇼/알카자쇼/콜로세움 중 1)</strong>
+									
+									<div class="de_inBox02">
+										<a href="pop_sc_travel.html" class="popUpFull" data-role="none">
+											<span class="sc_imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+											<p>
+												<strong>왕국</strong>
+												<b>장엄한 태국의 역사가 녹아 있는 방콕의 최대 관광지</b>
+											</p>
+										</a>
+										<a href="pop_sc_travel.html" class="popUpFull" data-role="none">
+											<span class="sc_imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+											<p>
+												<strong>왕국</strong>
+												<b>장엄한 태국의 역사가 녹아 있는 방콕의 최대 관광지</b>
+											</p>
+										</a>
+										<a href="pop_sc_travel.html" class="popUpFull simple" data-role="none"><!-- 사진없는경우 class="simple" 추가 -->
+											<p>
+												<strong>왕국</strong>
+												<b>장엄한 태국의 역사가 녹아 있는 방콕의 최대 관광지</b>
+											</p>
+										</a>
+										<a href="pop_sc_travel.html" class="popUpFull last" data-role="none"><!-- 묶음박스 마지막 a태그에 last추가 -->
+											<span class="sc_imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+											<p>
+												<strong>왕국</strong>
+												<b>장엄한 태국의 역사가 녹아 있는 방콕의 최대 관광지</b>
+											</p>
+										</a>
+										<div class="btmTxtBox">
+											<strong class="c_red">총 소요시간</strong>
+											<ul class="listNum">
+												<li>약 3시간</li>
+											</ul>
+											<strong class="c_red">주의사항</strong>
+											<ul class="listNum">
+												<li>민소매, 반바지, 슬리퍼, 찢어진 청바지 왕궁 입장 불가</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<!-- // 묶음박스 -->
+								
+								<li>
+									<div class="de_inBox02">
+										<a href="pop_sc_travel.html" class="popUpFull" data-role="none">
+											<span class="sc_imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+											<p>
+												<strong >아시아티크</strong>
+												<b>강변을 따라 조성된 새로운 야시장</b>
+												<span>관광시간 : 약 30분</span>
+											</p>
+										</a>
+									</div>
+									
+								</li>
+								
+								<!-- 주의사항 -->
+								<li class="btmTxtBox02">
+									<strong class="c_red">주의사항</strong>
+									<ul class="listNum">
+										<li>하나투어 전용존 및 무료 열대과일+음료1병 제공</li>
+										<li>하나투어 전용존 및 무료 열대과일+음료1병 제공 함</li>
+									</ul>
+								</li>
+								<!--// 주의사항 -->
+								
+								<li class="topStit">
+									<strong>중식 (한아랑-스페셜 쌈밥 정식)</strong>
+									<div class="de_inBox02">
+										<a href="pop_sc_travel.html" class="popUpFull" data-role="none">
+											<span class="sc_imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+											<p>
+												<strong>한아랑</strong>
+												<b>태국식 샤브샤브</b>
+											</p>
+										</a>
+									</div>
+								</li>
+								<li class="onlyTxt">쇼핑센터 방문 (라텍스샵) [쇼핑시간 약 1시간]</li>
+								
+								<!-- 20160607 호텔특화카드 -->
+								<li class="hotelSpecial">
+									<div class="de_inBox02">
+										<strong>노보텔 방콕 수바납후미 에어포트 호텔</strong>
+										<p>NOVOTEL BANGKOK SUVARNABHUMI AIRPORT HOTEL</p>
+										
+										<!-- 호텔특화카드 스와이프 -->
+										<div class="swiper-container">
+											<a href="#none" class="big5_prev" data-role="none"></a>
+											<div class="swiper-wrapper">
+												<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia01.png" alt=""></div>
+												<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia02.png" alt=""></div>
+												<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia03.png" alt=""></div>
+												<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia04.png" alt=""></div>
+												<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia05.png" alt=""></div>
+											</div>
+											<div class="swiper-pagination" style="display:none"></div>
+											<div class="swiper-pag-num"><span>1</span> / 13</div>
+											<a href="#none" class="big5_next" data-role="none"></a>
+										</div>
+										<!-- //호텔특화카드 스와이프 -->
+										
+										<!-- 탭 없을경우 -->
+										<div class="hsBtmBox">
+											<strong class="stitHs">스탠다드 트윈 룸</strong>
+											<!-- 아코디언 -->
+											<div class="txtBox open"><!-- 펼칠경우 class="open" 추가 -->
+												<p>◈ 총 84객실, 오세아나A동 2~4층,오세아나B동 3~4층, 33m2<br>◈ 더블베드(140X190cm) 2개 오세아나A동, B동 저층에 위치한 객실입니다. 오세아나A동, B동 저층에 위치한 객실입니다.</p>
+												<ul>
+													<li><strong>연락처</strong><span>66-2-131-111</span></li>
+													<li><strong>주소</strong><span>New Road, Wat Phraya Krai, Bangkok 10120, Thailand</span></li>
+													<li><strong>체크인/<br>체크아웃</strong><span>체크인 : 1PM / 체크아웃 : 12N</span></li>
+													<li><strong>위치</strong><span>공항근처  Suvarnabhumi Airport 에서 걸어서 10분 가량 소요</span></li>
+												</ul>
+											</div>
+											<a href="#" data-role="none" class="hsBtn on">접기</a><!-- 펼쳐질경우 접기로 변경 + class="on" 추가 -->
+											<!-- // 아코디언 -->
+										</div>
+										
+										<div class="hsBtmBox">
+											<strong class="stitHs">스탠다드 트윈 룸</strong>
+											<!-- 아코디언 -->
+											<div class="txtBox"><!-- 펼칠경우 class="oepn" 추가 -->
+												<p>◈ 총 84객실, 오세아나A동 2~4층,오세아나B동 3~4층, 33m2<br>◈ 더블베드(140X190cm) 2개 오세아나A동, B동 저층에 위치한 객실입니다. 오세아나A동, B동 저층에 위치한 객실입니다.</p>	
+												<ul>
+													<li><strong>연락처</strong>66-2-131-111</li>
+													<li><strong>주소</strong>New Road, Wat Phraya Krai, Bangkok 10120, Thailand</li>
+													<li><strong>체크인/<br>체크아웃</strong>체크인 : 1PM / 체크아웃 : 12N</li>
+													<li><strong>위치</strong>공항근처  Suvarnabhumi Airport 에서 걸어서 10분 가량 소요</li>
+												</ul>
+											</div>
+											<a href="#" data-role="none" class="hsBtn">펼치기</a><!-- 펼쳐질경우 접기로 변경 + class="on" 추가 -->
+											<!-- // 아코디언 -->
+										</div>
+										<!-- // 탭 없을경우 -->
+										
+										<!-- 탭 있을경우 -->
+										<div class="hsTabSect">
+											<ul class="hsTab">
+												<li><a href="#" data-role="none">호텔 소개</a></li><!-- 선택시 class="on" -->
+												<li class="on"><a href="#" data-role="none">객실시설</a></li>
+												<li><a href="#" data-role="none">부대시설</a></li>
+											</ul>
+											
+											<!-- 호텔소개 -->
+											<div>
+												<div class="hsBtmBox">
+													<strong class="stitHs">스탠다드 트윈 룸</strong>
+													<!-- 아코디언 -->
+													<div class="txtBox"><!-- 펼칠경우 class="oepn" 추가 -->
+														<p>◈ 총 84객실, 오세아나A동 2~4층,오세아나B동 3~4층, 33m2<br>◈ 더블베드(140X190cm) 2개 오세아나A동, B동 저층에 위치한 객실입니다. 오세아나A동, B동 저층에 위치한 객실입니다.</p>
+														<ul>
+															<li><strong>연락처</strong><span>66-2-131-111</span></li>
+															<li><strong>주소</strong><span>New Road, Wat Phraya Krai, Bangkok 10120, Thailand</span></li>
+															<li><strong>체크인/<br>체크아웃</strong><span>체크인 : 1PM / 체크아웃 : 12N</span></li>
+															<li><strong>위치</strong><span>공항근처  Suvarnabhumi Airport 에서 걸어서 10분 가량 소요</span></li>
+														</ul>
+													</div>
+													<a href="#" data-role="none" class="hsBtn">펼치기</a><!-- 펼쳐질경우 접기로 변경 + class="on" 추가 -->
+													<!-- // 아코디언 -->
+												</div>
+												
+												<div class="hsBtmBox">
+													<strong class="stitHs">스탠다드 트윈 룸</strong>
+													<!-- 아코디언 -->
+													<div class="txtBox"><!-- 펼칠경우 class="oepn" 추가 -->
+														<p>◈ 총 84객실, 오세아나A동 2~4층,오세아나B동 3~4층, 33m2<br>◈ 더블베드(140X190cm) 2개 오세아나A동, B동 저층에 위치한 객실입니다. 오세아나A동, B동 저층에 위치한 객실입니다.</p>
+														<ul>
+															<li><strong>연락처</strong><span>66-2-131-111</span></li>
+															<li><strong>주소</strong><span>New Road, Wat Phraya Krai, Bangkok 10120, Thailand</span></li>
+															<li><strong>체크인/<br>체크아웃</strong><span>체크인 : 1PM / 체크아웃 : 12N</span></li>
+															<li><strong>위치</strong><span>공항근처  Suvarnabhumi Airport 에서 걸어서 10분 가량 소요</span></li>
+														</ul>
+													</div>
+													<a href="#" data-role="none" class="hsBtn">펼치기</a><!-- 펼쳐질경우 접기로 변경 + class="on" 추가 -->
+													<!-- // 아코디언 -->
+												</div>
+											</div>
+											<!-- // 호텔소개 -->
+											
+											<!-- 객실시설 -->
+											<div style="display:none">
+												<div class="hsBtmBox">
+													<strong class="stitHs">스탠다드 트윈 룸</strong>
+													<!-- 아코디언 -->
+													<div class="txtBox open"><!-- 펼칠경우 class="oepn" 추가 -->
+														<p>◈ 총 84객실, 오세아나A동 2~4층,오세아나B동 3~4층, 33m2<br>◈ 더블베드(140X190cm) 2개 오세아나A동, B동 저층에 위치한 객실입니다. 오세아나A동, B동 저층에 위치한 객실입니다.</p>
+														<ul>
+															<li><strong>연락처</strong><span>66-2-131-111</span></li>
+															<li><strong>주소</strong><span>New Road, Wat Phraya Krai, Bangkok 10120, Thailand</span></li>
+															<li><strong>체크인/<br>체크아웃</strong><span>체크인 : 1PM / 체크아웃 : 12N</span></li>
+															<li><strong>위치</strong><span>공항근처  Suvarnabhumi Airport 에서 걸어서 10분 가량 소요</span></li>
+														</ul>
+													</div>
+													<a href="#" data-role="none" class="hsBtn">펼치기</a><!-- 펼쳐질경우 접기로 변경 + class="on" 추가 -->
+													<!-- // 아코디언 -->
+												</div>
+											</div>
+											<!-- // 객실시설 -->
+											
+											<!-- 부대시설 -->
+											<div style="display:none">
+												<div class="hsBtmBox">
+													<strong class="stitHs">스탠다드 트윈 룸</strong>
+													<!-- 아코디언 -->
+													<div class="txtBox open"><!-- 펼칠경우 class="oepn" 추가 -->
+														<p>◈ 총 84객실, 오세아나A동 2~4층,오세아나B동 3~4층, 33m2<br>◈ 더블베드(140X190cm) 2개 오세아나A동, B동 저층에 위치한 객실입니다. 오세아나A동, B동 저층에 위치한 객실입니다.</p>
+														<ul>
+															<li><strong>연락처</strong><span>66-2-131-111</span></li>
+															<li><strong>주소</strong><span>New Road, Wat Phraya Krai, Bangkok 10120, Thailand</span></li>
+															<li><strong>체크인/<br>체크아웃</strong><span>체크인 : 1PM / 체크아웃 : 12N</span></li>
+															<li><strong>위치</strong><span>공항근처  Suvarnabhumi Airport 에서 걸어서 10분 가량 소요</span></li>
+														</ul>
+													</div>
+													<a href="#" data-role="none" class="hsBtn">펼치기</a><!-- 펼쳐질경우 접기로 변경 + class="on" 추가 -->
+													<!-- // 아코디언 -->
+												</div>
+												
+												<div class="hsBtmBox">
+													<strong class="stitHs">스탠다드 트윈 룸</strong>
+													<!-- 아코디언 -->
+													<div class="txtBox open"><!-- 펼칠경우 class="oepn" 추가 -->
+														<p>◈ 총 84객실, 오세아나A동 2~4층,오세아나B동 3~4층, 33m2<br>◈ 더블베드(140X190cm) 2개 오세아나A동, B동 저층에 위치한 객실입니다. 오세아나A동, B동 저층에 위치한 객실입니다.</p>
+														<ul>
+															<li><strong>연락처</strong><span>66-2-131-111</span></li>
+															<li><strong>주소</strong><span>New Road, Wat Phraya Krai, Bangkok 10120, Thailand</span></li>
+															<li><strong>체크인/<br>체크아웃</strong><span>체크인 : 1PM / 체크아웃 : 12N</span></li>
+															<li><strong>위치</strong><span>공항근처  Suvarnabhumi Airport 에서 걸어서 10분 가량 소요</span></li>
+														</ul>
+													</div>
+													<a href="#" data-role="none" class="hsBtn">펼치기</a><!-- 펼쳐질경우 접기로 변경 + class="on" 추가 -->
+													<!-- // 아코디언 -->
+												</div>
+											</div>
+											<!-- // 부대시설 -->
+											
+										</div>
+										<!-- // 탭 있을경우 -->
+									</div>
+								</li>
+								<!-- // 20160607 호텔특화카드 -->
+								
+								
+								<!-- 스페셜 특전 -->
+								<li class="redLine"><!-- 빨간박스 -->
+									<div class="spciTop">
+										<em class="slabel">스페셜포함</em><!-- 라벨-->
+										<strong class="sTit_red">발맛사지 + 푸싱지에 거리 관광</strong>
+									</div>
+									
+									<p class="sTxt_red">1시간은 오일,전통안마, 1시간은 한약재료 찜질,태국의 생약 한약제 찜질효과와 아로마 테라피의 만남</p>
+									
+									<ul class="listDott">
+										<li>소요시간 : 3시간</li>
+										<li>선택관광 미참여 시 호텔 휴식</li>
+									</ul>
+									
+									<div class="btmTxtBox">
+										<strong class="c_red">하나투어 특전</strong>
+										<ul class="listNum">
+											<li>50 유로 상당의 관광일정이 포함되어 있습니다! </li>
+										</ul>
+									</div>
+								</li>
+								<!-- // 스페셜 특전 -->
+								
+								<!-- 스페셜 특전 -->
+								<li class="redLine include"><!-- 빨간박스 -->
+									<div class="spciTop">
+										<em class="slabel include">선택관광안내</em><!-- 라벨 선택관광일경우 class="gray" 추가 -->
+										<strong class="sTit_red">발맛사지 + 푸싱지에 거리 관광 발맛사지 + 푸싱지에 거리 관광</strong>
+									</div>
+									
+									<p class="sTxt_red">1시간은 오일,전통안마, 1시간은 한약재료 찜질,태국의 생약 한약제 찜질효과와 아로마 테라피의 만남</p>
+									
+									<ul class="listDott">
+										<li>이용요금 : <span class="txtNone">$50/인</span> <strong class="c_red">무료혜택</strong></li>
+										<li>소요시간 : 3시간</li>
+										<li>선택관광 미참여 시 호텔 휴식</li>
+									</ul>
+									
+									<div class="btmTxtBox">
+										<strong class="c_red">하나투어 특전</strong>
+										<ul class="listNum">
+											<li>50 유로 상당의 관광일정이 포함되어 있습니다!</li>
+										</ul>
+									</div>
+								</li>
+								<!-- // 스페셜 특전 -->
+								
+								<!-- 스페셜 특전 이미지 있는경우 -->
+								<li class="redLine"><!-- 빨간박스 -->
+									<div class="spciTop">
+										<em class="slabel">스페셜포함</em><!-- 라벨 선택관광일경우 class="gray" 추가 -->
+										<strong class="sTit_red">발맛사지 + 푸싱지에 거리 관광 발맛사지 + 푸싱지에 거리 관광</strong>
+									</div>
+									
+									<p class="sTxt_red sc_imgBox02"><!-- 이미지 있는경우 class="sc_imgBox02" 추가 -->
+										<span><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+										1시간은 오일,전통안마, 1시간은 한약재료 찜질,태국의 생약 한약제 찜질효과와 아로마 테라피의 만남
+									</p>
+									
+									<ul class="listDott">
+										<li>이용요금 : <span class="txtNone">$50/인</span> <strong class="c_red">무료혜택</strong></li>
+										<li>소요시간 : 3시간</li>
+									</ul>
+									
+									<div class="btmTxtBox">
+										<strong class="c_red">하나투어 특전</strong>
+										<ul class="listNum">
+											<li>50 유로 상당의 관광일정이 포함되어 있습니다!</li>
+										</ul>
+									</div>
+								</li>
+								<!-- // 스페셜 특전 이미지 있는경우 -->
+								
+								<li>
+									<div class="de_inBox02">
+										<a href="pop_sc_travel.html" class="popUpFull" data-role="none">
+											<span class="sc_imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+											<p>
+												<strong >아시아티크</strong>
+												<b>강변을 따라 조성된 새로운 야시장</b>
+												<span>관광시간 : 약 30분</span>
+											</p>
+										</a>
+									</div>
+									
+								</li>
+								
+								<!-- 주의사항 -->
+								<li class="btmTxtBox02">
+									<strong class="c_red">주의사항</strong>
+									<ul class="listNum">
+										<li>하나투어 전용존 및 무료 열대과일+음료1병 제공</li>
+										<li>하나투어 전용존 및 무료 열대과일+음료1병 제공 함</li>
+									</ul>
+								</li>
+								<!--// 주의사항 -->
+								
+								<li class="topStit">
+									<strong>중식 (한아랑-스페셜 쌈밥 정식)</strong>
+									<div class="de_inBox02">
+										<a href="pop_sc_travel.html" class="popUpFull" data-role="none">
+											<span class="sc_imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+											<p>
+												<strong>한아랑</strong>
+												<b>태국식 샤브샤브</b>
+											</p>
+										</a>
+									</div>
+								</li>
+								
+								<!-- 복수 이미지의 경우 -->						
+								<li>
+									<div class="imgCell">
+										<span class="img"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+										<span class="binCell"></span><!-- 빈영역 -->
+										<span class="img"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+										<span class="binCell"></span><!-- 빈영역 -->
+										<span class="img"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+									</div>
+									<a href="pop_sc_travel.html" class="popUpFull imgCellTxt" data-role="none">
+										<strong>파라세일링 &amp; 제트스키</strong>
+										<b>에메랄드 빛 바다와 천혜의 모래 해변</b>
+										<span>소요시간 : 약 3시간</span>
+									</a>
+								</li>
+								<!-- // 복수 이미지의 경우 -->
+							</ul>
+						
+						</dd>
+					</dl>
+					
+					
+				</div>
+				<!-- // 일정 -->
+				
+			</div>
+			<!-- // 하단 탭영역 -->
+			
+		
+			
+		</div>
+        <!-- // 일정표 개편 end -->
+		
+	</div>
+</div>
+
+</body>
+</html>
+

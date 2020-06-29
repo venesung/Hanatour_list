@@ -1,0 +1,1133 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>이달의 도시 대만 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<script type="text/javascript" src="../js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="../js/city/city_1605.js"></script><!-- 이달의 도시 js -->
+<script type="text/javascript" src="../js/swiper.min.js"></script>
+</head>
+<body>
+
+<div id="wrap"> 
+	<header id="header"><!-- 띠배너 보일경우 class="tBanTy" 추가 -->
+		<div class="inner">
+			<h1><a href="#" data-role="none"><img src="../../images/common/btn_nlogo.png" alt="하나투어"></a></h1>
+			<a href="#" id="btnMenu" data-role="none"><img src="../../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+			<a href="#" id="btnMyhome" data-role="none"><img src="../../images/common/btn_hdright.png" alt="마이홈"></a>
+		</div>
+	</header>
+	<div style="height:52px"></div>
+	
+	<!-- 컨텐츠 영역 -->
+	<style type="text/css">
+	
+	.selectBox {width:100%;border:1px solid #ddd;background:#fff url(../images/thismonth_201612/bg_select_bgray.png) no-repeat 95% center; background-size:16px 9px; height:40px; padding-left:8px;color:#222;font-size:14px}
+	.recom_inCont {background-color:#f1f5f7;padding:10px 12px 0;overflow:hidden}
+	
+	.btnPink {display:block;background-color:#ff6796;border:1px solid #ff6796;text-align:center;color:#fff;padding:11px 0; border-radius:3px;margin-bottom:15px; font-size:14px}
+	.btnPink:after {content:'';width:6px;height:10px;background:url(../images/thismonth_201612/btn_rarr01.png) no-repeat 0 0; background-size:6px 10px; display:inline-block;margin-left:9px}
+	.btnBox02 {padding:0 12px;overflow:hidden;margin-top:15px}
+	.btnBox02 a {float:left;width:48%;padding:4px 15px;font-size:13px;margin-bottom:0;text-align:left;box-sizing:border-box;position:relative}
+	.btnBox02 a+a {float:right}
+	.btnBox02 .btnPink:after {position:absolute;right:10px;top:50%;margin-top:-5px}
+	
+	.thisMonthTop {background:url(../images/thismonth_201612/bg_thismonth_top.jpg) no-repeat 0 0;background-size:100% 100%;padding:28px 0 35px; position:relative}
+	.thisMonthTop h2 {text-align:center;padding-bottom:20px}
+	.thisMonthTop h2 img {height:165px}
+	.cityInfoList {overflow:hidden;margin:0 2px}
+	.cityInfoList li {float:left;width:25%;text-align:center; padding:0 4px; box-sizing:border-box}
+	.cityInfoList li > div {border-radius:50%;background:rgba(0,0,0,0.8);height:80px;width:80px;margin:0 auto; color:#fff}
+	.cityInfoList li strong {font-size:11px; display:inline-block; margin:9px 0 10px; line-height:11px}
+	.cityInfoList li:nth-child(3) strong,.cityInfoList li:nth-child(4) strong {margin:9px 0 5px}
+	.cityInfoList li strong:before {content:''; display:inline-block; background:no-repeat 0 0;margin-right:3px;vertical-align:bottom; height:18px}
+	.cityInfoList li strong.bgStit01:before {background-image:url(../images/thismonth_201612/bg_stit_cebu01.png);background-size:100% 18px; width:13px;}
+	.cityInfoList li strong.bgStit02:before {background-image:url(../images/thismonth_201612/bg_stit_cebu02.png);background-size:100% 18px; width:8px;}
+	.cityInfoList li strong.bgStit03:before {background-image:url(../images/thismonth_201612/bg_stit_cebu03.png);background-size:100% 18px; width:13px;}
+	.cityInfoList li strong.bgStit04:before {background-image:url(../images/thismonth_201612/bg_stit_cebu04.png);background-size:100% 18px; width:12px;}
+	.cityInfoList li p {color:#fff;font-size:12px;font-weight:bold;display:table;vertical-align:middle; width:100%; line-height:11px}
+	.cityInfoList li:nth-child(4) p {font-size:11px}
+	.cityInfoList li p span {font-size:11px; display:block; font-weight:normal;line-height:9px; margin-top:2px}
+	.cityInfoList li:nth-child(4) p span {font-size:10px}
+	.cityInfoList li .time p {font-size:10px;}
+	.cityInfoList li .time p span {display:inline; font-size:9px}
+	.cityInfoList.num3 li {width:33.3%}
+	.cityInfoList.num3 li:nth-child(2) {width:33.4%}
+	
+	.monthShare {padding:20px 12px; position:relative; background-color:#f1f5f7}
+	.monthShare strong {background:url(../images/thismonth_201612/bg_share_tit.png) no-repeat 0 2px;background-size:14px 14px; padding:1px 0 1px 18px; display:block}
+	.monthShare div {position:absolute;right:12px;top:50%; margin-top:-15px}
+	.monthShare div a {float:left; margin-left:8px}
+	.monthShare div a img {width:30px}
+	
+	.contTop01 {background:url(../images/thismonth_201612/bg_cont_top01.jpg) no-repeat 0 0;background-size:100% 100%; text-align:center; margin:-10px -12px 0; padding:50px 0 25px}
+	.contTop01 h3 img { height:62px}
+	.contTop01 p {color:#fff; font-size:13px; line-height:17px; margin-bottom:20px}
+	.contTop01 a {margin:0 20px}
+	
+	.contTop02 {background:url(../images/thismonth_201612/bg_cont_top02.jpg) no-repeat 0 0;background-size:100% 100%; text-align:center; margin:-10px -12px 0; padding:75px 24px 55px}
+	.contTop02.bg_def {background-image:url(../images/thismonth_201612/bg_cont_top02_02.jpg)}
+	.contTop02 h3 {margin-bottom:10px}
+	.contTop02 h3 img {height:70px}
+	.contTop02 p {color:#fff; font-size:13px; line-height:17px;}
+	.contTop02 p span {display:block; margin-bottom:10px}
+	
+	.monthCityList {margin-top:-45px}
+	.monthCityList.marT10 {margin-top:15px}
+	.monthCityList > li {border:1px solid #ddd; margin-bottom:10px}
+	.monthCityList > li .btnPink {margin-bottom:0; margin-top:20px}
+	.monthCityList > li:last-child {margin-bottom:20px}
+	.monthCityList li h4 {display:block; background-color:#fff; color:#222; padding:7px 12px; font-size:17px}
+	.monthCityList li h4.gray {background-color:#4a505e; color:#fff;font-size:14px}
+	.monthCityList li .imgBox img {width:100%}
+	.monthCityList li .txtCont {background-color:#fff; padding:15px 12px 20px}
+	.monthCityList li .txtCont .storyTit {display:block; color:#ff6796; font-size:12px; font-weight:bold; margin-bottom:8px}
+	.monthCityList li .txtCont strong {color:#222; font-size:14px; display:block; margin-bottom:8px}
+	.monthCityList li .txtCont p {color:#666; font-size:13px;}
+	.monthCityList li .txtCont dl {margin-top:15px; padding-top:15px; border-top:1px solid #ddd}
+	.monthCityList li .txtCont dl dt {color:#ed4f8f; font-size:15px; margin-bottom:10px; font-weight:bold}
+	.monthCityList li .txtCont dl dd {color:#666; font-size:13px; position:relative; padding-left:8px}
+	.monthCityList li .txtCont dl dd:before {content:''; width:2px; height:2px; position:absolute;left:0;top:5px; background-color:#333; border-radius:50%}
+	.monthCityList li .logoBox { text-align:center; background-color:#dee2e4}
+	.monthCityList li .logoBox img { height:35px}
+	.monthCityList li .txtCont ul li {position:relative; padding-left:8px; margin-bottom:4px; font-size:13px; color:#666}
+	.monthCityList li .txtCont ul li:after { content:''; width:2px; height:2px; background-color:#ff6796; position:absolute;left:0;top:5px}
+	
+	.benefitBanner {margin:0 -12px}
+	.benefitBanner a {display:block;background:#8f94a4 no-repeat 12px 15px;background-size:42px 42px; color:#fff; padding:15px 12px 15px 70px}
+	.benefitBanner a.bgico01 {background-image:url(../images/thismonth_201612/bg_art_banner01.png)}
+	.benefitBanner a.bgico02 {background-image:url(../images/thismonth_201612/bg_art_banner02.png); border-top:1px solid #fff}
+	.benefitBanner a strong {font-size:17px;}
+	.benefitBanner a p {color:#fff; font-size:12px; margin-top:6px}
+	
+	.txtinBtn {background-color:#fff; overflow:hidden; margin:0 -12px; padding:25px 12px 10px}
+	.txtinBtn span { display:block; margin-bottom:10px}
+	
+	.areaTab {overflow:hidden;border-bottom:1px solid #ddd;border-top:1px solid #ddd;}
+	.areaTab li {float:left;width:20%;}
+	.areaTab li a {display:block;padding:19px 0;line-height:15px; text-align:center; color:#666;border-right:1px solid #ddd; font-size:14px; height:52px; box-sizing:border-box}
+	.areaTab li:last-child a {border-right:none}
+	.areaTab li.on a {color:#fff;background-color:#c83d67; font-weight:bold}
+	.areaTab li.twoLine a {padding:12px 0}
+	.areaTab li.thLine a {padding:4px 0 8px}
+	
+	.areaCardList {overflow:hidden; margin:0 -4px}
+	.areaCardList > li {float:left;width:50%;box-sizing:border-box; padding:0 4px; text-align:left; margin-bottom:15px}
+	.areaCardList > li h3 {position:relative; font-size:17px; padding:2px 3px 8px; margin-bottom:4px; height:28px;box-sizing:border-box;}
+	.areaCardList > li h3 a {position:absolute;right:3px;top:0; color:#ff6796; border:1px solid #ff6796; border-radius:3px; padding:6px; font-size:12px; line-height:12px}
+	.areaCardList .img {position:relative; display:block}
+	.areaCardList .img img {width:100%;height:100px;}
+	@media all and (min-width:360px) {	/* 360이상일 경우*/
+	.areaCardList .img img {height:115px;}
+	}
+	@media all and (min-width:414px) {	/* 414이상일 경우*/
+	.areaCardList .img img {height:130px;}
+	}
+	.areaCardList .img em {position:absolute;left:0;top:0; text-align:center; color:#fff; font-size:12px; background-color:#c83d67;box-sizing:border-box;padding:8px 2px;line-height:11px;width:78px}
+	.areaCardList > li .inBox {border:1px solid #ccc; border-radius:3px; overflow:hidden; display:block;background-color:#fff}
+	.areaCardList > li .inBox div {padding:12px;box-sizing:border-box}
+	.areaCardList > li .inBox div .tit {display:block;overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical;height:15px; line-height:16px; margin-bottom:5px; font-size:15px}
+	.areaCardList > li .inBox div .money {font-size:18px}
+	.areaCardList > li .inBox div .money span {font-size:13px}
+	.areaCardList > li .inBox div p {overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;height:32px; line-height:15px; color:#666; font-size:13px; margin-bottom:10px}
+	
+	.cont_inTab,.cont_inTab02 {overflow:hidden; background-color:#fff; margin:-10px -12px 15px; border-bottom:1px solid #858585; position:relative}
+	.cont_inTab:before,.cont_inTab02:before {content:''; width:1px; height:18px; background-color:#dddddd; position:absolute; left:50%; top:50%; margin-top:-9px}
+	.cont_inTab li,.cont_inTab02 li {float:left;width:50%; text-align:center; position:relative}
+	.cont_inTab li a,.cont_inTab02 li a {display:block; padding:14px 0;font-weight:bold; font-size:13px}
+	.cont_inTab li.on a,.cont_inTab02 li.on a {color:#c83d67}
+	.cont_inTab li.on a:after {content:''; width:150px; height:4px; background-color:#c83d67; position:absolute; left:50%;bottom:0; margin-left:-75px}
+	.cont_inTab02 li.on a:after {content:''; width:120px; height:4px; background-color:#c83d67; position:absolute; left:50%;bottom:0; margin-left:-60px}
+	.cont_inTab02 li+li.on a:after { width:130px; margin-left:-65px}
+	
+	.resortList {padding:20px 12px 20px; background-color:#fff; margin:0 -12px -10px;}
+	.resortList > ul {}
+	.resortList > ul > li {text-align:center;border:1px solid #ddd; margin-bottom:10px; padding:0 12px; background-color:#fff}
+	.resortList > ul > li .imgBox {margin:0 -12px;display:block}
+	.resortList > ul > li .imgBox img {width:100%}
+	.resortList > ul > li .bestTxt {color:#c83d67; font-size:13px;border:1px solid #c83d67; border-radius:50px; display:inline-block; padding:3px 7px; font-weight:bold; margin:15px 0;}
+	.resortList > ul > li > strong {display:block; font-size:17px;letter-spacing:-0.05em; padding:0 10px;}
+	.resortList > ul > li > p {color:#666; font-size:13px;margin:8px 0; padding:0 12px}
+	.resortList > ul > li > a {display:inline-block; color:#fff; padding:10px 22px; border-radius:3px; background-color:#ff6796; font-weight:bold; margin:15px 0; font-size:15px}
+	.resortList > ul > li > a.mar0 {margin:0}
+	.resortList > ul > li > a.mar02 {margin:0 0 15px}
+	.resortList ul li .starBox strong {color:#f9b013; font-size:13px; vertical-align:top}
+	.resortList ul li .starBox span {background:url(../images/thismonth_201612/img_resort_star.png) repeat-x 0 0;background-size:13px 13px; display:inline-block; height:13px;text-indent:-9999px; position:relative;bottom:-1px}
+	.resortList ul li .starBox span.num1 {width:13px}
+	.resortList ul li .starBox span.num2 {width:26px}
+	.resortList ul li .starBox span.num3 {width:39px}
+	.resortList ul li .starBox span.num3_50 {width:46px}
+	.resortList ul li .starBox span.num4 {width:52px}
+	.resortList ul li .starBox span.num5 {width:65px}
+	
+	.benefitBox {background-color:#fff;padding:30px 12px; margin:0 -12px}
+	.benefitBox h3 {text-align:center;margin-bottom:20px}
+	.benefitBox h3 img { height:18px;}
+	@media all and (max-width:320px) {	/* 320이하일 경우*/
+	.benefitBox h3 img {width:100%;height:auto}
+	}
+	.benefitBox ul {overflow:hidden; margin:0 -4px}
+	.benefitBox ul li {float:left;width:50%;box-sizing:border-box;margin-bottom:10px;text-align:center; padding:0 4px}
+	.benefitBox ul li div {border:1px solid #ccc; border-radius:3px; overflow:hidden;}
+	.benefitBox ul li span img {width:100%}
+	.benefitBox ul li p {font-size:12px; padding:12px 5px; box-sizing:border-box; line-height:14px}
+	.benefitBox ul li p.oneLine {padding:19px 5px}
+	.benefitBox ul li p.txtLong {padding:7px 5px; height:70px}
+	.benefitBox ul li p.txtLong02 {padding:21px 5px;height:70px}
+	.benefitBox > p { font-size:12px}
+	
+	.eventSnsCont {margin:-15px -12px 0}
+	.eventSnsCont .insnsTop {text-align:center;background:url(../images/thismonth_201612/bg_eventsnscont01.png) no-repeat 0 0;background-size:100% 100%;padding:30px 12px 48px}
+	.eventSnsCont .insnsTop h3 {padding-bottom:8px}
+	.eventSnsCont .insnsTop h3 img {height:90px}
+	.eventSnsCont .insnsTop p {color:#fff;font-size:13px;margin-bottom:16px}
+	.eventSnsCont .insnsTop p span {display:block;margin-top:5px}
+	.eventSnsCont .insnsTop a {width:150px;margin:0 auto 20px}
+
+	.eventSnsCont .btmBox {margin:-43px 12px 24px; position:relative}
+	.eventSnsCont .btmBox span img {width:100%}
+	
+	.eventSmCont {background:#ffbcce; margin:-15px -12px 0;padding:0 12px 0; overflow:hidden}
+	.eventSmCont h3 {margin:0 -12px;text-align:center;background:url(../images/thismonth_201612/bg_eventsnscont02.jpg) no-repeat 0 0;background-size:100% 100%; padding:27px 0 45px}
+	.eventSmCont h3 img {height:135px}
+	.eventSmCont .pinkz {display:inline-block;color:#fff;padding:10px;border-radius:3px;background-color:#ff6796;font-weight:bold;font-size:18px; width:150px; text-align:center}
+	.eventSmCont .dottBox {margin:20px 25px 0;padding-top:20px;background:url(../images/thismonth_201612/bg_dottline.png) repeat-x 0 0;background-size:4px 1px}
+	.eventSmCont .dottBox p {margin:0 -15px 8px}
+	.eventSmCont .dottBox p span {display:block;margin-top:5px}
+	.eventSmCont .special {text-align:center;background-color:#fff;border:1px solid #ddd;margin-bottom:10px}
+	.eventSmCont .special h4 {background-color:#c83d67;color:#fff;font-size:15px;padding:10px 0}
+	.eventSmCont .special img,.swiper-slide img {width:100%}
+	
+	.airBtmTxt { font-size:13px; color:#666; padding:0 10px 40px; margin-top:-10px}
+	.airBtmTxt strong { color:#333; display:block}
+	
+	/* swiper */
+	.swiper-slide {text-align: center;font-size: 18px;display:-webkit-box;display:-ms-flexbox;display: -webkit-flex;display:flex;-webkit-box-pack: center;-ms-flex-pack: center;-webkit-justify-content: center;justify-content:center;-webkit-box-align: center;-ms-flex-align: center;-webkit-align-items:center;align-items: center;}
+	.swiper-slide img {width:100%}
+	.swiper-container {margin:0 auto;position:relative;overflow:hidden;z-index:1;width: 100%;}
+	.swiper-container a.big5_prev {width:23px; height:42px;background:url(http://image1.hanatour.com/mobile/common/thismonth/201605/btn_slider_left.png); position:absolute;left:12px;top:50%;margin-top:-21px;background-size:23px 43px; z-index:100; opacity:0.8}
+	.swiper-container a.big5_next {width:23px; height:42px;background:url(http://image1.hanatour.com/mobile/common/thismonth/201605/btn_slider_right.png); position:absolute;right:12px;top:50%;margin-top:-21px;background-size:23px 43px; z-index:100;opacity:0.8}
+	
+	.swiper-container-no-flexbox .swiper-slide{float:left}.swiper-container-vertical>.swiper-wrapper{-webkit-box-orient:vertical;-moz-box-orient:vertical;-ms-flex-direction:column;-webkit-flex-direction:column;flex-direction:column}.swiper-wrapper{position:relative;width:100%;height:;z-index:1;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-transition-property:-webkit-transform;-moz-transition-property:-moz-transform;-o-transition-property:-o-transform;-ms-transition-property:-ms-transform;transition-property:transform;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}.swiper-container-android .swiper-slide,.swiper-wrapper{-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-o-transform:translate(0,0);-ms-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.swiper-container-multirow>.swiper-wrapper{-webkit-box-lines:multiple;-moz-box-lines:multiple;-ms-flex-wrap:wrap;-webkit-flex-wrap:wrap;flex-wrap:wrap}.swiper-container-free-mode>.swiper-wrapper{-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out;margin:0 auto}.swiper-slide{-webkit-flex-shrink:0;-ms-flex:0 0 auto;flex-shrink:0;width:100%;position:relative}.swiper-container .swiper-notification{position:absolute;left:0;top:0;pointer-events:none;opacity:0;z-index:-1000}.swiper-wp8-horizontal{-ms-touch-action:pan-y;touch-action:pan-y}.swiper-wp8-vertical{-ms-touch-action:pan-x;touch-action:pan-x}.swiper-button-next,.swiper-button-prev{position:absolute;top:50%;width:27px;height:44px;margin-top:-22px;z-index:10;cursor:pointer;-moz-background-size:27px 44px;-webkit-background-size:27px 44px;background-size:27px 44px;background-position:center;background-repeat:no-repeat}.swiper-button-next.swiper-button-disabled,.swiper-button-prev.swiper-button-disabled{opacity:.35;cursor:auto;pointer-events:none}.swiper-button-prev,.swiper-container-rtl .swiper-button-next{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");left:10px;right:auto}.swiper-button-prev.swiper-button-black,.swiper-container-rtl .swiper-button-next.swiper-button-black{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E")}.swiper-button-prev.swiper-button-white,.swiper-container-rtl .swiper-button-next.swiper-button-white{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")}.swiper-button-next,.swiper-container-rtl .swiper-button-prev{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");right:10px;left:auto}.swiper-button-next.swiper-button-black,.swiper-container-rtl .swiper-button-prev.swiper-button-black{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E")}.swiper-button-next.swiper-button-white,.swiper-container-rtl .swiper-button-prev.swiper-button-white{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")}.swiper-pagination{position:absolute;text-align:center;-webkit-transition:.3s;-moz-transition:.3s;-o-transition:.3s;transition:.3s;-webkit-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0);z-index:10}.swiper-pagination.swiper-pagination-hidden{opacity:0}.swiper-pagination-bullet{width:8px;height:8px;display:inline-block;border-radius:100%;}button.swiper-pagination-bullet{border:none;margin:0;padding:0;box-shadow:none;-moz-appearance:none;-ms-appearance:none;-webkit-appearance:none;appearance:none}.swiper-pagination-clickable .swiper-pagination-bullet{cursor:pointer}.swiper-pagination-white .swiper-pagination-bullet{background:#fff}.swiper-pagination-bullet-active{opacity:1;background:#007aff}.swiper-pagination-white .swiper-pagination-bullet-active{background:#fff}.swiper-pagination-black .swiper-pagination-bullet-active{background:#000}.swiper-container-vertical>.swiper-pagination{right:10px;top:50%;-webkit-transform:translate3d(0,-50%,0);-moz-transform:translate3d(0,-50%,0);-o-transform:translate(0,-50%);-ms-transform:translate3d(0,-50%,0);transform:translate3d(0,-50%,0)}.swiper-container-vertical>.swiper-pagination .swiper-pagination-bullet{margin:5px 0;display:block}.swiper-container-horizontal>.swiper-pagination{bottom:10px;left:0;width:100%}.swiper-container-horizontal>.swiper-pagination .swiper-pagination-bullet{margin:0 5px}.swiper-container-3d{-webkit-perspective:1200px;-moz-perspective:1200px;-o-perspective:1200px;perspective:1200px}.swiper-container-3d .swiper-cube-shadow,.swiper-container-3d .swiper-slide,.swiper-container-3d .swiper-slide-shadow-bottom,.swiper-container-3d .swiper-slide-shadow-left,.swiper-container-3d .swiper-slide-shadow-right,.swiper-container-3d .swiper-slide-shadow-top,.swiper-container-3d .swiper-wrapper{-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;-ms-transform-style:preserve-3d;transform-style:preserve-3d}.swiper-container-3d .swiper-slide-shadow-bottom,.swiper-container-3d .swiper-slide-shadow-left,.swiper-container-3d .swiper-slide-shadow-right,.swiper-container-3d .swiper-slide-shadow-top{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:10}.swiper-container-3d .swiper-slide-shadow-left{background-image:-webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(right,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-moz-linear-gradient(right,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(right,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to left,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-container-3d .swiper-slide-shadow-right{background-image:-webkit-gradient(linear,right top,left top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(left,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-moz-linear-gradient(left,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(left,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-container-3d .swiper-slide-shadow-top{background-image:-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(bottom,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-moz-linear-gradient(bottom,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(bottom,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to top,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-container-3d .swiper-slide-shadow-bottom{background-image:-webkit-gradient(linear,left bottom,left top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(top,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-moz-linear-gradient(top,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(top,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-container-coverflow .swiper-wrapper{-ms-perspective:1200px}.swiper-container-fade.swiper-container-free-mode .swiper-slide{-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out}.swiper-container-fade .swiper-slide{pointer-events:none}.swiper-container-fade .swiper-slide .swiper-slide{pointer-events:none}.swiper-container-fade .swiper-slide-active,.swiper-container-fade .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-container-cube{overflow:visible}.swiper-container-cube .swiper-slide{pointer-events:none;visibility:hidden;-webkit-transform-origin:0 0;-moz-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;backface-visibility:hidden;width:100%;height:100%;z-index:1}.swiper-container-cube.swiper-container-rtl .swiper-slide{-webkit-transform-origin:100% 0;-moz-transform-origin:100% 0;-ms-transform-origin:100% 0;transform-origin:100% 0}.swiper-container-cube .swiper-slide-active,.swiper-container-cube .swiper-slide-next,.swiper-container-cube .swiper-slide-next+.swiper-slide,.swiper-container-cube .swiper-slide-prev{pointer-events:auto;visibility:visible}.swiper-container-cube .swiper-slide-shadow-bottom,.swiper-container-cube .swiper-slide-shadow-left,.swiper-container-cube .swiper-slide-shadow-right,.swiper-container-cube .swiper-slide-shadow-top{z-index:0;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;backface-visibility:hidden}.swiper-container-cube .swiper-cube-shadow{position:absolute;left:0;bottom:0;width:100%;height:100%;background:#000;opacity:.6;-webkit-filter:blur(50px);filter:blur(50px);z-index:0}.swiper-scrollbar{border-radius:10px;position:relative;-ms-touch-action:none;background:rgba(0,0,0,.1)}.swiper-container-horizontal>.swiper-scrollbar{position:absolute;left:1%;bottom:3px;z-index:50;height:5px;width:98%}.swiper-container-vertical>.swiper-scrollbar{position:absolute;right:3px;top:1%;z-index:50;width:5px;height:98%}.swiper-scrollbar-drag{height:100%;width:100%;position:relative;background:rgba(0,0,0,.5);border-radius:10px;left:0;top:0}.swiper-scrollbar-cursor-drag{cursor:move}.swiper-lazy-preloader{width:42px;height:42px;position:absolute;left:50%;top:50%;margin-left:-21px;margin-top:-21px;z-index:10;-webkit-transform-origin:50%;-moz-transform-origin:50%;transform-origin:50%;-webkit-animation:swiper-preloader-spin 1s steps(12,end) infinite;-moz-animation:swiper-preloader-spin 1s steps(12,end) infinite;animation:swiper-preloader-spin 1s steps(12,end) infinite}.swiper-lazy-preloader:after{display:block;content:"";width:100%;height:100%;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%236c6c6c'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");background-position:50%;-webkit-background-size:100%;background-size:100%;background-repeat:no-repeat}.swiper-lazy-preloader-white:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%23fff'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")}@-webkit-keyframes swiper-preloader-spin{100%{-webkit-transform:rotate(360deg)}}@keyframes swiper-preloader-spin{100%{transform:rotate(360deg)}}
+	
+	
+	.swiper-pag-num {bottom:10px; left:50%; color:#fff; font-size:13px; background:rgba(0,0,0,0.8); padding:5px 12px; border-radius:50px; position:absolute; text-align:center; z-index:100; font-weight:bold; margin-left:-25px;right:initial}
+	
+	</style>
+	<div id="container" class="thisMonthCont">
+		<div class="thisMonthTop">
+			<h2><img src="../../images/thismonth_201612/tit_thismonth_top.png" alt=""></h2>
+			<ul class="cityInfoList">
+				<li>
+					<div class="time">
+						<strong class="bgStit01">비행시간</strong>
+						<p><span>갈때 </span>5시간 50분</p>
+						<p><span>올때 </span>5시간 20분</p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<strong class="bgStit02">환율</strong>
+						<p>100PHP=<br>약 2,500원</p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<strong class="bgStit03">전압</strong>
+						<p>220V, 60Hz<span>숙소에 따라<br>어댑터 필요</span></p>
+					</div>
+				</li>
+				<li>
+					<div> 
+						<strong class="bgStit04">비자</strong>
+						<p>무비자<span>최대 30일<br>체류 가능</span></p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+		<!-- 공유하기 -->
+		<div class="monthShare">
+			<strong>공유하기</strong>
+			<div>
+				<a href="#" data-role="none"><img src="../../images/thismonth_201612/img_share_sns01.png" alt="페이스북"></a>
+				<a href="#" data-role="none"><img src="../../images/thismonth_201612/img_share_sns02.png" alt="트위터"></a>
+				<a href="#" data-role="none"><img src="../../images/thismonth_201612/img_share_sns03.png" alt="카카오톡"></a>
+			</div>
+		</div>
+		<!-- // 공유하기 -->
+		
+		<!-- tabCont -->
+		<ul class="areaTab">
+			<li class="twoLine on"><a href="#" data-role="none">추천<br>상품</a></li><!-- 선택시 class="on" -->
+			<li class="twoLine"><a href="#" data-role="none">필리핀<br>제대로 알기</a></li>
+			<li class="twoLine"><a href="#" data-role="none">추천<br>리조트</a></li>
+			<li class="twoLine"><a href="#" data-role="none">추천<br>항공사</a></li>
+			<li><a href="#" data-role="none">이벤트</a></li>
+		</ul>
+		<!-- // tabCont -->
+		
+		<!-- 추천상품 -->
+		<div class="recom_inCont" style="display:no ne">
+			<ul class="cont_inTab">
+				<li class="on"><a href="#" data-role="none">베스트셀러</a></li>
+				<li class=""><a href="#" data-role="none">추천 상품</a></li>
+			</ul>
+			
+			<!-- 베스트셀러 -->
+			<div>
+				<ul class="areaCardList">
+					<li>
+						<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=APP179&packageMasterStartMonth=201608&packageLodgeCode=H27081&packageStartAirCode=PR&packageSearchName=추천 " class="inBox" data-role="none">
+							<span class="img">
+								<img src="../../images/thismonth_201612/img_bestseller01.jpg" alt="">
+								<em>패키지</em>
+							</span>
+							<div>
+								<strong class="tit">세부 5일_비 리조트</strong>
+								<p>선착순 룸업그레이드</p>
+								<strong class="money">399,000<span>원~</span></strong>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=APA171&packageMasterStartMonth=201608&packageSearchName=할인" class="inBox" data-role="none">
+							<span class="img" style="border-radius:50%; display:block; overflow:hidden">
+								<img src="../../images/thismonth_201612/img_bestseller02.jpg" alt="">
+								<em>에어텔</em>
+							</span>
+							<div>
+								<strong class="tit">세부 자유여행 4,5일</strong>
+								<p>1박 호텔+할인항공권 제공</p>
+								<strong class="money">329,000<span>원~</span></strong>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=APP111&packageMasterStartMonth=201608&packageSearchName=추천" class="inBox" data-role="none">
+							<span class="img">
+								<img src="../../images/thismonth_201612/img_bestseller03.jpg" alt="">
+								<em>패키지</em>
+							</span>
+							<div>
+								<strong class="tit">보라카이 4일,5일</strong>
+								<p>실속 가격으로 즐기는 세계3대비치 휴양</p>
+								<strong class="money">369,000<span>원~</span></strong>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=APP100&packageMasterStartMonth=201608&packageSearchName=업그레이드" class="inBox" data-role="none">
+							<span class="img">
+								<img src="../../images/thismonth_201612/img_bestseller04.jpg" alt="">
+								<em>패키지</em>
+							</span>
+							<div>
+								<strong class="tit">마닐라 5일</strong>
+								<p>5성 마닐라 호텔 무료 업그레이드</p>
+								<strong class="money">399,000<span>원~</span></strong>
+							</div>
+						</a>
+					</li>
+				</ul>
+				
+				<p style="margin-bottom:15px">※유류할증료 / 텍스 포함 총 금액기준</p>
+								
+				<div class="benefitBox">
+					<h3><img src="../../images/thismonth_201612/stit_benefit01.png" alt="기분 좋은 혜택 추천 상품 특전"></h3>
+					<ul>
+						<li style="width:100%">
+							<div>
+								<span style=" display:block;background-color:#eeeeee"><img src="../../images/thismonth_201612/img_benefit04.png" alt="" style="width:auto;height:89px"></span>
+								<p>SM면세점 1만원 특별 적립금</p>
+							</div>
+						</li>
+					</ul>
+					<p>* 특전 적용이 상이 하므로 자세한 사항은 일정표를 통해 확인 부탁드립니다.</p><!-- 20160629 수정 -->
+				</div>
+				
+				
+			</div>
+			<!-- // 베스트셀러 -->
+			
+			
+			<!-- 강력추천 -->
+			<div style="display:none">
+				<select data-role="none" title="상품종류 선택" class="selectBox" style="margin-bottom:10px">
+					<option value="">세부/보홀</option>
+					<option value="">보라카이</option>
+					<option value="">마닐라/팔라완</option>
+					<option value="">테마여행</option>
+					<option value="">부산출발</option>
+				</select>
+				
+				<!-- 셀렉 탭1 -->
+				<div>
+					<ul class="areaCardList">
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=APP174&packageMasterStartMonth=201608&packageSearchName=추천" class="inBox" data-role="none">
+								<span class="img">
+									<img src="../../images/thismonth_201612/img_bestseller05.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">세부 4,5일 &lt;제이파크&gt;</strong>
+									<p>아동반값 할인+전신마사지+특식</p>
+									<strong class="money">699,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=APP172&packageMasterStartMonth=201608&packageSearchName=추천&packageLodgeCode=G96452" class="inBox" data-role="none">
+								<span class="img">
+									<img src="../../images/thismonth_201612/img_bestseller06.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">세부 4,5일 &lt;플랜테이션 베이&gt;</strong>
+									<p>아동반값 할인+전신마사지+특식</p>
+									<strong class="money">699,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=APP172&packageMasterStartMonth=201608&packageSearchName=추천&packageLodgeCode=H30579" class="inBox" data-role="none">
+								<span class="img">
+									<img src="../../images/thismonth_201612/img_bestseller07.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">세부 4,5일 &lt;크림슨&gt;</strong>
+									<p>아동반값 할인+전신마사지+특식</p>
+									<strong class="money">589,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=APA175&packageMasterStartMonth=201608&packageSearchName=헤난" class="inBox" data-role="none">
+								<span class="img">
+									<img src="../../images/thismonth_201612/img_bestseller08.jpg" alt="">
+									<em>에어텔</em>
+								</span>
+								<div>
+									<strong class="tit">세부/보홀 자유여행 5일</strong>
+									<p>픽업 서비스 + 보홀 현지투어 할인</p>
+									<strong class="money">519,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+					</ul>
+					
+					<p style="margin-bottom:15px">※유류할증료 / 텍스 포함 총 금액기준</p>
+					
+					<a href="http://m.hanatour.com/application/package/package_masterList.jsp?packageRegionId=A&packageNationId=PH&packageCityId=CEB&packageCategoryId=P&packageOverseasStartId=JCN" data-role="none" class="btnPink">상품 더보기</a>
+					
+					<div class="benefitBox">
+						<h3><img src="../../images/thismonth_201612/stit_benefit02.png" alt="기분 좋은 혜택 추천 상품 특전"></h3>
+						<ul>
+						<li style="width:100%">
+							<div>
+								<span style=" display:block;background-color:#eeeeee"><img src="../../images/thismonth_201612/img_benefit04.png" alt="" style="width:auto;height:89px"></span>
+								<p>SM면세점 1만원 특별 적립금</p>
+							</div>
+						</li>
+					</ul>
+						<p>* 특전 적용이 상이 하므로 자세한 사항은 일정표를 통해 확인 부탁드립니다.</p><!-- 20160629 수정 -->
+					</div>
+				</div>
+				<!-- // 셀렉 탭1 -->
+				
+				<!-- 셀렉 탭2 -->
+				<div style="display:none">
+					<ul class="areaCardList">
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=APP110&packageMasterStartMonth=201608&packageSearchName=%ED%95%98%EB%82%98&packageLodgeCode=H85783" class="inBox" data-role="none">
+								<span class="img">
+									<img src="../../images/thismonth_201612/img_bestseller09.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">보라카이 4,5일 &lt;아잘리아&gt;</strong>
+									<p>루프탑풀장+조리시설완비</p>
+									<strong class="money">439,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=APP110&packageMasterStartMonth=201608&packageLodgeCode=H07632" class="inBox" data-role="none">
+								<span class="img">
+									<img src="../../images/thismonth_201612/img_bestseller10.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">보라카이 4,5일 &lt;페어웨이&gt;</strong>
+									<p>리조트 퀄리티에 반하다!부대시설 가득!</p>
+									<strong class="money">429,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=APA113&packageMasterStartMonth=201608&packageLodgeCode=H02961" class="inBox" data-role="none">
+								<span class="img">
+									<img src="../../images/thismonth_201612/img_bestseller11.jpg" alt="">
+									<em>에어텔</em>
+								</span>
+								<div>
+									<strong class="tit">보라카이 자유여행 4,5일 </strong>
+									<p>가든리조트, 미샌딩서비스, 리조트디너 포함</p>
+									<strong class="money">557,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=APW111&packageMasterStartMonth=201608&packageLodgeCode=H30794&packageSearchName=%EB%94%94%EB%9F%AD%EC%8A%A4" class="inBox" data-role="none">
+								<span class="img">
+									<img src="../../images/thismonth_201612/img_bestseller12.jpg" alt="">
+									<em>허니문</em>
+								</span>
+								<div>
+									<strong class="tit">보라카이 허니문 5일 &lt;헤난 라군&gt;</strong>
+									<p>크리스탈코브 호핑+리조트 석식</p>
+									<strong class="money">869,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+					</ul>
+					
+					<p style="margin-bottom:15px">※유류할증료 / 텍스 포함 총 금액기준</p>
+					
+					<a href="http://m.hanatour.com/application/package/package_masterList.jsp?packageRegionId=A&packageNationId=PH&packageCityId=KLO&packageCategoryId=P&packageOverseasStartId=JCN" data-role="none" class="btnPink">상품 더보기</a>
+					
+					<div class="benefitBox">
+						<h3><img src="../../images/thismonth_201612/stit_benefit02.png" alt="기분 좋은 혜택 추천 상품 특전"></h3>
+						<ul>
+						<li style="width:100%">
+							<div>
+								<span style=" display:block;background-color:#eeeeee"><img src="../../images/thismonth_201612/img_benefit04.png" alt="" style="width:auto;height:89px"></span>
+								<p>SM면세점 1만원 특별 적립금</p>
+							</div>
+						</li>
+					</ul>
+						<p>* 특전 적용이 상이 하므로 자세한 사항은 일정표를 통해 확인 부탁드립니다.</p><!-- 20160629 수정 -->
+					</div>
+				</div>
+				<!-- // 셀렉 탭2 -->
+				
+				<!-- 셀렉 탭3 -->
+				<div style="display:none">
+					<ul class="areaCardList">
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=APP109&packageMasterStartMonth=201608&packageSearchName=홈쇼핑따라잡기" class="inBox" data-role="none">
+								<span class="img">
+									<img src="../../images/thismonth_201612/img_bestseller13.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">마닐라/바탕가스 4,5일</strong>
+									<p>크림슨호텔+캐논코브+발마사지</p>
+									<strong class="money">379,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=APP102&packageMasterStartMonth=201608&packageSearchName=스타가이드" class="inBox" data-role="none">
+								<span class="img">
+									<img src="../../images/thismonth_201612/img_bestseller14.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">마닐라 5일 &lt;스타가이드&gt;</strong>
+									<p>팍상한폭포+따가이따이+푸닝온천</p>
+									<strong class="money">649,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=APP105&packageMasterStartMonth=201608&packageSearchName=1일" class="inBox" data-role="none">
+								<span class="img">
+									<img src="../../images/thismonth_201612/img_bestseller15.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">마닐라/팔라완 5일 &lt;유네스코&gt;</strong>
+									<p>지하강 투어 + 1일 자유</p>
+									<strong class="money">549,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=APG100&packageMasterStartMonth=201608&packageSearchName=%EB%A0%88%EC%9D%B4%ED%81%AC%EC%9A%B0%EB%93%9C&packageStartAirCode=PR" class="inBox" data-role="none">
+								<span class="img">
+									<img src="../../images/thismonth_201612/img_bestseller16.jpg" alt="">
+									<em>골프</em>
+								</span>
+								<div>
+									<strong class="tit">마닐라 골프 5일 &lt;레이크우드&gt;</strong>
+									<p>무제한 그린피 + 전일정 식사</p>
+									<strong class="money">249,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+					</ul>
+					
+					<p style="margin-bottom:15px">※유류할증료 / 텍스 포함 총 금액기준</p>
+					
+					<a href="http://m.hanatour.com/application/package/package_masterList.jsp?packageRegionId=A&packageNationId=PH&packageCityId=MNL&packageCategoryId=P&packageOverseasStartId=JCN" data-role="none" class="btnPink">상품 더보기</a>
+					
+					<div class="benefitBox">
+						<h3><img src="../../images/thismonth_201612/stit_benefit02.png" alt="기분 좋은 혜택 추천 상품 특전"></h3>
+						<ul>
+						<li style="width:100%">
+							<div>
+								<span style=" display:block;background-color:#eeeeee"><img src="../../images/thismonth_201612/img_benefit04.png" alt="" style="width:auto;height:89px"></span>
+								<p>SM면세점 1만원 특별 적립금</p>
+							</div>
+						</li>
+					</ul>
+						<p>* 특전 적용이 상이 하므로 자세한 사항은 일정표를 통해 확인 부탁드립니다.</p><!-- 20160629 수정 -->
+					</div>
+				</div>
+				<!-- // 셀렉 탭3 -->
+				
+				<!-- 셀렉 탭4 -->
+				<div style="display:none">
+					<ul class="areaCardList">
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=APP188&packageMasterStartMonth=201608&packageSearchName=22" class="inBox" data-role="none">
+								<span class="img">
+									<img src="../../images/thismonth_201612/img_bestseller17.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">[플라잉베베] 세부 5일_제이파크 </strong>
+									<p>제이파크,22시체크아웃,노팁노쇼핑,아기용품증정</p>
+									<strong class="money">959,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=APP175&packageMasterStartMonth=201608&packageSearchName=수료증" class="inBox" data-role="none">
+								<span class="img">
+									<img src="../../images/thismonth_201612/img_bestseller18.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">[다이빙강습] 세부 4,5일</strong>
+									<p>1일 다이빙 체험+수료증 발급</p>
+									<strong class="money">699,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=APP175&packageMasterStartMonth=201608&packageSearchName=고래&lodge_code=H15601" class="inBox" data-role="none">
+								<span class="img">
+									<img src="../../images/thismonth_201612/img_bestseller19.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">[고래상어와칭] 세부 4,5일</strong>
+									<p>멸종위기 고래상어와의 조우</p>
+									<strong class="money">509,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=APP117&packageMasterStartMonth=201608&packageLodgeCode=H93667" class="inBox" data-role="none">
+								<span class="img">
+									<img src="../../images/thismonth_201612/img_bestseller20.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">[가족여행] 보라카이 4,5일 </strong>
+									<p>뫼벤픽,아동반값,노쇼핑,호핑투어,황제마사지</p>
+									<strong class="money">1,099,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+					</ul>
+					
+					<p style="margin-bottom:15px">※유류할증료 / 텍스 포함 총 금액기준</p>
+					
+					<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=APP188" data-role="none" class="btnPink">상품 더보기</a>
+					
+					<div class="benefitBox">
+						<h3><img src="../../images/thismonth_201612/stit_benefit02.png" alt="기분 좋은 혜택 추천 상품 특전"></h3>
+						<ul>
+							<li style="width:100%">
+								<div>
+									<span style=" display:block;background-color:#eeeeee"><img src="../../images/thismonth_201612/img_benefit04.png" alt="" style="width:auto;height:89px"></span>
+									<p>SM면세점 1만원 특별 적립금</p>
+								</div>
+							</li>
+						</ul>
+						<p>* 특전 적용이 상이 하므로 자세한 사항은 일정표를 통해 확인 부탁드립니다.</p><!-- 20160629 수정 -->
+					</div>
+				</div>
+				<!-- // 셀렉 탭4 -->
+				
+				<!-- 셀렉 탭5 -->
+				<div style="display:none">
+					<ul class="areaCardList">
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=APP763&packageMasterStartMonth=201608&packageStartAirCode=LJ&subject=%E2%98%85" class="inBox" data-role="none">
+								<span class="img">
+									<img src="../../images/thismonth_201612/img_bestseller21.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">세부 5일_제이파크</strong>
+									<p>아동반값+호핑투어</p>
+									<strong class="money">850,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=APP762&packageMasterStartMonth=201608&packageStartAirCode=BX&subject=%E2%98%85" class="inBox" data-role="none">
+								<span class="img">
+									<img src="../../images/thismonth_201612/img_bestseller22.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">세부 5일_샹그릴라</strong>
+									<p>호핑투어+전신마사지</p>
+									<strong class="money">940,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=APP731&packageMasterStartMonth=201608&subject=%ED%95%98%EB%82%98" class="inBox" data-role="none">
+								<span class="img">
+									<img src="../../images/thismonth_201612/img_bestseller23.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">보라카이 4,5일_헤난가든</strong>
+									<p>리조트디너+세일링보트+디몰</p>
+									<strong class="money">709,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=APP701&packageMasterStartMonth=201608&subject=%ED%98%B8%ED%85%94%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C" class="inBox" data-role="none">
+								<span class="img">
+									<img src="../../images/thismonth_201612/img_bestseller24.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">마닐라 5일_크림슨 호텔</strong>
+									<p>푸닝/따가이따이트레킹 /팍상한</p>
+									<strong class="money">699,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+					</ul>
+					
+					<p style="margin-bottom:15px">※유류할증료 / 텍스 포함 총 금액기준</p>
+					
+					<a href="http://m.hanatour.com/application/package/package_masterList.jsp?packageRegionId=A&packageNationId=PH&packageCategoryId=P&packageOverseasStartId=PUS" data-role="none" class="btnPink">상품 더보기</a>
+					
+					<div class="benefitBox">
+						<h3><img src="../../images/thismonth_201612/stit_benefit02.png" alt="기분 좋은 혜택 추천 상품 특전"></h3>
+						<ul>
+						<li style="width:100%">
+							<div>
+								<span style=" display:block;background-color:#eee"><img src="../../images/thismonth_201612/img_benefit04.png" alt="" style="width:auto;height:89px"></span>
+								<p>SM면세점 1만원 특별 적립금</p>
+							</div>
+						</li>
+					</ul>
+						<p>* 특전 적용이 상이 하므로 자세한 사항은 일정표를 통해 확인 부탁드립니다.</p><!-- 20160629 수정 -->
+					</div>
+				</div>
+				<!-- // 셀렉트 5 -->
+				
+			</div>
+			
+			
+			<article class="benefitBanner">
+				<a href="http://mair.hanatour.com/promotion/eventPromotionDetail?eventCode=MB0425&eventCodeType=M&utm_source=mpflight&utm_medium=banner&utm_term=mobilepgflight&utm_content=mobile&utm_campaign=philippines" data-role="none" class="bgico01">
+					<strong>세부, 보라카이 최저가 항공권</strong>
+					<p>최저가가 아니면, 차액의 300% 보상!<br>하나투어 2,000 마일리지 추가 적립</p>
+				</a>
+				<a href="http://m.hanatour.com/application/travelingEvent/travelingEvent_promotionHotelDetail.jsp?prdCode=H01594&utm_source=mphotel&utm_medium=banner&utm_term=mobilephotel&utm_content=mobile&utm_campaign=philippines" data-role="none" class="bgico02">
+					<strong>마닐라, 세부, 보라카이 추천 호텔</strong>
+					<p>하나투어 10,000마일리 추가 적립</p>
+				</a>
+			</article>
+		</div>
+		<!-- // 강력추천 -->
+			
+		
+		<!-- 제대로 알기 -->
+		<div class="recom_inCont" style="display:none">
+			<div class="contTop01">
+				<h3><img src="../../images/thismonth_201612/tit_cont_top01.png" alt="필리핀 제대로알기"></h3>
+				<p>7,107개 섬으로 이뤄진 필리핀!<br>다양한 매력과 다채로운 경험을 만날 수 있는,<br>남녀노소 누구나 만족할 수 있는 여행지 입니다.</p>
+			</div>
+			
+			<ul class="monthCityList marT10">
+				<li>
+					<!-- 이미지 슬라이더 -->
+					<div class="swiper-container global_swiper">
+						<a href="#" class="big5_prev" data-role="none"></a>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="../../images/thismonth_201612/img_city01_03.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="../../images/thismonth_201612/img_city01_02.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="../../images/thismonth_201612/img_city01_01.jpg" alt=""></div>
+						</div>
+						<div class="swiper-pagination" style="display:none"></div>
+						<div class="swiper-pag-num"><span>1</span> / 2</div>
+						<a href="#" class="big5_next" data-role="none"></a>
+					</div>
+					<!-- // 이미지 슬라이더 -->
+					<div class="txtCont">
+						<span class="storyTit">STORY 1. 세부 CEBU</span>
+						<strong>가족여행 스테디셀러, 세부 CEBU</strong>
+						<p>아동을 동반한 가족여행객들에게 짧은비행시간과 편리한 리조트 시설로 꾸준한 사랑을 받아오고 있는 지역입니다. 투명한 바다, 짜릿한 해양스포츠, 쇼핑과 나이트라이프까지! 남녀노소 누구나 좋아하는 즐길 거리가 모여있어 관광과 휴양을 한 번에 느낄 수 있습니다. 드넓은 바다로 나가 온 몸으로 바다를 느끼며 스트레스를 날려버릴 세부로의 여행은 어떨까요. </p>
+					</div>
+					
+				</li>
+				
+				<li>
+					<!-- 이미지 슬라이더 -->
+					<div class="swiper-container global_swiper">
+						<a href="#" class="big5_prev" data-role="none"></a>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="../../images/thismonth_201612/img_city01_06.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="../../images/thismonth_201612/img_city01_05.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="../../images/thismonth_201612/img_city01_04.jpg" alt=""></div>
+						</div>
+						<div class="swiper-pagination" style="display:none"></div>
+						<div class="swiper-pag-num"><span>1</span> / 2</div>
+						<a href="#" class="big5_next" data-role="none"></a>
+					</div>
+					<!-- // 이미지 슬라이더 -->
+					<div class="txtCont">
+						<span class="storyTit">STORY 2. 보라카이 BORACAY</span>
+						<strong>너는 나만… 보라카이 BORACAY</strong>
+						<p>눈이 시리도록 푸른 바다, 설탕같이 곱고 새하얀 모래를 만나는 순간 모든 여행의 피로를 내려 놓을 수 있는 곳. 낮에는 수정처럼 빛나는 화이트비치에서 해변욕을 즐기거나, 리조트 수영장에서 시간을 보내고, 해질녘, 보라카이의 명물인 무동력 해양스포츠, 세일링 보트(파라우) 위에 몸을 실어 붉게 물든 보라카이 바다를 눈에 담아 볼 수도 있습니다. 세계의 젊은이들이 모여 젊음의 열기를 발산하는 보라카이에서 즐거운 에너지를 얻어오세요.</p>
+					</div>
+					
+				</li>
+				
+				<li>
+					<!-- 이미지 슬라이더 -->
+					<div class="swiper-container global_swiper">
+						<a href="#" class="big5_prev" data-role="none"></a>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="../../images/thismonth_201612/img_city01_09.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="../../images/thismonth_201612/img_city01_08.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="../../images/thismonth_201612/img_city01_07.jpg" alt=""></div>
+						</div>
+						<div class="swiper-pagination" style="display:none"></div>
+						<div class="swiper-pag-num"><span>1</span> / 2</div>
+						<a href="#" class="big5_next" data-role="none"></a>
+					</div>
+					<!-- // 이미지 슬라이더 -->
+					<div class="txtCont">
+						<span class="storyTit">STORY 3. 보홀 BOHOL</span>
+						<strong>동화 같은 경험이 펼쳐지는, 보홀 BOHOL </strong>
+						<p>비교적 관광객들의 발길이 많이 닿지 않아 자연 그대로 아름다울 뿐 만 아니라, 섬 전체가 산호보호구역으로 볼거리가 풍성한 수중환경은 물론 웅장한 경관을 자랑하는 1천 여개의 원추형 언덕들까지 원시 자연환경의 아름다움을 고스란히 간직하고 있습니다. 세계에서 가장 작은 타르시어원숭이와 초콜릿힐이라는 달콤한 별명이 붙은 스팟까지 상상 속에서만 보았던 동화 같은 경험이 실재하는 곳입니다.</p>
+					</div>
+					
+				</li>
+				
+				<li>
+					<!-- 이미지 슬라이더 -->
+					<div class="swiper-container global_swiper">
+						<a href="#" class="big5_prev" data-role="none"></a>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="../../images/thismonth_201612/img_city01_12.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="../../images/thismonth_201612/img_city01_11.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="../../images/thismonth_201612/img_city01_10.jpg" alt=""></div>
+						</div>
+						<div class="swiper-pagination" style="display:none"></div>
+						<div class="swiper-pag-num"><span>1</span> / 2</div>
+						<a href="#" class="big5_next" data-role="none"></a>
+					</div>
+					<!-- // 이미지 슬라이더 -->
+					<div class="txtCont">
+						<span class="storyTit">STORY 4. 마닐라 MANILA</span>
+						<strong>역동하는 메트로시티, 마닐라MANILA</strong>
+						<p>기네스북에 등재된 세계에서 가장 작은 활화산 따가이따이, 세계문화유산인 성어거스틴과 같은 관광명소 뿐만 아니라 시티오브드림 마닐라, 리조트월드 마닐라와 같은 복합 엔터테인멘트센터까지 과거와 현재가 공존하며 끊임없이 역동하는 필리핀 허브도시, 필리핀의 역사와 문화가 농축된 곳입니다.
+7천가지 필리핀 섬 매력의 중심, 마닐라! 필리핀 여행의 시작과 끝이 만나는 곳입니다.</p>
+					</div>
+					
+				</li>
+				<li>
+					<!-- 이미지 슬라이더 -->
+					<div class="swiper-container global_swiper">
+						<a href="#" class="big5_prev" data-role="none"></a>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="../../images/thismonth_201612/img_city01_13.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="../../images/thismonth_201612/img_city01_14.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="../../images/thismonth_201612/img_city01_15.jpg" alt=""></div>
+						</div>
+						<div class="swiper-pagination" style="display:none"></div>
+						<div class="swiper-pag-num"><span>1</span> / 2</div>
+						<a href="#" class="big5_next" data-role="none"></a>
+					</div>
+					<!-- // 이미지 슬라이더 -->
+					<div class="txtCont">
+						<span class="storyTit">STORY 5. 팔라완 PALAWAN</span>
+						<strong>천혜의 자연을 품다, 팔라완 PALAWAN</strong>
+						<p>유네스코 지정 세계 문화 유산인 지하강은 세계에서 가장 긴 지하강으로 제한적으로만 관광객들에게 문을 열고 있어 그 신비를 더욱 감추고 있습니다. 아름다운 해변과 산호초가 발달한 혼다베이. 야생돌고래를 만날 수 있는 술루해. 하늘,강,숲속에서 사방이 반짝이는 환상의 경험을 할 수 있는 이화익강반딧불이 투어까지... 한번 빠지면 헤어나올 수 없는 이 곳 팔라완은 블랙혹같은 매력의 섬입니다.</p>
+					</div>
+					
+				</li>
+			</ul>
+		</div>
+		<!-- // 제대로 알기 -->
+		
+		<!-- 추천 리조트 -->
+		<div class="recom_inCont" style="display:none">
+			<div class="contTop02">
+				<h3><img src="../../images/thismonth_201612/tit_cont_top02.png" alt=""></h3>
+			</div>
+			
+			<ul class="monthCityList marT10">
+				<li>
+					<h4 class="gray">세부</h4>
+					<!-- 이미지 슬라이더 -->
+					<div class="swiper-container global_swiper">
+						<a href="#" class="big5_prev" data-role="none"></a>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="../../images/thismonth_201612/img_best_ty03.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="../../images/thismonth_201612/img_best_ty02.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="../../images/thismonth_201612/img_best_ty01.jpg" alt=""></div>
+						</div>
+						<div class="swiper-pagination" style="display:none"></div>
+						<div class="swiper-pag-num"><span>1</span> / 2</div>
+						<a href="#" class="big5_next" data-role="none"></a>
+					</div>
+					<!-- // 이미지 슬라이더 -->
+					<div class="logoBox"><img src="../../images/thismonth_201612/img_hotel_logo01.png" alt=""></div>
+					<div class="txtCont">
+						<strong>온 가족이 함께 즐기는 무한 워터파크!<br>제이파크 아일랜드 리조트</strong>
+						<p>한국인이 사랑하는 세부의 대표적인 리조트로, 온 가족이 즐길 수 있는 거대 규모의 워터파크와 각종 부대시설을 갖추고 있습니다. 슈와 라둥이 뿐만 아니라 유명 셀럽들이 세부를 찾을 때마다 가장 즐겨 찾는 리조트이기도 하며, 최근 각종 매체를 통해 소개되며 더욱 사랑 받고 있습니다. 프리미엄 워터파크 리조트에서 무제한으로 워터파크를 즐겨보세요</p>
+						<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=APP174&packageMasterStartMonth=201608" data-role="none" class="btnPink">자세히보기</a>
+					</div>
+				</li>
+				<li>
+					<h4 class="gray">보라카이</h4>
+					<!-- 이미지 슬라이더 -->
+					<div class="swiper-container global_swiper">
+						<a href="#" class="big5_prev" data-role="none"></a>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="../../images/thismonth_201612/img_best_ty06.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="../../images/thismonth_201612/img_best_ty05.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="../../images/thismonth_201612/img_best_ty04.jpg" alt=""></div>
+						</div>
+						<div class="swiper-pagination" style="display:none"></div>
+						<div class="swiper-pag-num"><span>1</span> / 2</div>
+						<a href="#" class="big5_next" data-role="none"></a>
+					</div>
+					<!-- // 이미지 슬라이더 -->
+					<div class="logoBox"><img src="../../images/thismonth_201612/img_hotel_logo02.png" alt=""></div>
+					<div class="txtCont">
+						<strong>보라카이 최고의 인기리조트를 보유한 헤난 그룹! </strong>
+						<p>헤난 가든리조트,  후문이 바로 디 몰과 연결되어 있어, 디몰의 밤낮을 모두 놓치고 싶지 않은 젊은이들의 사랑을 받는 리조트입니다.<br>
+헤난 라군리조트, 객실에서 시원한 수영장이 보여, 비치뷰가 없더라도 시원한 풍경을 즐길 수 있습니다. 커플여행객들에게 특히나 사랑받는 라군리조트에서 로맨틱한 추억을 만들어보세요.<br>리젠시 비치리조트, 화이트 비치의 한 가운데 위치한 보라카이를 대표하는 리조트. 꾸준한 리노베이션으로 객실과 시설 관리에 투자를  해 언제나 여행객들에게 인기 있는 리조트입니다.</p>
+						<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=APP110&packageMasterStartMonth=201608&packageSearchName=헤난" data-role="none" class="btnPink">자세히보기</a>
+					</div>
+				</li>
+				<li>
+					<h4 class="gray">보홀</h4>
+					<!-- 이미지 슬라이더 -->
+					<div class="swiper-container global_swiper">
+						<a href="#" class="big5_prev" data-role="none"></a>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="../../images/thismonth_201612/img_best_ty09.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="../../images/thismonth_201612/img_best_ty08.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="../../images/thismonth_201612/img_best_ty07.jpg" alt=""></div>
+						</div>
+						<div class="swiper-pagination" style="display:none"></div>
+						<div class="swiper-pag-num"><span>1</span> / 2</div>
+						<a href="#" class="big5_next" data-role="none"></a>
+					</div>
+					<!-- // 이미지 슬라이더 --> 
+					<div class="logoBox"><img src="../../images/thismonth_201612/img_hotel_logo03.png" alt=""></div>
+					<div class="txtCont">
+						<strong>2015년 신규 오픈한 특급리조트, 헤난 리조트 알로나 비치</strong>
+						<p>보라카이 럭셔리 리조트 체인으로 한국인에게도 사랑받는 헤난그룹이 보홀에 오픈한 리조트로 팡라오 섬에서 가장 아름다운 해변인 알로나비치에 자리하고 있으며 특급 리조트의 럭셔리한 시설과 품격 있는 서비스로 여행객들을 맞이합니다. 리조트 전체를 감싸고 있는 총 3개의 풀장이 이색적인 풍광을 자아내며, 리조트 밖에는현지식 음식점, 기념품샵 등 자유여행객을 사로잡는 이색 체험거리들이 가득합니다.</p>
+						<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=APP160&packageMasterStartMonth=201608&packageSearchName=헤난" data-role="none" class="btnPink">자세히보기</a>
+					</div>
+				</li>
+				<li>
+					<h4 class="gray">마닐라</h4>
+					<!-- 이미지 슬라이더 -->
+					<div class="swiper-container global_swiper">
+						<a href="#" class="big5_prev" data-role="none"></a>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="../../images/thismonth_201612/img_best_ty12.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="../../images/thismonth_201612/img_best_ty11.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="../../images/thismonth_201612/img_best_ty10.jpg" alt=""></div>
+						</div>
+						<div class="swiper-pagination" style="display:none"></div>
+						<div class="swiper-pag-num"><span>1</span> / 2</div>
+						<a href="#" class="big5_next" data-role="none"></a>
+					</div>
+					<!-- // 이미지 슬라이더 -->
+					<div class="logoBox"><img src="../../images/thismonth_201612/img_hotel_logo04.png" alt=""></div>
+					<div class="txtCont">
+						<strong>많은 유명 인사들이 다녀간<br>고풍스러운 마닐라 호텔</strong>
+						<p>마닐라에 위치한 '마닐라 호텔'이기에 찾기 힘든 곳이지만, 이름을 쉽게 외울 수 있어 의외로 많은 이들이 찾는 곳이 바로 마닐라 호텔입니다. 리잘 공원을 비롯한 인트라무로스 지역을 둘러보기 좋은 위치에 있어 꼭 도심지를 선호하지 않는다면 적당한 가격과 고급스러운 서비스를 한적하게 즐길 수 있습니다.</p>
+						<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=APP100&packageMasterStartMonth=201608&packageSearchName=업그레이드" data-role="none" class="btnPink">자세히보기</a>
+					</div>
+				</li>
+			</ul>
+			
+		</div>
+		<!-- // 추천 리조트 -->
+		
+		
+		<!-- 항공사 -->
+		<div class="recom_inCont" style="display:none">
+			
+			<div class="contTop02">
+				<h3><img src="../../images/thismonth_201612/tit_cont_top_onc.png" alt=""></h3>
+			</div>
+		
+			<!-- 삭제
+			<ul class="cont_inTab" style="margin-top:0">
+				<li class="on"><a href="#" data-role="none">필리핀 항공</a></li>
+				<li class=""><a href="#" data-role="none">에어아시아</a></li>
+			</ul>-->
+			
+			<!-- 필리핀 -->
+			<div>
+				<ul class="monthCityList marT10">
+					<li>
+						<h4 class="gray">75년 전통의 서비스 필리핀 항공</h4>
+						<div class="swiper-slide"><img src="../../images/thismonth_201612/img_best_air01.jpg" alt=""></div>
+						<div class="logoBox"><img src="../../images/thismonth_201612/img_air_logo01.png" alt=""></div>
+						<div class="txtCont">
+							<strong><span style="color:#c83d67; display:block; margin-bottom:5px">Your Home in the sky!</span>필리핀 항공은 집처럼 편안한 서비스를 제공하고자 최선을 다하는 필리핀 대표 풀서비스항공사 (Full Service Carrier)입니다.</strong>
+						
+							<ul class="">
+								<li>안전함 70년이 넘는 전통의 아시아 최초의 항공사이며, 편안하고 안전한 운항을 보장합니다.</li>
+								<li>쾌적함 국제선 및 국내선 구간 전 노선에 최신 기종을 투입하여, 쾌적한 비행을 약속 드립니다.</li>
+								<li>특별함 한국인 승객을 위해 한국인 승무원이 탑승하여 불편함을 최소화 해드립니다.</li>
+								<li>기내식 스카이스캐너 선정 TOP 5 기내식 서비스를 제공합니다. (한식, 산미구엘 맥주 등)</li>
+								<li>마일리지 '마부하이 마일즈'는 적립 마일에 따라 무료 항공권, 좌석 승급, 추가 수하물 허용 등 다양한 서비스를 제공합니다.</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- 필리핀 -->
+			
+			<!-- 에어아시아 -->
+			<div style="display:none">
+				<ul class="monthCityList marT10">
+					<li>
+						<h4 class="gray">알뜰 실속파 추천 필리핀 에어아시아</h4>
+						<div class="swiper-slide"><img src="../../images/thismonth_201612/img_best_air02.jpg" alt=""></div>
+						<div class="logoBox"><img src="../../images/thismonth_201612/img_air_logo02.png" alt=""></div>
+						<div class="txtCont">
+							<strong><span style="color:#c83d67; display:block; margin-bottom:5px">The World Best Low Cost Carrier</span>Skytrax가 선정한, 2009년부터 2015년까지 7년 연속 세계 최고의 저비용항공사! 최소한의 서비스로 알뜰한 여행을 떠나고 싶은 이들에게 추천!</strong>
+						
+							<ul class="">
+								<li>전문성 전 세계의 다양한 노선운항을 통해 축적한, 세계 최고의 저비용항공사입니다.</li>
+								<li>경쾌함 에어아시아 특유의 경쾌하고 밝은 승무원들이 서비스를 제공합니다.</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<p class="airBtmTxt"><strong>※ 저비용 항공사 Low Cost Carrier(LCC)</strong>저비용 항공사는 기내 서비스를 줄이거나 보유 항공기의 기종을 통일하여 유지관리비를 줄이는 등의 효율화와 비용절감을 통해 낮은 운임으로 운행하는 항공사입니다.</p>
+				
+			</div>
+			<!-- // 에어아시아 -->
+		</div>
+		<!-- // 항공사 -->
+		
+		<!-- 이벤트 -->
+		<div class="recom_inCont" style="display:none">
+			<ul class="cont_inTab02">
+				<li class="on"><a href="#" data-role="none">SNS 공유하기</a></li>
+				<li><a href="#" data-role="none">SM면세점</a></li>
+			</ul>
+			
+			<!-- sns공유 -->
+			<div class="eventSnsCont">
+				<div class="insnsTop">
+					<h3><img src="../../images/thismonth_201612/tit_event01.png" alt=""></h3>
+					<p>이벤트 기간 : 2016년 8월 1일(월) ~ 8월 31일(수)<br>당첨자 발표 : 2016년 9월 9일(금)</p>
+					<a href="http://m.hanatour.com/application/eventCoupon/eventCoupon_comment.jsp?eventNum=22766" data-role="none" target="_blank" title="새창" class="btnPink">이벤트 바로가기</a>
+				</div>
+				<div class="btmBox"><span><img src="../../images/thismonth_201612/img_event01.png" alt=""></span></div>
+			</div>
+			<!-- // sns공유 -->
+			
+			<!-- sm면세점 -->
+			<div class="eventSmCont" style="display:none">
+				<h3><img src="../../images/thismonth_201612/tit_event02.png" alt=""></h3>
+				
+				<div class="special" style="margin-top:-28px">
+					<h4>특별 적립금</h4>
+					<a href="http://www.smdutyfree.com/fpr105.do?goTo=eventDetail&evtCd=20160500185" data-role="none" target="_blank" title="새창"><img src="../../images/thismonth_201612/img_event02_01.png" alt=""></a>
+				</div>
+				
+				<div class="special">
+					<h4>할인</h4>
+					<a href="http://www.smdutyfree.com" data-role="none" target="_blank" title="새창"><img src="../../images/thismonth_201612/img_event02_02.png" alt=""></a>
+				</div>
+				
+				<div class="special">
+					<h4>최저가보상제·스마트오더</h4>
+					<a href="http://m.smdutyfree.com/coupon/etc/smartorder.html" data-role="none" target="_blank" title="새창"><img src="../../images/thismonth_201612/img_event02_03.png" alt=""></a>
+					<a href="http://www.smdutyfree.com/fpr005.do?goTo=eventDetail&evtCd=20160600201" data-role="none" target="_blank" title="새창"><img src="../../images/thismonth_201612/img_event02_04.png" alt=""></a>
+				</div>
+				
+				<div class="special">
+					<h4>VIP플래티넘 혜택</h4>
+					<a href="http://m.hanatour.com/sm/benefit.hnt" data-role="none" target="_blank" title="새창"><img src="../../images/thismonth_201612/img_event02_05.png" alt=""></a>
+				</div>
+				
+				<div class="special">
+					<h4>추천 면세품</h4>
+					<a href="http://www.smdutyfree.com/fpr005.do?goTo=eventDetail&evtCd=201607002529&smdfExhCode=mha_heal" data-role="none" target="_blank" title="새창"><img src="../../images/thismonth_201612/img_event02_06.png" alt=""></a>
+				</div>
+				
+			</div>
+			<!-- // sm면세점 -->
+		
+		</div>
+		<!-- // 이벤트 -->
+		
+		
+	</div>
+	<!-- //컨텐츠 영역 -->
+	
+	<footer class="newFoot">
+		<ul>
+			<li><a href="#" data-role="none">로그인</a></li>
+			<li><a href="#" data-role="none">PC버전</a></li>
+			<li><a href="#" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+		</ul>
+		<div>
+			<a href="#" data-role="none">이용약관</a>|
+			<a href="#" data-role="none">개인정보처리방침</a>|
+			<a href="#" data-role="none">여행약관</a>|
+			<a href="#" data-role="none">사업자정보확인</a>
+		</div>
+		<address>
+				㈜ 하나투어 | 대표자: 김진국 | 사업자등록번호 : 102-81-39440<br>
+				통신판매업신고번호 : 종로01-1806호 | 개인정보관리 책임자 : 박성재<br>
+				[110-160]서울특별시 종로구 인사동 5길 41 ㈜ 하나투어<br>
+				하나투어상담센터 : <a href="tel:1577-1233" data-role="none">1577-1233</a> | FAX : 02-734-0392<br>
+				이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> | 호스팅 서비스 사업자 : ㈜하나투어<br>
+				관광사업자 등록번호 : 제1933-000006호 | 영업보증보험 : 22억 1천만원 가입<br>
+				COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+		</address>
+	</footer>
+	
+</div>
+
+
+</body>
+</html>
+

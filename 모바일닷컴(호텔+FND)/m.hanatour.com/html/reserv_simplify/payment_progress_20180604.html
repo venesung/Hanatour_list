@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>결제진행 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="../../css/common_reserv.css"><!-- 예약관련 공통컨텐츠 신규생성 -->
+
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-2.1.3.min.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common_new.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/pack/m.booking.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+	<header id="header"><!-- 띠배너 보일경우 class="tBanTy" 추가 -->
+		<div class="inner">
+			<h1><a href="#none" data-role="none"><img src="../../images/common/btn_nlogo.png" alt="하나투어"></a></h1>
+			<a href="#none" id="btnMenu" data-role="none"><img src="../../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+			<a href="#none" id="btnMyhome" data-role="none"><img src="../../images/common/btn_hdright.png" alt="마이홈"></a>
+		</div>
+	</header>
+	<div class="headerMargin"></div>
+	
+	<!-- 컨텐츠 영역 -->
+	<div id="container">
+		<h2 class="pagTit">결제진행</h2>
+		
+		<!-- 예약결제 간소화 simplify -->
+		<section class="reserv_section simplify">
+			<!-- 예약코드 -->
+			<div class="topCode">
+				<strong>예약코드</strong>
+				<b>RP1617379191</b>
+			</div>
+			<!-- // 예약코드 -->
+			
+			<!-- 예약상품정보 -->
+			<div class="reserv_content">
+				<h3 class="tit_reserv">예약상품정보</h3>
+				<div>
+					<strong class="stitProd marB0">[SMART CHOICE] [9/9 선발권 특가] 방콕/파타야 5일 최대규모와 역사- 로얄클리프</strong>
+					
+					<!--div class="mnTotal payType">
+						<strong class="mnTit">총금액</strong>
+						<b>1,260,000<span>원</span></b>
+						<p>유료할증료/제세공과금 포함</p>
+						<em>하나투어 마일리지<span class="c_red">7,990ⓜ</span> 적립예정</em>
+					</div-->
+				</div>
+			</div>
+			<!-- // 예약상품정보 -->
+			
+			<!-- 혜택/할인적용 -->
+			<div class="reserv_content">
+				<h3 class="tit_reserv">할인/혜택적용</h3>
+				<div>
+					<!-- 쿠폰 -->
+					<div class="beneDiscount">
+						<h4>쿠폰(<span class="c_red">3</span>)<a href="#pop_coupon.html" class="cm_miniBtn popUpFull" title="자세히보기"></a></h4>
+						<div class="bd_inrig">
+							<strong>-30,000<span>원</span></strong>
+							<button type="button" class="miniBtn02 on" title="펼치기"></button><!-- 버튼클릭시 class="on"추가 아래 block -->
+						</div>
+						
+						<!-- 펼쳐지는 영역 -->
+						<div class="beneDis_btmCont" style="display:block">
+							<div>
+								<!-- 쿠폰선택 -->
+								<div class="rigBtn01">
+									<select class="selectBox" title="쿠폰선택" style=" padding-right:30px">
+										<option selected disabled>쿠폰을 선택하세요.쿠폰을 선택하세요.쿠폰을 선택하세요.</option>
+										<option>10% 할인쿠폰</option>
+										<option>20% 할인쿠폰</option>
+									</select>
+									<button type="button" class="smBtn">쿠폰적용</button>
+								</div>
+								<!-- // 쿠폰선택 -->
+							</div>
+						</div>
+						<!-- // 펼쳐지는 영역 -->
+					</div>
+					<!-- // 쿠폰 -->
+					
+					<!-- 하나투어마일리지 조회전 -->
+					<div class="beneDiscount">
+						<h4>하나투어마일리지<a href="#pop_mileage.html" class="cm_miniBtn popUpFull" title="자세히보기"></a></h4>
+						<div class="bd_inrig">
+							<strong title="마일리지" class="ico_mp mile">0</strong>
+							<button type="button" class="miniBtn02 on" title="펼치기"></button><!-- 버튼클릭시 class="on"추가 아래 beneDis_btmCont block -->
+						</div>
+						
+						<!-- 펼쳐지는 영역 -->
+						<div class="beneDis_btmCont">
+							<div>
+								<h5>사용가능 마일리지 조회 <a href="#.html" class="stitBtn popUpFull">휴대폰인증</a></h5>
+								
+								<!-- 모두사용 있는경우 -->
+								<div class="rigCheck01">
+									<div class="ico_ip mile"><input type="tel" class="inputTxt" title="사용할 마일리지"></div>
+									<label><input type="checkbox" class="redCheck"> <span>모두사용</span></label>
+								</div>
+								<!-- // 모두사용 있는경우 -->
+								
+								<p class="sTxt01">1,000ⓜ이상부터 사용가능합니다.</p>
+								<button type="button" class="addBtn">사용자추가</button>
+							</div>
+						</div>
+						<!-- // 펼쳐지는 영역 -->
+					</div>
+					<!-- // 하나투어마일리지 조회전 -->
+					
+					<!-- 하나투어마일리지 조회후-->
+					<div class="beneDiscount">
+						<h4>하나투어마일리지<a href="#pop_mileage.html" class="cm_miniBtn popUpFull" title="자세히보기"></a></h4>
+						<div class="bd_inrig">
+							<strong title="마일리지" class="ico_mp mile">0</strong>
+							<button type="button" class="miniBtn02 on" title="펼치기"></button><!-- 버튼클릭시 class="on"추가 아래 beneDis_btmCont block -->
+						</div>
+						
+						<!-- 펼쳐지는 영역 -->
+						<div class="beneDis_btmCont">
+							<div>
+								<h5><b>김하나</b>님 사용가능 마일리지 <strong class="ico_mp mile c_red" title="마일리지">30,000</strong></h5>
+								
+								<div class="rigCheck01">
+									<div class="ico_ip mile"><input type="tel" class="inputTxt" title="사용할 마일리지"></div>
+									<label><input type="checkbox" class="redCheck"> <span>모두사용</span></label>
+								</div>
+								
+								<p class="sTxt01">1,000ⓜ이상부터 사용가능합니다.</p>
+							</div>
+							
+							<!-- 추가영역 div 추가 -->
+							<div>
+								<button type="button" class="delBtn" title="삭제하기"></button>
+								<h5>사용가능 마일리지 조회 <a href="#.html" class="stitBtn popUpFull">휴대폰인증</a></h5>
+							
+								<div class="rigCheck01">
+									<div class="ico_ip mile"><input type="tel" class="inputTxt" title="사용할 마일리지"></div>
+									<label><input type="checkbox" class="redCheck"> <span>모두사용</span></label>
+								</div>
+								<p class="sTxt01">1,000ⓜ이상부터 사용가능합니다.</p>
+								<button type="button" class="addBtn">사용자추가</button>
+							</div>
+							<!-- 추가영역 -->
+							
+						</div>
+						<!-- // 펼쳐지는 영역 -->
+					</div>
+					<!-- // 하나투어마일리지 조회후 -->
+					
+					<!-- OK캐쉬백 -->
+					<div class="beneDiscount">
+						<h4>OK캐쉬백<a href="#pop_okcash.html" class="cm_miniBtn popUpFull" title="자세히보기"></a></h4>
+						<div class="bd_inrig">
+							<strong title="포인트" class="ico_mp point">0</strong>
+							<button type="button" class="miniBtn02 on" title="펼치기"></button>
+						</div>
+						
+						<!-- 펼쳐지는 영역 -->
+						<div class="beneDis_btmCont">
+							<div>
+								<h5>사용가능 포인트 <a href="#pop_okcash_point.html" class="stitBtn popUpFull">포인트조회</a></h5><!-- 조회전 -->
+								
+								<div class="rigCheck01">
+									<div class="ico_ip point"><input type="tel" class="inputTxt" title="사용할 포인트"></div>
+									<label><input type="checkbox" class="redCheck"> <span>모두사용</span></label>
+								</div>
+							</div>
+							
+							<div>
+								<h5>사용가능 포인트 <strong class="ico_mp mile c_red" title="포인트">30,000</strong></h5><!-- 조회후 -->
+								
+								<div class="rigCheck01">
+									<div class="ico_ip point"><input type="tel" class="inputTxt" title="사용할 포인트"></div>
+									<label><input type="checkbox" class="redCheck"> <span>모두사용</span></label>
+								</div>
+							</div>
+						</div>
+						<!-- // 펼쳐지는 영역 -->
+					</div>
+					<!-- // OK캐쉬백 -->
+					
+					<!-- 하나투어상품권 -->
+					<div class="beneDiscount">
+						<h4>하나투어상품권<a href="#pop_gift.html" class="cm_miniBtn popUpFull" title="자세히보기"></a></h4>
+						<div class="bd_inrig">
+							<strong>0<span>원</span></strong>
+							<button type="button" class="miniBtn02 on" title="펼치기"></button>
+						</div>
+						
+						<!-- 펼쳐지는 영역 -->
+						<div class="beneDis_btmCont">
+							<div>
+								<button type="button" class="delBtn" title="삭제하기" style="top:8px"></button>
+								<h5 class="stit_ip">상품권번호</h5>
+								<input type="tel" title="상품권 번호" class="inputTxt marB10">
+								
+								<h5 class="stit_ip">비밀번호</h5>
+								<div class="rigBtn02">
+									<input type="tel" title="비밀번호" class="inputTxt pw">
+									<button type="button" class="smBtn">인증</button>
+								</div>
+								
+								<h5>사용가능 금액 <strong class="c_red">1,000,000<span>원권</span></strong></h5>
+								
+								<div class="rigCheck01">
+									<div class="ico_ip"><input type="tel" class="inputTxt" title="사용금액"><span>원</span></div>
+									<label><input type="checkbox" class="redCheck"> <span>모두사용</span></label>
+								</div>
+								<p class="sTxt01">60%이상 사용하셔야 사용가능합니다.<br>(최소사용금액:<span class="c_red">600,000원</span>)</p>
+								
+								<button type="button" class="addBtn">상품권추가</button>
+							</div>
+							
+							<!-- 환불방법 -->
+							<div class="refundCont">
+								<h5><b>환불방법</b></h5>
+								<div class="refundSelect">
+									<label class="comRadio"><input type="radio" name="refund" class="redCheck" checked><span>계좌환불</span></label>
+									<label class="comRadio"><input type="radio" name="refund" class="redCheck"><span>상품권재발행</span></label>
+								</div>
+								
+								<p class="sTxt01">※ 실사용금액과 상품권금액의 차액 또는 결제취소시의 환불방법을 선택하여 기재해주세요.</p>
+								
+								<!-- 계좌환불 -->
+								<div class="refund_inTab">
+									<select class="selectBox" title="은행선택">
+										<option selected disabled>환불받을 은행을 선택하세요</option>
+										<option>신한은행</option>
+										<option>국민은행</option>
+									</select>
+									<input type="tel" class="inputTxt" title="계좌번호" placeholder="계좌번호를 입력해주세요">
+									
+									<select class="selectBox" title="예금주선택">
+										<option selected disabled>예금주를 선택해주세요</option>
+										<option>유승준</option>
+										<option>박성우</option>
+									</select>
+									<input type="tel" class="inputTxt" title="연락처" placeholder="연락처를 입력해주세요&nbsp;&nbsp;예)01012345678">
+								</div>
+								<!-- // 계좌환불 -->
+								
+								<!-- 상품권재발행 -->
+								<div class="refund_inTab" style="display:none">
+									<h6>수신인정보</h6>
+									<select class="selectBox" title="수신인선택">
+										<option selected disabled>수신인을 선택해주세요</option>
+										<option>김하나</option>
+										<option>박하나</option>
+									</select>
+									<input type="tel" class="inputTxt marB10" title="연락처" placeholder="연락처를 입력해주세요&nbsp;&nbsp;예)01012345678">
+									
+									<h6>주소정보</h6>
+									<div class="addressBox">
+										<input type="text" class="inputTxt" title="주소">
+										<a href="#pop_address.html" class="popUpFull">주소검색</a>
+									</div>
+									<input type="text" class="inputTxt" title="상세주소" placeholder="상세주소를 입력해주세요">
+								</div>
+								<!-- // 상품권재발행 -->
+							</div>
+							<!-- // 환불방법 -->
+						</div>
+						<!-- // 펼쳐지는 영역 -->
+					</div>
+					<!-- // 하나투어상품권 -->
+				</div>
+			</div>
+			<!-- // 혜택/할인적용 -->
+			
+			<!-- 결제금액 정보 -->
+			<div class="reserv_content">
+				<h3 class="tit_reserv">결제금액 정보</h3>
+				<div>
+				
+					<!-- 20180604 작업 -->
+					<div class="payTotal_box">
+						<div>
+							<label class="comRadio"><input type="radio" name="payType" class="redCheck"><span>대리점 결제</span></label>
+							
+							<button type="button" class="cm_miniBtn" title="자세히보기" data-role="none"></button><!-- 선택시 class="on" 추가 -->
+							<div class="cm_miniPop_cont "><!-- 미니팝업 -->
+								<button type="button" class="cm_miniClose" title="팝업닫기"></button>
+								<p>결제할 금액을 입력해 주세요.<br>(안내받은 금액 또는 기결제 후 남은금액)</p>
+							</div>
+						</div>
+					</div>
+					
+					<!-- 대리점 결제 -->
+					<ul class="payTotal_money" style="display:n one">
+						<!-- 20180416 예약결제 고도화 : 수정 -->
+						<li>
+							<em>결제금액(전액결제)</em>
+							<div class="ico_ip withBtn"><!-- 삭제버튼과 함께있을때 withBtn 클래스 추가 -->
+								<input type="tel" title="결제예정금액" class="inputTxt">
+								<button type="button" class="inputDelBtn" title="삭제하기"></button>
+								<span>원</span>
+							</div>
+						</li>
+						<!-- // 20180416 예약결제 고도화 : 수정 -->
+						<li><em>할인/혜택금액</em><strong>-130,000<span>원</span></strong></li>
+						<li><em class="c_red">최종결제금액</em><strong class="c_red">500,000<span>원</span></strong></li>
+					</ul>
+					<!-- // 대리점 결제 -->
+					<!-- // 20180604 작업 -->
+					
+				</div>
+			</div>
+			<!-- // 결제금액 정보 -->
+			
+			<!-- 결제수단선택 -->
+			<div class="reserv_content">
+				<h3 class="tit_reserv">결제수단선택</h3>
+				<div class="pb_toggle">
+					<!-- 20180601 간편결제 모듈추가-삼성페이제거 : 수정 -->
+					<ul class="paySelect tabList">
+						<li><a href="#" class="ico_pay03">카카오페이</a></li><!-- 선택시 class="on" -->
+						<!--<li><a href="#" class="ico_pay04">삼성페이</a></li>-->
+						<li class="on"><a href="#" class="ico_pay01">신용카드</a></li>
+						<li><a href="#" class="ico_pay02">무통장입금</a></li>
+						<!--<li class="empty"></li>-->
+					</ul>
+					<!-- // 20180601 간편결제 모듈추가-삼성페이제거 : 수정 -->
+
+					<!-- 20180601 간편결제 모듈추가-삼성페이제거 : 추가 -->
+
+					<!-- 카카오페이 -->
+					<div class="paySelectCont tabCont" style="display:none">
+						<p class="cardName">카카오페이</p>
+						<ul class="comBulTxt">
+							<li>카카오페이는 카카오톡에서 개인 신용카드(체크카드 포함)를 등록하여 비밀번호만으로 간편하게 결제할 수 있는 간편 결제 서비스입니다. </li>
+							<li>본인명의 휴대폰에서 본인명의 카드 등록 후 사용 가능합니다.</li>
+							<li>무이자 할부는 카카오페이 기준으로 적용됩니다.</li>
+						</ul>
+					</div>
+					<!-- // 카카오페이 -->
+
+					<!-- 삼성페이 -->
+					<!--<div class="paySelectCont tabCont" style="display:none">-->
+						<!--<p class="cardName">삼성페이</p>-->
+						<!--<ul class="comBulTxt">-->
+							<!--<li>삼성페이는 삼성전자에서 제공하는 간편결제 서비스입니다.</li>-->
+							<!--<li>본인명의 휴대폰에서 본인명의 카드 등록 후 사용 가능합니다.</li>-->
+							<!--<li>삼성페이 지원 가능 단말기 정보는 삼성페이 홈페이지에서 확인하실 수 있습니다. <a href="http://www.samsung.com/sec/samsung-pay/">(http://www.samsung.com/sec/samsung-pay/)</a></li>-->
+							<!--<li>삼성페이 결제가능 카드: 삼성, 신한, 현대, NH농협, 하나, 롯데, KB국민, BC</li>-->
+						<!--</ul>-->
+					<!--</div>-->
+					<!-- // 삼성페이 -->
+
+					<!-- 페이코 -->
+					<div class="paySelectCont tabCont" style="display:none">
+						<p class="cardName">페이코</p>
+						<ul class="comBulTxt">
+							<li>페이코는 NHN엔터테인먼트가 만든 간편결제 서비스입니다.</li>
+							<li>본인명의 휴대폰에서 본인명의 카드 등록 후 사용 가능합니다.</li>
+							<li>무이자 할부는 페이코 기준으로 적용됩니다.</li>
+						</ul>
+					</div>
+					<!-- // 페이코 -->
+
+					<!-- // 20180601 간편결제 모듈추가-삼성페이제거 : 추가 -->
+
+					<!-- 신용카드 -->
+					<div class="paySelectCont tabCont">
+						<!-- 20171016 추가 -->
+						<ul class="inputCell marB5">
+							<li>
+								<label for="cardName">카드 소유자</label><!-- for = id 값 동일하게 맞춰주세요 -->
+								<div><input type="text" id="cardName" class="inputTxt" title="카드 소유자"></div>
+							</li>
+						</ul>
+						<!-- // 20171016 추가 -->
+						
+						<select class="selectBox" title="카드사선택" style="margin-bottom:5px">
+							<option selected disabled>카드사를 선택해주세요</option>
+							<option>삼성카드</option>
+							<option>신한카드</option>
+						</select>
+
+						<select class="selectBox" title="할부기간선택">
+							<option selected disabled>할부기간을 선택해주세요</option>
+							<option>1개월</option>
+							<option>2개월</option>
+							<option>3개월</option>
+							<option>4개월</option>
+							<option>5개월(무이자)</option>
+							<option>6개월(무이자)</option>
+						</select>
+
+						<!--  20180416 H-Coin 적용 : 추가 -->
+						<label><input type="checkbox" class="redCheck"><span>H-Coin 사용</span></label>
+						<!-- // 20180416 H-Coin 적용 : 추가 -->
+
+						<ul class="comBulTxt btnType">
+							<li class="inBtn">KB카드 세이브 서비스 안내 <a href="#pop_card_service_kb.html" class="stitBtn popUpFull">자세히보기</a></li>
+							<li class="inBtn">신한카드 세이브 서비스 안내 <a href="#pop_card_service_sh.html" class="stitBtn popUpFull">자세히보기</a></li>
+							<li class="inBtn">카드/제휴혜택안내 <a href="#pop_card_benefit.html" class="stitBtn popUpFull">자세히보기</a></li>
+							<li>하나투어 ARS카드결제 ☎ 1577-0015 에서는 6개월 이하 할부 개인카드(체크카드 포함)/법인개인카드만 사용가능합니다</li>
+						</ul>
+					</div>
+					<!-- // 신용카드 -->
+					
+					<!-- 무통장입금 -->
+					<div class="paySelectCont tabCont" style="display:none">
+						<select class="selectBox" title="입금은행 선택" style="margin-bottom:5px">
+							<option selected disabled>입금은행 선택해주세요</option>
+							<option>삼성카드</option>
+							<option>신한카드</option>
+						</select>
+						
+						<input type="text" class="inputTxt" title="입금자명" placeholder="입금자명을 입력해주세요">
+						<p class="c_red">실제 입금자명과 동일하게 입력</p>
+						
+						<ul class="bank_account">
+							<li><em>계좌번호</em><span class="c_red">123-456-7890</span></li>
+							<li><em>예금주명</em><span>(주)하나투어</span></li>
+							<li><em>입금마감일</em><span>2017년 07월 25일</span></li>
+						</ul>
+						
+						<ul class="comBulTxt btnType">
+							<li>입금은행을 선택하시면, 선택은행의 가상계좌번호가 발급됩니다. </li>
+							<li>고객전용 계좌번호는 결제 완료 화면에서도 확인하실 수 있습니다.</li>
+							<li>입금마감일 내에 발급된 계좌번호에 최종 결제금액을 입금하시면 결제완료 처리됩니다. </li>
+							<li>해외호텔 상품의 경우, 당일 미결제 시 원화금액이 변동될 수 있습니다.</li>
+						</ul>
+					</div>
+					<!-- // 무통장입금 -->
+					
+					<!-- 카카오페이 -->
+					<div class="paySelectCont tabCont" style="display:none">
+						<select class="selectBox" title="카드사선택" style="margin-bottom:5px">
+							<option selected disabled>카드사를 선택해주세요</option>
+							<option>삼성카드</option>
+							<option>신한카드</option>
+						</select>
+						
+						<select class="selectBox" title="할부기간선택">
+							<option selected disabled>할부기간을 선택해주세요</option>
+							<option>1개월</option>
+							<option>2개월</option>
+							<option>3개월</option>
+							<option>4개월</option>
+							<option>5개월(무이자)</option>
+							<option>6개월(무이자)</option>
+						</select>
+						
+						<ul class="comBulTxt">
+							<li>카카오페이는 카카오톡에서 개인 신용카드(체크카드포함)를 등록하여 비밀번호만으로 간편하게 결제할 수 있는 모바일 결제 서비스입니다. 등록 시 휴대폰과 카드 명의자가 동일해야 합니다.</li>
+						</ul>
+					</div>
+					<!-- // 카카오페이 -->
+					
+					
+				</div>
+			</div>
+			<!-- // 결제수단선택 -->
+			
+			<a href="#" class="m_btnRed fixed">500,000원 결제하기(신용카드)</a><!-- 푸터진입시 class="fixed" 삭제 -->
+		</section>
+		<!-- // 예약결제 간소화 -->
+		
+	</div>
+	<!-- //컨텐츠 영역 -->
+	
+	<footer class="newFoot">
+		<ul>
+			<li><a href="#none" data-role="none">로그인</a></li>
+			<li><a href="#none" data-role="none">PC버전</a></li>
+			<li><a href="#none" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+		</ul>
+		<div>
+			<a href="#none" data-role="none">이용약관</a>|
+			<a href="#none" data-role="none">개인정보처리방침</a>|
+			<a href="#none" data-role="none">여행약관</a>|
+			<a href="#none" data-role="none">사업자정보확인</a>
+		</div>
+		<address>
+			㈜ 하나투어 | 대표자: 최현석 | 사업자등록번호 : 102-81-39440<br>
+			통신판매업신고번호 : 종로01-1806호 | 개인정보관리 책임자 : 최종윤<br>
+			[110-160]서울특별시 종로구 인사동 5길 41 ㈜ 하나투어<br>
+			하나투어상담센터 : <a href="tel:1577-1233" data-role="none">1577-1233</a> | FAX : 02-734-0392<br>
+			이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> | 호스팅 서비스 사업자 : ㈜하나투어<br>
+			관광사업자 등록번호 : 제1933-000006호 | 영업보증보험 : 22억 1천만원 가입<br>
+			COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+		</address>
+	</footer>
+	
+</div>
+
+</body>
+</html>
+

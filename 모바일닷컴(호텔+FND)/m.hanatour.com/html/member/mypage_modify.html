@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>회원가입 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="../../css/member.css"><!-- 로그인,회원가입 신규 css -->
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-2.1.3.min.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common_new.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/swiper.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div id="wrap"> 
+	<header id="header"><!-- 띠배너 보일경우 class="tBanTy" 추가 -->
+		<div class="inner">
+			<h1><a href="#" data-role="none"><img src="../../images/common/btn_nlogo.png" alt="하나투어"></a></h1>
+			<a href="#" id="btnMenu" data-role="none"><img src="../../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+			<a href="#" id="btnMyhome" data-role="none"><img src="../../images/common/btn_hdright.png" alt="마이홈"></a>
+		</div>
+	</header>
+	<div style="height:52px"></div>
+	
+	<!-- 컨텐츠 영역 -->
+	<div id="container">
+		<h2 class="pagTit">회원정보 변경</h2>
+		
+		<!-- 로그인 신규 -->
+		<div class="newMember">
+			
+			<!-- 정보입력 -->
+			<div class="stepWrite">
+				<h3 class="new_Tit bg_me">기본정보 입력</h3>
+			
+				<ul class="inputCell">
+					<li>
+						<label for="name">이름</label><!-- label for과 id값 동일 -->
+						<div><input type="text" class="inputTxt" data-role="none" value="김하나" disabled="" id="name" title="이름"></div>
+					</li>
+					<li>
+						<label for="mailid">아이디</label>
+						<div>
+							<input type="text" class="inputTxt" data-role="none" value="hana111@hanatour.com" disabled="" id="name" title="아이디">
+							<a href="#" data-role="none" class="m_grayBtn">아이디 변경</a>
+							<p class="redSmaTxt">하나투어닷컴에서는 사용하고 계신  e-mail 주소를 아이디로 사용합니다.</p>
+							<p class="redSmaTxt">e-mail 변경 시 아이디변경하기로 변경 가능</p>
+						</div>
+					</li>
+					<!-- 20170512 삭제
+					<li>
+						<label for="pass">비밀번호</label>
+						<input type="password" data-role="none" class="inputTxt" id="pass" title="비밀번호">
+						<p class="redSmaTxt">8~16자의 영문 대소문자, 숫자 및 특수문자 사용</p>
+					</li> -->
+					<li>
+						<label for="sex">성별</label>
+						<div>
+							<div class="inTable">
+								<span class="w65 vaMidd">
+									<label class="comRadio"><input type="radio" title="SKT" id="sex" name="sex" data-role="none" checked=""><span>남자</span></label>
+									<label class="comRadio"><input type="radio" title="KT" name="sex" data-role="none"><span>여자</span></label>
+								</span>
+								<span class="cellPad10"></span>
+								<span class="w35">
+									<select class="selectBox" title="내국인, 외국인 선택" data-role="none">
+										<option>내국인</option>
+										<option>외국인</option>
+									</select>
+								</span>
+							</div>
+						</div>
+					</li>
+					<!-- 20170512 수정 -->
+					<li>
+						<label for="birth">생년월일</label>
+						<div class="inTable">
+							<span class="w65">
+								<input type="tel" class="inputTxt" id="certify" data-role="none" title="생년월일">
+							</span>
+							<span class="cellPad"></span>
+							<span class="w35">
+								<a href="#" data-role="none" class="m_grayBtn">수정</a>
+							</span>
+						</div>
+					</li>
+					<!-- // 20170512 수정 -->
+					<li>
+						<label for="phone">휴대폰번호</label>
+						<div><input data-role="none" type="tel" class="inputTxt" id="phone" title="휴대폰번호" placeholder="예)01012345678"></div>
+					</li>
+					<li>
+						<label for="joinday">웹회원<br>유지기간</label>
+						<div>
+							<div class="radioBox">
+								<label class="comRadio"><input type="radio" title="SKT" id="joinday" name="joinday" data-role="none" checked=""><span>2년</span></label>
+								<label class="comRadio"><input type="radio" title="KT" name="joinday" data-role="none"><span>3년</span></label>
+								<label class="comRadio"><input type="radio" title="KT" name="joinday" data-role="none"><span>탈퇴시까지</span></label>
+							</div>
+							<p class="redSmaTxt">별도 선택이 없을 시 유지 기간은 1년으로 기간 이후 휴면 계정으로 변경됩니다.</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- // 정보입력 -->
+			
+			<!-- on off -->
+			<div class="ellipseBox">
+				<div class="email">
+					<p>이메일을 통한 상품 및 이벤트 정보<br>수신에 동의합니다. (선택)</p>
+					<label class="switch"><input type="checkbox" title="토글버튼"></label>
+				</div>
+				
+				<div class="naver">
+					<p>네이버 간편 아이디 연동</p>
+					<label class="switch"><input type="checkbox" title="토글버튼"></label>
+				</div>
+			</div>
+			<!-- // on off -->
+			
+		</div>
+		<!-- //로그인 신규 -->
+		
+	</div>
+	<!-- //컨텐츠 영역 -->
+	
+	<footer class="newFoot">
+		<ul>
+			<li><a href="#" data-role="none">로그인</a></li>
+			<li><a href="#" data-role="none">PC버전</a></li>
+			<li><a href="#" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+		</ul>
+		<div>
+			<a href="#" data-role="none">이용약관</a>|
+			<a href="#" data-role="none">개인정보처리방침</a>|
+			<a href="#" data-role="none">여행약관</a>|
+			<a href="#" data-role="none">사업자정보확인</a>
+		</div>
+		<address>
+				㈜ 하나투어 | 대표자: 김진국 | 사업자등록번호 : 102-81-39440<br>
+				통신판매업신고번호 : 종로01-1806호 | 개인정보관리 책임자 : 박성재<br>
+				[110-160]서울특별시 종로구 인사동 5길 41 ㈜ 하나투어<br>
+				하나투어상담센터 : <a href="tel:1577-1233" data-role="none">1577-1233</a> | FAX : 02-734-0392<br>
+				이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> | 호스팅 서비스 사업자 : ㈜하나투어<br>
+				관광사업자 등록번호 : 제1933-000006호 | 영업보증보험 : 22억 1천만원 가입<br>
+				COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+		</address>
+	</footer>
+	
+</div>
+
+
+</body>
+</html>
+

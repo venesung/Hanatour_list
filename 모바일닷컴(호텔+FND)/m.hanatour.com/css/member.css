@@ -1,0 +1,224 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 로그인, 회원가입 new  */
+html {font-size:10px}
+@media all and (min-width:375px) { /* 아이폰6 */
+html {font-size:11.5px}
+}
+@media all and (min-width:414px) { /* 아이폰6 plus */
+html {font-size:12px}
+}
+
+.newMember {padding-bottom:20px;}
+.tabList {overflow:hidden;}
+.tabList li {float:left;width:50%;}
+.outType > .tabList li a {display:block; font-size:1.5rem; color:#666; padding:15px 0; border-bottom:1px solid #ccc; background-color:#f1f1f3; text-align:center}
+.outType > .tabList li.on a {color:#333; background-color:#fff; border-bottom:none}
+.outType > .tabList li:nth-child(1).on a {border-right:1px solid #ccc}
+.outType > .tabList li:nth-child(2).on a {border-left:1px solid #ccc}
+.outType > .tabCont {padding:20px 12px}
+
+.inType > .tabList {margin-bottom:20px}
+.inType > .tabList li a {display:block; font-size:1.4rem; color:#333; padding:12px 0; background-color:#fff; text-align:center; border:1px solid #ccc}
+.inType > .tabList li.on a {color:#fff; background-color:#c83d67; border-color:#c83d67}
+
+.newMember .idType {position:relative; margin-bottom:10px}
+.newMember .idType .delBtn {position:absolute;right:0;top:0;width:42px; height:100%; background:url(http://image1.hanatour.com/mobile/common/member/ico_searbtn.png) no-repeat center center; background-size:16px 16px}
+.newMember .idType input {padding-right:40px}
+.m_btnRed {margin-top:15px; font-size:18px}
+
+.newMember .keyboard_img {background-color:#eee; margin:-21px -12px 15px; padding:12px 0; border-top:1px solid #ccc;border-bottom:1px solid #ccc; text-align:center}
+.newMember .keyboard_img img {height:90px}
+.newMember .naverBtn {font-size:18px;border:1px solid #ccc; border-radius:3px; display:block; padding:12px 0; font-weight:bold; text-align:center}
+.newMember .naverBtn img {height:13px; margin-top:-4px}
+
+.newMember .packBox01 {position:relative; margin-bottom:30px}
+.newMember .packBox01 label span {display:inline-block; margin:0 14px 0 4px}
+.newMember .packBox01 .keboardView {position:absolute;right:0;top:0; padding:2px 20px 2px 0;background:url(http://image1.hanatour.com/mobile/common/bg_select_red.png) no-repeat right center; background-size:13px 7px}
+.newMember .packBox01 .keboardView.on {background-image:url(http://image1.hanatour.com/mobile/common/btn_hs_on.png)}
+.newMember .packBox02 {border-top:1px solid #dfdfdf; text-align:center; margin-top:16px}
+.newMember .packBox02 a {display:inline-block; padding:15px 13px; position:relative}
+.newMember .packBox02 a:after {content:'';width:1px; height:12px; background-color:#dfdfdf; position:absolute;right:-1px;top:50%; margin-top:-6px}
+.newMember .packBox02 a:last-child:after {content:none}
+
+.newMember p {font-size:1.3rem}
+.newMember .pointTxt {margin:15px 0 20px;font-size:1.2rem; color:#c83d67;background:url(http://image1.hanatour.com/mobile/common/bg_n_infortxt.png) no-repeat 0 1px;background-size:13px 13px; padding-left:16px}
+
+.newMember .loginEndBox {background:url(http://image1.hanatour.com/mobile/common/member/bg_login_end.jpg) no-repeat 0 0;background-size:100% 100%; text-align:center; padding:55px 0 30px; margin-bottom:15px}
+.newMember .loginEndBox * {color:#fff}
+.newMember .loginEndBox strong {font-size:2.5rem}
+.newMember .loginEndBox em {font-size:1.9rem; font-weight:bold;display:block; margin:15px 0 20px; line-height:2.2rem}
+.newMember .loginEndBox p {font-size:1.4rem; margin-bottom:48px;line-height:1.8rem;}
+.newMember .loginEndBox a {width:180px; margin:0 auto}
+.newMember .leadTop {background:url(http://image1.hanatour.com/mobile/common/member/bg_loginend.png) no-repeat 50% 25px;background-size:80px 80px; padding:130px 0 25px; text-align:center}
+.newMember .leadTop strong {font-size:1.9rem}
+.newMember .leadTop p {font-size:1.5rem; margin:8px 0 20px}
+.newMember .leadTop em {font-size:1.4rem}
+
+.newMember .padBox {padding:0 12px}
+.newMember .joinCont {padding:10px 12px}
+.newMember .joinCont .m_btnRed {margin-bottom:20px}
+.newMember .joinCont .packBox02 {border-top:none;border-bottom:1px dashed #dfdfdf; margin:5px 0 15px; padding-bottom:10px}
+
+.inputCell {padding-bottom:10px}
+.inputCell li {display:table;width:100%;}
+.inputCell li+li {margin-top:15px}
+.inputCell li > label {display:table-cell;width:28%; vertical-align:top; padding-top:10px; font-size:1.3rem}/* 20171129 수정 */
+.inputCell li > div {display:table-cell;width:72%}
+.inputCell li .inputTxt,.inputCell li .selectBox {height:40px}
+.inputCell li .inputTxt::-webkit-input-placeholder,.inputCell li .selectBox::-webkit-input-placeholder {color:#ccc}
+.inputCell li .inTable {display:table;width:100%}
+.inputCell li .inTable > span {display:table-cell; vertical-align:top}
+.inputCell li .vaMidd {vertical-align:middle !important}
+.inputCell li .inTable .cellPad {width:5px}
+.inputCell li .inTable .cellPad10 {width:2%; padding:0 4px; text-align:center; vertical-align:middle; color:#888}
+.inputCell li .inTable .w35 {width:34%}
+.inputCell li .inTable .w50 {width:49%}
+.inputCell li .inTable .w65 {width:64%}
+.inputCell li .radioBox label {margin-top:12px}
+.inputCell li .redSmaTxt {color:#c83d67; font-size:1.2rem; padding-left:10px; position:relative; margin-top:8px}
+.inputCell li .redSmaTxt:before {content:''; width:3px; height:3px; position:absolute;left:0;top:7px; background-color:#c83d67; border-radius:50%}
+.inputCell li .time {margin-top:8px}
+.inputCell li .time span {display:inline-block; padding-left:15px; color:#888; font-size:1.3rem;background:url(http://image1.hanatour.com/mobile/common/idpw/bg_search_time.png) no-repeat 0 50%; background-size:12px 12px}
+.inputCell li .time em {color:#c83d67; font-size:1.3rem; letter-spacing:0}
+.inputCell li .adCheck {padding-top:8px} /* 20171129 추가 */
+.inputCell li .adCheck span {font-size:1.1rem; color:#666}
+
+.stepWrite {padding:25px 12px}
+.stepTerms {padding:25px 12px 10px; border-top:1px solid #ccc}
+.stepTerms.outType { margin:0 -12px}
+.stepAdd {padding:25px 12px 15px}
+.stepAdd .comBulTxt {border-top:1px dashed #ccc; margin-top:25px; padding-top:20px}
+.bulTitType {margin:20px 12px 0;border-top:1px dashed #ccc}
+.bulTitType dt {margin:18px 0 2px; font-size:1.4rem}
+
+.m_grayBtn {display:block;background-color:#a6acbd;border:1px solid #a6acbd;text-align:center;font-size:14px;color:#fff;padding:11px 0; border-radius:5px; margin:10px 0 0; border-bottom:1px solid #999; box-sizing:border-box; height:40px}
+.inTable .m_grayBtn {margin:0}
+
+.new_Tit {margin-bottom:15px; font-size:1.4rem;padding:0 0 12px 17px; background-repeat:no-repeat; background-position:left 2px; background-size:12px 13px;border-bottom:1px solid #ccc;}
+.new_Tit.lineNo {border-bottom:none; padding-bottom:0 }
+.new_Tit.bg_terms {background-image:url(http://image1.hanatour.com/mobile/common/idpw/bg_search_tit01.png); border-bottom:none; margin-bottom:0}
+.new_Tit.bg_me {background-image:url(http://image1.hanatour.com/mobile/common/idpw/bg_search_tit02.png)}
+.new_Tit.bg_pw {background-image:url(http://image1.hanatour.com/mobile/common/idpw/bg_search_tit03.png)}
+.new_Tit.bg_ch {background-image:url(http://image1.hanatour.com/mobile/common/member/bg_tit_ch.png); border-bottom:none; padding-bottom:0}
+.stitTerms01 {margin:5px 0 10px; font-size:1.3rem}
+.stitTerms02 {margin:20px 0 10px; font-size:1.3rem;}
+.termsSect {border:1px solid #ccc}
+.termsSect+.termsSect {margin-top:10px}
+.termsSect .all_ch {display:block;padding:10px;border-bottom:1px solid #ccc;color:#333; background-color:#eee; font-size:1.4rem}
+.termsSect .inner_terms > li {position:relative;border-bottom:1px solid #eee;}
+.termsSect .inner_terms > li label {display:table-cell;width:100%;padding:0 10px 0 40px; color:#333; position:relative; height:50px; box-sizing:border-box; font-size:1.3rem; vertical-align:middle}
+.termsSect .inner_terms > li label input {position:absolute;left:10px;top:50%; margin-top:-11px}
+.termsSect input {margin-right:5px}
+.termsSect .inner_terms > li:last-child {border-bottom:none}
+.termsSect .inner_terms > li .termsTog {position:absolute;right:0;top:0; color:#666; font-size:12px;background-color:#fff; width:46px; height:50px; border:none}
+.termsSect .inner_terms > li .termsTog:before {content:'';display:inline-block;width:15px; height:8px;background: url(http://image1.hanatour.com/mobile/common/btn_acodi_tog_3017.png) no-repeat center center; background-size:15px 8px}
+.termsSect .inner_terms > li .termsTog.open:before {transform:rotate(180deg)}
+.termsSect .inner_terms > li .in_termsScrBox {display:none;max-height:250px; overflow-y:scroll;-webkit-overflow-scrolling: touch; background-color:#f9f9f9; padding:10px; box-sizing:border-box}
+.termsSect .inner_terms > li .termsTog.open+.in_termsScrBox {display:block}
+
+/* start 20170814 추가,수정 */
+.termsSect .inner_terms > li .in_termsScrBox > strong {font-size:1.3rem; margin-bottom:5px; display:block} 
+.termsSect .inner_terms > li .in_termsScrBox > p,.termsSect .inner_terms > li .in_termsScrBox > ul > li {font-size:1.3rem; margin-bottom:5px}
+/* end 20170814 추가,수정 */
+
+.termsSect .inner_terms > li .termsListCont dt {font-size:1.3rem;margin-bottom:5px;font-weight:bold}
+.termsSect .inner_terms > li .termsListCont dd {font-size:1.2rem;margin-bottom:8px}
+.termsSect .inner_terms > li .termsListCont dd * {font-size:1.2rem;}
+.termsSect .inner_terms > li .termsListCont dd p {margin-bottom:3px}
+.termsSect .inner_terms > li .termsListCont dd ul {padding-left:6px}
+.termsSect .inner_terms > li .termsListCont dd ul li {margin-bottom:3px}
+.termsSect .inner_terms > li .termsComTable {margin:5px 0; background-color:#fff}
+.termsSect .inner_terms > li .termsComTable th {background-color:#f9f9f9; padding:5px 2px; border:1px solid #ccc;font-size:1.1rem; text-align:center}
+.termsSect .inner_terms > li .termsComTable td {border:1px solid #ccc; padding:7px 2px; text-align:center; font-size:1.1rem}
+.termsSect .inner_terms > li .termsComTable td a { color:#2489ce; font-weight:bold}
+.comBulTxt.black li {color:#333}
+.comBulTxt.black li:before {background-color:#333}
+
+.newMember .snsTopTxt {text-align:center; padding:0 0 20px; color:#666; font-size:1.3rem}
+.newMember .snsTopTxt strong {font-size:1.5rem;font-weight:normal; display:block; margin-bottom:15px; color:#333}
+
+.ellipseBox {margin:0 12px; border-top:1px dashed #ccc;border-bottom:1px dashed #ccc}
+.ellipseBox > div {position:relative}
+.ellipseBox p {font-size:1.3rem;padding:15px 75px 15px 0;}
+.ellipseBox > .naver {border-top:1px dashed #ccc}
+.ellipseBox > .naver p {background:url(http://image1.hanatour.com/mobile/common/member/ico_naver_logo.png) no-repeat 0 center; background-size:22px 22px; padding-left:30px}
+.switch input {border:1px solid #ababab;border-radius:20px;width:54px;height:25px;background-color:#ababab;color:#fff !important;text-align:left;position:absolute; right:0; top:50%;transform:translate(0, -50%);font-size:11px; padding:2px 0 0 5px; letter-spacing:-0.04em;-webkit-appearance:none;}
+.switch input:before {content:'OFF';display:inline-block; position:absolute; right:4px; top:50%;transform:translate(0, -50%);; color:#fff; font-size:11px}
+.switch input:after {content:'';display:inline-block; background-color:#fff; width:21px; height:21px; border-radius:50%; position:absolute; left:1px; top:1px}
+.switch input:checked {border:1px solid #e01682; background-color:#e01682; text-align:right; padding-right:5px}
+.switch input:checked:before {content:'ON'; right:initial;left:5px}
+.switch input:checked:after{right:1px; left:initial}
+
+/* start 캡차기능 20161208 추가 */
+.subLayoutCaptcha {background-color:#fff; margin-top:20px;}
+.subLayoutCaptcha > em {display:block; margin-bottom:10px; font-size:1.3rem}
+.captchaBox {display:table;width:100%;border:1px solid #ccc;box-sizing:border-box;}
+.captchaBox > span {display:table-cell;width: 55%;vertical-align:middle;text-align:center;}
+.captchaBox > span.img img {width: 100%; height:100px}
+.captchaBox > span.vol {height:100px; font-size:1.2rem; color:#898989; position:relative}
+.captchaBox > span.vol:before {content:'';display:block;width:100%; height:40px;background:url(http://image1.hanatour.com/mobile/common/idpw/ico_mic.png) no-repeat center 0; background-size:18px 30px}
+.captchaBox > span.vol:after { content:'';width:100%; height:100%; position:absolute;left:-1px;top:-1px;border:1px solid #e45b85;}
+.captchaBox div {display:table-cell;width: 45%;text-align:left;vertical-align: middle;padding:}
+.captchaBox div a {display:block; color:#888; font-size:12px; background:no-repeat 10px center; background-size:13px auto; padding:18px 0 18px 30px; height:50px; box-sizing:border-box;border-left:1px solid #ccc}
+.captchaBox div a.vol {background-image:url(http://image1.hanatour.com/mobile/common/idpw/bg_captcha_vol02.png);border-top:1px solid #ccc}
+.captchaBox div a.pic {background-image:url(http://image1.hanatour.com/mobile/common/idpw/bg_captcha_pic.png);border-top:1px solid #ccc}
+.captchaBox div a.repair {background-image:url(http://image1.hanatour.com/mobile/common/idpw/bg_captcha_re02.png)}
+.subLayoutCaptcha .txtWrite {display:block; margin-top:10px}
+.subLayoutCaptcha .txtWrite input {height:50px; text-indent:12px; border:1px solid #e3e3e5;width:100%; border-radius:0;-webkit-appearance:none}
+.pwerr5_txt {font-size:1.2rem; color:#666; margin-bottom:20px}
+.pwerr5_txt em {display:block;font-size:1.3rem;color:#333; margin-bottom:10px}
+/* end 캡차기능 20161208 추가 */
+
+/* popup */
+.layerPop {position:fixed;left:0;top:0;background:rgba(0,0,0,0.7); height:100%; width:100%; z-index:999; padding-top:50vh}
+.layerPop > div {margin:0 12px; background-color:#fff;border-radius:5px; position:relative; overflow:hidden;transform:translate(0, -50%);}
+.layerPop h3 {background-color:#f8f8f8; padding:15px 20px; font-size:17px; border-bottom:1px solid #ccc; border-radius:5px 5px 0 0; text-align:left}
+.layerPop h3 a {background:url(http://image1.hanatour.com/mobile/common/comm/btn_pop_yellow_close.png) no-repeat center center; position:absolute;right:0;top:0; width:19px; height:19px; background-size:19px; padding:15px}
+.layerPop .pop_y_cont {padding:20px;max-height:250px; overflow-y:scroll;/*-webkit-overflow-scrolling: touch*/}
+.layerPop .pop_y_cont::-webkit-scrollbar {width: 8px;border: 3px solid #fff; background-color:#ccc}
+.layerPop .pop_y_cont::-webkit-scrollbar-button:start:decrement,
+.layerPop .pop_y_cont::-webkit-scrollbar-button:end:increment {display: block; height: 10px; background: #fff}
+.layerPop .pop_y_cont::-webkit-scrollbar-track {background: #ccc; -webkit-border-radius: 10px; border-radius:10px; -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.2)}
+.layerPop .pop_y_cont::-webkit-scrollbar-thumb {height: 50px; width: 50px; background: rgba(0,0,0,0.2); -webkit-border-radius: 8px; border-radius: 8px; -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.1)}
+
+@media all and (min-width:360px) { /* 360 이상 */
+.layerPop .pop_y_cont {max-height:320px;}
+}
+.layerPop .joinPopCont {text-align:center}
+.layerPop .joinPopCont h4 {font-size:1.5rem; font-weight:normal}
+.layerPop .joinPopCont p {margin:25px 0 20px; font-size:1.3rem; color:#666}
+.layerPop .joinPopCont .bulOneList {padding-top:20px; border-top:1px dashed #ccc; text-align:left}
+.layerPop .joinPopCont .beneList li {border:1px solid #e0e0e0; padding:15px}
+.layerPop .joinPopCont .beneList li+li {margin-top:6px}
+.layerPop .joinPopCont .beneList li strong {display:inline-block; margin-right:15px}
+.layerPop .popBtnTwo {overflow:hidden;margin:10px 20px 30px}
+.layerPop .popBtnTwo a {float:right;width:49%;background-color:#a6acbd;text-align:center;color:#fff;font-size:15px;padding:12px 0; border-radius:5px; margin:0 0 0 2px}
+.layerPop .popBtnTwo a:first-child {background-color:#c83d67; margin:0 2px 0 0; float:left}
+.layerPop .phConfirmTxt {text-align:left; margin-top:20px; padding-top:20px; border-top:1px dashed #ccc}
+.layerPop .phConfirmTxt strong{display:block; margin-bottom:5px}
+
+/* 지문인증 */
+.fingerNone {text-align:center;font-size:1.3rem}
+.fingerStep2 {font-size:1.3rem;margin-bottom:20px}
+.fingerEnd {padding:25px 12px}
+.fingerEnd h3 {text-align:center;font-weight:normal; font-size:1.8rem;background:url(http://image1.hanatour.com/mobile/common/member/bg_finger_end.png) no-repeat center 0; background-size:80px 80px; padding:104px 0 15px}
+.fingerBg {display:block;font-size:1.8rem;background:url(http://image1.hanatour.com/mobile/common/member/bg_finger_pop.png) no-repeat center 0; background-size:43px 55px; padding:70px 0 0}
+.fgPopTxt strong {display:block;font-size:1.8rem; margin-bottom:10px}
+.fgPopTxt p {font-size:1.5rem;color:#666}
+
+/* 아이디 비번 찾기 */
+.idpwCont01 {padding:25px 12px}
+.idpwCont01 .stit_idpw {font-size:1.4rem;font-weight:normal}
+.idpwCont01 .m_btnRed.gray {border-bottom-color:#999;margin-top:20px}
+.idSearch_end {text-align:center;font-size:1.8rem;line-height:28px; padding:105px 0 10px 0; background:url(http://image1.hanatour.com/mobile/common/idpw/bg_idsearch_end02.png) no-repeat center 0;background-size:79px 79px}
+.stit_pw_end {text-align:center;font-size:1.8rem;padding:105px 0 0 0; background:url(http://image1.hanatour.com/mobile/common/idpw/bg_pwsearch_end.png) no-repeat center 0;background-size:79px 79px; font-weight:normal}
+.stit_pw_end.bgPw {background-image:url(http://image1.hanatour.com/mobile/common/idpw/bg_idsearch_end01.png); margin-bottom:25px}
+.pwSearch_end {text-align:center;font-size:1.4rem; line-height:2.0rem;  margin:18px 0;}
+.pwSm_end {font-size:1.3rem; text-align:center; margin-bottom:30px}
+.pwSm_end span {color:#666; font-size:1.3rem; display:block}
+
+/* 다국어 링크 20171129 수정 */
+.btnGlobal {display:block;padding:12px 5px;font-size:1.4rem; color:#0790ac; border:1px solid #0ca7c6; border-radius:3px; text-align:center; font-weight:bold}
+.btnGlobal.red {color:#c83d67;border-color:#c83d67; margin-bottom:10px}

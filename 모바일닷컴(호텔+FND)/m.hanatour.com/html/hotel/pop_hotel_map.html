@@ -1,0 +1,37 @@
+<script type="text/javascript">
+	$('#overlayPanel').on('open.loadpop', function (e, data) {
+   		if (LODGE !== undefined && typeof LODGE.initDetailSearch === 'function') LODGE.initDetailSearch();
+   	});
+</script>
+
+<div id="popReserve01">
+	<div class="popReserve01">
+		
+		<div class="header">
+			<h3>지도보기<a href="#" class="closeOverlayPanel" data-role="none" title="레이어닫기"></a></h3>
+		</div>
+		<div class="innerScroller">
+			
+			<div class="ht_map" style="">
+				<img src="http://image1.hanatour.com/mobile/common/hotel/img_map_dumm.jpg" alt="">
+				<a href="#" class="icon" data-role="none"><img src="http://image1.hanatour.com/mobile/common/hotel/btn_map_ico.png" alt=""></a>
+				<!-- 툴팁 -->
+				<div class="infoBox">
+					<div>
+						<a href="#" title="닫기" class="tooClose ui-link"><img src="http://image1.hanatour.com/mobile/common/hotel/img_popclose.png" alt=""></a>
+						<strong>뫼벤픽 호텔 막탄 아이랜드 세부(구 모벤픽 리조트&amp;스파)<span class="star num80"></span></strong>
+						<p class="ht_txtEng">MOEVENPICK HOTEL MACTAN ISLAND CEBU</p>
+						<div class="moneyBox">
+							<span>175,420원</span>
+							<strong>82,900<b>원</b></strong>
+						</div>
+					</div>
+				</div>
+				<!-- // 툴팁 -->
+			</div>
+			
+		</div>
+	</div>
+</div>
+<!-- // 상세검색 팝업 end -->
+

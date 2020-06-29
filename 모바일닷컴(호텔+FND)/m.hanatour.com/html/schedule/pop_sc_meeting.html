@@ -1,0 +1,26 @@
+<script type="text/javascript">
+	if (jQuery !== undefined) {
+		jQuery(document).ready(function () {
+			if (SCHEDULE !== undefined && typeof SCHEDULE.initZoom === 'function') SCHEDULE.initZoom($('.pop_innerComm > .zoomBox'));
+		});
+	}
+</script>
+
+<!-- pop start  -->
+
+	<div class="fullPopCommon">
+		<div class="header">
+			<h3>미팅장소 약도보기<a href="#" class="closeOverlayPanel" data-role="none" title="레이어닫기"></a></h3>
+		</div>
+		
+		<div class="innerScroller">
+			<div class="pop_innerComm">
+				<p class="defaultTxt">인천 국제공항 3층 출국장 여행사 카운터 G와F 카운터 사이 중앙엘리베이터 옆 하나투어 6번~10번 테이블 앞</p>
+				<div class="zoomBox">
+					<img src="http://image1.hanatour.com/mobile/common/schedule/img_meeting_map01.jpg" alt="">
+					<a href="#" data-role="none" title="확대하기"></a>
+				</div>
+			</div>
+		</div>
+		
+	</div>

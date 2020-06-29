@@ -1,0 +1,104 @@
+
+
+	<script type="text/javascript">
+		$('body').on('open.loadpop', '#overlayPanel', function (e) {
+			var popInner = $('.fullPopCommon');
+			var datepickerTarget = $('.fullPopCommon #datepicker');
+
+			if (FND !== undefined && typeof FND.initCalendar !== 'undefined') {
+				FND.initCalendar({
+					dateFormat : 'yy.mm.dd',
+					minDate : '+3d',
+					onSelect : function (date) {
+						var dateText = popInner.find('.cald_selectFix .dayTime:eq(0) strong');
+
+						dateText.contents().eq(0).replaceWith(date);
+					}
+				}, datepickerTarget);
+
+				//달력 설정
+				//datepickerTarget.datepicker('setDate', new Date(..)); //http://api.jqueryui.com/datepicker/#method-setDate
+			}
+		});
+	</script>
+<!-- pop start  -->
+
+	<div class="fullPopCommon">
+		<div class="header">
+			<h3>출발 일시 선택<button type="button" class="closeOverlayPanel" title="팝업닫기"></button></h3>
+		</div>
+		
+		<div class="innerScroller">
+			<!-- pop cont -->
+			<div class="pop_innerComm02">
+				<p class="calPop_txt">출발일시를 선택해주세요</p>
+				<!-- 달력 -->
+				<div class="calenderBox">
+					<div class="calenderTop">
+						<button data-role="none" class="prevMonth" title="이전달">3월</button><!-- 없을경우 end -->
+						<strong>2016년 04월</strong>
+						<button data-role="none" class="nextMonth" title="다음달">5월</button>
+					</div>
+					
+					<div id="datepicker"></div>
+				</div>
+				<!-- // 달력 -->
+				
+				<!-- 시간 선택 -->
+				<div class="calederTime">
+					<h4>시간 선택</h4>
+					<div class="timeBtn">
+						<ul>
+							<li class="on"><button type="button" data-value="00:00~12:00">0시~12시</button></li><!-- 선택시 class on -->
+							<li><button type="button" data-value="11:00~17:00">11시~17시</button></li>
+							<li><button type="button" data-value="15:00~24:00">15시~24시</button></li>
+						</ul>
+						<div>
+							<select title="탑승 시간 선택" class="selectBox">
+								<option selected disabled>탑승 시간대를 선택해 주세요.</option>
+								<option>05:00~07:00</option>
+								<option>06:00~08:00</option>
+								<option>07:00~09:00</option>
+								<option>08:00~10:00</option>
+								<option>09:00~11:00</option>
+								<option>10:00~12:00</option>
+								<option>11:00~13:00</option>
+								<option>12:00~14:00</option>
+								<option>13:00~15:00</option>
+								<option>14:00~16:00</option>
+								<option>15:00~17:00</option>
+								<option>16:00~18:00</option>
+								<option>17:00~19:00</option>
+								<option>18:00~20:00</option>
+								<option>19:00~21:00</option>
+								<option>20:00~22:00</option>
+								<option>21:00~23:59</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<!-- // 시간 선택 -->
+				
+			</div>
+			<!-- // pop cont -->
+		</div>
+		
+		<!-- 하단 고정 -->
+		<div class="cald_selectFix">
+			<div class="dayTime">
+				<div>
+					<em>가는날</em>
+					<strong>2017.06.45<br>00:00~12:00</strong>
+				</div>
+			</div>
+			
+			<div class="fndBtnBox">
+				<a href="#" class="cancel">다시 선택</a>
+				<a href="#" class="reserv">일자/시간선택</a>
+			</div>
+		</div>
+		<!-- // 하단 고정 -->
+		
+	</div>
+	<!-- // fullPopCommon -->
+

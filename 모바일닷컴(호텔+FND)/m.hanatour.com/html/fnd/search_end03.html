@@ -1,0 +1,1105 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi, viewport-fit=cover">
+<title>예약하기 - 현지투어 패스 입장권 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="../../css/fnd.css"><!-- FND 추가 -->
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-2.1.3.min.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common_new.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/swiper.min.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-ui-custom.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/hanatour/ht.calendar.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/free/m.fnd.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+	<header id="header" class="zi_none"><!-- 띠배너 보일경우 class="tBanTy" 추가 -->
+		<div class="inner">
+			<h1><a href="#none" data-role="none"><img src="../../images/common/btn_nlogo.png" alt="하나투어"></a></h1>
+			<a href="#none" id="btnMenu" data-role="none"><img src="../../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+			<a href="#none" id="btnMyhome" data-role="none"><img src="../../images/common/btn_hdright.png" alt="마이홈"></a>
+		</div>
+	</header>
+	<div class="headerMargin"></div>
+	
+	<!-- 컨텐츠 영역 -->
+	<div id="container">
+		
+		<!-- 구간열차 검색결과-->
+		<section class="fnd_search">
+			<!-- 상단 -->
+			<div class="searchTop_train">
+				<div class="cityRoute">
+					<strong>런던<em>영국</em></strong>
+					<strong>파리<em>프랑스</em></strong>
+				</div>
+				<div class="tDay">
+					<span>가는편  2017.06.14 14:00~15:00 </span>
+					<span>오는편  2017.06.17 14:00~15:00 </span>
+				</div>
+				<div class="tPeople">
+					<span>성인 2,</span>
+					<span>아동 2,</span>
+					<span>유아 2</span>
+					<em>패스소지자</em>
+				</div>
+				<a href="#" title="뒤로가기" data-role="none">변경</a>
+			</div>
+			<!-- // 상단 -->
+			
+			<div class="sort_train">
+				<a href="#pop_filter.html" class="popUpFull filter">상세검색</a>
+				<a href="#pop_sorting.html" class="popUpFull sorting">추천순</a>
+			</div>
+			
+			<div class="train_num">
+				<span>총 <b>5</b>개 객차</span>
+				<span><b>10</b>개 운임</span>
+			</div>
+			
+			<!-- 구간열차 리스트 왕복 tab -->
+			<div class="pb_toggle">
+				<ul class="tabList tabBase">
+					<li class="on"><a href="#"><span>가는편</span></a></li>
+					<li><a href="#"><span>오는편</span></a></li>
+				</ul>
+				
+				<!-- 가는편 -->
+				<div class="tabCont eurTab_sect">
+					<!-- 반복영역 -->
+					<div class="eurTab_cont">
+						<!-- 상단 -->
+						<div class="eurTrain_tit">
+							<em class="id_col01">직통</em>
+							<strong>EUROSTAR</strong>
+							
+							<!-- 상세일정 -->
+							<button type="button" title="일정 자세히보기" class="layerOpen btn_titRig">상세일정</button>
+							<div class="st_layerpop" style="display:none">
+								<div>
+									<h2 class="titYellow">상세일정<button type="button" class="btn_layerPop" title="닫기"></button></h2>
+									<h3 class="stitRoute">가는편<span>22시간45분</span></h3>
+									
+									<div class="dayRoute">
+										<ul class="routeList">
+											<li>
+												<div class="big_time">
+													<em>10:24</em>
+													<i>05.04(금)</i>
+													<span class="c_red">출발</span>
+												</div>
+												<p>Liverpool Street Station<span>EUROSTAR   TGR 9126편</span></p>
+											</li>
+											<li class="take"><!-- 환승대기 포함인경우 take 추가 -->
+												<div class="big_time">
+													<em>11:24</em>
+													<i>05.05(토)<span class="c_red">+1day</span></i>
+													<span class="c_red">도착</span>
+												</div>
+												<p>PARIS NORD Gare Montparnasse
+													<span class="take_time">4시간 40분 환승 대기</span><!-- 소요시간 -->
+												</p>
+											</li>
+											<li>
+												<div class="big_time">
+													<em>10:24</em>
+													<i>05.04(금)</i>
+													<span class="c_red">출발</span>
+												</div>
+												<p>LONDON ST-P ANCRAS</p>
+											</li>
+											<li class="take"><!-- 환승대기 포함인경우 take 추가 -->
+												<div class="big_time">
+													<em>11:24</em>
+													<i>05.05(토)<span class="c_red">+1day</span></i>
+													<span class="c_red">도착</span>
+												</div>
+												<p>LONDON ST-P ANCRAS LONDON ST-P<span class="take_time">4시간 40분 환승 대기</span><!-- 소요시간 --></p>
+											</li>
+											<li>
+												<div class="big_time">
+													<em>10:24</em>
+													<i>05.04(금)</i>
+													<span class="c_red">출발</span>
+												</div>
+												<p>LONDON ST-P ANCRAS</p>
+											</li>
+											<li class="take"><!-- 환승대기 포함인경우 take 추가 -->
+												<div class="big_time">
+													<em>11:24</em>
+													<i>05.05(토)<span class="c_red">+1day</span></i>
+													<span class="c_red">도착</span>
+												</div>
+												<p>LONDON ST-P ANCRAS LONDON ST-P<span class="take_time">4시간 40분 환승 대기</span><!-- 소요시간 --></p>
+											</li>
+											<li>
+												<div class="big_time">
+													<em>10:24</em>
+													<i>05.04(금)</i>
+													<span class="c_red">출발</span>
+												</div>
+												<p>LONDON ST-P ANCRAS</p>
+											</li>
+											<li>
+												<div class="big_time">
+													<em>10:24</em>
+													<i>05.04(금)</i>
+													<span class="c_red">출발</span>
+												</div>
+												<p>LONDON ST-P ANCRAS</p>
+											</li>
+										</ul>
+									</div>
+									
+								</div>
+							</div>
+							<!-- // 상세일정 -->
+						</div>
+						<!-- // 상단 -->
+						
+						<!-- 일정 -->
+						<div class="eurTrain_sc">
+							<div>
+								<strong>10:24</strong>
+								<em>Liverpool Street<br> Station</em>
+								<span>05.04(금)</span>
+							</div>
+							<span>4시간 40분</span>
+							<div>
+								<strong>10:24</strong>
+								<em>PARIS NORD<br>Gare Montparnasse</em>
+								<span>05.04(금)<span class="c_red">+1day</span></span>
+							</div>
+						</div>
+						<!-- // 일정 -->
+						
+						<!-- 하단 toggle box -->
+						<dl class="pass_pdDesc">
+							<dt>
+								<div class="to_money">
+									<span class="standard">(1인기준)</span>
+									<em>(EUR 291.00)</em>
+									<strong>373,650<span>원~</span></strong>
+								</div>
+								<button type="button" class="fnd_scToggle" title="상품보기"></button>
+							</dt>
+							<dd class="trainType" style=" display:none"><!-- 구간열차 trainType 추가 -->
+								<!-- 상품별 div -->
+								<div>
+									<a href="#">
+										<em><span>1등석</span></em>
+										<p>
+												2nd Cl Pass - Eurail Pass
+												2nd Cl Pass - Eurail Pass
+												Ind. Seat Res. w/ pass 2nd class
+									</p>
+										<strong>373,650원<span>(EUR 291.00)</span></strong>
+									</a>
+									
+									<button type="button" class="miniPop" title="자세히보기" data-role="none"></button><!-- 선택시 class="on" 추가 -->
+									<div class="miniPop_cont">
+										<button type="button" class="close_mini" title="팝업닫기"></button>
+										<p>안내문구</p>
+									</div>
+								</div>
+								<!-- // 상품별 div -->
+								
+								<!-- 상품별 div -->
+								<div>
+									<a href="#">
+										<em><span>1등석</span></em>
+										<p>E-Ticket / 실물티켓</p>
+										<strong>373,650원<span>(EUR 291.00)</span></strong>
+									</a>
+									
+									<button type="button" class="miniPop" title="자세히보기" data-role="none"></button><!-- 선택시 class="on" 추가 -->
+									<div class="miniPop_cont">
+										<button type="button" class="close_mini" title="팝업닫기"></button>
+										<p>안내문구</p>
+									</div>
+								</div>
+								<!-- // 상품별 div -->
+								
+								<!-- 상품별 div -->
+								<div>
+									<a href="#">
+										<em><span>1등석</span></em>
+										<p>E-Ticket</p>
+										<strong>373,650원<span>(EUR 291.00)</span></strong>
+									</a>
+									
+									<button type="button" class="miniPop" title="자세히보기" data-role="none"></button><!-- 선택시 class="on" 추가 -->
+									<div class="miniPop_cont">
+										<button type="button" class="close_mini" title="팝업닫기"></button>
+										<p>안내문구</p>
+									</div>
+								</div>
+								<!-- // 상품별 div -->
+								
+								<!-- 상품별 div -->
+								<div>
+									<a href="#">
+										<em><span>1등석</span></em>
+										<p>E-Ticket</p>
+										<strong>373,650원<span>(EUR 291.00)</span></strong>
+									</a>
+									
+									<button type="button" class="miniPop" title="자세히보기" data-role="none"></button><!-- 선택시 class="on" 추가 -->
+									<div class="miniPop_cont">
+										<button type="button" class="close_mini" title="팝업닫기"></button>
+										<p>안내문구</p>
+									</div>
+								</div>
+								<!-- // 상품별 div -->
+							</dd>
+							<dd class="underBene">
+								<em class="id_col06">혜택</em>
+								<span>하나투어 1만 마일리지 선착순 증정!</span>
+							</dd>
+						</dl>
+						<!-- //하단 toggle box -->
+					</div>
+					<!-- // 반복영역 -->
+					
+					<!-- 반복영역 -->
+					<div class="eurTab_cont">
+						<!-- 상단 -->
+						<div class="eurTrain_tit">
+							<em class="id_col04">1회환승</em>
+							<strong>EUROSTAR</strong>
+							
+							<!-- 상세일정 -->
+							<button type="button" title="일정 자세히보기" class="layerOpen btn_titRig">상세일정</button>
+							<div class="st_layerpop" style="display:none">
+								<div>
+									<h2 class="titYellow">상세일정<button type="button" class="btn_layerPop" title="닫기"></button></h2>
+									<h3 class="stitRoute">가는편<span>22시간45분</span></h3>
+									
+									<div class="dayRoute">
+										<ul class="routeList">
+											<li>
+												<div class="big_time">
+													<em>10:24</em>
+													<i>05.04(금)</i>
+													<span class="c_red">출발</span>
+												</div>
+												<p>Liverpool Street Station<span>EUROSTAR   TGR 9126편</span></p>
+											</li>
+											<li class="take"><!-- 환승대기 포함인경우 take 추가 -->
+												<div class="big_time">
+													<em>11:24</em>
+													<i>05.05(토)<span class="c_red">+1day</span></i>
+													<span class="c_red">도착</span>
+												</div>
+												<p>PARIS NORD Gare Montparnasse
+													<span class="take_time">4시간 40분 환승 대기</span><!-- 소요시간 -->
+												</p>
+											</li>
+											<li>
+												<div class="big_time">
+													<em>10:24</em>
+													<i>05.04(금)</i>
+													<span class="c_red">출발</span>
+												</div>
+												<p>LONDON ST-P ANCRAS</p>
+											</li>
+											<li>
+												<div class="big_time">
+													<em>11:24</em>
+													<i>05.05(토)<span class="c_red">+1day</span></i>
+													<span class="c_red">도착</span>
+												</div>
+												<p>LONDON ST-P ANCRAS LONDON ST-P</p>
+											</li>
+										</ul>
+									</div>
+									
+								</div>
+							</div>
+							<!-- // 상세일정 -->
+						</div>
+						<!-- // 상단 -->
+						
+						<!-- 일정 -->
+						<div class="eurTrain_sc">
+							<div>
+								<strong>10:24</strong>
+								<em>Liverpool Street<br> Station</em>
+								<span>05.04(금)</span>
+							</div>
+							<span>4시간 40분</span>
+							<div>
+								<strong>10:24</strong>
+								<em>PARIS NORD<br>Gare Montparnasse</em>
+								<span>05.04(금)<span class="c_red">+1day</span></span>
+							</div>
+						</div>
+						<!-- // 일정 -->
+						
+						<!-- 하단 toggle box -->
+						<dl class="pass_pdDesc">
+							<dt>
+								<div class="to_money">
+									<span class="standard">(1인기준)</span>
+									<em>(EUR 291.00)</em>
+									<strong>373,650<span>원~</span></strong>
+								</div>
+								<button type="button" class="fnd_scToggle" title="상품보기"></button>
+							</dt>
+							<dd class="trainType" style=" display:none"><!-- 구간열차 trainType 추가 -->
+								<!-- 상품별 div -->
+								<div>
+									<a href="#">
+										<em><span>1등석</span></em>
+										<p>E-Ticket / 실물티켓</p>
+										<strong>373,650원<span>(EUR 291.00)</span></strong>
+									</a>
+									
+									<button type="button" class="miniPop" title="자세히보기" data-role="none"></button><!-- 선택시 class="on" 추가 -->
+									<div class="miniPop_cont">
+										<button type="button" class="close_mini" title="팝업닫기"></button>
+										<p>안내문구</p>
+									</div>
+								</div>
+								<!-- // 상품별 div -->
+								
+								<!-- 상품별 div -->
+								<div>
+									<a href="#">
+										<em><span>1등석</span></em>
+										<p>E-Ticket / 실물티켓</p>
+										<strong>373,650원<span>(EUR 291.00)</span></strong>
+									</a>
+									
+									<button type="button" class="miniPop" title="자세히보기" data-role="none"></button><!-- 선택시 class="on" 추가 -->
+									<div class="miniPop_cont">
+										<button type="button" class="close_mini" title="팝업닫기"></button>
+										<p>안내문구</p>
+									</div>
+								</div>
+								<!-- // 상품별 div -->
+								
+								<!-- 상품별 div -->
+								<div>
+									<a href="#">
+										<em><span>1등석</span></em>
+										<p>E-Ticket</p>
+										<strong>373,650원<span>(EUR 291.00)</span></strong>
+									</a>
+									
+									<button type="button" class="miniPop" title="자세히보기" data-role="none"></button><!-- 선택시 class="on" 추가 -->
+									<div class="miniPop_cont">
+										<button type="button" class="close_mini" title="팝업닫기"></button>
+										<p>안내문구</p>
+									</div>
+								</div>
+								<!-- // 상품별 div -->
+								
+								<!-- 상품별 div -->
+								<div>
+									<a href="#">
+										<em><span>1등석</span></em>
+										<p>E-Ticket</p>
+										<strong>373,650원<span>(EUR 291.00)</span></strong>
+									</a>
+									
+									<button type="button" class="miniPop" title="자세히보기" data-role="none"></button><!-- 선택시 class="on" 추가 -->
+									<div class="miniPop_cont">
+										<button type="button" class="close_mini" title="팝업닫기"></button>
+										<p>안내문구</p>
+									</div>
+								</div>
+								<!-- // 상품별 div -->
+							</dd>
+							<dd class="underBene">
+								<em class="id_col06">혜택</em>
+								<span>하나투어 1만 마일리지 선착순 증정!<br>하나투어 카드 결제시 결제금액 전액 환급</span>
+							</dd>
+						</dl>
+						<!-- //하단 toggle box -->
+					</div>
+					<!-- // 반복영역 -->
+					
+					<!-- 반복영역 -->
+					<div class="eurTab_cont">
+						<!-- 상단 -->
+						<div class="eurTrain_tit">
+							<em class="id_col04">1회환승</em>
+							<strong>EUROSTAR</strong>
+							
+							<!-- 상세일정 -->
+							<button type="button" title="일정 자세히보기" class="layerOpen btn_titRig">상세일정</button>
+							<div class="st_layerpop" style="display:none">
+								<div>
+									<h2 class="titYellow">상세일정<button type="button" class="btn_layerPop" title="닫기"></button></h2>
+									<h3 class="stitRoute">가는편<span>22시간45분</span></h3>
+									
+									<div class="dayRoute">
+										<ul class="routeList">
+											<li>
+												<div class="big_time">
+													<em>10:24</em>
+													<i>05.04(금)</i>
+													<span class="c_red">출발</span>
+												</div>
+												<p>Liverpool Street Station<span>EUROSTAR   TGR 9126편</span></p>
+											</li>
+											<li class="take"><!-- 환승대기 포함인경우 take 추가 -->
+												<div class="big_time">
+													<em>11:24</em>
+													<i>05.05(토)<span class="c_red">+1day</span></i>
+													<span class="c_red">도착</span>
+												</div>
+												<p>PARIS NORD Gare Montparnasse
+													<span class="take_time">4시간 40분 환승 대기</span><!-- 소요시간 -->
+												</p>
+											</li>
+											<li>
+												<div class="big_time">
+													<em>10:24</em>
+													<i>05.04(금)</i>
+													<span class="c_red">출발</span>
+												</div>
+												<p>LONDON ST-P ANCRAS</p>
+											</li>
+											<li>
+												<div class="big_time">
+													<em>11:24</em>
+													<i>05.05(토)<span class="c_red">+1day</span></i>
+													<span class="c_red">도착</span>
+												</div>
+												<p>LONDON ST-P ANCRAS LONDON ST-P</p>
+											</li>
+										</ul>
+									</div>
+									
+								</div>
+							</div>
+							<!-- // 상세일정 -->
+						</div>
+						<!-- // 상단 -->
+						
+						<!-- 일정 -->
+						<div class="eurTrain_sc">
+							<div>
+								<strong>10:24</strong>
+								<em>Liverpool Street<br> Station</em>
+								<span>05.04(금)</span>
+							</div>
+							<span>4시간 40분</span>
+							<div>
+								<strong>10:24</strong>
+								<em>PARIS NORD<br>Gare Montparnasse</em>
+								<span>05.04(금)<span class="c_red">+1day</span></span>
+							</div>
+						</div>
+						<!-- // 일정 -->
+						
+						<!-- 하단 toggle box -->
+						<dl class="pass_pdDesc">
+							<dt>
+								<div class="to_money">
+									<span class="standard">(1인기준)</span>
+									<em>(EUR 291.00)</em>
+									<strong>373,650<span>원~</span></strong>
+								</div>
+								<button type="button" class="fnd_scToggle" title="상품보기"></button>
+							</dt>
+							<dd class="trainType" style=" display:none"><!-- 구간열차 trainType 추가 -->
+								<!-- 상품별 div -->
+								<div>
+									<a href="#">
+										<em><span>1등석</span></em>
+										<p>E-Ticket / 실물티켓</p>
+										<strong>373,650원<span>(EUR 291.00)</span></strong>
+									</a>
+									
+									<button type="button" class="miniPop" title="자세히보기" data-role="none"></button><!-- 선택시 class="on" 추가 -->
+									<div class="miniPop_cont">
+										<button type="button" class="close_mini" title="팝업닫기"></button>
+										<p>안내문구</p>
+									</div>
+								</div>
+								<!-- // 상품별 div -->
+								
+								<!-- 상품별 div -->
+								<div>
+									<a href="#">
+										<em><span>1등석</span></em>
+										<p>E-Ticket / 실물티켓</p>
+										<strong>373,650원<span>(EUR 291.00)</span></strong>
+									</a>
+									
+									<button type="button" class="miniPop" title="자세히보기" data-role="none"></button><!-- 선택시 class="on" 추가 -->
+									<div class="miniPop_cont">
+										<button type="button" class="close_mini" title="팝업닫기"></button>
+										<p>안내문구</p>
+									</div>
+								</div>
+								<!-- // 상품별 div -->
+								
+								<!-- 상품별 div -->
+								<div>
+									<a href="#">
+										<em><span>1등석</span></em>
+										<p>E-Ticket</p>
+										<strong>373,650원<span>(EUR 291.00)</span></strong>
+									</a>
+									
+									<button type="button" class="miniPop" title="자세히보기" data-role="none"></button><!-- 선택시 class="on" 추가 -->
+									<div class="miniPop_cont">
+										<button type="button" class="close_mini" title="팝업닫기"></button>
+										<p>안내문구</p>
+									</div>
+								</div>
+								<!-- // 상품별 div -->
+								
+								<!-- 상품별 div -->
+								<div>
+									<a href="#">
+										<em><span>1등석</span></em>
+										<p>E-Ticket</p>
+										<strong>373,650원<span>(EUR 291.00)</span></strong>
+									</a>
+									
+									<button type="button" class="miniPop" title="자세히보기" data-role="none"></button><!-- 선택시 class="on" 추가 -->
+									<div class="miniPop_cont">
+										<button type="button" class="close_mini" title="팝업닫기"></button>
+										<p>안내문구</p>
+									</div>
+								</div>
+								<!-- // 상품별 div -->
+							</dd>
+							<dd class="underBene">
+								<em class="id_col06">혜택</em>
+								<span>하나투어 1만 마일리지 선착순 증정!</span>
+							</dd>
+						</dl>
+						<!-- //하단 toggle box -->
+					</div>
+					<!-- // 반복영역 -->
+				</div>
+				<!-- // 가는편 -->
+				
+				<!-- 오는편 -->
+				<div class="tabCont eurTab_sect" style="display:none">
+					<!-- 반복영역 -->
+					<div class="eurTab_cont">
+						<!-- 상단 -->
+						<div class="eurTrain_tit">
+							<em class="id_col01">온다</em>
+							<strong>EUROSTAR</strong>
+							
+							<!-- 상세일정 -->
+							<button type="button" title="일정 자세히보기" class="layerOpen btn_titRig">상세일정</button>
+							<div class="st_layerpop" style="display:none">
+								<div>
+									<h2 class="titYellow">상세일정<button type="button" class="btn_layerPop" title="닫기"></button></h2>
+									<h3 class="stitRoute">가는편<span>22시간45분</span></h3>
+									
+									<div class="dayRoute">
+										<ul class="routeList">
+											<li>
+												<div class="big_time">
+													<em>10:24</em>
+													<i>05.04(금)</i>
+													<span class="c_red">출발</span>
+												</div>
+												<p>Liverpool Street Station<span>EUROSTAR   TGR 9126편</span></p>
+											</li>
+											<li class="take"><!-- 환승대기 포함인경우 take 추가 -->
+												<div class="big_time">
+													<em>11:24</em>
+													<i>05.05(토)<span class="c_red">+1day</span></i>
+													<span class="c_red">도착</span>
+												</div>
+												<p>PARIS NORD Gare Montparnasse
+													<span class="take_time">4시간 40분 환승 대기</span><!-- 소요시간 -->
+												</p>
+											</li>
+											<li>
+												<div class="big_time">
+													<em>10:24</em>
+													<i>05.04(금)</i>
+													<span class="c_red">출발</span>
+												</div>
+												<p>LONDON ST-P ANCRAS</p>
+											</li>
+											<li>
+												<div class="big_time">
+													<em>11:24</em>
+													<i>05.05(토)<span class="c_red">+1day</span></i>
+													<span class="c_red">도착</span>
+												</div>
+												<p>LONDON ST-P ANCRAS LONDON ST-P</p>
+											</li>
+										</ul>
+									</div>
+									
+								</div>
+							</div>
+							<!-- // 상세일정 -->
+						</div>
+						<!-- // 상단 -->
+						
+						<!-- 일정 -->
+						<div class="eurTrain_sc">
+							<div>
+								<strong>10:24</strong>
+								<em>Liverpool Street<br> Station</em>
+								<span>05.04(금)</span>
+							</div>
+							<span>4시간 40분</span>
+							<div>
+								<strong>10:24</strong>
+								<em>PARIS NORD<br>Gare Montparnasse</em>
+								<span>05.04(금)<span class="c_red">+1day</span></span>
+							</div>
+						</div>
+						<!-- // 일정 -->
+						
+						<!-- 하단 toggle box -->
+						<dl class="pass_pdDesc">
+							<dt>
+								<div class="to_money">
+									<span class="standard">(1인기준)</span>
+									<em>(EUR 291.00)</em>
+									<strong>373,650<span>원~</span></strong>
+								</div>
+								<button type="button" class="fnd_scToggle" title="상품보기"></button>
+							</dt>
+							<dd class="trainType" style="display:none"><!-- 구간열차 trainType 추가 -->
+								<!-- 상품별 div -->
+								<div>
+									<a href="#">
+										<em><span>1등석</span></em>
+										<p>E-Ticket / 실물티켓</p>
+										<strong>373,650원<span>(EUR 291.00)</span></strong>
+									</a>
+									
+									<button type="button" class="miniPop" title="자세히보기" data-role="none"></button><!-- 선택시 class="on" 추가 -->
+									<div class="miniPop_cont">
+										<button type="button" class="close_mini" title="팝업닫기"></button>
+										<p>안내문구</p>
+									</div>
+								</div>
+								<!-- // 상품별 div -->
+								
+								<!-- 상품별 div -->
+								<div>
+									<a href="#">
+										<em><span>1등석</span></em>
+										<p>E-Ticket / 실물티켓</p>
+										<strong>373,650원<span>(EUR 291.00)</span></strong>
+									</a>
+									
+									<button type="button" class="miniPop" title="자세히보기" data-role="none"></button><!-- 선택시 class="on" 추가 -->
+									<div class="miniPop_cont">
+										<button type="button" class="close_mini" title="팝업닫기"></button>
+										<p>안내문구</p>
+									</div>
+								</div>
+								<!-- // 상품별 div -->
+								
+								<!-- 상품별 div -->
+								<div>
+									<a href="#">
+										<em><span>1등석</span></em>
+										<p>E-Ticket</p>
+										<strong>373,650원<span>(EUR 291.00)</span></strong>
+									</a>
+									
+									<button type="button" class="miniPop" title="자세히보기" data-role="none"></button><!-- 선택시 class="on" 추가 -->
+									<div class="miniPop_cont">
+										<button type="button" class="close_mini" title="팝업닫기"></button>
+										<p>안내문구</p>
+									</div>
+								</div>
+								<!-- // 상품별 div -->
+								
+								<!-- 상품별 div -->
+								<div>
+									<a href="#">
+										<em><span>1등석</span></em>
+										<p>E-Ticket</p>
+										<strong>373,650원<span>(EUR 291.00)</span></strong>
+									</a>
+									
+									<button type="button" class="miniPop" title="자세히보기" data-role="none"></button><!-- 선택시 class="on" 추가 -->
+									<div class="miniPop_cont">
+										<button type="button" class="close_mini" title="팝업닫기"></button>
+										<p>안내문구</p>
+									</div>
+								</div>
+								<!-- // 상품별 div -->
+							</dd>
+							<dd class="underBene">
+								<em class="id_col06">혜택</em>
+								<span>하나투어 1만 마일리지 선착순 증정!</span>
+							</dd>
+						</dl>
+						<!-- //하단 toggle box -->
+					</div>
+					<!-- // 반복영역 -->
+					
+					<!-- 반복영역 -->
+					<div class="eurTab_cont">
+						<!-- 상단 -->
+						<div class="eurTrain_tit">
+							<em class="id_col04">1회환승</em>
+							<strong>EUROSTAR</strong>
+							
+							<!-- 상세일정 -->
+							<button type="button" title="일정 자세히보기" class="layerOpen btn_titRig">상세일정</button>
+							<div class="st_layerpop" style="display:none">
+								<div>
+									<h2 class="titYellow">상세일정<button type="button" class="btn_layerPop" title="닫기"></button></h2>
+									<h3 class="stitRoute">가는편<span>22시간45분</span></h3>
+									
+									<div class="dayRoute">
+										<ul class="routeList">
+											<li>
+												<div class="big_time">
+													<em>10:24</em>
+													<i>05.04(금)</i>
+													<span class="c_red">출발</span>
+												</div>
+												<p>Liverpool Street Station<span>EUROSTAR   TGR 9126편</span></p>
+											</li>
+											<li class="take"><!-- 환승대기 포함인경우 take 추가 -->
+												<div class="big_time">
+													<em>11:24</em>
+													<i>05.05(토)<span class="c_red">+1day</span></i>
+													<span class="c_red">도착</span>
+												</div>
+												<p>PARIS NORD Gare Montparnasse
+													<span class="take_time">4시간 40분 환승 대기</span><!-- 소요시간 -->
+												</p>
+											</li>
+											<li>
+												<div class="big_time">
+													<em>10:24</em>
+													<i>05.04(금)</i>
+													<span class="c_red">출발</span>
+												</div>
+												<p>LONDON ST-P ANCRAS</p>
+											</li>
+											<li>
+												<div class="big_time">
+													<em>11:24</em>
+													<i>05.05(토)<span class="c_red">+1day</span></i>
+													<span class="c_red">도착</span>
+												</div>
+												<p>LONDON ST-P ANCRAS LONDON ST-P</p>
+											</li>
+										</ul>
+									</div>
+									
+								</div>
+							</div>
+							<!-- // 상세일정 -->
+						</div>
+						<!-- // 상단 -->
+						
+						<!-- 일정 -->
+						<div class="eurTrain_sc">
+							<div>
+								<strong>10:24</strong>
+								<em>Liverpool Street<br> Station</em>
+								<span>05.04(금)</span>
+							</div>
+							<span>4시간 40분</span>
+							<div>
+								<strong>10:24</strong>
+								<em>PARIS NORD<br>Gare Montparnasse</em>
+								<span>05.04(금)<span class="c_red">+1day</span></span>
+							</div>
+						</div>
+						<!-- // 일정 -->
+						
+						<!-- 하단 toggle box -->
+						<dl class="pass_pdDesc">
+							<dt>
+								<div class="to_money">
+									<span class="standard">(1인기준)</span>
+									<em>(EUR 291.00)</em>
+									<strong>373,650<span>원~</span></strong>
+								</div>
+								<button type="button" class="fnd_scToggle" title="상품보기"></button>
+							</dt>
+							<dd class="trainType" style=" display:none"><!-- 구간열차 trainType 추가 -->
+								<!-- 상품별 div -->
+								<div>
+									<a href="#">
+										<em><span>1등석</span></em>
+										<p>E-Ticket / 실물티켓</p>
+										<strong>373,650원<span>(EUR 291.00)</span></strong>
+									</a>
+									
+									<button type="button" class="miniPop" title="자세히보기" data-role="none"></button><!-- 선택시 class="on" 추가 -->
+									<div class="miniPop_cont">
+										<button type="button" class="close_mini" title="팝업닫기"></button>
+										<p>안내문구</p>
+									</div>
+								</div>
+								<!-- // 상품별 div -->
+								
+								<!-- 상품별 div -->
+								<div>
+									<a href="#">
+										<em><span>1등석</span></em>
+										<p>E-Ticket / 실물티켓</p>
+										<strong>373,650원<span>(EUR 291.00)</span></strong>
+									</a>
+									
+									<button type="button" class="miniPop" title="자세히보기" data-role="none"></button><!-- 선택시 class="on" 추가 -->
+									<div class="miniPop_cont">
+										<button type="button" class="close_mini" title="팝업닫기"></button>
+										<p>안내문구</p>
+									</div>
+								</div>
+								<!-- // 상품별 div -->
+								
+								<!-- 상품별 div -->
+								<div>
+									<a href="#">
+										<em><span>1등석</span></em>
+										<p>E-Ticket</p>
+										<strong>373,650원<span>(EUR 291.00)</span></strong>
+									</a>
+									
+									<button type="button" class="miniPop" title="자세히보기" data-role="none"></button><!-- 선택시 class="on" 추가 -->
+									<div class="miniPop_cont">
+										<button type="button" class="close_mini" title="팝업닫기"></button>
+										<p>안내문구</p>
+									</div>
+								</div>
+								<!-- // 상품별 div -->
+								
+								<!-- 상품별 div -->
+								<div>
+									<a href="#">
+										<em><span>1등석</span></em>
+										<p>E-Ticket</p>
+										<strong>373,650원<span>(EUR 291.00)</span></strong>
+									</a>
+									
+									<button type="button" class="miniPop" title="자세히보기" data-role="none"></button><!-- 선택시 class="on" 추가 -->
+									<div class="miniPop_cont">
+										<button type="button" class="close_mini" title="팝업닫기"></button>
+										<p>안내문구</p>
+									</div>
+								</div>
+								<!-- // 상품별 div -->
+							</dd>
+							<dd class="underBene">
+								<em class="id_col06">혜택</em>
+								<span>하나투어 1만 마일리지 선착순 증정!<br>하나투어 카드 결제시 결제금액 전액 환급</span>
+							</dd>
+						</dl>
+						<!-- //하단 toggle box -->
+					</div>
+					<!-- // 반복영역 -->
+					
+					<!-- 반복영역 -->
+					<div class="eurTab_cont">
+						<!-- 상단 -->
+						<div class="eurTrain_tit">
+							<em class="id_col04">1회환승</em>
+							<strong>EUROSTAR</strong>
+							
+							<!-- 상세일정 -->
+							<button type="button" title="일정 자세히보기" class="layerOpen btn_titRig">상세일정</button>
+							<div class="st_layerpop" style="display:none">
+								<div>
+									<h2 class="titYellow">상세일정<button type="button" class="btn_layerPop" title="닫기"></button></h2>
+									<h3 class="stitRoute">가는편<span>22시간45분</span></h3>
+									
+									<div class="dayRoute">
+										<ul class="routeList">
+											<li>
+												<div class="big_time">
+													<em>10:24</em>
+													<i>05.04(금)</i>
+													<span class="c_red">출발</span>
+												</div>
+												<p>Liverpool Street Station<span>EUROSTAR   TGR 9126편</span></p>
+											</li>
+											<li class="take"><!-- 환승대기 포함인경우 take 추가 -->
+												<div class="big_time">
+													<em>11:24</em>
+													<i>05.05(토)<span class="c_red">+1day</span></i>
+													<span class="c_red">도착</span>
+												</div>
+												<p>PARIS NORD Gare Montparnasse
+													<span class="take_time">4시간 40분 환승 대기</span><!-- 소요시간 -->
+												</p>
+											</li>
+											<li>
+												<div class="big_time">
+													<em>10:24</em>
+													<i>05.04(금)</i>
+													<span class="c_red">출발</span>
+												</div>
+												<p>LONDON ST-P ANCRAS</p>
+											</li>
+											<li>
+												<div class="big_time">
+													<em>11:24</em>
+													<i>05.05(토)<span class="c_red">+1day</span></i>
+													<span class="c_red">도착</span>
+												</div>
+												<p>LONDON ST-P ANCRAS LONDON ST-P</p>
+											</li>
+										</ul>
+									</div>
+									
+								</div>
+							</div>
+							<!-- // 상세일정 -->
+						</div>
+						<!-- // 상단 -->
+						
+						<!-- 일정 -->
+						<div class="eurTrain_sc">
+							<div>
+								<strong>10:24</strong>
+								<em>Liverpool Street<br> Station</em>
+								<span>05.04(금)</span>
+							</div>
+							<span>4시간 40분</span>
+							<div>
+								<strong>10:24</strong>
+								<em>PARIS NORD<br>Gare Montparnasse</em>
+								<span>05.04(금)<span class="c_red">+1day</span></span>
+							</div>
+						</div>
+						<!-- // 일정 -->
+						
+						<!-- 하단 toggle box -->
+						<dl class="pass_pdDesc">
+							<dt>
+								<div class="to_money">
+									<span class="standard">(1인기준)</span>
+									<em>(EUR 291.00)</em>
+									<strong>373,650<span>원~</span></strong>
+								</div>
+								<button type="button" class="fnd_scToggle" title="상품보기"></button>
+							</dt>
+							<dd class="trainType" style=" display:none"><!-- 구간열차 trainType 추가 -->
+								<!-- 상품별 div -->
+								<div>
+									<a href="#">
+										<em><span>1등석</span></em>
+										<p>E-Ticket / 실물티켓</p>
+										<strong>373,650원<span>(EUR 291.00)</span></strong>
+									</a>
+									
+									<button type="button" class="miniPop" title="자세히보기" data-role="none"></button><!-- 선택시 class="on" 추가 -->
+									<div class="miniPop_cont">
+										<button type="button" class="close_mini" title="팝업닫기"></button>
+										<p>안내문구</p>
+									</div>
+								</div>
+								<!-- // 상품별 div -->
+								
+								<!-- 상품별 div -->
+								<div>
+									<a href="#">
+										<em><span>1등석</span></em>
+										<p>E-Ticket / 실물티켓</p>
+										<strong>373,650원<span>(EUR 291.00)</span></strong>
+									</a>
+									
+									<button type="button" class="miniPop" title="자세히보기" data-role="none"></button><!-- 선택시 class="on" 추가 -->
+									<div class="miniPop_cont">
+										<button type="button" class="close_mini" title="팝업닫기"></button>
+										<p>안내문구</p>
+									</div>
+								</div>
+								<!-- // 상품별 div -->
+								
+								<!-- 상품별 div -->
+								<div>
+									<a href="#">
+										<em><span>1등석</span></em>
+										<p>E-Ticket</p>
+										<strong>373,650원<span>(EUR 291.00)</span></strong>
+									</a>
+									
+									<button type="button" class="miniPop" title="자세히보기" data-role="none"></button><!-- 선택시 class="on" 추가 -->
+									<div class="miniPop_cont">
+										<button type="button" class="close_mini" title="팝업닫기"></button>
+										<p>안내문구</p>
+									</div>
+								</div>
+								<!-- // 상품별 div -->
+								
+								<!-- 상품별 div -->
+								<div>
+									<a href="#">
+										<em><span>1등석</span></em>
+										<p>E-Ticket</p>
+										<strong>373,650원<span>(EUR 291.00)</span></strong>
+									</a>
+									
+									<button type="button" class="miniPop" title="자세히보기" data-role="none"></button><!-- 선택시 class="on" 추가 -->
+									<div class="miniPop_cont">
+										<button type="button" class="close_mini" title="팝업닫기"></button>
+										<p>안내문구</p>
+									</div>
+								</div>
+								<!-- // 상품별 div -->
+							</dd>
+							<dd class="underBene">
+								<em class="id_col06">혜택</em>
+								<span>하나투어 1만 마일리지 선착순 증정!</span>
+							</dd>
+						</dl>
+						<!-- //하단 toggle box -->
+					</div>
+					<!-- // 반복영역 -->
+				</div>
+				<!-- // 오는편 -->
+			</div>
+			<!-- // 구간열차 리스트 왕복 tab  -->
+		</section>
+		<!-- // 구간열차 검색결과 -->
+		
+	</div>
+	<!-- //컨텐츠 영역 -->
+	
+	<footer class="newFoot">
+		<ul>
+			<li><a href="#none" data-role="none">로그인</a></li>
+			<li><a href="#none" data-role="none">PC버전</a></li>
+			<li><a href="#none" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+		</ul>
+		<div>
+			<a href="#none" data-role="none">이용약관</a>|
+			<a href="#none" data-role="none">개인정보처리방침</a>|
+			<a href="#none" data-role="none">여행약관</a>|
+			<a href="#none" data-role="none">사업자정보확인</a>
+		</div>
+		<address>
+			㈜ 하나투어 | 대표자: 최현석 | 사업자등록번호 : 102-81-39440<br>
+			통신판매업신고번호 : 종로01-1806호 | 개인정보관리 책임자 : 최종윤<br>
+			[110-160]서울특별시 종로구 인사동 5길 41 ㈜ 하나투어<br>
+			하나투어상담센터 : <a href="tel:1577-1233" data-role="none">1577-1233</a> | FAX : 02-734-0392<br>
+			이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> | 호스팅 서비스 사업자 : ㈜하나투어<br>
+			관광사업자 등록번호 : 제1933-000006호 | 영업보증보험 : 22억 1천만원 가입<br>
+			COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+		</address>
+	</footer>
+	
+</div>
+
+</body>
+</html>
+

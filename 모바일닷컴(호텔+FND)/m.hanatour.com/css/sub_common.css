@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 좌측 */
+.common_header_left_menu.newSubLeft .leftMenu_title_layer img{display:none }
+.common_header_left_menu.newSubLeft .leftMenu_title_layer span {font-family:'DroidSansFallback','Apple Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif; font-size:12px;color:#fff; font-weight:bold}
+.common_header_left_menu.newSubLeft .common_header_left_sub_menu .menu_layer span {font-family:'DroidSansFallback','Apple Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif; font-size:13px}
+.common_header_left_menu.newSubLeft .leftMenu_title_layer {padding-left:0}
+.common_header_left_menu.newSubLeft .leftMenu_list_titleBar1 {background-color:#c83d67;border-top:1px solid #b72b48;border-bottom:1px solid #b72b48;padding:7px 0 6px 12px;font-size:12px; display:block;height:14px;width:auto}
+.common_header_left_menu.newSubLeft .common_header_left_sub_menu{ background-color:#fff}
+.common_header_left_menu.newSubLeft .common_header_left_sub_menu span { color:#333 !important}
+.common_header_left_menu.newSubLeft .common_header_left_sub_menu div {border:none !important}
+.common_header_left_menu.newSubLeft .common_header_left_sub_menu .menu_layer {border-bottom:1px solid #eaeaea !important}
+.common_header_left_menu.newSubLeft .leftMenu_list_titleBar2+.leftMenu_list_titleBar1+.common_header_left_sub_menu .menu_layer {border-bottom:none !important}
+.common_header_left_menu.newSubLeft .common_header_left_sub_menu .menu_layer.last {border-bottom:none !important}
+.common_header_left_menu.newSubLeft .common_header_left_sub_menu .menu_layer > div:first-child {border-right:1px solid #eaeaea !important}
+.common_header_left_menu.newSubLeft .common_header_left_sub_menu .menu_layer .menu1:active,.common_header_left_menu.newSubLeft .common_header_left_sub_menu .menu_layer .menu2:active {background-color:#fff !important}
+.common_header_left_menu.newSubLeft div div div > div:nth-child(11) {background:#747b8e url(http://pubtest.dothome.co.kr/new/publishing_com/images/common/bg_menu_list01.png) 12px center no-repeat !important;border-bottom:1px solid #696f80;background-size:20px !important;color:#fff; font-weight:bold; padding:12px 0 12px 41px; border-top:none !important} /* 추천기획전 */
+.common_header_left_menu.newSubLeft .leftMenu_list_titleBar2 {display:block; width:auto;background:#747b8e url(http://pubtest.dothome.co.kr/new/publishing_com/images/common/bg_menu_list02.png) 12px center no-repeat !important;border-bottom:1px solid #696f80;background-size:20px !important;color:#fff; font-weight:bold; padding:12px 0 12px 41px; border-top:none !important; height:auto}
+.common_header_left_menu.newSubLeft .leftMenu_list_titleBar2+.leftMenu_list_titleBar2 { background-image:url(http://pubtest.dothome.co.kr/new/publishing_com/images/common/bg_menu_list03.png)  !important}
+.common_header_left_menu.newSubLeft .leftMenu_list_titleBar2+.leftMenu_list_titleBar2+.leftMenu_list_titleBar2 { background-image:url(http://pubtest.dothome.co.kr/new/publishing_com/images/common/bg_menu_list04.png)  !important}
+.common_header_left_menu.newSubLeft .leftMenu_list_titleBar2+.leftMenu_list_titleBar2+.leftMenu_list_titleBar2+.leftMenu_list_titleBar2 { background-image:url(http://pubtest.dothome.co.kr/new/publishing_com/images/common/bg_menu_list05.png)  !important}
+.common_header_left_menu.newSubLeft .common_header_left_sub_menu .menu_layer div.appMenu { background-color:#828899; border-right:none !important}
+.common_header_left_menu.newSubLeft .common_header_left_sub_menu .menu_layer div.appMenu span{ color:#fff !important; font-size:11px}
+.common_header_left_menu.newSubLeft .common_header_left_sub_menu .menu_layer div.appMenu img { width:52px; height:51px}
+.common_header_left_menu.newSubLeft .leftMenu_list_titleBar2+.leftMenu_list_titleBar2+.leftMenu_list_titleBar2+.leftMenu_list_titleBar2+.common_header_left_sub_menu .menu_layer { border-bottom:none !important}
+
+
+/* 우측 */
+.common_header_rightMenu.newSubRight,.common_header_rightMenu.newSubRight button {font-family:'DroidSansFallback','Apple Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;}
+.common_header_rightMenu.newSubRight .header_rightMenu_loginLayer{background-color:#fff}
+.common_header_rightMenu.newSubRight .header_rightMenu_loginLayer .header_loginTitle {padding-top:60px}
+.common_header_rightMenu.newSubRight .header_rightMenu_loginLayer .header_loginTitle strong{font-size:22px}
+.common_header_rightMenu.newSubRight .header_rightMenu_loginLayer .header_loginDesc { font-size:13px;color:#333 !important}
+.common_header_rightMenu.newSubRight .header_rightMenu_loginLayer .header_loginDesc span {color:#333 !important; font-size:13px;font-family:'DroidSansFallback','Apple Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;}
+.common_header_rightMenu.newSubRight .header_rightMenu_loginLayer button span {display:none}
+.common_header_rightMenu.newSubRight .header_rightMenu_loginLayer button strong {font-weight:normal}
+.common_header_rightMenu.newSubRight .header_rightMenu_loginLayer .header_login_buttonLayer1{padding-top:30px}
+.common_header_rightMenu.newSubRight .header_rightMenu_loginLayer .header_login_buttonLayer1 button {display: inline-block;width: 200px;color: #fff;padding: 14px 0;border-radius: 5px; font-size: 15px; background-color:#c83d67; border:1px solid #c83d67; height:auto}
+.common_header_rightMenu.newSubRight .header_rightMenu_loginLayer .header_login_buttonLayer2 button {display: inline-block;width: 200px;color: #fff;padding: 14px 0;border-radius: 5px; font-size: 15px;background-color:#a6acbd; border:1px solid #a6acbd;height:auto}
+.common_header_rightMenu.newSubRight .header_rightMenu_myPageNavi .tableCell {background-color: #c83d67;color: #fff;padding: 20px 65px 20px 20px;}
+.common_header_rightMenu.newSubRight .header_rightMenu_myPageNavi .tableCell span {font-family:'DroidSansFallback','Apple Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif; font-weight:bold}
+.common_header_rightMenu.newSubRight .header_rightMenu_myPageNavi .tableCell span span {font-size:22px}
+.common_header_rightMenu.newSubRight .header_rightMenu_mlgContent { padding:0; display:block}
+.common_header_rightMenu.newSubRight .header_rightMenu_mlgContent .header_myPage_mlgLayer1 {padding:19px 20px; display:block; width:auto; border-bottom:1px solid #ccc; background-color:#fff; position:relative}
+
+.common_header_rightMenu.newSubRight .header_rightMenu_mlgContent .header_myPage_mlgLayer1 .tableCell1 {display:block;}
+.common_header_rightMenu.newSubRight .header_rightMenu_mlgContent .header_myPage_mlgLayer1 .tableCell1 span {font-family:'DroidSansFallback','Apple Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif; font-size:14px}
+.common_header_rightMenu.newSubRight .header_rightMenu_mlgContent .header_myPage_mlgLayer1 .tableCell2 { position:absolute;right:10px;top:50%; margin-top:-13px}
+.common_header_rightMenu.newSubRight .header_rightMenu_mlgContent .header_myPage_mlgLayer2 {background-color:#f7f7f7}
+.common_header_rightMenu.newSubRight .header_rightMenu_mlgContent .header_myPage_mlgLayer2 .tableCell1 { position:relative; padding-left:10px}
+.common_header_rightMenu.newSubRight .header_rightMenu_mlgContent .header_myPage_mlgLayer2 .tableCell1:before {content: '';width: 4px;height: 4px;display: block;left: 0;top: 50%;background: #ccc;position: absolute;border-radius: 50%; margin-top:-2px}
+.common_header_rightMenu.newSubRight .header_rightMenu_mlgContent .header_myPage_mlgLayer2 .tableCell2 { text-align:right;}
+
+.common_header_rightMenu.newSubRight .header_rightMenu_mlgContent .header_myPage_mlgLayer2 .tableCell2 .mileage ,.common_header_rightMenu.newSubRight .header_rightMenu_mlgContent .header_myPage_mlgLayer2 .tableCell2 .mileageCustomerNo{ color:#666;}
+.common_header_rightMenu.newSubRight .header_myPage_contentLayer {display:block;width:auto;height:auto;padding: 20px 20px 20px 20px;font-size: 14px;background: 20px center no-repeat;background-size: 20px 18px;border-bottom: 1px solid #ccc;position: relative;overflow: hidden;}
+.common_header_rightMenu.newSubRight .header_myPage_contentLayer .tableCell1 {display:block; padding-left:0}
+.common_header_rightMenu.newSubRight .header_myPage_contentLayer .tableCell1 span {font-family:'DroidSansFallback','Apple Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif}
+.common_header_rightMenu.newSubRight .header_myPage_contentLayer .tableCell1 span+span {position:absolute; right:50px;top:21px; font-size:13px !important; color:#888 !important}
+.common_header_rightMenu.newSubRight .header_myPage_contentLayer .tableCell1 span+span span {color:#888 !important}
+.common_header_rightMenu.newSubRight .header_myPage_contentLayer .tableCell2 {position:absolute;right:24px; top:0; margin-top:; display:block; padding:0; height:100%}
+.common_header_rightMenu.newSubRight .header_myPage_contentLayer .tableCell2 span.bu_right {background:url(http://pubtest.dothome.co.kr/new/publishing_com/images/common/bg_right_bul.png) right center no-repeat;width: 10px; height: 100%; display: block;background-size: 10px 17px;}
+
+.common_header_rightMenu.newSubRight .header_myPage_contentLayer .tableCell2 span.bu_bottom {background:url(http://pubtest.dothome.co.kr/new/publishing_com/images/common/bg_btm_bul.png) right center no-repeat;width: 17px; height: 100%; display: block;background-size: 17px 10px;}
+.common_header_rightMenu.newSubRight .header_myPage_contentLayer .tableCell2 span.bu_up {background:url(http://pubtest.dothome.co.kr/new/publishing_com/images/common/bg_top_bul.png) right center no-repeat;width: 17px; height: 100%; display: block;background-size: 17px 10px;}
+.common_header_rightMenu.newSubRight .header_myPage_mlgLayer2 .tableLayer1 .tableCell2 .mileageMark img,.common_header_rightMenu.newSubRight .header_myPage_mlgLayer2 .tableLayer2 .tableCell2 .mileageMark img{ vertical-align:middle; width:16px; margin-left:4px}
+
+.common_header_rightMenu.newSubRight .header_myPage_contentLayer_desc {background-color:#f7f7f7}
+
+/* 푸터 */
+.common_copyright_btmMenu.newSubFoot ul li{ width:33.3%; padding:16px 0}
+.common_copyright_btmMenu.newSubFoot ul li:first-child {width:33.4%}

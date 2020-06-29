@@ -1,0 +1,53 @@
+
+<!-- pop start  -->
+
+	<div class="fullPopCommon">
+		<div class="header">
+			<h3>예약자 정보입력<button type="button" class="closeOverlayPanel" title="팝업닫기"></button></h3>
+		</div>
+		
+		<div class="innerScroller">
+			<!-- pop cont -->
+			<div class="pop_innerComm">
+				<p>예약과 관련된 안내를 받기 위해<br><span class="c_red">전화번호와 이메일주소는 정확히 입력</span>해주세요 </p>
+				
+				<ul class="inputCell">
+					<li>
+						<label for="name">한글성명<sup>*</sup></label><!-- for = id 값 동일하게 맞춰주세요 -->
+						<div><input type="text" id="name" class="inputTxt" title="한글성명"></div>
+					</li>
+					<!-- 20170921 추가 -->
+					<li>
+						<label for="birth">생년월일<sup>*</sup></label>
+						<div><input type="tel" id="birth" class="inputTxt" title="생년월일" placeholder="예) YYYYMMDD"></div>
+					</li>
+					<!-- // 20170921 추가 -->
+					<li>
+						<label for="phone">전화번호<sup>*</sup></label>
+						<div>
+							<div class="inTable">
+								<span class="w35">
+									<select class="selectBox" id="phone" title="휴대폰 앞자리 선택" data-role="none">
+										<option>010</option>
+									</select>
+								</span>
+								<span class="cellPad"></span>
+								<span class="w65">
+									<input type="tel" class="inputTxt" data-role="none" title="휴대폰 가운데, 뒷자리"placeholder="- 없이 입력">
+								</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<label for="email">이메일<sup>*</sup></label>
+						<div><input type="email" id="email" class="inputTxt" title="이메일" placeholder="예) hana@hanatour.com"></div>
+					</li>
+				</ul>
+				
+				<a href="#" class="m_btnRed short">확인</a>
+			</div>
+			<!-- // pop cont -->
+		</div>
+		
+	</div>
+

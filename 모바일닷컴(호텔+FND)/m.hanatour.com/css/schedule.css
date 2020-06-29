@@ -1,0 +1,1101 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 일정표 개편 CSS  */
+html {font-size:10px}
+@media all and (min-width:375px) { /* 아이폰6 */
+html {font-size:11.5px}
+}
+@media all and (min-width:414px) { /* 아이폰6 plus */
+html {font-size:12px}
+}
+
+.scheduleBox {background-color:#dbdce1;padding-bottom:20px;font-family:'DroidSansFallback','Apple Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;color:#333;letter-spacing:-1px; font-weight:normal}
+.scheduleBox strong,.scheduleBox b{font-weight:bold}
+.scheduleBox img {display:inline}
+.scheduleBox .c_red {color:#c83d67}
+.scheduleBox a {color:#333}
+.scheduleBox table caption {display:none}
+.scheduleBox .topCommon .sc_comTop {margin-bottom:6px;background-color:#fff; text-align:center; position:relative; padding:35px 12px 0; border-bottom:1px solid #ccc}
+.scheduleBox .topCommon .sc_comTop .oneTit {position:absolute;left:50%;top:-30px;border-radius:50%;border:2px solid #fff;color:#fff;background-color:#e45b85; width:60px; height:60px; box-sizing:border-box; padding-top:12px; margin-left:-30px; z-index:10; line-height:16px}
+.scheduleBox .topCommon .sc_comTop .oneTit.wait {background-color:#8f94a4}
+.scheduleBox .topCommon .sc_comTop .codeBox {font-size:1.3rem; margin-bottom:12px}
+.scheduleBox .topCommon .sc_comTop .codeBox span {color:#666}
+.scheduleBox .topCommon .sc_comTop .codeBox strong {color:#c83d67;font-weight:normal;display:inline-block; margin-left:7px; padding-left:7px; position:relative}
+.scheduleBox .topCommon .sc_comTop .codeBox strong:before {content:'';width:1px;height:10px; background-color:#ccc; position:absolute;left:0;top:50%; margin-top:-5px}
+.scheduleBox .topCommon .sc_comTop > h3 {font-size:1.7rem;letter-spacing:-0.02em}
+.scheduleBox .topCommon .sc_comTop > p {font-size:1.3rem;color:#666;margin-bottom:20px}
+.scheduleBox .topCommon .sc_comTop .prodDayBox {border-radius:3px;border:1px solid #ccc;overflow:hidden; margin-bottom:5px}
+.scheduleBox .topCommon .sc_comTop .prodDayBox strong {float:left;width:50%;padding:8px 0;font-size:1.6rem}
+.scheduleBox .topCommon .sc_comTop .prodDayBox strong+strong {border-left:1px solid #ccc;box-sizing:border-box}
+.scheduleBox .topCommon .sc_comTop .prodDayBox strong span {display:inline-block;color:#666;font-size:1.2rem;font-weight:normal;margin-bottom:4px;background:url(http://image1.hanatour.com/mobile/common/schedule/ico_schedule_air.png) no-repeat 0 1.5px; background-size:12px 12px; padding-left:16px}
+.scheduleBox .topCommon .sc_comTop .prodDayBox strong+strong span {background-image:url(http://image1.hanatour.com/mobile/common/schedule/ico_schedule_time.png)}
+.scheduleBox .topCommon .sc_comTop .prodMoney {display:table;padding:11px 12px;border-top:1px solid #e0e0e0; margin:0 -12px; width:100%}
+.scheduleBox .topCommon .sc_comTop .prodMoney strong {display:table-cell;width:50%;text-align:left;vertical-align:middle; font-size:1.4rem}
+.scheduleBox .topCommon .sc_comTop .prodMoney strong span {font-weight:normal}
+.scheduleBox .topCommon .sc_comTop .prodMoney div {display:table-cell;width:50%; text-align:right}
+.scheduleBox .topCommon .sc_comTop .prodMoney div > span {display:block; color:#888; text-decoration:line-through}
+.scheduleBox .topCommon .sc_comTop .prodMoney div em {font-size:2.1rem; color:#c83d67; font-weight:bold; display:inline-block; margin-top:-3px}
+.scheduleBox .topCommon .sc_comTop .prodMoney div em span {font-size:1.4rem; font-weight:normal; display:inline-block; margin-left:2px}
+.scheduleBox .topCommon .sc_comBtm {background-color:#fff; padding:20px 12px;border-bottom:1px solid #ccc;border-top:1px solid #ccc;margin-bottom:6px;}
+.scheduleBox .topCommon .sc_comBtm .scheTxtList > li {position:relative;padding:0 0 8px 67px;} /* 20170110 수정 */
+/*.scheduleBox .topCommon .sc_comBtm .scheTxtList > li:nth-child(1),.scheduleBox .topCommon .sc_comBtm .scheTxtList > li:nth-child(3) {padding-bottom:8px}  20170110 삭제 */
+.scheduleBox .topCommon .sc_comBtm .scheTxtList > li:nth-child(5) {padding-bottom:12px}
+.scheduleBox .topCommon .sc_comBtm .scheTxtList > li.underLine {margin-bottom:15px; background:url(http://image1.hanatour.com/mobile/common/idpw/bg_input_line01.png) repeat-x 0 bottom; background-size:5px 1px}
+.scheduleBox .topCommon .sc_comBtm .scheTxtList > li > strong {position:absolute;left:0;top:1px;font-size:1.3rem;color:#888;font-weight:normal;width:68px;}
+.scheduleBox .topCommon .sc_comBtm .scheTxtList > li > p,.scheduleBox .topCommon .sc_comBtm .scheTxtList li .txtBox {font-size:1.4rem}
+.scheduleBox .topCommon .sc_comBtm .scheTxtList > li > p.ft_b {font-weight:bold}
+.scheduleBox .topCommon .sc_comBtm .scheTxtList > li > p .airBox {display:inline-block; margin-right:15px; background-color:transparent; margin-bottom:3px}
+.scheduleBox .topCommon .sc_comBtm .scheTxtList > li > p .airBox img {height:17px;vertical-align:middle;position:relative;top:-2px}
+.scheduleBox .topCommon .sc_comBtm .scheTxtList > li span.air {position:absolute;right:0;top:0;font-size:1.3rem;color:#5e9acd;font-weight:bold}
+.scheduleBox .topCommon .sc_comBtm .scheTxtList > li .qnaPopBox {margin-top:8px; position:relative}
+.scheduleBox .topCommon .sc_comBtm .scheTxtList > li > p .blue {color:#5e9acd; font-weight:bold} /* 20170110 추가 */
+.scheduleBox .topCommon .sc_comBtm .btn2_box { overflow:hidden}
+.scheduleBox .topCommon .sc_comBtm .btn2_box a {float:left;width:49%; box-sizing:border-box}
+.scheduleBox .topCommon .sc_comBtm .btn2_box a+a { float:right}
+.scheduleBox .topCommon .sc_comBtm .snsList {text-align:center}
+.scheduleBox .topCommon .sc_comBtm .snsList a {display:inline-block; margin:0 7px}
+.scheduleBox .topCommon .sc_comBtm .snsList a img {height:36px}
+
+.qna_second {font-size:1.3rem;display:inline-block;padding-right:21px;background:url(http://image1.hanatour.com/mobile/common/schedule/btn_qnapop.png) no-repeat right center; background-size:16px 16px; min-height:16px; margin-right:7px}
+.qna_second.on { background-image:url(http://image1.hanatour.com/mobile/common/schedule/btn_qnapop_on.png)}
+.qna_second+.qnaPopTxt {display:none; position:absolute;left:50%;top:20px; border:1px solid #c83d67; background-color:#fff; border-radius:2px; z-index:100; width:220px; margin-left:-115px; padding:12px 10px; }
+.qna_second+.qnaPopTxt * {font-size:1.2rem;letter-spacing:-0.02em}
+.qna_second+.qnaPopTxt ul li {margin-bottom:10px;position:relative; padding-left:6px}
+.qna_second+.qnaPopTxt ul li:last-child {margin-bottom:0}
+.qna_second+.qnaPopTxt ul li:after {content:'';width:2px;height:2px;background-color:#333; position:absolute; left:0; top:6px}
+.qna_second+.qnaPopTxt p strong { display:block; margin-bottom:4px}
+.qna_second+.qnaPopTxt a {content:'';position:absolute;right:0;top:0; width:30px; height:30px;background:url(http://image1.hanatour.com/mobile/common/schedule/btn_qnapop_close.png) no-repeat center center;background-size:12px 12px;}
+.qna_second.on+.qnaPopTxt {display:block}
+.qnaPopBox .qna_second+.qnaPopTxt {left:-20px;margin-left:0}
+.scheduleTabSect .agetable th .qna_second+.qnaPopTxt {left:15px; margin-left:0; margin-top:18px}
+
+.scheduleTabSect {background-color:#fff; border-top:1px solid #ccc}
+.scheduleTabSect .sche_tabMenu {overflow:hidden}
+.scheduleTabSect .sche_tabMenu.fixed {position: fixed;left: 0;top: 52px;width: 100%;background-color: #fff;z-index:200;}
+.scheduleTabSect .sche_tabMenu li {float:left;width:25%;text-align:center;border-bottom:1px solid #b2b5c0}
+.scheduleTabSect .sche_tabMenu li a {display:block;padding:18px 11px 15px;font-weight:bold;line-height:16px;position:relative;text-align:center;font-size:1.5rem; box-sizing:border-box; height:48px}
+.scheduleTabSect .sche_tabMenu li a.twoLine {padding:9px 11px 9px}
+.scheduleTabSect .sche_tabMenu li.on a {color:#c83d67}
+.scheduleTabSect .sche_tabMenu li.on a:after {content:'';height:5px; position:absolute;left:50%;bottom:-1px;background-color:#c83d67;z-index:10; width:68px; margin-left:-34px}
+.scheduleTabSect .sche_tabMenu li:nth-child(2).on a:after {width:40px; margin-left:-20px}
+.scheduleTabSect .sche_tabCont {padding:0 12px}
+.scheduleTabSect .agetable {margin:15px 0 10px;border-top:1px solid #e0e0e0}
+.scheduleTabSect .agetable th {text-align:left;font-size:1.4rem; border-bottom:1px solid #e0e0e0; background-color:#f7f7f7; padding:20px 5px 20px 15px; position:relative}
+.scheduleTabSect .agetable th span {font-size:1.3rem;display:block; color:#666; margin-left:-2px;font-weight:normal;}
+.scheduleTabSect .agetable th .qnaPopTxt {font-weight:normal; letter-spacing:0}
+.scheduleTabSect .agetable td {text-align:right;border-bottom:1px solid #e0e0e0; vertical-align:bottom;padding:10px 0}
+.scheduleTabSect .agetable td * {display:block}
+.scheduleTabSect .agetable td > span {font-size:1.3rem;color:#666;text-decoration:line-through; margin-bottom:-3px}
+.scheduleTabSect .agetable td strong {color:#c83d67;font-size:1.7rem;margin-bottom:6px}
+.scheduleTabSect .agetable td strong span {font-size:1.3rem; display:inline-block; margin-left:2px; font-weight:normal}
+.scheduleTabSect .agetable td em {font-size:1.3rem}
+.scheduleTabSect .agetable td em span {display:inline-block}
+.scheduleTabSect .inforTxt01 {margin-bottom:15px;font-size:1.3rem}
+.scheduleTabSect .scMileBox {border-top:1px solid #e0e0e0;padding:15px 0 35px}
+.scheduleTabSect .scMileBox strong {font-weight:normal;display:block; font-size:1.4rem}
+.scheduleTabSect .scMileBox p {color:#666;font-size:1.3rem;margin-top:2px}
+.scheduleTabSect .scMileBox .mileBtnPop {background:url(http://image1.hanatour.com/mobile/common/schedule/btn_mile.png) no-repeat right center; background-size:20px 20px; padding-right:25px;display:inline-block;box-sizing:border-box}
+.scheduleTabSect .scheduleAco {border-top:1px solid #ccc;margin:0 -12px;padding:0 12px;}
+.scheduleTabSect .scheduleAco > dt {margin:0 -12px;padding:0 12px;border-bottom:1px solid #ccc}
+.scheduleTabSect .scheduleAco > dt a {display:block;font-size:1.5rem;font-weight:bold;padding:18px 0;position:relative; letter-spacing:-0.02em}
+.scheduleTabSect .scheduleAco > dt a:after {content:'';width:17px;height:10px;background:url(http://image1.hanatour.com/mobile/common/supersave/bg_link_r01.png) no-repeat 0 0; background-size:17px 10px; position:absolute;right:0; top:50%; margin-top:-5px}
+.scheduleTabSect .scheduleAco > dt.open {border-bottom:none}
+.scheduleTabSect .scheduleAco > dt.open a:after {background-image:url(http://image1.hanatour.com/mobile/common/supersave/bg_link_r01_off.png)}
+.scheduleTabSect .scheduleAco > dd {display:none;border-bottom:1px solid #ccc;margin:0 -12px;padding:0 12px 35px}
+.scheduleTabSect .scheduleAco > dd.padB0 {padding-bottom:0}
+.scheduleTabSect .scheduleAco > dt.open+dd {display:block}
+.scheduleTabSect .scheduleAco .sc_txtList li {position:relative;padding-left:82px;margin-bottom:13px}
+.scheduleTabSect .scheduleAco .sc_txtList li:last-child {margin-bottom:0}
+.scheduleTabSect .scheduleAco .sc_txtList li strong {position:absolute;left:0;top:0;font-weight:normal;font-size:1.3rem}
+.scheduleTabSect .scheduleAco .sc_txtList li p {font-size:1.3rem}
+.scheduleTabSect .scheduleAco .sc_txtList li p span {display:block;margin-top:4px;font-size:1.2rem;color:#666}
+.scheduleTabSect .scheduleAco .productFixBox {display:table;width:100%}
+.scheduleTabSect .scheduleAco .productFixBox strong {display:table-cell;width:19%;border:1px solid #e45b85;color:#e45b85; border-radius:3px; text-align:center; padding:14px 0; font-size:1.3rem}
+.scheduleTabSect .scheduleAco .productFixBox strong.on {color:#fff;background-color:#e45b85}
+.scheduleTabSect .scheduleAco .productFixBox span {display:table-cell;width:1%}
+.scheduleTabSect .scheduleAco .bluePromo {text-align:center;background-color:#e5f0f7;margin-bottom:4px; border:1px solid #cddfeb;padding:10px}
+.scheduleTabSect .scheduleAco .bluePromo strong {color:#fff;background-color:#e85581;position:relative; height:20px;box-sizing:border-box;display:table;font-size:1.3rem;margin:0 auto 8px; padding:2px 15px 0;}
+.scheduleTabSect .scheduleAco .bluePromo strong span {display:table-cell; vertical-align:middle;height:100%; text-align:center; letter-spacing:-0.02em}
+.scheduleTabSect .scheduleAco .bluePromo strong:before {content:'';width:8px; height:100%;position:absolute;left:-8px;top:0; background:url(http://image1.hanatour.com/mobile/common/schedule/bg_promo_left.png) no-repeat 0 0;background-size:8px 100%}
+.scheduleTabSect .scheduleAco .bluePromo strong:after {content:'';width:8px;height:100%;position:absolute;right:-8px;top:0; background:url(http://image1.hanatour.com/mobile/common/schedule/bg_promo_right.png) no-repeat 0 0;background-size:8px 100%}
+
+.scheduleTabSect .scheduleAco .bluePromo em {font-weight:bold; font-size:1.3rem; margin-bottom:2px; display:inline-block}
+.scheduleTabSect .scheduleAco .bluePromo p {font-size:1.2rem; line-height:1.4rem}
+.scheduleTabSect .scheduleAco .blackPromo {text-align:center;border:1px solid #e2e2e2;padding:10px 5px;margin-bottom:10px}
+.scheduleTabSect .scheduleAco .blackPromo > strong {display:block;margin-bottom:8px;font-size:1.3rem}
+.scheduleTabSect .scheduleAco .blackPromo p {font-size:1.2rem;color:#333;margin-bottom:10px}
+.scheduleTabSect .scheduleAco .blackPromo span img {height:22px}
+.scheduleTabSect .scheduleAco .scheStitList dt {text-align:center;background-size:100% 100%;color:#fff;font-size:2.0rem;padding:18px 0;font-weight:bold;position:relative}
+.scheduleTabSect .scheduleAco .scheStitList dt.stit01 {background-image:url(http://image1.hanatour.com/mobile/common/schedule/bg_schestit01.png)}
+.scheduleTabSect .scheduleAco .scheStitList dt.stit02 {background-image:url(http://image1.hanatour.com/mobile/common/schedule/bg_schestit02.png)}
+.scheduleTabSect .scheduleAco .scheStitList dt.stit03 {background-image:url(http://image1.hanatour.com/mobile/common/schedule/bg_schestit03.png)}
+.scheduleTabSect .scheduleAco .scheStitList dt.stit04 {background-image:url(http://image1.hanatour.com/mobile/common/schedule/bg_schestit04.png)}
+.scheduleTabSect .scheduleAco .scheStitList dt.stit05 {background-image:url(http://image1.hanatour.com/mobile/common/schedule/bg_schestit05.png)}
+.scheduleTabSect .scheduleAco .scheStitList dt.stit06 {background-image:url(http://image1.hanatour.com/mobile/common/schedule/bg_schestit06.png)}
+.scheduleTabSect .scheduleAco .scheStitList dt.stit07 {background-image:url(http://image1.hanatour.com/mobile/common/schedule/bg_schestit07.png)}/* 골프 */
+.scheduleTabSect .scheduleAco .scheStitList dt.stit08 {background-image:url(http://image1.hanatour.com/mobile/common/schedule/bg_schestit08.png)}/* 인솔자 */
+.scheduleTabSect .scheduleAco .scheStitList dt.stit09 {background-image:url(http://image1.hanatour.com/mobile/common/schedule/bg_schestit09.png)}/* 가이드 */
+.scheduleTabSect .scheduleAco .scheStitList dt:after {content:'';width:26px;height:26px;position:absolute;left:50%;bottom:-13px;background:url(http://image1.hanatour.com/mobile/common/schedule/ico_schestit01.png) no-repeat 0 0;background-size:26px 26px;margin:0 0 0 -13px}
+.scheduleTabSect .scheduleAco .scheStitList dt.stit02:after {background-image:url(http://image1.hanatour.com/mobile/common/schedule/ico_schestit02.png)}
+.scheduleTabSect .scheduleAco .scheStitList dt.stit03:after {background-image:url(http://image1.hanatour.com/mobile/common/schedule/ico_schestit03.png)}
+.scheduleTabSect .scheduleAco .scheStitList dt.stit04:after {background-image:url(http://image1.hanatour.com/mobile/common/schedule/ico_schestit04.png)}
+.scheduleTabSect .scheduleAco .scheStitList dt.stit05:after {background-image:url(http://image1.hanatour.com/mobile/common/schedule/ico_schestit05.png)}
+.scheduleTabSect .scheduleAco .scheStitList dt.stit06:after {background-image:url(http://image1.hanatour.com/mobile/common/schedule/ico_schestit06.png)}
+.scheduleTabSect .scheduleAco .scheStitList dt.stit07:after {background-image:url(http://image1.hanatour.com/mobile/common/schedule/ico_schestit07.png)}/* 골프 */
+.scheduleTabSect .scheduleAco .scheStitList dt.stit08:after {background-image:url(http://image1.hanatour.com/mobile/common/schedule/ico_schestit08.png)}/* 인솔자 */
+.scheduleTabSect .scheduleAco .scheStitList dt.stit09:after {background-image:url(http://image1.hanatour.com/mobile/common/schedule/ico_schestit09.png)} /* 가이드 */
+.scheduleTabSect .scheduleAco .scheStitList dd {padding:24px 0 45px}
+.scheduleTabSect .scheduleAco .scheStitList dd:last-child {padding-bottom:0}
+.scheduleTabSect .scheduleAco .scheStitList .inBeneBox {background-color:#f7f7f7;padding:10px; margin:5px 0 0 -6px;}
+.scheduleTabSect .scheduleAco .scheStitList .inBeneBox p {font-size:13px;position:relative;padding:3px 0 0 80px;min-height:45px; box-sizing:border-box}
+.scheduleTabSect .scheduleAco .scheStitList .inBeneBox p span {position:absolute;width:70px;height:45px;left:0;top:0}
+.scheduleTabSect .scheduleAco .scheStitList .inBeneBox p span img {width:100%; height:100%}
+.scheduleTabSect .scheduleAco .scheStitList .inBeneBox em {font-size:1.2rem; display:block; margin-top:8px; color:#666}
+.scheduleTabSect .scheduleAco .scheStitList .inBeneBox em+em {margin-top:3px}
+
+
+.scheduleTabSect .pad-12 {padding:0}
+.scheduleTabSect .yellowBox {background-color:#f7f7f7;padding:20px 12px 0; overflow:hidden}
+.scheduleTabSect .yellowBox.mar-12 {margin:0 -12px; padding-top:10px}
+.scheduleTabSect .yellowBox .graBtn {float:right;font-size:13px; padding:7px 11px}
+.scheduleTabSect .yellowBox .scTxtList {margin-bottom:8px}
+.scheduleTabSect .yellowBox02 {background-color:#f7f7f7; padding:10px}
+
+.smEventBanner {display:block; background-color:#ea0c69; color:#fff !important; padding:14px 60px 14px 12px; position:relative; margin-bottom:6px}
+.smEventBanner:after {content:'';width:36px;height:36px;background:url(http://image1.hanatour.com/mobile/common/schedule/bg_sm_banner.png) no-repeat center 0; background-size:36px 36px; position:absolute;right:12px;top:50%;margin-top:-18px}
+.smEventBanner strong {display:block; font-size:1.5rem; margin-bottom:6px}
+.smEventBanner strong img {height:21px; position:relative; top:-2px}
+.smEventBanner span {font-size:1.2rem}
+
+.scheduleTabSect .scheduleAco02 {border-bottom:1px solid #b2b5c0}
+.scheduleTabSect .scheduleAco02 dt {font-size:1.5rem;border-top:1px solid #ccc}
+.scheduleTabSect .scheduleAco02 dt a {display:block; padding:10px 12px 10px 38px; position:relative;background:url(http://image1.hanatour.com/mobile/common/schedule/bg_map_ico.png) no-repeat 12px center; background-size:16px 20px}
+.scheduleTabSect .scheduleAco02 dt a ul {overflow:hidden}
+.scheduleTabSect .scheduleAco02 dt a ul li {font-size:1.3rem;background:url(http://image1.hanatour.com/mobile/common/schedule/bg_city_list.png) no-repeat right center; background-size:5px 7px; float:left; margin-right:6px; padding-right:12px}
+.scheduleTabSect .scheduleAco02 dt a ul li:last-child {color:#c83d67;background:none}
+.scheduleTabSect .scheduleAco02 dt a span {font-size:1.5rem;font-weight:bold; letter-spacing:-0.02em; display:inline-block; margin-right:20px;} /* 20170626 수정 */
+.scheduleTabSect .scheduleAco02 > dt a:after {content:'';width:17px;height:10px;background:url(http://image1.hanatour.com/mobile/common/supersave/bg_link_r01.png) no-repeat center 0; background-size:17px 10px; position:absolute;right:12px;top:50%;margin-top:-5px}
+.scheduleTabSect .scheduleAco02 > dt.open a:after {background-image:url(http://image1.hanatour.com/mobile/common/supersave/bg_link_r01_off.png)}
+.scheduleTabSect .scheduleAco02 dd {display:none;padding:0 12px 35px}
+.scheduleTabSect .scheduleAco02 dt.open+dd {display:block}
+
+.scheduleTabSect .scheduleAco02 dd .imgLeftBox {overflow:hidden;position:relative;min-height:92px}
+.scheduleTabSect .scheduleAco02 dd span.imgBox {float:left;width:86px;height:74px;margin:0 10px 0 0;padding-top:7px}
+.scheduleTabSect .scheduleAco02 dd span.imgBox img {width:86px;height:74px}
+.scheduleTabSect .scheduleAco02 dd p {font-size:1.3rem;margin-bottom:8px;padding-top:7px}
+
+.scTxtList li {position:relative;padding-left:7px;font-size:1.3rem;margin-bottom:6px}
+.scTxtList li:last-child {margin-bottom:0}
+.scTxtList li:before {content:'';width:2px;height:2px;position:absolute;left:0;top:7px;background-color:#333; border-radius:50%}
+.scTxtList li.stit_posi {padding-left:19%}
+.scTxtList li.stit_posi strong {position:absolute; left:7px;top:0; font-weight:normal}
+
+.scheduleBox .guideBox {display:table;width:100%;position:relative}
+.scheduleBox .guideBox:after {content:'';left:50%;top:50%;background-color:#ccc;margin-top:-23px;height:46px;width:1px;position:absolute}
+.scheduleBox .guideBox div {display:table-cell;width:50%;text-align:center;padding:20px 12px; vertical-align:middle}
+.scheduleBox .guideBox div span {font-size:1.2rem; color:#fff; font-weight:bold; background-color:#e45b85; display:inline-block; padding:2px 4px; margin-bottom:6px}
+.scheduleBox .guideBox div p {font-size:1.3rem; font-weight:bold; line-height:1.5rem}
+
+.scheduleBox .meetBox {background-color:#f7f7f7; font-size:1.3rem; position:relative; padding:16px 12px 12px; margin-bottom:10px}
+.scheduleBox .meetBox > span {font-size:1.3rem; display:block; margin-top:15px}
+.scheduleBox .meetBox span span {font-weight:bold}
+.scheduleBox .meetBox a {position:absolute;right:12px;top:12px;color:#333;padding:7px 11px; border-radius:2px;background: -moz-linear-gradient(top,#fff 0%,#f0f0f0);background: -webkit-gradient(linear, left top, left bottom, from(#fff),to(#f0f0f0));border:1px solid #ccc; font-weight:bold;font-size:13px}
+.scheduleBox .meetBox p {font-size:1.3rem; margin-top:15px; padding:10px 0 0; background:url(http://image1.hanatour.com/mobile/common/schedule/bg_line_dotted.png) repeat-x 0 0; background-size:4px 1px}
+
+.scheduleBox .surelyTxt {border:1px solid #e45b85; margin-bottom:20px; padding:15px 12px}
+.scheduleBox .surelyTxt dt {font-weight:bold;color:#c83d67; font-size:1.3rem; margin-bottom:12px; background:url(http://image1.hanatour.com/mobile/common/schedule/ico_surelytxt.png) no-repeat 0 center; background-size:12px 12px; padding-left:16px}
+.scheduleBox .surelyTxt dd {font-size:1.3rem}
+.scheduleBox .surelyTxt dd p {font-size:1.3rem; margin-top:2px}
+
+.scheduleBox .sche02_inTab {overflow:hidden; padding:24px 12px 15px; position:relative; margin:0 -12px}
+.scheduleBox .sche02_inTab:before { content:''; width:100%; height:7px; border-top:1px solid #ccc;border-bottom:1px solid #ccc; background-color:#dbdce1; position:absolute;left:0;top:0}
+.scheduleBox .sche02_inTab li {float:left;width:50%;}
+.scheduleBox .sche02_inTab li a {display:block; background-color:#f1f1f3; border:1px solid #dbdce1; font-size:1.4rem; text-align:center; padding:8px 0}
+.scheduleBox .sche02_inTab li.on a {font-weight:bold; color:#e45b85; border:1px solid #e45b85; background-color:#fff}
+
+.scheduleBox .scDayList {margin:0 -12px;}
+.scheduleBox .scDayList > dt a {display:table;background:#8f94a4 url(http://image1.hanatour.com/mobile/common/schedule/btn_scdaylist_off.png) no-repeat 95% center; background-size:17px 10px;color:#fff;font-size:1.4rem; position:relative;border-bottom:1px solid #fff; width:100%}
+.scheduleBox .scDayList > dt a strong {display:table-cell;padding:19px 0;background-color:#6d7588; width:20%; text-align:center; vertical-align:middle; letter-spacing:-0.02em}
+.scheduleBox .scDayList > dt a span {display:table-cell; width:80%; padding:19px 0 19px 20px;vertical-align:middle;letter-spacing:-0.02em}
+.scheduleBox .scDayList > dt.twoDays a strong {padding:8px 0}
+.scheduleBox .scDayList > dt.twoDays a span {padding:8px 0 8px 20px}
+.scheduleBox .scDayList > dd {padding:20px 12px 0;background:url(http://image1.hanatour.com/mobile/common/schedule/bg_daylist_box.png) repeat-y 0 0; background-size:23px 1px; overflow:hidden; display:none}
+.scheduleBox .scDayList > dt.open a { background-image:url(http://image1.hanatour.com/mobile/common/schedule/btn_scdaylist_on.png); border-bottom:none}
+.scheduleBox .scDayList > dt.open+dd {display:block}
+.scheduleBox .scDayList > dt.endDay a {border-bottom:none}
+.scheduleBox .scDayList > dt.open.endDay+dd {border-bottom:1px solid #ccc}
+.scheduleBox .scDayList > dd .cityTit {background:url(http://image1.hanatour.com/mobile/common/schedule/ico_sc_01.png) no-repeat 0 center; background-size:20px 20px; display:block; min-height:20px; padding:2px 0 0 30px; box-sizing:border-box; margin-bottom:20px; font-size:1.5rem}
+
+.scheduleBox .scDayList > dd .zoomBox  {margin-bottom:35px; border:1px solid #e0e0e0}
+
+.detailList {margin:-10px 0 10px; border:1px solid #e0e0e0; background:#fff; padding:20px 0 25px}
+.detailList > li {position:relative;padding:0 0 0 85px;}
+.detailList > li > span {position:absolute;left:10px;top:-8px;text-align:center;font-size:13px}
+.detailList > li > strong {font-size:1.4rem;display:block;margin-right:10px}
+.detailList > li > strong .plusDay {background:#8f94a4 url(http://image1.hanatour.com/mobile/common/schedule/bg_dayslist_long.png) no-repeat 0 0; background-size:7px 18px;font-size:12px;color:#fff;border-radius:0 2px 2px 0;padding:0 8px 0 10px; height:18px; display:inline-table; vertical-align:middle; margin:-3px 0 0 4px}
+.detailList > li > strong .plusDay span { display:table-cell;width:100%; vertical-align:middle}
+.detailList > li > span strong {display:block; font-size:1.5rem}
+.detailList > li > p {margin-top:16px; padding-bottom:16px;font-size:1.2rem;color:#666; padding-right:8px}
+.detailList > li > p em {display:inline-block; margin-top:2px}
+.detailList > li > p span {display:inline-block; padding:2px 6px;color:#fff;font-size:1.1rem}
+.detailList > li > p b {display:inline-block;font-weight:normal;margin-right:6px}
+.detailList > li > p em em {margin-left:6px}
+.detailList > li > p .c_blue{color:#3a8dd6 !important} /* 20170110 수정 */
+.detailList > li:after {content:''; width:2px;height:100%;background-color:#fea2be; display:inline-block; position:absolute; left:72px; top:3px}
+.detailList > li:before {content:''; width:12px; height:12px;background:#fff; display:inline-block; position:absolute; left:67px; top:3px; background-size:12px 12px; z-index:10; box-sizing:border-box; border:2px solid #e45b85; border-radius:50%}
+.detailList > li:last-child:after {display:none}
+
+.scheduleBox .scDayList > dd .detailTxt > li {border:1px solid #e0e0e0; background-color:#fff; position:relative; padding:12px; margin-bottom:15px; letter-spacing:-0.02em}
+.scheduleBox .scDayList > dd .detailTxt > li:before {content:'';width:28px;height:15px;position:absolute;left:-13px;top:-8px;background:url(http://image1.hanatour.com/mobile/common/schedule/ico_sc_03.png) no-repeat 0 0; background-size:28px 15px}
+.scheduleBox .scDayList > dd .detailTxt > li.onlyTxt {border:none; padding:0 0 0 24px; font-weight:bold; font-size:1.3rem; background-color:transparent; margin-bottom:20px}
+.scheduleBox .scDayList > dd .detailTxt > li.onlyTxt:last-child {margin-bottom:35px}
+.scheduleBox .scDayList > dd .detailTxt > li.topStit {border:none; padding:0 0 0 24px;font-size:1.3rem; background-color:transparent}
+.scheduleBox .scDayList > dd .detailTxt > li.topStit > div {border:1px solid #e0e0e0; margin-left:-24px; padding:15px 12px; background-color:#fff; margin-top:5px}
+.scheduleBox .scDayList > dd .detailTxt > li.onlyTxt:before,.scheduleBox .scDayList > dd .detailTxt > li.topStit:before {top:0;left:-12px}
+
+.scheduleBox .scDayList > dd .detailTxt > li.redLine {border-color:#e45b85}
+.scheduleBox .scDayList > dd .detailTxt > li.redLine .listDott > li {margin-bottom:2px}
+.scheduleBox .scDayList > dd .detailTxt > li.redLine.include {border-color:#e0e0e0}
+
+.scheduleBox .scDayList > dd .detailTxt > li.bundleBox > div {padding-top:0}
+.scheduleBox .scDayList > dd .detailTxt > li.bundleBox .de_inBox02 a {padding-top:10px;padding-bottom:10px;border-bottom:1px solid #e0e0e0}
+.scheduleBox .scDayList > dd .detailTxt > li.bundleBox .de_inBox02 a.last {border-bottom:none}
+.scheduleBox .scDayList > dd .detailTxt > li.bundleBox .de_inBox02 a .sc_imgBox {top:10px}
+.scheduleBox .scDayList > dd .detailTxt > li.bundleBox .btmTxtBox {margin-top:0}
+.scheduleBox .scDayList > dd .detailTxt > li.bundleBox .btmTxtBox strong+ul+strong {margin-top:15px}
+
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial {}
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial > strong {font-size:1.3rem} 
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial > p {color:#666; font-size:1.2rem; margin-bottom:10px}
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial .swiper-pag-num {right:50%; margin-right:-34px}
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial .hsBtmBox {padding-bottom:20px; overflow:hidden}
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial .hsBtmBox+.hsBtmBox {background:url(http://image1.hanatour.com/mobile/common/smc/bg_smc_dot.png) repeat-x 0 0; background-size:5px 1px; padding-bottom:10px}
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial .stitHs {font-size:1.3rem;display:block; margin-top:20px}
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial .txtBox { background-color:#f7f7f7; border-top:1px solid #e0e0e0; margin-bottom:5px; height:105px; box-sizing:border-box; overflow:hidden; padding:10px 10px 15px; margin-top:10px}
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial .txtBox * {font-size:1.2rem}
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial .txtBox.open { height:auto}
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial .txtBox > p {margin-bottom:25px}
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial .txtBox > ul {}
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial .txtBox > ul li {overflow:hidden;margin-bottom:12px; display:table; width:100%}
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial .txtBox > ul li:last-child {margin-bottom:0}
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial .txtBox > ul li strong {font-weight:normal;color:#888; display:table-cell;width:60px; vertical-align:top}
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial .txtBox > ul li span {display:table-cell; width:auto;vertical-align:top}
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial .hsBtn {color:#666; font-size:1.2rem; display:block; text-align:center; padding:6px 0; border:1px solid #e0e0e0}
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial .hsBtn:after {content:''; display:inline-block; width:13px; height:7px; position:relative; top:-1px;background:url(http://image1.hanatour.com/mobile/common/schedule/btn_hs_off.png) no-repeat 0 0; background-size:13px 7px; margin-left:2px}
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial .hsBtn.on:after {background-image:url(http://image1.hanatour.com/mobile/common/schedule/btn_hs_on.png)}
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial .hsTab {overflow:hidden;border:1px solid #e0e0e0; border-bottom:none}
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial .hsTab li {float:left;width:33.3%}
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial .hsTab li:nth-child(2) {width:33.4%}
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial .hsTab li a {display:block; color:#888; font-size:1.3rem; background-color:#f2f2f2;border-bottom:1px solid #e0e0e0; text-align:center; padding:10px 0}
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial .hsTab li:nth-child(2) a {border-left:1px solid #e0e0e0;border-right:1px solid #e0e0e0}
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial .hsTab li.on a { color:#333; background-color:#fff;border-bottom:none}
+
+.scheduleBox .scDayList > dd .de_inBox01 dt {font-size:1.3rem;border-bottom:1px solid #e0e0e0;padding-bottom:10px;font-weight:bold;margin-bottom:10px}
+.scheduleBox .scDayList > dd .de_inBox01 dd strong {font-size:1.3rem;display:block; margin-bottom:4px}
+.scheduleBox .scDayList > dd .de_inBox01 dd p {font-size:1.3rem;margin-bottom:20px}
+.scheduleBox .scDayList > dd .de_inBox01 dd:last-child p {margin-bottom:0}
+.scheduleBox .scDayList > dd .de_inBox02 a {display:block;padding:0 20px 0 98px; position:relative;background:url(http://image1.hanatour.com/mobile/common/schedule/btn_de_inbox02.png) no-repeat right center; background-size:10px 18px; min-height:74px}
+.scheduleBox .scDayList > dd .de_inBox02 a.simple  {padding-left:0;min-height:inherit}
+.scheduleBox .scDayList > dd .de_inBox02 a .sc_imgBox {position:absolute;left:0;top:0}
+.scheduleBox .scDayList > dd .de_inBox02 a .sc_imgBox img {width:86px;height:74px}
+.scheduleBox .scDayList > dd .de_inBox02 a p {font-size:1.3rem}
+.scheduleBox .scDayList > dd .de_inBox02 a p b {overflow:hidden;text-overflow:ellipsis;display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; line-height:1.5rem; font-weight:normal;margin-top:2px}
+.scheduleBox .scDayList > dd .de_inBox02 a p strong {display:block}
+.scheduleBox .scDayList > dd .de_inBox02 a p span {display:block; font-size:1.2rem; color:#666; margin-top:4px}
+.scheduleBox .scDayList > dd .de_inBox02 a p span em {display:inline-block; padding-left:6px; border-left:1px solid #e0e0e0; margin-left:7px}
+
+.scheduleBox .scDayList > dd .btmTxtBox {padding-top:10px;background:url(http://image1.hanatour.com/mobile/common/schedule/bg_line_dotted.png) repeat-x 0 0; background-size:4px 1px; margin-top:12px}
+.scheduleBox .scDayList > dd .btmTxtBox strong {font-size:1.2rem; margin-bottom:2px; display:block}
+.scheduleBox .scDayList > dd .btmTxtBox .listNum li {margin-bottom:3px;font-size:1.2rem}
+.scheduleBox .scDayList > dd .btmTxtBox .listNum li:last-child {margin-bottom:0}
+.scheduleBox .scDayList > dd .btmTxtBox02 {margin-top:-10px}
+.scheduleBox .scDayList > dd .btmTxtBox02:before {content:none !important}
+.scheduleBox .scDayList > dd .btmTxtBox02 strong {font-size:1.2rem; margin-bottom:2px; display:block}
+.scheduleBox .scDayList > dd .btmTxtBox02 .listNum li {margin-bottom:3px;font-size:1.2rem}
+.scheduleBox .scDayList > dd .btmTxtBox02 .listNum li:last-child {margin-bottom:0}
+.scheduleBox .scDayList > dd .imgCell {display:table;width:100%;}
+.scheduleBox .scDayList > dd .imgCell span {display:table-cell}
+.scheduleBox .scDayList > dd .imgCell .img {width:32%}
+.scheduleBox .scDayList > dd .imgCell .img img {width:100%}
+.scheduleBox .scDayList > dd .imgCell .binCell {width:2%}
+.scheduleBox .scDayList > dd .imgCellTxt {padding:10px 25px 0 0 !important;background:url(http://image1.hanatour.com/mobile/common/schedule/btn_de_inbox02.png) no-repeat right center; background-size:10px 18px; display:block; min-height:auto !important} 
+.scheduleBox .scDayList > dd .imgCellTxt strong {display:block;font-size:1.3rem}
+.scheduleBox .scDayList > dd .imgCellTxt b {font-weight:normal; display:block;font-size:1.3rem;overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical}
+.scheduleBox .scDayList > dd .imgCellTxt span {color:#666;font-size:1.2rem; display:block; margin-top:10px}
+.scheduleBox .scDayList > dd .spciTop {position:relative;border-bottom:1px solid #e0e0e0; padding-bottom:8px; margin-bottom:10px; overflow:hidden;}
+.scheduleBox .scDayList > dd .sTit_red {font-size:1.3rem;line-height:2.1rem}
+.scheduleBox .scDayList > dd .sTxt_red {padding:0 0 10px;font-size:1.3rem}
+.scheduleBox .scDayList > dd .sTxt_red.sc_imgBox02 {padding-left:96px; position:relative; min-height:84px; box-sizing:border-box}
+.scheduleBox .scDayList > dd .sTxt_red.sc_imgBox02 span {position:absolute;left:0;top:0}
+.scheduleBox .scDayList > dd .sTxt_red.sc_imgBox02 span img {width:86px; height:74px;}
+.scheduleBox .scDayList > dd .slabel {color:#fff; font-size:13px; background-color:#e45b85; border-radius:2px; padding:3px 5px;margin-right:8px;}
+.scheduleBox .scDayList > dd .slabel.include {background-color:#8f94a4}
+.scheduleBox .scDayList > dd .txtNone {text-decoration:line-through}
+.scheduleBox .scDayList > dd .red_infor {border:1px solid #e45b85; padding:12px; background-color:#fff; margin-bottom:35px; font-size:1.3rem}
+.scheduleBox .scDayList > dd .red_infor strong {display:block; color:#c83d67;background:url(http://image1.hanatour.com/mobile/common/schedule/ico_sc_02.png) no-repeat 0 center; background-size:12px 12px;padding-left:18px;font-size:1.4rem; margin-bottom:3px}
+.scheduleBox .scDayList > dd .selectTxt {font-size:1.3rem}
+.scheduleBox .scDayList > dd .selectTxt .slabel {background-color:#8f94a4; padding:2px 5px; top:50%; margin-top:-9px}
+span.airBox {background-color:#e45b85}
+span.waitBox {background-color:#747b8e}
+
+.scheduleBox .d_dayTxt {margin:0 -12px;border-top:1px solid #ccc;padding:10px 12px 0;background-color:#fff;color:#c83d67;font-size:1.2rem}
+.scheduleBox .d_dayTxt img {height:28px; margin-top:-2px}
+.scheduleBox .d_dayTxt strong {display:inline-block; margin:0 0 0 3px; font-weight:normal}
+.scheduleBox .d_dayTxt.golf {margin-top:-1px}
+.scheduleBox .d_dayTxt.golf strong {font-weight:bold}
+.scheduleBox .d_dayTxt.golf strong span {color:#333; font-weight:normal}
+
+.scheduleBox .hotel_inforBox {background-color:#fff; margin:0 -12px; padding:0}
+.scheduleBox .linkBox {display:block;padding:14px 32px 14px 12px;  position:relative; background-color:#fff}
+.scheduleBox .linkBox.golf { padding:14px 12px; margin:0 -12px}
+.scheduleBox .linkBox:after {content:''; width:10px; height:18px; position:absolute;right:12px; top:50%; margin-top:-5px;background:url(http://image1.hanatour.com/mobile/common/schedule/btn_de_inbox02.png) no-repeat 0 0; background-size:10px 18px;}
+.scheduleBox .linkBox strong {font-size:1.3rem; letter-spacing:-0.02em}
+.scheduleBox .linkBox strong .star {background:url(http://image1.hanatour.com/mobile/common/schedule/ico_star.png) repeat-x 0 0; background-size:10px 9px; height:9px; display:inline-block; position:relative; top:-1px}
+.scheduleBox .linkBox strong .star.num10 {width:5px}
+.scheduleBox .linkBox strong .star.num20 {width:10px}
+.scheduleBox .linkBox strong .star.num30 {width:15px}
+.scheduleBox .linkBox strong .star.num40 {width:20px}
+.scheduleBox .linkBox strong .star.num50 {width:25px}
+.scheduleBox .linkBox strong .star.num60 {width:30px}
+.scheduleBox .linkBox strong .star.num70 {width:35px}
+.scheduleBox .linkBox strong .star.num80 {width:40px}
+.scheduleBox .linkBox strong .star.num90 {width:45px}
+.scheduleBox .linkBox strong .star.num100 {width:50px}
+.scheduleBox .linkBox p {font-size:1.1rem; color:#666;letter-spacing:-0.02em; line-height:1.3rem; margin-top:1px}
+.scheduleBox .hotel_inforBox .linkBox+.linkBox {display:none}
+.scheduleBox .hotel_inforBox.open .linkBox+.linkBox {display:block; border-top:1px solid #ddd}
+.scheduleBox .hotel_inforBox .plusBtn {position:relative; display:block; text-align:center; color:#6d7588; font-size:1.4rem; background-color:#f7f7f7; padding:8px 0;border-top:1px solid #ccc;border-bottom:1px solid #b2b5c0}
+.scheduleBox .hotel_inforBox .plusBtn:after {content:''; display:inline-block; width:10px; height:10px;background:url(http://image1.hanatour.com/mobile/common/schedule/btn_hotel_ico_on.png) no-repeat 0 0; background-size:10px 10px; margin-left:5px; position:relative; top:-1px}
+.scheduleBox .hotel_inforBox .plusBtn.open:after {background-image:url(http://image1.hanatour.com/mobile/common/schedule/btn_hotel_ico_off.png)}
+
+.scheduleBox .hotel_none {font-size:1.3rem; letter-spacing:-0.02em; font-weight:bold; background-color:#fff; padding:12px 0}
+.scheduleBox .hotel_none img { height:28px; margin-right:6px}
+
+.scheduleBox .foodBox {padding:20px 8px 20px 45px; background-color:#fff; position:relative; margin:-1px -12px 0;border-top:1px solid #ddd}
+.scheduleBox .foodBox span {position:absolute;left:12px;top:50%; margin-top:-14px}
+.scheduleBox .foodBox span img {height:28px}
+.scheduleBox .foodBox ul {overflow:hidden}
+.scheduleBox .foodBox ul li {float:left; font-size:1.3rem; margin-right:15px;line-height:2rem}
+.scheduleBox .foodBox ul li:last-child {margin-right:0}
+.scheduleBox .foodBox ul li strong {display:inline-block; margin-right:3px}
+
+/* 리스트 */
+.scheduleBox .listNum > li {margin-bottom:12px; font-size:1.3rem}
+.scheduleBox .listNum > li:last-child {margin-bottom:0}
+.scheduleBox .listDott > li {font-size:1.3rem;margin-bottom:10px;position:relative;padding-left:6px}
+.scheduleBox .listDott > li:last-child {margin-bottom:0}
+.scheduleBox .listDott > li:before {content:'';width:2px;height:2px;border-radius:50%;position:absolute;left:0;top:7px; background-color:#333}
+.scheduleBox .listDott.red > li:before {background-color:#e45b85}
+.scheduleBox .listDott > li .pink {color:#e45b85}
+.scheduleBox .listOne > li > strong {padding-left:14px; display:block; position:relative; margin:8px 0 3px; font-size:1.3rem}
+.scheduleBox .listOne > li > strong:before {content:'';width:10px;height:10px;border-radius:50%;position:absolute;left:0;top:50%; border:2px solid #e85581; margin-top:-5px; box-sizing:border-box; background-color:#fff}
+.scheduleBox .listDott.bold li {font-weight:bold}
+
+.scheduleBox .listOneSmall > li > strong {padding-left:10px; display:block; position:relative; margin:10px 0 6px; font-size:1.3rem}
+.scheduleBox .listOneSmall > li:first-child > strong {margin-top:0}
+.scheduleBox .listOneSmall > li > strong:before {content:'';width:6px;height:6px;border-radius:50%;position:absolute;left:0;top:50%;margin-top:-3px;background-color:#e85581}
+.scheduleBox .listOne > li p {font-size:1.3rem}
+.scheduleBox .cardBenefit {border-top:1px solid #e0e0e0; margin:6px 0 15px}
+.scheduleBox .cardBenefit ul {border-bottom:1px solid #e0e0e0; padding:15px 0}
+.scheduleBox .cardBenefit ul li {position:relative; padding-left:80px; margin-bottom:10px; font-size:1.3rem}
+.scheduleBox .cardBenefit ul li:last-child {margin-bottom:0}
+.scheduleBox .cardBenefit ul li em { position:absolute;left:0;top:0; color:#666}
+.scheduleBox .cardBenefit ul li p {font-size:1.2rem}
+
+.scheduleBox .cardBenefit02 {border-top:1px solid #e0e0e0}
+.scheduleBox .cardBenefit02 > div {border-bottom:1px solid #e0e0e0; padding:15px 0 15px 80px; position:relative}
+.scheduleBox .cardBenefit02 > div span { position:absolute; left:0;top:50%; font-size:12px;width:80px; height:68px; text-align:center; margin-top:-34px}
+.scheduleBox .cardBenefit02 > div span img {height:36px; margin-bottom:4px}
+.scheduleBox .cardBenefit02 > div ul li { margin-bottom:2px}
+
+.txt_ico01 {background:url(http://image1.hanatour.com/mobile/common/schedule/ico_sc_02.png) no-repeat 0 2px;background-size:13px 13px; text-indent:16px; font-size:1.3rem; margin-top:12px}
+.zoomBox {margin-top:10px; position:relative}
+.zoomBox img {width:100%}
+.zoomBox a {position:absolute;width:24px; height:24px;right:0; top:0; padding:8px;background:url(http://image1.hanatour.com/mobile/common/schedule/btn_img_zoom.png) no-repeat center center;background-size:24px 24px}
+.txtContList > dt {color:#252525;font-size:1.4rem;background:url(http://image1.hanatour.com/mobile/common/schedule/ico_sc_06.png) no-repeat 0 center;background-size:12px 12px; padding-left:15px; font-weight:bold; margin-bottom:5px; letter-spacing:-0.02em}
+.txtContList > dd {font-size:1.3rem; padding-bottom:20px}
+.txtContList > dd > p {margin-bottom:8px; font-size:1.3rem}
+.txtContList > dd:last-child {padding-bottom:0}
+.yellowTxt {background-color:#f7f7f7; font-size:1.3rem; padding:10px; margin-top:10px}
+.txtLink {color:#c83d67; text-decoration:underline}
+.smallTxt {font-size:1.2rem; color:#666; display:block}
+.grayTxt {color:#666; margin-top:10px; font-size:1.3rem}
+
+.scheduleBox .safetyBtn {margin:0;display:table;width:100%}
+.scheduleBox .safetyBtn a {color:#333;padding:7px 4px; border-radius:2px;background: -moz-linear-gradient(top,#fff 0%,#f0f0f0);background: -webkit-gradient(linear, left top, left bottom, from(#fff),to(#f0f0f0));font-size:1.3rem; display:inline-block; position:relative;border:1px solid #ccc;width:31%; box-sizing:border-box; text-align:center;display:table-cell; font-weight:bold}
+.scheduleBox .safetyBtn .cell {display:table-cell;width:4%}
+
+.scheduleBox .insurTable {border-top:1px solid #ccc; margin-bottom:10px}
+.scheduleBox .insurTable table th {font-size:1.1rem; border-bottom:1px solid #ccc; border-right:1px solid #e0e0e0; text-align:center; font-weight:normal; padding:8px 2px;background-color:#f7f7f7}
+.scheduleBox .insurTable table th:last-child {border-right:none}
+.scheduleBox .insurTable table th.titDivision {position:relative; background:#f7f7f7 url(http://image1.hanatour.com/mobile/common/schedule/bg_table_line.png) no-repeat 0 0;background-size:100% 100%}
+.scheduleBox .insurTable table th.titDivision span {font-size:1.1rem; position:absolute;right:5px; top:5px}
+.scheduleBox .insurTable table th.titDivision span+span {left:5px;bottom:5px;right:inherit;top:inherit}
+.scheduleBox .insurTable table tbody th {text-align:left;padding-left:5px}
+.scheduleBox .insurTable table td {font-size:1.1rem;border-bottom:1px solid #ccc; padding:8px 0; text-align:center; border-right:1px solid #e0e0e0;}
+.scheduleBox .insurTable table td:last-child {border-right:none}
+.scheduleBox .insurTable table td.stit {padding-left:5px; text-align:left}
+.warningTable {margin-bottom:15px}
+.warningTable thead th {background-color:#f7f7f7; color:#c83d67; font-weight:normal; font-size:1.4rem; padding:12px 0; text-align:center; border-top:1px solid #ccc; border-bottom:1px solid #e0e0e0}
+.warningTable tbody th {padding:10px 12px 10px 5px; font-weight:normal;border-bottom:1px solid #e0e0e0; font-size:1.3rem}
+.warningTable tbody th strong {display:block; padding:5px 0; color:#fff; font-weight:bold; margin-bottom:5px}
+.warningTable tbody th.blue {color:#2b5197}
+.warningTable tbody th.blue strong {background-color:#2b5197;}
+.warningTable tbody th.yellow {color:#fdb913}
+.warningTable tbody th.yellow strong {background-color:#fdb913;}
+.warningTable tbody th.red {color:#e80f3d}
+.warningTable tbody th.red strong {background-color:#e80f3d;}
+.warningTable tbody th.black {color:#333}
+.warningTable tbody th.black strong {background-color:#333;}
+.warningTable tbody td {border-bottom:1px solid #e0e0e0; font-size:1.2rem; color:#666; text-align:center;padding:10px 12px 10px 5px;}
+
+.scheduleBox .scTabBtmCont {background-color:#dbdce1; margin:0 -12px;overflow:hidden}
+.scheduleBox .scTabBtmCont > div { border-top:1px solid #ccc;border-bottom:1px solid #ccc; background-color:#fff; margin:6px 0; padding:0 12px; display:block}
+
+.scheduleBox .shoppBox a {display:block;background:url(http://image1.hanatour.com/mobile/common/schedule/btn_de_inbox02.png) no-repeat right 60%; background-size:10px 18px; font-size:1.3rem; padding:20px 0 10px; border-bottom:1px solid #e0e0e0}
+.scheduleBox .shoppBox div {display:block;font-size:1.3rem;padding:20px 0 10px; border-bottom:1px solid #e0e0e0}
+.scheduleBox .shoppBox strong {display:block;font-size:1.5rem}
+.scheduleBox .shoppBox p {color:#666;font-size:1.3rem;padding:10px 0 20px}
+
+.scheduleBox .reviewBox a {background:url(http://image1.hanatour.com/mobile/common/schedule/btn_de_inbox02.png) no-repeat right 20px; background-size:10px 18px; padding:18px 0; display:block}
+.scheduleBox .reviewBox a > strong {font-size:1.5rem; display:block; margin-bottom:5px}
+.scheduleBox .reviewBox a div {text-align:center}
+.scheduleBox .reviewBox a div span img {height:20px;vertical-align:top;position:relative;bottom:-3px}
+.scheduleBox .reviewBox a div strong {color:#c83d67;font-size:2.4rem;}
+.scheduleBox .reviewBox a div em {font-size:1.5rem;font-weight:bold}
+.scheduleBox .reviewBox a p {color:#666;font-size:1.3rem;text-align:center}
+
+.scheduleBox .sc_btmAco > a {display:block;background:url(http://image1.hanatour.com/mobile/common/supersave/bg_link_r01_off.png) no-repeat right center; background-size:17px 10px; padding:20px 0 15px; font-size:1.5rem; font-weight:bold}
+.scheduleBox .sc_btmAco > div {display:none}
+.scheduleBox .sc_btmAco a.open {background-image:url(http://image1.hanatour.com/mobile/common/supersave/bg_link_r01.png)}
+.scheduleBox .sc_btmAco a.open+div { display:block}
+
+.scheduleBox .swiperMov {overflow:inherit}
+.scheduleBox .swiperMov .swiper-slide {width:60%; margin-right:10px}
+.scheduleBox .swiperMov .swiper-slide a {display:block; padding-bottom:15px; text-align:left; width:100%;}
+.scheduleBox .swiperMov .swiper-slide a span {display:block; position:relative; background-color:#000; text-align:center}
+.scheduleBox .swiperMov .swiper-slide a span:after {content:''; width:100%; position:absolute;left:0;top:0; height:100%; background:rgba(0,0,0,0.4) url(http://image1.hanatour.com/mobile/common/hanatour/main/bg_playbtn.png) no-repeat center center; background-size:32px 32px}
+.scheduleBox .swiperMov .swiper-slide.one a span:after {content:none} /* 20160803 추가 */
+.scheduleBox .swiperMov .swiper-slide a span img{width:190px; height:107px}
+
+/*.scheduleBox .swiperMov .swiper-slide a img{width:100%; height:auto}*/
+
+.scheduleBox .city_inforCell { display:table;width:100%; margin:10px 0 20px}
+.scheduleBox .city_inforCell > div {display:table-cell;width:49%; border:1px solid #e0e0e0; text-align:center; padding:12px 10px}
+.scheduleBox .city_inforCell > span {display:table-cell;width:10px}
+.scheduleBox .city_inforCell > div strong {font-weight:normal;font-size:1.3rem}
+.scheduleBox .city_inforCell > div b {display:block;font-size:2.4rem;margin-top:4px}
+.scheduleBox .city_inforCell > div em {font-size:1.4rem; letter-spacing:-0.02em}
+.scheduleBox .city_inforCell > div .timeTxt {font-size:1.3rem; color:#666; margin-top:24px}
+.scheduleBox .city_inforCell > div .weatherTxt {margin:10px 0 0}
+.scheduleBox .city_inforCell > div .weatherTxt li {overflow:hidden}
+.scheduleBox .city_inforCell > div .weatherTxt li span {float:left;color:#666;font-size:1.3rem}
+.scheduleBox .city_inforCell > div .weatherTxt li strong {float:right;font-size:1.3rem}
+
+.scheduleBox .exchange {margin-bottom:20px}
+.scheduleBox .exchange > strong {font-size:1.3rem;display:block;margin-bottom:8px}
+.scheduleBox .exchange > strong span {font-size:1.2rem;color:#666;display:inline-block; margin-left:10px; font-weight:normal; letter-spacing:-0.02em}
+.scheduleBox .exchange div {display:table; width:100%}
+.scheduleBox .exchange div span {display:table-cell;width:50%; box-sizing:border-box; font-size:1.3rem;border:1px solid #e0e0e0; text-align:center; padding:12px 0}
+.scheduleBox .exchange div span+span {border-left:none}
+
+.scheduleBox .socket {margin-bottom:20px}
+.scheduleBox .socket > strong {font-size:1.3rem;display:block;margin-bottom:8px}
+.scheduleBox .socket div {border:1px solid #e0e0e0; position:relative;padding:17px 0; text-align:center}
+.scheduleBox .socket div img {height:30px; position:absolute;left:12px;top:50%;margin-top:-15px}
+.scheduleBox .socket div span {font-size:1.3rem; display:inline-block;margin:0 8px}
+
+.scheduleBox .cardWrite a {font-weight:bold; font-size:1.5rem;background:url(http://image1.hanatour.com/mobile/common/schedule/btn_de_inbox02.png) no-repeat right center; background-size:10px 18px; padding:18px 0; display:block}
+.scheduleBox .cardWrite a span {display:block; font-size:1.3rem;font-weight:normal}
+.scheduleBox .scCouponBanner {margin:0 -12px; padding:0 12px;background-color:#dbdce1}
+.scheduleBox .scCouponBanner .swiper-slide {margin-right:9px}
+.scheduleBox .scCouponBanner .swiper-slide a {display:block;height:120px;background:#fff url(http://image1.hanatour.com/mobile/common/schedule/bg_banner_go.png) no-repeat right bottom; background-size:51px 42px;padding:5px 15px;box-sizing:border-box; text-align:left; width:100%;border:1px solid #ccc;}
+.scheduleBox .scCouponBanner .swiper-slide a em {color:#5e9acd;font-size:12px}
+.scheduleBox .scCouponBanner .swiper-slide a strong {font-size:15px; display:block}
+.scheduleBox .scCouponBanner .swiper-slide a div {margin-bottom:4px}
+.scheduleBox .scCouponBanner .swiper-slide a div span {text-decoration:line-through; color:#666; font-size:13px; display:inline-block; margin-right:4px}
+.scheduleBox .scCouponBanner .swiper-slide a div b {font-size:15px}
+.scheduleBox .scCouponBanner .swiper-slide a p {color:#888;font-size:12px}
+
+.scheduleBox .graBtn {color:#333;padding:9px 5px;margin-bottom:15px;border-radius:3px;background: -moz-linear-gradient(top,#fff 0%,#f0f0f0);background: -webkit-gradient(linear, left top, left bottom, from(#fff),to(#f0f0f0));font-size:1.4rem; display:block; position:relative;border:1px solid #ccc; text-align:center; font-weight:bold}
+.scheduleBox .graBtn.tySelect:after {content:'';width:13px; height:7px; display:inline-block;background:url(http://image1.hanatour.com/mobile/common/schedule/bg_sc_day01.png) no-repeat 0 0;background-size:13px 7px;margin-left:5px;position:relative;top:-2px}
+
+.scheduleBox .fixSdBtn {position:fixed;left:0;bottom:0;width:100%;z-index:100}
+.scheduleBox .fixSdBtn > a {background-color:#c83d67;text-align:center;color:#fff;font-size:18px;padding:13px 0;height:20px;font-weight:bold; display:block; display:none}
+.scheduleBox .fixSdBtn > a+a+a {display:block}
+.scheduleBox .fixSdBtn > a.end { background-color:#8f94a4}
+.scheduleBox .fixSdBtn > a.telReserv { background-color:#e45b85}
+.scheduleBox .fixSdBtn.threeType a {display:block;float:left;width:40%}
+.scheduleBox .fixSdBtn.threeType a.btnFixTel {width:20%;background:#6d7588 url(http://image1.hanatour.com/mobile/common/schedule/bg_fixbtn_tel.png) no-repeat center center;background-size:24px 24px}
+.scheduleBox .fixSdBtn.threeType a.basket {background-color:#e45b85}
+.scheduleBox .fixSdBtn.hide {-webkit-transform:translateY(60px);-webkit-transition-property:-webkit-transform;-webkit-transition-duration:100ms;transition-property:transform;transition-duration:100ms}
+
+.scheduleBox .scPopDim {position:fixed;left:0;top:0;background:rgba(0,0,0,0.5);z-index:100; width:100%; height:100%; z-index:40}
+
+/* start 20171019 수정 */
+.scheduleBox .fixSdBtn .peopleLayer {background-color:#fff;position:absolute;bottom:100%;left:0;width:100%; padding:12px; box-sizing:border-box;z-index:50; box-shadow:5px 5px 10px transparent,  0px -5px 10px #CCC}
+.scheduleBox .fixSdBtn .peopleLayer .scPopClose {position:absolute;left:50%;bottom:100%; margin-left:-30px;width:60px;height:24px;background:#fff url(http://image1.hanatour.com/mobile/common/schedule/btn_sc_close.png) no-repeat center center; background-size:19px 10px;border-radius:2px 2px 0 0;box-shadow:0 0 20px 0 #999}
+.scheduleBox .fixSdBtn .peopleLayer .scPopClose:after {content:''; position:absolute;top:100%;left:-15px; background-color:#fff;width:90px; height:20px}
+.scheduleBox .fixSdBtn .peopleLayer ul li {border-bottom:1px solid #e0e0e0; padding:8px 0; display:table; width:100%}
+.scheduleBox .fixSdBtn .peopleLayer ul li:last-child {border-bottom:none}
+.scheduleBox .fixSdBtn .peopleLayer ul li:first-child {padding-top:0}
+.scheduleBox .fixSdBtn .peopleLayer ul li > div {display:table-cell;width:50%; vertical-align:middle}
+.scheduleBox .fixSdBtn .peopleLayer ul li .moneyBox {font-size:1.4rem; font-weight:bold}
+.scheduleBox .fixSdBtn .peopleLayer ul li .moneyBox span {font-weight:normal; display:inline-block;margin-left:6px; letter-spacing:0}
+.scheduleBox .fixSdBtn .peopleLayer ul li .btnBox {overflow:hidden; text-align:right; position:relative}
+.scheduleBox .fixSdBtn .peopleLayer ul li .btnBox strong {font-size:1.6rem; position:absolute;right:90px; top:50%; margin-top:-9px}
+.scheduleBox .fixSdBtn .peopleLayer ul li .btnBox strong.zero {color:#ccc}
+.scheduleBox .fixSdBtn .peopleLayer ul li .btnBox > div {border:1px solid #e45b85;border-radius:2px; height:32px; float:right;width:75px}
+.scheduleBox .fixSdBtn .peopleLayer ul li .btnBox button {width:50%;height:32px;background:no-repeat center center; background-size:12px 12px; box-sizing:border-box; float:left}
+.scheduleBox .fixSdBtn .peopleLayer ul li .btnBox button.minus {background-image:url(http://image1.hanatour.com/mobile/common/schedule/btn_sc_minus.png);}
+.scheduleBox .fixSdBtn .peopleLayer ul li .btnBox button.plus {background-image:url(http://image1.hanatour.com/mobile/common/schedule/btn_sc_plus.png);border-left:1px solid #e45b85}
+.scheduleBox .fixSdBtn .peopleLayer .yellowSect {background-color:#f7f7f7; text-align:right; position:relative; padding:12px; border:1px solid #e0e0e0; border-radius:2px}
+.scheduleBox .fixSdBtn .peopleLayer .yellowSect > strong {position:absolute;left:10px;top:10px; font-size:1.4rem}
+.scheduleBox .fixSdBtn .peopleLayer .yellowSect .rightBox p {color:#666; font-size:1.3rem; margin-top:3px}
+.scheduleBox .fixSdBtn .peopleLayer .yellowSect .rightBox strong {color:#c83d67;font-size:2.0rem}
+.scheduleBox .fixSdBtn .peopleLayer .yellowSect .rightBox strong span {font-weight:normal; font-size:1.3rem}
+/* end 20171019 수정 */
+
+/* swipe css */
+.swiper-slide {text-align:center;font-size:18px;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center}
+.swiper-slide img {width:100%}
+.swiper-container {margin:0 auto;position:relative;overflow:hidden;z-index:1;width:100%}
+.swiper-container-no-flexbox .swiper-slide{float:left}.swiper-container-vertical>.swiper-wrapper{-webkit-box-orient:vertical;-moz-box-orient:vertical;-ms-flex-direction:column;-webkit-flex-direction:column;flex-direction:column}.swiper-wrapper{position:relative;width:100%;height:;z-index:1;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-transition-property:-webkit-transform;-moz-transition-property:-moz-transform;-o-transition-property:-o-transform;-ms-transition-property:-ms-transform;transition-property:transform;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}.swiper-container-android .swiper-slide,.swiper-wrapper{-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-o-transform:translate(0,0);-ms-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.swiper-container-multirow>.swiper-wrapper{-webkit-box-lines:multiple;-moz-box-lines:multiple;-ms-flex-wrap:wrap;-webkit-flex-wrap:wrap;flex-wrap:wrap}.swiper-container-free-mode>.swiper-wrapper{-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out;margin:0 auto}.swiper-slide{-webkit-flex-shrink:0;-ms-flex:0 0 auto;flex-shrink:0;width:100%;position:relative}.swiper-container .swiper-notification{position:absolute;left:0;top:0;pointer-events:none;opacity:0;z-index:-1000}.swiper-wp8-horizontal{-ms-touch-action:pan-y;touch-action:pan-y}.swiper-wp8-vertical{-ms-touch-action:pan-x;touch-action:pan-x}.swiper-button-next,.swiper-button-prev{position:absolute;top:50%;width:27px;height:44px;margin-top:-22px;z-index:10;cursor:pointer;-moz-background-size:27px 44px;-webkit-background-size:27px 44px;background-size:27px 44px;background-position:center;background-repeat:no-repeat}.swiper-button-next.swiper-button-disabled,.swiper-button-prev.swiper-button-disabled{opacity:.35;cursor:auto;pointer-events:none}.swiper-button-prev,.swiper-container-rtl .swiper-button-next{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");left:10px;right:auto}.swiper-button-prev.swiper-button-black,.swiper-container-rtl .swiper-button-next.swiper-button-black{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E")}.swiper-button-prev.swiper-button-white,.swiper-container-rtl .swiper-button-next.swiper-button-white{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")}.swiper-button-next,.swiper-container-rtl .swiper-button-prev{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");right:10px;left:auto}.swiper-button-next.swiper-button-black,.swiper-container-rtl .swiper-button-prev.swiper-button-black{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E")}.swiper-button-next.swiper-button-white,.swiper-container-rtl .swiper-button-prev.swiper-button-white{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")}.swiper-pagination{position:absolute;text-align:center;-webkit-transition:.3s;-moz-transition:.3s;-o-transition:.3s;transition:.3s;-webkit-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0);z-index:10}.swiper-pagination.swiper-pagination-hidden{opacity:0}.swiper-pagination-bullet{width:8px;height:8px;display:inline-block;border-radius:100%;}button.swiper-pagination-bullet{border:none;margin:0;padding:0;box-shadow:none;-moz-appearance:none;-ms-appearance:none;-webkit-appearance:none;appearance:none}.swiper-pagination-clickable .swiper-pagination-bullet{cursor:pointer}.swiper-pagination-white .swiper-pagination-bullet{background:#fff}.swiper-pagination-bullet-active{opacity:1;background:#007aff}.swiper-pagination-white .swiper-pagination-bullet-active{background:#fff}.swiper-pagination-black .swiper-pagination-bullet-active{background:#000}.swiper-container-vertical>.swiper-pagination{right:10px;top:50%;-webkit-transform:translate3d(0,-50%,0);-moz-transform:translate3d(0,-50%,0);-o-transform:translate(0,-50%);-ms-transform:translate3d(0,-50%,0);transform:translate3d(0,-50%,0)}.swiper-container-vertical>.swiper-pagination .swiper-pagination-bullet{margin:5px 0;display:block}.swiper-container-horizontal>.swiper-pagination{bottom:2px;left:0;width:100%}.swiper-container-horizontal>.swiper-pagination .swiper-pagination-bullet{margin:0 2px}.swiper-container-3d{-webkit-perspective:1200px;-moz-perspective:1200px;-o-perspective:1200px;perspective:1200px}.swiper-container-3d .swiper-cube-shadow,.swiper-container-3d .swiper-slide,.swiper-container-3d .swiper-slide-shadow-bottom,.swiper-container-3d .swiper-slide-shadow-left,.swiper-container-3d .swiper-slide-shadow-right,.swiper-container-3d .swiper-slide-shadow-top,.swiper-container-3d .swiper-wrapper{-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;-ms-transform-style:preserve-3d;transform-style:preserve-3d}.swiper-container-3d .swiper-slide-shadow-bottom,.swiper-container-3d .swiper-slide-shadow-left,.swiper-container-3d .swiper-slide-shadow-right,.swiper-container-3d .swiper-slide-shadow-top{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:10}.swiper-container-3d .swiper-slide-shadow-left{background-image:-webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(right,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-moz-linear-gradient(right,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(right,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to left,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-container-3d .swiper-slide-shadow-right{background-image:-webkit-gradient(linear,right top,left top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(left,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-moz-linear-gradient(left,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(left,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-container-3d .swiper-slide-shadow-top{background-image:-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(bottom,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-moz-linear-gradient(bottom,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(bottom,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to top,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-container-3d .swiper-slide-shadow-bottom{background-image:-webkit-gradient(linear,left bottom,left top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(top,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-moz-linear-gradient(top,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(top,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-container-coverflow .swiper-wrapper{-ms-perspective:1200px}.swiper-container-fade.swiper-container-free-mode .swiper-slide{-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out}.swiper-container-fade .swiper-slide{pointer-events:none}.swiper-container-fade .swiper-slide .swiper-slide{pointer-events:none}.swiper-container-fade .swiper-slide-active,.swiper-container-fade .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-container-cube{overflow:visible}.swiper-container-cube .swiper-slide{pointer-events:none;visibility:hidden;-webkit-transform-origin:0 0;-moz-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;backface-visibility:hidden;width:100%;height:100%;z-index:1}.swiper-container-cube.swiper-container-rtl .swiper-slide{-webkit-transform-origin:100% 0;-moz-transform-origin:100% 0;-ms-transform-origin:100% 0;transform-origin:100% 0}.swiper-container-cube .swiper-slide-active,.swiper-container-cube .swiper-slide-next,.swiper-container-cube .swiper-slide-next+.swiper-slide,.swiper-container-cube .swiper-slide-prev{pointer-events:auto;visibility:visible}.swiper-container-cube .swiper-slide-shadow-bottom,.swiper-container-cube .swiper-slide-shadow-left,.swiper-container-cube .swiper-slide-shadow-right,.swiper-container-cube .swiper-slide-shadow-top{z-index:0;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;backface-visibility:hidden}.swiper-container-cube .swiper-cube-shadow{position:absolute;left:0;bottom:0;width:100%;height:100%;background:#000;opacity:.6;-webkit-filter:blur(50px);filter:blur(50px);z-index:0}.swiper-scrollbar{border-radius:10px;position:relative;-ms-touch-action:none;background:rgba(0,0,0,.1)}.swiper-container-horizontal>.swiper-scrollbar{position:absolute;left:1%;bottom:3px;z-index:50;height:5px;width:98%}.swiper-container-vertical>.swiper-scrollbar{position:absolute;right:3px;top:1%;z-index:50;width:5px;height:98%}.swiper-scrollbar-drag{height:100%;width:100%;position:relative;background:rgba(0,0,0,.5);border-radius:10px;left:0;top:0}.swiper-scrollbar-cursor-drag{cursor:move}.swiper-lazy-preloader{width:42px;height:42px;position:absolute;left:50%;top:50%;margin-left:-21px;margin-top:-21px;z-index:10;-webkit-transform-origin:50%;-moz-transform-origin:50%;transform-origin:50%;-webkit-animation:swiper-preloader-spin 1s steps(12,end) infinite;-moz-animation:swiper-preloader-spin 1s steps(12,end) infinite;animation:swiper-preloader-spin 1s steps(12,end) infinite}.swiper-lazy-preloader:after{display:block;content:"";width:100%;height:100%;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%236c6c6c'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");background-position:50%;-webkit-background-size:100%;background-size:100%;background-repeat:no-repeat}.swiper-lazy-preloader-white:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%23fff'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")}@-webkit-keyframes swiper-preloader-spin{100%{-webkit-transform:rotate(360deg)}}@keyframes swiper-preloader-spin{100%{transform:rotate(360deg)}}
+
+.swiper-pagination-bullet {width:7px;height: 7px;display: inline-block; border-radius: 50%; background:none; margin:3px; border: 1px solid #fff}
+.swiper-pagination-bullet-active {background:#fff}
+.swiper-pagination.pink .swiper-pagination-bullet {border: 1px solid #e0e0e0}
+.swiper-pagination.pink .swiper-pagination-bullet-active {background-color:#e45b85; border-color:#e45b85}
+
+.swiper-pag-num {bottom:10px; right:10px; color:#fff; font-size:1.4rem; background:rgba(0,0,0,0.8); padding:5px 12px; border-radius:50px; position:absolute; text-align:center; z-index:100; font-weight:bold}
+
+.swiper-container a.big5_prev {width:23px; height:42px;background:url(http://image1.hanatour.com/mobile/common/onbak/images/btn_slider_left.png); position:absolute;left:12px;top:50%;margin-top:-21px;background-size:23px 43px; z-index:100; opacity:0.7}
+.swiper-container a.big5_next {width:23px; height:42px;background:url(http://image1.hanatour.com/mobile/common/onbak/images/btn_slider_right.png); position:absolute;right:12px;top:50%;margin-top:-21px;background-size:23px 43px; z-index:100;opacity:0.7}
+
+.swiper-pagination-bullet {width:7px;height: 7px;display: inline-block; border-radius: 50%; background:none; margin:3px; border: 1px solid #fff}
+.swiper-pagination-bullet-active {background:#fff}
+
+/* 팝업 css */
+.fullPopCommon .header h3 {background-color:#6d7588; position:relative; color:#fff; height:48px; padding:15px 0 0 12px; font-size:18px; box-sizing:border-box}
+.fullPopCommon .header h3 a {position:absolute; right:0;top:0;background:url(http://image1.hanatour.com/mobile/common/schedule/btn_close01.png) no-repeat center center; background-size:19px 19px; width:19px; height:19px; padding:16px 12px}
+.fullPopCommon .innerScroller {-webkit-overflow-scrolling: touch;width: 100%; height: 100%;overflow-y:auto;}
+.pop_innerComm {padding:15px 12px 30px}
+.pop_innerComm02 {padding:0 0 30px}
+.pop_innerComm *,.pop_innerComm02 * {letter-spacing:-0.02em}
+.pop_innerComm .defaultTxt {font-size:1.3rem}
+.pop_innerComm .swiper-container {margin:15px -12px; width:auto}
+.pop_innerComm .swiper-container .swiper-pag-num {right:50%; margin-right:-32px}
+
+.pop_innerComm .stit01 {color:#222; font-size:1.6rem; line-height:1.6rem}
+.pop_innerComm .stit01 span {display:block;font-size:1.4rem;font-weight:normal}
+.pop_innerComm .cityHistory {overflow:hidden;background:url(http://image1.hanatour.com/mobile/common/schedule/bg_map_gray.png) no-repeat 0 center; background-size:12px 15px;padding-left:16px; margin:0 0 4px}
+.pop_innerComm .cityHistory+.cityHistory {margin-bottom:20px}
+.pop_innerComm .cityHistory li {float:left;background:url(http://image1.hanatour.com/mobile/common/schedule/bg_history01.png) no-repeat right center; background-size:4px 6px;margin-right:8px;padding-right:12px; color:#666; font-size:1.3rem}
+.pop_innerComm .cityHistory li:last-child {background:none}
+.pop_innerComm .popTxt01 {color:#666;font-size:1.3rem; margin-bottom:12px}
+
+.pop_innerComm .popDefine {margin:0 -12px;padding:0 12px 20px;border-top:1px solid #e0e0e0}
+.pop_innerComm .popDefine.lineNone {border-top:none}
+.pop_innerComm .popDefine dt {color:#888;font-size:1.2rem;margin:20px 0 2px}
+.pop_innerComm .popDefine dd {font-size:1.3rem}
+.pop_innerComm .popDefine dd a.web {text-decoration:underline;color:#e45b85}
+
+.pop_innerComm .popDefine02 {margin:0 -12px 0}
+.pop_innerComm .popDefine02.airType {margin-top:-15px}
+.pop_innerComm .popDefine02 dt {font-size:1.5rem;background-color:#f7f7f7;padding:12px;border-top:1px solid #ccc;font-weight:bold}
+.pop_innerComm .popDefine02.airType > dt:first-child {border-top:none}
+.pop_innerComm .popDefine02 dd {padding:15px 12px 30px;overflow:hidden}
+.pop_innerComm .popDefine02 dd.p_travelAco {padding:0 12px 30px}
+.pop_innerComm .popDefine02 dd.p_travelAco .travelAcoBtn {display:block; font-weight:bold; padding:26px 0 8px;background:url(http://image1.hanatour.com/mobile/common/supersave/bg_link_r01.png) no-repeat right 30px; background-size:17px 10px; font-size:1.4rem; position:relative}
+.pop_innerComm .popDefine02 dd.p_travelAco .travelAcoBtn:after {content:''; width:100%; height:1px; background-color:#e0e0e0; position:absolute;left:0;bottom:-8px}
+.pop_innerComm .popDefine02 dd.p_travelAco .travelAcoBtn:first-child {padding-top:20px;background-position:right 25px;}
+.pop_innerComm .popDefine02 dd.p_travelAco .travelAcoBtn+.scPopTable {display:none}
+.pop_innerComm .popDefine02 dd.p_travelAco .travelAcoBtn.open {background-image:url(http://image1.hanatour.com/mobile/common/supersave/bg_link_r01_off.png);}
+.pop_innerComm .popDefine02 dd.p_travelAco .travelAcoBtn.open:after {content:none}
+.pop_innerComm .popDefine02 dd.p_travelAco .travelAcoBtn.open+.scPopTable {display:table}
+
+.pop_innerComm .sc_popTab {overflow:hidden;position:relative;margin:15px 0}
+.pop_innerComm .sc_popTab li {float:left;width:50%}
+.pop_innerComm .sc_popTab li a {display:block;background-color:#f1f1f3;border:1px solid #dbdce1;font-size:1.4rem; text-align:center; padding:8px 0}
+.pop_innerComm .sc_popTab li.on a {font-weight:bold;color:#e45b85;border:1px solid #e45b85;background-color:#fff}
+
+.pop_innerComm .sc_popTab02 {overflow:hidden; margin-bottom:10px}
+.pop_innerComm .sc_popTab02 li {float:left;width:50%; height:41px;border-bottom:1px solid #4a505d;}
+.pop_innerComm .sc_popTab02 li a {display:block; text-align:center; background-color:#dbdce1;font-size:1.5rem; height:29px; padding-top:11px;border-top:1px solid #ccc; border-right:1px solid #ccc; color:#333 }
+.pop_innerComm .sc_popTab02 li:last-child a {border-right:none}
+.pop_innerComm .sc_popTab02 li.on {border-bottom:1px solid #747b8e}
+.pop_innerComm .sc_popTab02 li.on a {background-color:#fff;border-left:1px solid #4a505d;border-right:1px solid #4a505d; border-bottom:1px solid #fff;position:relative; font-weight:bold; border-top:1px solid #4a505d}
+.pop_innerComm .sc_popTab02 li.on a:after {content:''; display:block; width:1px; height:100%; position:absolute;top:-1px;left:-1px; background-color:#4a505d; padding-bottom:1px}
+
+.pop_innerComm .sc_popTab.three li {width:33.3%}
+.pop_innerComm .sc_popTab.three li:nth-child(2) {width:33.4%}
+.pop_innerComm .sc_popTab.three li:nth-child(2) a {border-left:none;border-right:none}
+.pop_innerComm .sc_popTab.three li.on:nth-child(2) a {border:1px solid #e45b85}
+
+.pop_innerComm .icoList .swiper-slide {width:62px;font-size:12px;background:no-repeat center 0; background-size:32px 32px; padding-top:38px; vertical-align:top; line-height:1.3rem}
+.pop_innerComm .icoList .swiper-slide.h_ico01 {background-image:url(http://image1.hanatour.com/mobile/common/schedule/ico_sc_hotel01.png)}
+.pop_innerComm .icoList .swiper-slide.h_ico02 {background-image:url(http://image1.hanatour.com/mobile/common/schedule/ico_sc_hotel02.png)}
+.pop_innerComm .icoList .swiper-slide.h_ico03 {background-image:url(http://image1.hanatour.com/mobile/common/schedule/ico_sc_hotel03.png)}
+.pop_innerComm .icoList .swiper-slide.h_ico04 {background-image:url(http://image1.hanatour.com/mobile/common/schedule/ico_sc_hotel04.png)}
+.pop_innerComm .icoList .swiper-slide.h_ico05 {background-image:url(http://image1.hanatour.com/mobile/common/schedule/ico_sc_hotel05.png)}
+.pop_innerComm .icoList .swiper-slide.h_ico06 {background-image:url(http://image1.hanatour.com/mobile/common/schedule/ico_sc_hotel06.png)}
+.pop_innerComm .icoList .swiper-slide.h_ico07 {background-image:url(http://image1.hanatour.com/mobile/common/schedule/ico_sc_hotel07.png)}
+.pop_innerComm .icoList .swiper-slide.h_ico08 {background-image:url(http://image1.hanatour.com/mobile/common/schedule/ico_sc_hotel08.png)}
+.pop_innerComm .icoList .swiper-slide.h_ico09 {background-image:url(http://image1.hanatour.com/mobile/common/schedule/ico_sc_hotel09.png)}
+.pop_innerComm .icoList .swiper-slide.h_ico10 {background-image:url(http://image1.hanatour.com/mobile/common/schedule/ico_sc_hotel10.png)}
+
+.pop_innerComm .listDott > li {font-size:1.3rem;margin-bottom:4px;position:relative;padding-left:6px}
+.pop_innerComm .listDott > li:last-child {margin-bottom:0}
+.pop_innerComm .listDott > li:before {content:'';width:2px;height:2px;border-radius:50%;position:absolute;left:0;top:7px; background-color:#333}
+
+.pop_innerComm .popLabel {color:#fff;font-size:1.3rem;background-color:#e45b85; display:inline-block; padding:3px 8px 2px; border-radius:2px}
+.pop_innerComm .popLabel.wait {background-color:#8f94a4}
+.pop_innerComm .popStit {color:#222;font-size:1.6rem;display:block;margin-top:8px}
+.pop_innerComm .popStit .star {background:url(http://image1.hanatour.com/mobile/common/schedule/ico_star.png) repeat-x 0 0; background-size:10px 9px; height:9px; display:inline-block; position:relative; top:-1px}
+.pop_innerComm .popStit .star.num10 {width:5px}
+.pop_innerComm .popStit .star.num20 {width:10px}
+.pop_innerComm .popStit .star.num30 {width:15px}
+.pop_innerComm .popStit .star.num40 {width:20px}
+.pop_innerComm .popStit .star.num50 {width:25px}
+.pop_innerComm .popStit .star.num60 {width:30px}
+.pop_innerComm .popStit .star.num70 {width:35px}
+.pop_innerComm .popStit .star.num80 {width:40px}
+.pop_innerComm .popStit .star.num90 {width:45px}
+.pop_innerComm .popStit .star.num100 {width:50px}
+.pop_innerComm .popStitEng {color:#666;font-size:1.1rem; display:block}
+
+.pop_innerComm .popBtmTabBox {border-top:1px solid #ccc; margin:0 -12px; padding:5px 12px 0}
+.pop_innerComm .btmTabTxt {color:#666;font-size:1.3rem}
+.pop_innerComm .shopTxt {color:#444;font-size:1.3rem; text-align:center; background-color:#f7f7f7; padding:13px 4px; margin-bottom:10px}
+.pop_innerComm .centerList {margin:0 -12px}
+.pop_innerComm .centerList > li {padding:20px 12px; border-top:1px solid #ccc}
+.pop_innerComm .centerList > li > strong {font-size:1.4rem; display:block; margin-bottom:3px}
+.pop_innerComm .centerList > li > p {color:#444; font-size:1.3rem; margin-bottom:6px}
+.pop_innerComm .centerList > li div {background-color:#f7f7f7; padding:10px}
+.pop_innerComm .centerList > li div ul li {position:relative; padding-left:75px; margin-bottom:10px;font-size:1.2rem;}
+.pop_innerComm .centerList > li div ul li:last-child {margin-bottom:0}
+.pop_innerComm .centerList > li div ul li strong {position:absolute;left:0;top:0; color:#666; font-size:1.2rem; font-weight:normal; padding-left:8px}
+.pop_innerComm .centerList > li div ul li strong:before {content:''; width:2px; height:2px; border-radius:50%; position:absolute;left:0;top:6px; background-color:#666}
+
+.pop_innerComm .shopLongTxt {color:#666; font-size:1.3rem; padding-top:12px}
+.pop_innerComm .detailList {margin:0; border:none;}
+
+.de_btmSect {background-color:#fff;border:1px solid #eee;text-align:center; padding:15px 0 18px; letter-spacing:-0.02em}
+.de_btmSect strong {display:block;margin-bottom:10px;font-size:1.5rem}
+.de_btmSect p {padding:0 10px}
+.de_btmSect span {display:inline-block;padding:2px 6px;color:#fff; font-size:1.1rem}
+.de_btmSect span:last-child {margin-left:12px}
+
+.scPopTable {border-top:1px solid #ccc}
+.scPopTable.marB30 {margin-bottom:30px}
+.scPopTable th {border-bottom:1px solid #ccc;background-color:#f7f7f7;padding:10px;text-align:left;font-size:1.3rem}
+.scPopTable td {border-bottom:1px solid #ccc;padding:12px 10px;font-size:1.3rem}
+.scPopTable .moneyList li {text-align:right;position:relative;margin-bottom:10px}
+.scPopTable .moneyList li:last-child {margin-bottom:0}
+.scPopTable .moneyList li strong {position:absolute;left:0;top:0; font-weight:normal; font-size:1.3rem}
+.scPopTable .moneyList li span {font-size:1.3rem}
+.scPopTable .moneyList li span.c_red {font-weight:bold}
+
+.scPopTable02 {border-top:1px solid #ccc;margin-bottom:30px}
+.scPopTable02 table {margin-bottom:10px}
+.scPopTable02 th {font-size:1.3rem;border-bottom:1px solid #ccc;padding:12px 10px}
+.scPopTable02 thead th {background-color:#f7f7f7;border-left:1px solid #ccc}
+.scPopTable02 thead th:first-child {border-left:none}
+.scPopTable02 tfoot th {text-align:left}
+.scPopTable02 tbody th {font-weight:normal;text-align:left}
+.scPopTable02 td {padding:12px 10px; font-size:1.3rem;border-bottom:1px solid #ccc; text-align:center;border-left:1px solid #ccc}
+.scPopTable02 tbody td:first-child {border-left:none}
+.scPopTable02 tfoot td {font-weight:bold}
+
+.scRadio {display:inline-block}
+.scRadio input[type='radio'] {background:#f7f7f7;width:24px;height:24px;margin-right:5px; border:1px solid #ccc; border-radius:50%; position:relative; margin-top:-3px}
+.scRadio input[type='radio']+span {font-size:14px;color:#666; vertical-align:middle;  display:inline-block; margin-right:12px; font-size:1.3rem}
+.scRadio input[type='radio']:checked:after {content:'';background:#c83d67;width:12px;height:12px;margin-right:5px;border-radius:50%; position:absolute;left:50%; top:50%; margin:-6px 0 0 -6px}
+.scRadio input[type='radio']:checked+span {color:#333;font-weight:bold;}
+
+.popReviewTop {padding-bottom:20px}
+.popReviewTop > strong {display:block;font-size:1.6rem;margin-bottom:8px}
+.popReviewTop > div {text-align:center}
+.popReviewTop > div span img {height:20px; vertical-align:top; position:relative; bottom:-3px}
+.popReviewTop > div strong {color:#c83d67; font-size:2.4rem;}
+.popReviewTop > div em {font-size:1.5rem;font-weight:bold}
+.popReviewTop > p {color:#666;font-size:1.3rem;text-align:center}
+.scoreList {display:table;width:100%;border:1px solid #e0e0e0; box-sizing:border-box; margin-top:10px; background-color:#fff}
+.scoreList li {display:table-cell;width:20%;text-align:center;border-left:1px solid #e0e0e0; padding:12px 0; font-size:1.5rem;}
+.scoreList li:first-child {border-left:none}
+.scoreList li span {display:block; font-weight:bold}
+
+.p_reviewBox {border-top:1px solid #8f94a4;margin:0 -12px;}
+.p_reviewBox dt a {font-size:1.5rem; display:block; padding:15px 12px; border-bottom:1px solid #ccc; position:relative; line-height:1.9rem; font-weight:bold}
+.p_reviewBox dt a:after {content:'';width:17px;height:10px;background:url(http://image1.hanatour.com/mobile/common/supersave/bg_link_r01.png) no-repeat 0 0; background-size:17px 10px; position:absolute;right:12px; top:50%; margin-top:-5px}
+.p_reviewBox dt.open a:after {background-image:url(http://image1.hanatour.com/mobile/common/supersave/bg_link_r01_off.png)}
+.p_reviewBox dt a div span {position:relative; font-size:1.3rem; color:#888; display:inline-block; margin-right:6px; padding-right:7px; font-weight:normal}
+.p_reviewBox dt a div span:after {content:''; position:absolute;right:0;top:50%;width:1px;height:10px; margin-top:-5px; background-color:#ccc}
+.p_reviewBox dt a div span:last-child:after {content:none}
+.p_reviewBox dd {padding:20px 12px; background-color:#f7f7f7;overflow:hidden;display:none;border-bottom:1px solid #ccc}
+.p_reviewBox dt.open+dd {display:block}
+.p_reviewBox dd .inStar {position:relative}
+.p_reviewBox dd .inStar span img {height:15px;vertical-align:top; position:relative; bottom:-1px}
+.p_reviewBox dd .inStar strong {color:#c83d67;font-size:1.5rem}
+.p_reviewBox dd .inStar em {font-size:1.5rem;font-weight:bold}
+.p_reviewBox dd .inStar b {position:absolute;right:0;top:0; font-size:1.3rem; font-weight:normal}
+.p_reviewBox dd > p {font-size:1.3rem; margin-top:20px}
+
+.pbtn_reviewPlus {display:block; text-align:center; color:#6d7588; padding:13px 0; border-bottom:1px solid #b2b5c0;font-size:1.4rem;background-color:#fff}
+.pbtn_reviewPlus span {color:#333}
+.pbtn_reviewPlus:after {content:'';display:inline-block; width:14px; height:14px;background:url(http://image1.hanatour.com/mobile/common/schedule/btn_hotel_ico_on.png) no-repeat 0 0; background-size:14px 14px; margin-left:5px; position:relative; vertical-align:middle}
+.pop_innerComm .zoomBox {margin-top:8px}
+.p_reviewBox+.pbtn_reviewPlus {margin:0 -12px}
+
+.popCalenderBox {}
+.popCalenderBox .calenderTop {display:table;text-align:center;border-bottom:1px solid #8f94a4; width:100%;}
+.popCalenderBox .calenderTop a {display:table-cell;width:25%; background-color:#f7f7f7; color:#888; font-size:1.6rem; padding:16px 0; position:relative}
+.popCalenderBox .calenderTop a.prevMonth:before {content:'';width:10px;height:18px;display:inline-block;background:url(http://image1.hanatour.com/mobile/common/schedule/btn_de_inbox03.png) no-repeat 0 0;background-size:10px 18px; margin-right:7px; position:relative;bottom:-3px}
+.popCalenderBox .calenderTop a.prevMonth.end:after {content:'';position:absolute;left:0;top:0;width:100%; height:100%; background-color:#fff; opacity:0.7}
+.popCalenderBox .calenderTop a.nextMonth:after {content:''; width:10px; height:18px;display:inline-block;background:url(http://image1.hanatour.com/mobile/common/schedule/btn_de_inbox02.png) no-repeat 0 0;background-size:10px 18px; margin-left:7px;position:relative;bottom:-3px}
+.popCalenderBox .calenderTop strong {display:table-cell;width:50%;font-size:1.6rem;padding:16px 0;border-left:1px solid #ccc;border-right:1px solid #ccc}
+
+.popCalenderBox .dayProductList {background-color:#dbdce1; margin-bottom:-30px; padding-bottom:30px}
+.popCalenderBox .dayProductList ul {overflow:hidden}
+.popCalenderBox .dayProductList ul li {margin-bottom:5px; border-top:1px solid #ccc;border-bottom:1px solid #ccc; background-color:#fff; }
+.popCalenderBox .dayProductList ul li a {display:block; padding:20px 12px 0}
+.popCalenderBox .dayProductList ul li a .topCont {color:#666; font-size:1.3rem}
+.popCalenderBox .dayProductList ul li a .topCont em { display:inline-block; margin-right:8px; padding-right:8px; position:relative}
+.popCalenderBox .dayProductList ul li a .topCont em:after {content:''; width:1px; height:10px; background-color:#ccc; position:absolute;right:0;top:50%; margin-top:-5px}
+.popCalenderBox .dayProductList ul li a .topCont span img {height:15px;vertical-align:middle;position:relative;top:-2px}
+
+.popCalenderBox .dayProductList ul li a > p {font-size:1.4rem; margin:5px 0 20px; font-weight:bold}
+.popCalenderBox .dayProductList ul li a .btmCont {display:table;width:100%; border-top:1px solid #ccc}
+.popCalenderBox .dayProductList ul li a .btmCont em {display:table-cell;width:40%;vertical-align:middle;color:#666;font-size:1.2rem;}
+.popCalenderBox .dayProductList ul li a .btmCont strong {display:table-cell;width:60%;vertical-align:middle;padding:8px 0;text-align:right;color:#c83d67; font-size:1.7rem}
+.popCalenderBox .dayProductList ul li a .btmCont strong span {color:#fff;font-weight:normal;padding:4px;margin-right:10px; display:inline-block; font-size:1.3rem}
+.popCalenderBox .dayProductList ul li a .btmCont strong span.start {background-color:#e45b85}
+.popCalenderBox .dayProductList ul li a .btmCont strong span.wait {background-color:#3a8dd6}
+.popCalenderBox .dayProductList ul li a .btmCont strong b{font-weight:normal; font-size:1.2rem; display:inline-block; margin-left:2px}
+
+.selectBox {background-color:#dbdce1;padding:10px 12px;}
+.selectBox select{width:100%;border:1px solid #ddd;background:#fff url(http://image1.hanatour.com/mobile/common/thismonth/201605/bg_select_bgray.png) no-repeat 95% center; background-size:16px 9px; height:40px; padding-left:8px;color:#222;font-size:1.4rem}
+
+.prodNone {padding:80px 0; text-align:center; border-top:1px solid #ccc;border-bottom:1px solid #ccc;font-size:1.3rem; color:#666}
+.prodNone strong {display:block; font-size:1.5rem; color:#333}
+.startDayCheck {display:block; text-align:right; font-size:1.4rem; padding:15px 12px 13px; border-bottom:1px solid #ccc}
+.startDayCheck input[type='checkbox'] {height:22px;width:22px;border:1px solid #ccc;border-radius:3px;background-color:#fff;margin:-4px 0 0 10px}
+.startDayCheck input[type='checkbox']:checked {border:1px solid #c83d67;background:#c83d67 url(http://image1.hanatour.com/mobile/common/schedule/bg_check_on.png) no-repeat center center;background-size:14px 11px}
+
+.ui-datepicker-header,.ui-widget-header,.ui-helper-clearfix,.ui-corner-all{ display:none}
+.ui-datepicker-calendar thead th { padding:12px 0 14px; font-size:1.2rem;font-weight:normal}
+.ui-datepicker-calendar tbody td {text-align:center;font-size:1.6rem;border-bottom:1px solid #ebebeb}
+.ui-datepicker-calendar tbody td * {padding:16px 0 !important; display:block}
+.ui-datepicker-calendar tbody tr:last-child td {border-bottom:1px solid #ccc}
+.ui-datepicker-calendar tbody td.sun *,#datepicker .ui-datepicker-calendar tbody td.holiday * { color:#d71a1a}
+.ui-datepicker-calendar tbody td.sat * {color:#3a8dd6}
+.ui-datepicker-calendar tbody td.ui-state-disabled * {color:#ccc}
+.ui-datepicker-calendar tbody td.ui-datepicker-current-day a {color:#fff;font-weight:bold; display:block; height:100%; border-radius:10px; background-color:#e45b85} 
+.btnselRed {font-size:1.5rem;}
+.scTopSlide .swiper-slide {height:32vh} /* 20160705 추가 */
+.scTopSlide .swiper-slide img,.pop_innerComm .swiper-slide img {height:32vh}
+@media all and (orientation:landscape) { /* 가로모드 */
+.scTopSlide .swiper-slide {height:64vh}/* 20160705 추가 */
+.scTopSlide .swiper-slide img,.pop_innerComm .swiper-slide img {height:64vh}
+}
+.scTopSlide .swiper-slide.column img {position: absolute;left: 0;top: 50%;margin-top: -91px; height:auto}/* 20160705 추가 */
+
+@media all and (min-width:375px) { /* 아이폰6 이상 */
+.scheduleBox .fixSdBtn > a {padding:16px 0}
+.scheduleBox .topCommon .sc_comTop .prodDayBox strong span {background-size:14px 14px; background-position:0 2px}
+.scheduleBox .topCommon .sc_comBtm .snsList a img {height:42px}
+.scheduleTabSect .sche_tabMenu li a {padding:22px 11px 19px}
+.scheduleTabSect .scheduleAco .scheStitList dt:after {width:30px;height:30px;position:absolute;left:50%;bottom:-15px;background:url(http://image1.hanatour.com/mobile/common/schedule/ico_schestit01.png) no-repeat 0 0;background-size:30px 30px;margin:0 0 0 -15px}
+.scheduleTabSect .scheduleAco .scheStitList .inBeneBox p {font-size:14px}
+.scheduleTabSect .scheduleAco02 dt a {background-size:19px 24px;padding-left:41px}
+.zoomBox a {width:30px; height:30px;background-size:30px 30px}
+.detailList > li > span {font-size:14px}
+.scheduleBox .scCouponBanner .swiper-slide a strong,.scheduleBox .scCouponBanner .swiper-slide a div b {font-size:16px}
+.scheduleBox .scCouponBanner .swiper-slide a p {font-size:13px}
+.scheduleBox .scDayList > dd .red_infor strong {font-size:15px}
+.pop_innerComm .icoList .swiper-slide {background-size:38px 38px;font-size:13px;padding-top:45px}
+.popReviewTop > div span img,.scheduleBox .reviewBox a div span img  {bottom:-6px}
+.p_reviewBox dd .inStar span img {bottom:-3px}
+.pbtn_reviewPlus:after {top:-2px}
+.selectBox select{ height:50px}
+.scheduleBox .scDayList > dd .slabel {font-size:14px}
+.btnselRed {height:50px}
+.scheduleTabSect .sche_tabMenu li a {height:56px}
+.scheduleTabSect .sche_tabMenu li a.twoLine {padding:14px 11px 12px;}
+}
+
+.sccheckTab {overflow:hidden; margin:10px 0}
+.sccheckTab li {float:left;width:50%; height:42px;border-bottom:1px solid #4a505d;}
+.sccheckTab li a {display:block; text-align:center;font-size:1.4rem; height:29px; padding-top:11px; border-top:1px solid #ccc; border-right:1px solid #ccc;background-color:#dbdce1;color:#333;border-bottom:1px solid #4a505d}
+.sccheckTab li:last-child a {border-right:none}
+.sccheckTab li {border-bottom:none}
+.sccheckTab li a.on {background-color:#fff;color:#222;border:1px solid #4a505d;border-bottom:none; position:relative; font-weight:bold}
+.sccheckTab.tab03 li {width:33.3%}
+.sccheckTab.tab03 li:nth-child(2) {width:33.4%}
+
+.safetyTxt {position:relative;padding-left:10px; margin-bottom:15px}
+.safetyTxt:before {content:'';width:4px; height:4px; position:absolute;left:0;top:6px; background-color:#c83d67; border-radius:50%}
+.safetyDist01 {border-top:1px solid #ccc}
+.safetyDist01 dt {border-bottom:1px solid #ccc}
+.safetyDist01 dt a {display:block; padding:15px 80px 15px 10px; font-size:1.4rem; background:url(http://m.hanatour.com/static/images/common/bg_btm_bul.png) no-repeat 95% center; background-size:17px 10px}
+.safetyDist01 dt.on a {font-weight:bold; background-image:url(http://m.hanatour.com/static/images/common/bg_top_bul.png)}
+.safetyDist01 dt a span {display:block; color:#666; margin-top:3px}
+.safetyDist01 dt.on a span {font-weight:normal}
+.safetyDist01 dd {display:none;border-bottom:1px solid #ccc; padding:20px 10px; background-color:#f7f7f7}
+.safetyDist01 dd p {margin-top:15px; color:#666}
+.safetyDist01 dd p:first-child {margin-top:0}
+.safetyDist01 dt.on+dd {display:block}
+
+.safetyDist02 {border:1px solid #ccc;padding:0 12px 12px}
+.safetyDist02 dt {color:#92744e;margin:10px 0}
+.safetyDist02 dd {margin-bottom:10px}
+.smtxy {font-size:1.2rem}
+.safetyTable {width:100%;border-top:1px solid #000}
+.safetyTable caption {text-indent:-9999px; font-size:0; line-height:0; visibility:hidden}
+.safetyTable th {background-color:#ff7e00; color:#fff; text-align:center; font-weight:normal; border-left:1px solid #000;border-bottom:1px solid #000; padding:6px 0; font-size:1.2rem}
+.safetyTable td {text-align:center;border-left:1px solid #000;border-bottom:1px solid #000;padding:6px 0;font-size:1.2rem}
+.safetyTable th:last-child,.safetyTable td:last-child {border-right:1px solid #000}
+
+.safetyList01 li {position:relative; padding-left:12px; margin:2px 0 5px}
+.safetyList01 li:after { content:'';width:6px; height:6px; background-color:#fff; border:1px solid #000; border-radius:50%; position:absolute;left:0;top:3px;}
+
+.imgBanner {margin-bottom:5px}
+.imgBanner img {width:100%}
+
+
+/* 20161019 추가 */
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial .de_inBox02 > strong {font-size:1.3rem}
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial .de_inBox02 > p {color:#666; font-size:1.2rem; margin-bottom:10px}
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial .de_inBox02 a {padding:0; background:none; min-height:inherit; display:block}
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial .de_inBox02 .swiper-container a.big5_prev {width:23px; height:42px;background:url(http://image1.hanatour.com/mobile/common/onbak/images/btn_slider_left.png); position:absolute;left:12px;top:50%;margin-top:-21px;background-size:23px 43px; z-index:100; opacity:0.7}
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial .de_inBox02 .swiper-container a.big5_next {width:23px; height:42px;background:url(http://image1.hanatour.com/mobile/common/onbak/images/btn_slider_right.png); position:absolute;right:12px;top:50%;margin-top:-21px;background-size:23px 43px; z-index:100;opacity:0.7}
+.scheduleBox .scDayList > dd .detailTxt > li.hotelSpecial .de_inBox02 a.hsBtn {padding:6px 0;}
+
+/* 골프 대응 20161220 */
+.golfContBox {padding:15px 0; border-bottom:1px solid #e0e0e0}
+.golfContBox.last {border-bottom:none}
+.golfContBox > div {font-size:1.2rem; margin-top:4px}
+.golfContBox > div * {font-size:1.2rem}
+.de_inBox02 .spciTop {margin-top:12px}
+.scheduleBox .scDayList > dd .detailTxt .golfContBox > strong {font-size:1.3rem}
+.scheduleBox .scDayList > dd .detailTxt .golfContBox > p {color:#666; font-size:1.2rem; margin-bottom:10px}
+.scheduleBox .scDayList > dd .detailTxt .golfContBox a {padding:0; background:none; min-height:inherit; display:block}
+.scheduleBox .scDayList > dd .detailTxt .golfContBox .swiper-container a.big5_prev {width:23px; height:42px;background:url(http://image1.hanatour.com/mobile/common/onbak/images/btn_slider_left.png); position:absolute;left:12px;top:50%;margin-top:-21px;background-size:23px 43px; z-index:100; opacity:0.7;padding:0; border-bottom:none}
+.scheduleBox .scDayList > dd .detailTxt .golfContBox .swiper-container a.big5_next {width:23px; height:42px;background:url(http://image1.hanatour.com/mobile/common/onbak/images/btn_slider_right.png); position:absolute;right:12px;top:50%;margin-top:-21px;background-size:23px 43px; z-index:100;opacity:0.7; padding:0;border-bottom:none}
+.scheduleBox .scDayList > dd .detailTxt .golfContBox .hsBtn {color:#666; font-size:1.2rem; display:block; text-align:center; padding:6px 0; border:1px solid #e0e0e0}
+.scheduleBox .scDayList > dd .detailTxt .golfContBox .hsBtn:after {content:''; display:inline-block; width:13px; height:7px; position:relative; top:-1px;background:url(http://image1.hanatour.com/mobile/common/schedule/btn_hs_off.png) no-repeat 0 0; background-size:13px 7px; margin-left:2px}
+.scheduleBox .scDayList > dd .detailTxt .golfContBox .hsBtn.on:after {background-image:url(http://image1.hanatour.com/mobile/common/schedule/btn_hs_on.png)}
+.scheduleBox .scDayList > dd .detailTxt .golfContBox .swiper-slide img {height:230px}
+.scheduleBox .scDayList > dd .detailTxt .golfContBox .hsBtmBox {overflow:hidden}
+.scheduleBox .scDayList > dd .detailTxt .golfContBox .hsBtmBox+.hsBtmBox {background:url(http://image1.hanatour.com/mobile/common/smc/bg_smc_dot.png) repeat-x 0 0; background-size:5px 1px; padding-bottom:10px}
+.scheduleBox .scDayList > dd .detailTxt .golfContBox .stitHs {font-size:1.3rem;display:block; margin-top:20px}
+.scheduleBox .scDayList > dd .detailTxt .golfContBox .txtBox {background-color:#f7f7f7; border-top:1px solid #e0e0e0; margin-bottom:5px; height:105px; box-sizing:border-box; overflow:hidden; padding:10px 10px 15px; margin-top:10px}
+.scheduleBox .scDayList > dd .detailTxt .golfContBox .txtBox * {font-size:1.2rem}
+.scheduleBox .scDayList > dd .detailTxt .golfContBox .txtBox.open {height:auto;min-height:105px}
+
+/* 링크없는경우 카드 추가 */
+.linkNoneBox {padding:0}
+.linkNoneBox > strong {display:block;margin-bottom:10px; margin-top:12px; font-size:1.3rem}
+.linkNoneBox > div {margin-top:4px;font-size:1.2rem}
+.linkNoneBox .card_cont * {font-size:1.2rem;}
+.linkNoneBox .sc_imgBox {float:left; margin:2px 8px 2px 0}
+.linkNoneBox .sc_imgBox img {width:86px; height:74px}
+.linkNoneBox > p strong {display:block; margin-bottom:10px; color:#333}
+.linkNoneBox > p b {display:block; font-size:1.2rem; font-weight:normal; margin-bottom:3px}
+.linkNoneBox .spciTop {border-bottom:1px dashed #e0e0e0 !important}
+.redLine .linkNoneBox+.linkNoneBox {border-top:1px solid #ccc}
+.redLine .linkNoneBox p.sTxt_red.sc_imgBox02 {padding-left:0 !important; min-height:inherit}
+.redLine .linkNoneBox p.sTxt_red span {float:left; position:static !important; margin:0 6px 6px 0}
+.linkNoneBox+.golfContBox,.linkNoneBox+.popUpFull {border-top:1px solid #ccc}
+
+/* 20170117 테마카드 추가 */
+.scTcBox {padding:6px 0;background-color:#dbdce1; margin:0 -12px; border-top:1px solid #ccc; overflow:hidden}
+.scThemeCard {background-color:#fff;}
+.scThemeCard .tcTop {background:no-repeat center 0; background-size:cover; text-align:center; position:relative;}
+.scThemeCard .tcTop.bg01 {background-image:url(http://image1.hanatour.com/_images/hana/p_schedule/img_thumb_theme_food.jpg)}
+.scThemeCard .tcTop > div {background:rgba(0,0,0,0.4); padding:19px 0}
+.scThemeCard .tcTop strong {color:#fff;font-size:2.0rem}
+.scThemeCard .tcTop strong:before {content:'';display:inline-block; margin-right:5px; position:relative;bottom:-6px;width:28px;height:28px;background-size:28px 28px; background-repeat:no-repeat; background-position:0 0}
+.scThemeCard .tcTop strong.food:before {background-image:url(http://image1.hanatour.com/_images/hana/p_schedule/ico_theme_meal.png)}
+.scThemeCard .tcTop strong.art:before {background-image:url(http://image1.hanatour.com/_images/hana/p_schedule/ico_theme_art.png)}
+.scThemeCard .tcTop strong.leports:before {background-image:url(http://image1.hanatour.com/_images/hana/p_schedule/ico_theme_leports.png)}
+.scThemeCard .tcTop strong.shopping:before {background-image:url(http://image1.hanatour.com/_images/hana/p_schedule/ico_theme_shopping.png)}
+.scThemeCard .tcTop strong.partner:before {background-image:url(http://image1.hanatour.com/_images/hana/p_schedule/ico_theme_partner.png)}
+.scThemeCard .tcTop strong.experience:before {background-image:url(http://image1.hanatour.com/_images/hana/p_schedule/ico_theme_experience.png)}
+.scThemeCard .tcTop p {color:#fff;font-size:1.3rem;margin-top:8px}
+.scThemeCard .tcTop .btnTc {position:absolute;right:0;top:0; color:#ff8a00; padding:24px 12px 5px}
+.scThemeCard .swiper-container {margin-top:-8px}
+.scThemeCard .swiper-slide {float:left;width:42%; margin-right:8px; padding-bottom:20px}
+.scThemeCard .swiper-slide div {text-align:left}
+.scThemeCard .swiper-slide div p {margin-top:10px; height:34px;font-size:1.3rem;overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; line-height:1.4rem}
+.scThemeCard .swiper-slide div img {height:100px}
+
+/* 상품구분정보추가 수정 20170731 */
+.prodDivList > li {display:table;width:100%; position:relative}
+.prodDivList > li+li {margin-top:4px}
+.prodDivList > li > strong,.prodDivList > li > a {display:table-cell; width:49%; text-align:center; background-color:#f7f7f7; border:1px solid #e0e0e0; border-radius:3px; padding: 12px 0; font-size:1.3rem; font-weight:bold;vertical-align:middle}
+.prodDivList > li > strong.transp { opacity:0}
+.prodDivList > li > span {display:table-cell;width:2%}
+.prodDivList li .qna_second {background:#f7f7f7; min-height:inherit; margin-right:0}
+.prodDivList li .qna_second:after {content:''; display:inline-block;width:20px; height:20px;background:url(http://image1.hanatour.com/mobile/common/hanatour/fnd/btn_minipop.png) no-repeat 0 0;background-size:40px 20px; border:none;cursor:pointer;margin-bottom:-5px; margin-left:6px; padding:0}
+.prodDivList li .qna_second.on:after {background-position:-20px 0}
+.prodDivList li .qnaPopTxt {display:none;position:absolute;left:0;top:100%;width: calc(100% - 12px);width: -webkit-calc(100% - 12px);margin:-5px 6px 0; background-color:#fff; border:1px solid #c83d67; z-index:10; box-sizing:border-box; text-align:left; padding:15px 25px 15px 8px;border-radius:3px}
+.prodDivList li .qna_second.on+.qnaPopTxt {display:block}
+.prodDivList li .qnaPopTxt button {content:'';position:absolute;right:0;top:0; width:30px; height:30px;background:url(http://image1.hanatour.com/mobile/common/schedule/btn_qnapop_close.png) no-repeat center center;background-size:12px 12px; border:none; cursor:pointer}
+.prodDivList li .qnaPopTxt strong {font-size:1.3rem; display:block; margin-bottom:10px}
+.prodDivList li .qnaPopTxt p {position:relative; padding-left:40px}
+.prodDivList li .qnaPopTxt p+p {margin-top:4px}
+.prodDivList li .qnaPopTxt p em {position:absolute;left:0;top:2px;font-size:12px}
+.prodDivList li .qnaPopTxt p span {font-size:12px}
+/* 20180412 상품구분정보 변경 : 제거 */
+/*.prodDivList li .qnaPopTxt p.b_col01 em {color:#ee7624}*/
+/*.prodDivList li .qnaPopTxt p.b_col02 em {color:#76bd22}*/
+/*.prodDivList li .qnaPopTxt p.b_col03 {padding-left:60px}*/
+/*.prodDivList li .qnaPopTxt p.b_col03 em {color:#43bbd3}*/
+/* // 20180412 상품구분정보 변경 : 제거 */
+
+/* 20180412 상품구분정보 변경 : 추가 */
+.prodLabelList {margin:10px 0 15px;text-align:left;}
+.prodLabelList:after {display:block;content:'';clear:both}/* 20180528 상품구분정보 변경 : 추가 */
+.prodLabelList li {position:relative;float:left;margin-right:3px;}/* 20180528 상품구분정보 변경 : 수정 */
+.prodLabelList .prodLabel {display:block;padding:4px 5px;border:1px solid #8f94a4;border-radius:1px;font-size:1.2rem;line-height:1.4rem;color:#8f94a4;font-weight:600;background:none;}
+.prodLabelList .qna_second {position:relative;margin-right:0;padding-right:calc(14px + 1.4rem);color:#8f94a4;border-color:#8f94a4;}
+.prodLabelList .qna_second:after {display:block;position:absolute;right:0;top:0;content:'?';box-sizing:border-box;width:calc(8px + 1.4rem);height:100%;padding:4px;line-height:1.4rem;border-left:1px solid #8f94a4;text-align:center;}
+.prodLabelList li .qnaPopTxt {display:none;position:absolute;left:0;top:calc(100% + 10px);width:auto;margin:0;background-color:#fff;border:1px solid #c83d67;z-index:10;box-sizing:border-box;text-align:left;padding:15px;border-radius:3px;white-space:nowrap;}
+.prodLabelList li .qna_second.on + .qnaPopTxt {display:block;}
+.prodLabelList li .qnaPopTxt button {content:'';position:absolute;right:0;top:0;width:30px;height:30px;background:url(http://image1.hanatour.com/mobile/common/schedule/btn_qnapop_close.png) no-repeat center center;background-size:12px 12px;border:none;}
+.prodLabelList li .qnaPopTxt strong {font-size:1.3rem;display:block;margin-bottom:10px;}
+.prodLabelList li .qnaPopTxt p + p {margin-top:15px}
+.prodLabelList li .qnaPopTxt p em {font-size:1.2rem;font-weight:600;}
+.prodLabelList li .qnaPopTxt p span {font-size:1.2rem}
+.prodLabelList .col04, .prodLabelList .qna_second.col04:after {border-color:#c83d67;color:#c83d67} /* 하나~ */
+.prodLabelList .col05, .prodLabelList .qna_second.col05:after {border-color:#bc9b6a;color:#bc9b6a} /* 프리미엄 */
+.prodLabelList .col06, .prodLabelList .qna_second.col06:after {border-color:#43bbd2;color:#43bbd2}
+.prodLabelList .col07, .prodLabelList .qna_second.col07:after {border-color:#424242;color:#424242} /* 제우스 */
+.prodLabelList .col08, .prodLabelList .qna_second.col08:after {border-color:#5686e8;color:#5686e8} /* 하나FREE */
+.prodLabelList .col09, .prodLabelList .qna_second.col09:after {border-color:#00945f;color:#00945f} /* 내나라강산, 하나강산 */
+.prodLabelList .col10, .prodLabelList .qna_second.col10:after {border-color:#58d20a;color:#58d20a} /* 웹투어 20191223 */
+/* // 20180412 상품구분정보 변경 : 추가 */
+
+.topPoint {padding:12px 12px 12px 62px; background-color:#fff; border-bottom:1px solid #ccc; margin-bottom:5px; position:relative;}
+.topPoint strong {position:absolute;left:12px;top:50%;border:1px solid #f6b12a; color:#f6b12a; font-size:1.1rem; padding:0 2px;transform:translate(0, -50%)}
+.topPoint p {display:inline-block;font-size:1.2rem;}
+
+/* 공통 광고배너 추가 */
+.global-swiper {margin:0 0 5px}
+.global-swiper .swiper-slide a {width:100%;}
+
+/* 필리핀배너 20170418 */
+.scheduleTabSect .scheduleAco > dd.banner_philippines {background-color:#dbdce1; display:block; padding:6px 0}
+.scheduleTabSect .scheduleAco > dd.banner_philippines a {display:block; background-color:#dff0f7; text-align:center}
+.scheduleTabSect .scheduleAco > dd.banner_philippines img {height:70px}
+
+/* 여박 배너 20170418 */
+.expoBanner {margin:0 -12px;background-color:#dbdce1;padding:0 0 6px}
+.expoBanner a {display:block;background-color:#62277B;text-align:center}
+.expoBanner a img {height:70px}
+/* 20170919 : 페어프라이스 배너 */
+.guaranteeBanner {display:block;margin:0 -12px;border-top:1px solid #ccc;background-color:#eff0f4;}
+.guaranteeBanner img {height:45px;}
+
+/* 20170511 추가 */
+.scheduleBox .sm_graBtn {color:#333;padding:5px;border-radius:2px;background: -moz-linear-gradient(top,#fff 0%,#f0f0f0);background: -webkit-gradient(linear, left top, left bottom, from(#fff),to(#f0f0f0));font-size:13px; display:inline-block;position:relative;border:1px solid #ccc; text-align:center; font-weight:bold; margin-left:4px;top:-2px} /* 20170511 추가 */
+.popTermsList {}
+.popTermsList dt {font-weight:bold; font-size:1.3rem; margin-bottom:15px}
+.popTermsList dd {font-size:1.3rem;margin-bottom:25px}
+.popTermsList dd p {font-size:1.3rem;margin-bottom:8px}
+
+/* 20170607 테마카드 추가 */
+.txtCard {padding:0 0 0 98px;position:relative;min-height:74px}
+.txtCard .sc_imgBox {position:absolute;left:0;top:0}
+.txtCard .sc_imgBox img {width:86px;height:74px}
+.txtCard div {font-size:1.3rem}
+.txtCard div strong {}
+.txtCard div b {display:block; margin-top:2px;font-weight:normal}
+.txtCard div p {margin-top:4px;font-size:1.2rem}
+.txtCard div p strong {display:block; margin-top:4px}
+
+/* 20170626 추가 */
+.surelyTxt02 dt {color:#c83d67; font-size:1.2rem; margin-bottom:6px; background:url(http://image1.hanatour.com/mobile/common/schedule/ico_surelytxt.png) no-repeat 0 center; background-size:12px 12px; padding-left:16px}
+.surelyTxt02 dd {font-size:1.3rem}
+.bestLabel {}
+.bestLabel span {display:inline-block; padding:3px 10px; margin:0 5px 5px 0;border:1px solid #d6d6d6; font-size:13px;height:24px; box-sizing:border-box}
+.bestLabel span:before {content:''; display:inline-block;background:no-repeat 0 center; margin-right:3px; position:relative; bottom:-1px}
+.bestLabel .starBest {display:none;color:#f4341a}
+.bestLabel .starBest:before {width:13px; height:12px;background-image:url(http://image1.hanatour.com/mobile/common/schedule/ico_best.png); background-size:13px 12px}
+.bestLabel .mdBest {display:none}
+.bestLabel .mdBest:before {width:14px; height:13px;background-image:url(http://image1.hanatour.com/mobile/common/schedule/ico_like.png); background-size:14px 13px}
+.bestLabel.md .mdBest,.bestLabel.star .starBest {display:inline-block}
+.bestLabel .inclus {color:#fff; font-size:13px; background-color:#e45b85;display:inline-block; padding:3px 10px; margin-right:5px;border:1px solid #e45b85; height:24px;box-sizing:border-box}
+.scheduleBox .choiceBtn {color:#888; font-size:1.3rem; text-align:center; display:block; padding-top:20px}
+.scheduleBox .choiceBtn:after {content:''; display:inline-block;width:10px; height:10px;background:url(http://image1.hanatour.com/mobile/common/schedule/btn_plus_view.png) no-repeat 0 0;background-size:10px 10px; margin-left:3px;}
+.sche_innerTab .tabList {overflow:hidden; padding:15px 12px; border-bottom:1px solid #ccc}
+.sche_innerTab .tabList li {float:left;width:50%}
+.sche_innerTab .tabList li a {font-size:1.4rem; display:block; text-align:center; padding:8px 0; border:1px solid #dbdce1; background-color:#f1f1f3;}
+.sche_innerTab .tabList li.on a {color:#e45b85; font-weight:bold; background-color:#fff; border-color:#e45b85; position:relative;right:-1px}
+.sche_innerTab .tabList li+li.on a {right:0;left:-1px}
+.scheduleAco02.bestType dt a {background:none; padding:13px 12px 13px 67px; line-height:1.6rem}
+.scheduleAco02.bestType dt a .rankLabel {position:absolute;width:40px; height:56px; text-align:center;left:12px;top:-1px;background:url(http://image1.hanatour.com/mobile/common/schedule/bg_choice_top.png) no-repeat 0 0;background-size:40px 56px; font-size:18px; color:#fff}
+.scheduleAco02.bestType dt a .rankLabel:before {content:'BEST'; display:block; color:#dcdfe8; font-size:11px; font-weight:normal; margin-top:8px}
+.scheduleAco02.bestType dt:nth-child(9)~dt a .rankLabel {background-image:url(http://image1.hanatour.com/mobile/common/schedule/bg_choice_under.png); color:#333; padding-top:18px}
+.scheduleAco02.bestType dt:nth-child(9)~dt a .rankLabel:before {content:none}
+.scheduleAco02 .bestLabel {margin:12px 0 8px; padding-top:0}
+
+/* 20170719 선택관광 이미지 3개일경우 추가 */
+.sc_imgBox03 span {display:block; float:none !important; margin:0 0 10px !important}
+.sc_imgBox03 span img {width:33.3%; padding-right:4px; box-sizing:border-box}
+.sc_imgBox03 span img:last-child {padding-right:0}
+
+/* 20170726 가이드 인솔자 추가 */
+.topGuideBox {background-color:#fff;border-top:1px solid #ccc;border-bottom:1px solid #ccc; padding:0 12px; margin-bottom:5px}
+.topGuideBox > li {}
+.topGuideBox > li+li {border-top:1px solid #e0e0e0}
+.topGuideBox .intbCell {display:table;width:100%; position:relative; min-height:61px; padding:12px 0 12px 60px; box-sizing:border-box;}
+.topGuideBox .intbCell strong {font-size:1.2rem; color:#fff; background-color:#e45b85; padding:2px 5px; position:absolute;top:50%;left:0;-webkit-transform:translate(0, -50%);transform:translate(0, -50%);}
+.topGuideBox .intbCell p {display:table-cell;width:auto; vertical-align:middle; font-weight:bold}
+.topGuideBox .guiSwipeCont {text-align:left;position:relative;width:100%; padding-bottom:30px}
+.topGuideBox .guiSwipeCont .face_img {border-radius:50%;overflow:hidden; position:absolute;left:3px;top:5px}
+.topGuideBox .guiSwipeCont .face_img img {width:60px; height:60px;}
+.topGuideBox .guiSwipeCont .guiDetail {position:relative; padding-top:8px}
+.topGuideBox .guiSwipeCont .face_img+.guiDetail {padding-left:77px;}
+.topGuideBox .guiSwipeCont .guiDetail strong {color:#333;font-size:1.3rem}
+.topGuideBox .guiSwipeCont .guiDetail ul {margin-top:10px}
+.topGuideBox .guiSwipeCont .guiDetail ul li {color:#888; font-size:1.3rem}
+.topGuideBox .guiSwipeCont .guiDetail a {position:absolute;right:0;top:0; font-size:12px; color:#8f94a4;width:auto; padding:8px 4px}
+.guidePopCont .guideName {margin-bottom:20px}
+.guidePopCont .guideName img {height:60px}
+.guidePopCont .guideName strong {display:inline-block; margin-left:15px; font-size:1.6rem}
+.guidePopCont p {font-size:1.3rem; margin-bottom:20px}
+.guidePopCont .guideBrand {overflow:hidden}
+.guidePopCont .guideBrand li {float:left;font-size:1.3rem;border-radius:50px;border:1px solid #e0e0e0; padding:5px 10px; margin:5px 5px 0 0}
+
+/* 20170914 추가 */
+.sight {display:inline-block; font-weight:normal; font-size:1.2rem; font-style:normal; margin-right:5px; padding:0 2px}
+.sight.window {border:1px solid #3e98bf; color:#3e98bf}
+.sight.outward {border:1px solid #c83d67; color:#c83d67}
+
+/* 20171107 추가 */
+.brChange_banner {display:block;position:relative;background:#fff url(http://image1.hanatour.com/mobile/common/schedule/bg_brchange_banner.jpg) no-repeat 0 0 / 100% 100%; padding:12px 16px; margin-bottom:5px}
+.brChange_banner > * {display:block}
+.brChange_banner strong {position:absolute;right:17px;top:50%;-webkit-transform:translate(0, -50%);transform:translate(0, -50%)}
+.brChange_banner strong img {height:37px}
+.brChange_banner span {color:#fefba2;font-size:1.1rem}
+.brChange_banner b {font-size:1.5rem;color:#fff;margin:4px 0}
+.brChange_banner em {color:#bd8cbf;font-size:1.0rem}
+.brChange_table {border-top:1px solid #ccc;border-bottom:1px solid #ccc; margin-top:30px}
+.brChange_table th {font-weight:normal; background-color:#f7f7f7; font-size:1.2rem}
+.brChange_table thead th {padding:10px 0}
+.brChange_table thead th:first-child {border-right:1px solid #ccc}
+.brChange_table thead th span { display:block; font-size:1.0rem}
+.brChange_table tbody th {border-right:1px solid #e0e0e0;border-top:1px solid #ccc}
+.brChange_table tbody td {padding:6px 3px 6px 15px; line-height:1.7rem;border-top:1px solid #ccc}
+.brChange_table td {font-size:1.2rem}
+.brChange_table td em {color:#e85581}
+.brChange_table td.rarr {color:#e85581; font-weight:bold}
+
+/* 20180213 쇼핑정보 고정문구 추가 : 추가 */
+.pop_innerComm .scSurelyTxt {border:1px solid #fadce6;margin-bottom:20px;padding:10px 12px;background-color:#fdf2f5;}
+.pop_innerComm .scSurelyTxt dt {color:#e45b85;font-size:1.3rem;margin-bottom:8px}
+.pop_innerComm .scSurelyTxt dd {font-size:1.2rem;color:#e45b85;}
+/* // 20180213 쇼핑정보 고정문구 추가 : 추가 */

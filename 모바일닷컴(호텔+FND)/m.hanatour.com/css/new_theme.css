@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+
+html {font-size:10px}
+@media all and (min-width:375px) { /* 아이폰6 */
+html {font-size:11px}
+}
+@media all and (min-width:414px) { /* 아이폰6 plus */
+html {font-size:12px}
+}
+
+.themeTravelCont {text-align:center;background:#bcbdc2 url(http://image1.hanatour.com/mobile/common/theme_travel/bg_themetravel_top.jpg) no-repeat 0 0 / 100%;padding-bottom:20px}
+.themeTravelCont .ttTop {padding:40px 0 20px}
+.themeTravelCont .ttTop h2 {color:#fff;font-size:3.0rem}
+.themeTravelCont .ttTop p {color:#fff;font-size:1.4rem}
+.themeTravelCont .ttList {overflow:hidden; }
+.themeTravelCont .ttList li {float:left;width:50%; box-sizing:border-box}
+.themeTravelCont .ttList li+li+li {margin-top:4px}
+.themeTravelCont .ttList li:nth-child(2n+1) {padding:0 2px 0 8px}
+.themeTravelCont .ttList li:nth-child(2n+2) {padding:0 8px 0 2px}
+.themeTravelCont .ttList li a {display:block; background-color:#fff; border-radius:4px; overflow:hidden; padding:10px 15px 15px}
+.themeTravelCont .ttList li a .img img {width:110px; height:110px}
+.themeTravelCont .ttList li a strong {display:block; margin:8px 0; font-size:1.4rem; height:36px}
+.themeTravelCont .ttList li a .keyWord {height:48px}
+.themeTravelCont .ttList li a .keyWord span {display:inline-block; color:#666; font-size:1.2rem}
+.themeTravelCont .themeDeal {margin:4px 8px; border-radius:4px; overflow:hidden}
+.themeTravelCont .themeDeal .deal_inner {background:rgba(0,0,0,0.6); position:relative; padding:10px 55px 12px; display:block}
+.themeTravelCont .themeDeal .sale {position:absolute;left:4px;top:0;background:url(http://image1.hanatour.com/mobile/common/theme_travel/bg_themetravel_down.png) no-repeat 0 0 / 46px 45px;width:46px; height:45px; font-size:11px; color:#fff; box-sizing:border-box; padding-top:7px; line-height:12px}
+.themeTravelCont .themeDeal .sale strong {font-size:15px}
+.themeTravelCont .themeDeal .sale b {color:#f6f3a3; display:block; font-weight:normal}
+.themeTravelCont .themeDeal .dealTit {color:#f6f3a3;font-size:1.2rem}
+.themeTravelCont .themeDeal p {color:#fff;font-size:1.4rem; margin-bottom:10px; font-weight:bold; letter-spacing:0;}
+.themeTravelCont .themeDeal .dealMoney em {display:inline-block;color:#f6f3a3; font-size:1.1rem; text-decoration:line-through; margin-right:4px}
+.themeTravelCont .themeDeal .dealMoney span {color:#fff}
+.themeTravelCont .themeDeal .dealMoney span strong {font-size:1.8rem}

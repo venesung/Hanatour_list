@@ -1,0 +1,165 @@
+
+<!-- pop start  -->
+
+	<div class="fullPopCommon">
+		<div class="header">
+			<h3>배송방법 선택<button type="button" class="closeOverlayPanel" title="팝업닫기"></button></h3>
+		</div>
+		
+		<div class="innerScroller">
+			<!-- pop cont -->
+			<div class="pop_innerComm">
+				<!-- tab cont -->
+				<div class="pb_toggle">
+					<ul class="tabList pinkTab type3"><!-- 탭변경 20170822 -->
+						<li class="on"><a href="#">직접수령</a></li>
+						<li><a href="#">우편수령</a></li>
+						<li><a href="#">E-티켓</a></li>
+					</ul>
+					
+					<!-- 직접수령 -->
+					<div class="tabCont">
+						<ul class="inputCell">
+							<li>
+								<label for="ship01">수령처<sup>*</sup></label><!-- for = id 값 동일하게 맞춰주세요 -->
+								<div>
+									<select class="selectBox" id="ship01" title="수령처" data-role="none">
+										<option>직접수령 (바로존 SM면세점서울점 1층)</option>
+									</select>
+								</div>
+							</li>
+							<li>
+								<label for="ship02">방문일<sup>*</sup></label><!-- for = id 값 동일하게 맞춰주세요 -->
+								<div>
+									<select class="selectBox" id="ship02" title="방문일" data-role="none">
+										<option>방문일 선택</option>
+									</select>
+								</div>
+							</li>
+							<li>
+								<label for="ship03">방문시간<sup>*</sup></label><!-- for = id 값 동일하게 맞춰주세요 -->
+								<div>
+									<select class="selectBox" id="ship03" title="방문시간" data-role="none">
+										<option>방문시간 선택</option>
+									</select>
+								</div>
+							</li>
+						</ul>
+						
+						<div class="dottBox">
+							<ul class="comBulTxt">
+								<li>'직접수령'은 구매일 당일 수령이 불가능합니다.</li>
+								<li>평일 기준[토,일,공휴일 제외] 방문예정일 2일전 오후 4시까지 예약 및 결제를 완료하여야 합니다.</li>
+								<li>직접 수령처는 상품 수령만 가능하며 반품, 교환, 환불등 추가적인 문의는 예약시 지정된 도우미여행사에 문의해 주세요.</li>
+							</ul>
+						</div>
+						
+						<!-- 수령안내 -->
+						<div class="ticketBox">
+							<h4>해외입장권 / 패스 직접수령 안내</h4>
+							<h5><strong>부산센텀점</strong>운영시간 : 14:00~17:00 (주말.공휴일 제외)</h5>
+							<span><img src="http://image1.hanatour.com/mobile/common/hanatour/fnd/img_ticke_map01.png" alt=""></span>
+							<p>부산광역시 해운대구 센텀6로 21, 301호<br>(우동, 인텔리움센텀) ※ 무료 주차 불가 (유료주차장)</p>
+							
+							<dl class="inforDesc">
+								<dt>유의사항</dt>
+								<dd>
+									<ul class="comBulTxt">
+										<li>방문일 2일 전 오전 11시까지 결제해야 합니다.<br>(주말.휴일 제외)<br>
+											- 예: 3월 9일 10:59am 결제 ▶ 3월 11일 수령 가능<br>
+											- 예: 3월 9일 11:01am 결제 ▶ 3월 12일 수령 가능
+										</li>
+										<li>평일 기준[토,일,공휴일 제외] 방문예정일 2일전 오후 4시까지 예약 및 결제를 완료하여야 합니다.</li>
+										<li>직접 수령처는 상품 수령만 가능하며 반품, 교환, 환불등 추가적인 문의는 예약시 지정된 도우미여행사에 문의해 주세요.</li>
+									</ul>
+								</dd>
+							</dl>
+						</div>
+						<!-- // 수령안내 -->
+					</div>
+					<!-- // 직접수령 -->
+					
+					<!-- 우편수령 -->
+					<div class="tabCont" style="display:none">
+						<ul class="inputCell">
+							<li>
+								<label for="ship04">배송방법<sup>*</sup></label><!-- for = id 값 동일하게 맞춰주세요 -->
+								<div>
+									<select class="selectBox" id="ship04" title="배송방법" data-role="none">
+										<option>택배(무료배송/배송기간 4~5일)</option>
+									</select>
+									<p class="redSmaTxt">'우편수령'  배송기간은 평균 4~5일 소요됩니다.<br>(공휴일 제외)</p>
+								</div>
+							</li>
+						</ul>
+						
+						<div class="dottBox">
+							<label class="sameCheck marT15"><input type="checkbox" data-role="none" class="redCheck"> 예약자와 동일</label>
+							<ul class="inputCell">
+								<li>
+									<label for="address01">받는사람<sup>*</sup></label><!-- for = id 값 동일하게 맞춰주세요 -->
+									<div><input type="text" data-role="none" class="inputTxt" id="address01" title="받는사람"></div>
+								</li>
+								<li>
+									<label for="address02">휴대폰번호<sup>*</sup></label><!-- for = id 값 동일하게 맞춰주세요 -->
+									<div class="inTable">
+										<span class="w35">
+											<select class="selectBox" id="address02" title="휴대폰 앞자리 선택" data-role="none">
+												<option>010</option>
+											</select>
+										</span>
+										<span class="cellPad"></span>
+										<span class="w65">
+											<input type="tel" class="inputTxt" data-role="none" title="휴대폰 가운데, 뒷자리" placeholder="- 없이 입력">
+										</span>
+									</div>
+								</li>
+								<li>
+									<label for="address03">집전화번호</label><!-- for = id 값 동일하게 맞춰주세요 -->
+									<div class="inTable">
+										<span class="w35">
+											<select class="selectBox" id="address03" title="집전화번호 앞자리 선택" data-role="none">
+												<option>02</option>
+											</select>
+										</span>
+										<span class="cellPad"></span>
+										<span class="w65">
+											<input type="tel" class="inputTxt" data-role="none" title="집전화번호 가운데, 뒷자리" placeholder="- 없이 입력">
+										</span>
+									</div>
+								</li>
+								<li>
+									<label for="address04" class="vaTop">주소</label><!-- for = id 값 동일하게 맞춰주세요 -->
+									<div>
+										<div class="postBox">
+											<input type="text" data-role="none" class="inputTxt" id="address04" title="받는사람">
+											<a href="#pop_reserv_address.html" class="postBtn popUpFull" data-role="none">우편번호</a>
+										</div>
+										
+										<input type="text" data-role="none" class="inputTxt" title="주소" style="margin-top:7px">
+										<input type="text" data-role="none" class="inputTxt" title="상세주소" style="margin-top:7px" placeholder="상세주소를 입력해 주세요">
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- // 우편수령 -->
+					
+					<!-- E-티켓 -->
+					<div class="tabCont" style="display:none">
+						<p class="sendTxt">
+							<strong>이티켓 발송</strong>
+							예약자 정보에 이메일로 결제가 완료 되면 이티켓이 발송됩니다. 이메일 안온 경우 예약시 지정되는  도우미여행사에 문의해 주세요.<br>이메일 수정을 원하시면 상단 예약자 정보 이메일을 변경해주세요.
+						</p>
+					</div>
+					<!-- // E-티켓 -->
+				</div>
+				<!-- // tab cont -->
+				
+				<a href="#" class="m_btnRed short">확인</a>
+			</div>
+			<!-- // pop cont -->
+		</div>
+		
+	</div>
+

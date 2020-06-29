@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+</head>
+<body style="padding:0; margin:0">
+
+	<!-- 공통 분리영역 -->
+	<link rel="stylesheet" type="text/css" href="common_area.css">
+	<script type="text/javascript">
+		(function (scope) {
+		    if (scope.JDotcomASP !== undefined) return;
+
+		    var JDotcomASP = {
+		    	/* 스크롤 비활성화 ClassName */
+		    	unScrollClassName : 'un_scroll',
+
+		    	/* 딤드 요소 Selector */
+		    	dimmedSelector : 'div.commArea_mask',
+
+		    	/**
+		    	 * toggle slide menu
+		    	 * 
+		    	 * @param  {DOMElement} element  컨트롤 하고자하는 요소 
+		    	 * @param  {Boolean} 	toggle   토글값 [default: undefined]
+		    	 */
+		    	toggleSlideMenu: function (element, toggle) {
+		    		var body = document.querySelector('body');
+		    		var dimmedDIV = document.querySelector(JDotcomASP.dimmedSelector);
+			    	var target = element || null;
+
+			    	if (target === null) return;
+
+			    	var styleName = target.getAttribute('data-css');
+			    	var unit = styleName === 'left' ? '%' : 'px';
+			    	var sw = toggle || target.style.display !== 'block';
+
+			    	if (sw) {
+			    		//open
+			    		target.style.display = 'block';
+			    		if (dimmedDIV !== null) dimmedDIV.style.display = 'block';
+			    		setTimeout(function () {
+			    			target.style[styleName] = '0' + unit;
+			    		}, 5);
+
+			    		if (JDotcomASP.unScrollClassName !== undefined) body.classList.add(JDotcomASP.unScrollClassName);
+			    	} else {
+			    		//close
+			    		target.style[styleName] = '';
+			    		if (dimmedDIV !== null) dimmedDIV.style.display = '';
+
+			    		if (JDotcomASP.unScrollClassName !== undefined) body.classList.remove(JDotcomASP.unScrollClassName);
+			    	}
+		    	}
+			};
+
+		    scope.JDotcomASP = JDotcomASP;
+		})(window);
+
+		document.addEventListener('DOMContentLoaded', function(e) {
+		    var allMenuBUTTON = document.querySelector('button.allMenu');
+		    var allMenuDIV = document.querySelector('div#commArea_leftMenu');
+		    var allMenuCloseBUTTON = allMenuDIV.querySelector('button.closeSlide');
+
+		    var myMenuBUTTON = document.querySelector('button.myHome');
+		    var myMenuDIV = document.querySelector('div#commArea_rightMenu');
+
+		    var dimmedDIV = document.querySelector(JDotcomASP.dimmedSelector);
+
+		    var handlerArr = [allMenuBUTTON, myMenuBUTTON];
+		    var menuArr = [allMenuDIV, myMenuDIV];
+		    var kindArr = ['left', 'right'];
+
+	    	//init button
+	    	if (handlerArr !== null) {
+				handlerArr.forEach(function (target, idx) {
+					//open slidemenu
+			    	target.addEventListener('click', function (e) {
+			    		JDotcomASP.toggleSlideMenu(menuArr[idx]);
+
+			    		e.preventDefault();
+			    	});
+				});
+	    	}
+
+			//init div
+			menuArr.forEach(function (target, idx) {
+				if (target !== null) {
+					target.classList.add('tween');
+					target.setAttribute('data-css', kindArr[idx]);
+					
+					//callback transition end 
+					target.addEventListener('transitionend', function () {
+						var isOpen = this.style[this.getAttribute('data-css')] !== '';
+
+						if (!isOpen) this.style.display = '';
+					});
+				}
+			});
+
+			//click close button
+			if (allMenuCloseBUTTON !== null) {
+				allMenuCloseBUTTON.addEventListener('click', function (e) {
+					JDotcomASP.toggleSlideMenu(allMenuDIV);
+
+					e.preventDefault();
+				});
+			}
+
+			//click dimmed
+			if (dimmedDIV !== null) {
+				dimmedDIV.addEventListener('click', function (e) {
+					var isAllMenu = allMenuDIV.style.display === 'block';
+					var target = isAllMenu ? allMenuDIV : myMenuDIV;
+
+					JDotcomASP.toggleSlideMenu(target);
+				});
+			}
+		});
+	</script>
+	
+	
+	
+	<!-- 헤더 -->
+	<header id="commonArea_header" class="headFixed"><!-- 헤더고정일경우 :: 띠배너 미포함 class="headFixed", 띠배너 포함 class="headFixed02" :: 클래스추가시 css로 헤더높이만큼 다음요소에 margin-top이 적용됨. -->
+		<!-- 띠배너 -->
+		<div class="inBanner" style="display:none;">
+			<a href="#" data-role="none" class="downAppBan">
+				매일매일 모바일 특가!<br>하나투어앱
+				<span><img src="common_area_img/img_top_bandown.png" alt="앱 다운받기"></span>
+			</a>
+			<button class="closeBan" title="닫기" data-role="none"></button>
+		</div>
+		<!-- // 띠배너 -->
+		
+		<div class="inHead">
+			<h1><a href="#" data-role="none"><img src="common_area_img/btn_hnt_logo.png" alt="하나투어"></a></h1>
+			<button type="button" class="ico_head allMenu" title="전체 메뉴" data-role="none"></button>
+			<a href="#" style="display:none" class="ico_head backBtn" title="뒤로가기" data-role="none"></a><!-- 뒤로가기 -->
+			
+			<button type="button" class="ico_head myHome" title="나의 마이홈 메뉴" data-role="none"></button>
+			<a href="#" class="ico_head search" data-role="none" title="통합검색"></a>
+		</div>
+	</header>
+	<!-- // 헤더 -->
+	
+	<!-- 컨텐츠 -->
+	<section class="container" style="height:300px">
+	컨텐츠 샘플
+
+	</section>
+	<!-- // 컨텐츠 -->
+	
+	
+	<!-- 푸터 -->
+	<footer id="commonArea_footer">
+		<ul class="foot_topList">
+			<li><a href="#" data-role="none">로그인</a></li>
+			<li style="display:none"><a href="#" data-role="none">로그아웃</a></li>
+			<li><a href="#" data-role="none">PC버전</a></li>
+			<li><button type="button" class="scrollTop" data-role="none" title="상단 바로가기">TOP</button></li>
+		</ul>
+		<div class="foot_termsLink">
+			<a href="#" data-role="none">이용약관</a>
+			<a href="#" data-role="none"><strong>개인정보처리방침</strong></a>
+			<a href="#" data-role="none">여행약관</a>
+			<a href="#" data-role="none">사업자정보확인</a>
+		</div>
+		<address>
+			(주) 하나투어 | 대표자: 김진국 | 사업자등록번호 : <span class="num">102-81-39440</span><br>
+			통신판매업신고번호 : 종로<span class="num">01-1806</span>호 | 개인정보관리 책임자 : 박성재<br>
+			<span class="num">[03161]</span>서울특별시 종로구 인사동 5길 41<br>
+			하나투어상담센터 : <a href="tel:1577-1233" class="num" data-role="none">1577-1233</a> | FAX : <span class="num">02-734-0392</span><br>
+			이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> |
+			호스팅 서비스 사업자 : (주) 하나투어<br>
+			관광사업자 등록번호 : 제<span class="num">1993-000006</span>호 | 영업보증보험 : 22억 1천만원 가입
+			<p>COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED</p>
+		</address>
+	</footer>
+	<!-- //푸터 -->
+
+	<!-- 좌측메뉴 -->
+	<div id="commArea_leftMenu">
+		<h2>전체메뉴<button type="button" data-role="none" class="closeSlide" title="닫기"></button></h2>
+		
+		<div class="innerScroller">
+			<div class="hanaMenuList">
+				<!-- 패키지여행 -->
+				<h3 class="bgMenu01">해외 패키지여행<a href="#" class="wifiBtn" link="simple" url="http://m.hanatour.com/fit/pocketwifi/pocketwifi.hnt" external="Y">해외나갈 땐<strong>포켓와이파이</strong></a></h3><!-- 20170103 와이파이 버튼 추가 -->
+				<ul class="innerMenuBox"><!-- 3의 배수로 맞춰 주세요 -->
+					<li><a href="#" link="simple" url="/application/package/package_masterCity.jsp" hanacode="mm_total_a1" data="{&quot;isPackageInit&quot;:&quot;Y&quot;, &quot;packageCategoryId&quot;:&quot;P&quot;}" data-role="none">하나Pack</a></li>
+					<li><a href="#" link="simple" url="/theme/main.hnt" hanacode="mm_total_a11" data-role="none">테마</a></li>
+					<li><a href="#" link="simple" url="/application/honeymoon/honeymoon_masterCity.jsp" hanacode="mm_total_a2" data="{&quot;isPackageInit&quot;:&quot;Y&quot;, &quot;packageCategoryId&quot;:&quot;W&quot;}" data-role="none">허니문</a></li>
+					<li><a href="#" link="simple" url="/application/zeus/zeus_masterCity.jsp" hanacode="mm_total_a3" data="{&quot;isPackageInit&quot;:&quot;Y&quot;, &quot;packageCategoryId&quot;:&quot;P&quot;, &quot;isZeusYN&quot;:&quot;Y&quot;}" data-role="none" class="two">제우스월드<br>[럭셔리여행]</a></li>
+					<li><a href="#" link="simple" url="/application/golf/golf_masterCity.jsp" hanacode="mm_total_a4" data="{&quot;isPackageInit&quot;:&quot;Y&quot;, &quot;packageCategoryId&quot;:&quot;G&quot;}" data-role="none">골프</a></li>
+					<li><a href="#" link="simple" url="/application/cruise/cruise_masterCity.jsp" hanacode="mm_total_a5" data="{&quot;isPackageInit&quot;:&quot;Y&quot;, &quot;packageCategoryId&quot;:&quot;C&quot;}" data-role="none">크루즈</a></li>
+					<li><a href="#" link="simple" url="/application/leisure/leisure_masterCity.jsp" hanacode="mm_total_a6" data="{&quot;isPackageInit&quot;:&quot;Y&quot;, &quot;packageCategoryId&quot;:&quot;Y&quot;}" data-role="none">레포츠</a></li>
+					<li><a href="#" link="simple" url="/application/tracking/tracking_masterCity.jsp" hanacode="mm_total_a71" data="{&quot;isPackageInit&quot;:&quot;Y&quot;, &quot;packageCategoryId&quot;:&quot;K&quot;}" data-role="none">트레킹</a></li>
+					<li><a href="#" link="simple" url="/application/fair/fair_masterCity.jsp" hanacode="mm_total_a8" data="{&quot;isPackageInit&quot;:&quot;Y&quot;, &quot;packageCategoryId&quot;:&quot;E&quot;, &quot;packageRegionId&quot;:&quot;J&quot;, &quot;packageRegionName&quot;:&quot;일본&quot;, &quot;packageNationId&quot;:&quot;JP&quot;, &quot;packageNationName&quot;:&quot;일본&quot;, &quot;packageCityId&quot;:&quot;TYO&quot;, &quot;packageCityName&quot;:&quot;도쿄&quot; }" data-role="none">전시회</a></li>
+					<li><a href="#" link="simple" url="/application/pilgrimage/pilgrimage_masterCity.jsp" hanacode="mm_total_a9" data="{&quot;isPackageInit&quot;:&quot;Y&quot;, &quot;packageCategoryId&quot;:&quot;J&quot;}" data-role="none">성지순례</a></li>
+					<li><a href="#" link="simple" url="/application/specialRegion/specialRegion_masterCity.jsp" hanacode="mm_total_a10" data="{&quot;isPackageInit&quot;:&quot;Y&quot;, &quot;packageCategoryId&quot;:&quot;P&quot;, &quot;isSpecialRegionYN&quot;:&quot;Y&quot;}" data-role="none">특수지역</a></li>
+					<li><a href="#" data-role="none">&nbsp;</a></li>
+				</ul>
+				<!-- // 패키지여행 -->
+				
+				<!-- 해외 자유여행 -->
+				<h3 class="bgMenu02">해외 자유여행<a href="#" class="wifiBtn" link="simple" url="http://m.hanatour.com/fit/pocketwifi/pocketwifi.hnt" external="Y">해외나갈 땐<strong>포켓와이파이</strong></a></h3>
+				<ul class="innerMenuBox">
+					<li><a href="#" link="simple" url="http://mair.hanatour.com" hanacode="mm_total_b1" data-role="none">항공</a></li>
+					<li><a href="#" link="simple" url="/hotel/hotel.hnt" hanacode="mm_total_b2" data="{&quot;isOverseasHotelInit&quot;:&quot;Y&quot;}" data-role="none">호텔</a></li>
+					<li><a href="#" link="simple" url="/application/airtel/airtel_masterCity.jsp" hanacode="mm_total_b3" data="{&quot;isPackageInit&quot;:&quot;Y&quot;, &quot;packageCategoryId&quot;:&quot;A&quot;}" data-role="none">에어텔/자유여행</a></li>
+					<li><a href="#" link="simple" url="/application/backpack/backpack_masterCity.jsp" hanacode="mm_total_b4" data="{&quot;isPackageInit&quot;:&quot;Y&quot;, &quot;packageCategoryId&quot;:&quot;B&quot;}" data-role="none">배낭여행</a></li>
+					<li><a href="#" link="simple" url="/application/pass/pass_search.jsp" hanacode="mm_total_b5" data="{&quot;pass_searchInit&quot;:&quot;Y&quot;}" data-role="none">교통패스</a></li>
+					<li><a href="#" link="simple" url="/application/eurail/eurail_search.jsp" hanacode="mm_total_b6" data="{&quot;isEurailInit&quot;:&quot;Y&quot;}" data-role="none">유럽구간철도</a></li>
+					<li><a href="#" link="simple" url="/fit/rentalcar/rentalcar.hnt" hanacode="mm_total_b9" data-role="none">해외렌터카</a></li>
+					<li><a href="#" link="simple" url="/application/ticket/ticket_search.jsp" hanacode="mm_total_b7" data="{&quot;ticket_searchInit&quot;:&quot;Y&quot;}" data-role="none">입장권</a></li>
+					<li><a href="#" link="simple" url="/application/localTour/localTour_search.jsp" hanacode="mm_total_b8" data="{&quot;isLocalTourInit&quot;:&quot;Y&quot;}" data-role="none">현지투어</a></li>
+					<li><a href="#" link="simple" url="http://mglobalflight.hanatour.com" external="Y">Global Flight</a></li>
+					<li><a href="#" data-role="none">&nbsp;</a></li>
+					<li><a href="#" data-role="none">&nbsp;</a></li>
+				</ul>
+				<!-- // 해외 자유여행 -->
+				
+				<!-- 국내여행 -->
+				<h3 class="bgMenu03">국내여행</h3>
+				<ul class="innerMenuBox">
+					<li><a href="#" link="simple" url="http://mdom.hanatour.com/partner/ht/air_main_02.asp" hanacode="mm_total_c1" data-role="none">국내항공</a></li>
+					<li><a href="#" link="simple" url="http://mdom.hanatour.com/dhn/dh_index.asp" hanacode="mm_total_c2" data-role="none">국내숙박</a></li>
+					<li><a href="#" link="simple" url="http://mdom.hanatour.com/dg/dg_index.asp" hanacode="mm_total_c3" data-role="none">내륙여행</a></li>
+					<li><a href="#" link="simple" url="http://mdom.hanatour.com/dgj/dg_index.asp" hanacode="mm_total_c4" data-role="none">제주여행</a></li>
+					<li><a href="#" link="simple" url="/application/package/package_domesticTour.jsp" hanacode="mm_total_c7" data="{&quot;isPackageInit&quot;:&quot;Y&quot;, &quot;packageDomesticRegionName&quot;:&quot;내나라여행&quot;}" data-role="none">내나라여행</a></li>
+					<li><a href="#" link="simple" url="http://mdom.hanatour.com/dr/dr_index.asp" hanacode="mm_total_c8" data-role="none">렌터카</a></li>
+					<li><a href="#" link="simple" url="/application/package/package_domesticGolf_masterCity.jsp" hanacode="mm_total_c9" data="{&quot;isPackageInit&quot;:&quot;Y&quot;, &quot;packageCategoryId&quot;:&quot;B&quot;, &quot;packageRegionId&quot;: &quot;K&quot;, &quot;packageNationId&quot;: &quot;KR&quot;, &quot;packageCategoryId&quot;: &quot;G&quot;}" data-role="none">골프</a></li>
+					<li><a href="#" link="simple" url="http://mdom.hanatour.com/dmi/dmi.asp#Main" hanacode="mm_total_c5" data-role="none">기차여행만들기</a></li>
+					<li><a href="#" link="simple" url="http://mdom.hanatour.com/dm/dm.asp" hanacode="mm_total_c6" data-role="none">제주여행만들기</a></li>
+					<li><a href="#" link="simple" url="/application/travelingEvent/travelingEvent_promotionDetail.jsp?prdCode=P12908" hanacode="mm_total_c10" data-role="none">내나라골프</a></li>
+					<li><a href="#" data-role="none"></a></li>
+					<li><a href="#" data-role="none"></a></li>
+				</ul>
+				<!-- // 국내여행 -->
+				
+				<!-- 여행정보 -->
+				<h3 class="bgMenu04">여행정보</h3>
+				<ul class="innerMenuBox">
+					<li><a href="#" link="simple" url="http://minfo.hanatour.com/" hanacode="mm_total_d1" data-role="none">여행정보홈</a></li>
+					<li><a href="#" link="simple" url="http://minfo.hanatour.com/dest" hanacode="mm_total_d2" data-role="none">인기여행도시</a></li>
+					<li><a href="#" link="simple" url="http://minfo.hanatour.com/getabout" hanacode="mm_total_d3" data-role="none">전문가여행기</a></li>
+					<li><a href="#" link="simple" url="http://minfo.hanatour.com/video" hanacode="mm_total_d4" data-role="none">테마여행동영상</a></li>
+					<li><a href="#" link="simple" url="http://minfo.hanatour.com/audio" hanacode="mm_total_d5" data-role="none">오디오가이드</a></li>
+					<li><a href="#" link="simple" url="http://minfo.hanatour.com/infographic" hanacode="mm_total_d6" data-role="none">인포그래픽</a></li>
+					<li><a href="#" link="simple" url="http://minfo.hanatour.com/weather" hanacode="mm_total_d7" data-role="none">날씨환율시차</a></li>
+					<li><a href="#" data-role="none"></a></li>
+					<li><a href="#" data-role="none"></a></li>
+				</ul>
+				<!-- // 여행정보 -->
+				
+				<!-- 기획전&amp;이벤트 -->
+				<h3 class="bgMenu05">기획전/이벤트</h3>
+				<ul class="innerMenuBox">
+					<li><a href="#" link="simple" url="http://msupersave.hanatour.com/" hanacode="mm_total_e1" data-role="none">슈퍼세이브</a></li>
+					<li><a href="#" link="simple" url="/recommendCity/baekdu.hnt" data-role="none" hanacode="mm_total_e2">이달의 추천여행지</a></li>
+					<li><a href="#" link="simple" url="/application/travelingEvent/travelingEvent_recommend.jsp" hanacode=" hanacode=" mm_total_e3"=" data-role="none">추천 기획전</a></li>
+					<li><a href="#" link="simple" url="/application/eventCoupon/eventCoupon_eventList.jsp" hanacode="mm_total_e4" data-role="none">이벤트</a></li>
+					<li><a href="#" data-role="none"></a></li>
+					<li><a href="#" data-role="none"></a></li>
+				</ul>
+				<!-- // 기획전&amp;이벤트 -->
+				
+				<!-- 쿠폰 -->
+				<h3 class="bgMenu06">쿠폰/혜택</h3>
+				<ul class="innerMenuBox">
+					<li><a href="#" link="simple" url="/application/eventCoupon/eventCoupon_couponList.jsp" hanacode="mm_total_f" data-role="none">쿠폰</a></li>
+					<li><a href="#" link="simple" url="/sm/benefit.hnt" hanacode="mm_total_h1" data-role="none">면세점 혜택</a></li>
+					<li><a href="#" data-role="none"></a></li>
+				</ul>
+				<!-- // 쿠폰 -->
+				
+				<!-- 연계서비스 -->
+				<h3 class="bgMenu07">연계서비스</h3>
+				<ul class="innerMenuBox">
+					<li><a href="#" link="simple" url="http://mticket.hanatour.com" external="Y" hanacode="mm_total_g1" data-role="none">공연/영화</a></li>
+					<li><a href="#" link="simple" url="http://m.htshop.com" external="Y" hanacode="mm_total_h2" data-role="none">여행용품샵</a></li>
+					<li><a href="#" link="simple" url="http://m.hanatourvisa.co.kr" external="Y" hanacode="mm_total_g2" data-role="none">비자신청</a></li>
+					<li><a href="#" link="simple" url="http://getabout.hanatour.com/" external="Y" hanacode="mm_total_d9" data-role="none">트레블웹진</a></li>
+					<li><a href="#" link="simple" url="http://www.tourtips.com" external="Y" hanacode="mm_total_g4" data-role="none">무료가이드북</a></li>
+					<li><a href="#" link="simple" url="http://www.hanatrabiz.com/index.asp" external="Y" hanacode="mm_total_g5" data-role="none">기업출장/단체</a></li>
+					<li><a href="#" link="simple" url="http://wedding.hanatour.com/hwedding/mf/event/special/special_201310_invitation.do" external="Y" hanacode="mm_total_g6" data-role="none">웨딩플래너</a></li>
+					<li><a href="#" link="simple" url="http://m.hanatour.com/fit/pocketwifi/pocketwifi.hnt" external="Y" data-role="none">포켓와이파이</a></li>
+					<li><a href="#" data-role="none"></a></li>
+				</ul>
+				<!-- // 연계서비스 -->
+				
+				<!-- 하나투어 SNS -->
+				<h3 class="bgMenu09">하나투어 SNS</h3>
+				<ul class="innerMenuBox">
+					<li><a href="#" link="simple" url="http://m.facebook.com/HanaTour.fb?v=feed&amp;_user==0" hanacode="mm_total_i1" external="Y" data-role="none">페이스북</a></li>
+					<li><a href="#" link="simple" url="http://mobile.twitter.com/hanatour" external="Y" hanacode="mm_total_i2" data-role="none">트위터</a></li>
+					<li><a href="#" link="simple" url="http://m.blog.naver.com/hanatourkr" hanacode="mm_total_i3" external="Y" data-role="none">블로그</a></li>
+					<li><a href="#" link="simple" url="http://m.cafe.naver.com/hanatouring" external="Y" hanacode="mm_total_i4" data-role="none">카페</a></li>
+					<li><a href="#" data-role="none"></a></li>
+					<li><a href="#" data-role="none"></a></li>
+				</ul>
+				<!-- // 하나투어 SNS -->
+			</div>
+			
+			<div class="hanaAppList">
+				<strong>하나투어 모바일앱</strong>
+				<ul>
+					<li><a href="#" link="app" scheme="hanaiphone1://" appstore="http://itunes.apple.com/kr/app/hanatueo-paekiji/id896105473?mt=8" playstore="intent://hanatour/#Intent;scheme=tour-pack://link?;package=com.hanatour.pack01;end" data-role="none" class="bgApp01" hanacode="mm_total_j1">하나투어 패키지</a></li>
+					<li><a href="#" link="app" scheme="hanafreeair://" appstore="http://itunes.apple.com/kr/app/hanapeuli-hang-gong/id724543589?mt=8" playstore="intent://hanatour/#Intent;scheme=hanafreeair://;package=com.hanatour.hanafreeair;end" data-role="none" class="bgApp02" hanacode="mm_total_j2">하나투어 항공</a></li>
+					<li><a href="#" link="app" scheme="hanaiphone3://" appstore="http://itunes.apple.com/kr/app/hanapeuli-hotel/id896120310?mt=8" playstore="intent://hanatour/#Intent;scheme=tour-hotel://link?;package=kr.co.alocan.hanatour03;end" data-role="none" class="bgApp03" hanacode="mm_total_j3">하나투어 호텔</a></li>
+					<li><a href="#" link="app" scheme="HanaFreePayment://" appstore="http://itunes.apple.com/kr/app/hanafree/id724534617?mt=8" playstore="intent://hanatour/#Intent;scheme=hanatour://hanafree.hanatour.com;package=com.hanatour.hanafree;end" data-role="none" class="bgApp04" hanacode="mm_total_j5">하나 Free</a></li>
+					<li><a href="#" link="app" scheme="hanaiphonedh1://" appstore="http://itunes.apple.com/kr/app/hanapeuli-gugnaesugbag/id888595740?mt=8" playstore="intent://hanatour/#Intent;scheme=hanaiphonedh1://;package=com.MobileHanaFreeDH;end" data-role="none" class="bgApp05" hanacode="mm_total_j6">하나투어 국내숙박</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- // 좌측메뉴 -->
+	
+	<!-- 우측메뉴 -->
+	<div id="commArea_rightMenu">
+		<div class="innerScroller">
+			<!-- 비로그인 -->
+			<div class="rightMe_out">
+				<h2>회원님, 안녕하세요!</h2>
+				<p>예약내역과 마일리지를<br> 확인하시려면 로그인 해주세요.</p>
+				<div>
+					<a href="#" class="rlogin" link="simple" url="/member/signIn.hnt?tms=/myPage/myPage_login.jsp" data-role="none">로그인</a>
+					<a href="#" class="rjoin" link="simple" url="/member/signUpIntro.hnt" data="{&quot;isMemberRegistInit&quot; : &quot;Y&quot;}" data-role="none">회원가입</a>
+				</div>
+			</div>
+			<!-- // 비로그인 end -->
+	
+			<!-- 로그인 -->
+			<div class="rightMe_in" style="display:no ne;">
+				<h2 id="header_rightMenu_userName">
+					<strong>박성우</strong> 님 안녕하세요
+				</h2>
+				<a href="#" link="simple" url="/application/myPage/myPage_mileageInfo.jsp" hanacode="m_MY_mileage" data-role="#" class="bgRight01">마일리지 현황</a>
+				<div id="memberDivision" class="mileBox"> 
+					<ul>
+						<li>회원번호<span>102-522-623</span></li>
+						<li>가용 마일리지<span id="currentMileage">100,000<img src="common_area_img/img_mailbig.png" alt="마일리지"></span></li>
+						<li>총 적립 마일리지<span id="totalMileage">2,250,000<img src="common_area_img/img_mailbig.png" alt="마일리지"></span></li>
+						<li style="display:none">하나투어클럽 비회원이거나<br>본인인증이 되지 않은 회원입니다.</li>
+					</ul>
+				</div>
+				<a href="#" class="bgRight03" link="simple" url="/application/myPage/myPage_myInfo.jsp" data="{&quot;myPageMyInfoOpenTabIndex&quot;:&quot;1&quot;}" data-role="none">예약내역<span></span></a>
+				<a href="#" class="bgRight02" link="simple" url="/application/myPage/myPage_myInfo.jsp" data="{&quot;myPageMyInfoOpenTabIndex&quot;:&quot;2&quot;}" data-role="none">장바구니<span id="spanCart">0개</span></a>			
+				<a href="#" class="bgRight04" link="simple" url="/application/myPage/myPage_myInfo.jsp" data="{&quot;myPageMyInfoOpenTabIndex&quot;:&quot;3&quot;, &quot;myPageMyInfoComeinTabNum&quot;:&quot;1&quot;}" data-role="none">참여내역<span id="spanJoin">0건</span></a>
+				<a href="#" class="bgRight05" link="simple" data-role="none">메시지함</a>
+				<a href="#" class="bgRight06" link="simple" url="/member/update.hnt" data="{&quot;myPageMyInfoOpenTabIndex&quot;:&quot;4&quot;}" data-role="none">개인정보보기</a>
+				<a href="#" class="bgRight07" link="simple" url="/application/eventCoupon/eventCoupon_rightMenu.jsp" data="{&quot;myPageMyInfoOpenTabIndex&quot;:&quot;6&quot;}" data-role="none">쿠폰<span id="spanCoupon">0개</span></a>
+			</div>
+			<!-- // 로그인 end -->
+			
+			<!-- ad배너 -->
+			<div id="rightBanner" name="commonBannerArea">
+				<a href=""><img src="http://image1.hanatour.com/ad/2016/sm/mobile570x150.jpg" border="0" width="100%" alt=""></a>
+				<a href="tm_source=hanatour&amp;utm_medium=mob_dotcom&amp;utm_term=20170616&amp;utm_content=menubanner&amp;utm_campaign=markhotel"><img src="http://image1.hanatour.com/ad/2017/06_sm/570x150.jpg" border="0" width="100%" alt=""></a>
+			</div>
+			<!-- // ad 배너 -->
+		</div>
+	</div>
+	<!-- // 우측메뉴 -->
+	
+	<div class="commArea_mask"></div><!-- 딤처리 -->
+	
+<!-- // 공통 분리영역 -->
+
+
+</body>
+</html>
+

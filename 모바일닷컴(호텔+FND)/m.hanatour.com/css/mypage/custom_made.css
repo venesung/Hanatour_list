@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* CSS Document */
+
+html {font-size:10px}
+@media all and (min-width:375px) { /* 아이폰6 */
+html {font-size:11.5px}
+}
+@media all and (min-width:414px) { /* 아이폰6 plus */
+html {font-size:12px}
+}
+
+/* 맞춤여행 */
+.customMade {background-color:#dbdce1}
+.customMade * {font-size:1.3rem}
+.customMade .m_btnRed {position:fixed;left:0;bottom:0; width:100%; font-size:18px; margin:0; border-radius:0; z-index:50}
+
+.cmTop {background-color:#fff; padding:20px 12px;margin-bottom:8px;border-bottom:1px solid #ccc}
+.cmTop h3 {font-size:1.6rem; margin-bottom:25px}
+.cmTop .listBox .stateList {margin-bottom:24px; overflow:hidden}
+.cmTop .listBox .stateList li {background:no-repeat center 0;background-size:76px 76px; float:left; width:33.3%; text-align:center; font-weight:bold; color:#666; padding-top:88px; position:relative}
+.cmTop .listBox .stateList li:after {content:'';width:7px;height:10px;background:url(http://image1.hanatour.com/mobile/common/hanatour/mypage/ico_statelist.png) no-repeat 0 0; background-size:7px 10px; position:absolute;right:-4px;top:35px;}
+.cmTop .listBox .stateList li:nth-child(1) {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/mypage/bg_statelist01_off.png)}
+.cmTop .listBox .stateList li.on:nth-child(1) {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/mypage/bg_statelist01_on.png)}
+.cmTop .listBox .stateList li:nth-child(2) {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/mypage/bg_statelist02_off.png);width:33.4%}
+.cmTop .listBox .stateList li.on:nth-child(2) {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/mypage/bg_statelist02_on.png)}
+.cmTop .listBox .stateList li:nth-child(3) {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/mypage/bg_statelist03_off.png)}
+.cmTop .listBox .stateList li.on:nth-child(3) {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/mypage/bg_statelist03_on.png)}
+.cmTop .listBox .stateList li:nth-child(3):after {content:none}
+.cmTop .listBox .stateList li.on {color:#c83d67}
+.cmTop .listBox p {padding-left:18px;background:url(http://image1.hanatour.com/mobile/common/bg_n_infortxt.png) no-repeat 0 2px; background-size:13px 13px}
+
+.cmTop .noneBox {background:url(http://image1.hanatour.com/mobile/common/hanatour/mypage/bg_statelist_none.png) no-repeat center 0;background-size:80px 80px; text-align:center}
+.cmTop .noneBox em {font-size:1.8rem; display:block; padding-top:108px; margin-bottom:12px}
+
+.cmAcoList {overflow:hidden}
+.cmAcoList dt {border-bottom:1px solid #ccc; background-color:#fff; margin-bottom:8px; border-top:1px solid #ccc}
+.cmAcoList dt a {display:block; padding:20px 50px 20px 12px; position:relative; font-size:1.6rem;font-weight:bold}
+.cmAcoList dt a:after {content:'';width:17px; height:10px; background:url(http://image1.hanatour.com/mobile/common/hotel/bg_acored_off_gray.png) no-repeat 0 0 / 17px 10px; position:absolute;right:12px; top:50%; margin-top:-5px}
+.cmAcoList dt.open {margin-bottom:0}
+.cmAcoList dt.open a:after {background-image:url(http://image1.hanatour.com/mobile/common/hotel/bg_acored_on.png)}
+.cmAcoList dd {display:none; padding:20px 12px;border-bottom:1px solid #ccc; background-color:#fff; margin:0 0 8px}
+.cmAcoList dt.open+dd {display:block}
+.cmAcoList dd .inStit {display:block; padding:15px 22px; margin:0 -12px; border-top:1px solid #ccc}
+.cmAcoList dd .inStit.first { margin-top:-15px; border-top:none}
+.txtList01 {margin:-15px 0 0}
+.txtList01 li {display:table; width:100%; padding:15px 12px; border-bottom:1px dashed #ccc;box-sizing:border-box}
+.txtList01 li:last-child {border-bottom:1px solid #333}
+.txtList01 li strong {display:table-cell;width:35%;}
+.txtList01 li em {font-size:1.4rem;font-weight:bold;display:table-cell;width:65%; text-align:right;word-break : break-word}
+.txtList01 li em.normal {font-size:1.2rem;font-weight:normal}
+.defTxt { padding:0 10px 20px; font-size:1.2rem; border-bottom:1px solid #333}
+.txtList02 {margin:0;border-top:1px dashed #ccc; padding:15px 12px}
+.txtList02 li {display:table;width:100%; box-sizing:border-box;}
+.txtList02 li+li {margin-top:10px}
+.txtList02 li strong {display:table-cell;width:50%; color:#666; font-weight:normal; font-size:1.3rem}
+.txtList02 li em {font-size:1.2rem;font-weight:bold;display:table-cell;width:50%; text-align:right;font-weight:normal;word-break:break-word}
+.takeAgencyTop {display:table;width:100%; border-bottom:1px dashed #ccc; padding-bottom:20px; margin-bottom:15px}
+.takeAgencyTop strong {display:table-cell;width:60%;word-break:break-word; font-size:1.4rem;}
+.takeAgencyTop em {display:table-cell;width:40%; text-align:right; font-weight:bold; font-size:1.4rem;}
+.takeAgencyTop em span {display:inline-block;background-color:#e15e86; font-size:1.2rem; color:#fff; padding:3px 5px; border-radius:50px; margin-right:7px; font-weight:normal}
+.takeAgencyBtm .address {color:#666; font-size:1.3rem}
+.takeAgencyBtm .tel {color:#c83d67; display:inline-block; font-weight:bold; margin:4px 0 10px}
+.takeAgencyBtm .tel:before {content:''; display:inline-block; margin-right:8px;width:24px; height:24px;background:url(http://image1.hanatour.com/mobile/common/hanatour/mypage/ico_tel.png) no-repeat 0 0; background-size:24px 24px; position:relative; bottom:-6px}
+.takeAgencyBtm ul li {font-weight:bold}
+.takeAgencyBtm .time {color:#666; margin-top:20px}
+.takeAgencyBtm .time strong {position:relative;display:block; padding-left:8px; font-weight:normal; margin-bottom:4px}
+.takeAgencyBtm .time strong:before {content:'';width:3px; height:3px;background-color:#666; position:absolute;left:0;top:6px; border-radius:50%}

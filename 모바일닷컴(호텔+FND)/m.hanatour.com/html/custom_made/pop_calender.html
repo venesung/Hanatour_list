@@ -1,0 +1,44 @@
+
+
+<div class="fullPopCommon">
+	<div class="header pickerTop">
+		<h3 class="datepickerTit"><span class="tit">출국일/귀국일 날짜 선택</span><span class="firstMonth">2016.08</span><a href="#" class="closeOverlayPanel" data-role="none" title="레이어닫기"></a></h3>
+		<ul class="pickerDayList">
+			<li>일</li>
+			<li>월</li>
+			<li>화</li>
+			<li>수</li>
+			<li>목</li>
+			<li>금</li>
+			<li>토</li>
+		</ul>
+	</div>
+	<div class="headPicMargin"></div>
+	<div class="overflowWrap innerScroller">
+		<div class="view">
+			<div id="datepicker">
+			</div>
+		</div>
+	</div>
+
+	<div class="footPicMargin"></div>
+	<div class="pickerBtm footer">
+		<form id="detepicker-form" name="detepicker-form">
+			<!-- 다구간 : dateS=출국일 / dateM=중간일 / dateE=귀국일 -->
+			<!-- 왕복 : dateS=출국일 / dateE=귀국일 -->
+			<!-- 편도 : dateS=출국일 -->
+			<input type="hidden" name="dateS" value="" />
+			<input type="hidden" name="dateM" value="" />
+			<input type="hidden" name="dateE" value="" />
+		</form>
+		
+		<!-- 왕복 -->
+		<div class="twoType">
+			<span class="dayCell">출국일<strong class="date-start">&nbsp;</strong></span>
+			<span class="dayCell">귀국일<strong class="date-end">&nbsp;</strong></span>
+		</div>
+		<!-- // 왕복 end -->
+		
+		<a href="#" data-role="none">확인</a>
+	</div>
+</div>

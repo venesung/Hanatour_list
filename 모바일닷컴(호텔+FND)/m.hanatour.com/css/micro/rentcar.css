@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 렌트카 CSS  */
+html {font-size:10px}
+@media all and (min-width:375px) { /* 아이폰6 */
+html {font-size:11px}
+}
+@media all and (min-width:414px) { /* 아이폰6 plus */
+html {font-size:12px}
+}
+
+.rentCarBox {background-color:#dbdce1}
+.rentCarBox .rentTop {background:url(http://image1.hanatour.com/mobile/common/rentcar/bg_rent_top.jpg) no-repeat 0 0; background-size:100% 100%; text-align:center; padding:60px 0 154px; position:relative; margin-bottom:9px}
+.rentCarBox .rentTop p {color:#fff;font-size:1.4rem}
+.rentCarBox .rentTop h2 {color:#fff; font-size:2.4rem}
+.rentCarBox .rentTop ul {overflow:hidden; position:absolute;left:0;bottom:0; width:100%}
+.rentCarBox .rentTop ul li {float:left; width:25%; color:#fff; font-size:1.3rem; padding:50px 0 15px; background:rgba(121,84,166,0.8) url(http://image1.hanatour.com/mobile/common/rentcar/ico_rent_top01.png) no-repeat center 12px; background-size:26px 24px}
+.rentCarBox .rentTop ul li+li {background:rgba(0,0,0,0.8) url(http://image1.hanatour.com/mobile/common/rentcar/ico_rent_top02.png) no-repeat center 12px; background-size:29px 24px}
+.rentCarBox .rentTop ul li+li+li {background:rgba(121,84,166,0.9) url(http://image1.hanatour.com/mobile/common/rentcar/ico_rent_top03.png) no-repeat center 12px; background-size:29px 27px}
+.rentCarBox .rentTop ul li+li+li+li {background:rgba(34,12,60,0.6) url(http://image1.hanatour.com/mobile/common/rentcar/ico_rent_top04.png) no-repeat center 12px; background-size:24px 25px}
+.rentCarBox .rentProduct {background-color:#fff; border-top:1px solid #ccc; text-align:center; padding:20px 0; border-bottom:1px solid #ccc}
+.rentCarBox .rentProduct > h3 {font-size:2.0rem}
+.rentCarBox .rentProduct > h3 span {color:#7954a6}
+.rentCarBox .rentProduct > p {color:#888; font-size:1.3rem; margin:2px 0 15px}
+.rentCarBox .rentProduct ul li {text-align:left; margin-bottom:10px}
+.rentCarBox .rentProduct ul li a {display:block;padding:0 8px}
+.rentCarBox .rentProduct ul li a > span img {width:100%}
+.rentCarBox .rentProduct ul li a > div {border:1px solid #ccc; border-top:none; padding:15px 10px}
+.rentCarBox .rentProduct ul li a > div > strong { display:block; margin-bottom:3px;font-size:1.4rem}
+.rentCarBox .rentProduct ul li a > div p {color:#666; font-size:1.3rem; margin-bottom:10px}
+.rentCarBox .rentProduct ul li a .flagBox {color:#888; font-size:1.2rem}
+.rentCarBox .rentProduct ul li a .flagBox span {position:relative; top:-2px}
+.rentCarBox .rentProduct ul li a .flagBox span img {width:24px;}
+.rentCarBox .rentProduct ul li a .flagBox em { display:inline-block; margin-right:4px; padding-right:6px; border-right:1px solid #ccc}
+.rentCarBox .rentProduct ul li a .flagBox strong {font-weight:normal}
+.rentCarBox .rentBtmBanner {display:block; margin-top:10px}
+.rentCarBox .rentBtmBanner img {width:100%}

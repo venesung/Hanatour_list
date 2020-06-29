@@ -1,0 +1,2078 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>이달의 도시 대만 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<script type="text/javascript" src="../js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="../js/city_1605.js"></script><!-- 이달의 도시 js -->
+<script type="text/javascript" src="../js/swiper.min.js"></script>
+</head>
+<body>
+
+<div id="wrap"> 
+	<header id="header"><!-- 띠배너 보일경우 class="tBanTy" 추가 -->
+		<div class="inner">
+			<h1><a href="#" data-role="none"><img src="../../images/common/btn_nlogo.png" alt="하나투어"></a></h1>
+			<a href="#" id="btnMenu" data-role="none"><img src="../../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+			<a href="#" id="btnMyhome" data-role="none"><img src="../../images/common/btn_hdright.png" alt="마이홈"></a>
+		</div>
+	</header>
+	
+	
+	<!-- 컨텐츠 영역 -->
+	<style type="text/css">
+	
+	.selectBox {width:100%;border:1px solid #ddd;background:#fff url(http://image1.hanatour.com/mobile/common/thismonth/201605/bg_select_bgray.png) no-repeat 95% center; background-size:16px 9px; height:40px; padding-left:8px;color:#222;font-size:14px}
+	.recom_inCont {background-color:#f1f5f7;padding:10px 12px 0;overflow:hidden}
+	
+	.thisMonthCont {margin-top:52px}
+	.btnPink {display:block;background-color:#ff6796;border:1px solid #ff6796;text-align:center;color:#fff;padding:11px 0; border-radius:3px;margin-bottom:15px; font-size:14px}
+	.btnPink:after {content:'';width:6px;height:10px;background:url(http://image1.hanatour.com/mobile/common/thismonth/201605/btn_rarr01.png) no-repeat 0 0; background-size:6px 10px; display:inline-block; margin-left:9px}
+	.btnBox02 {padding:0 12px; overflow:hidden; margin-top:15px}
+	.btnBox02 a {float:left; width:48%; padding:4px 15px; font-size:13px; margin-bottom:0; text-align:left; box-sizing:border-box; position:relative}
+	.btnBox02 a+a {float:right}
+	.btnBox02 .btnPink:after {position:absolute; right:10px; top:50%; margin-top:-5px}
+	
+	.thisMonthTop {background:url(http://image1.hanatour.com/mobile/common/thismonth/201605/bg_thismonth_top.jpg) no-repeat 0 0;background-size:100% 100%;padding:22px 0 35px; position:relative}
+	.thisMonthTop .city { position:absolute;left:10px; top:10px}
+	.thisMonthTop .city img { height:17px}
+	.thisMonthTop h2 {text-align:center; padding-bottom:20px}
+	.thisMonthTop h2 img { height:168px}
+	.cityInfoList {overflow:hidden; margin:0 15px}
+	.cityInfoList li {float:left;width:25%;text-align:center;}
+	
+	.cityInfoList li > div {border-radius:50%;background:rgba(0,0,0,0.8);height:72px;width:72px;margin:0 auto; color:#fff}
+	.cityInfoList li strong {font-size:11px; display:inline-block; margin:9px 0 10px; line-height:11px}
+	.cityInfoList li:nth-child(3) strong,.cityInfoList li:nth-child(4) strong {margin:9px 0 5px}
+	.cityInfoList li strong:before {content:''; display:inline-block; background:no-repeat 0 0;margin-right:3px;vertical-align:bottom; height:18px}
+	.cityInfoList li strong.bgStit01:before {background-image:url(http://image1.hanatour.com/mobile/common/thismonth/201605/bg_stit_cebu01.png);background-size:100% 18px; width:13px;}
+	.cityInfoList li strong.bgStit02:before {background-image:url(http://image1.hanatour.com/mobile/common/thismonth/201605/bg_stit_cebu02.png);background-size:100% 18px; width:8px;}
+	.cityInfoList li strong.bgStit03:before {background-image:url(http://image1.hanatour.com/mobile/common/thismonth/201605/bg_stit_cebu03.png);background-size:100% 18px; width:13px;}
+	.cityInfoList li strong.bgStit04:before {background-image:url(http://image1.hanatour.com/mobile/common/thismonth/201605/bg_stit_cebu04.png);background-size:100% 18px; width:12px;}
+	.cityInfoList li p {color:#fff;font-size:12px;font-weight:bold;display:table;vertical-align:middle; width:100%; line-height:11px}
+	.cityInfoList li:nth-child(4) p {font-size:11px}
+	.cityInfoList li p span {font-size:11px; display:block; font-weight:normal;line-height:9px; margin-top:2px}
+	.cityInfoList li:nth-child(4) p span {font-size:10px}
+	.cityInfoList li .time p {font-size:10px;}
+	.cityInfoList li .time p span {display:inline; font-size:9px}
+	.cityInfoList.num3 li {width:33.3%}
+	.cityInfoList.num3 li:nth-child(2) {width:33.4%}
+	
+	.monthShare {padding:13px 12px; position:relative; background-color:#f1f5f7}
+	.monthShare strong {background:url(http://image1.hanatour.com/mobile/common/thismonth/201605/bg_share_tit.png) no-repeat 0 2px;background-size:14px 14px; padding:1px 0 1px 18px; display:block}
+	.monthShare div {position:absolute;right:12px;top:50%; margin-top:-15px}
+	.monthShare div a {float:left; margin-left:8px}
+	.monthShare div a img {width:30px}
+	
+	.contTop01 {background:url(http://image1.hanatour.com/mobile/common/thismonth/201605/bg_cont_top01.jpg) no-repeat 0 0;background-size:100% 100%; text-align:center; margin:-10px -12px 0; padding:25px 0}
+	.contTop01.bg_t2 {background-image:url(http://image1.hanatour.com/mobile/common/thismonth/201605/bg_cont_top01_2.jpg)}
+	.contTop01.bg_t3 {background-image:url(http://image1.hanatour.com/mobile/common/thismonth/201605/bg_cont_top01_3.jpg)}
+	.contTop01.bg_t4 {background-image:url(http://image1.hanatour.com/mobile/common/thismonth/201605/bg_cont_top01_4.jpg)}
+	.contTop01 h3 img { height:64px}
+	.contTop01 p {color:#fff; font-size:13px; line-height:17px}
+	
+	.contTop02 {background:url(http://image1.hanatour.com/mobile/common/thismonth/201605/bg_cont_top02.jpg) no-repeat 0 0;background-size:100% 100%; text-align:center; margin:-10px -12px 0; padding:25px 24px 45px}
+	.contTop02.bg_def {background-image:url(http://image1.hanatour.com/mobile/common/thismonth/201605/bg_cont_top02_02.jpg)}
+	.contTop02 h3 {margin-bottom:10px}
+	.contTop02 h3 img {height:70px}
+	.contTop02 p {color:#fff; font-size:13px; line-height:17px;}
+	.contTop02 p span {display:block; margin-bottom:10px}
+	
+	.contTop03 {background:url(http://image1.hanatour.com/mobile/common/thismonth/201605/bg_cont_top_food.jpg) no-repeat 0 0;background-size:100% 100%; text-align:center; margin:-10px -12px 0; padding:25px 24px 60px}
+	.contTop03 h3 img {height:35px}
+	.contTop03 span {color:#fff; font-size:13px; line-height:17px; display:block}
+	
+	.contTop04 {background:url(http://image1.hanatour.com/mobile/common/thismonth/201605/bg_cont_top_best.jpg) no-repeat 0 0;background-size:100% 100%; text-align:center; margin:-10px -12px 0; padding:25px 24px 65px}
+	.contTop04 h3 img {height:71px}
+	
+	.monthCityList {margin-top:-45px}
+	.monthCityList.marT10 {margin-top:10px}
+	.monthCityList li {border:1px solid #ddd; margin-bottom:10px}
+	.monthCityList li .btnPink {margin-bottom:0; margin-top:20px}
+	.monthCityList li:last-child {margin-bottom:20px}
+	.monthCityList li h4 {display:block; background-color:#fff; color:#222; padding:7px 12px; font-size:17px}
+	.monthCityList li .imgBox img {width:100%}
+	.monthCityList li .txtCont {background-color:#fff; padding:15px 12px 20px}
+	.monthCityList li .txtCont .storyTit {display:block; color:#ff6796; font-size:12px; font-weight:bold; margin-bottom:8px}
+	.monthCityList li .txtCont strong {color:#222; font-size:14px; display:block; margin-bottom:8px}
+	.monthCityList li .txtCont p {color:#666; font-size:13px;}
+	.monthCityList li .txtCont dl { margin-top:15px; padding-top:15px; border-top:1px solid #ddd}
+	.monthCityList li .txtCont dl dt { color:#ed4f8f; font-size:15px; margin-bottom:10px; font-weight:bold}
+	.monthCityList li .txtCont dl dd {color:#666; font-size:13px; position:relative; padding-left:8px}
+	.monthCityList li .txtCont dl dd:before {content:''; width:2px; height:2px; position:absolute;left:0;top:5px; background-color:#333; border-radius:50%}
+	
+	.benefitBanner { margin:0 -12px}
+	.benefitBanner a {display:block;background:#8f94a4 no-repeat 12px 15px;background-size:42px 42px; color:#fff; padding:15px 12px 15px 70px}
+	.benefitBanner a.bgico01 {background-image:url(http://image1.hanatour.com/mobile/common/thismonth/201605/bg_art_banner01.png)}
+	.benefitBanner a.bgico02 {background-image:url(http://image1.hanatour.com/mobile/common/thismonth/201605/bg_art_banner02.png); border-top:1px solid #fff}
+	.benefitBanner a strong {font-size:17px;}
+	.benefitBanner a p {color:#fff; font-size:12px; margin-top:6px}
+	
+	.txtinBtn {background-color:#fff; overflow:hidden; margin:0 -12px; padding:25px 12px 10px}
+	.txtinBtn span { display:block; margin-bottom:10px}
+	
+	.areaTab {overflow:hidden;border-bottom:1px solid #ddd;border-top:1px solid #ddd;}
+	.areaTab li {float:left;width:17%;}
+	.areaTab li a {display:block;padding:19px 0;line-height:15px; text-align:center; color:#666;border-right:1px solid #ddd; font-size:14px; height:52px; box-sizing:border-box}
+	.areaTab li:last-child {width:15%}
+	.areaTab li:last-child a {border-right:none}
+	.areaTab li.on a {color:#fff;background-color:#c83d67; font-weight:bold}
+	.areaTab li.twoLine a {padding:12px 0}
+	.areaTab li.thLine a {padding:4px 0 8px}
+	
+	.areaCardList {overflow:hidden; margin:0 -4px}
+	.areaCardList > li {float:left;width:50%;box-sizing:border-box; padding:0 4px; text-align:left; margin-bottom:15px}
+	.areaCardList > li h3 {position:relative; font-size:17px; padding:2px 3px 8px; margin-bottom:4px; height:28px;box-sizing:border-box;}
+	.areaCardList > li h3 a {position:absolute;right:3px;top:0; color:#ff6796; border:1px solid #ff6796; border-radius:3px; padding:6px; font-size:12px; line-height:12px}
+	.areaCardList .img {position:relative; display:block}
+	.areaCardList .img img {width:100%;height:100px;}
+	@media all and (min-width:360px) {	/* 360이상일 경우*/
+	.areaCardList .img img {height:115px;}
+	}
+	@media all and (min-width:414px) {	/* 414이상일 경우*/
+	.areaCardList .img img {height:130px;}
+	}
+	.areaCardList .img em {position:absolute;left:0;top:0; text-align:center; color:#fff; font-size:12px; background-color:#c83d67;box-sizing:border-box;padding:8px 2px;line-height:11px;width:78px}
+	.areaCardList > li .inBox {border:1px solid #ccc; border-radius:3px; overflow:hidden; display:block;background-color:#fff}
+	.areaCardList > li .inBox div {padding:12px;box-sizing:border-box}
+	.areaCardList > li .inBox div .tit {display:block;overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical;height:15px; line-height:16px; margin-bottom:5px; font-size:15px}
+	.areaCardList > li .inBox div .money {font-size:18px}
+	.areaCardList > li .inBox div .money span {font-size:13px}
+	.areaCardList > li .inBox div p {overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;height:32px; line-height:15px; color:#666; font-size:13px; margin-bottom:10px}
+	
+	.cont_inTab,.cont_inTab02 {overflow:hidden; background-color:#fff; margin:-10px -12px 15px; border-bottom:1px solid #858585; position:relative}
+	.cont_inTab:before,.cont_inTab02:before {content:''; width:1px; height:18px; background-color:#dddddd; position:absolute; left:50%; top:50%; margin-top:-9px}
+	.cont_inTab li,.cont_inTab02 li {float:left;width:50%; text-align:center; position:relative}
+	.cont_inTab li a,.cont_inTab02 li a {display:block; padding:14px 0;font-weight:bold; font-size:13px}
+	.cont_inTab li.on a,.cont_inTab02 li.on a {color:#c83d67}
+	.cont_inTab li.on a:after {content:''; width:150px; height:4px; background-color:#c83d67; position:absolute; left:50%;bottom:0; margin-left:-75px}
+	.cont_inTab02 li.on a:after {content:''; width:120px; height:4px; background-color:#c83d67; position:absolute; left:50%;bottom:0; margin-left:-60px}
+	.cont_inTab02 li+li.on a:after { width:130px; margin-left:-65px}
+	
+	.resortList {padding:20px 12px 20px; background-color:#fff; margin:0 -12px -10px;}
+	.resortList > ul {}
+	.resortList > ul > li {text-align:center;border:1px solid #ddd; margin-bottom:10px; padding:0 12px; background-color:#fff}
+	.resortList > ul > li .imgBox {margin:0 -12px;display:block}
+	.resortList > ul > li .imgBox img {width:100%}
+	.resortList > ul > li .bestTxt {color:#c83d67; font-size:13px; border:1px solid #c83d67; border-radius:50px; display:inline-block; padding:3px 7px; font-weight:bold; margin:15px 0;}
+	.resortList > ul > li > strong { display:block; font-size:17px;letter-spacing:-0.05em; padding:0 10px;}
+	.resortList > ul > li > p { color:#666; font-size:13px;margin:8px 0; padding:0 12px}
+	.resortList > ul > li > a { display:inline-block; color:#fff; padding:10px 22px; border-radius:3px; background-color:#ff6796; font-weight:bold; margin:15px 0; font-size:15px}
+	.resortList > ul > li > a.mar0 {margin:0}
+	.resortList > ul > li > a.mar02 {margin:0 0 15px}
+	.resortList ul li .starBox strong { color:#f9b013; font-size:13px; vertical-align:top}
+	.resortList ul li .starBox span {background:url(http://image1.hanatour.com/mobile/common/thismonth/201605/img_resort_star.png) repeat-x 0 0;background-size:13px 13px; display:inline-block; height:13px;text-indent:-9999px; position:relative;bottom:-1px}
+	.resortList ul li .starBox span.num1 {width:13px}
+	.resortList ul li .starBox span.num2 {width:26px}
+	.resortList ul li .starBox span.num3 {width:39px}
+	.resortList ul li .starBox span.num3_50 {width:46px}
+	.resortList ul li .starBox span.num4 {width:52px}
+	.resortList ul li .starBox span.num5 {width:65px}
+	
+	.benefitBox {background-color:#fff;padding:30px 12px; margin:0 -12px}
+	.benefitBox h3 {text-align:center;margin-bottom:20px}
+	.benefitBox h3 img { height:18px;}
+	@media all and (max-width:320px) {	/* 320이하일 경우*/
+	.benefitBox h3 img {width:100%;height:auto}
+	}
+	.benefitBox ul {overflow:hidden; margin:0 -4px}
+	.benefitBox ul li {float:left;width:50%;box-sizing:border-box;margin-bottom:10px;text-align:center; padding:0 4px}
+	.benefitBox ul li.one {width:100%; float:none}
+	.benefitBox ul li div {overflow:hidden;}
+	.benefitBox ul li span img { height:73px}
+	.benefitBox ul li p {font-size:12px; padding:12px 5px; box-sizing:border-box; line-height:14px}
+	.benefitBox ul.thType li {width:33.3%}
+	.benefitBox ul.thType li:nth-child(2) {width:33.4%}
+	.benefitBox > p { font-size:12px}
+	
+	.eventSnsCont {margin:-15px -12px 0}
+	.eventSnsCont .insnsTop {text-align:center;background:url(http://image1.hanatour.com/mobile/common/thismonth/201605/bg_eventsnscont01.png) no-repeat 0 0;background-size:100% 100%;padding:30px 12px 15px}
+	.eventSnsCont .insnsTop h3 { padding-bottom:8px}
+	.eventSnsCont .insnsTop h3 img {height:93px}
+	.eventSnsCont .insnsTop p {color:#975900;font-size:13px;margin-bottom:16px}
+	.eventSnsCont .insnsTop p span {display:block;margin-top:5px}
+	.eventSnsCont .insnsTop a {width:150px;margin:0 auto 20px}
+	.eventSnsCont .insnsTop span img {width:100%}
+	
+	.eventSmCont {background:#ffbcce; margin:-15px -12px 0; padding:0 12px 0; overflow:hidden}
+	.eventSmCont h3 { margin:0 -12px;text-align:center;background:url(http://image1.hanatour.com/mobile/common/thismonth/201605/bg_eventsnscont02.jpg) no-repeat 0 0;background-size:100% 100%; padding:27px 0 110px}
+	.eventSmCont h3 img {height:90px}
+	.eventSmCont .pinkz {display:inline-block;color:#fff;padding:10px;border-radius:3px;background-color:#ff6796;font-weight:bold;font-size:18px; width:150px; text-align:center}
+	.eventSmCont .dottBox {margin:20px 25px 0; padding-top:20px;background:url(http://image1.hanatour.com/mobile/common/thismonth/201605/bg_dottline.png) repeat-x 0 0;background-size:4px 1px}
+	.eventSmCont .dottBox p {margin:0 -15px 8px}
+	.eventSmCont .dottBox p span {display:block;margin-top:5px}
+	.eventSmCont .special {text-align:center;background-color:#fff;border:1px solid #ddd;padding:0 0 20px; margin-bottom:10px}
+	.eventSmCont .special h4 {background-color:#c83d67;color:#fff;font-size:15px;padding:10px 0}
+	.eventSmCont .special img {width:100%}
+	
+	/* swiper */
+	.swiper-slide {text-align: center;font-size: 18px;display:-webkit-box;display:-ms-flexbox;display: -webkit-flex;display:flex;-webkit-box-pack: center;-ms-flex-pack: center;-webkit-justify-content: center;justify-content:center;-webkit-box-align: center;-ms-flex-align: center;-webkit-align-items:center;align-items: center;}
+	.swiper-slide img {width:100%}
+	.swiper-container {margin:0 auto;position:relative;overflow:hidden;z-index:1;width: 100%;}
+	.swiper-container a.big5_prev {width:23px; height:42px;background:url(http://image1.hanatour.com/mobile/common/thismonth/201605/btn_slider_left.png); position:absolute;left:12px;top:50%;margin-top:-21px;background-size:23px 43px; z-index:100; opacity:0.8}
+	.swiper-container a.big5_next {width:23px; height:42px;background:url(http://image1.hanatour.com/mobile/common/thismonth/201605/btn_slider_right.png); position:absolute;right:12px;top:50%;margin-top:-21px;background-size:23px 43px; z-index:100;opacity:0.8}
+	
+	.swiper-container-no-flexbox .swiper-slide{float:left}.swiper-container-vertical>.swiper-wrapper{-webkit-box-orient:vertical;-moz-box-orient:vertical;-ms-flex-direction:column;-webkit-flex-direction:column;flex-direction:column}.swiper-wrapper{position:relative;width:100%;height:;z-index:1;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-transition-property:-webkit-transform;-moz-transition-property:-moz-transform;-o-transition-property:-o-transform;-ms-transition-property:-ms-transform;transition-property:transform;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}.swiper-container-android .swiper-slide,.swiper-wrapper{-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-o-transform:translate(0,0);-ms-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.swiper-container-multirow>.swiper-wrapper{-webkit-box-lines:multiple;-moz-box-lines:multiple;-ms-flex-wrap:wrap;-webkit-flex-wrap:wrap;flex-wrap:wrap}.swiper-container-free-mode>.swiper-wrapper{-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out;margin:0 auto}.swiper-slide{-webkit-flex-shrink:0;-ms-flex:0 0 auto;flex-shrink:0;width:100%;position:relative}.swiper-container .swiper-notification{position:absolute;left:0;top:0;pointer-events:none;opacity:0;z-index:-1000}.swiper-wp8-horizontal{-ms-touch-action:pan-y;touch-action:pan-y}.swiper-wp8-vertical{-ms-touch-action:pan-x;touch-action:pan-x}.swiper-button-next,.swiper-button-prev{position:absolute;top:50%;width:27px;height:44px;margin-top:-22px;z-index:10;cursor:pointer;-moz-background-size:27px 44px;-webkit-background-size:27px 44px;background-size:27px 44px;background-position:center;background-repeat:no-repeat}.swiper-button-next.swiper-button-disabled,.swiper-button-prev.swiper-button-disabled{opacity:.35;cursor:auto;pointer-events:none}.swiper-button-prev,.swiper-container-rtl .swiper-button-next{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");left:10px;right:auto}.swiper-button-prev.swiper-button-black,.swiper-container-rtl .swiper-button-next.swiper-button-black{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E")}.swiper-button-prev.swiper-button-white,.swiper-container-rtl .swiper-button-next.swiper-button-white{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")}.swiper-button-next,.swiper-container-rtl .swiper-button-prev{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");right:10px;left:auto}.swiper-button-next.swiper-button-black,.swiper-container-rtl .swiper-button-prev.swiper-button-black{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E")}.swiper-button-next.swiper-button-white,.swiper-container-rtl .swiper-button-prev.swiper-button-white{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")}.swiper-pagination{position:absolute;text-align:center;-webkit-transition:.3s;-moz-transition:.3s;-o-transition:.3s;transition:.3s;-webkit-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0);z-index:10}.swiper-pagination.swiper-pagination-hidden{opacity:0}.swiper-pagination-bullet{width:8px;height:8px;display:inline-block;border-radius:100%;}button.swiper-pagination-bullet{border:none;margin:0;padding:0;box-shadow:none;-moz-appearance:none;-ms-appearance:none;-webkit-appearance:none;appearance:none}.swiper-pagination-clickable .swiper-pagination-bullet{cursor:pointer}.swiper-pagination-white .swiper-pagination-bullet{background:#fff}.swiper-pagination-bullet-active{opacity:1;background:#007aff}.swiper-pagination-white .swiper-pagination-bullet-active{background:#fff}.swiper-pagination-black .swiper-pagination-bullet-active{background:#000}.swiper-container-vertical>.swiper-pagination{right:10px;top:50%;-webkit-transform:translate3d(0,-50%,0);-moz-transform:translate3d(0,-50%,0);-o-transform:translate(0,-50%);-ms-transform:translate3d(0,-50%,0);transform:translate3d(0,-50%,0)}.swiper-container-vertical>.swiper-pagination .swiper-pagination-bullet{margin:5px 0;display:block}.swiper-container-horizontal>.swiper-pagination{bottom:10px;left:0;width:100%}.swiper-container-horizontal>.swiper-pagination .swiper-pagination-bullet{margin:0 5px}.swiper-container-3d{-webkit-perspective:1200px;-moz-perspective:1200px;-o-perspective:1200px;perspective:1200px}.swiper-container-3d .swiper-cube-shadow,.swiper-container-3d .swiper-slide,.swiper-container-3d .swiper-slide-shadow-bottom,.swiper-container-3d .swiper-slide-shadow-left,.swiper-container-3d .swiper-slide-shadow-right,.swiper-container-3d .swiper-slide-shadow-top,.swiper-container-3d .swiper-wrapper{-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;-ms-transform-style:preserve-3d;transform-style:preserve-3d}.swiper-container-3d .swiper-slide-shadow-bottom,.swiper-container-3d .swiper-slide-shadow-left,.swiper-container-3d .swiper-slide-shadow-right,.swiper-container-3d .swiper-slide-shadow-top{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:10}.swiper-container-3d .swiper-slide-shadow-left{background-image:-webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(right,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-moz-linear-gradient(right,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(right,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to left,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-container-3d .swiper-slide-shadow-right{background-image:-webkit-gradient(linear,right top,left top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(left,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-moz-linear-gradient(left,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(left,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-container-3d .swiper-slide-shadow-top{background-image:-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(bottom,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-moz-linear-gradient(bottom,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(bottom,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to top,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-container-3d .swiper-slide-shadow-bottom{background-image:-webkit-gradient(linear,left bottom,left top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(top,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-moz-linear-gradient(top,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(top,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-container-coverflow .swiper-wrapper{-ms-perspective:1200px}.swiper-container-fade.swiper-container-free-mode .swiper-slide{-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out}.swiper-container-fade .swiper-slide{pointer-events:none}.swiper-container-fade .swiper-slide .swiper-slide{pointer-events:none}.swiper-container-fade .swiper-slide-active,.swiper-container-fade .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-container-cube{overflow:visible}.swiper-container-cube .swiper-slide{pointer-events:none;visibility:hidden;-webkit-transform-origin:0 0;-moz-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;backface-visibility:hidden;width:100%;height:100%;z-index:1}.swiper-container-cube.swiper-container-rtl .swiper-slide{-webkit-transform-origin:100% 0;-moz-transform-origin:100% 0;-ms-transform-origin:100% 0;transform-origin:100% 0}.swiper-container-cube .swiper-slide-active,.swiper-container-cube .swiper-slide-next,.swiper-container-cube .swiper-slide-next+.swiper-slide,.swiper-container-cube .swiper-slide-prev{pointer-events:auto;visibility:visible}.swiper-container-cube .swiper-slide-shadow-bottom,.swiper-container-cube .swiper-slide-shadow-left,.swiper-container-cube .swiper-slide-shadow-right,.swiper-container-cube .swiper-slide-shadow-top{z-index:0;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;backface-visibility:hidden}.swiper-container-cube .swiper-cube-shadow{position:absolute;left:0;bottom:0;width:100%;height:100%;background:#000;opacity:.6;-webkit-filter:blur(50px);filter:blur(50px);z-index:0}.swiper-scrollbar{border-radius:10px;position:relative;-ms-touch-action:none;background:rgba(0,0,0,.1)}.swiper-container-horizontal>.swiper-scrollbar{position:absolute;left:1%;bottom:3px;z-index:50;height:5px;width:98%}.swiper-container-vertical>.swiper-scrollbar{position:absolute;right:3px;top:1%;z-index:50;width:5px;height:98%}.swiper-scrollbar-drag{height:100%;width:100%;position:relative;background:rgba(0,0,0,.5);border-radius:10px;left:0;top:0}.swiper-scrollbar-cursor-drag{cursor:move}.swiper-lazy-preloader{width:42px;height:42px;position:absolute;left:50%;top:50%;margin-left:-21px;margin-top:-21px;z-index:10;-webkit-transform-origin:50%;-moz-transform-origin:50%;transform-origin:50%;-webkit-animation:swiper-preloader-spin 1s steps(12,end) infinite;-moz-animation:swiper-preloader-spin 1s steps(12,end) infinite;animation:swiper-preloader-spin 1s steps(12,end) infinite}.swiper-lazy-preloader:after{display:block;content:"";width:100%;height:100%;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%236c6c6c'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");background-position:50%;-webkit-background-size:100%;background-size:100%;background-repeat:no-repeat}.swiper-lazy-preloader-white:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%23fff'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")}@-webkit-keyframes swiper-preloader-spin{100%{-webkit-transform:rotate(360deg)}}@keyframes swiper-preloader-spin{100%{transform:rotate(360deg)}}
+	
+	
+	.swiper-pag-num {bottom:10px; left:50%; color:#fff; font-size:13px; background:rgba(0,0,0,0.8); padding:5px 12px; border-radius:50px; position:absolute; text-align:center; z-index:100; font-weight:bold; margin-left:-25px}
+
+
+	</style>
+	<div id="container" class="thisMonthCont">
+		<div class="thisMonthTop">
+			<span class="city"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/tit_thismonth_top_logo.png" alt="Taiwan"></span>
+			<h2><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/tit_thismonth_top.png" alt=""></h2>
+			<ul class="cityInfoList">
+				<li>
+					<div class="time">
+						<strong class="bgStit01">비행시간</strong>
+						<p><span>약 </span>2시간 50분</p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<strong class="bgStit02">환율</strong>
+						<p>1달러 =<br>약 37원</p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<strong class="bgStit03">전압</strong>
+						<p>110V<span>별도 어댑터<br>필요</span></p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<strong class="bgStit04">비자</strong>
+						<p>한국인 무비자<span>최대 90일 체류<br>가능</span></p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+		<!-- 공유하기 -->
+		<div class="monthShare">
+			<strong>공유하기</strong>
+			<div>
+				<a href="#" data-role="none"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_share_sns01.png" alt="페이스북"></a>
+				<a href="#" data-role="none"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_share_sns02.png" alt="트위터"></a>
+				<a href="#" data-role="none"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_share_sns03.png" alt="카카오톡"></a>
+			</div>
+		</div>
+		<!-- // 공유하기 -->
+		
+		<!-- tabCont -->
+		<ul class="areaTab">
+			<li class="twoLine on"><a href="#" data-role="none">추천<br>상품</a></li><!-- 선택시 class="on" -->
+			<li class="thLine"><a href="#" data-role="none">지역<br>한눈에<br>보기</a></li>
+			<li class="twoLine"><a href="#" data-role="none">온천&amp;<br>체험</a></li>
+			<li class="twoLine"><a href="#" data-role="none">好吃,<br>小吃</a></li>
+			<li class="twoLine"><a href="#" data-role="none">추천<br>일정</a></li>
+			<li><a href="#" data-role="none">이벤트</a></li>
+		</ul>
+		<!-- // tabCont -->
+		
+		<!-- 추천상품 -->
+		<div class="recom_inCont" style="display:no ne">
+			<ul class="cont_inTab">
+				<li class="on"><a href="#" data-role="none">베스트셀러</a></li>
+				<li class=""><a href="#" data-role="none">테마여행</a></li>
+			</ul>
+			
+			<!-- 베스트셀러 -->
+			<div>
+				<select data-role="none" title="상품종류 선택" class="selectBox" style="margin-bottom:10px">
+					<option value="">6월 특별기</option>
+					<option value="">타이페이 정복하기</option>
+					<option value="">타이중/가오슝</option>
+					<option value="">두나라 함께보기</option>
+					<option value="">특별한 자유여행</option>
+				</select>
+				
+				<!-- 셀렉 탭1 -->
+				<div>
+					<ul class="areaCardList">
+						<li>
+							<a href="http://m.hanatour.com?ATP114160603BRT" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller01.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">[대세는 대만]대만 /화련4일</strong>
+									<p>6월3일 현충일 연휴에 떠나는 베스트셀러</p>
+									<strong class="money">1,249,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com?ATP115160608KE7" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller02.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">[타이페이완전정복] 대만/화련 5일</strong>
+									<p>타이페이 모든 관광지 ALL포함</p>
+									<strong class="money">899,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com?ATP115160608KEM" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller03.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">[명품호텔] 대만/화련 5일</strong>
+									<p>그랜드 오픈, 코트야드 메리어트 호텔</p>
+									<strong class="money">999,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com?ATA101160608KE3" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller04.jpg" alt="">
+									<em>에어텔</em>
+								</span>
+								<div>
+									<strong class="tit">타이페이 자유여행 4박5일</strong>
+									<p>6월 대한항공 특별기 특가와 함께 떠나는 자유여행</p>
+									<strong class="money">719,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+					</ul>
+					
+					<p style="margin-bottom:15px">※유류할증료 / 텍스 포함 총 금액기준</p>
+					
+					<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP114&packageMasterStartMonth=201606" data-role="none" class="btnPink">상품 더보기</a>
+					
+					<div class="benefitBox">
+						<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/stit_benefit01.png" alt="기분 좋은 혜택 추천 상품 특전"></h3>
+						<ul>
+							<li class="one">
+								<div>
+									<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_benefit01.png" alt=""></span>
+									<p>SM면세점 선불카드 2만원<br>증정 (선착순 250명)</p>
+								</div>
+							</li>
+						</ul>
+						<p>* 해당 특전은 베스트셀러 5월 예약자에 한해서 제공됩니다.</p>
+					</div>
+				</div>
+				<!-- // 셀렉 탭1 -->
+				
+				<!-- 셀렉 탭2 -->
+				<div style="display:none">
+					<ul class="areaCardList">
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP114&packageMasterStartMonth=201605" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller05.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">[대세는 대만]대만 /화련4일</strong>
+									<p>101타워와 함께 대만 핵심 일정 완전정복</p>
+									<strong class="money">499,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP119&packageMasterStartMonth=201605" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller06.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">[多드림]대만/야류/화련 4일</strong>
+									<p>관광에 온천욕까지 多드리고 싶은 마음을 담아 </p>
+									<strong class="money">949,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP117&packageMasterStartMonth=201605" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller07.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">[세미팩]대만/야류4일 - 1일자유</strong>
+									<p>가이드의 케어와 나만의 자유일정을 한번에 </p>
+									<strong class="money">449,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP132&packageMasterStartMonth=201605" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller08.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">[休in온천] 대만 4일 - 자오시</strong>
+									<p>온천의 명소 자오시에서 즐기는  여유</p>
+									<strong class="money">852,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<p style="margin-bottom:15px">※유류할증료 / 텍스 포함 총 금액기준</p>
+					
+					<a href="http://m.hanatour.com/application/package/package_masterList.jsp?packageRegionId=A&packageNationId=TW&packageCityId=TPE&packageCategoryId=P&packageOverseasStartId=JCN" data-role="none" class="btnPink">상품 더보기</a>
+					
+					<div class="benefitBox">
+						<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/stit_benefit01.png" alt="기분 좋은 혜택 추천 상품 특전"></h3>
+						<ul>
+							<li class="one">
+								<div>
+									<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_benefit01.png" alt=""></span>
+									<p>SM면세점 선불카드 2만원<br>증정 (선착순 250명)</p>
+								</div>
+							</li>
+						</ul>
+						<p>* 해당 특전은 베스트셀러 5월 예약자에 한해서 제공됩니다.</p>
+					</div>
+				</div>
+				<!-- // 셀렉 탭2 -->
+				
+				<!-- 셀렉 탭3 -->
+				<div style="display:none">
+					<ul class="areaCardList">
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP153&packageSearchName=%ED%9E%90%EB%A7%81&packageMasterStartMonth=201605" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller09.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">[힐링스토리]타이중 5일</strong>
+									<p>알록달록한 마을과 산림욕이 주는 힐링</p>
+									<strong class="money">799,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP120&packageMasterStartMonth=201605" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller10.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">[여왕의 도시] 가오슝 4일</strong>
+									<p>야경이 아름다운 아이허 유람선</p>
+									<strong class="money">669,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP122&packageMasterStartMonth=201605" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller11.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">[고속열차탑승] 타이페이/가오슝 4일</strong>
+									<p>대만의 서울 - 부산을 한눈에  볼수있는 기회</p>
+									<strong class="money">799,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP153&packageSearchName=%EB%B2%84%EB%B8%94%ED%8B%B0&packageMasterStartMonth=201605" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller12.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">타이페이/화련/일월담 5일</strong>
+									<p>버블티를 직접 만들어 먹을 수 있는 여행</p>
+									<strong class="money">799,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<p style="margin-bottom:15px">※유류할증료 / 텍스 포함 총 금액기준</p>
+					<a href="http://m.hanatour.com/application/package/package_masterList.jsp?packageRegionId=A&packageNationId=TW&packageCityId=TXG&packageCategoryId=P&packageOverseasStartId=JCN" data-role="none" class="btnPink">상품 더보기</a>
+					
+					<div class="benefitBox">
+						<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/stit_benefit01.png" alt="기분 좋은 혜택 추천 상품 특전"></h3>
+						<ul>
+							<li class="one">
+								<div>
+									<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_benefit01.png" alt=""></span>
+									<p>SM면세점 선불카드 2만원<br>증정 (선착순 250명)</p>
+								</div>
+							</li>
+						</ul>
+						<p>* 해당 특전은 베스트셀러 5월 예약자에 한해서 제공됩니다.</p>
+					</div>
+				</div>
+				<!-- // 셀렉 탭3 -->
+				
+				<!-- 셀렉 탭4 -->
+				<div style="display:none">
+					<ul class="areaCardList">
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP182&packageMasterStartMonth=201605" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller13.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">[一打二皮] 홍콩/대만 5일</strong>
+									<p>비슷하면서 다른 두나라 함께보기</p>
+									<strong class="money">1,559,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP185&packageMasterStartMonth=201605" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller14.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">대만 / 마카오 5일</strong>
+									<p>아름다운 마카오와 맛있는 대만, 2가지 매력</p>
+									<strong class="money">984,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP184&packageMasterStartMonth=201605" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller15.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">대만 / 상해 6일</strong>
+									<p>같은 언어, 다른 문화! 내눈으로 직접체험하기</p>
+									<strong class="money">968,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP183&packageMasterStartMonth=201605" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller16.jpg" alt="">
+									<em>패키지</em>
+								</span>
+								<div>
+									<strong class="tit">대만 / 싱가포르 6일</strong>
+									<p>스타일리쉬한 싱가포르와 역사여행 대만</p>
+									<strong class="money">892,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<p style="margin-bottom:15px">※유류할증료 / 텍스 포함 총 금액기준</p>
+					<a href="http://m.hanatour.com/application/package/package_masterList.jsp?packageRegionId=A&packageNationId=TW&packageCityId=TPE&packageCategoryId=P" data-role="none" class="btnPink">상품 더보기</a>
+					
+					<div class="benefitBox">
+						<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/stit_benefit01.png" alt="기분 좋은 혜택 추천 상품 특전"></h3>
+						<ul>
+							<li class="one">
+								<div>
+									<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_benefit01.png" alt=""></span>
+									<p>SM면세점 선불카드 2만원<br>증정 (선착순 250명)</p>
+								</div>
+							</li>
+						</ul>
+						<p>* 해당 특전은 베스트셀러 5월 예약자에 한해서 제공됩니다.</p>
+					</div>
+				</div>
+				<!-- // 셀렉 탭4 -->
+				
+				<!-- 셀렉 탭5 -->
+				<div style="display:none">
+					<ul class="areaCardList">
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATA101&packageSearchName=%EC%8B%9C%EB%A8%BC%EB%94%A9&packageMasterStartMonth=201605" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller17.jpg" alt="">
+									<em>에어텔</em>
+								</span>
+								<div>
+									<strong class="tit">[시먼딩호텔] 타이페이 4일</strong>
+									<p>대만의 명동 시먼딩에서 즐거운 쇼핑</p>
+									<strong class="money">399,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATA101&packageSearchName=%EA%B2%8C%EC%8A%A4%ED%8A%B8&packageMasterStartMonth=201605" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller18.jpg" alt="">
+									<em>에어텔</em>
+								</span>
+								<div>
+									<strong class="tit">[게스트하우스] 타이페이 4일/5일</strong>
+									<p>알뜰 여행객을 위한 색다른 숙소</p>
+									<strong class="money">359,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATA104&packageMasterStartMonth=201605" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller19.jpg" alt="">
+									<em>에어텔</em>
+								</span>
+								<div>
+									<strong class="tit">[부티끄] 타이페이 4일</strong>
+									<p>그랜드 하얏트, 코트야드 메리어트 등 고급호텔</p>
+									<strong class="money">509,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATA119&packageMasterStartMonth=201605" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller20.jpg" alt="">
+									<em>에어텔</em>
+								</span>
+								<div>
+									<strong class="tit">[메트로텔] 타이페이 4일</strong>
+									<p>지하철역 도보 5분거리에 위치한 호텔선별</p>
+									<strong class="money">389,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<p style="margin-bottom:15px">※유류할증료 / 텍스 포함 총 금액기준</p>
+					<a href="http://m.hanatour.com/application/package/package_masterList.jsp?packageRegionId=A&packageNationId=TW&packageCityId=TPE&packageCategoryId=A&packageOverseasStartId=JCN" data-role="none" class="btnPink">상품 더보기</a>
+					
+					<div class="benefitBox">
+						<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/stit_benefit01.png" alt="기분 좋은 혜택 추천 상품 특전"></h3>
+						<ul>
+							<li class="one">
+								<div>
+									<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_benefit01.png" alt=""></span>
+									<p>SM면세점 선불카드 2만원<br>증정 (선착순 250명)</p>
+								</div>
+							</li>
+						</ul>
+						<p>* 해당 특전은 베스트셀러 5월 예약자에 한해서 제공됩니다.</p>
+					</div>
+				</div>
+				<!-- // 셀렉 탭5 -->
+				
+			</div>
+			<!-- // 베스트셀러 -->
+			
+			
+			<!-- 테마여행 -->
+			<div style="display:none">
+				<select data-role="none" title="상품종류 선택" class="selectBox" style="margin-bottom:10px">
+					<option value="">지방출발</option>
+					<option value="">배낭여행</option>
+					<option value="">현지투어</option>
+					<option value="">골프</option>
+					<option value="">트레킹</option>
+				</select>
+				
+				<!-- 셀렉 탭1 -->
+				<div>
+					<ul class="areaCardList">
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP703&packageMasterStartMonth=201606&search_goods_grade=23&packageOverseasStartId=PUS" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller21.jpg" alt="">
+									<em>이세이브</em>
+								</span>
+								<div>
+									<strong class="tit">[이세이브팩] 대만 4일</strong>
+									<p>1일 자유일정 + 시내 4성급호텔</p>
+									<strong class="money">490,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP701&packageMasterStartMonth=201606&subject=%EB%93%9C%EB%A6%BC]%EB%8C%80&packageOverseasStartId=PUS" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller22.jpg" alt="">
+									<em>다드림</em>
+								</span>
+								<div>
+									<strong class="tit">[다드림] 대만 4일</strong>
+									<p>가이드기사경비 / 101타워 / 발마사지 포함</p>
+									<strong class="money">900,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP701&packageMasterStartMonth=201606&start_air_code=7C&search_goods_grade=13&subject=%EB%8B%A8%EC%88%98%EC%9D%B4&packageOverseasStartId=PUS" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller23.jpg" alt="">
+									<em>캐주얼</em>
+								</span>
+								<div>
+									<strong class="tit">[캐주얼] 대만 5일</strong>
+									<p>스펀 / 야류 / 지우펀 / 단수이 관광</p>
+									<strong class="money">510,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP702&packageMasterStartMonth=201606&start_air_code=BX&subject=%EB%B2%A0%EC%8A%A4%ED%8A%B8&packageOverseasStartId=PUS" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller24.jpg" alt="">
+									<em>베스트셀러</em>
+								</span>
+								<div>
+									<strong class="tit">[베스트셀러] 대만 5일</strong>
+									<p>온천 / 101타워 포함 + 5성급호텔</p>
+									<strong class="money">620,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<p style="margin-bottom:15px">※유류할증료 / 텍스 포함 총 금액기준</p>
+					<a href="http://m.hanatour.com/application/package/package_masterList.jsp?packageRegionId=A&packageNationId=TW&packageCategoryId=P&packageStartDate=20160401&packageEndDate=20161231&packageOverseasStartId=PUS" data-role="none" class="btnPink">상품 더보기</a>
+					
+					<div class="benefitBox">
+						<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/stit_benefit02.png" alt="기분 좋은 혜택 추천 상품 특전"></h3>
+						<ul>
+							<li>
+								<div>
+									<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_benefit02.png" alt=""></span>
+									<p>[세미팩] 펑리수세트+<br>버블티+흑진주팩</p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_benefit03.png" alt=""></span>
+									<p>[캐주얼] 3/6/9인이상<br>1/2/3만원 할인</p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_benefit04.png" alt=""></span>
+									<p>[캐주얼]<br>야시장 간식비 제공</p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_benefit05.png" alt=""></span>
+									<p>[클래식] 펑리수 1박스<br>제공 (객실당1개)</p>
+								</div>
+							</li>
+						</ul>
+						<p>* 해당 특전은 테마여행 5월 예약자에 한해서 제공됩니다.</p>
+					</div>
+				</div>
+				<!-- // 셀렉 탭1 -->
+				
+				<!-- 셀렉 탭2 -->
+				<div style="display:none">
+					<ul class="areaCardList">
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATB112&packageMasterStartMonth=201605&packageRegionName=%EB%8F%99%EB%82%A8%EC%95%84%EC%8B%9C%EC%95%84" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller25.jpg" alt="">
+									
+								</span>
+								<div>
+									<strong class="tit">1일 버스/택시투어 ♥ 4일</strong>
+									<p>당일치기 근교여행이 가능한 1일 투어포함 상품</p>
+									<strong class="money">435,200<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATB126&packageMasterStartMonth=201605&packageRegionName=%EB%8F%99%EB%82%A8%EC%95%84%EC%8B%9C%EC%95%84" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller26.jpg" alt="">
+									
+								</span>
+								<div>
+									<strong class="tit">호스텔 @시먼딩  4/5일</strong>
+									<p>[ 싱글족도 OK ]  실속파 추천 호스텔 </p>
+									<strong class="money">316,600<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATB140&packageMasterStartMonth=201605&packageRegionName=%EB%8F%99%EB%82%A8%EC%95%84%EC%8B%9C%EC%95%84" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller27.jpg" alt="">
+									
+								</span>
+								<div>
+									<strong class="tit">시내 3-4성급  4/5일</strong>
+									<p>시먼딩 부터 온천, 부티끄 등 대표 추천 호텔 </p>
+									<strong class="money">356,600<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATB142&packageMasterStartMonth=201605&packageRegionName=%EB%8F%99%EB%82%A8%EC%95%84%EC%8B%9C%EC%95%84" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller28.jpg" alt="">
+									
+								</span>
+								<div>
+									<strong class="tit">시내 5성급  4/5일</strong>
+									<p>준 5성부터 특급 호텔까지 도심호텔 즐기기</p>
+									<strong class="money">456,600<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<p style="margin-bottom:15px">※유류할증료 / 텍스 포함 총 금액기준</p>
+					<a href="http://m.hanatour.com/application/package/package_masterList.jsp?packageRegionId=A&packageNationId=TW&packageCategoryId=B&packageStartDate=20160401&packageEndDate=20161231" data-role="none" class="btnPink">상품 더보기</a>
+					
+					<div class="benefitBox">
+						<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/stit_benefit03.png" alt="기분 좋은 혜택 추천 상품 특전"></h3>
+						<ul>
+							<li>
+								<div>
+									<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_benefit06.png" alt=""></span>
+									<p>[1일투어] 이지링크<br>교통카드 1인1매</p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_benefit07.png" alt=""></span>
+									<p>[호스텔] 타이페이<br>맵북 팀당1부</p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_benefit08.png" alt=""></span>
+									<p>[3- 4성급] 스타벅스<br>기프트카드 1인1매</p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_benefit09.png" alt=""></span>
+									<p>[5성급] 선착순 기내용 <br>캐리어 팀당1개</p>
+								</div>
+							</li>
+						</ul>
+						<p>* 해당 특전은 테마여행 5월 예약자에 한해서 제공됩니다.</p>
+					</div>
+				</div>
+				<!-- // 셀렉 탭2 -->
+				
+				<!-- 셀렉 탭3 -->
+				<div style="display:none">
+					<!--  20160502 수정 -->
+					<ul class="areaCardList">
+						<li>
+							<a href="http://m.hanatour.com/A10AN00846/1/B00002/B00002/20160601/tour.hnt" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller29.jpg" alt="">
+									
+								</span>
+								<div>
+									<strong class="tit">대만 택시투어 1탄</strong>
+									<p>13%할인+MRT1일권 증정!</p>
+									<strong class="money">130,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/A10AN00847/1/B00002/B00002/20160601/tour.hnt" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller30.jpg" alt="">
+									
+								</span>
+								<div>
+									<strong class="tit">대만 택시투어 2탄</strong>
+									<p>13%할인+MRT1일권 증정!</p>
+									<strong class="money">130,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/localTour/localTour_searchResult.jsp?date=2016-06-01&cityCode=TPE&cityName=%EB%8C%80%EB%A7%8C&categoryCode=M049&compCode=B00107&tourCode=A10AN00457" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller31.jpg" alt="">
+									
+								</span>
+								<div>
+									<strong class="tit">대만 공항픽업</strong>
+									<p>15% 할인</p>
+									<strong class="money">54,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/localTour/localTour_searchResult.jsp?date=2016-06-01&cityCode=TPE&cityName=%EB%8C%80%EB%A7%8C&categoryCode=M049&compCode=B00107&tourCode=A10AN004682016" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller32.jpg" alt="">
+									
+								</span>
+								<div>
+									<strong class="tit">대만 공항샌딩</strong>
+									<p>13% 할인</p>
+									<strong class="money">46,500<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<!-- // 20160502 수정 -->
+					<p style="margin-bottom:15px">※유류할증료 / 텍스 포함 총 금액기준</p>
+					<a href="http://m.hanatour.com/application/localTour/localTour_searchResult.jsp?date=2016-06-01&cityCode=TPE&cityName=%EB%8C%80%EB%A7%8C" data-role="none" class="btnPink">상품 더보기</a>
+					
+					<div class="benefitBox">
+						<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/stit_benefit04.png" alt="기분 좋은 혜택 추천 상품 특전"></h3>
+						<ul>
+							<li>
+								<div>
+									<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_benefit10.png" alt=""></span>
+									<p>전상품<br>최대 20%할인</p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_benefit11.png" alt=""></span>
+									<p>자몽맥주<br>1+1쿠폰</p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_benefit12.png" alt=""></span>
+									<p>망고쉐이크<br>무료 쿠폰</p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_benefit13.png" alt=""></span>
+									<p>Everrich 면세점<br>할인권</p>
+								</div>
+							</li>
+						</ul>
+						<p>* 해당 특전은 테마여행 5월 예약자에 한해서 제공됩니다.</p>
+					</div>
+				</div>
+				<!-- // 셀렉 탭3 -->
+				
+				<!-- 셀렉 탭4 -->
+				<div style="display:none">
+					<ul class="areaCardList">
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATG110&packageMasterStartMonth=201605" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller33.jpg" alt="">
+									
+								</span>
+								<div>
+									<strong class="tit">대만 타이페이 골프+관광 4일</strong>
+									<p>타이페이 핵심관광+골프</p>
+									<strong class="money">1,349,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATG110&packageMasterStartMonth=201605" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller34.jpg" alt="">
+									
+								</span>
+								<div>
+									<strong class="tit">대만 타이페이 골프 4일</strong>
+									<p>타이페이 골프</p>
+									<strong class="money">1,199,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATG130&packageMasterStartMonth=201605" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller35.jpg" alt="">
+									
+								</span>
+								<div>
+									<strong class="tit">대만 타이중 골프 4일/5일</strong>
+									<p>타이중 골프</p>
+									<strong class="money">1,349,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATG120&packageMasterStartMonth=201605" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller36.jpg" alt="">
+									
+								</span>
+								<div>
+									<strong class="tit">대만 까오슝 골프 4일</strong>
+									<p>까오슝 골프+관광</p>
+									<strong class="money">1,299,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<p style="margin-bottom:15px">※유류할증료 / 텍스 포함 총 금액기준</p>
+					<a href="http://m.hanatour.com/application/package/package_masterList.jsp?packageCategoryId=G&packageRegionId=A&packageNationId=TW&packageCityId=" data-role="none" class="btnPink">상품 더보기</a>
+					
+					<div class="benefitBox">
+						<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/stit_benefit05.png" alt="기분 좋은 혜택 추천 상품 특전"></h3>
+						<ul>
+							<li>
+								<div>
+									<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_benefit14.png" alt=""></span>
+									<p>객실당<br>펑리수 증정</p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_benefit15.png" alt=""></span>
+									<p>8명이상 예약시<br>발마사지</p>
+								</div>
+							</li>
+						</ul>
+						<p>* 해당 특전은 테마여행 5월 예약자에 한해서 제공됩니다.</p>
+					</div>
+				</div>
+				<!-- // 셀렉 탭4 -->
+				
+				<!-- 셀렉 탭5 -->
+				<div style="display:none">
+					<ul class="areaCardList">
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATK112&packageMasterStartMonth=201605&subject=%EC%98%A5%EC%82%B0" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller37.jpg" alt="">
+									
+								</span>
+								<div>
+									<strong class="tit">대만 옥산 4일</strong>
+									<p>동북아의 지붕 최고봉 대만 옥산 트레킹</p>
+									<strong class="money">940,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATK117&packageMasterStartMonth=201605&subject=%EC%84%A4%EC%82%B0" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller38.jpg" alt="">
+									
+								</span>
+								<div>
+									<strong class="tit">대만 설산 4일</strong>
+									<p>동북아의 보석 대만 설산 트레킹</p>
+									<strong class="money">1,150,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATK120&packageMasterStartMonth=201605&subject=%EC%96%91%EB%AA%85%EC%82%B0" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller39.jpg" alt="">
+									
+								</span>
+								<div>
+									<strong class="tit">대만 양명산 4일</strong>
+									<p>아름다운 자연의 정취와 온천체험</p>
+									<strong class="money">899,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATK116&packageMasterStartMonth=201605&subject=%EC%95%84%EB%A6%AC%EC%82%B0" class="inBox" data-role="none">
+								<span class="img">
+									<img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_bestseller40.jpg" alt="">
+									
+								</span>
+								<div>
+									<strong class="tit">대만 아리산 4일</strong>
+									<p>사계절 절경과 삼림, 운해, 일출 및 일몰</p>
+									<strong class="money">949,000<span>원~</span></strong>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<p style="margin-bottom:15px">※유류할증료 / 텍스 포함 총 금액기준</p>
+					<a href="http://m.hanatour.com/application/package/package_masterList.jsp?packageCategoryId=K&packageRegionId=A&packageNationId=TW" data-role="none" class="btnPink">상품 더보기</a>
+					
+					<div class="benefitBox">
+						<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/stit_benefit06.png" alt="기분 좋은 혜택 추천 상품 특전"></h3>
+						<ul class="thType">
+							<li>
+								<div>
+									<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_benefit16.png" alt=""></span>
+									<p>하나투어<br>5만 마일리지 증정</p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_benefit17.png" alt=""></span>
+									<p>NALGENE 물통<br>1인 1개</p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_benefit18.png" alt=""></span>
+									<p>퍼퓸핸드크림</p>
+								</div>
+							</li>
+						</ul>
+						<p>* 해당 특전은 테마여행 5월 예약자에 한해서 제공됩니다.</p>
+					</div>
+				</div>
+				<!-- // 셀렉 탭5 -->
+				
+			</div>
+			<!-- // 테마여행 -->
+			
+			
+			<div class="benefitBanner">
+				<a href=" http://mair.hanatour.com/promotion/eventPromotionDetail?eventCode=MB0381&eventCodeType=M&utm_source=mpflight&utm_medium=banner&utm_term=mobilepgflight&utm_content=mobile&utm_campaign=taiwan" data-role="none" class="bgico01">
+					<strong>대만 항공권 구매 특전</strong>
+					<p>최저가가 아니면, 차액의 300% 보상!<br>항공권 구매하시면 하나투어 5,000 마일리지 추가 적립 !</p>
+				</a>
+				<a href="http://m.hanatour.com/application/travelingEvent/travelingEvent_promotionHotelDetail.jsp?prdCode=H01569&utm_source=mphotel&utm_medium=banner&utm_term=mobilephotel&utm_content=mobile&utm_campaign=taiwan" data-role="none" class="bgico02">
+					<strong>대만 호텔 구매 특전</strong>
+					<p>하나투어 10,000마일리 추가 적립!</p>
+				</a>
+			</div>
+		</div>
+		<!-- //추천상품 -->
+		
+		<!-- 지역 한눈에 보기 -->
+		<div class="recom_inCont" style="display:none">
+			<div class="contTop01">
+				<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/tit_cont_top01.png" alt="문화와 자연의 조화 타이중"></h3>
+				<p>타이중에는 아름다운 호수와 원시 삼림,<br> 세계적 규모의 박물관, 갤러리, 공공 도서관,<br> 사원 등이 있어서 문화도시로 널리 알려져 있습니다.</p>
+			</div>
+			
+			<div class="contTop01 bg_t2">
+				<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/tit_cont_top02.png" alt="바다와 여황의 도시 가오슝"></h3>
+				<p>북에서 남으로, 타이페이와 타이중까지<br>모두 섭렵한 타이완 전문가에게 추천하는 가오슝!<br>바다와 예술, 역사까지 다양한 모습을 만나 볼 수 있습니다.<br>타이페이에서 고속철도로 1시간 반이면 <br>도착할 수 있습니다.</p>
+			</div>
+			
+			<div class="contTop01 bg_t3">
+				<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/tit_cont_top03.png" alt="아픔을 가진 타이루거협곡 화련"></h3>
+				<p>화련은 뒤쪽으로 웅대한 동부산맥이 있고 앞으로는 태평양이<br>바라보이는 곳으로 유수의 절경을 자랑하는 도시입니다.<br>태록각협곡과 아미족 문화촌으로 유명하며 대리석과<br>비취희산지(稀産地)로 유명한곳입니다.<br>아직도 독자적인 전통문화를 지니고있는 아름다운 도시입니다.</p>
+			</div>
+			
+			<div class="contTop01 bg_t4">
+				<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/tit_cont_top04.png" alt="타이완의 하일라이트 타이페이"></h3>
+				<p>타이완의 수도 타이페이, 꽃할배가 방문한 이후<br>한국에서는 폭발적인 인기를 누리고 있는 관광지입니다. <br>최근 20-30대의 젊은 여행객들이 다양한 먹거리를<br>목적으로 줄이어 방문하고 있습니다.<br>타이페이 근교의 야류, 지우펀, 스펀 등도 그냥 지나치지 마세요.</p>
+			</div>
+			
+			<select data-role="none" title="상품종류 선택" class="selectBox" style="margin-top:10px">
+				<option value="">타이중</option>
+				<option value="">가오슝</option>
+				<option value="">화련</option>
+				<option value="">타이페이</option>
+			</select>
+			
+			<!-- 타이중 -->
+			<div>
+				<ul class="monthCityList marT10">
+					<li>
+						<h4>무지개 마을</h4>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_city01_01.jpg" alt=""></div>
+						<div class="txtCont">
+							<strong>무지개 마을</strong>
+							<p>재개발에 처해진 작고 오래된 마을이 2008년 새롭게 태어났습니다. 입구부터 알록달록한 옷을 입은 이 마을은 철거의 위기에서 황용푸라는 할아버지의 힘으로 벗어나서, 이제 타이중의 유명관광지로 거듭났습니다.</p>
+						</div>
+						
+					</li>
+					<li>
+						<h4>아리산</h4>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_city01_02.jpg" alt=""></div>
+						<div class="txtCont">
+							<strong>아리산</strong>
+							<p>고산지대가 많은 타이완에서  큰 사랑을 받고 있는 아리산은 원시자연삼림과 아름다운 일출로 유명합니다. 아리산 일출을 보기 위한 전용 열차를 운영하고 있으며, 새벽 3시부터 많은 사람들이 이 산을 찾아옵니다. 운해와  어우러지는 장관을 한번 감상해보세요.</p>
+						</div>
+						
+					</li>
+					<li>
+						<h4>일월담</h4>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_city01_03.jpg" alt=""></div>
+						<div class="txtCont">
+							<strong>일월담</strong>
+							<p>타이완 최대 담수호인 일월담은 해와 달의 모습을 모두 가지고 있습니다. 일월담 주변에는 고급 리조트와 함께 역사 유적지가 분포하고 있으며, 호숫가를 따라 자전거 도로 역시 잘 갖추어져 있어 즐거운 시간을 보낼 수 있습니다.</p>
+						</div>
+						
+					</li>
+					<li>
+						<h4>요괴촌</h4>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_city01_04.jpg" alt=""></div>
+						<div class="txtCont">
+							<strong>요괴촌</strong>
+							<p>시토우 삼림유락구 입구에 위치한 작은 요괴마을입니다. 일본인들이 살았던 마을이었으며 , 관광지로 개발되어  일본의 요괴를 주제로 한 기념품, 간식거리 등을 쉽게 만나 볼 수 있습니다. 으스스한 이름과 달리 귀여운 모습을 한 요괴들이 반겨줍니다.</p>
+						</div>
+					</li>
+				</ul>
+				<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP153&packageSearchName=%ED%9E%90%EB%A7%81&packageMasterStartMonth=201605" data-role="none" class="btnPink">연관 상품 보기</a>
+			</div>
+			<!-- // 타이중 -->
+			
+			<!-- 가오슝 -->
+			<div style="display:none">
+				<ul class="monthCityList marT10">
+					<li>
+						<h4>연지담</h4>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_city01_05.jpg" alt=""></div>
+						<div class="txtCont">
+							<strong>연지담</strong>
+							<p>가오슝에서 놓칠 수 없는 유명 관광지인 연지담은 "연꽃의 호수"라는 이름으로, 연꽃 개화시기가 되면 수면이 연꽃으로 곱게 수놓아집니다. 이곳에는 용호탑이라는 2개의 탑이 있는데, 용모양의 입구로 들어가 호랑이 모양의 출구로 나와야 액운을 피할 수 있다고 합니다.</p>
+						</div>
+						
+					</li>
+					<li>
+						<h4>아이허</h4>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_city01_06.jpg" alt=""></div>
+						<div class="txtCont">
+							<strong>아이허</strong>
+							<p>"사랑의 강"이라는 뜻의 아이허는  서울의 한강처럼 가오슝 시내를 가로지르는 강입니다. 낮에는 시민들의 휴식처가 되어주고, 밤에는 아름다운 야경으로 로맨틱한 분위기를 자아냅니다.  저녁에 즐길 수 있는 유람선을 탑승하는 것도 놓칠 수 없는 여행포인트입니다! </p>
+						</div>
+					</li>
+				</ul>
+				<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP121&packageMasterStartMonth=201605" data-role="none" class="btnPink">연관 상품 보기</a>
+				<ul class="monthCityList marT10">
+					<li>
+						<h4>컨딩</h4>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_city01_07.jpg" alt=""></div>
+						<div class="txtCont">
+							<strong>컨딩</strong>
+							<p>한국인들에게는 아직 생소한 곳이지만 서퍼들에게는  유명한 곳입니다. 타이난 최남단에 위치한 이곳은 여름이 되면 곳곳에 위치한 해수욕 장과 높은  파도로 여름 스포츠를 즐기는  관광객들로 북적입니다 . 어롼비 등대에서 하얀 등대와 어우러지는 바다를 사진에 담아보세요. </p>
+						</div>
+						
+					</li>
+					<li>
+						<h4>타이난</h4>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_city01_08.jpg" alt=""></div>
+						<div class="txtCont">
+							<strong>타이난</strong>
+							<p>"타이완의 경주"라는 별칭을 가진 타이난은 , 역사적으로 긴 역사를 가지고 있습니다. 서방세계에 "포모사"라는 이름을 알리게 된 계기가 된 곳으로 , 이곳에는 서구 열강들의 요새나 무역을 위한 건물들 (양행)의 흔적을 쉽게 만나 볼 수 있습니다. </p>
+						</div>
+					</li>
+				</ul>
+				<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATA121&packageMasterStartMonth=201605" data-role="none" class="btnPink">연관 상품 보기</a>
+				
+			</div>
+			<!-- // 가오슝 -->
+			
+			<!-- 화련 -->
+			<div style="display:none">
+				<ul class="monthCityList marT10">
+					<li>
+						<h4>자모교 / 자모정</h4>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_city01_09.jpg" alt=""></div>
+						<div class="txtCont">
+							<strong>자모교 / 자모정</strong>
+							<p>어머니와 아들의 애틋한 정을 생각하게 하는 이름을 가진 정자와 다리는 장개석 총통이 어머니를 생각하여 만들었다는 설 이 있습니다. 다르게는 아들이 일을 하러 가자 거기서 기다리던 어머니가 망부석이 되었다는 설 등 여러 가지 이야기가 있습니다.</p>
+						</div>
+						
+					</li>
+					<li>
+						<h4>연자구</h4>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_city01_10.jpg" alt=""></div>
+						<div class="txtCont">
+							<strong>연자구</strong>
+							<p>깎아지는 절벽에 자연적으로 형성된 구멍마다 제비(연자, 옌즈 燕子)들이 살고 있다고 하여, 제비집을 뜻하는 연자구라고 불리고 있습니다. 태로각협곡 제2경으로 일컬어지는 연자구는 낙석 등의 위험이 많아서 안전모를 꼭 쓰셔야 합니다. </p>
+						</div>
+					</li>
+					<li>
+						<h4>장춘사</h4>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_city01_11.jpg" alt=""></div>
+						<div class="txtCont">
+							<strong>장춘사</strong>
+							<p>국민당이 타이완으로 건너온 후  군사적 / 경제적 목적을 위해  화련에 길을 내는 공사가 진행됐습니다. 중장비가  없던 시절, 사람의 힘만으로 절벽을 깎아야 하는 대공사인 "중부횡관공노(中部橫貫公路)"를 건설하다 순직한 인부들의 영령을 기리는 곳입니다. </p>
+						</div>
+						
+					</li>
+					<li>
+						<h4>칠성담</h4>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_city01_12.jpg" alt=""></div>
+						<div class="txtCont">
+							<strong>칠성담</strong>
+							<p>치싱탄은 청(淸)나라 시절부터 불리던 이름으로, 일곱개의 작은연못 혹은 북두칠성이 잘보이는곳 이라는 설등이 있어 치싱탄(칠성담)으로 불리웁니다. 태평양 바다와 어우러진 자갈해변이 만들어내는 풍경은 가슴까지 시원하게 해줍니다. </p>
+						</div>
+					</li>
+				</ul>
+				<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP119&packageMasterStartMonth=201605" data-role="none" class="btnPink">연관 상품 보기</a>
+			</div>
+			<!-- // 화련 -->
+			
+			<!-- 타이페이 -->
+			<div style="display:none">
+				<ul class="monthCityList marT10">
+					<li>
+						<h4>101타워</h4>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_city01_13.jpg" alt=""></div>
+						<div class="txtCont">
+							<strong>101타워</strong>
+							<p>타이페이의 랜드마크인  101 타워는  외관을 이루는 "돈"의 상징으로 더욱 유명세를 떨치고 있습니다. "돈을 벌다"는 의미의 비슷한 음을 가진 8을 주제로 한 모양이라거나, 엽전 모양등 전체적으로 "부"를 부르는 것을  의미합니다. </p>
+						</div>
+						
+					</li>
+					<li>
+						<h4>국립고궁박물원</h4>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_city01_14.jpg" alt=""></div>
+						<div class="txtCont">
+							<strong>국립고궁박물원</strong>
+							<p>과거 베이징의 고궁에 있던 중국의 유명 보물들이  전시되어 있는 국립고궁박물원은  인간의 섬세함의 끝을  만나 볼 수 있는 곳입니다.  아름다운 도자기 , 신비로운 형태의 돌 , 섬세하게 조각된 상아와 씨앗 등 황궁의 보물들을 만나 보세요.</p>
+						</div>
+						
+					</li>
+					<li>
+						<h4>지우펀</h4>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_city01_15.jpg" alt=""></div>
+						<div class="txtCont">
+							<strong>지우펀</strong>
+							<p>붉은 홍등이 자아내는 이국적인 느낌은 많은 사람들에게 수많은 영감을 주었습니다. 유명 애니메이션 "센과 치히로의 행방불명"의 모티브가 되었다는 지우펀의 아름다움을 눈으로 확인해보세요.</p>
+						</div>
+						
+					</li>
+					<li>
+						<h4>야류</h4>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_city01_16.jpg" alt=""></div>
+						<div class="txtCont">
+							<strong>야류</strong>
+							<p>바람과 파도의 콜라보레이션이 해안가에 가득 펼쳐져 있는  야류 지질공원입니다. 버섯바위, 여왕바위, 하트바위 등 곳곳에 기이한 형태로 깎여있는 바위는 자연의 경이로움에 감탄하게 합니다. 바닥 곳곳에는  과거 바다생물의 화석도 있으니 발밑도 주의깊게 살펴보세요.</p>
+						</div>
+					</li>
+				</ul>
+				<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP114&packageMasterStartMonth=201605" data-role="none" class="btnPink">연관 상품 보기</a>
+			</div>
+			<!-- // 타이페이 -->
+			
+		</div>
+		<!-- // 지역 한눈에 보기 -->
+		
+		
+		<!-- 온천체험 -->
+		<div class="recom_inCont" style="display:none">
+			<ul class="cont_inTab" style="margin-bottom:10px">
+				<li class="on"><a href="#" data-role="none">세계 온천 박물관</a></li>
+				<li class=""><a href="#" data-role="none">두근두근 체험하기</a></li>
+			</ul>
+			
+			<!-- 세계 온천박물관 -->
+			<div>
+				<div class="contTop02">
+					<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/tit_cont_top_onc.png" alt="세계 온천의 박물관, 다양한 온천수 즐기기"></h3>
+				</div>
+				
+				<ul class="monthCityList">
+					<li>
+						<h4>미인탕 자오시 온천</h4>
+						<!-- 이미지 슬라이더 -->
+						<div class="swiper-container global_swiper">
+							<a href="#" class="big5_prev" data-role="none"></a>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_experience01.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_experience02.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_experience03.jpg" alt=""></div>
+							</div>
+							<div class="swiper-pagination" style="display:none"></div>
+							<div class="swiper-pag-num"><span>1</span> / 2</div>
+							<a href="#" class="big5_next" data-role="none"></a>
+						</div>
+						<!-- // 이미지 슬라이더 -->
+						<div class="txtCont">
+							<p>유황온천이 많은 대만에서 드물게 만날수있는 무미, 무색, 무취의 온천수가 특징입니다. 피부에 좋다고 유명한 곳으로, 온천성분에 약알칼리성 물질이 많아 피부보호 능력이 뛰어납니다. 온천마을이라는 명성에 걸맞게 마을 곳곳에 족욕탕이 설치되어 있어 무료로 즐기실 수 있습니다.</p>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP132&packageMasterStartMonth=201605" data-role="none" class="btnPink">연관 상품 보기</a>
+						</div>
+						
+					</li>
+					
+					<li>
+						<h4>사이다 같은 쑤아오 냉천</h4>
+						<!-- 이미지 슬라이더 -->
+						<div class="swiper-container global_swiper">
+							<a href="#" class="big5_prev" data-role="none"></a>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_experience04.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_experience05.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_experience06.jpg" alt=""></div>
+							</div>
+							<div class="swiper-pagination" style="display:none"></div>
+							<div class="swiper-pag-num"><span>1</span> / 2</div>
+							<a href="#" class="big5_next" data-role="none"></a>
+						</div>
+						<!-- // 이미지 슬라이더 -->
+						<div class="txtCont">
+							<p>22도의 비교적 낮은 온도의 쑤아오 냉천은 탄산냉천으로 탕에 몸을 담그면 피부 표면에 작게 기포가 맺히는 것을 느낄 수 있습니다. 피부병에 효능이 있다고 알려져 있으며, 이산화탄소가 함유된 온천수가 피부에 기포를 발생시켜 가벼운 마사지 효과를 냅니다.</p>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP108&packageMasterStartMonth=201605" data-role="none" class="btnPink">연관 상품 보기</a>
+						</div>
+						
+					</li>
+					
+					<li>
+						<h4>유황온천 양명산</h4>
+						<!-- 이미지 슬라이더 -->
+						<div class="swiper-container global_swiper">
+							<a href="#" class="big5_prev" data-role="none"></a>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_experience07.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_experience08.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_experience09.jpg" alt=""></div>
+							</div>
+							<div class="swiper-pagination" style="display:none"></div>
+							<div class="swiper-pag-num"><span>1</span> / 2</div>
+							<a href="#" class="big5_next" data-role="none"></a>
+						</div>
+						<!-- // 이미지 슬라이더 -->
+						<div class="txtCont">
+							<p>타이페이 북쪽에 위치한 양명산 일대는 화산지열활동이 상당히 빈번하여, 구역마다 각기 다른 광물성분을 만들어 냅니다. 온천수질과  온도가 각기 다르며, 특색역시 다르게 나타납니다.비교적 흔하게 볼수있는 온천은 백황천(하얗고, 약산성) 온천입니다.</p>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP133&packageMasterStartMonth=201605" data-role="none" class="btnPink">연관 상품 보기</a>
+						</div>
+						
+					</li>
+					
+					<li>
+						<h4>치료효과 베이터우 온천</h4>
+						<!-- 이미지 슬라이더 -->
+						<div class="swiper-container global_swiper">
+							<a href="#" class="big5_prev" data-role="none"></a>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_experience10.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_experience11.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_experience12.jpg" alt=""></div>
+							</div>
+							<div class="swiper-pagination" style="display:none"></div>
+							<div class="swiper-pag-num"><span>1</span> / 2</div>
+							<a href="#" class="big5_next" data-role="none"></a>
+						</div>
+						<!-- // 이미지 슬라이더 -->
+						<div class="txtCont">
+							<p>타이완 최초로 대규모 온천개발이 된 이 곳 은 치료효능이 있는 곳으로 유명합니다. 이곳의 베이터우석은 미량의 방사성 물질인 라듐을 함유하고 있어 병을 치료하는데 효능이 있다고 하며 , 암치료로 유명한 아키타현의 타마가와 온천에서도 이 베이터우 석을 쓰고 있다고 합니다.</p>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP131&packageMasterStartMonth=201605" data-role="none" class="btnPink">연관 상품 보기</a>
+						</div>
+						
+					</li>
+					
+					<li>
+						<h4>관즈링 머드 온천</h4>
+						<!-- 이미지 슬라이더 -->
+						<div class="swiper-container global_swiper">
+							<a href="#" class="big5_prev" data-role="none"></a>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_experience13.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_experience14.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_experience15.jpg" alt=""></div>
+							</div>
+							<div class="swiper-pagination" style="display:none"></div>
+							<div class="swiper-pag-num"><span>1</span> / 2</div>
+							<a href="#" class="big5_next" data-role="none"></a>
+						</div>
+						<!-- // 이미지 슬라이더 -->
+						<div class="txtCont">
+							<p>타이난에서 비교적 가까운 관즈링에서 독특한 머드온천 체험을 할 수 있습니다. 머드를 몸에 바른후에  머드탕으로 들어가서 온천욕을 즐기다 나오면 매끈매끈한 피부를 보실 수 있습니다. 관즈링 온천구역의 보도를 따라 걸으면 진흙 온천의 근원지에 도착할 수 있습니다. </p>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATA121&packageMasterStartMonth=201605" data-role="none" class="btnPink">연관 상품 보기</a>
+						</div>
+						
+					</li>
+				</ul>
+			</div>
+			<!-- 세계 온천박물관 -->
+			
+			<!-- 두근두근 체험하기 -->
+			<div style="display:none">
+				<div class="contTop02 bg_def">
+					<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/tit_cont_top_onc02.png" alt="두근두근 체험여행"></h3>
+				</div>
+				
+				<ul class="monthCityList">
+					<li>
+						<h4>버블티 직접 만들어 마시기</h4>
+						<!-- 이미지 슬라이더 -->
+						<div class="swiper-container global_swiper">
+							<a href="#" class="big5_prev" data-role="none"></a>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_experience16.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_experience17.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_experience18.jpg" alt=""></div>
+							</div>
+							<div class="swiper-pagination" style="display:none"></div>
+							<div class="swiper-pag-num"><span>1</span> / 2</div>
+							<a href="#" class="big5_next" data-role="none"></a>
+						</div>
+						<!-- // 이미지 슬라이더 -->
+						<div class="txtCont">
+							<p>한국에서 쉽게 만날 수 있는 버블티의 원조는 타이완, 그중에서도 타이중의 "춘수당" 입니다. 이곳에서는 버블티 만들기 체험이 가능하여 직접 만들어 먹어볼 수 있습니다.  버블티뿐 아니라 아이스티도 만들어 보실 수 있으며  체험이 끝나면 수료증도 받으실 수 있습니다.</p>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP153&packageSearchName=%EB%B2%84%EB%B8%94%ED%8B%B0&packageMasterStartMonth=201605" data-role="none" class="btnPink">연관 상품 보기</a>
+						</div>
+					</li>
+					<li>
+						<h4>고즈넉한 다관의 여유</h4>
+						<!-- 이미지 슬라이더 -->
+						<div class="swiper-container global_swiper">
+							<a href="#" class="big5_prev" data-role="none"></a>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_experience19.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_experience20.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_experience21.jpg" alt=""></div>
+							</div>
+							<div class="swiper-pagination" style="display:none"></div>
+							<div class="swiper-pag-num"><span>1</span> / 2</div>
+							<a href="#" class="big5_next" data-role="none"></a>
+						</div>
+						<!-- // 이미지 슬라이더 -->
+						<div class="txtCont">
+							<p>타이완은 버블티도 유명하지만, 그보다도 먼저  유명했던 건  우롱차입니다. 우롱차의 품질 만큼은 어디에 내놔도 상등품이라 여겨집니다.  이러한 전통차를  조용한 곳에서 여유롭게 즐길 수 있는 곳으로 타이중의 우웨이차오탕(無爲草堂)을 추천합니다. </p>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATA151&packageMasterStartMonth=201605" data-role="none" class="btnPink">연관 상품 보기</a>
+						</div>
+					</li>
+					<li>
+						<h4>펑리수 만들기</h4>
+						<!-- 이미지 슬라이더 -->
+						<div class="swiper-container global_swiper">
+							<a href="#" class="big5_prev" data-role="none"></a>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_experience22.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_experience23.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_experience24.jpg" alt=""></div>
+							</div>
+							<div class="swiper-pagination" style="display:none"></div>
+							<div class="swiper-pag-num"><span>1</span> / 2</div>
+							<a href="#" class="big5_next" data-role="none"></a>
+						</div>
+						<!-- // 이미지 슬라이더 -->
+						<div class="txtCont">
+							<p>촉촉한 빵에 감싸인 파이애플 앙금! 타이완의 대표간식 펑리수입니다. 이 펑리수를 직접 만들어 볼 수 있는 체험을 할 수 있는 곳이 곳곳에 있습니다. 갓 구운 펑리수는 바삭 하다는 걸 알고 계신가요? 여러 모양의 틀에 구워내어 , 내 이름이 붙여진 펑리수를 가져보세요.</p>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP108&packageMasterStartMonth=201605" data-role="none" class="btnPink">연관 상품 보기</a>
+						</div>
+					</li>
+					<li>
+						<h4>소원담아 천등 날리기</h4>
+						<!-- 이미지 슬라이더 -->
+						<div class="swiper-container global_swiper">
+							<a href="#" class="big5_prev" data-role="none"></a>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_experience25.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_experience26.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_experience27.jpg" alt=""></div>
+							</div>
+							<div class="swiper-pagination" style="display:none"></div>
+							<div class="swiper-pag-num"><span>1</span> / 2</div>
+							<a href="#" class="big5_next" data-role="none"></a>
+						</div>
+						<!-- // 이미지 슬라이더 -->
+						<div class="txtCont">
+							<p>영화 '그 시절 우리가 좋아했던 소녀'에 나온  인상 깊은 장면 하나 ! 남녀 주인공들이  소원을 적은 천등을 하늘위로 날리는 장면이 나옵니다. 정월대보름에 종이에 소원을 써서 하늘에 날리면 그 소원이 이루어진다고 합니다. 색깔에 따라 의미도 다르니  골라서 적어보세요.</p>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP104&packageMasterStartMonth=201605" data-role="none" class="btnPink">연관 상품 보기</a>
+						</div>
+					</li>
+					<li>
+						<h4>먹거리 가득 야시장 탐방</h4>
+						<!-- 이미지 슬라이더 -->
+						<div class="swiper-container global_swiper">
+							<a href="#" class="big5_prev" data-role="none"></a>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_experience28.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_experience29.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_experience30.jpg" alt=""></div>
+							</div>
+							<div class="swiper-pagination" style="display:none"></div>
+							<div class="swiper-pag-num"><span>1</span> / 2</div>
+							<a href="#" class="big5_next" data-role="none"></a>
+						</div>
+						<!-- // 이미지 슬라이더 -->
+						<div class="txtCont">
+							<p>타이완의 다양한 먹거리를 한번에 만나볼 수 있는 곳이 있습니다. 바로 밤마다 환하게 불을 켜고 손님을 맞이하는 야시장입니다. 도시마다 색다른 야시장이 곳곳에 있지만, 다양한 해산물까지 맛볼 수 있는 가오슝의 리우허 야시장이야말로 야시장의 백미! </p>
+							<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP120&packageMasterStartMonth=201605" data-role="none" class="btnPink">연관 상품 보기</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- // 두근두근 체험하기 -->
+		</div>
+		<!-- // 온천체험 -->
+		
+		<!-- 대표간식 -->
+		<div class="recom_inCont" style="display:none">
+			<div class="contTop03">
+				<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/tit_cont_top_food.png" alt=""></h3>
+				<span>타이완 대표간식</span>
+			</div>
+			
+			<select data-role="none" title="상품종류 선택" class="selectBox" style="margin-top:10px">
+				<option value="">타이완 대표간식</option>
+				<option value="">여름추천 TOP3</option>
+				<option value="">겨울추천 TOP3</option>
+				<option value="">야시장 먹거리</option>
+			</select>
+			
+			<!-- 1 -->
+			<div>
+				<ul class="monthCityList marT10">
+					<li>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_best_pic01.jpg" alt=""></div>
+						<div class="txtCont">
+							
+							<strong>펑리수</strong>
+							<p>타이완의 대표간식이라 하면 펑리수는  달콤한 파인애플 과즙이 담긴 과자로, 차와함께 먹으면 그 풍미를 제대로 느낄 수 있습니다. 타이페이의 "치아더" 타이중의 "일출" 등의 대표브랜드로  다양한 도전을 통해 체리, 블루베리 등 여러가지 맛을 볼 수 있습니다. </p>
+						</div>
+					</li>
+					<li>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_best_pic02.jpg" alt=""></div>
+						<div class="txtCont">
+							<strong>전통차</strong>
+							<p>타이완은 역시 상등의 우롱차, 고산차의 산지로 유명합니다. 고산차, 오룡차,  홍차, 녹차등 타이완 전역에서 다양한 차를 생산합니다. 이러한 차를 즐길 수 있는 고즈넉한 다관도 곳곳에 있어 향긋한 차내음과 함께 여유로운 휴식을 보낼 수 있습니다.</p>
+						</div>
+					</li>
+					<li>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_best_pic03.jpg" alt=""></div>
+						<div class="txtCont">
+							<strong>지파이</strong>
+							<p>지파이는 닭튀김을 의미합니다. 대신 독특한 점은 1마리를 납작하게 만들어 통으로 튀겨낸다는 점입니다.  가게에 따라 잘라주지 않고 한마리를 통으로 들고 먹어야 할 수도 있습니다. 매운 맛을 추가할 수도 있으며, 간식처럼 작은 봉투에 담아 팔기도합니다. </p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- // 1 -->
+			
+			<!-- 2 -->
+			<div>
+				<ul class="monthCityList marT10">
+					<li>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_best_pic04.jpg" alt=""></div>
+						<div class="txtCont">
+							<strong>망고빙수</strong>
+							<p>부드러운 식감과 달콤한 향기를 가진 망고를 가장 맛있게 먹을 수 있는 방법이라하면 , 시원한 우유얼음과 함께 즐기는 거라고 추천하고 싶습니다. 노란 망고가 아닌, 빨간 껍질이 특징인 애플망고의 노오란 속살과 함께 맛보는 빙수! 타이완의 대표 디저트입니다. </p>
+						</div>
+					</li>
+					<li>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_best_pic05.jpg" alt=""></div>
+						<div class="txtCont">
+							<strong>버블티</strong>
+							<p>흑진주처럼  까맣고 동그란 타피오카가 밀크티가 만나 그 진가를 전세계에 발휘하고 있습니다.  쩐쭈나이차 , 즉 버블티입니다.  타이중의 춘수당이 원조지만 지금은 타이완 전국에서 만나 볼수 있으며 춘수당, coco, 우스란(50嵐) 등 여러 브랜드가 있습니다.</p>
+						</div>
+					</li>
+					<li>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_best_pic06.jpg" alt=""></div>
+						<div class="txtCont">
+							<strong>땅콩 아이스크림</strong>
+							<p>둥글고 얆은 피에 아이스크림 두덩이를 넣고 , 땅콩엿을 대패로 갈아  올린 후 싸먹는  쌈형태의 아이스크림입니다. 지우펀  옛거리에서 유명세를 타기 시작했으며 , 그 안에 고수를 넣어먹기도 합니다. 지금은  야시장에서도 만나볼 수 있는 인기아이템입니다 
+</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- // 2 -->
+			
+			<!-- 3 -->
+			<div>
+				<ul class="monthCityList marT10">
+					<li>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_best_pic07.jpg" alt=""></div>
+						<div class="txtCont">
+							<strong>우육면</strong>
+							<p>소고기와 함께 즐기는 국수로, 그 가게와 종류가 수 십 종에 이릅니다. 우육면 대회가 있어  새로운 메뉴 개발을 끊임없이 하여 한가지 메뉴를 풍성하게 만들어줍니다. 타이완 최초의 우육면 이라고 하는 "융캉 우육면" 이나, 우육면 페스티벌 1등의  "홍사부면식잔"등이 있습니다.
+</p>
+						</div>
+					</li>
+					<li>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_best_pic08.jpg" alt=""></div>
+						<div class="txtCont">
+							<strong>곱창국수</strong>
+							<p>전골이나 구이, 순대 형태로만 만나봤던 곱창을 국수로도 즐겨볼 수 있습니다. 가쓰오부시와 간장으로 맛을 낸 육수에 짧고 얇은 면과 함께  잘게 썰린 곱창을 함께 넣어주는데 , 이는 숟가락만으로도쉽게 맛볼 수 있습니다. 시먼딩의 '아종미엔시엔'이 매우 유명하여 현지인과 관광객이 모두 길게 줄을 늘어서는 모습이 일상적인 곳입니다 
+</p>
+						</div>
+					</li>
+					<li>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_best_pic09.jpg" alt=""></div>
+						<div class="txtCont">
+							<strong>샤오롱바오</strong>
+							<p>돼지고기를 얇은 피로 깜싼  한입크기의 작은 만두입니다. 샤오롱바오의 가장 큰 특징은  만두 안에 육즙이 가득차 있다는 것으로 ,  잘못먹으면 입안이 데일 수도 있으니 조심해야합니다. 숟가락 위에 올려 만두피를 살짝 찢어 육즙을 나오게 한 후 먹는게 포인트! </p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- // 3 -->
+			
+			<!-- 4 -->
+			<div>
+				<ul class="monthCityList marT10">
+					<li>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_best_pic10.jpg" alt=""></div>
+						<div class="txtCont">
+							<strong>치즈감자</strong>
+							<p>감자를 삶아서 곫게 뭉겐 후 한번 튀겨줍니다.  고로케처럼 튀겨진 감자를 반으로 갈라 , 사이에 베이컨, 양파,  옥수수  등을 올린 후 ,  치즈 소스를 부우면 고열량의  맛있는 치즈감자가 완성!  인기가 많아서 줄서서 선주문을 합니다 </p>
+						</div>
+					</li>
+					<li>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_best_pic11.jpg" alt=""></div>
+						<div class="txtCont">
+							<strong>나우파이</strong>
+							<p>타이완식 스테이크인 니우파이는 뜨거운 철판 위해 푹익힌 고기와 계란 후라이를 올리고, 소스 가득한  두꺼운 면을 같이 올려줍니다. 강한 맛의 스테이크로  기존의 스테이크들과는 다른 풍미가 가득합니다. </p>
+						</div>
+					</li>
+					<li>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_best_pic12.jpg" alt=""></div>
+						<div class="txtCont">
+							<strong>굴전</strong>
+							<p>오동통한 굴을 가열한 철판에 전분과 함께 부쳐내어 새콤달콤한 소스를 뿌려 먹는 음식입니다. 한국식의 두툼한 부침개와 달리 얇고 쫄깃한 맛이 이색적입니다. 대략 2천원 정도의 금액으로 부담스럽지도 않으며 전을 테이크아웃 처럼 들고 갈 수도 있습니다. 
+</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- // 4 -->
+		</div>
+		<!-- // 대표간식 -->
+		
+		<!-- 추천일정 -->
+		<div class="recom_inCont" style="display:none">
+			<div class="contTop04">
+				<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/tit_cont_top_best.png" alt=""></h3>
+				
+			</div>
+			
+			<select data-role="none" title="상품종류 선택" class="selectBox" style="margin-top:10px">
+				<option value="">타이중, 힐링스토리</option>
+				<option value="">바다를 가까이, 가오슝</option>
+				<option value="">타이페이 첫 경험</option>
+				<option value="">타이페이 근교여행</option>
+			</select>
+			
+			<!-- 1 -->
+			<div>
+				<ul class="monthCityList marT10">
+					<li>
+						<span class="imgBox"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_best_ty01.jpg" alt=""></span>
+						<div class="txtCont">
+							<em class="storyTit">DAY 01</em>
+							<strong>자연과 문와의 도시 타이중,<br>그 안에서 나를 힐링 할 수 있는 일정</strong>
+							<p>타이페이의 활기참을 충분히 만끽한 재방문 고객들에게 추천하는 여행지!  박물관, 사원,  호수, 원시삼림등 여유로운 여행을 즐길 수 있습니다. 인천에서 타이중 직항편은 현재 에어 만다린만 운행하고 있으며 타이페이에서 고속철도로 이동시 1시간이면 이동할 수 있습니다.</p>
+							
+							<dl>
+								<dt>TIP</dt>
+								<dd>타이중을 자유여행할 경우엔 시내 기준 10km 까진 무료<br>(이지카드 사용조건/2015년 7월 8일부터 2km연장)</dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<span class="imgBox"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_best_ty02.jpg" alt=""></span>
+						<div class="txtCont">
+							<em class="storyTit">DAY 02</em>
+							<strong>해와 달의 호수 일월담,<br>드넓은 호수가에 역사와 활력이 담긴 곳 </strong>
+							<p>타이중에서 버스로 약 1시간 반정도 떨어져 있는 일월담은 타이완의 최대 담수호 입니다. 호숫가를 따라 산책이나 자전거를 즐길 수 있으며 , 보트를 타고  좀더 간편한 관광을 즐길 수 있습니다. 일월담에서 케이블카를 타고 구족문화촌으로 이동 할 수 있습니다.</p>
+							
+							<dl>
+								<dt>TIP</dt>
+								<dd>타이중 기차역 근처의 "난터우 객운" 을 이용</dd>
+								<dd>시간 여유가 있다면 모터보트 및 구족문화촌 케이블카까지 이용가능한 "통합표" 구매 추천.<br>(보트 티켓창구에서 구매가능) </dd>
+								
+							</dl>
+						</div>
+					</li>
+					<li>
+						<span class="imgBox"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_best_ty03.jpg" alt=""></span>
+						<div class="txtCont">
+							<em class="storyTit">DAY 03</em>
+							<strong>원시 자연 삼림계,<br>과거의 시간이 살아 숨 쉬는 숲</strong>
+							<p>타이중에서 버스로 약 3시간 정도를 이동해서 다다를 수 있는 삼림계는 원시 자연의 모습을 근접하게 느낄 수 있습니다. 거대한 나무와 아름답게 물방울을 흩뿌리며 떨어지는 폭포까지 자연경관의 생생함을 통해 진정한 힐링을 만끽 할 수 있습니다. </p>
+							
+							<dl>
+								<dt>TIP</dt>
+								<dd>삼림욕과 트래킹으로 대표적인 곳으로, 이곳을 방문 할때는 운동화 필수</dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<span class="imgBox"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_best_ty04.jpg" alt=""></span>
+						<div class="txtCont">
+							<em class="storyTit">DAY 04</em>
+							<strong>알록 달록 무지개마을,<br>화려함을 마지막으로 눈에 담고 집으로 </strong>
+							<p>무지개마을은 타이중의 외곽에 위치한 알록달록한 색을 입은 벽화 마을로, 본래 철거가 될뻔했던 곳입니다.
+이곳에 살던 황용푸 할아버지는 벽에, 바닥에 색을 입히기 시작했고 혼자의 힘으로 이제는 외국인들도 꼭 방문하는 대표 관광지가 되었습니다. </p>
+							
+							<dl>
+								<dt>TIP</dt>
+								<dd>규모는 매우 작은 편이니 큰 기대는 금물</dd>
+								<dd>지금도 살고 있는 사람이 있으니, 이곳을 방문할때는 조용히 관람할 곳 </dd>
+							</dl>
+						</div>
+					</li>
+				</ul>
+				<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP153&packageSearchName=%ED%9E%90%EB%A7%81&packageMasterStartMonth=201605" data-role="none" class="btnPink">연관 상품 보기</a>
+			</div>
+			<!-- // 1 -->
+			
+			<!-- 2 -->
+			<div>
+				<ul class="monthCityList marT10">
+					<li>
+						<span class="imgBox"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_best_ty05.jpg" alt=""></span>
+						<div class="txtCont">
+							<em class="storyTit">DAY 01</em>
+							<strong>타이완의 부산 가오슝,<br>나라 끝까지 훑어 볼 수 있는 일정 </strong>
+							<p>북에서 남으로, 타이페이와 타이중까지 모두 섭렵한 타이완 전문가에게 추천하는 가오슝! 바다와 예술, 역사까지 다양한 모습을 만나 볼 수 있습니다. 타이페이에서 고속철도로 1시간 반이면 도착할 수 있습니다.</p>
+							
+							<dl>
+								<dt>TIP</dt>
+								<dd>타이페이와 함께 가오슝을 염두에 두고있다면 고속철도 THSR 3일권을 사는것을 추천.<br> 가오슝 완복만으로도 본전 이상의 값을 한다. </dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<span class="imgBox"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_best_ty06.jpg" alt=""></span>
+						<div class="txtCont">
+							<em class="storyTit">DAY 02</em>
+							<strong>세계 최대 사찰 불광산사,<br> 국제회의장을 비롯한 대규모 경내</strong>
+							<p>대중에게 다가가는 불교를 지향하는 불광사는, 그저 사찰만 운영하는 것이 아닌 대중을 위한 다방면의 업종에 투자하고 있습니다. 3만명이 들어갈 수 있는 광장, 교리를 공부할 수 있는 대학, 미술관, 전시실, 공연장, 회의실 등 공공시설도 잘 갖추어져있습니다.</p>
+							
+							<dl>
+								<dt>TIP</dt>
+								<dd>타이중 기차역 근처의 "난터우 객운" 을 이용</dd>
+								<dd>쭈어잉 역에서 8501 버스를 타고 목적에 따라 정문 / 불타기념관 각기 다른 정류장에서 하차. 시간에 따라 불광산사까지 안가는 경우도 있으니 정류장의 시간표 참조</dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<span class="imgBox"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_best_ty07.jpg" alt=""></span>
+						<div class="txtCont">
+							<em class="storyTit">DAY 03</em>
+							<strong>복합 테마파크 이다월드와 로맨틱 야경의 핫스팟 아이허</strong>
+							<p>이다월드는 대만 이다그룹에서 투자해 설립한  테마파크입니다. 
+유럽의 정취를 한껏 느낄 수 있는 곳으로  이곳에서는 놀거리 가득한 놀이공원뿐 아니라 호텔, 아울렛, 명품관등 즐거운 시간을 보내실 수 있습니다. </p>
+							
+							<dl>
+								<dt>TIP</dt>
+								<dd>종일권은 오후 2시부터 저렴해진다. 아예 일찍 갈게 아니라면  약간 늦게 가는것도  방법</dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<span class="imgBox"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_best_ty08.jpg" alt=""></span>
+						<div class="txtCont">
+							<em class="storyTit">DAY 04</em>
+							<strong>예술의 정취를 따라 보얼예술특구,<br>일제강점기 부두의 화려한 변신</strong>
+							<p>바다를 옆에 끼고 있는 보얼예술특구는, 과거 일제 감정기 시대 부두와 창고였던 곳을 감각적으로 재정비하여 갤러리 , 까페, 레스토토랑 등으로 변신한 곳입니다. 중간중간 귀엽고 독특한 조형물과 벽화들을 눈과 마음에 남겨주세요.</p>
+							
+							<dl>
+								<dt>TIP</dt>
+								<dd>펑리수 유명 브랜드인 써니힐이 입점되어있으니 귀국 전 펑리수를 구매할 예정이라면 방문추천! </dd>
+							</dl>
+						</div>
+					</li>
+				</ul>
+				<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP120&packageMasterStartMonth=201605" data-role="none" class="btnPink">연관 상품 보기</a>
+			</div>
+			<!-- // 2 -->
+			
+			<!-- 3 -->
+			<div>
+				<ul class="monthCityList marT10">
+					<li>
+						<span class="imgBox"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_best_ty09.jpg" alt=""></span>
+						<div class="txtCont">
+							<em class="storyTit">DAY 01</em>
+							<strong>타이완의 수도 타이페이,<br>처음이라면 꼭 봐야 할 주요일정 </strong>
+							<p>타이완을 처음 방문하셨다면, 타이페이 부터 돌아보시기를 추천합니다. 교통이 편리하고, 역사, 문화, 미식의 정수가 한곳에 모인 그곳! 
+인천 - 도원 / 김포 - 송산 2개의 공항이 있으니 편한 곳에서 출발하세요.</p>
+							
+							<dl>
+								<dt>TIP</dt>
+								<dd>자유여행객들이라면 신청해야 할 것 3가지 <br>  1. 이지카드 발급 <br>    2. wifi 에그 신청<br> 3. 만 30세 이하라면 유스트레블 카드  </dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<span class="imgBox"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_best_ty10.jpg" alt=""></span>
+						<div class="txtCont">
+							<em class="storyTit">DAY 02</em>
+							<strong>야경이 아름다운 101 타워,<br>맛집 가득 야시장까지</strong>
+							<p>여행의 하루를 특별하게 마무리해 볼까요 ?<br>
+타이페이의 랜드마크 101타워 전망대에 올라 보석같은 타이페이 야경을 내려다 보거나 먹거리가 사방에 넘쳐 흐르는 야시장을 방문해보세요. </p>
+							
+							<dl>
+								<dt>TIP</dt>
+								<dd>전망대까지 올라가는 엘리베이터는 매우 빨라서 귀가 멍해지거나 어지러울 수 있으니 마음의 준비를하거나 침을 한번 삼키기 </dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<span class="imgBox"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_best_ty11.jpg" alt=""></span>
+						<div class="txtCont">
+							<em class="storyTit">DAY 03</em>
+							<strong>천등 날리기 스펀, <br>색색의 종이에 소원을 담아 하늘로</strong>
+							<p>옛 정취 가득한 기차역 앞 철로에서, 내 소원을 가득 담은 천등을 날려보세요. 빨간색은 건강, 노란색은 금전, 보라색은 학업, 복숭아색은 연애 등 다양한 의미를 가지고 있습니다.<br>소원이 많아 고민하는 분들을 위해 4색을 모두 갖춘 천등도 있습니다.
+</p>
+							
+							<dl>
+								<dt>TIP</dt>
+								<dd>주로 스펀역 철로에서 천등을 날리는데 여전히 기차가 운행되고 있으니, 경적 소리가 울리면 재빨리 물러날 것. </dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<span class="imgBox"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_best_ty12.jpg" alt=""></span>
+						<div class="txtCont">
+							<em class="storyTit">DAY 04</em>
+							<strong>휴식처이자 웨딩 촬영 명소 사림관저</strong>
+							<p>복잡한 타이페이 시내에서 고즈넉함을 느끼고 싶을때 방문하기 좋은 곳입니다. 높이 솟은 나무들과 무성하게 푸르른 낮은 나무들이 어우러진 정원은 몸과 마음에 휴식을 선사합니다. 거기에 잘 가꿔진 유럽식 정원에서는 웨딩 촬영이 진행되기도 합니다.</p>
+							
+							<dl>
+								<dt>TIP</dt>
+								<dd>정원까지는 무료. 관저 내부는 유료관람 100NTD<br>(약 3800원)</dd>
+							</dl>
+						</div>
+					</li>
+				</ul>
+				<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP104&packageMasterStartMonth=201605" data-role="none" class="btnPink">연관 상품 보기</a>
+			</div>
+			<!-- // 3 -->
+			
+			<!-- 4 -->
+			<div>
+				<ul class="monthCityList marT10">
+					<li>
+						<span class="imgBox"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_best_ty13.jpg" alt=""></span>
+						<div class="txtCont">
+							<em class="storyTit">DAY 01</em>
+							<strong>색다른 여행지가 가득,<br>타이페이를 넘어 색다른 온천 체험</strong>
+							<p>도심에도 놀거리가 많지만, 외곽으로 가면 색다른 전경이 펼쳐집니다. 세계 온천의 박물관이라는 별명을 가질정도로 타이완은 다양한 수질을 가지고 있는데 특히 북쪽의 베이터우나 양명산으로 가면 쉽게 온천욕을 하실 수 있습니다. </p>
+							
+							<dl>
+								<dt>TIP</dt>
+								<dd>저렴하게 즐기려면 베이터우 노천 온천장</dd>
+								<dd>고급스런  곳을 찾는다면 우라이 온천을 추천</dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<span class="imgBox"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_best_ty14.jpg" alt=""></span>
+						<div class="txtCont">
+							<em class="storyTit">DAY 02</em>
+							<strong>대리석 협곡 화련,<br>아름다운 옥색 물과 아름다운 바다</strong>
+							<p>화련은 뒤쪽으로 웅대한 동부산맥이 있고 타이완에서도 유수의 절경을 자랑하는 도시입니다. 태록각협곡과 아미족 문화촌으로 유명하며 대리석과 비취희산지(稀産地)로 유명한곳입니다. 7개의 별이있는 연못이라는 칠성담에서는 탁트인 시원한 바다를 만날 수 있습니다.</p>
+							
+							<dl>
+								<dt>TIP</dt>
+								<dd>안내가 있는 특정 구간에서는 안전모를 착용 할 것. 낙석으로 부상 위험이 있다. </dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<span class="imgBox"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_best_ty15.jpg" alt=""></span>
+						<div class="txtCont">
+							<em class="storyTit">DAY 03</em>
+							<strong>홍등의 이국적인 마을 지우펀,<br>센과 치히로의 행방불명 배경이 된 곳</strong>
+							<p>붉은 홍등이 자아내는 이국적인 느낌은 많은 사람들에게 수많은 영감을 주었습니다. <br>
+유명 애니메이션 "센과 치히로의 행방불명"의 모티브가 되었다는 지우펀의 아름다움을 눈으로 확인해보세요 . 황금박물관 역시 멀지 않으니 한번에 방문하기 좋습니다. 
+</p>
+							
+							<dl>
+								<dt>TIP</dt>
+								<dd>땅콩 아이스크림을 꼭 맛볼 것 </dd>
+								<dd>옛 거리 끝까지 가면 지우펀을 한번에 내려다 볼 수 있으니, 사람이 많다고 포기하지 말 것 </dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<span class="imgBox"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_best_ty16.jpg" alt=""></span>
+						<div class="txtCont">
+							<em class="storyTit">DAY 04</em>
+							<strong>파도와 바람의 하모니 야류 지질공원,<br>기암괴석과 화석이 곳곳에 </strong>
+							<p>근교까지 돌아보려면 시간이 빠듯하겠지만 이곳 역시 눈에 담고 가셨으면 좋겠습니다. 
+버섯바위, 여왕바위, 하트바위 등 곳곳에 기이한 형태로 깎여있는 바위는 자연의 경이로움에 감탄하게 합니다. </p>
+							
+							<dl>
+								<dt>TIP</dt>
+								<dd>바닥도 살펴 볼 것. <br> 해양 생물의 화석을 곳곳에서 발견 할 수 있다.</dd>
+							</dl>
+						</div>
+					</li>
+				</ul>
+				<a href="http://m.hanatour.com/application/package/package_masterDetail.jsp?packageMasterCode=ATP119&packageMasterStartMonth=201605" data-role="none" class="btnPink">연관 상품 보기</a>
+			</div>
+			<!-- // 4 -->
+			
+			
+		</div>
+		<!-- // 추천일정 -->
+		
+		<!-- 이벤트 -->
+		<div class="recom_inCont" style="display:none">
+			<ul class="cont_inTab02">
+				<li class="on"><a href="#" data-role="none">SNS공유 이벤트</a></li>
+				<li><a href="#" data-role="none">SM면세점 이벤트</a></li>
+			</ul>
+			
+			<!-- sns공유 -->
+			<div class="eventSnsCont">
+				<div class="insnsTop">
+					<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/tit_event01.png" alt=""></h3>
+					<p>이벤트 기간 : 2016년 5월1일(일) ~ 5월31일(화)<br>당첨자 발표 : 2016년 6월 10일(금)</p>
+					<a href="http://m.hanatour.com/application/eventCoupon/eventCoupon_comment.jsp?eventNum=22738" data-role="none" target="_blank" title="새창" class="btnPink">이벤트 바로가기</a>
+					
+					<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_event01.png" alt=""></span>
+				</div>
+			</div>
+			<!-- // sns공유 -->
+			
+			<!-- sm면세점 -->
+			<div class="eventSmCont" style="display:none">
+				<h3><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/tit_event02.png" alt=""></h3>
+				
+				<div class="special" style="margin-top:-28px">
+					<h4>선불카드 2만원</h4>
+					<span><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_event02_01.jpg" alt=""></span>
+				</div>
+				
+				<div class="special">
+					<h4>8만원 + 17% 할인</h4>
+					<a href="http://www.smdutyfree.com/fpr105.do?goTo=eventDetail&evtCd=20160300123&smdfExhCode=mha_ss" data-role="none" target="_blank" title="새창"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_event02_02.jpg" alt=""></a>
+				</div>
+				
+				<div class="special">
+					<h4>추천 면세품</h4>
+					<a href="http://www.smdutyfree.com/fpr105.do?goTo=eventDetail&evtCd=20160400151&smdfExhCode=mha_heal" data-role="none" target="_blank" title="새창"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_event02_03.jpg" alt=""></a>
+				</div>
+				
+				<div class="special">
+					<h4>기타혜택</h4>
+					<a href="http://m.hanatour.com/application/travelingEvent/travelingEvent_promotionDetail.jsp?prdCode=P12452" data-role="none" target="_blank" title="새창"><img src="http://image1.hanatour.com/mobile/common/thismonth/201605/img_event02_04.jpg" alt=""></a>
+				</div>
+				
+			</div>
+			<!-- // sm면세점 -->
+		
+		</div>
+		<!-- // 이벤트 -->
+		
+		
+	</div>
+	<!-- //컨텐츠 영역 -->
+	
+	
+	<footer class="newFoot">
+		<ul>
+			<li><a href="#" data-role="none">로그인</a></li>
+			<li><a href="#" data-role="none">PC버전</a></li>
+			<li><a href="#" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+		</ul>
+		<div>
+			<a href="#" data-role="none">이용약관</a>|
+			<a href="#" data-role="none">개인정보처리방침</a>|
+			<a href="#" data-role="none">여행약관</a>|
+			<a href="#" data-role="none">사업자정보확인</a>
+		</div>
+		<address>
+				㈜ 하나투어 | 대표자: 김진국 | 사업자등록번호 : 102-81-39440<br>
+				통신판매업신고번호 : 종로01-1806호 | 개인정보관리 책임자 : 박성재<br>
+				[110-160]서울특별시 종로구 인사동 5길 41 ㈜ 하나투어<br>
+				하나투어상담센터 : <a href="tel:1577-1233" data-role="none">1577-1233</a> | FAX : 02-734-0392<br>
+				이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> | 호스팅 서비스 사업자 : ㈜하나투어<br>
+				관광사업자 등록번호 : 제1933-000006호 | 영업보증보험 : 22억 1천만원 가입<br>
+				COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+		</address>
+	</footer>
+	
+</div>
+
+
+</body>
+</html>
+

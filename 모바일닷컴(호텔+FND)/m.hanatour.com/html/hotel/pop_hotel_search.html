@@ -1,0 +1,93 @@
+<script type="text/javascript">
+	$('#overlayPanel').on('open.loadpop', function (e, data) {
+   		if (LODGE !== undefined && typeof LODGE.initDetailSearch === 'function') LODGE.initDetailSearch();
+   	});
+</script>
+
+<div id="popReserve01">
+	<div class="popReserve01">
+		
+		<div class="header">
+			<h3>상세검색<a href="#" class="closeOverlayPanel" data-role="none" title="레이어닫기"></a></h3>
+		</div>
+		<div class="innerScroller">
+			
+			<div class="pop_inpTxt">
+				<input type="text" data-role="none" title="호텔명 검색" placeholder="호텔명 검색">
+				<a href="#" data-role="none" title="검색"><img src="http://image1.hanatour.com/mobile/common/hotel/btn_hotel_naming.png" alt=""></a>
+			</div>
+			
+			<!-- 가격 범위 -->
+			<div class="widthBox">
+				<h4 class="stitPop01">가격 범위 <b>(1박 가격)</b></h4>
+				<div class="moneySect">
+					<span>￦ 0</span><!-- 가격변동시 class="on" 추가 -->
+					<span>￦ 1,400,000</span>
+				</div>
+				<div id="slider"></div><!-- 가로스크롤 -->
+			</div>
+			<!-- // 가격 범위 -->
+			
+			<!-- 호텔 등급 -->
+			<div class="popHotelLevel">
+				<h4 class="stitPop01">호텔 등급</h4>
+				<ul>
+					<li><a href="#" data-role="none">1</a></li><!-- 선택시 class="on" -->
+					<li><a href="#" data-role="none">2</a></li>
+					<li><a href="#" data-role="none">3</a></li>
+					<li class="on"><a href="#" data-role="none">4</a></li>
+					<li><a href="#" data-role="none">5</a></li>
+				</ul>
+			</div>
+			<!-- // 호텔 등급 -->
+			
+			<div class="popLabelAco">
+				<h4 class="on"><a href="#" data-role="none">숙박시설 종류</a></h4>
+				<div>
+					<label><input type="checkbox" checked="checked" class="redCheck" data-role="none"><span>샘플</span></label>
+					<label><input type="checkbox" checked="checked" class="redCheck" data-role="none"><span>샘플</span></label>
+					<label><input type="checkbox" checked="checked" class="redCheck" data-role="none"><span>샘플</span></label>
+				</div>
+			</div>
+			
+			<div class="popLabelAco">
+				<h4 class="on"><a href="#" data-role="none">부대시설</a></h4>
+				<div>
+					<label><input type="checkbox" checked="checked" class="redCheck" data-role="none"><span>무료 Wi-Fi (173)</span></label>
+					<label><input type="checkbox" checked="checked" class="redCheck" data-role="none"><span>무료 아침 식사 (85)</span></label>
+					<label><input type="checkbox" checked="checked" class="redCheck" data-role="none"><span>무료 주차 (43)</span></label>
+					<label><input type="checkbox" checked="checked" class="redCheck" data-role="none"><span>공항 셔틀 (33)</span></label>
+					<label><input type="checkbox" checked="checked" class="redCheck" data-role="none"><span>마사지샵 (22)</span></label>
+					<label><input type="checkbox" checked="checked" class="redCheck" data-role="none"><span>사우나/스파 (54)</span></label>
+					<label><input type="checkbox" checked="checked" class="redCheck" data-role="none"><span>연회장 (10)</span></label>
+				</div>
+			</div>
+			
+			<div class="popLabelAco">
+				<h4 class="on"><a href="#" data-role="none">부가서비스</a></h4>
+				<div>
+					<label><input type="checkbox" checked="checked" class="redCheck" data-role="none"><span>샘플</span></label>
+					<label><input type="checkbox" checked="checked" class="redCheck" data-role="none"><span>샘플</span></label>
+					<label><input type="checkbox" checked="checked" class="redCheck" data-role="none"><span>샘플</span></label>
+				</div>
+			</div>
+			<div class="popLabelAco">
+				<h4 class="on"><a href="#" data-role="none">위치</a></h4>
+				<div>
+					<select title="위치 선택" data-role="none" class="btnselRed" style="margin-bottom:15px">
+						<option>선택</option>
+						<option>도쿄</option>
+					</select>
+				</div>
+			</div>
+			
+			<div class="fullBtn side">
+				<a href="#" data-role="none">초기화</a>
+				<a href="#" data-role="none">검색적용</a>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<!-- // 상세검색 팝업 end -->
+

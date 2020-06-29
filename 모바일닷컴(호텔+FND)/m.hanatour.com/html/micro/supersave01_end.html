@@ -1,0 +1,835 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>슈퍼세이브 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="../../css/main.css">
+<link rel="stylesheet" type="text/css" href="../../css/micro/super_save.css"> <!-- 슈퍼세이브 추가 -->
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-2.1.3.min.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery.mobile-1.4.5.min.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery.lazyload.js?v=1.9.1"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/etc/iscroll.carousel.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/etc/iscroll.swipeview.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/etc/fixedPostiion.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/etc/fastclick.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/sub.js" type="text/javascript"></script>
+<script type="text/javascript">
+/* 탭 */
+$(document).ready(function(){
+  $("#spContTab01").click(function(){
+   $(".spContTab01").show();
+   $(".spContTab02").hide();
+   $(this).addClass("on");
+   $("#spContTab02").removeClass("on");
+  });
+  $("#spContTab02").click(function(){
+   $(".spContTab02").show();
+   $(".spContTab01").hide();
+   $(this).addClass("on");
+   $("#spContTab01").removeClass("on");
+  });
+});
+
+/* 이용안내 아코디언 */
+$(document).ready(function(){
+  $(".ss_inforTit").click(function(){
+   $(this).toggleClass("open");
+  });
+});
+
+/* 팝업 띄우기 */
+function openOverlayPanel(that){
+	var url = that.attr("href");
+
+	callAjax(url, function(data){
+		$("#overlayPanel").html(data);
+
+		var sTop = $(window).scrollTop();
+		var winH = window.innerHeight;
+
+		overlayPanelPos = $(window).scrollTop();
+		mask(true, "#overlayPanel");
+
+		var callback = that.attr("data-callback");
+		if(callback != "" && callback != undefined){
+			callback = callback + "(that)";
+			eval(callback);
+		}
+
+		$("#overlayPanel").height(winH).css("min-height", winH).show();
+		setTimeout(function(){
+			$("#overlayPanel").addClass("slide slideUp").one(ANI_EV, function() {
+				$("#wrap").hide();
+				$(window).scrollTop(0);
+				$("#overlayPanel").height("auto").addClass("show").removeClass("slideUp slide");
+
+				try{
+					afterSlideUpPop();
+				}
+				catch(e){}
+			});
+		}, 50);
+
+		$(".closeOverlayPanel").one("click", function(){
+			closeOverlayPanel("close");
+			return false;
+		});
+	});
+}
+
+function closeOverlayPanel(state, target){
+	var winH = window.innerHeight;
+	if(target == "" || target == undefined)
+		target = "#overlayPanel";
+
+	$(target).height(winH).addClass("slide");
+
+	if(target == "#overlayPanel") {
+		$("#wrap").show();
+		$(window).scrollTop(overlayPanelPos);
+		mask(false, target);
+	}
+	else{
+		$("#overlayPanel").show();
+		$(window).scrollTop(overlayPanelPos02);
+	}
+
+	$(target).addClass("slideDown").one(ANI_EV, function() {
+		$(target).attr("style", "").removeClass("slideDown slide show").hide();
+	});
+}
+function mask(flag, target){
+	if(flag){
+		if(target != "#overlayPanel"){
+			$("body .ui-page").append("<div id='mask' class='mask'></div>");
+			disableTouchEvent(target);
+		}
+	}
+}
+$(document).on("click", ".alAdd", function(){
+	var url = $(this).attr("href");
+	var data = $(url).html();
+	$("#overlayPanel").html(data);
+
+	var sTop = $(window).scrollTop();
+	var winH = window.innerHeight;
+
+	overlayPanelPos = $(window).scrollTop();
+	mask(true, "#overlayPanel");
+
+	$("#overlayPanel").height(winH).css("min-height", winH).show();
+	setTimeout(function(){
+		$("#overlayPanel").addClass("slide slideUp").one(ANI_EV, function() {
+			$("#wrap").hide();
+			$(window).scrollTop(0);
+			$("#overlayPanel").height("auto").addClass("show").removeClass("slideUp slide");
+
+			try{
+				afteralAdd();
+			}
+			catch(e){}
+		});
+	}, 50);
+
+	$(".closeOverlayPanel").one("click", function(){
+		closeOverlayPanel("close");
+		return false;
+	});
+
+	return false;
+});
+</script>
+</head>
+
+<body>
+
+<div id="wrap">
+	<header id="header"><!-- 띠배너 보일경우 class="tBanTy" 추가 -->
+		<div class="inner">
+			<h1><a href="#" data-role="none"><img src="../../images/common/btn_nlogo.png" alt="하나투어"></a></h1>
+			<a href="#" id="btnMenu" data-role="none"><img src="../../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+			<a href="#" id="btnMyhome" data-role="none"><img src="../../images/common/btn_hdright.png" alt="마이홈"></a>
+		</div>
+	</header>
+	<div class="headerMargin02"></div> <!-- 네비없을경우 class="headerMargin02".상단 띠배너 노출일경우 class="headerMargin04" -->
+
+	<!-- 컨텐츠 영역 -->
+	<div id="container" class="ssContainer">
+		
+		<!-- 슈퍼세이브 content start -->
+		<div class="superSaveSect bg_week01"> <!-- 요일별 BG class bg_week01 ~ bg_week05 -->	
+			<div>
+            	<h2 class="titSuperSave"><img src="../../images/supersave/logo_supersave01.png" alt="소셜에도 없는 가격, 소셜에 할인을 더하다! SUPER SAVE"></h2>
+                <!-- 탭 -->
+                <ul class="sSaveTab">
+                	<li id="spContTab01" class="on"><a href="#" data-role="none">오늘의 슈퍼세이브</a></li>
+                    <li id="spContTab02"><a href="#" data-role="none">판매 예정</a></li>
+                </ul>
+				<!-- // 탭 end -->
+                
+                <!-- 오늘의 슈퍼세이브 start  -->
+                <div class="spContTab01">
+                	<!-- 이미지영역-->
+                	<div class="ssImgCont">
+                    	<span class="p_img"><img src="../../images/supersave/img_dummy_product.jpg" alt="상품"></span>
+                    	<div class="posiBox">
+                            <span class="vol">한정수량<strong>1000<em>&nbsp;개</em></strong></span>
+                            <span class="time">남은시간<strong>10:17:50</strong></span>
+                        </div>
+						<span class="saleBox">70<sup>%</sup></span> 
+						
+						<!-- 매진일경우 display:block -->
+						<div class="soldOutBox" style="display:no ne">
+							<span><img src="../../images/supersave/img_soldout.png" alt="매진 - 성원에 감사드립니다."></span>
+						</div>
+						<!-- // 매진일경우 display:block end-->
+                    </div>
+                    <!-- // 이미지영역 end -->
+                    
+                    <div class="ss_whiteSect">
+                    	<h3 class="titProduct">[북경] 아시아나항공 + 준 특급호텔 스페셜 패키지 4일</h3>
+                        
+                        <div class="moneyBox">
+                        	<span class="prevMoney">540,000 <em>원</em></span>
+                        	<div>
+                            	<span>세이브가</span>
+                                <strong>199,000<em>원</em></strong>
+                            	<a href="#" data-role="none" title="상세내용 팝업 보기"></a>
+                            </div>
+                        </div>
+                        
+                        <div class="dotCont">
+                        	<span class="smTop"><strong>혜택</strong>아시아나항공 + 준특급호텔 + 특식3회제공</span>
+                            <span class="smTop"><strong>출발</strong>7/14, 7/16, 7/18, 7/20, 7/23, 7/25</span>
+                            
+							
+							<span class="ssBtnOut" style="display:no ne">판매종료</span><!-- 판매종료 일경우 -->
+                            <!-- // 버튼 end -->
+                        </div>
+                        
+                        
+                    </div>
+					
+                    <!-- 이벤트 배너영역 -->
+                    <div class="swipeView ssEvent">
+						<div class="slider ">
+							<ul>
+								<li class="page">
+									<a href="#" class="bgColor01" data-role="none"> <!-- 이벤트 bg 컬러 class : bgColor01 ~ bgColor03 -->
+										<span><img src="../../images/supersave/tit_event01.png" alt="슈퍼 이벤트1"></span> <!-- 이미지타이틀 tit_event01.png ~ tit_event03.png -->
+										<strong><em>SNS 투게더</em> 공유이벤트</strong>
+                            			<p>슈퍼세이브 공유하면 기프티콘을 드립니다.</p>
+									</a>
+								</li>
+								<li class="page" style=" display:none">
+									<a href="#" class="bgColor02" data-role="none">
+										<span><img src="../../images/supersave/tit_event02.png" alt="슈퍼 이벤트2"></span>
+										<strong><em>SNS 투게더</em> 공유이벤트</strong>
+                           				<p>슈퍼세이브 공유하면 기프티콘을 드립니다.</p>
+									</a>
+								</li>
+							</ul>
+							
+						</div>
+						<div class="slideBtn indicator"></div>
+					</div>
+                    <!-- // 이벤트 배너영역 end -->
+					
+					
+                    <!-- 이용안내 start -->
+                    <dl class="ss_infor">
+                        <dt class="ss_inforTit"><a href="#" data-role="none">슈퍼세이브 이용안내</a></dt> <!-- 클릭시 dt class="open"추가 -->
+                        <dd>
+                            <ul>
+                                <li>슈퍼세이브는 저렴한 가격으로 인기 여행상품을 제공하는 하나투어만의 고객을 위한 혜택서비스입니다. <br>슈퍼세이브는 주중 오후 1시에 새로운 상품 판매를 시작으로 24시간 후에 종료됩니다.<br>슈퍼세이브 상품은 판매수량이 제한되어 있으며, 준비된 전체수량이 24시간 이전에 모두 판매되면 그날의 슈퍼세이브는 종료됩니다.</li>
+                                <li>슈퍼세이브 상품을 예약하고 실제 결제하지 않아 예약취소가 잦은 고객은 슈퍼세이브 서비스 이용시 불이익을 받으실 수 있습니다.<br>(5번의 예약취소가 발생하면 서비스 이용을 제한합니다.)<br>또한 슈퍼세이브 상품의 할인가가 (소셜을 포함하여) 다른 쇼핑몰보다 비싼 경우 100% 보장해드립니다.</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <!-- 이용안내 End -->
+                    
+                    <!-- 상품소개영역 start -->
+                    <div class="p_introCont">
+                    	<h3>지금껏 이런 여행을 기다려왔다!<strong>[북경] 아시아나항공+준특급호텔 패키지 4일</strong></h3>
+                        <ul>
+                        	<li>
+                            	<h4 class="bg_tit01">슈퍼혜택</h4>
+                                <strong>아시아나항공과 준특급호텔</strong>
+                                <p>만리장성 등 인기관광은 물론 전 일정 식사까지 모두 포함</p>
+                            </li>
+                            <li>
+                            	<h4 class="bg_tit02">출발일</h4>
+                                <strong>슈퍼세이브로 떠난다</strong>
+                                <p>7/14, 7/16, 7/18, 7/20, 7/23, 7/25</p>
+                            </li>
+                            <li>
+                            	<h4 class="bg_tit03">차별화포인트</h4>
+                                <strong>4명이상 무조건 출발확정 (국적기 기준)</strong>
+                                <p>제한된 쇼핑(2회) 진행 &amp; 왕부정 거리 자유시간 시, 고치 시식체험, 검증된 하나투어 전용식당에서 식사제공</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- // 상품소개영역 end -->
+                    
+                    <!-- 특별한 혜택 start -->
+                    <div class="p_venefitCont">
+                    	<h3>상품을 선택하신 고객님들을 위한<strong>특별한 혜택</strong></h3>
+                        <dl>
+                        	<dt class="bgtit01">CLASSIC 스페셜 일정</dt>
+                            <dd>
+                            	<ol>
+                                	<li>북경의 작은 계림이라 불리는 아름다운 호수'용경협 뱃놀이'($50상당)유람</li>
+                                    <li>여행의 피로를 말끔히 씻어주는'발마사지'($20상당) 체험</li>
+                                    <li>UNESCO 세계문화유산 자금성,이화원,만리장성 관광</li>
+                                    <li>먹거리로 가득한 북경의 명동으로 불리는 최대의 번화가 '왕부정거리' 관광 및 '꼬치시식' 체험 </li>
+                                    <li>북경의 아트거리 '798 다산자 거리'관광</li>
+                                    <li>중국 고전 설화를 현대 무용과 최첨단 무대 시설로 연출한 버라이어티 쇼 '금면왕조'(50$상당) 관람</li>
+                                    <li>숨막히는 곡예들과 다양한 기술로 집대성한 '베이징 서커스' ($20상당)관람</li>
+                                    <li>전문대가 관광 시, 투썸플레이스 음료쿠폰 제공</li>
+                                </ol>
+                            </dd>
+                            <dt class="bgtit02">CLASSIC 스페셜 식사</dt>
+                            <dd>
+                            	<ol>
+                                	<li>역사와 전통을 자랑하는 북경의 대표 별미,'전취덕 북경 오리 구이'</li>
+                                    <li>컴플레인 0%, 현지 한국인들이 인정한 깔끔한 맛,'한식&amp;오리훈제'</li>
+                                    <li>향긋한 '버섯탕'과 한국인의 입맛을 고려한 '각종 현지식'</li>
+                                    <li>명품 사천요리'샤브샤브(훠궈)'</li>
+                                </ol>
+                            </dd>
+                        </dl>
+                    </div>
+                    <!-- // 특별한 혜택 end -->
+                    
+                    <!-- 포함+불포함 내역 start-->
+                    <dl class="p_inclusionCont">
+                    	<dt class="bgYes">포함내역</dt>
+                        <dd>
+                        	<ol>
+                                <li>1억원여행자보험, 출발공항세, 관광진흥개발기금</li>
+                                <li>현지공항세, 방문지세금</li>
+                                <li>왕복 국제선 항공료, 유류할증료, 관광지 입장료, 전일정 식사</li>
+                            </ol>
+                        </dd>
+                        <dt class="bgNone">불포함내역</dt>
+                        <dd>
+                        	<ul>
+                                <li>1 인당 전 일정 40 USD의 가이드/기사 경비를 현지에서 지불해야 합니다.
+                                	<p>- 물값 등 기타개인경비,마사지,객실등의 매너팁<br>
+                                    - 중국 단체비자 발급비용(35000원. 4박5일기준) 
+                                    </p>
+                                </li>
+                                <li>매너팁은 소비자의 자율적 선택으로 지불여부에 따른 불이익은 없습니다</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <!-- // 포함+불포함 내역 end -->
+                    
+                    <!-- 여행일정 start -->
+                    <div class="p_tavelCont">
+                    	<h3>여행일정</h3>
+                        <ol>
+                        	<li>
+                            	<span class="dayNum"><strong>1</strong>DAY</span>
+                                <p class="starTxt">
+                                	인천 국제 공항 출발 [KE0805-09:15]
+                                	<span>기내식 1회 제공, 비행 소요 시간 (약 02시간 00분 소요)</span>
+                                </p>
+                                <p class="starTxt">천진 국제 공항 도착 [KE0805-10:10]</p>
+                                <p class="starTxt">
+                                	천진-북경간 고속도로 이용, 북경시내로 이동<br>약 2시간 소요)
+                                	<span>호텔 투숙 및 휴식</span>
+                                </p>
+                                <div class="foodCont">
+                                	<span><strong>조식</strong>: 기내식</span>
+                                    <span><strong>석식</strong>: 기내식</span>
+                                </div>
+                            </li>
+                            <li>
+                            	<span class="dayNum"><strong>2</strong>DAY</span>
+                                <p class="starTxt">
+                                	호텔조식 후 항주로 이동
+                                	<span>서호유람(유람선 탑승), 화황관어 &rarr; 청하방 옛거리 관광</span>
+                                </p>
+                                <div class="foodCont">
+                                	<span><strong>조식</strong>: 호텔식</span>
+                                    <span><strong>중식</strong>: 사천요리</span>
+									<span><strong>석식</strong>: 동파육+거지닭</span>
+                                </div>
+                            </li>
+                            <li>
+                            	<span class="dayNum"><strong>3</strong>DAY</span>
+                                <p class="starTxt">
+                                	호텔조식 후 주가각으로 이동
+                                	<span>주가각, 방생교, 나룻배 유람 &rarr; 명청 옛거리 관광 &rarr; 상해로 이동 &rarr; 발마사지 체험 &rarr; 상해 임시정부 청사</span>
+                                </p>
+                                <div class="foodCont">
+                                	<span><strong>조식</strong>: 호텔식</span>
+                                    <span><strong>중식</strong>: 한식</span>
+									<span><strong>석식</strong>: 샤브샤브</span>
+                                </div>
+                            </li>
+							<li>
+                            	<span class="dayNum"><strong>4</strong>DAY</span>
+                                <p class="starTxt">
+                                	호텔조식 후 상해로 이동
+                                	<span>상해 푸동공항 출발 &rarr; 인천 국제공항 도착</span>
+                                </p>
+                                <div class="foodCont">
+                                	<span><strong>조식</strong>: 호텔식</span>
+                                    <span><strong>중식</strong>: 기내식</span>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                    <!-- //여행일정 end -->
+                    
+                    <!-- 호텔 start -->
+                    <div class="p_hotelCont">
+                    	<h3>호텔</h3>
+                        
+                        <dl>
+                        	<dt><span>세계 체인 호텔의 품격을 그대로!</span><strong>시노베이 라마다 호텔</strong></dt>
+                            <dd class="img"><img src="../../images/supersave/img_hotel01.jpg" alt=""></dd>
+                            <dd class="txt">푸동공항까지 약 1시간거리, 시내에서 약 50분 거리. 2007년에 오픈, 금산과 봉현구 사이에 자리한 휴식공간 총 18층 규모에 객실, 레스토랑, 실내수영장, 회의실, 커피숍 등 다채로운 시설을 구비함은 물론 품격 있는서비스를 제공합니다.
+								<p class="fulfill"><strong>객실 구비용품</strong>: TV, 침대, 냉방기</p>
+							</dd>
+                            
+                        </dl>
+                    </div>
+                    <!-- // 호텔 end -->
+                    
+                    <!-- 관광지 start -->
+                    <div class="p_touristCont">
+                    	<h3>관광지</h3>
+                        
+                        <dl>
+                        	<dt>
+								<span><img src="../../images/supersave/img_city01.jpg" alt=""></span>
+								<em></em>
+								<strong>만리장성 - 거용관 도보관광</strong>
+							</dt>
+                            <dd>북경의 4대 명소 중 하나로 뽑히는 용경협은, 대도시 근교에 위치한 관광지라고 믿을 수 없을 정도의 아름다운 자연을 간직한 거대한 호수입니다. 계림의 작은 봉우리를 연상케 하는 부드러움과, 장가계의 거대한 석산을 연상케하는 웅장한 면모를 모두 갖추고 있어, "작은 계림(小桂林), 작은 삼협(小三峽)"이라고 불리기도합니다. 푸르른 신록과 가파른 봉우리들이 이루는 절경의 향연을 유유히 뱃놀이를 하며 즐기실 수 있습니다 </dd>
+                            
+                            <dt>
+								<span><img src="../../images/supersave/img_city02.jpg" alt=""></span>
+								<em></em>
+								<strong>용경협(뱃놀이 포함)</strong>
+							</dt>
+                            <dd>북경의 4대 명소 중 하나로 뽑히는 용경협은, 대도시 근교에 위치한 관광지라고 믿을 수 없을 정도의 아름다운 자연을 간직한 거대한 호수입니다. 계림의 작은 봉우리를 연상케 하는 부드러움과, 장가계의 거대한 석산을 연상케하는 웅장한 면모를 모두 갖추고 있어, "작은 계림(小桂林), 작은 삼협(小三峽)"이라고 불리기도합니다. 푸르른 신록과 가파른 봉우리들이 이루는 절경의 향연을 유유히 뱃놀이를 하며 즐기실 수 있습니다 </dd>
+							
+							<dt>
+								<span><img src="../../images/supersave/img_city03.jpg" alt=""></span>
+								<em></em>
+								<strong>798 다산자 거리</strong>
+							</dt>
+                            <dd>북경의 4대 명소 중 하나로 뽑히는 용경협은, 대도시 근교에 위치한 관광지라고 믿을 수 없을 정도의 아름다운 자연을 간직한 거대한 호수입니다.</dd>
+							
+							<dt>
+								<span><img src="../../images/supersave/img_city04.jpg" alt=""></span>
+								<em></em>DYNASTY)</strong>
+							</dt>
+                            <dd>북경의 4대 명소 중 하나로 뽑히는 용경협은, 대도시 근교에 위치한 관광지라고 믿을 수 없을 정도의 아름다운 자연을 간직한 거대한 호수입니다. 계림의 작은 봉우리를 연상케 하는 부드러움과, 장가계의 거대한 석산을 연상케하는 웅장한 면모를 모두 갖추고 있어, "작은 계림(小桂林), 작은 삼협(小三峽)"이라고 불리기도합니다. 푸르른 신록과 가파른 봉우리들이 이루는 절경의 향연을 유유히 뱃놀이를 하며 즐기실 수 있습니다 </dd>
+                        </dl>
+                    </div>
+                    <!-- //관광지 end -->
+                    
+                    <!-- 유의사항 start -->
+                    <div class="p_noteCont">
+                    	<h3>유의사항</h3>
+                        <ol>
+                        	<li>여권 만료기간 6개월 이상과 여권 종류를 꼭 확인 부탁 드립니다.
+                            	<p>단수여권(PS)의 경우 해외여행 경험이 있으신 분은 새로 발급 받으셔야합니다.</p>
+                            </li>
+                            <li>여행일정 및 자유시간 중 고객님의 안전을 위하여 가이드의 안내사항 및 안전 수칙을 준수하여 모든 안전사고에 유의하시기 바랍니다.
+                            	<p>특히 현지 선택 관광은 가이드의 주의사항을 숙지후 참여여부를 결정하여 주시기 바라며 이용자 본인의 과실 및 본인 건강상태로 인하여 발생한 안전사고에 대해서는 이용자 본인의 책임임을 알려드립니다.</p>
+                            </li>
+                            <li>상기 일정은 현지사정(교통,기상변화)에 따라 소바자의 동의를 얻어 변경될 수 있습니다.</li>
+                            <li>단체비자 보관시 유의사항
+                            	<ul>
+                                	<li>비자원본 분실 시 복잡한 절차를 통해 많은 비용을 고객님께서 부담 하셔야 하며 정상적인 리턴 스케줄에도 차질을 빚을 수 있사오니, 현지에서 단체비자 원본을 분실하지 않도록 주의 부탁 드립니다.(비자원본은 빨간 도장이 찍혀 있습니다.)</li>
+                                    <li>인솔자 없이 출발할 때 단체비자원본은 비자 명단 1번 고객님께서 보관해주셔야 하는점 양해 부탁드립니다.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                    <!-- //유의사항 end -->
+                    
+                </div>
+                <!-- // 오늘의 슈퍼세이브 영역 end -->
+                
+                <!-- 판매예정 start -->
+                <div class="spContTab02" style="display:none">
+                	<!-- 이미지영역-->
+                	<div class="ssImgCont">
+                    	<span class="p_img"><img src="../../images/supersave/img_dummy_product.jpg" alt="상품"></span>
+                    	<div class="posiBox">
+							<span class="be">상품구매는 <em>7월 13일(월요일) 오후 1시부터</em> 가능합니다.</span>
+                        </div>
+						<span class="amount">한정수량 <strong>1000<em> 개</em></strong></span>
+                    </div>
+                    <!-- // 이미지영역 end -->
+                    
+                    <div class="ss_whiteSect">
+                    	<h3 class="titProduct">[캐나다] 로키 세미팩 7일! 비아레일 기차타고 자유여행</h3>
+                        
+                        <div class="moneyBox">
+                        	<span class="prevMoney">540,000 <em>원</em></span>
+                        	<div>
+                            	<span>세이브가</span>
+                                <strong>?<em>원</em></strong>
+                            </div>
+							
+                        </div>
+                        
+                        <div class="dotCont">
+                        	<span class="smTop"><strong>혜택</strong>아시아나항공 + 준특급호텔 + 특식3회제공</span>
+                            <span class="smTop"><strong>출발</strong>7/14, 7/16, 7/18, 7/20, 7/23, 7/25</span>
+                            
+                            
+                            <!-- 버튼 -->
+                            <div class="ssBtnBox ssBe"> <!-- 판매예정일경우 class="ssBe" 추가 -->
+                            	<a href="#" class="sharing" title="공유하기" data-role="none"></a>
+                                <span class="cellPad"></span>
+                                <a href="#popReserve01" class="reserv alAdd" data-role="none">알림신청</a>
+                            </div>
+							
+							<a href="#" class="ssBtnOut" style="display:none" data-role="none">판매종료</a><!-- 판매종료 일경우 -->
+                            <!-- // 버튼 end -->
+                        </div>
+                        
+                    </div>
+					
+					<!-- 슈퍼세이브 Coming Soon start -->
+					<div class="p_comingCont">
+						<h2><strong>슈퍼세이브</strong> Coming Soon</h2>
+						<ul>
+							<li>
+								<span><img src="../../images/supersave/img_coming01.jpg" alt=""></span>
+								<div class="comTop">
+									<h3>[캐나다] 로키 세미팩 7일 비아레일 기차타고 자유여행</h3>
+									<span class="money">1,530,000<em>원</em></span>
+									<div class="saveOne"><span>세이브가</span><strong>?<em>원</em></strong></div>
+								</div>
+								<div class="comBtm">
+									<strong>7월 13일 (월요일)</strong>
+									<span>한정수량 <strong>1000<em> 개</em></strong>
+									<a href="#popReserve01" class="alAdd" data-role="none">알림신청</a>
+								</div>
+							</li>
+							<li>
+								<span><img src="../../images/supersave/img_coming02.jpg" alt=""></span>
+								<div class="comTop">
+									<h3>[캐나다] 로키 세미팩 7일 비아레일 기차타고 자유여행</h3>
+									<span class="money">1,530,000<em>원</em></span>
+									<div class="saveOne"><span>세이브가</span><strong>?<em>원</em></strong></div>
+								</div>
+								<div class="comBtm">
+									<strong>7월 13일 (월요일)</strong>
+									<span>한정수량 <strong>1000<em> 개</em></strong>
+									<a href="#popReserve01" class="alAdd" data-role="none">알림신청</a>
+								</div>
+							</li>
+							<li>
+								<span><img src="../../images/supersave/img_coming03.jpg" alt=""></span>
+								<div class="comTop">
+									<h3>[캐나다] 로키 세미팩 7일 비아레일 기차타고 자유여행</h3>
+									<span class="money">1,530,000<em>원</em></span>
+									<div class="saveOne"><span>세이브가</span><strong>?<em>원</em></strong></div>
+								</div>
+								<div class="comBtm">
+									<strong>7월 13일 (월요일)</strong>
+									<span>한정수량 <strong>1000<em> 개</em></strong>
+									<a href="#popReserve01" class="alAdd" data-role="none">알림신청</a>
+								</div>
+							</li>
+							<li>
+								<span><img src="../../images/supersave/img_coming04.jpg" alt=""></span>
+								<div class="comTop">
+									<h3>[캐나다] 로키 세미팩 7일 비아레일 기차타고 자유여행</h3>
+									<span class="money">1,530,000<em>원</em></span>
+									<div class="saveOne"><span>세이브가</span><strong>?<em>원</em></strong></div>
+								</div>
+								<div class="comBtm">
+									<strong>7월 13일 (월요일)</strong>
+									<span>한정수량 <strong>1000<em> 개</em></strong>
+									<a href="#popReserve01" class="alAdd" data-role="none">알림신청</a>
+								</div>
+							</li>
+							<li>
+								<span><img src="../../images/supersave/img_coming05.jpg" alt=""></span>
+								<div class="comTop">
+									<h3>[캐나다] 로키 세미팩 7일 비아레일 기차타고 자유여행</h3>
+									<span class="money">1,530,000<em>원</em></span>
+									<div class="saveOne"><span>세이브가</span><strong>?<em>원</em></strong></div>
+								</div>
+								<div class="comBtm">
+									<strong>7월 13일 (월요일)</strong>
+									<span>한정수량 <strong>1000<em> 개</em></strong>
+									<a href="#popReserve01" class="alAdd" data-role="none">알림신청</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!-- //슈퍼세이브 Coming Soon end -->
+					
+					<!-- 이벤트 배너영역 -->
+                    <div class="swipeView ssEvent">
+						<div class="slider ">
+							<ul>
+								<li class="page">
+									<a href="#" class="bgColor01" data-role="none"> <!-- 이벤트 bg 컬러 class : bgColor01 ~ bgColor03 -->
+										<span><img src="../../images/supersave/tit_event01.png" alt="슈퍼 이벤트1"></span> <!-- 이미지타이틀 tit_event01.png ~ tit_event03.png -->
+										<strong><em>SNS 투게더</em> 공유이벤트</strong>
+                            			<p>슈퍼세이브 공유하면 기프티콘을 드립니다.</p>
+									</a>
+								</li>
+								<li class="page" style=" display:none">
+									<a href="#" class="bgColor02" data-role="none">
+										<span><img src="../../images/supersave/tit_event02.png" alt="슈퍼 이벤트2"></span>
+										<strong><em>SNS 투게더</em> 공유이벤트</strong>
+                           				<p>슈퍼세이브 공유하면 기프티콘을 드립니다.</p>
+									</a>
+								</li>
+							</ul>
+							
+						</div>
+						<div class="slideBtn indicator"></div>
+					</div>
+                    <!-- // 이벤트 배너영역 end -->
+					
+					     
+                    <!-- 이용안내 start -->
+                    <dl class="ss_infor">
+                        <dt class="ss_inforTit open"><a href="#" data-role="none">슈퍼세이브 이용안내</a></dt> <!-- 클릭시 dt class="open"추가 -->
+                        <dd>
+                            <ul>
+                                <li>슈퍼세이브는 저렴한 가격으로 인기 여행상품을 제공하는 하나투어만의 고객을 위한 혜택서비스입니다. <br>슈퍼세이브는 주중 오후 1시에 새로운 상품 판매를 시작으로 24시간 후에 종료됩니다.<br>슈퍼세이브 상품은 판매수량이 제한되어 있으며, 준비된 전체수량이 24시간 이전에 모두 판매되면 그날의 슈퍼세이브는 종료됩니다.</li>
+                                <li>슈퍼세이브 상품을 예약하고 실제 결제하지 않아 예약취소가 잦은 고객은 슈퍼세이브 서비스 이용시 불이익을 받으실 수 있습니다.<br>(5번의 예약취소가 발생하면 서비스 이용을 제한합니다.)<br>또한 슈퍼세이브 상품의 할인가가 (소셜을 포함하여) 다른 쇼핑몰보다 비싼 경우 100% 보장해드립니다.</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <!-- 이용안내 End -->
+					
+                </div>
+                <!-- // 판매예정 end -->
+            </div>
+		</div>
+        <!-- // 슈퍼세이브 content end -->
+		
+		
+		<footer class="newFoot">
+			<ul>
+				<li><a href="#" data-role="none">로그인</a></li>
+				<li><a href="#" data-role="none">PC버전</a></li>
+				<li><a href="#" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+			</ul>
+			<div>
+				<a href="#" data-role="none">이용약관</a>|
+				<a href="#" data-role="none">개인정보처리방침</a>|
+				<a href="#" data-role="none">여행약관</a>|
+				<a href="#" data-role="none">사업자정보확인</a>
+			</div>
+			<address>
+					㈜ 하나투어 | 대표자: 최현석 | 사업자등록번호 : 102-81-39440<br>
+					통신판매업신고번호 : 종로01-1806호 | 개인정보관리 책임자 : 최종윤<br>
+					[110-160]서울특별시 종로구 인사동 5길 41 ㈜ 하나투어<br>
+					하나투어상담센터 : <a href="tel:1577-1233" data-role="none">1577-1233</a> | FAX : 02-734-0392<br>
+					이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> | 호스팅 서비스 사업자 : ㈜하나투어<br>
+					관광사업자 등록번호 : 제1933-000006호 | 영업보증보험 : 22억 1천만원 가입<br>
+					COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+
+			</address>
+		</footer>
+		<!-- // 테마별 여행정보 -->
+						
+						
+		
+		
+		<a href="#" id="topBtn01" data-role="none" data-scroller="window" data-target="" data-attach="" data-direction="fade" data-margin="" class="topBtn01 posFixed loaded scrollTop"><img src="../../images/common/btn_top01.png" alt="TOP"></a>
+<!-- //컨텐츠 영역 -->
+
+	</div>
+</div>
+
+
+
+<!-- 좌측메뉴 -->
+<div id="menuPanel">
+	<div class="innerScroller">
+		<div class="nleftMenu">
+			<h2>해외 패키지 여행 - 패키지</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">하나Pack</a></li>
+				<li><a href="#" data-role="none">허니문</a></li>
+				<li><a href="#" data-role="none">골프</a></li>
+				<li><a href="#" data-role="none">크루즈</a></li>
+				<li><a href="#" data-role="none">트레킹</a></li>
+				<li><a href="#" data-role="none">레포츠</a></li>
+				<li><a href="#" data-role="none">박람회</a></li>
+				<li><a href="#" data-role="none">제우스[럭셔리여행]</a></li>
+				<li><a href="#" data-role="none">성지순례</a></li>
+				<li><a href="#" data-role="none">특수지역</a></li>
+			</ul>
+			
+			<h2>해외 자유여행 - 하나Free</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">항공</a></li>
+				<li><a href="#" data-role="none">호텔</a></li>
+				<li><a href="#" data-role="none">에어텔/자유여행</a></li>
+				<li><a href="#" data-role="none">배낭여행</a></li>
+				<li><a href="#" data-role="none">교통패스</a></li>
+				<li><a href="#" data-role="none">유럽구간철도</a></li>
+				<li><a href="#" data-role="none">현지투어</a></li>
+				<li><a href="#" data-role="none">입장권</a></li>
+			</ul>
+			
+			<h2>국내여행</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">항공</a></li>
+				<li><a href="#" data-role="none">숙박</a></li>
+				<li><a href="#" data-role="none">내륙/제주여행</a></li>
+				<li><a href="#" data-role="none">입장권</a></li>
+				<li><a href="#" data-role="none">골프</a></li>
+			</ul>
+			
+			<h2>여행정보</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">E-Book</a></li>
+				<li><a href="#" data-role="none">트레블웹진</a></li>
+				<li><a href="#" data-role="none">블로그</a></li>
+				<li><a href="#" data-role="none">트위터</a></li>
+				<li><a href="#" data-role="none">페이스북</a></li>
+				<li><a href="#" data-role="none">카페</a></li>
+				<li><a href="#" data-role="none">스티커</a></li>
+				<li><a href="#" data-role="none">날씨정보</a></li>
+				<li><a href="#" data-role="none">환율정보</a></li>
+				<li><a href="#" data-role="none">시차정보</a></li>
+			</ul>
+			
+			<h2>연계서비스</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">공연/영화</a></li>
+				<li><a href="#" data-role="none">기업출장/단체여행</a></li>
+				<li><a href="#" data-role="none">하나샵</a></li>
+				<li><a href="#" data-role="none">웨딩플래너</a></li>
+				<li><a href="#" data-role="none">무료가이드북</a></li>
+			</ul>
+			
+			<div class="allmenu_btm">
+				<a href="#" data-role="none">추천기획전</a>
+				<a href="#" data-role="none">이벤트</a>
+				<a href="#" data-role="none">쿠폰</a>
+				<a href="#" data-role="none">하나투어 모바일앱</a>
+			</div>
+			
+			<ul class="allmenu_app">
+				<li><a href="#" data-role="none">하나투어 패키지</a></li>
+				<li><a href="#" data-role="none">하나Free항공</a></li>
+				<li><a href="#" data-role="none">하나Free호텔</a></li>
+				<li><a href="#" data-role="none">하나Free에어텔</a></li>
+				<li><a href="#" data-role="none">하나Free</a></li>
+				<li><a href="#" data-role="none">하나Free 국내숙박</a></li>
+			</ul>
+			
+			<a href="#" data-role="none" class="allmenu_event"><img src="../../images/common/img_allmenu_banner.jpg" alt="특별한 공연티켓 예매 하나 Free티켓 하나투어마일리지는 원래 이렇게쓰는겁니다."></a>
+		</div>
+	</div>
+</div>
+
+
+<!-- 우측메뉴 20150421 추가 -->
+<div id="userPanel">
+	<div class="innerScroller">
+		<!-- 비로그인 -->
+		<div class="nRightMe_out" style="display:none">
+			<p><strong>회원님, 안녕하세요!</strong>
+				예약내역과 마일리지를<br> 확인하시려면 로그인 해주세요.
+			</p>
+			<div>
+				<a href="#" data-role="none" class="rlogin">로그인</a>
+				<a href="#" data-role="none" class="rjoin">회원가입</a>
+			</div>
+		</div>
+		<!-- 비로그인 end -->
+		
+		<!-- 로그인 -->
+		<div class="nRightMe_in" style="display:no ne">
+			<h2><strong>김하나</strong> 님 안녕하세요
+				<!-- 20150427 삭제 a href="#" data-role="none">로그아웃</a-->
+			</h2>
+			
+			<a href="#" data-role="none" class="bgRightM01">마일리지 현황</a>
+			<div class="mileBox">
+				<ul>
+					<li>회원번호<span>102-494-504</span></li>
+					<li>가용 마일리지<span>10,000 <img src="../../images/common/img_mailbig.png" alt="마일리지"></span></li>
+					<li>총 적립 마일리지<span>10,000 <img src="../../images/common/img_mailbig.png" alt="마일리지"></span></li>
+				</ul>
+				<span class="milebtnBox"><a href="#" data-role="none">누적 마일리지 적립</a></span>
+			</div>
+			
+			<a href="#" data-role="none" class="bgRightM02">장바구니<span>25개</span></a>
+			<a href="#" data-role="none" class="bgRightM03">예약내역<span>25개</span></a>
+			<a href="#" data-role="none" class="bgRightM04">참여내역<span>25개</span></a>
+			<a href="#" data-role="none" class="bgRightM05">메시지함</a>
+			<a href="#" data-role="none" class="bgRightM06">개인정보보기</a>
+		</div>
+		<!-- 로그인 end -->
+		
+		<!-- 광고배너-->
+		<a href="#" data-role="none" class="allmenu_event"><img src="../../images/common/img_allmenu_banner.jpg" alt="특별한 공연티켓 예매 하나 Free티켓 하나투어마일리지는 원래 이렇게쓰는겁니다."></a>
+		<!-- 광고배너 end -->
+	</div>
+</div>
+
+<!-- 팝업 알림신청 -->
+<div id="overlayPanel"></div>
+	
+<div id="popReserve01">
+	<div class="popReserve01">
+		<div class="header">
+			<h3>슈퍼세이브 알림신청<a href="#" class="closeOverlayPanel" data-role="none" title="레이어닫기"></a></h3>
+		</div>
+		<div class="innerScroller">
+			<div>
+				<div class="popIncont01">
+					
+					<div class="sP_noticeTop">
+						<h4>[북경] 아시아나항공 + 준특급호텔 + 특식 스페셜 패키지 4일</h4>
+						<p><span>DAY</span> <strong>2015년 7월 14일 오후 1시</strong></p>
+					</div>
+					<p class="sP_noticeTxt">
+						<strong>고객님의 번호를 확인 또는 입력해 주세요.</strong>
+						선택하신 상품의 오픈 정각에 알람 문자를 발송해 드립니다.<br>(통신사의 사정에 의해 약간의 오차가 발생할 수 있습니다.)
+					</p>
+					<div class="sP_noticeBtm">
+						<strong>받는번호</strong>
+						<div class="tableWr">
+							<span class="w25">
+								<select title="핸드폰 앞자리 선택" data-role="none">
+									<option>010</option>
+								</select>
+							</span>
+							<span class="cePad5"></span>
+							<span class="w30"><input type="tel" data-role="none"  title="핸드폰 두번째 번호 입력"></span>
+							<span class="cePad5"></span>
+							<span class="w30"><input type="tel" data-role="none" title="핸드폰 세번째 번호 입력"></span>
+						</div>
+					</div>
+					
+					<div class="s_redBtn"><a href="#" data-role="none">알림신청</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // 팝업 알림신청 end -->
+
+</body>
+</html>
+

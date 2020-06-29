@@ -1,0 +1,150 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 공통 */
+.mevent100_sect {text-align:center;}
+.mevent100_sect .titlabel img { height:65px}
+
+.m100_Cont01 {background:url(http://image1.hanatour.com/mobile/common/mevent100/bg_maintop.jpg) no-repeat 0 0; background-size:100% 100%;padding:17px 0 196px;}
+.m100_Cont01 .stitEvent img {height:98px}
+.m100_Cont01 .chTxt {text-align:left;padding:5px; margin: 2px 23px 0; border-radius:4px; background:rgba(0,0,0,0.2)}
+.m100_Cont01 .chTxt span {color:#fff;font-size:13px; display:block;background:url(http://image1.hanatour.com/mobile/common/mevent100/bul_check01.png) no-repeat 0 0; background-size:14px 14px; padding-left:18px}
+.m100_Cont01 .chTxt span+span {margin-top:2px}
+.m100_Cont01.subType {background:url(http://image1.hanatour.com/mobile/common/mevent100/bg_subtop.png) no-repeat 0 0; background-size:100% 100%;padding:17px 12px 0;}
+.m100_Cont02 {background:url(http://image1.hanatour.com/mobile/common/mevent100/bg_yellow01.png) no-repeat 0 0; background-size:100% 100%; margin-top:-10px; padding:40px 0 0; position:relative}
+.m100_Cont02 h3 {font-size:16px;margin-bottom:30px}
+.m100_Cont02 h3 strong {font-size:36px; display:block;}
+.m100_Cont02 p {line-height:18px}
+.m100_Cont02 p span {color:#fff;display:inline-block; padding:0 1px}
+.m100_Cont02 p .pup {background-color:#2586c8}
+.m100_Cont02 p .green {background-color:#137420}
+.imgTable {display:table;width:100%;padding:25px 0 35px}
+.imgTable div {display:table-cell;width:50%;}
+.imgTable div span img {width:100%;max-width:160px}
+.imgTable div p {margin-top:10px}
+.imgTable div p strong {display:block}
+.imgTable.type2 {color:#fff}
+.imgTable.type2 div span img {max-width:112px}
+.bulTxt {border-radius:50%;background-color:#ffa400; font-size:10px;box-sizing:border-box; margin-right:6px; display:inline-block;width:14px; height:14px; padding-top:1px; vertical-align:middle}
+.m100_Cont03 {background-color:#515151; margin-top:-10px; padding-top:34px}
+.m100_Cont03 * {color:#fff}
+.m100_Cont03 h3 img {height:20px}
+.m100_infor {text-align:left; background-color:#f1f1f1; padding:20px 15px; position:relative}
+.m100_infor:before {content:''; width:100%; height:7px; position:absolute; left:0; top:-7px;background:url(http://image1.hanatour.com/mobile/common/mevent100/bg_m100_infor.png) no-repeat 0 0; background-size:100% 7px}
+.m100_infor > strong {font-size:15px; display:block; margin-bottom:12px}
+.m100_infor > ol > li {font-size:13px; list-style:decimal; margin-left:15px; margin-bottom:20px}
+.m100_infor > ol > li strong {color:#ba0058}
+.m100_infor > ol > li ol {margin-top:7px}
+.m100_infor > ol > li ol li {font-size:13px}
+
+.joinFixed {text-align:center; position:fixed; left:0; bottom:0; font-size:18px; background-color:#c83d67; font-weight:bold; width:100%; padding: 15px 0; color:#fff; z-index:100}
+.joinFixed.blue {background-color:#3f98c0}
+
+.ssImgCont {position:relative; margin-bottom:-36px; margin-top:14px}
+.ssImgCont .posiBox {position:absolute;left:0;bottom:0; height:36px; width:100%; color:#fff;background-color:rgba(0,0,0,0.6); display:table; width:100%; z-index:10}
+.ssImgCont .posiBox span {display:table-cell; vertical-align:middle; text-align:left; position:relative; font-size:12px;}
+.ssImgCont .posiBox span.vol {width:40%; padding:0 8px 0 12px}
+.ssImgCont .posiBox span.vol:after {content:'';background-color:#4a727a; height:12px; width:1px; position:absolute; right:0;top:50%; margin-top:-6px}
+.ssImgCont .posiBox span.time {width:60%; padding:0 12px 0 8px}
+.ssImgCont .posiBox span:before {content:''; display:inline-block; width:13px; height:14px; background:no-repeat 0 0; margin:0 3px -2px 0}
+.ssImgCont .posiBox span.vol:before {background-image:url(http://image1.hanatour.com/mobile/common/mevent100/icon_ss_01.png);background-size:12px; background-position:0 3px}
+.ssImgCont .posiBox span.time:before {background-image:url(http://image1.hanatour.com/mobile/common/mevent100/icon_ss_02.png);background-size:12px 14px}
+.ssImgCont .posiBox span.vol em { position:relative; top:-2px}
+.ssImgCont .posiBox span strong {position:absolute;right:12px;top:50%; margin-top:-9px;font-size:14px}
+.ssImgCont .posiBox span.time strong {right:16px; letter-spacing:-0.03em}
+.ssImgCont .posiBox span strong em {font-size:12px}
+
+.ssImgCont .p_img img {width:100%}
+
+.ss_whiteSect {background-color:#fff;margin:0;padding:52px 12px 25px;text-align:left}
+.ss_whiteSect .dotCont {background:url(http://image1.hanatour.com/mobile/common/mevent100/bg_dottline.png) repeat-x 0 0; padding-top:15px}
+.titProduct {font-size:22px;margin-bottom:15px}
+.moneyBox {position:relative; margin-bottom:18px}
+.moneyBox .prevMoney {color:#6d7588; font-weight:bold; font-size:18px; position:absolute;left:0;top:12px; padding-right:10px; overflow:hidden}
+.moneyBox .prevMoney:before {content:''; position:absolute;left:60px;top:50%;width:100%;height:1px; background:#6d7588; margin-top:-1px}
+.moneyBox .prevMoney:after {content:''; position:absolute;right:0;top:0;width:5px;height:100%; background:url(http://image1.hanatour.com/mobile/common/mevent100/bg_save_arrow.png) no-repeat 0 center;background-size:5px 7px}
+.moneyBox .prevMoney strong {width:55px; display:inline-block}
+.moneyBox .prevMoney em {font-size:12px; margin-left:1px}
+.moneyBox > div {text-align:right}
+.moneyBox > div span {color:#f6f3a3;background:url(http://image1.hanatour.com/mobile/common/mevent100/bg_save.png) no-repeat 0 0;background-size:44px 44px; font-size:9px; display:inline-block; width:44px; height:44px; box-sizing:border-box; padding-top:16px;text-align:center; margin-right:2px; font-weight:bold; position:relative; top:-2px}
+.moneyBox > div strong {font-size:25px; vertical-align:middle}
+
+.ss_whiteSect .smTop {display:block;font-size:15px; padding-left:39px; position:relative; line-height:18px}
+.ss_whiteSect .smTop strong {color:#c83d67;margin-right:7px;padding-right:7px;display:inline-block; position:absolute;left:0;top:0}
+.ss_whiteSect .smTop strong:after {content:'';position:absolute;right:0;top:3px;width:1px;height:12px;background-color:#ccc;display:inline-block}
+.ss_whiteSect .smTop:first-child {margin-bottom:4px}
+
+.p_introCont {margin:0}
+.p_introCont h3 {background:url(http://image1.hanatour.com/mobile/common/mevent100/img_product01.jpg) no-repeat 0 0;background-size:100% 100%;padding:45px 20px;text-align:center;color:#fff;font-size:15px; font-weight:normal}
+.p_introCont h3 strong {font-size:24px;display:block;margin-bottom:8px}
+.p_introCont ul {background:#747881;}
+.p_introCont ul li {text-align:center;margin:0 12px;border-bottom:1px solid #979aa1;padding:15px 0; color:#fff}
+.p_introCont ul li:last-child {border-bottom:none}
+.p_introCont ul li strong {font-size:18px;display:inline-block; margin-right:4px}
+.p_introCont ul li strong:before {content:''; width:16px; height:16px;background:no-repeat 0 0;background-size:16px 16px; display:inline-block; margin:0 3px -1px 0}
+.p_introCont ul li strong.bg_tit01:before {background-image:url(http://image1.hanatour.com/mobile/common/mevent100/bg_product_tit01.png)}
+.p_introCont ul li strong.bg_tit02:before {background-image:url(http://image1.hanatour.com/mobile/common/mevent100/bg_product_tit02.png); width:21px; height:10px; background-size:21px 10px}
+.p_introCont ul li strong.bg_tit03:before {background-image:url(http://image1.hanatour.com/mobile/common/mevent100/bg_product_tit03.png);width:13px; height:16px; background-size:13px 16px}
+
+.taipeiCont {padding:0 12px; text-align:left}
+.taipeiCont h3 {font-size:20px; margin:20px 0 20px; padding:12px 0; border:1px solid #747881; border-radius:50px; text-align:center}
+.taipeiCont h3:before {content:''; background:no-repeat 0 0; display:inline-block; margin-right:12px; margin-bottom:-2px}
+.taipeiCont h3.bgTai01:before {width:25px; height:24px; background-image:url(http://image1.hanatour.com/mobile/common/mevent100/bg_taipei_tit01.png); background-size:25px 24px}
+.taipeiCont h3.bgTai02:before {width:27px; height:21px; background-image:url(http://image1.hanatour.com/mobile/common/mevent100/bg_taipei_tit02.png); background-size:27px 21px}
+.taipeiCont img {width:100%}
+.taipeiCont div {margin-bottom:20px}
+.taipeiCont div p {color:#666}
+.taipeiCont div p strong {display:block;margin-bottom:10px; font-size:16px; color:#333}
+.taipeiCont .full p {margin-top:10px}
+.taipeiCont .half {display:table;width:100%}
+.taipeiCont .half span {display:table-cell;width:48%}
+.taipeiCont .half em {display:table-cell;width:4%}
+.taipeiCont .half p {display:table-cell;width:48%;vertical-align:top}
+.eventTerms {padding:0 12px}
+.eventTerms h3 {margin:20px 0 0; padding:0 0 10px 18px; font-size:15px; background:url(http://image1.hanatour.com/mobile/common/mevent100/bg_search_tit01.png) no-repeat 0 1px; background-size:12px}
+.eventTerms h3.bgTerms02 {border-bottom:1px solid #ccc; overflow:hidden; background-image:url(http://image1.hanatour.com/mobile/common/mevent100/bg_search_tit02.png)}
+.eventTerms h3.bgTerms02 span {float:right; font-weight:normal; font-size:13px}
+
+.eventTerms .agreeBox {background-color:#f4f4f4; border:1px solid #d6d6d6; padding:15px; position:relative; display:block}
+.eventTerms .agreeBox span {position:absolute;right:15px; top:50%; margin-top:-7px;padding-left:30px;}
+.eventTerms .agreeBox span:before {content:''; position:absolute;left:0;top:-5px;height:24px;width:24px;border:1px solid #ccc;border-radius:3px;background-color:#fff}
+.eventTerms .agreeBox.on span:before {border:1px solid #c83d67;background:#c83d67 url(../images/common/bg_check_on.png) no-repeat center center;background-size:16px 13px}
+.eventTerms .m_btnRed {margin-bottom:50px}
+.eventTerms .payIpList {margin-bottom:10px}
+.eventTerms .payIpList li {padding-left:80px; position:relative; margin-top:12px}
+.eventTerms .payIpList li label {position:absolute;left:0;top:12px;}
+.eventTerms .payIpList li input {width:100%;border:1px solid #ccc;height:40px;text-indent:10px;box-sizing:border-box;border-radius:0;font-size:13px}
+.eventTerms .payIpList li input:focus{border:1px solid #c83d67}
+.eventTerms .payIpList li select {background:url(../images/air/bg_select_red.png) no-repeat 92% center;background-size:13px 7px;text-indent:6px;}
+
+.mevent100_sect.sharedBox {background:url(http://image1.hanatour.com/mobile/common/mevent100/bg_shared.png) no-repeat 92% center;background-size:100% 100%; padding:35px 0 45px}
+.mevent100_sect.sharedBox p strong { font-size:28px; display:block; margin:15px 0}
+.mevent100_sect.sharedBox p span em { display:block; margin-bottom:40px; font-weight:bold}
+.mevent100_sect.sharedBox ul {overflow:hidden; margin:0 25px}
+.mevent100_sect.sharedBox ul li {float:left;width:25%; font-size:12px; text-align:center}
+.mevent100_sect.sharedBox ul li a {display:block}
+.mevent100_sect.sharedBox ul li span {display:block; margin-bottom:8px}
+.mevent100_sect.sharedBox ul li span img {max-width:63px; width:100%}
+
+.endBox {background:url(http://image1.hanatour.com/mobile/common/mevent100/bg_shared.png) no-repeat 92% center;background-size:100% 100%;padding:35px 12px 45px}
+.endBox .titlabelEnd img {height:136px;margin-bottom:24px}
+.endBox .txtTop {margin-bottom:15px}
+.endBox .txtTop span {display:block;font-size:17px}
+.endBox .txtTop em {font-size:25px;color:#666}
+.endBox .txtTop em strong {color:#333}
+.endBox .txtBtm {margin-bottom:25px}
+
+.selectRed {-webkit-appearance: none;display:block;border: 1px solid #ccc;background:#fff url(http://image1.hanatour.com/mobile/common/supersave/bg_select_red.png) no-repeat 95% center;background-size: 13px 7px;text-indent: 8px;padding: 10px 10px 0 0;border-radius: 3px;font-size: 15px;height: 30px;width:100%; height:44px; padding:0}
+
+/* 신규팝업 */
+.yellowPop {position:absolute;left:0;top:0;background:rgba(0,0,0,0.7); height:100%; width:100%; z-index:999}
+.yellowPop > div {margin:0 12px; background-color:#fff;border-radius:5px; margin-top:25%; position:relative; overflow:hidden}
+.yellowPop h3 { background-color:#f8f8f8; padding:15px 20px; font-size:17px; border-bottom:1px solid #ccc; border-radius:5px 5px 0 0}
+.yellowPop h3 a {background:url(http://image1.hanatour.com/mobile/common/comm/btn_pop_yellow_close.png) no-repeat center center; position:absolute;right:0;top:0; width:19px; height:19px; background-size:19px; padding:15px}
+.yellowPop .pop_y_cont {padding:20px}
+.eTerm_scrBox {overflow-y:auto; height:200px; margin-bottom:20px;-webkit-overflow-scrolling: touch; margin-right:-10px; padding-right:10px}
+.eTerm_scrBox strong { font-weight:normal; display:block; margin-bottom:25px}
+.eTerm_scrBox p {font-size:14px; color:#666; margin:25px 0 25px}
+.eTerm_scrBox ol li {font-size:13px;color:#666; margin-bottom:10px}
+
+.newFoot address {padding-bottom:70px}

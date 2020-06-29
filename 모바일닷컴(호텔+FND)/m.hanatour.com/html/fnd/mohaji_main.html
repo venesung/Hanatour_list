@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>현지투어 패스 입장권 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="../../css/fnd.css"><!-- FND 추가 -->
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-2.1.3.min.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common_new.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/swiper.min.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-ui-custom.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/hanatour/ht.calendar.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/free/m.fnd.js" type="text/javascript"></script>
+<style type="text/css">
+#mohaji_gate { background:#f5f5f5}
+#mohaji_gate .mhj_top {padding:20px 13px 30px;text-align:center;background:url(http://image1.hanatour.com/mobile/common/hanatour/fnd/bg_mohaji_top.jpg) no-repeat 0 0 / 100% 100%}
+#mohaji_gate .mhj_top .logo img {height:30px}
+#mohaji_gate .mhj_top .stit {display:block; margin:18px 0 12px; font-size:1.2rem}
+#mohaji_gate .mhj_top .stit img {height:32px}
+#mohaji_gate .mhj_top h2 {}
+#mohaji_gate .mhj_top h2 img {height:40px}
+#mohaji_gate .mhj_top .stxt {color:#fff;margin:15px 0 25px;line-height:1.6rem}
+#mohaji_gate .mhj_top .stxt span {display:block;margin-top:10px}
+#mohaji_gate .mhj_top a {display:inline-block;background-color:#f3776c;font-size:1.4rem; padding:15px 65px; color:#fff; border-radius:50px}
+#mohaji_gate .mhj_top ol {margin-top:40px; padding-left:16px}
+#mohaji_gate .mhj_top ol li {background:#fff url(http://image1.hanatour.com/mobile/common/hanatour/fnd/img_mohaji_list01.png) no-repeat right center / 70px 43px; text-align:left; position:relative; padding:13px 13px 13px 35px}
+#mohaji_gate .mhj_top ol li+li {margin-top:10px;background-image:url(http://image1.hanatour.com/mobile/common/hanatour/fnd/img_mohaji_list02.png)}
+#mohaji_gate .mhj_top ol li+li+li {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/fnd/img_mohaji_list03.png)}
+#mohaji_gate .mhj_top ol li strong {color:#d23022; font-size:1.3rem}
+#mohaji_gate .mhj_top ol li p {font-size:1.2rem; margin-top:5px}
+#mohaji_gate .mhj_top ol li:before {content:'01';width:32px;color:#fff; position:absolute; left:-16px;top:50%;-webkit-transform:translate(0, -50%);transform:translate(0, -50%); background:#fd6261; text-align:center; font-size:14px; padding:15px 0; font-weight:bold}
+#mohaji_gate .mhj_top ol li+li:before {content:'02';background:-webkit-linear-gradient(top, #eca170, #fb6b60);background:linear-gradient(top, #eca170, #fb6b60)}
+#mohaji_gate .mhj_top ol li+li+li:before {content:'03';background:#fe478c}
+
+#mohaji_gate .mhj_cont01 {background:#fff; padding-top:12px; text-align:center; margin-bottom:12px; border-bottom:1px solid #e0e0e0}
+#mohaji_gate .mhj_cont01 div {background:#fafafa; padding:30px 0 40px}
+#mohaji_gate .mhj_cont01 ul {padding:0 28px}
+#mohaji_gate .mhj_cont01 ul li+li {margin-top:12px}
+#mohaji_gate .mhj_cont01 ul li img {width:100%; max-width:400px}
+#mohaji_gate .mhj_cont01 p {padding:24px 28px 0; color:#444; font-size:1.2rem;line-height:1.5rem}
+
+#mohaji_gate .mhj_cont02 {background:#fff; padding:35px 13px 25px; text-align:center; margin-bottom:12px; border-bottom:1px solid #e0e0e0}
+#mohaji_gate .mhj_cont02 span img {width:100%; max-width:400px}
+#mohaji_gate .mhj_cont02 p {padding:24px 28px 0; color:#444; font-size:1.2rem; text-align:left; line-height:1.5rem; margin-bottom:20px}
+#mohaji_gate .mhj_cont02 a {display:inline-block;background-color:#6c35b5;font-size:1.4rem; padding:15px 65px; color:#fff; border-radius:50px}
+
+#mohaji_gate .mhj_cont03 {background:#222; padding:35px 13px 25px;  text-align:center; margin-bottom:12px; border-bottom:1px solid #e0e0e0}
+#mohaji_gate .mhj_cont03 dl {text-align:left; position:relative; padding-left:90px; border-bottom:1px solid #4e4e4e; padding-bottom:20px; margin-bottom:25px}
+#mohaji_gate .mhj_cont03 dl dt {position:absolute;left:0;top:0; font-size:1.5rem; color:#fff; border-right:1px solid #4e4e4e; font-weight:bold; height:75px; padding-right:10px}
+#mohaji_gate .mhj_cont03 dl dd li {font-size:1.2rem; color:#fff; position:relative; padding-left:8px; line-height:1.5rem}
+#mohaji_gate .mhj_cont03 dl dd li+li {margin-top:5px}
+#mohaji_gate .mhj_cont03 dl dd li:before {content:'';width:2px; height:2px; background:#fff; position:absolute;left:0;top:6px;}
+#mohaji_gate .mhj_cont03 a {display:inline-block;background-color:#f3776c;font-size:1.4rem; padding:15px 65px; color:#fff; border-radius:50px}
+
+#mohaji_gate .cm_stit {font-size:2.2rem;font-weight:normal; margin-bottom:30px; text-align:center}
+#mohaji_gate .cm_stit span {display:block; font-size:1.4rem}
+#mohaji_gate .cm_stit b {font-weight:bold}
+</style>
+</head>
+
+<body>
+
+<div id="wrap">
+	<header id="header"><!-- 띠배너 보일경우 class="tBanTy" 추가 -->
+		<div class="inner">
+			<h1><a href="#none" data-role="none"><img src="../../images/common/btn_nlogo.png" alt="하나투어"></a></h1>
+			<a href="#none" id="btnMenu" data-role="none"><img src="../../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+			<a href="#none" id="btnMyhome" data-role="none"><img src="../../images/common/btn_hdright.png" alt="마이홈"></a>
+		</div>
+	</header>
+	<div class="headerMargin07"></div>
+	
+	<!-- fnd tab -->
+	<nav class="fndTab">
+		<ul>
+			<li class="on"><a href="#"><span>현지투어 · 패스 · 입장권</span></a></li>
+			<li><a href="#"><span>유럽패스 · 구간열차</span></a></li>
+		</ul>
+	</nav>
+	<!-- // fnd tab -->
+	
+	<!-- 컨텐츠 영역 -->
+	<div id="container">
+		
+		<!-- 모하지 게이트 -->
+		<section id="mohaji_gate">
+			<div class="mhj_top">
+				<span class="logo"><img src="http://image1.hanatour.com/mobile/common/hanatour/fnd/img_mohaji_top01.png" alt="mohaji"></span>
+				<strong class="stit"><img src="http://image1.hanatour.com/mobile/common/hanatour/fnd/img_mohaji_top02.png" alt="현지투어/교통패스/입장권"></strong>
+				<h2><img src="http://image1.hanatour.com/mobile/common/hanatour/fnd/img_mohaji_top03.png" alt="서비스 이전 안내"></h2>
+				<p class="stxt">더욱 다양한 서비스 제공을 위해 하나투어의<br>현지투어/교통패스/입장권 서비스가 모하지(MOHAJI)로 이전됩니다.<span>전 세계 자유여행에 필요한 모든 것을<br>모하지(MOHAJI)에서 만나보세요!</span></p>
+			
+				<a href="https://www.mohaji.com/ko" target="_blank">모하지 바로가기</a>
+				
+				<ol>
+					<li>
+						<strong>최대 90% 할인</strong>
+						<p>파격 특가는 물론<br>회원 전용 할인쿠폰까지!</p>
+					</li>
+					<li>
+						<strong>하나투어 상품도 모하지에서</strong>
+						<p>믿을 수 있는 하나투어 상품부터<br>모든 자유여행템이 한자리에!</p>
+					</li>
+					<li>
+						<strong>APP으로 언제 어디서나</strong>
+						<p>모하지 어플로 예약부터 바우처<br>확인까지 간편하고 쉽게!</p>
+					</li>
+				</ol>
+			</div>
+			
+			<div class="mhj_cont01">
+				<div>
+					<h3 class="cm_stit"><span>지금 모하지에서는</span>총 1만원<b> 할인쿠폰 증정!</b></h3>
+					<ul>
+						<li><img src="http://image1.hanatour.com/mobile/common/hanatour/fnd/img_mohaji_cp01.png" alt="2만원 이상 구매시 2천원 할인"></li>
+						<li><img src="http://image1.hanatour.com/mobile/common/hanatour/fnd/img_mohaji_cp02.png" alt="3만원 이상 구매시 3천원 할인"></li>
+						<li><img src="http://image1.hanatour.com/mobile/common/hanatour/fnd/img_mohaji_cp03.png" alt="10만원 이상 구매시 52천원 할인"></li>
+					</ul>
+					<p>※ 본 할인쿠폰은 모하지 마이페이지＞새로운 쿠폰에서<br> 다운로드 후 사용 가능합니다.</p>
+				</div>
+			</div>
+			
+			<div class="mhj_cont02">
+				<h3 class="cm_stit"><span>지금 모하지 회원가입하면</span>총 1만원<b>할인쿠폰 증정!</b></h3>
+				<span><img src="http://image1.hanatour.com/mobile/common/hanatour/fnd/img_mohaji_cp04.png" alt="신규 회원가입 쿠폰 1만원 할인"></span>
+				<p>※ 본 할인쿠폰은 선착순으로 조기 마감될 수 있습니다.<br>※ 발급받은 할인쿠폰은 모하지 마이페이지＞내 쿠폰함에서 확인 가능합니다.</p>
+				<a href="https://www.mohaji.com/ko/account/signup" target="_blank">모하지 회원가입 바로가기</a>
+			</div>
+			
+			<div class="mhj_cont03">
+				<dl>
+					<dt>유의사항</dt>
+					<dd>
+						<ul>
+							<li>기존에 하나투어에서 구매하신 현지투어/교통패스/입장권 주문내역은  하나투어 마이페이지＞예약확인 결제 에서 확인하실 수 있습니다.</li>
+							<li>하나투어 마일리지는 사용 불가합니다.</li>
+						</ul>
+					</dd>
+				</dl>
+				<a href="http://www.hanatour.com/asp/mypage/bl-10000.asp?search_type=A" target="_blank">하나투어 마이페이지 바로가기</a>
+			</div>
+			
+			
+		</section>
+		<!-- // 모하지 게이트 -->
+		
+	</div>
+	<!-- //컨텐츠 영역 -->
+	
+	<footer class="newFoot">
+		<ul>
+			<li><a href="#none" data-role="none">로그인</a></li>
+			<li><a href="#none" data-role="none">PC버전</a></li>
+			<li><a href="#none" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+		</ul>
+		<div>
+			<a href="#none" data-role="none">이용약관</a>|
+			<a href="#none" data-role="none">개인정보처리방침</a>|
+			<a href="#none" data-role="none">여행약관</a>|
+			<a href="#none" data-role="none">사업자정보확인</a>
+		</div>
+		<address>
+			㈜ 하나투어 | 대표자: 최현석 | 사업자등록번호 : 102-81-39440<br>
+			통신판매업신고번호 : 종로01-1806호 | 개인정보관리 책임자 : 최종윤<br>
+			[110-160]서울특별시 종로구 인사동 5길 41 ㈜ 하나투어<br>
+			하나투어상담센터 : <a href="tel:1577-1233" data-role="none">1577-1233</a> | FAX : 02-734-0392<br>
+			이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> | 호스팅 서비스 사업자 : ㈜하나투어<br>
+			관광사업자 등록번호 : 제1933-000006호 | 영업보증보험 : 22억 1천만원 가입<br>
+			COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+		</address>
+	</footer>
+	
+</div>
+
+
+
+</body>
+</html>
+

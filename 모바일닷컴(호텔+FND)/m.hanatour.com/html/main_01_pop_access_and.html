@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="../../favicon/HanaFree/114×114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72×72" href="./icon/72×72.png">
+<link rel="apple-touch-icon-precomposed" href="icon/57×57.png">
+<title>메인 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-2.1.3.min.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery.mobile-1.4.5.min.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery.lazyload.js?v=1.9.1"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/etc/iscroll.carousel.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/etc/iscroll.swipeview.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/etc/fixedPostiion.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/etc/fastclick.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/main.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/swiper.min.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common_new.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+</div>
+
+<!-- 20171106 접근권한 안내 팝업 안드로이드용 :: 앱별 공통 적용 -->
+<style type="text/css">
+.pop_accessSect {position:fixed;left:0;top:0; z-index:99999; background:rgba(0,0,0,0.7); height:100%; width:100%; padding:50vh 15px 0; box-sizing:border-box}
+.pop_accessCont {background-color:#fff;overflow:hidden; position:relative;transform:translate(0, -50%);-webkit-transform:translate(0, -50%);}
+.pop_accessCont * {}
+.pop_accessCont h3 {position:fixed;left:0;top:0;width:100%;background-color:#6d7588;color:#fff; min-height:48px; padding:15px 6px 15px 12px; font-size:16px; box-sizing:border-box; z-index:10}
+.pop_accessCont h3 .closeOverlayPanel {position:absolute; right:0;top:0;background:url(http://image1.hanatour.com/mobile/common/schedule/btn_close01.png) no-repeat center center / 19px 19px; width:50px; height:48px; padding:16px 12px;border:none; cursor:pointer; margin:0}
+.pop_accessCont .acin_cont {padding:62px 15px 60px; box-sizing:border-box;overflow-y:scroll;-webkit-overflow-scrolling:touch; max-height:420px}/* 20171220 수정 */
+@media all and (min-width:360px) { /* 360 이상 */
+    .pop_accessCont .acin_cont {max-height:500px;}
+}
+.pop_accessCont .acin_cont dl {}
+.pop_accessCont .acin_cont dl dt {font-size:14px; font-weight:bold; margin-bottom:10px}
+.pop_accessCont .acin_cont dl dd {font-size:13px; color:#666; margin-bottom:18px}
+.pop_accessCont .acin_cont dl dd.yboxType {background-color:#f7f7f7; padding:15px; border:1px solid #e0e0e0}
+.pop_accessCont .acin_cont dl dd.yboxType ul li {font-size:13px; color:#666; position:relative; padding-left:8px}
+.pop_accessCont .acin_cont dl dd.yboxType ul li:before {content:'';width:3px; height:3px; background-color:#888; position:absolute;left:0;top:6px; border-radius:50%}
+.pop_accessCont .acin_cont dl dd.yboxType ul li+li {margin-top:10px}
+.pop_accessCont .acin_cont dl dd.outTxt {color:#888;margin-bottom:30px}
+.pop_accessCont .acin_cont dl dt.icoTit {background:url(http://image1.hanatour.com/mobile/common/ico_serrate.png) no-repeat left 1px / 13px 13px; padding-left:17px; font-size:13px}
+.pop_accessCont  a {background-color:#c83d67;border:1px solid #c83d67;text-align: center;font-size: 15px;color: #fff;padding: 14px 0;font-weight: bold;width: 100%;position: absolute;left: 0;bottom: 0;box-shadow: 0 -2px 10px #666;} /* 20171220 수정 */
+/*.pop_accessCont .acin_cont a {display:block; background-color:#c83d67; border:1px solid #c83d67; text-align:center; font-size:15px; color:#fff; padding:11px 0; border-radius:3px;font-weight:bold;width:150px; margin:20px auto 0;}*/
+</style>
+<div class="pop_accessSect">
+	<div class="pop_accessCont">
+		<h3>하나투어 앱 이용을 위한 접근 권한 안내<!--<button type="button" class="closeOverlayPanel" title="팝업닫기"></button>--></h3>
+		
+		<div class="acin_cont">
+			<dl>
+				<dt>필수 접근 권한</dt>
+				<dd class="yboxType">
+					<ul>
+						<li>기기ID 및 통화정보: 휴대전화 상태 및 ID 읽기</li>
+						<li>네트워크 접근 : 네트워크 연결 정보 확인</li>
+					</ul>
+				</dd>
+				
+				<dt>선택 접근 권한</dt>
+				<dd class="yboxType">
+					<ul>
+						<li>SMS : SMS 메시지 보내기</li>
+						<li>저장: USB 저장소의 콘텐츠 읽기,<br><span style="display:inline-block;width:26px"></span>USB 저장소의 콘텐츠 수정 또는 삭제</li>
+						<li>전화: 전화번호로 직접 전화 걸기,<br><span style="display:inline-block;width:26px"></span>휴대전화 상태 및 ID 읽기</li>
+						<li>주소록 : 기기에서 계정 검색</li>
+					</ul>	
+					
+				</dd>
+				<dd class="outTxt">※ '선택 접근 권한'은 해당 기능을 사용할 때 허용이 필요하며 비허용시에도 해당 기능 외 서비스 이용이 가능합니다.</dd>
+				
+				<dt class="icoTit">접근권한 변경 방법 </dt>
+				<dd>스마트폰 설정 &gt; 애플리케이션 관리 또는 앱 &gt; 하나투어에서 각 권한별 변경 가능</dd>
+			</dl>
+		</div>
+		
+		<a href="#" class="" data-role="none">확인</a><!-- 20171220 위치수정 :: 한단계 밖으로 빠짐 -->
+	</div>
+</div>
+<!-- // 20171106 접근권한 안내 팝업 안드로이드용 :: 앱별 공통 적용 -->
+
+
+</body>
+</html>
+

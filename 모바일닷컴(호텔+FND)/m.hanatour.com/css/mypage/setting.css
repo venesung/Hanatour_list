@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 설정 신규 201705 */
+.setting_cont {}
+.setting_cont .newSettBox {border-bottom:1px solid #c7c7c7; background-color:#fff}
+.setting_cont .stitSet {font-size:14px; padding:11px 10px 10px; background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #F8F8F8), color-stop(1, #EBEBEB)); background: -moz-linear-gradient(center top, #F8F8F8 0%, #EBEBEB 100%);border-bottom:1px solid #d6d6d6}
+.setting_cont .settList li {padding:13px 10px; position:relative;font-size:13px; padding-right:95px; box-sizing:border-box}
+.setting_cont .settList li+li {border-top:1px solid #d6d6d6}
+.setting_cont .settList li > strong {font-size:13px; font-weight:normal}
+.setting_cont .settList li > p {font-size:12px; color:#777; margin-top:10px}
+.setting_cont .logOut {position:absolute;right:0;top:50%;transform:translate(0, -50%);-webkit-transform:translate(0, -50%); font-size:12px; color:#888; padding:11px 14px 9px 17px;background:url(http://image1.hanatour.com/mobile/common/member/ico_sett_logout.png) no-repeat left center; background-size:12px 13px}
+.setting_cont .idTxt {color:#d41477; font-weight:bold; margin-left:10px}
+.setting_cont .telBtn {padding:13px 10px;background:url(http://image1.hanatour.com/mobile/common/btn_rarr_1833.png) no-repeat 95% center; background-size:9px 16px; font-size:13px; display:block}
+.setting_cont .telBtn span { display:block; font-size:12px; color:#777; margin-top:12px}
+.setting_cont .version {position:absolute;right:12px; top:50%;transform:translate(0, -50%);-webkit-transform:translate(0, -50%); color:#d41477;}
+
+.switch input {border:1px solid #ababab;border-radius:20px;width:54px;height:25px;background-color:#ababab;color:#fff !important;text-align:left;position:absolute; right:12px; top:50%;transform:translate(0, -50%);-webkit-transform:translate(0, -50%);font-size:11px; padding:2px 0 0 5px; letter-spacing:-0.04em;-webkit-appearance:none;}
+.switch input:before {content:'OFF';display:inline-block; position:absolute; right:4px; top:50%;transform:translate(0, -50%);-webkit-transform:translate(0, -50%); color:#fff; font-size:11px}
+.switch input:after {content:'';display:inline-block; background-color:#fff; width:21px; height:21px; border-radius:50%; position:absolute; left:1px; top:1px}
+.switch input:checked {border:1px solid #e01682; background-color:#e01682; text-align:right; padding-right:5px}
+.switch input:checked:before {content:'ON'; right:initial;left:5px}
+.switch input:checked:after{right:1px; left:initial}

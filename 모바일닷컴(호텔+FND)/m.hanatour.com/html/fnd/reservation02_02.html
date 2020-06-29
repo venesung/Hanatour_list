@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>예약하기 - 현지투어 패스 입장권 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="../../css/fnd.css"><!-- FND 추가 -->
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-2.1.3.min.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common_new.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/swiper.min.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-ui-custom.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/hanatour/ht.calendar.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/free/m.fnd.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+	<header id="header"><!-- 띠배너 보일경우 class="tBanTy" 추가 -->
+		<div class="inner">
+			<h1><a href="#none" data-role="none"><img src="../../images/common/btn_nlogo.png" alt="하나투어"></a></h1>
+			<a href="#none" id="btnMenu" data-role="none"><img src="../../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+			<a href="#none" id="btnMyhome" data-role="none"><img src="../../images/common/btn_hdright.png" alt="마이홈"></a>
+		</div>
+	</header>
+	<div class="headerMargin"></div>
+	
+	<!-- 컨텐츠 영역 -->
+	<div id="container">
+		<h2 class="pagTit">예약확인 및 동의하기</h2>
+		<!-- fnd 개편 -->
+		<section class="fndSection">
+			<!-- 유럽패스 예약 -->
+			<div class="reserv_choice">
+				<div class="inChoice">
+					<h3 class="tit_reserv">선택 상품정보</h3>
+					<div>
+						<table class="fnd_prodTable">
+							<caption>선택 상품정보</caption>
+							<colgroup>
+								<col style="width:30%">
+								<col style="width:*">
+							</colgroup>
+							
+							<tfoot>
+								<tr>
+									<th scope="row">최종결제금액</th>
+									<td>
+										<strong>5,122,500<span>원</span></strong>
+										<em>(EUR 555.55)</em>
+									</td>
+								</tr>
+							</tfoot>
+							
+							<tbody>
+								<tr>
+									<th scope="row">상품명</th>
+									<td>
+										<strong class="c_red">상품코드 [123456]</strong>
+										<p>[10%할인]유레일 글로벌 연속 패스</p>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">사용기간</th>
+									<td>15일</td>
+								</tr>
+								<tr>
+									<th scope="row">티켓구분</th>
+									<td>연속사용<span class="line">|</span>일반<span class="line">|</span>1등석</td>
+								</tr>
+								<tr>
+									<th scope="row">좌석등급</th>
+									<td>1등석</td>
+								</tr>
+								<tr>
+									<th scope="row">상품가격</th>
+									<td>
+										<ul class="prodMoney">
+											<li>
+												<strong>682,900<span>원 (EUR 532.35)</span></strong>
+												<em>성인 1명 X EUR 532.35</em>
+											</li>
+											<li>
+												<strong>682,900<span>원 (EUR 532.35)</span></strong>
+												<em>아동 1명 X EUR 532.35</em>
+											</li>
+											<li>
+												<strong>682,900<span>원 (EUR 532.35)</span></strong>
+												<em>유아 1명 X EUR 532.35</em>
+											</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">발권수수료</th>
+									<td>
+										<ul class="prodMoney">
+											<li>
+												<strong>12,900<span>원 (EUR 8.35)</span></strong>
+												<em>성인1 / 아동1 / 유아1<br>X 1,000원 (EUR 8.00)</em>
+											</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">배송료</th>
+									<td>배송비는 수령방법에 따라<br>비용이 부과될 수 있습니다.</td>
+								</tr>
+							</tbody>
+						</table>
+						
+					</div>
+				</div>
+			</div>
+			
+			<!-- 약관 -->
+			<div class="termsBox">
+				<h3>요금규정 및 약관</h3>
+				<div class="termsCont">
+					<label class="all_ch"><input type="checkbox" data-role="none" class="redCheck">모든약관에 동의합니다.</label>
+					
+					<ul class="inner_terms">
+						<li>
+							<label><input type="checkbox" data-role="none" class="redCheck">현지투어 이용약관(필수)</label>
+							<button type="button" data-role="none" title="전문보기" class="termsTog"></button>
+							<!-- 약관내용 -->
+							<div class="in_termsScrBox">
+								<dl class="termsListCont">
+									<dt>제1조 (목적)</dt>
+									<dd>이 약관은 ㈜하나투어(이하 '당사'라 한다)가 '현지투어'상품 판매자와 해당 상품을 구매 및 이용하고자 하는 고객간의 매매를 온/오프라인에서 중개함에 있어서의 세부조건 및 준수사항을 정함을 목적으로 합니다.</dd>
+									
+									<dt>제2조(용어의 정의)</dt>
+									<dd>
+										<ul>
+											<li>① '현지투어'란 해외여행지에서 진행되는 모든 성격의 옵션투어로서 각 여행지의 '현지투어 서비스 제공 업체'(이하 '현지투어업체'라 한다)에서 기획, 실시하여 해당 업체의 책임하에 진행되는 투어로써 하나투어가 중개하는 상품을 말합니다.</li>
+											<li>② '중개'란 '현지투어업체'가 판매하고자 하는 물품을 하나투어가 온/오프라인상 특정 채널에 공개하고, 이를 고객의 선택에 따라 구매가 가능하도록 함을 말합니다.</li>
+										</ul>
+									</dd>
+									
+									<dt>제3조(계약조건)</dt>
+									<dd>
+										<ul>
+											<li>①	'현지투어'는 각 여행지의 '현지투어업체'의 책임하에 진행되는 여행상품으로서, 세부 계약 조건은 각 업체별 계약 조건에 따릅니다.</li>
+											<li>②	각 '현지투어' 상품별 세부 일정은 당사의 홈페이지(www.hanatour.com) 등을 통해 확인할 수 있으며, 해당일정은 예정 일정이며 예약 후 변경될 수 있습니다.  </li>
+											<li>③	'현지투어' 진행에 있어 분쟁이 발생할 경우 '현지투어업체'의 계약조건에 따르며 당사는 책임을 지지 않습니다. '현지투어' 관련하여 발생한 분쟁은 각 '현지투어'가 진행되는 국가의 현지법이 적용될 수 있습니다.</li>
+											<li>④	각 '현지투어업체'에서는 진행하는 투어의 종류에 따라 고객의 동의서 작성을 요청할 수 있습니다. 각 상품별로 특성상 위험을 수반하는 경우가 있으므로 고객은 반드시 동의서 내용을 숙지하시고 작성 해주시기 바랍니다. </li>
+											<li>⑤	'현지투어'는 당사를 통해 현지투어 상품을 예약한 고객과 다른 여행사를 이용하는 고객이 함께 진행하게 되는 경우가 있습니다.</li>
+										</ul>
+									</dd>
+									
+									<dt>제4조(계약의 성립)</dt>
+									<dd>당사의 홈페이지(www.hanatour.com)또는 당사의 대리점을 통한 고객 예약요청 및 당사의 확약 후 고객이 각 상품별로 명시된 계약금을 지급함과 동시에 계약은 성립된 것으로 간주합니다.</dd>
+									
+									<dt>제5조(여행대금)</dt>
+									<dd>
+										<ul>
+											<li>①	여행대금은 원화 또는 각 여행지 현지화폐로 적용됩니다. 자세한 대금지급방법 및 적용환율 등은 각 상품별 요금규정을 확인 해주시기 바랍니다. </li>
+											<li class="c_red">②	고객은 각 '현지투어' 상품별로 명시된 여행대금 중 계약금을 제외한 잔금을 현지투어 진행일 7일 전까지 당사에게 지급하여야 합니다.<br>  단, 출발일 기준 7일 이내일 경우 여행대금을 행사 확정 후 24시간 이내로 완납하여야 합니다.</li>
+											<li>③	당사의 역할은 여행대금을 고객으로부터 수수하고, '현지투어'업체에게 전달하는 것에 한하며, 고객이 '당사'에 직접 여행대금을 납부한 경우라도, '당사'가 '현지투어업체'에 대금을 기 지급이나 전달한 이후에는 어떠한 경우에도 반환책임을 지지 않습니다. </li>
+											<li>④	고객이 '당사'에 직접 여행대금을 납부하였고, '당사'가 아직 '현지투어업체'에게 대금을 지급이나 전달하지 아니한 경우 고객과 '현지투어업체'간 합의가 소명되는 경우에 한하여는 '당사'는 해당 합의된 금액에 한하여 고객에게 반환할 수 있습니다. 단, 이러한 합의나 소명이 없는 경우나 여타 법적 절차에 의한 금지가 없는 경우에는 '당사'는 '현지투어업체'에게 기 수령한 여행대금을 지급이나 전달 할 수 있습니다.</li>
+										</ul>
+									</dd>
+									
+									<dt>제6조(정보의 제공)</dt>
+									<dd>'현지투어' 상품에 대한 제반 계약조건, 상품정보 및 취소∙변경규정, 손해배상규정, 요금규정 등 각종 정보는 '현지투어업체'의 책임으로 제공하는 정보입니다. 당사는 단순 중개업자로, '현지투어업체'에서 제공하는 모든 정보에 대해서 일체 책임을 지지 않습니다.</dd>
+									
+									<dt>제7조(계약의 해지, 해제, 변경 및 취소)</dt>
+									<dd>
+										<ul>
+											<li>① 계약의 해지, 해제, 변경, 취소 기타 이와 유사한 사유에 대하여는 당사는 단순 중개업자로 여하한 책임을 지지 아니하며, 이로 인해 발생하는 사후 처리 및 분쟁에 대해서는 '현지투어업체'와 고객간 계약에 따라야 하고, 당사는 책임도 지지 않습니다.</li>
+											<li>② '현지투어업체'의 계약조건은 각 '현지투어업체'가 제공한 바와 같이 각 상품별 안내에 명시되어 있으므로 반드시 확인해주시기 바랍니다. 고객의 고의 또는 과실로 취소수수료 규정을 확인하지 않거나 불명확한 계약조건의 상품을 구매하여 발생된 분쟁에 대해서는 당사는 일체의 책임을 지지 않습니다. </li>
+											<li class="c_red">③ 현지투어 최저행사인원 미 충족되어 계약 해제시, 이미 지급받은 계약금 환급 외에 다음 각 항목 1의 금액을 여행자에게 배상하여야 합니다.<br>-행사일 기준1~2일전 상품가의 30%배상<br> -행사일 당일 상품가의 50%배상</li>
+										</ul>
+									</dd>
+									
+									<dt>제9조(면책 및 책임의 제한)</dt>
+									<dd>
+										<ul>
+											<li>①	당사는 단순 중개업자로, '현지투어업체'가 제공하는 서비스의 내용 및 품질에 대해 책임을 지지 않으며, 고객과 '현지투어업체' 사이에서 생기는 모든 분쟁이나 불만 및 고객이 입는 손해에 대해서는 전적으로 고객과 '현지투어업체'간의 계약조건에 따르고 당사는 그에 대하여 아무런 책임 및 분쟁해결의 의무를 지지 않습니다.</li>
+											<li>②	'현지투어업체'는 당사와는 독립적인 계약 주체이며, '현지투어업체'의 고의 또는 과실이나 현지투어 진행시 발생한 고객의 부상, 사망, 재산의 손해 등 기타 모든 손해에 대해서는 '현지투어업체'의 책임이고, 당사는 어떠한 책임도 지지 않습니다.</li>
+											<li>③	당사의 중개업무 과정 자체에서의 고의 또는 과실로 인하여 고객에게 손해가 발생할 경우 당사가 책임집니다. 단, 상품 자체의 하자 등은 당사의 책임으로 보지 않습니다.</li>
+										</ul>
+									</dd>
+									
+									<dt>제10조(해외 여행자 보험의 권장)</dt>
+									<dd>현지투어상품으로 인해 고객에게 손해가 발생할 경우 각 '현지투어업체'별 계약조건에 따르며, 그로 인한 모든 분쟁은 각 국가별 현지법에 따릅니다. 각 국가별 안전기준 및 보상액은 국가별로 차이가 있을 수 있으며, 국가에 따라 보상이 미비한 경우도 있습니다. 따라서 여행 중에 질병이나 사고, 도난 등에 대비하여 안심하고 여행하기 위해서는 충분한 보상을 포함하고 있는 해외 여행자 보험에 가입하는 것을 권장합니다.</dd>
+								</dl>
+							</div>
+							<!-- // 약관 내용 -->
+						</li>
+						<li>
+							<label><input type="checkbox" data-role="none" class="redCheck">개인정보 수집 및 이용안내(필수)</label>
+							<button type="button" data-role="none" title="전문보기" class="termsTog"></button> <!-- 선택시 class="open"추가 -->
+							<!-- 약관내용 -->
+							<div class="in_termsScrBox">
+								<dl class="termsListCont">
+									<dt>1. 개인정보 수집 및 이용목적</dt>
+									<dd>여행상품 예약, 여행자보험 가입, 항공권/호텔 등의 예약 및 출입국 정보확인, 예약내역의 확인 및 상담, 컨텐츠 제공, 여행서비스 이용 시 회원의 우대, 마일리지 적립 /조회 / 사용 및 이에 관한 안내, 회원카드 발급, 구매 및 요금결제, 물품배송 또는 청구서 등 발송, 분쟁조정을 위한 기록보존, 불만처리, 민원처리, 고지사항 전달 등</dd>
+									
+									<dt>2. 개인정보 수집 항목 및 보유 및 이용기간</dt>
+									<dd>
+										<ul>
+											<li>① 회사는 적법한 절차와 법적 기준에 의거하여 고객의 개인정보를 수집하고 있으며, 고객의 서비스이용에 필요한 최소한의 정보만을 수집하고 있습니다. 정보통신망법과 개인정보보호법에 의거하여 수집, 이용을 제한하고 있습니다.</li>
+											<li>② 회사는 고객의 인권을 침해할 우려가 있는 민감한 개인정보항목(인종, 종교, 사상, 정치적 성향, 건강상태, 성생활정보 등)은 수집하지 않습니다.
+												<table class="termsComTable">
+													<colgroup>
+														<col style="width:*">
+														<col style="width:30%" span="2">
+													</colgroup>
+													<tbody>
+														<tr>
+															<th scope="col">개인정보 항목</th>
+															<th scope="col">용도</th>
+															<th scope="col">보유 및 이용기간</th>
+														</tr>
+														<tr>
+															<td>성명(국문/영문), 생년월일, 성별, 연락처, 이메일주소, 여권/비자 소지여부, 여권정보(영문성명, 여권번호, 여권만료일)</td>
+															<td>여행상품 예약 및 상담, 출국가능 여부 파악, 하나투어 마일리지 적립, 하나투어 마일리지 회원가입(해당자에 한함)</td>
+															<td>서비스 제공 및 관계법령에 따른 보존기간</td>
+														</tr>
+														<tr>
+															<td>성명, 생년월일, 성별, 여권번호</td>
+															<td>여행자보험 가입(해외여행상품)</td>
+															<td>서비스 제공 및 관계법령에 따른 보존기간</td>
+														</tr>
+														<tr>
+															<td>성명, 신용카드번호, 유효기간, 계약자와의 관계</td>
+															<td>대금결제/정산</td>
+															<td>서비스 제공 및 관계법령에 따른 보존기간</td>
+														</tr>
+														<tr>
+															<td>성명, 연락처, 생년월일, 이메일 주소</td>
+															<td>마일리지 서비스 제공</td>
+															<td>서비스 제공 및 관계법령에 따른 보존기간</td>
+														</tr>
+													</tbody>
+												</table>
+											</li>
+										</ul>
+									</dd>
+									<dt>3. 동의 거부권 및 거부 시 불이익 사항</dt>
+									<dd>개인정보 주체자는 개인정보 수집, 이용에 대한 동의를 거부할 권리가 있습니다. 동의를 거부할 경우 여행상품 예약 서비스 이용이 불가함을 알려드립니다.</dd>
+									
+								</dl>
+							</div>
+							<!-- // 약관 내용 -->
+						</li>
+						<li>
+							<label><input type="checkbox" data-role="none" class="redCheck">개인정보 제3자 제공 및 공유안내(필수)</label>
+							<button type="button" data-role="none" title="전문보기" class="termsTog"></button>
+							<!-- 약관내용 -->
+							<div class="in_termsScrBox">
+								<dl class="termsListCont">
+									<dt>1. 개인정보 제3자 제공에 관한 사항</dt>
+									<dd>회사는 회원의 동의가 있거나 관련 법령의 규정에 의한 경우를 제외하고 어떠한 경우에도 '개인정보의 수집 및 이용목적' 에서 고지한 범위를 넘어서거나, 해당되는 회원 서비스 영역과 무관한 타 기업/기관에 제공하거나 이용하지 않습니다. 단, 제공의 필요 시 회원의 동의를 얻어 회원 서비스 수행에 직접적으로 관계되는 업체에 한해서 제한적인 조건으로 개인정보가 제공되며 내용은 다음과 같습니다.
+										<table class="termsComTable">
+											<colgroup>
+												<col width="12%">
+												<col width="22%" span="4">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">서비스 영역</th>
+													<th scope="col">제공받는 자</th>
+													<th scope="col">제공하는 항목</th>
+													<th scope="col">제공받는 자의 이용목적</th>
+													<th scope="col">보유 및 이용기간</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>항공/해운/운송</td>
+													<td>대한항공, 아시아나 항공 및 국내외 항공사, 해운회사 / 철도회사/렌터카업체<br><a href="http://www.hanatour.com/temporarypolicy/traffic_list_02.htm" target="_blank" title="새창">전체보기</a></td>
+													<td>영문명, 생년월일, 성별, 연락처(이메일/휴대폰)여권정보(영문명, 여권번호, 여권만료일), 항공사, 마일리지정보</td>
+													<td>항공권 및 기타운송업체예약 출국가능여부 파악</td>
+													<td>서비스 제공 및 관계법령에 따른 보존기간</td>
+												</tr>
+												<tr>
+													<td>숙박</td>
+													<td>국내 외 호텔 및 리조트/숙박업체
+														<br><a href="http://www.hanatour.com/temporarypolicy/lodge_list_02.htm" target="_blank" title="새창">숙박 전체보기</a>
+													</td>
+													<td>성명(국문/영문), 연락처</td>
+													<td>숙박예약 진행 / 확인</td>
+													<td>서비스 제공 및 관계법령에 따른 보존기간</td>
+												</tr>
+												<tr>
+													<td>렌터카</td>
+													<td>렌터카 업체<br><a href="http://www.hanatour.com/temporarypolicy/policy_rent.htm" target="_blank" title="새창">전체보기</a></td>
+													<td>성명(국문/영문), 연락처</td>
+													<td>렌터카 예약 진행/확인</td>
+													<td>서비스 제공 및 관계법령에 따른 보존 기간</td>
+												</tr>
+												<tr>
+													<td>여행자보험</td>
+													<td>여행자보험 서비스 제공 보험사<br><a href="http://www.hanatour.com/temporarypolicy/insurance_list_02.htm" target="_blank" title="새창">전체보기</a></td>
+													<td>성명, 생년월일, 성별, 여권번호</td>
+													<td>여행자 보험 가입 (해외여행상품)</td>
+													<td>보험가입 이후 5년 후 파기</td>
+												</tr><tr>
+													<td>포켓와이파이 대여</td>
+													<td>비제이네트웍스(주)</td>
+													<td>이름, 연락처(이메일/휴대폰), 출국일 및 귀국일</td>
+													<td>포켓와이파이 예약 및 대여</td>
+													<td>서비스 제공 및 관계법령에 따른 보존 기간</td>
+												</tr><tr>
+													<td>방송행사 운영</td>
+													<td>제이티비씨(JTBC)</td>
+													<td>이름, 연락처(휴대폰), 출국일 및 귀국일</td>
+													<td>방송안내 및 방송출연 여부 확인</td>
+													<td>서비스 제공 및 관계법령에 따른 보존 기간</td>
+												</tr>
+											</tbody>
+										</table>
+									</dd>
+									<dt>2. 동의 거부권 및 거부 시 불이익 사항</dt>
+									<dd>회원님은 개인정보 제3자 제공에 대한 동의를 거부할 권리가 있습니다. 동의를 거부할 경우 상품서비스 수행에 필수적인 정보제공이 이뤄지지 않으므로, 예약수행이 불가함을 알려드립니다.</dd>
+								</dl>
+							</div>
+							<!-- // 약관 내용 -->
+						</li>
+						<li>
+							<label><input type="checkbox" data-role="none" class="redCheck">개인정보 활용 동의안내(선택)</label>
+							<button type="button" data-role="none" title="전문보기" class="termsTog"></button>
+							<!-- 약관내용 -->
+							<div class="in_termsScrBox">
+								<dl class="termsListCont">
+									<dt>1. 개인정보 활용 목적</dt>
+									<dd>
+										고객님의 개인정보는 고객님에게 적합한 맞춤 여행상품 안내서비스 및 맞춤 상담을 위해 아래와 같이 활용될 수 있습니다.
+										<ul>
+											<li>① 회사의 여행 상품 및 여행관련 서비스를 이용한 고객에게 한정하여 회사가 기획한 여행상품이나 다양한 맞춤서비스 홍보 및 안내하기 위하여 개인정보 개인정보 활용에 동의한 고객에게 다양한 맞춤 서비스를 제공할 수 있습니다.</li>
+											<li>② 신규서비스 개발 및 특화, 인구통계학적 특성에 따른 서비스 제공 및 광고 게재, 당사 및 제휴사 상품 / 제휴카드 안내, 이벤트 등 광고성 정보 전달, 회원의 서비스 이용에 대한 통계, 회원 대상 각종 마케팅 활동에 활용됩니다.</li>
+										</ul>
+									</dd>
+									<dt>2. 개인정보 수집 항목</dt>
+									<dd>
+										<table class="termsComTable">
+											<colgroup>
+												<col style="width:*">
+												<col style="width:25%" span="2">
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="col">개인정보 항목</th>
+													<th scope="col">용도</th>
+													<th scope="col">보유 및 이용기간</th>
+												</tr>
+												<tr>
+													<td>이름, 연락처, 이메일, 주소</td>
+													<td>맞춤서비스 제공, 이벤트 안내, 상품안내 등 마케팅 및 광고에 활용</td>
+													<td>서비스 제공 및 관계법령에 따른 보존기간</td>
+												</tr>
+											</tbody>
+										</table>
+									</dd>
+									<dt>3. 개인정보의 이용 및 보유기간</dt>
+									<dd>개인정보 활용에 동의한 고객님에 한해 서비스 제공 및 관계 법령에 따른 보존기간 까지</dd>
+									<dt>4. 동의를 거부할 권리 및 동의를 거부할 경우의 불이익</dt>
+									<dd>개인정보 주체자는 개인정보 활용에 대한 동의를 거부할 권리가 있습니다. 동의를 거부할 경우 여행 맞춤 서비스 및 정보제공이 일부 제한 될 수 있으며 회원가입 및 여행서비스 이용에는 영향이 없습니다.</dd>
+								</dl>
+							</div>
+							<!-- // 약관 내용 -->
+						</li>
+						
+					</ul>
+				</div>
+				<button type="button" class="btn_disable">동의하고 진행</button> <!-- 체크전 버튼 -->
+				<a href="#" class="m_btnRed" style="display:none">다음</a>
+			</div>
+			<!-- // 유럽패스 예약 -->
+		</section>
+		<!-- // fnd 개편 -->
+		
+	</div>
+	<!-- //컨텐츠 영역 -->
+	
+	<footer class="newFoot">
+		<ul>
+			<li><a href="#none" data-role="none">로그인</a></li>
+			<li><a href="#none" data-role="none">PC버전</a></li>
+			<li><a href="#none" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+		</ul>
+		<div>
+			<a href="#none" data-role="none">이용약관</a>|
+			<a href="#none" data-role="none">개인정보처리방침</a>|
+			<a href="#none" data-role="none">여행약관</a>|
+			<a href="#none" data-role="none">사업자정보확인</a>
+		</div>
+		<address>
+			㈜ 하나투어 | 대표자: 최현석 | 사업자등록번호 : 102-81-39440<br>
+			통신판매업신고번호 : 종로01-1806호 | 개인정보관리 책임자 : 최종윤<br>
+			[110-160]서울특별시 종로구 인사동 5길 41 ㈜ 하나투어<br>
+			하나투어상담센터 : <a href="tel:1577-1233" data-role="none">1577-1233</a> | FAX : 02-734-0392<br>
+			이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> | 호스팅 서비스 사업자 : ㈜하나투어<br>
+			관광사업자 등록번호 : 제1933-000006호 | 영업보증보험 : 22억 1천만원 가입<br>
+			COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+		</address>
+	</footer>
+	
+</div>
+
+</body>
+</html>
+

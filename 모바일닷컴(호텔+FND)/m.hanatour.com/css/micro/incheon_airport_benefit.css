@@ -1,0 +1,344 @@
+@charset "UTF-8";
+/*@import url("sprites.css");*/
+
+/*reset*/
+html {font-size:10px}
+@media all and (min-width:375px) { /* 아이폰6 */
+    html {font-size:11.5px}
+}
+@media all and (min-width:414px) { /* 아이폰6 plus */
+    html {font-size:12px}
+}
+body,form,div,p,h1,h2,h3,h4,h5,h6,dl,dt,dd,ul,ol,li,fieldset,input,textarea,blockquote,th,td {margin:0;padding:0;-webkit-text-size-adjust:none; font-size:14px; font-family:'DroidSansFallback','Apple Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;color:#333;letter-spacing:-1px}
+table {border-spacing:0;border-collapse:collapse;width:100%}
+table caption {font-size:0;line-height:0;width:0;height:0;visibility:hidden;text-indent:-9999px}
+em,cite,address,dfn,var {font-style:normal}
+dl,ul,ol{list-style:none}
+img,fieldset {border:0}
+input, select, img{vertical-align:middle;}
+input, select {-webkit-appearance:none;border-radius:0}
+a {text-decoration:none;color:#333}
+button:focus {outline:0;}
+html, body {
+    position: relative;
+    height:100%;
+}
+/* 헤더 */
+#container {
+    padding-top:52px;
+}
+.icnAirBenefitTopArea {
+    padding:43px 0 52px;
+    background:url(http://image1.hanatour.com/micro/promotion/incheon_airport_benefit/mobile/bg_top_area.jpg) 0 0 / 100% 100% no-repeat;
+}
+.icnAirBenefitTopArea h2 {
+    text-align:center;
+    font-size:1.7rem;
+}
+.icnAirBenefitTopArea h2 em {
+    position:relative;
+    display:block;
+    margin:30px 0;
+    font-size:3.5rem;
+    font-weight:600;
+}
+.icnAirBenefitTopArea h2 em:after {
+    position:absolute;
+    left:50%;top:-14px;
+    content:'';
+    width:3.3rem;
+    height:1px;
+    background-color:#4e4e4e;
+    transform:translate(-50%,0);
+    -webkit-transform:translate(-50%,0);
+    -o-transform:translate(-50%,0);
+    -moz-transform:translate(-50%,0);
+}
+.icnAirBenefitTopArea h2 em span {
+    color:#e85581;
+}
+.icnAirBenefitTopArea > p {
+    text-align:center;
+    font-size:1.5rem;
+    line-height:2rem;
+}
+.icnAirBenefitCouponWrap {
+    padding:15px 15px 5px;
+}
+.couponList:after {
+    display:block;
+    content:'';
+    clear:both;
+}
+.couponList li {
+    float:left;
+    box-sizing:border-box;
+    width:calc(50% - 2px);
+    margin:0 4px 10px 0;
+    background-size:100% 100%;
+    background-position:0 0;
+    background-repeat:no-repeat;
+}
+.couponList li:nth-child(1) {
+    background-image:url(http://image1.hanatour.com/micro/promotion/incheon_airport_benefit/mobile/bg_coupon_list01.jpg);
+}
+.couponList li:nth-child(2) {
+    background-image:url(http://image1.hanatour.com/micro/promotion/incheon_airport_benefit/mobile/bg_coupon_list02.jpg);
+}
+.couponList li:nth-child(3) {
+    background-image:url(http://image1.hanatour.com/micro/promotion/incheon_airport_benefit/mobile/bg_coupon_list03.jpg);
+}
+.couponList li:nth-child(4) {
+    background-image:url(http://image1.hanatour.com/micro/promotion/incheon_airport_benefit/mobile/bg_coupon_list04.jpg);
+}
+.couponList li:nth-child(5) {
+    background-image:url(http://image1.hanatour.com/micro/promotion/incheon_airport_benefit/mobile/bg_coupon_list05.jpg);
+}
+.couponList li:nth-child(6) {
+    background-image:url(http://image1.hanatour.com/micro/promotion/incheon_airport_benefit/mobile/bg_coupon_list06.jpg);
+}
+.couponList li:nth-child(7) {
+    background-image:url(http://image1.hanatour.com/micro/promotion/incheon_airport_benefit/mobile/bg_coupon_list07.jpg);
+}
+.couponList li:nth-child(8) {
+    background-image:url(http://image1.hanatour.com/micro/promotion/incheon_airport_benefit/mobile/bg_coupon_list08.jpg);
+}
+.couponList li a {
+    display:block;
+    height:13.5rem;
+    padding-top:1.5rem;
+    text-align:center;
+}
+.couponList li.c_white h3, .couponList li.c_white p {
+    color:#fff;
+}
+.couponList li.c_black h3, .couponList li.c_black p {
+    color:#222;
+}
+.couponList li:nth-child(even) {
+    margin-right:0;
+}
+.couponList li h3 {
+    display:inline-block;
+    margin-bottom:0.8rem;
+    padding:0.4rem 1rem;
+    font-size:0.9rem;
+}
+.couponList li.c_white h3 {
+    border:1px solid #fff;
+}
+.couponList li.c_black h3 {
+    border:1px solid #222;
+}
+.couponList li p {
+    font-size:1.1rem;
+}
+.couponList li p em {
+    display:block;
+    margin-bottom:0.4rem;
+    font-size:1.7rem;
+}
+.couponList li .small {
+    display:block;
+    font-size:1rem;
+}
+.couponList li .arrowPrice {
+    position:relative;
+    display:inline-block;
+    margin-right:0.5rem;
+    text-decoration:none;
+}
+.couponList li .arrowPrice:before {
+    position:absolute;
+    left:0;top:50%;
+    content:'';
+    display:block;
+    width:calc(100% + 0.3rem);
+    height:1px;
+    transform:translate(0,-50%);
+    -webkit-transform:translate(0,-50%);
+    -o-transform:translate(0,-50%);
+    -moz-transform:translate(0,-50%);
+}
+.couponList li.c_white .arrowPrice:before {
+    background-color:#fff;
+}
+.couponList li.c_black .arrowPrice:before {
+    background-color:#222;
+}
+.couponList li .arrowPrice:after {
+    position:absolute;
+    right:-0.2rem;top:50%;
+    content:'';
+    display:block;
+    width:0;
+    height:0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    transform:translate(100%,-50%);
+    -webkit-transform:translate(100%,-50%);
+    -o-transform:translate(100%,-50%);
+    -moz-transform:translate(100%,-50%);
+}
+.couponList li.c_white .arrowPrice:after {
+    border-left: 4px solid #fff;
+}
+.couponList li.c_black .arrowPrice:after {
+    border-left: 4px solid #222;
+}
+
+/* 레이어 팝업 */
+.fullPopCommon .header h3{background-color:#6d7588;position:relative;color:#fff;height:48px;font-size:18px;box-sizing:border-box;padding:15px 0 0 12px;}
+.fullPopCommon .header h3 a{position:absolute;right:0;top:0;background:url(http://image1.hanatour.com/mobile/common/schedule/btn_close01.png) no-repeat center center;background-size:19px 19px;width:19px;height:19px;padding:16px 12px;}
+.fullPopCommon .innerScroller{-webkit-overflow-scrolling:touch;width:100%;height:100%;overflow-y:auto;}
+.pop_innerComm{padding:15px 15px 30px;}
+/* 레이어팝업 컨텐츠 */
+.icnAirBenefitPopTopArea {
+    position:relative;
+}
+.icnAirBenefitPopTopArea:after {
+    position:absolute;
+    left:15px;top:0;
+    display:block;
+    content:'';
+    width:50px;
+    height:40px;
+    background-size:50px 40px;
+    background-repeat:no-repeat;
+    background-position:0 0;
+}
+.icnAirBenefitPop01 .icnAirBenefitPopTopArea:after {
+    background-image:url(http://image1.hanatour.com/micro/promotion/incheon_airport_benefit/mobile/ico_pop_label01.png);
+}
+.icnAirBenefitPop02 .icnAirBenefitPopTopArea:after {
+    background-image:url(http://image1.hanatour.com/micro/promotion/incheon_airport_benefit/mobile/ico_pop_label02.png);
+}
+.icnAirBenefitPop03 .icnAirBenefitPopTopArea:after {
+    background-image:url(http://image1.hanatour.com/micro/promotion/incheon_airport_benefit/mobile/ico_pop_label03.png);
+}
+.icnAirBenefitPop04 .icnAirBenefitPopTopArea:after {
+    background-image:url(http://image1.hanatour.com/micro/promotion/incheon_airport_benefit/mobile/ico_pop_label04.png);
+}
+.icnAirBenefitPop05 .icnAirBenefitPopTopArea:after {
+    background-image:url(http://image1.hanatour.com/micro/promotion/incheon_airport_benefit/mobile/ico_pop_label05.png);
+}
+.icnAirBenefitPop06 .icnAirBenefitPopTopArea:after {
+    background-image:url(http://image1.hanatour.com/micro/promotion/incheon_airport_benefit/mobile/ico_pop_label06.png);
+}
+.icnAirBenefitPop07 .icnAirBenefitPopTopArea:after {
+    background-image:url(http://image1.hanatour.com/micro/promotion/incheon_airport_benefit/mobile/ico_pop_label07.png);
+}
+.icnAirBenefitPopTopArea img {
+    width:100%;
+}
+.icnAirBenefitPopCont h4 {
+    display:flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    margin-bottom:15px;
+}
+.icnAirBenefitPopCont h4:after {
+    display:block;
+    content:'';
+    width:84px;
+    height:16px;
+    background:url(http://image1.hanatour.com/micro/promotion/incheon_airport_benefit/mobile/img_pop_logo_hnt.png) 0 0 / 84px 16px no-repeat;
+}
+.icnAirBenefitPop01 .icnAirBenefitPopCont h4 img {
+    height:23px;
+}
+.icnAirBenefitPop02 .icnAirBenefitPopCont h4 img {
+    height:18px;
+}
+.icnAirBenefitPop03 .icnAirBenefitPopCont h4 img {
+    height:21px;
+}
+.icnAirBenefitPop04 .icnAirBenefitPopCont h4 img {
+    height:23px;
+}
+.icnAirBenefitPop05 .icnAirBenefitPopCont h4 img {
+    height:22px;
+}
+.icnAirBenefitPop06 .icnAirBenefitPopCont h4 img {
+    height:25px;
+}
+.icnAirBenefitPop07 .icnAirBenefitPopCont h4 img {
+    height:24px;
+}
+.icnAirBenefitPopTitle {
+    margin-bottom:10px;
+    font-size:1.5rem;
+    font-weight:600;
+}
+.icnAirBenefitPopTitle em {
+    font-size:1.8rem;
+}
+.benefitSumWrap {
+    display:table;
+}
+.benefitSumWrap li {
+    display:table-row;
+}
+.benefitSumWrap li > span {
+    display:table-cell;
+}
+.benefitSumLeft {
+    padding-right:8px;
+    color:#666;
+}
+.benefitSumRight {
+    padding-bottom:5px;
+    font-weight:600;
+}
+.benefitSumWrap li:last-child .benefitSumRight {
+    padding-bottom:0;
+}
+.benefitCaution {
+    margin-top:9px;
+    font-size:1.3rem;
+    color:#666;
+}
+.icnAirBenefitPopDescWrap {
+    padding:13px;
+    margin:15px 0 20px;
+    border:1px solid #ccc;
+}
+.icnAirBenefitPopDescWrap h5 {
+    margin-bottom:10px;
+    font-weight:600;
+}
+.icnAirBenefitPopDescWrap li {
+    position:relative;
+    margin-bottom:10px;
+    padding-left:10px;
+    font-size:1.2rem;
+    line-height:1.4rem;
+}
+.icnAirBenefitPopDescWrap li:before {
+    position:absolute;
+    left:0;top:calc(0.7rem - 2px);
+    display:block;
+    content:'';
+    width:4px;
+    height:4px;
+    border-radius:50%;
+    background-color:#666;
+}
+.icnAirBenefitPopDescWrap li:last-child {
+    margin-bottom:0;
+}
+.icnAirBenefitPopCont .m_btnRed {
+    display:inline-block;
+    padding:11px 30px;
+    margin:0;
+}
+.icnAirBenefitPopBtnWrap {
+    text-align:center;
+}

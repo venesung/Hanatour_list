@@ -1,0 +1,179 @@
+
+<!-- pop start  -->
+
+	<div class="fullPopCommon">
+		<div class="header">
+			<h3>성인1 정보입력<button type="button" class="closeOverlayPanel" title="팝업닫기"></button></h3>
+		</div>
+		
+		<div class="innerScroller">
+			<!-- pop cont -->
+			<div class="pop_innerComm">
+				<label class="sameCheck"><input type="checkbox" class="redCheck"><span>예약자와 동일</span></label>
+				<ul class="inputCell">
+					<li>
+						<label for="name">한글성명<sup>*</sup></label><!-- for = id 값 동일하게 맞춰주세요 -->
+						<div><input type="text" id="name" class="inputTxt" title="한글성명"></div>
+					</li>
+					<li>
+						<label for="en_name">영문성명<sup>*</sup><span class="smTxt">(여권동일)</span></label>
+						<div>
+							<div class="inTable">
+								<span class="w35">
+									<input type="url" id="en_name" class="inputTxt" data-role="none" title="영문성" placeholder="영문성">
+								</span>
+								<span class="cellPad"></span>
+								<span class="w65">
+									<input type="url" class="inputTxt" data-role="none" title="영문이름" placeholder="영문이름">
+								</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<label for="birth">생년월일<sup>*</sup></label>
+						<div><input type="tel" id="birth" class="inputTxt" placeholder="예)YYYYMMDD"></div>
+					</li>
+					<li>
+						<label for="sex">성별<sup>*</sup></label>
+						<div class="radioBox">
+							<label class="comRadio"><input type="radio" id="sex" name="sex" data-role="none" checked><span>남성</span></label>
+							<label class="comRadio"><input type="radio" name="sex" data-role="none"><span>여성</span></label>
+						</div>
+					</li>
+					<li>
+						<label for="passport">여권번호<sup>*</sup></label>
+						<div><input type="text" id="passport" class="inputTxt" title="여권번호" placeholder="예) M12345678"></div>
+					</li>
+					<li>
+						<label for="passport_day">여권유효기간<sup>*</sup></label>
+						<div><input type="tel" id="passport_day" class="inputTxt" title="여권번호 유효기간" placeholder="예) 20200101"></div>
+					</li>
+					
+					<!-- 20171019 위치이동 및 추가 -->
+					<li>
+						<label for="phone">전화번호<sup>*</sup></label>
+						<div>
+							<div class="inTable">
+								<span class="w35">
+									<select class="selectBox" id="phone" title="휴대폰 앞자리 선택" data-role="none">
+										<option>010</option>
+									</select>
+								</span>
+								<span class="cellPad"></span>
+								<span class="w65">
+									<input type="tel" class="inputTxt" data-role="none" title="휴대폰 가운데, 뒷자리" placeholder="- 없이 입력">
+								</span>
+							</div>
+						</div>
+					</li>
+					
+					<li>
+						<label for="localTel">현지연락처<sup>*</sup></label>
+						<div><input type="tel" id="localTel" class="inputTxt" title="현지연락처" placeholder=""></div>
+					</li>
+					<li>
+						<label for="email">이메일<sup>*</sup></label>
+						<div><input type="email" id="email" class="inputTxt" title="이메일" placeholder="예) hana@hanatour.com"></div>
+					</li>
+					<li>
+						<label for="hotelName">투숙호텔<sup>*</sup></label>
+						<div><input type="text" id="hotelName" class="inputTxt" title="투숙호텔" placeholder=""></div>
+					</li>
+					<!-- // 20171019 위치이동 및 추가 -->
+					
+					<!--li>
+						<label for="depart">출국일자<sup>*</sup></label>
+						<div><input type="tel" id="depart" class="inputTxt" title="출국일자" placeholder="예) 20171201"></div>
+					</li>
+					<li>
+						<label for="air_code">비행편명<sup>*</sup></label>
+						<div><input type="text" id="air_code" class="inputTxt" title="비행편명" placeholder="예) KE001"></div>
+					</li-->
+					<li>
+						<label for="time_start">사용시작일시<sup>*</sup></label>
+						<div>
+							<!-- 20171019 수정 -->
+							<div class="inTable">
+								<span style="width:41.5%">
+									<input type="date" max="9999-12-31" id="time_start" class="inputTxt" title="년월일">
+								</span>
+								<span class="cellPad"></span>
+								<span style="width:28%">
+									<select class="selectBox" title="시 선택" data-role="none">
+										<option selected="" disabled="">시</option>
+										<option>1시</option>
+										<option>2시</option>
+										<option>3시</option>
+										<option>4시</option>
+										<option>5시</option>
+									</select>
+								</span>
+								<span class="cellPad"></span>
+								<span style="width:28%">
+									<select class="selectBox" title="분 선택" data-role="none">
+										<option selected="" disabled="">분</option>
+										<option>0분</option>
+										<option>5분</option>
+										<option>10분</option>
+									</select>
+								</span>
+							</div>
+							<!-- // 20171019 수정 -->
+						</div>
+					</li>
+					<li>
+						<label for="time_end">사용종료일시<sup>*</sup></label>
+						<div>
+							<!-- 20171019 수정 -->
+							<div class="inTable">
+								<span style="width:41.5%">
+									<input type="date" max="9999-12-31" id="time_end" class="inputTxt" title="년월일">
+								</span>
+								<span class="cellPad"></span>
+								<span style="width:28%">
+									<select class="selectBox" title="시 선택" data-role="none">
+										<option selected="" disabled="">시</option>
+										<option>1시</option>
+										<option>2시</option>
+										<option>3시</option>
+										<option>4시</option>
+										<option>5시</option>
+									</select>
+								</span>
+								<span class="cellPad"></span>
+								<span style="width:28%">
+									<select class="selectBox" title="분 선택" data-role="none">
+										<option selected="" disabled="">분</option>
+										<option>0분</option>
+										<option>5분</option>
+										<option>10분</option>
+									</select>
+								</span>
+							</div>
+							<!-- // 20171019 수정 -->
+						</div>
+					</li>
+					
+					
+					
+					<!-- 옵선선택 추가 20171017 -->
+					<li>
+						<label for="sex" class="vaTop">옵션선택<sup>*</sup></label>
+						<div class="optionCheck">
+							<label><input type="checkbox" class="redCheck"><span>객실 싱글 [추가금액 : 50 USD ≒ 57,200 원]</span></label>
+							<label><input type="checkbox" class="redCheck" checked="" disabled=""><span>[나이아가라] 스카이론 타워 + IMAX 영화 추가금액 : (성인 : 50 USD (57,200 원) (아동 : 50 USD (57,200 원) (포함)</span></label>
+							<label><input type="checkbox" class="redCheck"><span>뉴욕 알라모 / 대형 [추가금액 : (성인 : 15 USD)  (17,160 원) ) (아동 : 0 USD (0 원) )] (선택사항)</span></label>
+							<label><input type="checkbox" class="redCheck" checked="" disabled=""><span>뉴욕 알라모 / SUV [추가금액 : (성인 : 36 USD)  (41,190 원) ) (아동 : 0 USD (0 원) )] (포함)</span></label>
+							<label><input type="checkbox" class="redCheck"><span>뉴욕 알라모 / 럭셔리 [추가금액 : (성인 : 44 USD) (50,340 원) ) (아동 : 0 USD (0 원) )] (선택사항)</span></label>
+						</div>
+					</li>
+					<!-- // 옵선선택 추가 20171017 -->
+				</ul>
+				
+				<a href="#" class="m_btnRed short">확인</a>
+			</div>
+			<!-- // pop cont -->
+		</div>
+		
+	</div>
+

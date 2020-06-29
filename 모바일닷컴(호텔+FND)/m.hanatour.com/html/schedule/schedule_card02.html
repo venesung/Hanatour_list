@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>일정표 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/sub.css">
+<link rel="stylesheet" type="text/css" href="../css/schedule.css"><!-- 일정표 추가 -->
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-2.1.3.min.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common_new.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/swiper.min.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-ui-custom.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/hanatour/ht.calendar.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/pack/schedule.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		//아래서 올라오는 팝업 띄우면 <div id="overlayPanel" 가 생성되고 그 div 에 'open.loadpop' 을 trigger 시키니 아래처럼 받아 data.url 로 구별 하시면 됩니다.
+		//닫을때 필요하시면 'close.loadpop' 로 받으시면 됩니다.
+		$('body').on('open.loadpop', '#overlayPanel', function (e, data) {
+			console.log(data);
+		});
+	});
+</script>
+<style type="text/css">
+body,form,div,p,h1,h2,h3,h4,h5,h6,dl,dt,dd,ul,ol,li,fieldset,input,textarea,blockquote,th,td {margin:0;padding:0;-webkit-text-size-adjust:none; font-size:14px; font-family:'DroidSansFallback','Apple Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;color:#333;letter-spacing:-1px}
+table {border-spacing:0;border-collapse:collapse;width:100%}
+table caption {font-size:0;line-height:0;width:0;height:0;visibility:hidden;text-indent:-9999px}
+em,cite,address,dfn,var {font-style:normal}
+dl,ul,ol{list-style:none}
+img,fieldset {border:0}
+input, select, img{vertical-align:middle;}
+input, select {-webkit-appearance:none;border-radius:0}
+a {text-decoration:none;color:#333}
+
+/* 일정표 개편 CSS  */
+html {font-size:10px}
+@media all and (min-width:375px) { /* 아이폰6 */
+html {font-size:11.5px}
+}
+@media all and (min-width:414px) { /* 아이폰6 plus */
+html {font-size:12px}
+}
+
+body {width:100%;overflow-x:hidden;-webkit-text-size-adjust:none;text-size-adjust: none;}
+
+.detailTxt > li {border:1px solid #e0e0e0; background-color:#fff; position:relative; padding:12px; margin-bottom:15px; letter-spacing:-0.02em}
+.detailTxt > li:before {content:'';width:28px;height:15px;position:absolute;left:-13px;top:-8px;background:url(http://image1.hanatour.com/mobile/common/schedule/ico_sc_03.png) no-repeat 0 0; background-size:28px 15px}
+.detailTxt > li.onlyTxt {border:none; padding:0 0 0 24px; font-weight:bold; font-size:1.3rem; background-color:transparent; margin-bottom:20px}
+.detailTxt > li.onlyTxt:last-child {margin-bottom:35px}
+.detailTxt > li.topStit {border:none; padding:0 0 0 24px;font-size:1.3rem; background-color:transparent}
+.detailTxt > li.topStit > div {border:1px solid #e0e0e0; margin-left:-24px; padding:15px 12px; background-color:#fff; margin-top:5px}
+.detailTxt > li.onlyTxt:before,.detailTxt > li.topStit:before {top:0;left:-12px}
+.detailTxt > li.redLine {border-color:#e45b85}
+.detailTxt > li.redLine .listDott > li {margin-bottom:2px}
+.detailTxt > li.bundleBox > div {padding-top:0}
+.detailTxt > li.bundleBox .de_inBox02 a {padding-top:10px;padding-bottom:10px;border-bottom:1px solid #e0e0e0}
+.detailTxt > li.bundleBox .de_inBox02 a.last {border-bottom:none}
+.detailTxt > li.bundleBox .de_inBox02 a .sc_imgBox {top:10px}
+.detailTxt > li.bundleBox .btmTxtBox {margin-top:0}
+.detailTxt > li.bundleBox .btmTxtBox strong+ul+strong {margin-top:15px}
+
+.detailTxt > li.hotelSpecial {}
+.detailTxt > li.hotelSpecial > strong {font-size:1.3rem}
+.detailTxt > li.hotelSpecial > p {color:#666; font-size:1.2rem; margin-bottom:10px}
+.detailTxt > li.hotelSpecial .swiper-pag-num {right:50%; margin-right:-34px}
+.detailTxt > li.hotelSpecial .hsBtmBox {padding-bottom:20px; overflow:hidden}
+.detailTxt > li.hotelSpecial .hsBtmBox+.hsBtmBox {background:url(http://image1.hanatour.com/mobile/common/smc/bg_smc_dot.png) repeat-x 0 0; background-size:5px 1px; padding-bottom:10px}
+.detailTxt > li.hotelSpecial .stitHs {font-size:1.3rem;display:block; margin-top:20px}
+.detailTxt > li.hotelSpecial .txtBox { background-color:#f7f7f7; border-top:1px solid #e0e0e0; margin-bottom:5px; height:105px; box-sizing:border-box; overflow:hidden; padding:10px 10px 15px; margin-top:10px}
+.detailTxt > li.hotelSpecial .txtBox * {font-size:1.2rem}
+.detailTxt > li.hotelSpecial .txtBox.open {height:auto}
+.detailTxt > li.hotelSpecial .txtBox > p {margin-bottom:25px}
+.detailTxt > li.hotelSpecial .txtBox > ul li {overflow:hidden;margin-bottom:12px; display:table; width:100%}
+.detailTxt > li.hotelSpecial .txtBox > ul li:last-child {margin-bottom:0}
+.detailTxt > li.hotelSpecial .txtBox > ul li strong {font-weight:normal;color:#888; display:table-cell;width:60px; vertical-align:top}
+.detailTxt > li.hotelSpecial .txtBox > ul li span {display:table-cell; width:auto;vertical-align:top}
+.detailTxt > li.hotelSpecial .hsBtn {color:#666; font-size:1.2rem; display:block; text-align:center; padding:6px 0; border:1px solid #e0e0e0}
+.detailTxt > li.hotelSpecial .hsBtn:after {content:''; display:inline-block; width:13px; height:7px; position:relative; top:-1px;background:url(http://image1.hanatour.com/mobile/common/schedule/btn_hs_off.png) no-repeat 0 0; background-size:13px 7px; margin-left:2px}
+.detailTxt > li.hotelSpecial .hsBtn.on:after {background-image:url(http://image1.hanatour.com/mobile/common/schedule/btn_hs_on.png)}
+.detailTxt > li.hotelSpecial .hsTab {overflow:hidden;border:1px solid #e0e0e0; border-bottom:none}
+.detailTxt > li.hotelSpecial .hsTab li {float:left;width:33.3%}
+.detailTxt > li.hotelSpecial .hsTab li:nth-child(2) {width:33.4%}
+.detailTxt > li.hotelSpecial .hsTab li a {display:block; color:#888; font-size:1.3rem; background-color:#f2f2f2;border-bottom:1px solid #e0e0e0; text-align:center; padding:10px 0}
+.detailTxt > li.hotelSpecial .hsTab li:nth-child(2) a {border-left:1px solid #e0e0e0;border-right:1px solid #e0e0e0}
+.detailTxt > li.hotelSpecial .hsTab li.on a { color:#333; background-color:#fff;border-bottom:none}
+
+.de_inBox01 dt {font-size:1.3rem;border-bottom:1px solid #e0e0e0;padding-bottom:10px;font-weight:bold;margin-bottom:10px}
+.de_inBox01 dd strong {font-size:1.3rem;display:block; margin-bottom:4px}
+.de_inBox01 dd p {font-size:1.3rem;margin-bottom:20px}
+.de_inBox01 dd:last-child p {margin-bottom:0}
+.de_inBox02 a {display:block;padding:0 20px 0 98px; position:relative;background:url(http://image1.hanatour.com/mobile/common/schedule/btn_de_inbox02.png) no-repeat right center; background-size:10px 18px; min-height:74px}
+.de_inBox02 a.simple  {padding-left:0;min-height:inherit}
+.de_inBox02 a .sc_imgBox {position:absolute;left:0;top:0}
+.de_inBox02 a .sc_imgBox img {width:86px;height:74px}
+.de_inBox02 a p {font-size:1.3rem}
+.de_inBox02 a p b {overflow:hidden;text-overflow:ellipsis;display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; line-height:1.5rem; font-weight:normal;margin-top:2px}
+.de_inBox02 a p strong {display:block}
+.de_inBox02 a p span {display:block; font-size:1.2rem; color:#666; margin-top:4px}
+.de_inBox02 a p span em {display:inline-block; padding-left:6px; border-left:1px solid #e0e0e0; margin-left:7px}
+
+.btmTxtBox {padding-top:10px;background:url(http://image1.hanatour.com/mobile/common/schedule/bg_line_dotted.png) repeat-x 0 0; background-size:4px 1px; margin-top:12px}
+.btmTxtBox strong {font-size:1.2rem; margin-bottom:2px; display:block}
+.btmTxtBox .listNum li {margin-bottom:3px;font-size:1.2rem}
+.btmTxtBox .listNum li:last-child {margin-bottom:0}
+.btmTxtBox02 {margin-top:-10px}
+.btmTxtBox02:before {content:none !important}
+.btmTxtBox02 strong {font-size:1.2rem; margin-bottom:2px; display:block}
+.btmTxtBox02 .listNum li {margin-bottom:3px;font-size:1.2rem}
+.btmTxtBox02 .listNum li:last-child {margin-bottom:0}
+.imgCell {display:table;width:100%;}
+.imgCell span {display:table-cell}
+.imgCell .img {width:32%}
+.imgCell .img img {width:100%}
+.imgCell .binCell {width:2%}
+.imgCellTxt {padding:10px 25px 0 0;background:url(http://image1.hanatour.com/mobile/common/schedule/btn_de_inbox02.png) no-repeat right center; background-size:10px 18px; display:block}
+.imgCellTxt strong {display:block;font-size:1.3rem}
+.imgCellTxt b {font-weight:normal; display:block;font-size:1.3rem;overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical}
+.imgCellTxt span {color:#666; font-size:1.2rem; display:block; margin-top:10px}
+.spciTop {position:relative;border-bottom:1px solid #e0e0e0; padding-bottom:8px; margin-bottom:10px; overflow:hidden;}
+.sTit_red {font-size:1.3rem; line-height:2.1rem}
+.sTxt_red {padding:0 0 10px; font-size:1.3rem}
+.sTxt_red.sc_imgBox02 { padding-left:96px; position:relative; min-height:84px; box-sizing:border-box}
+.sTxt_red.sc_imgBox02 span {position:absolute;left:0;top:0}
+.sTxt_red.sc_imgBox02 span img {width:86px; height:74px;}
+.slabel {color:#fff; font-size:13px; background-color:#e45b85; border-radius:2px; padding:3px 5px;margin-right:8px;}
+.slabel.gray {background-color:#8f94a4}
+.txtNone {text-decoration:line-through}
+.red_infor {border:1px solid #e45b85; padding:12px; background-color:#fff; margin-bottom:35px; font-size:1.3rem}
+.red_infor strong {display:block; color:#c83d67;background:url(http://image1.hanatour.com/mobile/common/schedule/ico_sc_02.png) no-repeat 0 center; background-size:12px 12px;padding-left:18px;font-size:1.4rem; margin-bottom:3px}
+.selectTxt {font-size:1.3rem}
+.selectTxt .slabel {background-color:#8f94a4; padding:2px 5px; top:50%; margin-top:-9px}
+span.airBox {background-color:#e45b85}
+span.waitBox {background-color:#747b8e}
+.hsTabSect { margin-top:15px}
+/* swipe css */
+.swiper-slide {text-align:center;font-size:18px;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center}
+.swiper-slide img {width:100%}
+.swiper-container {margin:0 auto;position:relative;overflow:hidden;z-index:1;width:100%}
+.swiper-container-no-flexbox .swiper-slide{float:left}.swiper-container-vertical>.swiper-wrapper{-webkit-box-orient:vertical;-moz-box-orient:vertical;-ms-flex-direction:column;-webkit-flex-direction:column;flex-direction:column}.swiper-wrapper{position:relative;width:100%;height:;z-index:1;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-transition-property:-webkit-transform;-moz-transition-property:-moz-transform;-o-transition-property:-o-transform;-ms-transition-property:-ms-transform;transition-property:transform;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}.swiper-container-android .swiper-slide,.swiper-wrapper{-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-o-transform:translate(0,0);-ms-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.swiper-container-multirow>.swiper-wrapper{-webkit-box-lines:multiple;-moz-box-lines:multiple;-ms-flex-wrap:wrap;-webkit-flex-wrap:wrap;flex-wrap:wrap}.swiper-container-free-mode>.swiper-wrapper{-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out;margin:0 auto}.swiper-slide{-webkit-flex-shrink:0;-ms-flex:0 0 auto;flex-shrink:0;width:100%;position:relative}.swiper-container .swiper-notification{position:absolute;left:0;top:0;pointer-events:none;opacity:0;z-index:-1000}.swiper-wp8-horizontal{-ms-touch-action:pan-y;touch-action:pan-y}.swiper-wp8-vertical{-ms-touch-action:pan-x;touch-action:pan-x}.swiper-button-next,.swiper-button-prev{position:absolute;top:50%;width:27px;height:44px;margin-top:-22px;z-index:10;cursor:pointer;-moz-background-size:27px 44px;-webkit-background-size:27px 44px;background-size:27px 44px;background-position:center;background-repeat:no-repeat}.swiper-button-next.swiper-button-disabled,.swiper-button-prev.swiper-button-disabled{opacity:.35;cursor:auto;pointer-events:none}.swiper-button-prev,.swiper-container-rtl .swiper-button-next{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");left:10px;right:auto}.swiper-button-prev.swiper-button-black,.swiper-container-rtl .swiper-button-next.swiper-button-black{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E")}.swiper-button-prev.swiper-button-white,.swiper-container-rtl .swiper-button-next.swiper-button-white{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")}.swiper-button-next,.swiper-container-rtl .swiper-button-prev{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");right:10px;left:auto}.swiper-button-next.swiper-button-black,.swiper-container-rtl .swiper-button-prev.swiper-button-black{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E")}.swiper-button-next.swiper-button-white,.swiper-container-rtl .swiper-button-prev.swiper-button-white{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")}.swiper-pagination{position:absolute;text-align:center;-webkit-transition:.3s;-moz-transition:.3s;-o-transition:.3s;transition:.3s;-webkit-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0);z-index:10}.swiper-pagination.swiper-pagination-hidden{opacity:0}.swiper-pagination-bullet{width:8px;height:8px;display:inline-block;border-radius:100%;}button.swiper-pagination-bullet{border:none;margin:0;padding:0;box-shadow:none;-moz-appearance:none;-ms-appearance:none;-webkit-appearance:none;appearance:none}.swiper-pagination-clickable .swiper-pagination-bullet{cursor:pointer}.swiper-pagination-white .swiper-pagination-bullet{background:#fff}.swiper-pagination-bullet-active{opacity:1;background:#007aff}.swiper-pagination-white .swiper-pagination-bullet-active{background:#fff}.swiper-pagination-black .swiper-pagination-bullet-active{background:#000}.swiper-container-vertical>.swiper-pagination{right:10px;top:50%;-webkit-transform:translate3d(0,-50%,0);-moz-transform:translate3d(0,-50%,0);-o-transform:translate(0,-50%);-ms-transform:translate3d(0,-50%,0);transform:translate3d(0,-50%,0)}.swiper-container-vertical>.swiper-pagination .swiper-pagination-bullet{margin:5px 0;display:block}.swiper-container-horizontal>.swiper-pagination{bottom:7px;left:0;width:100%}.swiper-container-horizontal>.swiper-pagination .swiper-pagination-bullet{margin:0 5px}.swiper-container-3d{-webkit-perspective:1200px;-moz-perspective:1200px;-o-perspective:1200px;perspective:1200px}.swiper-container-3d .swiper-cube-shadow,.swiper-container-3d .swiper-slide,.swiper-container-3d .swiper-slide-shadow-bottom,.swiper-container-3d .swiper-slide-shadow-left,.swiper-container-3d .swiper-slide-shadow-right,.swiper-container-3d .swiper-slide-shadow-top,.swiper-container-3d .swiper-wrapper{-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;-ms-transform-style:preserve-3d;transform-style:preserve-3d}.swiper-container-3d .swiper-slide-shadow-bottom,.swiper-container-3d .swiper-slide-shadow-left,.swiper-container-3d .swiper-slide-shadow-right,.swiper-container-3d .swiper-slide-shadow-top{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:10}.swiper-container-3d .swiper-slide-shadow-left{background-image:-webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(right,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-moz-linear-gradient(right,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(right,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to left,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-container-3d .swiper-slide-shadow-right{background-image:-webkit-gradient(linear,right top,left top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(left,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-moz-linear-gradient(left,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(left,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-container-3d .swiper-slide-shadow-top{background-image:-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(bottom,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-moz-linear-gradient(bottom,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(bottom,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to top,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-container-3d .swiper-slide-shadow-bottom{background-image:-webkit-gradient(linear,left bottom,left top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(top,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-moz-linear-gradient(top,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(top,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-container-coverflow .swiper-wrapper{-ms-perspective:1200px}.swiper-container-fade.swiper-container-free-mode .swiper-slide{-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out}.swiper-container-fade .swiper-slide{pointer-events:none}.swiper-container-fade .swiper-slide .swiper-slide{pointer-events:none}.swiper-container-fade .swiper-slide-active,.swiper-container-fade .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-container-cube{overflow:visible}.swiper-container-cube .swiper-slide{pointer-events:none;visibility:hidden;-webkit-transform-origin:0 0;-moz-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;backface-visibility:hidden;width:100%;height:100%;z-index:1}.swiper-container-cube.swiper-container-rtl .swiper-slide{-webkit-transform-origin:100% 0;-moz-transform-origin:100% 0;-ms-transform-origin:100% 0;transform-origin:100% 0}.swiper-container-cube .swiper-slide-active,.swiper-container-cube .swiper-slide-next,.swiper-container-cube .swiper-slide-next+.swiper-slide,.swiper-container-cube .swiper-slide-prev{pointer-events:auto;visibility:visible}.swiper-container-cube .swiper-slide-shadow-bottom,.swiper-container-cube .swiper-slide-shadow-left,.swiper-container-cube .swiper-slide-shadow-right,.swiper-container-cube .swiper-slide-shadow-top{z-index:0;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;backface-visibility:hidden}.swiper-container-cube .swiper-cube-shadow{position:absolute;left:0;bottom:0;width:100%;height:100%;background:#000;opacity:.6;-webkit-filter:blur(50px);filter:blur(50px);z-index:0}.swiper-scrollbar{border-radius:10px;position:relative;-ms-touch-action:none;background:rgba(0,0,0,.1)}.swiper-container-horizontal>.swiper-scrollbar{position:absolute;left:1%;bottom:3px;z-index:50;height:5px;width:98%}.swiper-container-vertical>.swiper-scrollbar{position:absolute;right:3px;top:1%;z-index:50;width:5px;height:98%}.swiper-scrollbar-drag{height:100%;width:100%;position:relative;background:rgba(0,0,0,.5);border-radius:10px;left:0;top:0}.swiper-scrollbar-cursor-drag{cursor:move}.swiper-lazy-preloader{width:42px;height:42px;position:absolute;left:50%;top:50%;margin-left:-21px;margin-top:-21px;z-index:10;-webkit-transform-origin:50%;-moz-transform-origin:50%;transform-origin:50%;-webkit-animation:swiper-preloader-spin 1s steps(12,end) infinite;-moz-animation:swiper-preloader-spin 1s steps(12,end) infinite;animation:swiper-preloader-spin 1s steps(12,end) infinite}.swiper-lazy-preloader:after{display:block;content:"";width:100%;height:100%;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%236c6c6c'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");background-position:50%;-webkit-background-size:100%;background-size:100%;background-repeat:no-repeat}.swiper-lazy-preloader-white:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%23fff'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")}@-webkit-keyframes swiper-preloader-spin{100%{-webkit-transform:rotate(360deg)}}@keyframes swiper-preloader-spin{100%{transform:rotate(360deg)}}
+
+.swiper-pagination-bullet {width:7px;height: 7px;display: inline-block; border-radius: 50%; background:none; margin:3px; border: 1px solid #fff}
+.swiper-pagination-bullet-active {background:#fff}
+
+.swiper-pag-num {bottom:10px; right:10px; color:#fff; font-size:1.4rem; background:rgba(0,0,0,0.8); padding:5px 12px; border-radius:50px; position:absolute; text-align:center; z-index:100; font-weight:bold}
+
+.swiper-container a.big5_prev {width:23px; height:42px;background:url(http://image1.hanatour.com/mobile/common/onbak/images/btn_slider_left.png); position:absolute;left:12px;top:50%;margin-top:-21px;background-size:23px 43px; z-index:100; opacity:0.7}
+.swiper-container a.big5_next {width:23px; height:42px;background:url(http://image1.hanatour.com/mobile/common/onbak/images/btn_slider_right.png); position:absolute;right:12px;top:50%;margin-top:-21px;background-size:23px 43px; z-index:100;opacity:0.7}
+</style>
+</head>
+
+<body>
+	<div style="padding:12px">
+	
+		<!-- 일정표 카드 5가지 -->
+		<ul class="detailTxt">
+			1. 텍스트형<br><br>
+			<!-- 텍스트형 -->
+			<li>
+				<div class="de_inBox02">
+					<a href="pop_sc_travel.html" class="popUpFull simple" data-role="none"><!-- 사진없는경우 class="simple" 추가 -->
+						<p>
+							<strong>왕국</strong>
+							<b>장엄한 태국의 역사가 녹아 있는 방콕의 최대 관광지</b>
+						</p>
+					</a>
+				</div>
+			</li>
+			<!-- //텍스트형 -->
+			
+			2. 기본 이미지형 (기본-옵션없음/소요시간없음)<br><br>
+			<!-- 기본 이미지형 -->
+			<li>
+				<div class="de_inBox02">
+					<a href="pop_sc_travel.html" class="popUpFull" data-role="none">
+						<span class="sc_imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+						<p>
+							<strong>왓 아룬 (새벽사원)</strong>
+							<b>신비로운 새벽사원</b>
+						</p>
+					</a>
+				</div>
+			</li>
+			<!-- //기본 이미지형 -->
+			
+			3. 복수 이미지형<br><br>
+			<!-- 복수 이미지형 -->
+			<li>
+				<div class="imgCell">
+					<span class="img"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+					<span class="binCell"></span><!-- 빈영역 -->
+					<span class="img"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+					<span class="binCell"></span><!-- 빈영역 -->
+					<span class="img"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+				</div>
+				<a href="pop_sc_travel.html" class="imgCellTxt popUpFull" data-role="none">
+					<strong>파라세일링 &amp; 제트스키</strong>
+					<b>에메랄드 빛 바다와 천혜의 모래 해변</b>
+				</a>
+			</li>
+			<!-- //복수 이미지형 -->
+			
+			4. 호텔특화 기본형<br><br>
+			<!-- 호텔특화 기본형 -->
+			<li class="hotelSpecial">
+				<strong>노보텔 방콕 수바납후미 에어포트 호텔</strong>
+				<p>NOVOTEL BANGKOK SUVARNABHUMI AIRPORT HOTEL</p>
+				
+				<!-- 호텔특화카드 스와이프 -->
+				<div class="swiper-container swiper-container-horizontal">
+					<a href="#none" class="big5_prev" data-role="none"></a>
+					<div class="swiper-wrapper" style="transform: translate3d(-283px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="4" style="width: 283px;"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia05.png" alt=""></div>
+						<div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 283px;"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia01.png" alt=""></div>
+						<div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" style="width: 283px;"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia02.png" alt=""></div>
+						<div class="swiper-slide" data-swiper-slide-index="2" style="width: 283px;"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia03.png" alt=""></div>
+						<div class="swiper-slide" data-swiper-slide-index="3" style="width: 283px;"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia04.png" alt=""></div>
+						<div class="swiper-slide" data-swiper-slide-index="4" style="width: 283px;"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia05.png" alt=""></div>
+					<div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0" style="width: 283px;"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia01.png" alt=""></div></div>
+					<div class="swiper-pagination swiper-pagination-bullets" style="display:none"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
+					<div class="swiper-pag-num"><span>1</span> / 5</div>
+					<a href="#none" class="big5_next" data-role="none"></a>
+				</div>
+				<!-- //호텔특화카드 스와이프 -->
+				
+				<div class="hsBtmBox">
+					<strong class="stitHs">스탠다드 트윈 룸</strong>
+					<!-- 아코디언 -->
+					<div class="txtBox"><!-- 펼칠경우 class="open" 추가 -->
+						<p>◈ 총 84객실, 오세아나A동 2~4층,오세아나B동 3~4층, 33m2<br>◈ 더블베드(140X190cm) 2개 오세아나A동, B동 저층에 위치한 객실입니다. 오세아나A동, B동 저층에 위치한 객실입니다.</p>
+						<ul>
+							<li><strong>연락처</strong><span>66-2-131-111</span></li>
+							<li><strong>주소</strong><span>New Road, Wat Phraya Krai, Bangkok 10120, Thailand</span></li>
+							<li><strong>체크인/<br>체크아웃</strong><span>체크인 : 1PM / 체크아웃 : 12N</span></li>
+							<li><strong>위치</strong><span>공항근처  Suvarnabhumi Airport 에서 걸어서 10분 가량 소요</span></li>
+						</ul>
+					</div>
+					<a href="#" data-role="none" class="hsBtn">펼치기</a><!-- 펼쳐질경우 접기로 변경 + class="on" 추가 -->
+					<!-- // 아코디언 -->
+				</div>
+				
+				<div class="hsBtmBox">
+					<strong class="stitHs">스탠다드 트윈 룸</strong>
+					<!-- 아코디언 -->
+					<div class="txtBox"><!-- 펼칠경우 class="oepn" 추가 -->
+						<p>◈ 총 84객실, 오세아나A동 2~4층,오세아나B동 3~4층, 33m2<br>◈ 더블베드(140X190cm) 2개 오세아나A동, B동 저층에 위치한 객실입니다. 오세아나A동, B동 저층에 위치한 객실입니다.</p>	
+						<ul>
+							<li><strong>연락처</strong>66-2-131-111</li>
+							<li><strong>주소</strong>New Road, Wat Phraya Krai, Bangkok 10120, Thailand</li>
+							<li><strong>체크인/<br>체크아웃</strong>체크인 : 1PM / 체크아웃 : 12N</li>
+							<li><strong>위치</strong>공항근처  Suvarnabhumi Airport 에서 걸어서 10분 가량 소요</li>
+						</ul>
+					</div>
+					<a href="#" data-role="none" class="hsBtn">펼치기</a><!-- 펼쳐질경우 접기로 변경 + class="on" 추가 -->
+					<!-- // 아코디언 -->
+				</div>
+				
+			</li>
+			<!-- //호텔특화 기본형 -->
+			
+			5. 호텔특화 탭형<br><br>
+			<!-- 호텔특화 탭형 -->
+			<li class="hotelSpecial">
+				<strong>노보텔 방콕 수바납후미 에어포트 호텔</strong>
+				<p>NOVOTEL BANGKOK SUVARNABHUMI AIRPORT HOTEL</p>
+				
+				<!-- 호텔특화카드 스와이프 -->
+				<div class="swiper-container swiper-container-horizontal swiper-container-android">
+					<a href="#none" class="big5_prev" data-role="none"></a>
+					<div class="swiper-wrapper" style="transform: translate3d(-305px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="4" style="width: 305px;"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia05.png" alt=""></div>
+						<div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 305px;"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia01.png" alt=""></div>
+						<div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" style="width: 305px;"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia02.png" alt=""></div>
+						<div class="swiper-slide" data-swiper-slide-index="2" style="width: 305px;"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia03.png" alt=""></div>
+						<div class="swiper-slide" data-swiper-slide-index="3" style="width: 305px;"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia04.png" alt=""></div>
+						<div class="swiper-slide" data-swiper-slide-index="4" style="width: 305px;"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia05.png" alt=""></div>
+					<div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0" style="width: 305px;"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia01.png" alt=""></div></div>
+					<div class="swiper-pagination swiper-pagination-bullets" style="display:none"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
+					<div class="swiper-pag-num"><span>1</span> / 5</div>
+					<a href="#none" class="big5_next" data-role="none"></a>
+				</div>
+				<!-- //호텔특화카드 스와이프 -->
+
+				<div class="hsTabSect">
+					<ul class="hsTab">
+						<li><a href="#" data-role="none">호텔 소개</a></li><!-- 선택시 class="on" -->
+						<li class="on"><a href="#" data-role="none">객실시설</a></li>
+						<li><a href="#" data-role="none">부대시설</a></li>
+					</ul>
+					
+					<!-- 호텔소개 -->
+					<div>
+						<div class="hsBtmBox">
+							<strong class="stitHs">스탠다드 트윈 룸</strong>
+							<!-- 아코디언 -->
+							<div class="txtBox"><!-- 펼칠경우 class="oepn" 추가 -->
+								<p>◈ 총 84객실, 오세아나A동 2~4층,오세아나B동 3~4층, 33m2<br>◈ 더블베드(140X190cm) 2개 오세아나A동, B동 저층에 위치한 객실입니다. 오세아나A동, B동 저층에 위치한 객실입니다.</p>
+								<ul>
+									<li><strong>연락처</strong><span>66-2-131-111</span></li>
+									<li><strong>주소</strong><span>New Road, Wat Phraya Krai, Bangkok 10120, Thailand</span></li>
+									<li><strong>체크인/<br>체크아웃</strong><span>체크인 : 1PM / 체크아웃 : 12N</span></li>
+									<li><strong>위치</strong><span>공항근처  Suvarnabhumi Airport 에서 걸어서 10분 가량 소요</span></li>
+								</ul>
+							</div>
+							<a href="#" data-role="none" class="hsBtn">펼치기</a><!-- 펼쳐질경우 접기로 변경 + class="on" 추가 -->
+							<!-- // 아코디언 -->
+						</div>
+						
+						<div class="hsBtmBox">
+							<strong class="stitHs">스탠다드 트윈 룸</strong>
+							<!-- 아코디언 -->
+							<div class="txtBox"><!-- 펼칠경우 class="oepn" 추가 -->
+								<p>◈ 총 84객실, 오세아나A동 2~4층,오세아나B동 3~4층, 33m2<br>◈ 더블베드(140X190cm) 2개 오세아나A동, B동 저층에 위치한 객실입니다. 오세아나A동, B동 저층에 위치한 객실입니다.</p>
+								<ul>
+									<li><strong>연락처</strong><span>66-2-131-111</span></li>
+									<li><strong>주소</strong><span>New Road, Wat Phraya Krai, Bangkok 10120, Thailand</span></li>
+									<li><strong>체크인/<br>체크아웃</strong><span>체크인 : 1PM / 체크아웃 : 12N</span></li>
+									<li><strong>위치</strong><span>공항근처  Suvarnabhumi Airport 에서 걸어서 10분 가량 소요</span></li>
+								</ul>
+							</div>
+							<a href="#" data-role="none" class="hsBtn">펼치기</a><!-- 펼쳐질경우 접기로 변경 + class="on" 추가 -->
+							<!-- // 아코디언 -->
+						</div>
+					</div>
+					<!-- // 호텔소개 -->
+					
+					<!-- 객실시설 -->
+					<div style="display:none">
+						<div class="hsBtmBox">
+							<strong class="stitHs">스탠다드 트윈 룸</strong>
+							<!-- 아코디언 -->
+							<div class="txtBox"><!-- 펼칠경우 class="oepn" 추가 -->
+								<p>◈ 총 84객실, 오세아나A동 2~4층,오세아나B동 3~4층, 33m2<br>◈ 더블베드(140X190cm) 2개 오세아나A동, B동 저층에 위치한 객실입니다. 오세아나A동, B동 저층에 위치한 객실입니다.</p>
+								<ul>
+									<li><strong>연락처</strong><span>66-2-131-111</span></li>
+									<li><strong>주소</strong><span>New Road, Wat Phraya Krai, Bangkok 10120, Thailand</span></li>
+									<li><strong>체크인/<br>체크아웃</strong><span>체크인 : 1PM / 체크아웃 : 12N</span></li>
+									<li><strong>위치</strong><span>공항근처  Suvarnabhumi Airport 에서 걸어서 10분 가량 소요</span></li>
+								</ul>
+							</div>
+							<a href="#" data-role="none" class="hsBtn">펼치기</a><!-- 펼쳐질경우 접기로 변경 + class="on" 추가 -->
+							<!-- // 아코디언 -->
+						</div>
+					</div>
+					<!-- // 객실시설 -->
+					
+					<!-- 부대시설 -->
+					<div style="display:none">
+						<div class="hsBtmBox">
+							<strong class="stitHs">스탠다드 트윈 룸</strong>
+							<!-- 아코디언 -->
+							<div class="txtBox"><!-- 펼칠경우 class="oepn" 추가 -->
+								<p>◈ 총 84객실, 오세아나A동 2~4층,오세아나B동 3~4층, 33m2<br>◈ 더블베드(140X190cm) 2개 오세아나A동, B동 저층에 위치한 객실입니다. 오세아나A동, B동 저층에 위치한 객실입니다.</p>
+								<ul>
+									<li><strong>연락처</strong><span>66-2-131-111</span></li>
+									<li><strong>주소</strong><span>New Road, Wat Phraya Krai, Bangkok 10120, Thailand</span></li>
+									<li><strong>체크인/<br>체크아웃</strong><span>체크인 : 1PM / 체크아웃 : 12N</span></li>
+									<li><strong>위치</strong><span>공항근처  Suvarnabhumi Airport 에서 걸어서 10분 가량 소요</span></li>
+								</ul>
+							</div>
+							<a href="#" data-role="none" class="hsBtn">펼치기</a><!-- 펼쳐질경우 접기로 변경 + class="on" 추가 -->
+							<!-- // 아코디언 -->
+						</div>
+						
+						<div class="hsBtmBox">
+							<strong class="stitHs">스탠다드 트윈 룸</strong>
+							<!-- 아코디언 -->
+							<div class="txtBox"><!-- 펼칠경우 class="oepn" 추가 -->
+								<p>◈ 총 84객실, 오세아나A동 2~4층,오세아나B동 3~4층, 33m2<br>◈ 더블베드(140X190cm) 2개 오세아나A동, B동 저층에 위치한 객실입니다. 오세아나A동, B동 저층에 위치한 객실입니다.</p>
+								<ul>
+									<li><strong>연락처</strong><span>66-2-131-111</span></li>
+									<li><strong>주소</strong><span>New Road, Wat Phraya Krai, Bangkok 10120, Thailand</span></li>
+									<li><strong>체크인/<br>체크아웃</strong><span>체크인 : 1PM / 체크아웃 : 12N</span></li>
+									<li><strong>위치</strong><span>공항근처  Suvarnabhumi Airport 에서 걸어서 10분 가량 소요</span></li>
+								</ul>
+							</div>
+							<a href="#" data-role="none" class="hsBtn">펼치기</a><!-- 펼쳐질경우 접기로 변경 + class="on" 추가 -->
+							<!-- // 아코디언 -->
+						</div>
+					</div>
+					<!-- // 부대시설 -->
+					
+				</div>
+				
+			</li>
+			<!-- //호텔특화 탭형 -->
+			
+		</ul>
+		<!-- // 일정표 카드 5가지 -->
+						
+
+	</div>
+</body>
+</html>
+

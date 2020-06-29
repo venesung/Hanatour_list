@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>단체맞춤여행 견적신청 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="../../css/common_reserv.css"><!-- 예약관련 공통컨텐츠 신규생성 -->
+<link rel="stylesheet" type="text/css" href="../../css/sub/custom_made.css"><!-- 단체맞춤여행 추가 -->
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-2.1.3.min.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common_new.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/pack/m.estimate.group.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+	<header id="header"><!-- 띠배너 보일경우 class="tBanTy" 추가 -->
+		<div class="inner">
+			<h1><a href="#none" data-role="none"><img src="../../images/common/btn_nlogo.png" alt="하나투어"></a></h1>
+			<a href="#none" id="btnMenu" data-role="none"><img src="../../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+			<a href="#none" id="btnMyhome" data-role="none"><img src="../../images/common/btn_hdright.png" alt="마이홈"></a>
+		</div>
+	</header>
+	<div class="headerMargin"></div>
+	
+	<!-- 컨텐츠 영역 -->
+	<div id="container">
+		<h2 class="pagTit">단체맞춤여행 견적요청하기</h2>
+		<section class="reserv_section"><!-- 하단 버튼있는경우 padB0 추가 -->
+
+			<!-- 견적 요청하기 -->
+			<div class="reservContentNoTitle">
+				<input type="text" class="inputTxt" title="맞춤여행 제목 입력" placeholder="제목을 입력하세요">
+			</div>
+			<!-- // 견적 요청하기 -->
+
+			<!-- 예약정보 -->
+			<div class="reserv_content">
+				<h3 class="tit_reserv">고객정보</h3><!-- 버튼 클릭시 아래 div toggle -->
+				<div>
+					<ul class="tbList">
+						<li>
+							<em class="titCell">예약자명</em>
+							<span class="contCell">김하나</span>
+						</li>
+						<li>
+							<em class="titCell">연락처</em>
+							<span class="contCell">010112345678</span>
+						</li>
+						<li>
+							<em class="titCell">이메일</em>
+							<span class="contCell">hanatour123@hanatour.com</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- // 예약정보 -->
+			
+			<!-- 여행기간 -->
+			<p class="outSideNotice"><span>* </span>필수사항이므로 정확히 입력해주세요.</p>
+			<div class="reserv_content">
+				<h3 class="tit_reserv">여행기간<sup>*</sup></h3><!-- 버튼 클릭시 아래 div toggle -->
+				<div>
+					<div class="airDaySectBox">
+						<a href="#pop_calender.html" class="btnAirDaySect btnAirDaySectLeft">
+							<span class="daySectTitle">출국일</span><br/>
+							<span class="daySectDate">2017.05.15(화)</span>
+						</a>
+						<a href="#pop_calender.html" class="btnAirDaySect btnAirDaySectRight">
+							<span class="daySectTitle">귀국일</span><br/>
+							<span class="daySectDate">2017.05.15(화)</span>
+						</a>
+					</div>
+					<div class="halfSelectBox">
+						<span>
+							<select class="selectBox" style="height:45px" title="선호 출국시간대" id="departureTime">
+								<option>오전</option>
+								<option>오후</option>
+								<option>상관없음</option>
+							</select>
+						</span>
+						<em></em>
+							<span>
+								<select class="selectBox" style="height:45px" title="선호 귀국시간대" id="leaveTime">
+									<option>오전</option>
+									<option>오후</option>
+									<option>상관없음</option>
+								</select>
+							</span>
+					</div>
+				</div>
+			</div>
+			<!-- // 여행기간 -->
+
+			<!-- 목적지 -->
+			<div class="reserv_content">
+				<h3 class="tit_reserv">
+					목적지<sup>*</sup>
+				</h3><!-- 버튼 클릭시 아래 div toggle -->
+				<div class="reservInnerMultiple">
+					<ul class="inputCell">
+						<li>
+							<label for="continent1">대륙</label><!-- for = id 값 동일하게 맞춰주세요 -->
+							<div>
+								<select class="selectBox" style="height:40px" title="목적지 대륙" id="continent1">
+									<option>선택안함</option>
+									<option>동남아</option>
+									<option>중국</option>
+									<option>일본</option>
+									<option>남태평양</option>
+									<option>유렵</option>
+									<option>미주</option>
+									<option>기타</option>
+								</select>
+							</div>
+						</li>
+						<li>
+							<label for="city1">여행도시</label>
+							<div><input type="text" id="city1" class="inputTxt" title="여행도시" value="도쿄" placeholder="한글, 영문, 도시코드 검색"></div>
+							<a href="#pop_city.html" class="popUpFull">도시팝업</a>
+						</li>
+					</ul>
+				</div>
+
+				<!-- 목적지 추가시 추가 -->
+				<h3 class="tit_reserv">목적지<button class="btnDelInputCell" type="button"></button></h3>
+				<div class="reservInnerMultiple">
+					<ul class="inputCell">
+						<li>
+							<label for="continent2">대륙</label>
+							<div>
+								<select class="selectBox" style="height:40px" title="목적지 대륙" id="continent2">
+									<option>선택안함</option>
+									<option>동남아</option>
+									<option>중국</option>
+									<option>일본</option>
+									<option>남태평양</option>
+									<option>유렵</option>
+									<option>미주</option>
+									<option>기타</option>
+								</select>
+							</div>
+						</li>
+						<li>
+							<label for="city2">여행도시</label>
+							<div><input type="text" id="city2" class="inputTxt" title="여행도시" placeholder="한글, 영문, 도시코드 검색"></div>
+						</li>
+					</ul>
+				</div>
+				<!-- // 목적지 추가시 추가 -->
+				<!-- 목적지 추가시 추가 -->
+				<!--<h3 class="tit_reserv">목적지<button class="btnDelInputCell" type="button"></button></h3>-->
+				<!--<div class="reservInnerMultiple">-->
+					<!--<ul class="inputCell">-->
+						<!--<li>-->
+							<!--<label for="continent3">대륙</label>-->
+							<!--<div>-->
+								<!--<select class="selectBox" style="height:40px" title="목적지 대륙" id="continent3">-->
+									<!--<option>선택안함</option>-->
+									<!--<option>동남아</option>-->
+									<!--<option>중국</option>-->
+									<!--<option>일본</option>-->
+									<!--<option>남태평양</option>-->
+									<!--<option>유렵</option>-->
+									<!--<option>미주</option>-->
+									<!--<option>기타</option>-->
+								<!--</select>-->
+							<!--</div>-->
+						<!--</li>-->
+						<!--<li>-->
+							<!--<label for="city3">여행도시</label>-->
+							<!--<div><input type="text" id="city3" class="inputTxt" title="여행도시" placeholder="한글, 영문, 도시코드 검색"></div>-->
+						<!--</li>-->
+					<!--</ul>-->
+				<!--</div>-->
+				<!-- // 목적지 추가시 추가 -->
+
+				<a href="#" class="popUpFull btn_write"><span>최대 <strong>3개 지역</strong>까지 추가 가능</span></a>
+			</div>
+
+			<!-- // 목적지 -->
+
+			<!-- 인원선택 -->
+			<div class="reserv_content">
+				<h3 class="tit_reserv">인원선택(최소 4인 이상)<sup>*</sup></h3><!-- 버튼 클릭시 아래 div toggle -->
+				<div>
+					<!-- 입력폼 -->
+					<ul class="inputCell">
+						<li>
+							<label for="countAdult">성인</label><!-- for = id 값 동일하게 맞춰주세요 -->
+							<div><input type="tel" id="countAdult" class="inputTxt" title="성인 인원" placeholder="만 12세 이상"></div>
+						</li>
+						<li>
+							<label for="countChild">아동</label>
+							<div><input type="tel" id="countChild" class="inputTxt" title="만 12세 미만 아동 인원" placeholder="만 12세 미만"></div>
+						</li>
+						<li>
+							<label for="countBaby">유아</label>
+							<div><input type="tel" id="countBaby" class="inputTxt" title="만 2세 미만 유아 인원" placeholder="만 2세 미만"></div>
+						</li>
+					</ul>
+					<!-- // 입력폼 -->
+
+					<div class="qtxtBox">
+						<p class="ico_qtxt red">
+							10인 이하 단독 견적상품의 경우 기존의 패키지상품보다 가격이 비쌀 수 있으며,
+							단체인원이 많을 수록 보다 저렴한 금액으로 다양한 혜택을 누리실 수 있습니다.
+						</p>
+					</div>
+				</div>
+			</div>
+			<!-- // 인원선택 -->
+
+			<!-- 희망견적가(1인) -->
+			<div class="reserv_content">
+				<h3 class="tit_reserv">희망견적가(1인)<sup>*</sup></h3>
+				<div>
+					<ul class="inputCell">
+						<li>
+							<input type="tel" id="quotation" class="inputTxt" title="희망견적가" placeholder="1인당 평균 희망견적가를 입력하세요.">
+						</li>
+					</ul>
+					<p class="quotationTxt">
+						<em>총 예상금액</em> = 총 인원 X 1인 희망견적가<br/>
+						(총 예상금액은 실제 견적가와 다를 수 있습니다.)
+					</p>
+					<div class="mnTotal cmTotal">
+						<strong class="mnTit">총 예상 금액</strong>
+						<b>1,260,000<span>원</span></b>
+					</div>
+				</div>
+			</div>
+			<!-- // 희망견적가(1인) -->
+
+			<!-- // 단체성격 -->
+			<div class="reserv_content">
+				<h3 class="tit_reserv">단체성격<sup>*</sup></h3><!-- 버튼 클릭시 아래 div toggle -->
+				<div>
+					<select class="selectBox" style="height:45px" title="단체성격">
+						<option>선택안함</option>
+						<option>가족여행</option>
+						<option>친목</option>
+						<option>부부동반</option>
+						<option>직접입력</option>
+					</select>
+					<input type="text" class="selectBoxTxt" style="display:none;">
+				</div>
+			</div>
+			<!-- // 단체성격 -->
+
+			<!-- // 단체거주지 -->
+			<div class="reserv_content">
+				<h3 class="tit_reserv">단체거주지<sup>*</sup></h3><!-- 버튼 클릭시 아래 div toggle -->
+				<div>
+					<div class="halfSelectBox">
+						<span>
+							<select class="selectBox" style="height:45px" title="단체거주지 지역선택" id="city">
+								<option>지역선택</option>
+							</select>
+						</span>
+						<em></em>
+							<span>
+								<select class="selectBox" style="height:45px" title="단체거주지 시,구선택" id="gu">
+									<option>시,구선택</option>
+								</select>
+							</span>
+					</div>
+					<div class="qtxtBox">
+						<p class="ico_qtxt red">
+							단체거주지와 가까운지역의 도우미여행사가 배정되며 제주지역은
+							서울권 도우미여행사로 배정해드립니다.
+							골프테마를 선택하신 경우 서울지역 골프속성 전문 도우미여행사로 배정해드립니다.
+						</p>
+					</div>
+				</div>
+			</div>
+			<!-- // 단체거주지 -->
+
+
+			<!-- 상세조건 -->
+			<div class="reserv_content">
+				<h3 class="tit_reserv">상세조건<button type="button" title="자세히보기 펼치기/닫기" class="btn_toggle on"></button></h3><!-- 버튼 클릭시 아래 div toggle -->
+				<div class="reservContMulti">
+					<!-- 입력폼 -->
+					<ul class="inputCell detailCondition">
+						<li>
+							<label for="preferAirline">선호항공</label>
+							<div>
+								<select class="selectBox" style="height:40px" title="선호 항공" id="preferAirline">
+									<option>선택안함</option>
+									<option>대한항공</option>
+									<option>아시아나</option>
+									<option>그 외 항공사</option>
+									<option>상관없음</option>
+								</select>
+							</div>
+						</li>
+						<li>
+							<label for="preferHotel">호텔등급</label>
+							<div>
+								<select class="selectBox" style="height:40px" title="선호 호텔등급" id="preferHotel">
+									<option>선택안함</option>
+									<option>전체</option>
+									<option>3성급 이상</option>
+									<option>4성급 이상</option>
+									<option>5성급 이상</option>
+								</select>
+							</div>
+						</li>
+						<li>
+							<label for="preferMeal">식사</label>
+							<div>
+								<select class="selectBox" style="height:40px" title="선호 식사" id="preferMeal">
+									<option>선택안함</option>
+									<option>조식포함</option>
+									<option>석식포함</option>
+									<option>전식포함</option>
+									<option>식사불포함</option>
+									<option>상관없음</option>
+								</select>
+							</div>
+						</li>
+						<li>
+							<label for="preferTheme">테마</label>
+							<div>
+								<select class="selectBox" style="height:40px" title="선호 테마" id="preferTheme">
+									<option>선택안함</option>
+									<option>일반</option>
+									<option>성지순례</option>
+									<option>트래킹</option>
+									<option>크루즈</option>
+									<option>골프</option>
+									<option>직접입력</option>
+								</select>
+								<input type="text" id="preferTheme" class="selectBoxTxt" style="display:none;height:40px;">
+							</div>
+						</li>
+						<li>
+							<em class="unipStit">참고일정(URL)</em>
+							<textarea class="textarea" title="참고일정" placeholder="고객님의 여행일정에 참고가 될만한 타 사이트의 주소 또는 하나투어 상품코드(EX.AAP100170715OZA) 입력가능"></textarea>
+						</li>
+					</ul>
+					<!-- // 입력폼 -->
+
+					<!-- 선택사항 -->
+					<div class="reservContInner">
+						<h3 class="tit_reserv">선택사항</h3><!-- 버튼 클릭시 아래 div toggle -->
+						<div>
+							<ul class="inputCell">
+								<li><label><input type="checkbox" data-role="none" class="redCheck"><span>노쇼핑</span></label></li>
+								<li><label><input type="checkbox" data-role="none" class="redCheck"><span>노옵션</span></label></li>
+								<li><label><input type="checkbox" data-role="none" class="redCheck"><span>날짜변경가능</span></label></li>
+								<li><label><input type="checkbox" data-role="none" class="redCheck"><span>인솔자동행</span></label></li>
+							</ul>
+
+						</div>
+					</div>
+
+					<!-- // 선택사항 -->
+
+					<!-- 요청사항 -->
+					<div class="reservContInner">
+						<h3 class="tit_reserv">요청사항<strong class="inRig noAco">최대 2000자</strong></h3><!-- 버튼 클릭시 아래 div toggle -->
+						<div>
+							<textarea class="textarea" title="요청사항 입력" placeholder="요청사항 작성 시 개인정보를 입력하지 않도록 유의하시기 바랍니다. 단체맞춤여행 견적 진행 시 참고할 수 있도록 여행성향 및 이번 여행은 이런 컨셉이었으면 좋겠다 하는 부분이 있으면 자유롭게 말씀해 주세요." style="height:110px;"></textarea>
+						</div>
+					</div>
+					<!-- // 요청사항 -->
+				</div>
+			</div>
+			<!-- // 상세조건 -->
+
+			<!-- 약관동의 -->
+			<div class="reserv_content cmTermBox">
+				<h3 class="tit_reserv">약관동의</h3>
+				<div class="termsCont">
+					<ul class="inner_terms">
+						<li>
+							<label><input type="checkbox" data-role="none" class="redCheck">개인정보 수집 및 이용 동의 (필수)</label>
+							<!--<p>개인정보 수집 및 이용 동의 내용 보기</p> 로 고쳐야함-->
+							<button type="button" data-role="none" title="전문보기" class="termsTog"></button> <!-- 선택시 class="open"추가 -->
+							<!-- 약관내용 -->
+							<div class="in_termsScrBox">
+								<dl class="termsListCont">
+									<dt>1. 개인정보 수집 및 이용목적 :</dt>
+									<dd>
+										<p>단체 맞춤여행 견적안내 및 상담</p>
+									</dd>
+									<dt>2. 수집하는 개인정보의 항목 :</dt>
+									<dd>
+										<p>이름, 연락처, 이메일, 거주지(시,군,구)</p>
+									</dd>
+									<dt>3. 개인정보 보유 및 이용기간  :</dt>
+									<dd>
+										<p>수집 후 6개월 후 파기</p>
+									</dd>
+									<dt>4. 동의 거부권 및 거부 시 불이익 사항  :</dt>
+									<dd>
+										<p>고객님은 동의를 거부하실 수 있으며, 거부 시 단체 맞춤여행 견적안내 및 상담이 불가함을 안내 드립니다.</p>
+									</dd>
+								</dl>
+							</div>
+							<!-- // 약관 내용 -->
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- // 약관동의 -->
+			<ul class="outerCautionList comBulTxt">
+				<li>필수사항 항목들은 반드시 기재해주셔야 단체 맞춤여행 견적문의 등록이 가능합니다.</li>
+				<li>견적문의 신청은 24시간 진행하나, 업무 처리시간은 평일 09:00~18:00입니다.</li>
+				<li>견적요청으로 나온 상품가격은 개별 원가 뿐만 아니라 기획료, 가이드/기사경비, 당사의 이익 등을 포함한 금액입니다.</li>
+			</ul>
+
+			<a href="#" class="m_btnRed">견적요청하기</a>
+		</section>
+		<!-- // 예약결제 간소화 -->
+		
+	</div>
+	<!-- //컨텐츠 영역 -->
+	
+	<footer class="newFoot">
+		<ul>
+			<li><a href="#none" data-role="none">로그인</a></li>
+			<li><a href="#none" data-role="none">PC버전</a></li>
+			<li><a href="#none" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+		</ul>
+		<div>
+			<a href="#none" data-role="none">이용약관</a>|
+			<a href="#none" data-role="none">개인정보처리방침</a>|
+			<a href="#none" data-role="none">여행약관</a>|
+			<a href="#none" data-role="none">사업자정보확인</a>
+		</div>
+		<address>
+			㈜ 하나투어 | 대표자: 최현석 | 사업자등록번호 : 102-81-39440<br>
+			통신판매업신고번호 : 종로01-1806호 | 개인정보관리 책임자 : 최종윤<br>
+			[110-160]서울특별시 종로구 인사동 5길 41 ㈜ 하나투어<br>
+			하나투어상담센터 : <a href="tel:1577-1233" data-role="none">1577-1233</a> | FAX : 02-734-0392<br>
+			이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> | 호스팅 서비스 사업자 : ㈜하나투어<br>
+			관광사업자 등록번호 : 제1933-000006호 | 영업보증보험 : 22억 1천만원 가입<br>
+			COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+		</address>
+	</footer>
+	
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>호텔 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="../../css/hotel.css"> <!-- 호텔 CSS -->
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-2.1.3.min.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery.mobile-1.4.5.min.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-ui-custom.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery.lazyload.js?v=1.9.1"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/etc/iscroll.carousel.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/swiper.min.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/etc/fixedPostiion.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/etc/fastclick.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common_new.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/free/lodge.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+<div id="wrap">
+	<header id="header"><!-- 띠배너 보일경우 class="tBanTy" 추가 -->
+		<div class="inner">
+			<h1><a href="#" data-role="none"><img src="http://image1.hanatour.com/mobile/common/hotel/btn_hotel_logo.png" alt="하나투어 호텔"></a></h1>
+			<a href="#" id="btnMenu" data-role="none"><img src="../../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+			<a href="#" id="btnMyhome" data-role="none"><img src="../../images/common/btn_hdright.png" alt="마이홈"></a>
+			<a href="#" id="btnSearch" data-role="none"><img src="http://image1.hanatour.com/mobile/common/search/btn_hdsearch.png" alt="통합검색"></a><!-- 20151201 통합검색 추가 -->
+		</div>
+	</header>
+	<div class="headerMargin"></div> <!-- 네비없을경우 class="headerMargin02". 상단 띠배너 노출일경우 class="headerMargin04" -->
+
+	<!-- 컨텐츠 영역 -->
+	<div id="container"> 
+		
+		<!-- 호텔 신규 -->
+		<div class="hotelSection">
+			
+			<!-- 상단 20160825 수정-->
+			<div class="htTopBox">
+				<div class="inner01">
+					<strong class="stitTop">세부(필리핀)</strong>
+					<div class="infor">
+						<span>2016.07.08~2016.07.11</span>
+						<span>3박</span>
+						<span>객실1</span>
+						<span>성인1,아동2</span>
+					</div>
+					<a href="#" data-role="none" title="메인으로 가기"></a>
+				</div>
+				
+				<p class="txtNum"><span>225개</span>의 호텔을 이용가능합니다.</p>
+			</div>
+			<!-- // 상단 20160825 수정 -->
+			
+			<div class="ht_listBox">
+				<ul class="stTabBtn"> <!-- 지도보기로 정렬 빠질시 class w50 추가 -->
+					<li><a href="pop_hotel_search.html" class="bg_ico01 InfoPop" data-role="none">상세검색</a></li>
+					<li><a href="#" class="bg_ico02" data-role="none">추천순</a></li><!-- 선택시 li class="open" 추가, st_inBox 노출 :: 선택시 텍스트 동일하게 변경 -->
+					<li>
+						<a href="#" class="bg_ico03" data-role="none">
+							<span class="ico03_txt">지도보기</span>
+							<span class="ico04_txt">목록보기</span>
+						</a>
+					</li> <!-- 선택시 목록보기로 바뀌고 class=" bg_ico04" 로 변경 토글 -->
+				</ul>
+				
+				<!-- 리스트영역 -->
+				<div class="ht_inner" style="display:no ne">
+				
+					<!-- 정렬박스 -->
+					<div class="st_inBox" style="display:none">
+						<ul>
+							<li class="on"><a href="#" data-role="none">추천순</a></li><!-- 선택시 class="on" 추가 -->
+							<li><a href="#" data-role="none">가격 높은순</a></li>
+							<li><a href="#" data-role="none">가격 낮은순</a></li>
+							<li><a href="#" data-role="none">등급 높은순</a></li>
+							<li><a href="#" data-role="none">등급 낮은순</a></li>
+							<li><a href="#" data-role="none">평점 높은순</a></li>
+							<li><a href="#" data-role="none">평점 낮은순</a></li>
+						</ul>
+					</div>
+					<!-- // 정렬박스 -->
+				
+					<!--p><em>민수기</em>님! 안녕하세요. 하나투어에서 제공하는<br><span class="c_red">10%할인된 회원할인가</span>를 확인해보세요!</p><!-- 회원 -->
+					<!--p><span class="c_red">지금 로그인 하시면 회원할인가로 예약</span>하실 수 있습니다.<br><a href="#" data-role="none">로그인</a> 하시고 할인된 요금으로 예약하세요!</p><!-- 비회원 -->
+					
+					<!-- 20181211 수정 -->
+					<p id="ovsHtStaticPriceYn" class="ovsHtStaticPrice">1박 기준 <span class="c_red">최저가 요금</span>으로 표시됩니다.
+						<input type="checkbox" data-role="none" class="txtMoreBtn" title="가격정보 더보기"><!-- checked 시 b 노출됨 -->
+						<b>가격정보는 실시간 가격표시가 아니므로 현재 가격과 차이가 발생할 수 있으며 요금은 투숙 일자별 상이하므로, 반드시 상품 클릭 후 정확한 요금을 확인하시기 바랍니다. </b>
+					</p>
+					<!-- // 20181211 수정 -->
+					
+					<ul class="listCont">
+						<li>
+							<a href="#" data-role="none">
+								<span class="ht_img">
+									<span class="best bfCol">최저가보장</span><!-- 20190130 라벨추가 -->
+									<span class="best bfCol long" style="display:none">특가/특전</span><!-- 20170714 특가/특전 추가 class="bfCol" 추가 -->
+									<img src="http://image1.hanatour.com/mobile/common/hotel/img_hotel_dummy01.jpg" alt="">
+								</span>
+								<div>
+									<strong class="stitPro">뫼벤픽 호텔 막탄 아일랜드 세부 (구 모벤픽 리조트 &amp; 스파)<span class="star num80"></span></strong><!-- 별 갯수대로 class="num + xx" ex : 100 기준으로 1개당20. 별 4개면 80 :: 4.5개면 90 -->
+									<p class="ht_txtEng">MOEVENPICK HOTEL MACTAN ISLAND</p>
+									<div class="btmCont">
+										<span class="tripadvisor_img"><img src="http://image1.hanatour.com/mobile/common/hotel/ico_trip.png" alt=""><strong>4.5<em>/5</em> 매우 훌륭해요!</strong></span><!-- 트립어드바이저 이미지 20161124 수정 -->
+										<div class="moneyBox">
+											<em>회원할인가</em><!-- 20161124 추가 -->
+											<!-- 20161124 삭제 span>175,420원</span-->
+											<strong>82,900<b>원~</b></strong>
+										</div>
+									</div>
+								</div>
+							</a>
+						</li>
+						
+						<li>
+							<a href="#" data-role="none">
+								<span class="ht_img">
+									<span class="best long">하나PICK</span><!-- 20170714 특가/특전 추가 class="bfCol" 추가 -->
+									<span class="best long bfCol">특가/특전</span><!-- 20170714 특가/특전 추가 class="bfCol" 추가 -->
+									<img src="http://image1.hanatour.com/mobile/common/hotel/img_hotel_dummy02.jpg" alt="">
+								</span>
+								<div>
+									<strong class="stitPro">세부 플랜테이션 리조트<span class="star num90"></span></strong><!-- 별 갯수대로 class="num + xx" ex : 100 기준으로 1개당20. 별 4개면 80 :: 4.5개면 90 -->
+									<p class="ht_txtEng">CEBU GRAND HOTEL</p>
+									<div class="btmCont">
+										<span class="tripadvisor_img"><img src="http://image1.hanatour.com/mobile/common/hotel/ico_trip.png" alt=""><strong>4.5<em>/5</em> 매우 훌륭해요!</strong></span><!-- 트립어드바이저 이미지 20161124 수정 -->
+										<div class="moneyBox">
+											<em>회원할인가</em><!-- 20161124 추가 -->
+											<!-- 20161124 삭제 span>175,420원</span-->
+											<strong>82,900<b>원~</b></strong>
+										</div>
+									</div>
+								</div>
+							</a>
+						</li>
+						
+						<!-- 교차판매 배너 20161124 삭제-->
+						<li class="bannerCell" style="display:none">
+							<!-- 비로그인 -->
+							<div class="notLogin" style="display:no ne">
+								<strong>항공 예약하신 분은 해외호텔 <b>10</b>% 할인!</strong>
+								<p>하나투어 해외호텔만의 특별한 혜택을 누려보세요!</p>
+								<a href="#" data-role="none">로그인</a>
+							</div>
+							<!-- // 비로그인 -->
+							
+							<!-- 로그인 -->
+							<div class="onLogin">
+								<p>고객님! 항공권을 구매하셨네요!</p>
+								<strong>지금 해외호텔 예약 후 <b>10</b>% 할인 쿠폰을 사용해보세요.</strong>
+								<a href="#" data-role="none" title="닫기"></a>
+							</div>
+							<!-- // 로그인 -->
+						</li>
+						<!-- // 교차판매 배너 20161124 삭제 -->
+						<li>
+							<a href="#" data-role="none">
+								<span class="ht_img">
+									<span class="best">추천</span><img src="http://image1.hanatour.com/mobile/common/hotel/img_hotel_dummy03.jpg" alt="">
+								</span>
+								<div>
+									<strong class="stitPro">세부 화이트 샌즈 리조트 앤 스파<span class="star num100"></span></strong><!-- 별 갯수대로 class="num + xx" ex : 100 기준으로 1개당20. 별 4개면 80 :: 4.5개면 90 -->
+									<p class="ht_txtEng">CEBU WHITE SANDS RESORT AND SPA</p>
+									<div class="btmCont">
+										<span class="tripadvisor_img"><img src="http://image1.hanatour.com/mobile/common/hotel/ico_trip.png" alt=""><strong>4.5<em>/5</em> 매우 훌륭해요!</strong></span><!-- 트립어드바이저 이미지 20161124 수정 -->
+										<div class="moneyBox">
+											<em>회원할인가</em><!-- 20161124 추가 -->
+											<!-- 20161124 삭제 span>175,420원</span-->
+											<strong>82,900<b>원~</b></strong>
+										</div>
+									</div>
+								</div>
+							</a>
+						</li>
+						
+						<li>
+							<a href="#" data-role="none">
+								<span class="ht_img"><img src="http://image1.hanatour.com/mobile/common/hotel/img_hotel_dummy04.jpg" alt=""></span>
+								<div>
+									<strong class="stitPro">제이파크 아일랜드 리조트 앤 워터파크<span class="star num80"></span></strong><!-- 별 갯수대로 class="num + xx" ex : 100 기준으로 1개당20. 별 4개면 80 :: 4.5개면 90 -->
+									<p class="ht_txtEng">JPARK ISLAND RESORT AND WATERPARK</p>
+									<div class="btmCont">
+										<span class="tripadvisor_img"><img src="http://image1.hanatour.com/mobile/common/hotel/ico_trip.png" alt=""><strong>4.5<em>/5</em> 매우 훌륭해요!</strong></span><!-- 트립어드바이저 이미지 20161124 수정 -->
+										<div class="moneyBox">
+											<em>회원할인가</em><!-- 20161124 추가 -->
+											<!-- 20161124 삭제 span>175,420원</span-->
+											<strong>82,900<b>원~</b></strong>
+										</div>
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+					
+					<!-- 상품이 없는경우 -->
+					<div class="listNone">
+						<p>검색조건에 해당하는 상품이 없습니다.<br>다른 조건으로 검색해주세요.</p>
+						<ul>
+							<li>다른 날짜로 검색해보세요.</li>
+							<li>선택한 필터를 변경해보세요.</li>
+							<li>호텔명 검색어를 변경해보세요.</li>
+						</ul>
+					</div>
+					<!-- // 상품이 없는경우 -->
+					
+				</div>
+				<!-- // 리스트영역 -->
+				
+				<!-- 지도 -->
+				<div class="ht_map" style="display:none">
+					<img src="http://image1.hanatour.com/mobile/common/hotel/img_map_dumm.jpg" alt="">
+					<a href="#" class="icon" data-role="none"><img src="http://image1.hanatour.com/mobile/common/hotel/btn_map_ico.png" alt=""></a>
+					<!-- 툴팁 -->
+					<div class="tooltip">
+						<div>
+							<a href="#" title="닫기" class="tooClose" data-role="none"><img src="http://image1.hanatour.com/mobile/common/hotel/img_popclose.png" alt=""></a>
+							<strong>뫼벤픽 호텔 막탄 아이랜드 세부(구 모벤픽 리조트&amp;스파)<span class="star num80"></span></strong>
+							<p class="ht_txtEng">MOEVENPICK HOTEL MACTAN ISLAND CEBU</p>
+							<div class="moneyBox">
+								<!-- 20161124 삭제 span>175,420원</span-->
+								<strong>82,900<b>원~</b></strong>
+							</div>
+						</div>
+					</div>
+					<!-- // 툴팁 -->
+				</div>
+				<!-- // 지도 -->
+			</div>
+		</div>
+		<!-- // 호텔 신규 -->
+		
+		<footer class="newFoot">
+			<ul>
+				<li><a href="#" data-role="none">로그인</a></li>
+				<li><a href="#" data-role="none">PC버전</a></li>
+				<li><a href="#" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+			</ul>
+			<div>
+				<a href="#" data-role="none">이용약관</a>|
+				<a href="#" data-role="none">개인정보처리방침</a>|
+				<a href="#" data-role="none">여행약관</a>|
+				<a href="#" data-role="none">사업자정보확인</a>
+			</div>
+			<address>
+					㈜ 하나투어 | 대표자: 김진국 | 사업자등록번호 : 102-81-39440<br>
+					통신판매업신고번호 : 종로01-1806호 | 개인정보관리 책임자 : 박성재<br>
+					[110-160]서울특별시 종로구 인사동 5길 41 ㈜ 하나투어<br>
+					하나투어상담센터 : <a href="tel:1577-1233" data-role="none">1577-1233</a> | FAX : 02-734-0392<br>
+					이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> | 호스팅 서비스 사업자 : ㈜하나투어<br>
+					관광사업자 등록번호 : 제1933-000006호 | 영업보증보험 : 22억 1천만원 가입<br>
+					COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+
+			</address>
+		</footer>
+						
+		
+		<a href="#" id="topBtn01" data-role="none" data-scroller="window" data-target="" data-attach="" data-direction="fade" data-margin="" class="topBtn01 posFixed loaded scrollTop"><img src="../../images/common/btn_top01.png" alt="TOP"></a>
+<!-- //컨텐츠 영역 -->
+
+	</div>
+</div>
+
+
+</body>
+</html>
+

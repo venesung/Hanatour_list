@@ -1,0 +1,2905 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>일정표 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="../../css/schedule.css"><!-- 일정표 추가 -->
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-2.1.3.min.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common_new.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/swiper.min.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-ui-custom.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/hanatour/ht.calendar.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/pack/schedule.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		//아래서 올라오는 팝업 띄우면 <div id="overlayPanel" 가 생성되고 그 div 에 'open.loadpop' 을 trigger 시키니 아래처럼 받아 data.url 로 구별 하시면 됩니다.
+		//닫을때 필요하시면 'close.loadpop' 로 받으시면 됩니다.
+		$('body').on('open.loadpop', '#overlayPanel', function (e, data) {
+			console.log(data);
+		});
+	});
+</script>
+</head>
+
+<body>
+
+<div id="wrap">
+	<header id="header"><!-- 띠배너 보일경우 class="tBanTy" 추가 -->
+		<div class="inner">
+			<h1><a href="#none" data-role="none"><img src="../../images/common/btn_nlogo.png" alt="하나투어"></a></h1>
+			<a href="#none" id="btnMenu" data-role="none"><img src="../../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+			<a href="#none" id="btnMyhome" data-role="none"><img src="../../images/common/btn_hdright.png" alt="마이홈"></a>
+		</div>
+	</header>
+	<div class="headerMargin"></div>
+	
+	<!-- 컨텐츠 영역 -->
+	<div id="container">
+		<h2 class="pagTit">일정표</h2>
+		
+		<!-- 일정표 개편 start -->
+		<div class="scheduleBox">
+			<!-- POINT 20170131 추가 -->
+			<div class="topPoint">
+				<strong>POINT</strong>
+				<p>유네스코 후원상품, 아동반값, 우수여행상품</p>
+			</div>
+			<!-- // POINT 20170131 추가 -->
+			
+			<!-- 상단 스와이프 -->
+			<div class="swiper-container scTopSlide">
+				<a href="#none" class="big5_prev" data-role="none"></a>
+				<!-- 20160705 수정 -->
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img data-src="http://image5.hanatour.com/mst_info_image/0/P000006020_S.jpg" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div>
+					<div class="swiper-slide"><img data-src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia02.png" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div>
+					<div class="swiper-slide"><img data-src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia03.png" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div>
+					<div class="swiper-slide"><img data-src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia04.png" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div>
+					<div class="swiper-slide"><img data-src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia05.png" alt="" class="swiper-lazy"><div class="swiper-lazy-preloader"></div></div>
+				</div>
+				<!-- // 20160705 수정 -->
+				<div class="swiper-pagination" style="display:none"></div>
+				<div class="swiper-pag-num"><span>1</span> / 13</div>
+				<a href="#none" class="big5_next" data-role="none"></a>
+			</div>
+			<!-- //상단 스와이프 -->
+			
+			<!-- 상단 공통 -->
+			<div class="topCommon">
+				<div class="sc_comTop">
+					<strong class="oneTit">출발<br>확정</strong><!-- 출발 예정인경우 class="wait" 추가 :: <strong class="oneTit wait">출발<br>예정</strong> -->
+
+					<!-- 20180412 상품구분정보 변경 : 추가 -->
+					<ul class="prodLabelList">
+						<!--
+							상품속성&브랜드 라벨 class 설명
+
+							구조 : ul.prodLabelList > li > a.prodLabel
+
+							컬러 리스트 ▼
+							.prodLabel (회색) : 기본 라벨 스타일
+							.col04 (핫핑크) : 하나~* [하나팩, 하나허니문, 하나골프, 하나크루즈, 하나트레킹&레포츠]
+							.col05 (골드) : 하나팩프리미엄
+							.col06 (하늘색) : 이세이브팩
+							.col07 (검정색) : 제우스
+							.col08 (파란색) : 하나FREE
+							.col09 (초록색) : 내나라여행, 하나강산
+							.col10 (연두색) : 웹투어
+						-->
+
+						<!-- 상품속성&브랜드 값이 [하나팩프리미엄, 하나팩, 이세이브팩] 일때만 a태그에 .qna_second 클래스 추가, .brandPop 컨텐츠 추가  -->
+						<li>
+							<a href="#" class="prodLabel col06 qna_second" data-role="none">이세이브팩</a><!-- 클릭시 class="on"추가되고 아래 팝업노출 -->
+							<div class="brandPop qnaPopTxt">
+								<a href="#none" class="popClose" data-role="none" title="팝업닫기"></a>
+								<strong>브랜드 소개</strong>
+								<p class="b_col01">
+									<em class="col05">하나팩프리미엄 : </em>
+									<span>
+										지역별 베스트 가이드, 국적기<br>
+										우선배정, 엄선된 특급호텔, 최소화한 쇼핑 등 고품격<br>
+										일정으로 구성한 패키지 브랜드
+									</span>
+								</p>
+								<p class="b_col02">
+									<em class="col04">하나팩 : </em>
+									<span>하나투어 대표 패키지 상품 브랜드</span>
+								</p>
+								<p class="b_col03">
+									<em class="col06">이세이브팩 : </em>
+									<span>
+										합리적인 요금의 호텔과 식사로 구성된<br>
+										대한민국 대표 초저가 패키지 여행 브랜드
+									</span>
+								</p>
+								
+							</div>
+						</li>
+						<!-- // 상품속성&브랜드 값이 [하나팩프리미엄, 하나팩, 이세이브팩] 일때만 a태그에 .qna_second 클래스 추가, .brandPop 컨텐츠 추가  -->
+						<li>
+							<span class="prodLabel col10">웹투어</span>
+						</li>
+						<li>
+							<span class="prodLabel">부산출발</span>
+						</li>
+						<li>
+							<span class="prodLabel">하나투어카드전용</span>
+						</li>
+					</ul>
+					<!-- // 20180412 상품구분정보 변경 : 추가 -->
+
+					<div class="codeBox"><span>상품코드</span><strong>AAP101151003KE7</strong></div>
+					<h3>[락in]방콕/파타야 5일 [오전]초특급 그랜드 펄 크루즈+쇼in 파타야</h3>
+					<p>저렴한 가격으로 알찬 특전을 누리는 만족도 높은 상품</p>
+					
+					<div class="prodDayBox">
+						<strong><span>출발일</span><br>10월 3일</strong>
+						<strong><span>여행기간</span><br>9박 10일</strong>
+					</div>
+					
+					<a href="pop_sc_calender.html" class="graBtn tySelect popUpFull" data-role="none">다른 출발일 선택</a>
+					
+					<div class="prodMoney">
+						<strong>상품 가격<span>(성인 1인 기준)</span></strong>
+						<div>
+							<span>2,090,000원</span>
+							<em>1,799,000<span>원</span></em>
+						</div>
+					</div>
+					<!-- 20170919 : 페어프라이스 배너 추가 -->
+					<a href="pop_sc_guarantee.html" class="guaranteeBanner popUpFull" data-role="none"><img src="http://image1.hanatour.com/mobile/common/schedule/img_guarantee_banner.jpg" alt="fair price 공정한 가격, 즐거운 여행"></a>
+					<!-- // 20170919 : 페어프라이스 배너 추가 -->
+				</div>
+				
+				<div class="sc_comBtm">
+					<ul class="scheTxtList">
+						<li>
+							<strong>한국출발</strong>
+							<p class="ft_b">2015년 10월 03일 (토) 09:00</p>
+							<span class="air">KE0657</span>
+						</li>
+						<li>
+							<strong>한국도착</strong>
+							<p class="ft_b">2015년 10월 13일 (토) 09:00</p>
+							<span class="air">KE0657</span>
+						</li>
+						
+						<!-- 20170110 추가 -->
+						<li class="underLine">
+							<strong>실제운항</strong>
+							<p class="">본 상품의 <span class="blue">실제운항 항공</span>은 <span class="blue">이스타항공(ZE)</span> 입니다.</p>
+						</li>
+						<!-- // 20170110 추가 -->
+						
+						<li>
+							<strong>항공편</strong>
+							<p>
+								<span class="airBox"><img src="http://image1.hanatour.com/2010/images/airline/KE.png" alt="">대한항공</span>
+								<span class="airBox"><img src="http://image1.hanatour.com/2010/images/airline/KE.png" alt="">대한항공</span>
+								<span class="airBox"><img src="http://image1.hanatour.com/2010/images/airline/KE.png" alt="">대한항공</span>
+								<span class="airBox"><img src="http://image1.hanatour.com/2010/images/airline/KE.png" alt="">대한항공</span>
+							</p>
+						</li>
+						<li>
+							<strong>방문도시</strong>
+							<p>방콕, 파타야</p>
+						</li>
+						<li>
+							<strong>예약현황</strong>
+							<div class="txtBox">예약 7명 / 좌석 20석
+								<a href="#none" class="qna_second" data-role="none">(최소출발:4명)</a> <!-- class="on" 추가시 아래 div block됨-->
+								<div class="qnaPopTxt">
+									<a href="#none" data-role="none" title="팝업닫기"></a>
+									<ul>
+										<li>최소 출발인원은 성인기준</li>
+										<li>예약인원이 최소출발인원보다 작은 경우, 여행약관 9조에 의거하여 3일전까지 취소 통보를 하여 계약을 해지하며, 7일전 통보시에는 입금가만 환급됩니다.</li>
+									</ul>
+								</div>
+							</div>
+							<div class="qnaPopBox">
+								<a href="#none" class="qna_second" data-role="none">공동 행사 있음</a><!-- class="on" 추가시 아래 div block됨-->
+								<div class="qnaPopTxt">
+									<a href="#none" data-role="none" title="팝업닫기"></a>
+									<p>
+										<strong>공동행사란?</strong>
+										다른 상품의 일행등과 함께 모든 일정을 함께 진행하는 것을 뜻합니다.
+									</p>
+								</div>
+								<a href="#none" class="qna_second" data-role="none">현지합류 있음(2명)</a><!-- class="on" 추가시 아래 div block됨-->
+								<div class="qnaPopTxt">
+									<a href="#none" data-role="none" title="팝업닫기"></a>
+									<p>
+										<strong>현지 합류란?</strong>
+										현지에서 합류하여 관광, 숙박을 함께 진행하는것을 뜻합니다.
+									</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+					
+					<div class="btn2_box">
+						<a href="pop_sc_air.html" class="graBtn popUpFull" data-role="none">항공 여정보기</a>
+						<a href="pop_sc_product.html" class="graBtn popUpFull" data-role="none">여행상품 핵심정보</a>
+					</div>
+					
+					<div class="snsList">
+						<a href="#none" data-role="none"><img src="http://image1.hanatour.com/mobile/common/schedule/ico_sns01.png" alt="페이스북"></a>
+						<a href="#none" data-role="none"><img src="http://image1.hanatour.com/mobile/common/schedule/ico_sns02.png" alt="카카오스토리"></a>
+						<a href="#none" data-role="none"><img src="http://image1.hanatour.com/mobile/common/schedule/ico_sns03.png" alt="카카오톡"></a>
+						<a href="#none" data-role="none"><img src="http://image1.hanatour.com/mobile/common/schedule/ico_sns04.png" alt="URL 복사"></a>
+						<a href="#none" data-role="none"><img src="http://image1.hanatour.com/mobile/common/schedule/ico_sns05.png" alt="메일보내기"></a>
+					</div>
+				</div>
+				
+				<!-- SM 이벤트 배너 -->
+				<a href="#none" class="smEventBanner" data-role="none">
+					<strong><img src="http://image1.hanatour.com/mobile/common/schedule/img_sm_logo.png" alt=""> SM면세점 혜택받기</strong>
+					<span>4~9만원 적립금 | 최대 17%할인 | 구매금액별<br>최대 24만원 선불카드 증정 | 최대 19만원 추가 할인</span>
+				</a>
+				<!-- // SM 이벤트 배너 -->
+				
+				<!-- 광고배너 스와이프 추가 20170309 -->
+				<div class="swiper-container global-swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="http://mgcard.net/event/buy_hanatour.php" target="_blank" title="새창">
+								<img src="http://image1.hanatour.com/_images/hana/p_schedule/honey_banner_02.jpg" alt="하나허니문 서비스 보증제 - 허니문 일정 중 발생한 돌발상황? 하나허니문 서비스 보증제!">
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="http://www.hanatour.com/asp/promotion/autopromo/ap-20000.asp?promotionCode=&pageNum=1&sortType=1&promo_code=P07789" target="_blank" title="새창">
+								<img src="http://image1.hanatour.com/_images/hana/p_schedule/honey_banner_01.jpg" alt="하나투어 X 모닝글로리청첩장 - 청첩장 3만원 할인 받는법? 신혼 요리 무료 레시피 받는법?">
+							</a>
+						</div>
+						
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+				<!-- // 광고배너 스와이프 추가 20170309 -->
+				
+				<!-- 가이드인솔자 추가 20170726 -->
+				<ul class="topGuideBox">
+					<li>
+						<div class="intbCell">
+							<strong>가이드</strong>
+							<p>현지 도착시 코디네이터와 미팅 후 셔틀버스 탑승을 안내받습니다.</p>
+						</div>
+						<div class="swiper-container global-swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="guiSwipeCont">
+										<span class="face_img"><img src="http://image1.hanatour.com/mobile/common/schedule/img_dummy_guide01.jpg" alt=""></span>
+										<div class="guiDetail">
+											<strong>박서준 (남)</strong>
+											<ul>
+												<li>휴대전화 : 010-1111-2222</li>
+												<li>도시 : 도쿄</li>
+											</ul>
+											<a href="pop_sc_guide01.html" class="popUpFull" data-role="none">자기소개＞</a>	
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="guiSwipeCont">
+										<span class="face_img"><img src="http://image1.hanatour.com/mobile/common/schedule/img_dummy_guide01.jpg" alt=""></span>
+										<div class="guiDetail">
+											<strong>원븬 (남)</strong>
+											<ul>
+												<li>휴대전화 : 010-1111-2222</li>
+												<li>도시 : 도쿄</li>
+											</ul>
+											<a href="pop_sc_guide01.html" class="popUpFull" data-role="none">한줄소개＞</a>	
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="guiSwipeCont">
+										<span class="face_img"><img src="http://image1.hanatour.com/mobile/common/schedule/img_dummy_guide01.jpg" alt=""></span>
+										<div class="guiDetail">
+											<strong>원븬 (남)</strong>
+											<ul>
+												<li>휴대전화 : 010-1111-2222</li>
+												<li>도시 : 도쿄</li>
+											</ul>
+											<a href="pop_sc_guide01.html" class="popUpFull" data-role="none">한줄소개＞</a>	
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="guiSwipeCont">
+										<span class="face_img"><img src="http://image1.hanatour.com/mobile/common/schedule/img_dummy_guide01.jpg" alt=""></span>
+										<div class="guiDetail">
+											<strong>원븬 (남)</strong>
+											<ul>
+												<li>휴대전화 : 010-1111-2222</li>
+												<li>도시 : 도쿄</li>
+											</ul>
+											<a href="pop_sc_guide01.html" class="popUpFull" data-role="none">한줄소개＞</a>	
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="guiSwipeCont">
+										<span class="face_img"><img src="http://image1.hanatour.com/mobile/common/schedule/img_dummy_guide01.jpg" alt=""></span>
+										<div class="guiDetail">
+											<strong>원븬 (남)</strong>
+											<ul>
+												<li>휴대전화 : 010-1111-2222</li>
+												<li>도시 : 도쿄</li>
+											</ul>
+											<a href="pop_sc_guide01.html" class="popUpFull" data-role="none">한줄소개＞</a>	
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination pink"></div>
+						</div>
+					</li>
+					<li>
+						<div class="intbCell">
+							<strong>인솔자</strong>
+							<p>인솔자가 동행합니다.</p>
+						</div>
+						<div class="swiper-container global-swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="guiSwipeCont">
+										<span class="face_img"><img src="http://image1.hanatour.com/mobile/common/schedule/img_dummy_guide02.jpg" alt=""></span>
+										<div class="guiDetail">
+											<strong>김지원 (여)</strong>
+											<ul>
+												<li>휴대전화 : 010-1111-2222</li>
+												<li>도시 : 도쿄</li>
+											</ul>
+											<a href="pop_sc_guide02.html" class="popUpFull" data-role="none">자기소개＞</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="guiSwipeCont">
+										<div class="guiDetail">
+											<strong>신세경 (여)</strong>
+											<ul>
+												<li>휴대전화 : 010-1111-2222</li>
+												<li>도시 : 도쿄</li>
+											</ul>
+											<a href="pop_sc_guide02.html" class="popUpFull" data-role="none">자기소개＞</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination pink"></div>
+						</div>
+					</li>
+				</ul>
+				<!-- // 가이드인솔자 추가 20170726 -->
+				
+				<!-- 브랜드 변경 안내 배너 20171107 -->
+				<a href="pop_sc_brand_change.html" class="popUpFull brChange_banner">
+					<strong><img src="http://image1.hanatour.com/mobile/common/schedule/stit_brchange_banner.png" alt="하나팩 PREMIUM"></strong>
+					<span>패키지에 '프리미엄'을 더하다!</span>
+					<b>하나투어 상품 브랜드 변경 안내</b>
+					<em>(2018년 4월 출발 상품부터 적용)</em>
+				</a>
+				<!-- // 브랜드 변경 안내 배너 20171107 -->
+			</div>
+			<!-- // 상단 공통 -->
+			
+			<!-- 하단 탭영역 -->
+			<div class="scheduleTabSect">
+				<ul class="sche_tabMenu"><!-- 20160601 스크롤내려가서 안보일시 class="fixed" 추가 -->
+					<li class="on"><a href="#none" data-role="none">상품정보</a></li><!-- 선택시 class="on" -->
+					<li><a href="#none" data-role="none">일정</a></li>
+					<li><a href="#none" data-role="none">선택관광</a></li>
+					<li><a href="#none" class="twoLine" data-role="none">약관 및<br>참고사항</a></li>
+				</ul>
+				
+				<!-- 상품정보 -->
+				<div class="sche_tabCont" style="display:no ne">
+					<table class="agetable">
+						<caption>나이별 가격 안내표</caption>
+						<colgroup>
+							<col style="width:30%">
+							<col style="width:70%">
+						</colgroup>
+						
+						<tbody>
+							<tr>
+								<th scope="row">성인<span>(만 12세 이상)</span></th>
+								<td>
+									<span>2,090,000원</span>
+									<strong>1,799,000<span>원</span></strong>
+									<em>유류할증료 : 80,120원 / <span>제세공과금 : 0원</span></em>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									<a href="#none" class="qna_second" data-role="none">아동</a><!-- class="on" 추가시 아래 div block됨-->
+									<div class="qnaPopTxt">
+										<a href="#none" data-role="none" title="팝업닫기"></a>
+										<p>
+											<strong>아동 (만 12세 미만)</strong>
+											2004.01.01~2013.12.31
+										</p>
+									</div>
+									<span>(만 12세 미만)</span>
+								</th>
+								<td>
+									<strong>833,000<span>원</span></strong>
+									<em>유류할증료 : 0원</em>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									<a href="#none" class="qna_second" data-role="none">유아</a>
+									<div class="qnaPopTxt">
+										<a href="#none" data-role="none" title="팝업닫기"></a>
+										<p>
+											<strong>유아 (만 2세 미만)</strong>
+											2014.01.02~2016.01.01
+										</p>
+									</div>
+									<span>(만 2세 미만)</span>
+								</th>
+								<td>
+									<strong>150,000<span>원</span></strong>
+									<em>유류할증료 : 0원</em>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					
+					<p class="inforTxt01">아동요금은 성인 2인과 같은 방 사용 조건이며, 미충족시 아동 추가요금 발생</p>
+					<p class="inforTxt01">※ <span class="c_red">1인 객실 사용</span>시, 추가요금 발생</p>
+					<p class="inforTxt01">※ 본 상품은 예약을 넣으신 시점 이후로 항공 및 호텔의 예약이 진행되므로 상품가 차액이 발생될 수 있습니다.</p>
+					
+					<!-- 마일리지 -->
+					<div class="scMileBox">
+						<strong>하나투어 마일리지 : <a href="pop_sc_mile.html" class="mileBtnPop popUpFull" data-role="none"><span class="c_red">성인기준 7,990ⓜ 적립</span></a></strong>
+						<p>출발 전 하나투어클럽 가입자 한정</p>
+					</div>
+					<!-- // 마일리지 -->
+
+					<!-- 20180907 카카오페이 배너 추가 : 추가 -->
+					<div class="expoBanner" style="padding-bottom:0;">
+						<a href="http://m.hanatour.com/application/eventCoupon/eventCoupon_comment.jsp?eventNum=23069" target="_blank" title="새창" data-role="none" style="background-color:#ffdd02"><img src="http://image1.hanatour.com/dotcom/update/schedule/etc/026_m.jpg" alt="하나투어 부산 여행박람회"></a>
+					</div>
+					<!-- 20180907 카카오페이 배너 추가 : 추가 -->
+
+					<!-- 20170117 추가 -->
+					<div class="scTcBox">
+						<div class="scThemeCard">
+							<div class="tcTop bg01"><!-- Bg class bg01 ~ bg10 -->
+								<div>
+									<strong class="food">맛10</strong><!-- class 설명 :: 음식 food, 예술 art, 레포츠 leports, 쇼핑 shopping, 동반자 partner, 체험 experience -->
+									<p>여행의 추억과 더불어 그 지역에서 꼭 맛보아야 할<br>음식들을 함께 즐길 수 있는 맛있는 여행상품입니다.</p>
+									<a href="#" class="btnTc">자세히 보기 ＞</a>
+								</div>
+							</div>
+							
+							<!-- 테마카드 스와이프 -->
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div>
+											<img src="http://image5.hanatour.com/mst_info_image/5/P000632455_m.jpg" alt="">
+											<p>세계3대 수프 중의 하나 태국 대표적인 전통스프</p>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div>
+											<img src="http://image5.hanatour.com/mst_info_image/6/P000632456_m.jpg" alt="">
+											<p>쌀국수에 숙주나물을 넣고 볶은 국수</p>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div>
+											<img src="http://image5.hanatour.com/mst_info_image/6/P000632456_m.jpg" alt="">
+											<p>쌀국수에 숙주나물을 넣고 볶은 국수</p>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div>
+											<img src="http://image5.hanatour.com/mst_info_image/5/P000632455_m.jpg" alt="">
+											<p>세계3대 수프 중의 하나 태국 대표적인 전통스프</p>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div>
+											<img src="http://image5.hanatour.com/mst_info_image/6/P000632456_m.jpg" alt="">
+											<p>쌀국수에 숙주나물을 넣고 볶은 국수</p>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div>
+											<img src="http://image5.hanatour.com/mst_info_image/6/P000632456_m.jpg" alt="">
+											<p>쌀국수에 숙주나물을 넣고 볶은 국수</p>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div>
+											<img src="http://image5.hanatour.com/mst_info_image/5/P000632455_m.jpg" alt="">
+											<p>세계3대 수프 중의 하나 태국 대표적인 전통스프</p>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div>
+											<img src="http://image5.hanatour.com/mst_info_image/6/P000632456_m.jpg" alt="">
+											<p>쌀국수에 숙주나물을 넣고 볶은 국수</p>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div>
+											<img src="http://image5.hanatour.com/mst_info_image/6/P000632456_m.jpg" alt="">
+											<p>쌀국수에 숙주나물을 넣고 볶은 국수</p>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div>
+											<img src="http://image5.hanatour.com/mst_info_image/6/P000632456_m.jpg" alt="">
+											<p>쌀국수에 숙주나물을 넣고 볶은 국수</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-pagination" style="display:none"></div>
+							</div>
+							<!-- // 테마카드 스와이프 -->
+						</div>
+					</div>
+					<!-- // 20170117 추가 -->
+					
+					<!-- 여행박람회 배너추가 20170418 -->
+					<div class="expoBanner">
+						<a href="http://mhitsbusan.hanatour.com?utm_source=hanatour&utm_medium=i_h_m_schedule&utm_term=owned&utm_content=hits_mo&utm_campaign=hitsb2017" target="_blank" title="새창" data-role="none"><img src="http://image1.hanatour.com/_images/micro/exhibition_2017/banner2/640_140.jpg" alt="하나투어 부산 여행박람회"></a>
+					</div>
+					<!-- // 여행박람회 배너추가 20170418 -->
+					
+					<!-- 아코디언 영역 -->
+					<dl class="scheduleAco">
+						<!-- 상품 핵심포인트 -->
+						<dt class="open"><a href="#none" data-role="none">상품 핵심포인트</a></dt> <!-- open 추가시 dd block css 처리 -->
+						<dd>
+							
+							<!-- 20160615 추가 -->
+							<div class="imgBanner"><img src="http://image1.hanatour.com/mobile/common/schedule/img_bestproduct.jpg" alt="한국여행협회가 2014~2015 우수여행상품으로 인증한 상품입니다. 우수여행상품은 평가위원회에 공정한 기준을 바탕으로 심사 후 인증되어, 여행상품의 품질 보증은 물론 안심하고 선택할수 있는 상품입니다."></div>
+							<!-- // 20160615 추가 -->
+							
+							<div class="bluePromo">
+								<strong class="widTy01"><span>369프로모션</span></strong>
+								<em>함께 할수록 혜택은 多 착해지는 가격</em>
+								<p>3명 예약 시 10만원 할인 / 6명 예약 시 30만원 할인<br>/ 9명 예약 시 50만원 할인<br>동일 예약코드 기준, 성인 한정</p>
+							</div>
+							<div class="blackPromo">
+								<strong>유네스코 후원상품</strong>
+								<p>유네스코한국위원회의 세계유산 보호활동을<br>유네스코한국위원회의 세계유산보호활동을 후원합니다.</p>
+								<span><img src="http://image1.hanatour.com/mobile/common/schedule/img_unisco.png" alt="유네스코한국위원회"></span>
+							</div>
+							
+							<dl class="scheStitList">
+								<!-- 20170424 추가 -->
+								<dt class="stit07">골프</dt>
+								<dd>
+									<ul class="listDott red">
+										<li>골프</li>
+										<li>골프</li>
+									</ul>
+								</dd>
+								<!-- // 20170424 추가 -->
+							
+								<dt class="stit02">관광</dt>
+								<dd>
+									<ul class="listDott red">
+										<li><strong class="pink">파타야 수상시장 체험:</strong> 파타야에서 전통 수상시장을 체험해 볼 수 있는 기회</li>
+										<li>태국 전통문화 체험 : 왓포사원, 수상가옥, 새벽사원 관광</li>
+										<li>파인애플 농장 방문: 비타민 충전! 열대과일 맛보기</li>
+										<li>백만년바위공원&amp;악어농장: 신기한 자연경관과 악어쇼로 흥미진진</li>
+										<li>포도농장 실버레이크 방문: 몸에좋은 컬러푸드 포도농장을 방문하고 시원한 포도주스 시음</li>
+									</ul>
+								</dd>
+								
+								<dt class="stit01">식사</dt>
+								<dd>
+									<ul class="listDott red">
+										<li><strong class="pink">수끼:</strong> 고기, 해산물, 야채를 넣어 먹는 담백한 태국식샤브샤브</li>
+										<li><strong class="pink">닭볶음 정식:</strong> 부드럽고 매콤달콤 닭볶음과 신선한 채소와의 조화(키즈밀 보유)</li>
+										<li>타이식 세트메뉴: 새콤 달콤한 태국 전통의 맛 체험</li>
+										<li>로얄드래곤: 세계 최대규모로 기네스북에 오른 식당! 눈과 입, 귀가 모두 즐거운 곳!</li>
+										<li>호텔 씨푸드 뷔페: 골라먹는 재미! 다양한 메뉴로 먹는 즐거움이 가득한 호텔뷔페</li>
+									</ul>
+								</dd>
+								
+								<dt class="stit03">호텔</dt>
+								<dd>
+									<ul class="listDott red">
+										<li>THE LUXURY 파타야 '초특급(5성급)호텔' 사용</li>
+										<li>리조트 내 반나절 '여유로운 휴식시간' 제공</li>
+									</ul>
+								</dd>
+								
+								<!-- 20160615 추가 -->
+								<dt class="stit06">교통</dt>
+								<dd>
+									<ul class="listDott red">
+										<li>전용리무진 탑승</li>
+										<li>34인승 전용리무진 탑승</li>
+									</ul>
+								</dd>
+								<!-- // 20160615 추가 -->
+								
+								<!-- 20160601 추가 -->
+								<dt class="stit05">보험</dt>
+								<dd>
+									<ul class="listDott red">
+										<li>안심(2억원) 여행자보험 포함</li>
+										<li>타사 대비 최대 보장한도, 상해 2,000만원/ 질병 1,000만원 보상 </li>
+										<li>휴대품분실 최대 70만원 보상!</li>
+										<li>고급(3억원) 여행자보험 포함</li>
+										<li>타사 대비 최대 보장한도, 상해 3,000만원/ 질병 2,000만원 보상</li>
+										<li>휴대품분실 최대 100만원 보상!</li>
+									</ul>
+								</dd>
+								<!-- // 20160601 추가 -->
+								
+								<!-- 20170424 추가 -->
+								<dt class="stit08">인솔자</dt>
+								<dd>
+									<ul class="listDott red">
+										<li>인솔자인솔자</li>
+										<li>인솔자</li>
+									</ul>
+								</dd>
+								<!-- // 20170424 추가 -->
+								
+								<!-- 20170424 추가 -->
+								<dt class="stit09">가이드</dt>
+								<dd>
+									<ul class="listDott red">
+										<li>가이드가이드</li>
+										<li>가이드</li>
+									</ul>
+								</dd>
+								<!-- // 20170424 추가 -->
+								
+								<dt class="stit04">기타</dt><!-- 20160601 문구변경 -->
+								<dd>
+									<ul class="listDott red">
+										<li><strong class="pink">파타야 수상시장 체험:</strong> 파타야에서 전통 수상시장을 체험해 볼 수 있는 기회</li>
+										<li><strong class="pink">휴대용 보조배터리 제공</strong>
+											<div class="inBeneBox">
+												<p><span><img src="http://image1.hanatour.com/mobile/common/schedule/dummy_sc01.png" alt=""></span>동남아 럭셔리 컬렉션 이용 고객에게 휴대용 보조 배터리 제공<br>제공기준: 1객실당 1개 / 이코노미, 비즈니스 동일<br>제공기간: 2015.01.01 ~ 2015.03.31(출발일 기준)</p>
+												<!-- 20160615 삭제 em>제공기준: 1객실당 1개 / 이코노미, 비즈니스 동일</em>
+												<em>제공기간: 2015.01.01 ~ 2015.03.31(출발일 기준)</em-->
+											</div>	
+										</li>
+										
+										<li>과일바구니 제공
+											<div class="inBeneBox">
+												<p><span><img src="http://image1.hanatour.com/mobile/common/schedule/dummy_sc02.png" alt=""></span>태국가면 꼭 먹어야 하는 망고&amp;망고스틴 과일바구니를 제공합니다.<br>제공기준: 1객실당 1개 / 이코노미, 비즈니스 동일</p>
+												<!-- 20160615 삭제 em>제공기준: 1객실당 1개 / 이코노미, 비즈니스 동일</em-->
+											</div>	
+										</li>
+									</ul>
+								</dd>
+							</dl>
+							
+						</dd>
+						<!-- // 상품 핵심포인트 -->
+						
+						<!-- 포함사항 -->
+						<dt class="open"><a href="#none" data-role="none">포함사항</a></dt>
+						<dd>
+							<ul class="sc_txtList">
+								<li>
+									<strong>스페셜 특전</strong>
+									<p>코끼리투어($50상당)</p>
+								</li>
+								<li>
+									<strong>교통</strong>
+									<p>왕복 항공권, 전용 차량비</p>
+								</li>
+								<li>
+									<strong>숙박</strong>
+									<p>숙박비 (전 일정 숙박)</p>
+								</li>
+								<li>
+									<strong>관광지</strong>
+									<p>관광지 입장료</p>
+								</li>
+								<li>
+									<strong>제세금</strong>
+									<p>국내공항세, 관광진흥개발기금, 현지공항세, 전쟁보험료, 유류할증료</p>
+								</li>
+								<li>
+									<strong>보험</strong>
+									<p>1억원 여행자보험</p>
+								</li>
+							</ul>
+						</dd>
+						<!-- // 포함사항 -->
+						
+						<!-- 불포함사항 -->
+						<dt class="open"><a href="#none" data-role="none">불포함사항</a></dt>
+						<dd>
+							<ul class="sc_txtList">
+								<li>
+									<strong>가이드</strong>
+									<p>가이드/기사경비 :40USD (현지에서 지불)<br>가이드/기사경비 :가격문의</p>
+								</li>
+								<li>
+									<strong>팁</strong>
+									<p>각종 매너팁 (테이블팁, 객실팁, 포터비, 마사지팁)<span>※ 매너팁은 소비자의 자율적 선택으로 지불여부에 따른 불이익은 없습니다.</span></p>
+								</li>
+							</ul>
+						</dd>
+						<!-- // 불포함사항 -->
+						
+						<!-- 선택경비 -->
+						<dt class="open"><a href="#none" data-role="none">선택경비</a></dt>
+						<dd>
+							<ul class="sc_txtList">
+								<li>
+									<strong>교통</strong>
+									<p>항공리턴변경(가능), 비즈니스 업그레이드</p>
+								</li>
+								<li>
+									<strong>숙박</strong>
+									<p>객실 업그레이드</p>
+								</li>
+								<li>
+									<strong>팁</strong>
+									<p>현지합류(가능), 선택관광비용<span>※ 선택관광/기항지관광/현지투어에 관한 상세내역은 일정표를 참고바랍니다.</span></p>
+								</li>
+							</ul>
+						</dd>
+						<!-- // 선택경비 -->
+						
+						<!-- 상품확정정보 -->
+						<dt class="open"><a href="#none" data-role="none">상품확정 정보</a></dt>
+						<dd>
+							<div class="productFixBox">
+								<strong class="on">출발가능</strong> <!-- 확정일시 class="on" -->
+								<span></span><!-- 빈태그 -->
+								<strong>항공예정</strong>
+								<span></span>
+								<strong>호텔예정</strong>
+								<span></span>
+								<strong class="on">일정확정</strong>
+								<span></span>
+								<strong>가격예정</strong>
+							</div>
+						</dd>
+						<!-- // 상품확정정보 -->
+						
+						<!-- 20180412 상품구분정보 변경 : 제거 -->
+						<!--<dt class="open"><a href="#none" data-role="none">상품구분 정보</a></dt>-->
+						<!--<dd>-->
+							<!--<ul class="prodDivList">-->
+								<!--<li>-->
+									<!--<strong>하나트레킹&amp;레포츠<br>하나트레킹&amp;레포츠</strong>-->
+									<!--<span></span>&lt;!&ndash; 가운데 공간 &ndash;&gt;-->
+									<!---->
+									<!--&lt;!&ndash; 브랜드소개일경우 버튼 추가 20170731 :: 기존 strong -> a로 추가 &ndash;&gt;-->
+									<!--<a href="#" class="qna_second" data-role="none">이세이브 PACK</a>&lt;!&ndash; 클릭시 class="on"추가되고 아래 팝업노출 &ndash;&gt;-->
+									<!--<div class="brandPop qnaPopTxt">-->
+										<!--<button type="button" class="popClose" data-role="none" title="팝업닫기"></button>-->
+										<!--<strong>브랜드 소개</strong>-->
+										<!--<p class="b_col01"><em>클래식</em><span>믿을 수 있는 항공, 엄선된 숙박과 식사, 보다 새롭고 다양한 볼거리로 구성된 수준 높은 정통 패키지</span></p>-->
+										<!--<p class="b_col02"><em>캐주얼</em><span>실속파 고객들을 위한 보다 알찬 구성으로 짜여진 경제적인 패키지</span></p>-->
+										<!--<p class="b_col03"><em>이세이브팩</em><span>합리적인 요금의 호텔과 식사로 구성된 대한민국 대표 초저가 패키지 여행브랜드</span></p>-->
+									<!--</div>-->
+									<!--&lt;!&ndash; 브랜드소개일경우 버튼 추가 20170731 &ndash;&gt;-->
+									<!---->
+								<!--</li>-->
+									<!---->
+								<!--<li>-->
+									<!--<strong>인천/김포출발</strong>-->
+									<!--<span></span>&lt;!&ndash; 가운데 공간 &ndash;&gt;-->
+									<!--<strong class="transp"></strong>&lt;!&ndash; 빈영역 class="transp" 추가 &ndash;&gt;-->
+								<!--</li>-->
+							<!--</ul>-->
+						<!--</dd>-->
+						<!-- // 20180412 상품구분정보 변경 : 제거 -->
+					</dl>
+					<!-- // 아코디언 영역 -->
+				</div>
+				<!-- // 상품정보 -->
+				
+				<!-- 일정 -->
+				<div class="sche_tabCont" style="display:none">
+					<div class="guideBox">
+						<div>
+							<span>가이드</span>
+							<p>가이드가<br>동반하지 않습니다.</p>
+						</div>
+						<div>
+							<span>인솔자</span><!-- 인솔자 동행하지 않을시 삭제 -->
+							<p>인솔자가 동행하지 않으며, 현지공항 도착 시 현지가이드와 미팅이 이루어집니다.</p>
+						</div>
+					</div>
+					
+					<!-- 20170217 수정, 추가 -->
+					<div class="meetBox">
+						<strong>미팅일시</strong>
+						<span><span class="c_red">[미팅 일자 02월 27일] [미팅 시간 오후 15:00]</span> 인천 국제공항 3층 출국장 여행사 <span class="c_red">카운터 G와 F 카운터 사이</span>중앙엘리베이터 옆 하나투어 <span class="c_red">6번~10번 테이블</span> 이세이브 안내판 앞</span>
+						<a href="pop_sc_meeting.html" class="popUpFull" data-role="none">약도보기</a>
+						<p>※ 항공사 탑승수속 마감시간까지 수속을 마치지 못한 경우 출국이 거절될 수 있으며 이 경우 당사의 책임 범위가 아님을 알려드립니다.<br>안전한 출국을 위해 하나투어 미팅시간까지는 반드시 공항에 도착해 주시기 바랍니다.</p>
+					</div>
+					
+					<dl class="surelyTxt">
+						<dt>꼭 읽어보세요!</dt>
+						<dd>
+							<strong>여행일정 변경에 관한 사전 동의 안내</strong>
+							<p>여행일정은 계약체결 시 예상하지 못한 부득이한 사정 등이 발생하는 경우 여행자의 사전동의를 거쳐 변경 될 수 있음을 양지하시기 바랍니다.</p>
+						</dd>
+					</dl>
+					<!-- // 20170217 수정, 추가 -->
+					
+					<dl class="scDayList">
+						<dt class="open"><a href="#none" data-role="none"><strong>1일차</strong><span>2015.10.03(토)</span></a></dt><!-- class="open" 추가시 dd block 처리되있음 :: 2일차 이상일경우 class="twoDays" 추가 -->
+						<dd>
+							<strong class="cityTit">인천</strong>
+							<ul class="detailList">
+								<li>
+									<span><strong>11:30</strong>03/23(월)</span>
+									<strong>인천 출발</strong>
+									<p>
+										<span class="airBox">비행</span>
+										<b>1시간 50분 소요</b>
+										<!-- 20170110 추가 -->
+										<br><em class="c_blue">실제운항:대한항공</em>
+										<em>탑승수속은 실제 탑승 항공사인 <b class="c_blue">이스타항공</b>카운터 이용 </em>
+										<!-- // 20170110 추가 -->
+									</p>
+								</li>
+								<li>
+									<span><strong>13:20</strong>03/23(월)</span>
+									<strong>오사카(간사이) 도착</strong>
+									<p><span class="waitBox">대기</span> 1시간 50분 소요</p>
+								</li>
+								<li>
+									<span><strong>11:30</strong>03/23(월)</span>
+									<strong>오사카(간사이) 출발</strong>
+									<p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p>
+								</li>
+								<li>
+									<span><strong>14:50</strong>03/23(월)</span>
+									<strong>도쿄(나리타) 도착<b class="plusDay"><span>+1일</span></b></strong><!-- +1일차,2일차 라벨있는경우 <b class="plusDay"><span>+1일</span></b> -->
+								</li>
+							</ul>
+							
+							<!-- 20160601 삭제 
+							<p class="red_infor">
+								<strong>안내</strong>
+								태국입국 시 담배는 1인 1보루, 술은 1인 1병(1ℓ) 규정! 위반 시 벌금부과!
+							</p>-->
+							
+							<!-- 20160601 추가 :: 통이미지만 있는경우 -->
+							<div class="zoomBox">
+								<img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_full_dummy.jpg" alt="">
+								<a href="#none" data-role="none" title="확대하기"></a>
+							</div>
+							<!-- // 20160601 추가 :: 통이미지만 있는경우 -->
+							
+							<strong class="cityTit">방콕</strong>
+							<ul class="detailTxt">
+								<li>
+									<dl class="de_inBox01">
+										<dt>현지 가이드 미팅</dt>
+										<dd>
+											<strong>장소</strong>
+											<p><span class="c_red">20번</span> 벨트 쪽 출구로 나오면 하나투어 미팅장소인 <span class="c_red">"C"</span> 게이트가 있습니다.  미팅 시 "하나투어피켓"을 들고 있는 가이드를 찾아주십시오.</p>
+										</dd>
+										<dd>
+											<strong>주의사항</strong>
+											<p>방콕공항의 보안강화로 인해 한국인가이드의 입국장 미팅이 금지되었습니다. C게이트에서 현지인가이드와 1차 미팅을 하시고 1층에서 한국인가이드와 만나서 행사가 진행되오니 이점 양해부탁드리겠습니다.</p>
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<div class="de_inBox02">
+										<a href="pop_sc_travel.html" class="popUpFull" data-role="none">
+											<span class="sc_imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+											<p>
+												<strong >아시아티크</strong>
+												<b>강변을 따라 조성된 새로운 야시장</b>
+												<span>관광시간 : 약 30분</span>
+											</p>
+										</a>
+										
+										<!-- 하단문구 -->
+										<div class="btmTxtBox">
+											<strong class="c_red">하나투어 특전</strong>
+											<ul class="listNum">
+												<li>1. 운치있는 짜오프라야 강변에서의 자유 시간 즐기기</li>
+												<li>2. 맥주 또는 음료1병 제공</li>
+											</ul>
+										</div>
+										<!--//하단문구 -->
+									</div>
+								</li>
+								
+								<li class="onlyTxt">석식 후 호텔 투숙 및 휴식</li>
+							</ul>
+							
+							<div class="d_dayTxt">
+								<img src="http://image1.hanatour.com/mobile/common/schedule/ico_sc_04.png" alt="호텔">
+								<img src="http://image1.hanatour.com/mobile/common/schedule/ico_hotel_wait.png" alt="예정"><!-- 확정일경우 이미지명 ico_hotel_fix.png -->
+								<strong>출발 3일전까지 알려드리겠습니다.</strong>
+							</div>
+							
+							<!-- 호텔 안내 영역 -->
+							<div class="hotel_inforBox"><!-- class open 추가시 두번째 a부터 블락처리됨 -->
+								<a href="pop_sc_hotel.html" data-role="none" class="linkBox popUpFull">
+									<strong>노보텔 방콕 수바납후미 에어포트 호텔
+										<span class="star num80"></span><!-- 별 갯수대로 class="num + xx" ex : 100 기준으로 1개당20. 별 4개면 80 :: 4.5개면 90 -->
+									</strong>
+									<p>NOVOTEL BANGKOK SUVARNABHUMI HOTEL</p>
+								</a>
+								<a href="pop_sc_hotel.html" data-role="none" class="linkBox popUpFull">
+									<strong>노보텔 방콕 수바납후미 에어포트 호텔
+										<span class="star num90"></span>
+									</strong>
+									<p>NOVOTEL BANGKOK SUVARNABHUMI HOTEL</p>
+								</a>
+								<a href="pop_sc_hotel.html" data-role="none" class="linkBox popUpFull">
+									<strong>노보텔 방콕 수바납후미 에어포트 호텔
+										<span class="star num100"></span>
+									</strong>
+									<p>NOVOTEL BANGKOK SUVARNABHUMI HOTEL</p>
+								</a>
+								
+								<a href="#none" data-role="none" class="plusBtn">예정호텔 더보기</a><!-- 클릭시 class="open"추가 :: 추가로 div box open 추가 -> 두번째 a부터 블락처리됨 -->
+							</div>
+							<!-- // 호텔 안내 영역 -->
+							
+							<div class="hotel_none"><img src="http://image1.hanatour.com/mobile/common/schedule/ico_sc_04.png" alt="호텔">숙박 없음</div><!-- 숙박 없음이거나 기내숙박인경우 20160615 추가 -->
+							
+							<div class="foodBox">
+								<span><img src="http://image1.hanatour.com/mobile/common/schedule/ico_sc_05.png" alt=""></span>
+								<ul>
+									<li><strong>[조식]</strong>기내식</li>
+									<li><strong>[중식]</strong>호텔식 호텔식 호텔식 호텔식</li>
+									<li><strong>[석식]</strong>기내식</li>
+								</ul>
+							</div>
+						</dd>
+						
+						<dt class="open"><a href="#none" data-role="none"><strong>2일차</strong><span>2015.10.03(토)</span></a></dt>
+						<dd>
+							<strong class="cityTit">방콕</strong>
+							
+							<ul class="detailTxt">
+								<li class="onlyTxt">호텔 조식</li>
+								
+								<!-- 테마카드 추가 20170607 -->
+								<li>
+									<div class="de_inBox02">
+										<!-- 링크없는 텍스트형 class="txtCard" -->
+										<div class="txtCard">
+											<span class="sc_imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+											<div>
+												<strong>나무 컬럼니스트 고규홍</strong><!-- 제목 -->
+												<b>천둥처럼 나무가 내게 걸어왔다. 15년세월 나무를 바라보며 눈인사를 하고 체온을 나누는 나무 컬럼니스트</b><!-- 간단소개 2줄 -->
+												
+												<!-- 내용 -->
+												<p>인천 태생으로 서강대 국어국문학과를 졸업하고 신문사 기자로 12년간 일했다. 현재는 전국 각지의 나무를 찾아 다니며, 나무와 관련된 칼럼과 방송 및 강연 등을 하고 있다.<br>
+													<strong>저서</strong>
+													이땅의 큰나무
+													<strong>최근</strong>
+													슈베르트와 나무
+												</p>
+												<!-- // 내용 -->
+											</div>
+										</div>
+										<!-- // 링크없는 텍스트형 class="txtCard" -->
+									</div>
+								</li>
+								<!-- // 테마카드 추가 20170607 -->
+								
+								<li>
+									<div class="de_inBox02">
+										<a href="pop_sc_travel.html" class="popUpFull" data-role="none">
+											<span class="sc_imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+											<p>
+												<strong><i class="sight window">차창관광</i>아시아티크</strong><!-- 차창관광 추가 20170914 -->
+												<b>강변을 따라 조성된 새로운 야시장</b>
+												<span>관광시간 : 약 30분</span>
+											</p>
+										</a>
+										<!-- 하단문구 -->
+										<div class="btmTxtBox">
+											<strong class="c_red">주의사항</strong>
+											<ul class="listNum">
+												<li>민소매,반바지,슬리퍼,찢어진 청바지 왕궁 입장 불가</li>
+											</ul>
+										</div>
+										<!--//하단문구 -->
+									</div>
+								</li>
+								<li>
+									<div class="de_inBox02">
+										<a href="pop_sc_travel.html" class="popUpFull" data-role="none">
+											<span class="sc_imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+											<p>
+												<strong><i class="sight outward">외관관광</i>왕국</strong><!-- 외관관광 추가 20170914 -->
+												<b>장엄한 태국의 역사가 녹아 있는 방콕의 최대 관광지</b>
+												<span>관광시간 : 약 30분</span>
+											</p>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="de_inBox02">
+										<a href="pop_sc_travel.html" class="popUpFull" data-role="none">
+											<span class="sc_imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+											<p>
+												<strong>왓 아룬 (새벽사원)</strong>
+												<b>신비로운 새벽사원</b>
+												<span>관광시간 : 약 30분<em class="c_red">외관관광</em></span>
+											</p>
+										</a>
+									</div>
+								</li>
+								
+								<!-- 타이틀이 위에 있는 경우 -->
+								<li class="topStit">
+									<strong>중식 (선상 부페식)</strong>
+									<div class="de_inBox02">
+										<a href="pop_sc_travel.html" class="popUpFull" data-role="none">
+											<span class="sc_imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+											<p>
+												<strong>왓 아룬 (새벽사원)</strong>
+												<b>신비로운 새벽사원</b>
+												<span>관광시간 : 약 30분<em class="c_red">외관관광</em></span>
+											</p>
+										</a>
+									</div>
+								</li>
+								<!-- // 타이틀이 위에있는 경우 -->
+								
+								<li class="onlyTxt">파타야로 이동(약 2시간 30분 소요)<br>단체 버스로 이동</li>
+							</ul>
+							
+							<strong class="cityTit">파타야</strong>
+							
+							<ul class="detailTxt">
+								<!-- 타이틀이 위에 있는 경우 -->
+								<li class="topStit">
+									<strong>석식 (스페셜 수끼)</strong>
+									<div class="de_inBox02">
+										<a href="pop_sc_travel.html" class="popUpFull" data-role="none">
+											<span class="sc_imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+											<p>
+												<strong>왓 아룬 (새벽사원)</strong>
+												<b>신비로운 새벽사원</b>
+											</p>
+										</a>
+									</div>
+								</li>
+								<!-- // 타이틀이 위에있는 경우 -->
+								
+								<!-- 묶음박스 class="bundleBox" 추가 -->
+								<li class="topStit bundleBox">
+									<strong>파타야를 대표하는 쇼 관람 (티파니쇼/알카자쇼/콜로세움 중 1)</strong>
+									
+									<div class="de_inBox02">
+										<a href="pop_sc_travel.html" class="popUpFull" data-role="none">
+											<span class="sc_imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+											<p>
+												<strong>왕국</strong>
+												<b>장엄한 태국의 역사가 녹아 있는 방콕의 최대 관광지</b>
+											</p>
+										</a>
+										<a href="pop_sc_travel.html" class="popUpFull" data-role="none">
+											<span class="sc_imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+											<p>
+												<strong>왕국</strong>
+												<b>장엄한 태국의 역사가 녹아 있는 방콕의 최대 관광지</b>
+											</p>
+										</a>
+										<a href="pop_sc_travel.html" class="popUpFull simple" data-role="none"><!-- 사진없는경우 class="simple" 추가 -->
+											<p>
+												<strong>왕국</strong>
+												<b>장엄한 태국의 역사가 녹아 있는 방콕의 최대 관광지</b>
+											</p>
+										</a>
+										<a href="pop_sc_travel.html" class="popUpFull last" data-role="none"><!-- 묶음박스 마지막 a태그에 last추가 -->
+											<span class="sc_imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+											<p>
+												<strong>왕국</strong>
+												<b>장엄한 태국의 역사가 녹아 있는 방콕의 최대 관광지</b>
+											</p>
+										</a>
+										<div class="btmTxtBox">
+											<strong class="c_red">총 소요시간</strong>
+											<ul class="listNum">
+												<li>약 3시간</li>
+											</ul>
+											<strong class="c_red">주의사항</strong>
+											<ul class="listNum">
+												<li>민소매, 반바지, 슬리퍼, 찢어진 청바지 왕궁 입장 불가</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<!-- // 묶음박스 -->
+								
+								<li class="onlyTxt">호텔 투숙 및 휴식</li>
+							</ul>
+							
+							<div class="d_dayTxt">
+								<img src="http://image1.hanatour.com/mobile/common/schedule/ico_sc_04.png" alt="호텔">
+								<img src="http://image1.hanatour.com/mobile/common/schedule/ico_hotel_fix.png" alt="예정"><!-- 확정일경우 이미지명 ico_hotel_fix.png -->
+								<strong>출발 3일전까지 알려드리겠습니다.</strong>
+							</div>
+							
+							<!-- 호텔 안내 영역 -->
+							<div class="hotel_inforBox"><!-- class open 추가시 두번째 a부터 블락처리됨 -->
+								<a href="pop_sc_hotel.html" data-role="none" class="linkBox popUpFull">
+									<strong>노보텔 방콕 수바납후미 에어포트 호텔
+										<span class="star num80"></span><!-- 별 갯수대로 class="num + xx" ex : 100 기준으로 1개당20. 별 4개면 80 :: 4.5개면 90 -->
+									</strong>
+									<p>NOVOTEL BANGKOK SUVARNABHUMI HOTEL</p>
+								</a>
+								<a href="pop_sc_hotel.html" data-role="none" class="linkBox popUpFull">
+									<strong>노보텔 방콕 수바납후미 에어포트 호텔
+										<span class="star num90"></span>
+									</strong>
+									<p>NOVOTEL BANGKOK SUVARNABHUMI HOTEL</p>
+								</a>
+								<a href="pop_sc_hotel.html" data-role="none" class="linkBox popUpFull">
+									<strong>노보텔 방콕 수바납후미 에어포트 호텔
+										<span class="star num100"></span>
+									</strong>
+									<p>NOVOTEL BANGKOK SUVARNABHUMI HOTEL</p>
+								</a>
+								
+								<a href="#none" data-role="none" class="plusBtn">예정호텔 더보기</a><!-- 클릭시 class="open"추가 :: 추가로 div box open 추가 -> 두번째 a부터 블락처리됨 -->
+							</div>
+							<!-- // 호텔 안내 영역 -->
+							
+							<div class="foodBox">
+								<span><img src="http://image1.hanatour.com/mobile/common/schedule/ico_sc_05.png" alt=""></span>
+								<ul>
+									<li><strong>[조식]</strong>기내식</li>
+									<li><strong>[중식]</strong>호텔식</li>
+									<li><strong>[석식]</strong>기내식</li>
+								</ul>
+							</div>
+						</dd>
+						
+						<dt class="open"><a href="#none" data-role="none"><strong>3일차</strong><span>2015.10.05(토)</span></a></dt>
+						<dd>
+							<strong class="cityTit">파타야</strong>
+							
+							<ul class="detailTxt">
+								<li class="onlyTxt">호텔 조식</li>
+								<li>
+									<div class="de_inBox02">
+										<a href="pop_sc_travel.html" class="popUpFull" data-role="none">
+											<span class="sc_imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+											<p>
+												<strong >아시아티크</strong>
+												<b>강변을 따라 조성된 새로운 야시장</b>
+												<span>관광시간 : 약 30분</span>
+											</p>
+										</a>
+									</div>
+									
+								</li>
+								
+								<!-- 주의사항 -->
+								<li class="btmTxtBox02">
+									<strong class="c_red">주의사항</strong>
+									<ul class="listNum">
+										<li>하나투어 전용존 및 무료 열대과일+음료1병 제공</li>
+										<li>하나투어 전용존 및 무료 열대과일+음료1병 제공 함</li>
+									</ul>
+								</li>
+								<!--// 주의사항 -->
+								
+								<li class="topStit">
+									<strong>중식 (한아랑-스페셜 쌈밥 정식)</strong>
+									<div class="de_inBox02">
+										<a href="pop_sc_travel.html" class="popUpFull" data-role="none">
+											<span class="sc_imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+											<p>
+												<strong>한아랑</strong>
+												<b>태국식 샤브샤브</b>
+											</p>
+										</a>
+									</div>
+								</li>
+								<li class="onlyTxt">쇼핑센터 방문 (라텍스샵) [쇼핑시간 약 1시간]</li>
+								
+								<li>
+									<div class="imgCell">
+										<span class="img"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+										<span class="binCell"></span><!-- 빈영역 -->
+										<span class="img"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+										<span class="binCell"></span><!-- 빈영역 -->
+										<span class="img"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+									</div>
+									<a href="pop_sc_travel.html" class="imgCellTxt popUpFull" data-role="none">
+										<strong>파라세일링 &amp; 제트스키</strong>
+										<b>에메랄드 빛 바다와 천혜의 모래 해변</b>
+										<span>소요시간 : 약 3시간</span>
+									</a>
+									
+								</li>
+								
+								<!-- 20160607 호텔특화카드 -->
+								<li class="hotelSpecial">
+									<strong>노보텔 방콕 수바납후미 에어포트 호텔</strong>
+									<p>NOVOTEL BANGKOK SUVARNABHUMI AIRPORT HOTEL</p>
+									
+									<!-- 호텔특화카드 스와이프 -->
+									<div class="swiper-container">
+										<a href="#none" class="big5_prev" data-role="none"></a>
+										<div class="swiper-wrapper">
+											<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia01.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia02.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia03.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia04.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia05.png" alt=""></div>
+										</div>
+										<div class="swiper-pagination" style="display:none"></div>
+										<div class="swiper-pag-num"><span>1</span> / 13</div>
+										<a href="#none" class="big5_next" data-role="none"></a>
+									</div>
+									<!-- //호텔특화카드 스와이프 -->
+									
+									<!-- 탭 없을경우 -->
+									<div class="hsBtmBox">
+										<strong class="stitHs">스탠다드 트윈 룸</strong>
+										<!-- 아코디언 -->
+										<div class="txtBox open"><!-- 펼칠경우 class="open" 추가 -->
+											<p>◈ 총 84객실, 오세아나A동 2~4층,오세아나B동 3~4층, 33m2<br>◈ 더블베드(140X190cm) 2개 오세아나A동, B동 저층에 위치한 객실입니다. 오세아나A동, B동 저층에 위치한 객실입니다.</p>
+											<ul>
+												<li><strong>연락처</strong><span>66-2-131-111</span></li>
+												<li><strong>주소</strong><span>New Road, Wat Phraya Krai, Bangkok 10120, Thailand</span></li>
+												<li><strong>체크인/<br>체크아웃</strong><span>체크인 : 1PM / 체크아웃 : 12N</span></li>
+												<li><strong>위치</strong><span>공항근처  Suvarnabhumi Airport 에서 걸어서 10분 가량 소요</span></li>
+											</ul>
+										</div>
+										<a href="#" data-role="none" class="hsBtn on">접기</a><!-- 펼쳐질경우 접기로 변경 + class="on" 추가 -->
+										<!-- // 아코디언 -->
+									</div>
+									
+									<div class="hsBtmBox">
+										<strong class="stitHs">스탠다드 트윈 룸</strong>
+										<!-- 아코디언 -->
+										<div class="txtBox"><!-- 펼칠경우 class="oepn" 추가 -->
+											<p>◈ 총 84객실, 오세아나A동 2~4층,오세아나B동 3~4층, 33m2<br>◈ 더블베드(140X190cm) 2개 오세아나A동, B동 저층에 위치한 객실입니다. 오세아나A동, B동 저층에 위치한 객실입니다.</p>	
+											<ul>
+												<li><strong>연락처</strong>66-2-131-111</li>
+												<li><strong>주소</strong>New Road, Wat Phraya Krai, Bangkok 10120, Thailand</li>
+												<li><strong>체크인/<br>체크아웃</strong>체크인 : 1PM / 체크아웃 : 12N</li>
+												<li><strong>위치</strong>공항근처  Suvarnabhumi Airport 에서 걸어서 10분 가량 소요</li>
+											</ul>
+										</div>
+										<a href="#" data-role="none" class="hsBtn">펼치기</a><!-- 펼쳐질경우 접기로 변경 + class="on" 추가 -->
+										<!-- // 아코디언 -->
+									</div>
+									<!-- // 탭 없을경우 -->
+									
+									<!-- 탭 있을경우 -->
+									<div class="hsTabSect">
+										<ul class="hsTab">
+											<li><a href="#" data-role="none">호텔 소개</a></li><!-- 선택시 class="on" -->
+											<li class="on"><a href="#" data-role="none">객실시설</a></li>
+											<li><a href="#" data-role="none">부대시설</a></li>
+										</ul>
+										
+										<!-- 호텔소개 -->
+										<div>
+											<div class="hsBtmBox">
+												<strong class="stitHs">스탠다드 트윈 룸</strong>
+												<!-- 아코디언 -->
+												<div class="txtBox"><!-- 펼칠경우 class="oepn" 추가 -->
+													<p>◈ 총 84객실, 오세아나A동 2~4층,오세아나B동 3~4층, 33m2<br>◈ 더블베드(140X190cm) 2개 오세아나A동, B동 저층에 위치한 객실입니다. 오세아나A동, B동 저층에 위치한 객실입니다.</p>
+													<ul>
+														<li><strong>연락처</strong><span>66-2-131-111</span></li>
+														<li><strong>주소</strong><span>New Road, Wat Phraya Krai, Bangkok 10120, Thailand</span></li>
+														<li><strong>체크인/<br>체크아웃</strong><span>체크인 : 1PM / 체크아웃 : 12N</span></li>
+														<li><strong>위치</strong><span>공항근처  Suvarnabhumi Airport 에서 걸어서 10분 가량 소요</span></li>
+													</ul>
+												</div>
+												<a href="#" data-role="none" class="hsBtn">펼치기</a><!-- 펼쳐질경우 접기로 변경 + class="on" 추가 -->
+												<!-- // 아코디언 -->
+											</div>
+											
+											<div class="hsBtmBox">
+												<strong class="stitHs">스탠다드 트윈 룸</strong>
+												<!-- 아코디언 -->
+												<div class="txtBox"><!-- 펼칠경우 class="oepn" 추가 -->
+													<p>◈ 총 84객실, 오세아나A동 2~4층,오세아나B동 3~4층, 33m2<br>◈ 더블베드(140X190cm) 2개 오세아나A동, B동 저층에 위치한 객실입니다. 오세아나A동, B동 저층에 위치한 객실입니다.</p>
+													<ul>
+														<li><strong>연락처</strong><span>66-2-131-111</span></li>
+														<li><strong>주소</strong><span>New Road, Wat Phraya Krai, Bangkok 10120, Thailand</span></li>
+														<li><strong>체크인/<br>체크아웃</strong><span>체크인 : 1PM / 체크아웃 : 12N</span></li>
+														<li><strong>위치</strong><span>공항근처  Suvarnabhumi Airport 에서 걸어서 10분 가량 소요</span></li>
+													</ul>
+												</div>
+												<a href="#" data-role="none" class="hsBtn">펼치기</a><!-- 펼쳐질경우 접기로 변경 + class="on" 추가 -->
+												<!-- // 아코디언 -->
+											</div>
+										</div>
+										<!-- // 호텔소개 -->
+										
+										<!-- 객실시설 -->
+										<div style="display:none">
+											<div class="hsBtmBox">
+												<strong class="stitHs">스탠다드 트윈 룸</strong>
+												<!-- 아코디언 -->
+												<div class="txtBox open"><!-- 펼칠경우 class="oepn" 추가 -->
+													<p>◈ 총 84객실, 오세아나A동 2~4층,오세아나B동 3~4층, 33m2<br>◈ 더블베드(140X190cm) 2개 오세아나A동, B동 저층에 위치한 객실입니다. 오세아나A동, B동 저층에 위치한 객실입니다.</p>
+													<ul>
+														<li><strong>연락처</strong><span>66-2-131-111</span></li>
+														<li><strong>주소</strong><span>New Road, Wat Phraya Krai, Bangkok 10120, Thailand</span></li>
+														<li><strong>체크인/<br>체크아웃</strong><span>체크인 : 1PM / 체크아웃 : 12N</span></li>
+														<li><strong>위치</strong><span>공항근처  Suvarnabhumi Airport 에서 걸어서 10분 가량 소요</span></li>
+													</ul>
+												</div>
+												<a href="#" data-role="none" class="hsBtn">펼치기</a><!-- 펼쳐질경우 접기로 변경 + class="on" 추가 -->
+												<!-- // 아코디언 -->
+											</div>
+										</div>
+										<!-- // 객실시설 -->
+										
+										<!-- 부대시설 -->
+										<div style="display:none">
+											<div class="hsBtmBox">
+												<strong class="stitHs">스탠다드 트윈 룸</strong>
+												<!-- 아코디언 -->
+												<div class="txtBox open"><!-- 펼칠경우 class="oepn" 추가 -->
+													<p>◈ 총 84객실, 오세아나A동 2~4층,오세아나B동 3~4층, 33m2<br>◈ 더블베드(140X190cm) 2개 오세아나A동, B동 저층에 위치한 객실입니다. 오세아나A동, B동 저층에 위치한 객실입니다.</p>
+													<ul>
+														<li><strong>연락처</strong><span>66-2-131-111</span></li>
+														<li><strong>주소</strong><span>New Road, Wat Phraya Krai, Bangkok 10120, Thailand</span></li>
+														<li><strong>체크인/<br>체크아웃</strong><span>체크인 : 1PM / 체크아웃 : 12N</span></li>
+														<li><strong>위치</strong><span>공항근처  Suvarnabhumi Airport 에서 걸어서 10분 가량 소요</span></li>
+													</ul>
+												</div>
+												<a href="#" data-role="none" class="hsBtn">펼치기</a><!-- 펼쳐질경우 접기로 변경 + class="on" 추가 -->
+												<!-- // 아코디언 -->
+											</div>
+											
+											<div class="hsBtmBox">
+												<strong class="stitHs">스탠다드 트윈 룸</strong>
+												<!-- 아코디언 -->
+												<div class="txtBox open"><!-- 펼칠경우 class="oepn" 추가 -->
+													<p>◈ 총 84객실, 오세아나A동 2~4층,오세아나B동 3~4층, 33m2<br>◈ 더블베드(140X190cm) 2개 오세아나A동, B동 저층에 위치한 객실입니다. 오세아나A동, B동 저층에 위치한 객실입니다.</p>
+													<ul>
+														<li><strong>연락처</strong><span>66-2-131-111</span></li>
+														<li><strong>주소</strong><span>New Road, Wat Phraya Krai, Bangkok 10120, Thailand</span></li>
+														<li><strong>체크인/<br>체크아웃</strong><span>체크인 : 1PM / 체크아웃 : 12N</span></li>
+														<li><strong>위치</strong><span>공항근처  Suvarnabhumi Airport 에서 걸어서 10분 가량 소요</span></li>
+													</ul>
+												</div>
+												<a href="#" data-role="none" class="hsBtn">펼치기</a><!-- 펼쳐질경우 접기로 변경 + class="on" 추가 -->
+												<!-- // 아코디언 -->
+											</div>
+										</div>
+										<!-- // 부대시설 -->
+										
+									</div>
+									<!-- // 탭 있을경우 -->
+									
+								</li>
+								<!-- // 20160607 호텔특화카드 -->
+								
+								<li class="onlyTxt">석식 (호텔 씨푸드 뷔페)</li>
+								
+								<!-- 스페셜 특전 -->
+								<li class="redLine"><!-- 빨간박스 -->
+									<div class="spciTop">
+										<em class="slabel">스페셜포함</em><!-- 라벨-->
+										<strong class="sTit_red">발맛사지 + 푸싱지에 거리 관광</strong>
+									</div>
+									
+									<!-- 20170626 라벨 추가 -->
+									<div class="bestLabel star md">
+										<span class="starBest">BEST</span>
+										<span class="mdBest">MD추천</span>
+									</div>
+									<!-- // 20170626 라벨 추가 -->
+									
+									<p class="sTxt_red">1시간은 오일,전통안마, 1시간은 한약재료 찜질,태국의 생약 한약제 찜질효과와 아로마 테라피의 만남</p>
+									
+									<ul class="listDott">
+										<li>소요시간 : 3시간</li>
+										<li>선택관광 미참여 시 호텔 휴식</li>
+									</ul>
+									
+									<div class="btmTxtBox">
+										<strong class="c_red">하나투어 특전</strong>
+										<ul class="listNum">
+											<li>50 유로 상당의 관광일정이 포함되어 있습니다! </li>
+										</ul>
+									</div>
+									
+									<a href="#" class="choiceBtn">선택관광 더보기</a><!-- 20170626 버튼 추가 -->
+								</li>
+								<!-- // 스페셜 특전 -->
+								
+								<!-- 스페셜 특전 -->
+								<li class="redLine"><!-- 빨간박스 -->
+									<div class="spciTop">
+										<em class="slabel gray">선택관광안내</em><!-- 라벨 선택관광일경우 class="gray" 추가 -->
+										<strong class="sTit_red">발맛사지 + 푸싱지에 거리 관광 발맛사지 + 푸싱지에 거리 관광</strong>
+									</div>
+									
+									<!-- 20170626 라벨 추가 -->
+									<div class="bestLabel">
+										<span class="mdBest">MD추천</span>
+									</div>
+									<!-- // 20170626 라벨 추가 -->
+									
+									<p class="sTxt_red">1시간은 오일,전통안마, 1시간은 한약재료 찜질,태국의 생약 한약제 찜질효과와 아로마 테라피의 만남</p>
+									
+									<ul class="listDott">
+										<li>이용요금 : <span class="txtNone">$50/인</span> <strong class="c_red">무료혜택</strong></li>
+										<li>소요시간 : 3시간</li>
+										<li>선택관광 미참여 시 호텔 휴식</li>
+									</ul>
+									
+									<div class="btmTxtBox">
+										<strong class="c_red">하나투어 특전</strong>
+										<ul class="listNum">
+											<li>50 유로 상당의 관광일정이 포함되어 있습니다!</li>
+										</ul>
+									</div>
+								</li>
+								<!-- // 스페셜 특전 -->
+								
+								<!-- 스페셜 특전 이미지 있는경우 -->
+								<li class="redLine"><!-- 빨간박스 -->
+									<div class="spciTop">
+										<em class="slabel">스페셜포함</em><!-- 라벨 선택관광일경우 class="gray" 추가 -->
+										<strong class="sTit_red">발맛사지 + 푸싱지에 거리 관광 발맛사지 + 푸싱지에 거리 관광</strong>
+									</div>
+									
+									<p class="sTxt_red sc_imgBox02"><!-- 이미지 있는경우 class="sc_imgBox02" 추가 -->
+										<span><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+										1시간은 오일,전통안마, 1시간은 한약재료 찜질,태국의 생약 한약제 찜질효과와 아로마 테라피의 만남
+									</p>
+									
+									<ul class="listDott">
+										<li>이용요금 : <span class="txtNone">$50/인</span> <strong class="c_red">무료혜택</strong></li>
+										<li>소요시간 : 3시간</li>
+									</ul>
+									
+									<div class="btmTxtBox">
+										<strong class="c_red">하나투어 특전</strong>
+										<ul class="listNum">
+											<li>50 유로 상당의 관광일정이 포함되어 있습니다!</li>
+										</ul>
+									</div>
+								</li>
+								<!-- // 스페셜 특전 이미지 있는경우 -->
+								
+								
+								<li class="onlyTxt">호텔 투숙 및 휴식</li>
+							</ul>
+							
+							<div class="d_dayTxt">
+								<img src="http://image1.hanatour.com/mobile/common/schedule/ico_sc_04.png" alt="호텔">
+								<img src="http://image1.hanatour.com/mobile/common/schedule/ico_hotel_fix.png" alt="예정"><!-- 확정일경우 이미지명 ico_hotel_fix.png -->
+								<strong>출발 3일전까지 알려드리겠습니다.</strong>
+							</div>
+							
+							<div class="hotel_inforBox"><!-- class open 추가시 두번째 a부터 블락처리됨 -->
+								<a href="pop_sc_hotel.html" data-role="none" class="linkBox popUpFull">
+									<strong>노보텔 방콕 수바납후미 에어포트 호텔
+										<span class="star num80"></span><!-- 별 갯수대로 class="num + xx" ex : 100 기준으로 1개당20. 별 4개면 80 :: 4.5개면 90 -->
+									</strong>
+									<p>NOVOTEL BANGKOK SUVARNABHUMI HOTEL</p>
+								</a>
+								<a href="pop_sc_hotel.html" data-role="none" class="linkBox popUpFull">
+									<strong>노보텔 방콕 수바납후미 에어포트 호텔
+										<span class="star num90"></span>
+									</strong>
+									<p>NOVOTEL BANGKOK SUVARNABHUMI HOTEL</p>
+								</a>
+								<a href="pop_sc_hotel.html" data-role="none" class="linkBox popUpFull">
+									<strong>노보텔 방콕 수바납후미 에어포트 호텔
+										<span class="star num100"></span>
+									</strong>
+									<p>NOVOTEL BANGKOK SUVARNABHUMI HOTEL</p>
+								</a>
+								
+								<a href="#none" data-role="none" class="plusBtn">예정호텔 더보기</a><!-- 클릭시 class="open"추가 :: 추가로 div box open 추가 -> 두번째 a부터 블락처리됨 -->
+							</div>
+							
+							<!-- 골프 -->
+							<div class="d_dayTxt golf">
+								<img src="http://image1.hanatour.com/mobile/common/schedule/ico_sc_07.png" alt="골프">
+								<img src="http://image1.hanatour.com/mobile/common/schedule/ico_hotel_fix.png" alt="예정"><!-- 확정일경우 이미지명 ico_hotel_fix.png -->									
+								<strong>TEE OFF <span>오전 08:00 (18홀)</span></strong>
+							</div>
+							<a href="pop_sc_golf.html" data-role="none" class="linkBox golf popUpFull">
+								<strong>노보텔 방콕 수바납후미 골프</strong>
+								<p>NOVOTEL BANGKOK SUVARNABHUMI GOLF</p>
+							</a>
+							<!-- // 골프 -->
+							
+							<div class="foodBox">
+								<span><img src="http://image1.hanatour.com/mobile/common/schedule/ico_sc_05.png" alt=""></span>
+								<ul>
+									<li><strong>[조식]</strong>기내식</li>
+									<li><strong>[중식]</strong>호텔식</li>
+									<li><strong>[석식]</strong>기내식</li>
+								</ul>
+							</div>
+						</dd>
+						
+						<dt class="open"><a href="#none" data-role="none"><strong>4일차</strong><span>2015.10.06(토)</span></a></dt>
+						<dd>
+							<strong class="cityTit">파타야</strong>
+							
+							<ul class="detailTxt">
+								<li class="onlyTxt">호텔 조식</li>
+								<li>
+									<div class="de_inBox02">
+										<a href="pop_sc_travel.html" class="popUpFull" data-role="none">
+											<span class="sc_imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+											<p>
+												<strong >아시아티크</strong>
+												<b>강변을 따라 조성된 새로운 야시장</b>
+												<span>관광시간 : 약 30분</span>
+											</p>
+										</a>
+									</div>
+									
+								</li>
+								
+								<!-- 주의사항 -->
+								<li class="btmTxtBox02">
+									<strong class="c_red">주의사항</strong>
+									<ul class="listNum">
+										<li>하나투어 전용존 및 무료 열대과일+음료1병 제공</li>
+										<li>하나투어 전용존 및 무료 열대과일+음료1병 제공 함</li>
+									</ul>
+								</li>
+								<!--// 주의사항 -->
+								
+								<li class="topStit">
+									<strong>중식 (한아랑-스페셜 쌈밥 정식)</strong>
+									<div class="de_inBox02">
+										<a href="pop_sc_travel.html" class="popUpFull" data-role="none">
+											<span class="sc_imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+											<p>
+												<strong>한아랑</strong>
+												<b>태국식 샤브샤브</b>
+											</p>
+										</a>
+									</div>
+								</li>
+								<li class="onlyTxt">쇼핑센터 방문 (라텍스샵) [쇼핑시간 약 1시간]</li>
+								
+								<li>
+									<div class="imgCell">
+										<span class="img"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+										<span class="binCell"></span><!-- 빈영역 -->
+										<span class="img"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+										<span class="binCell"></span><!-- 빈영역 -->
+										<span class="img"><img src="http://image1.hanatour.com/mobile/common/schedule/img_sc_dummy.jpg" alt=""></span>
+									</div>
+									<a href="pop_sc_travel.html" class="popUpFull imgCellTxt" data-role="none">
+										<strong>파라세일링 &amp; 제트스키</strong>
+										<b>에메랄드 빛 바다와 천혜의 모래 해변</b>
+										<span>소요시간 : 약 3시간</span>
+									</a>
+									
+								</li>
+								
+								<li class="onlyTxt">석식 (호텔 씨푸드 뷔페)</li>
+								
+								<!-- 스페셜 특전 -->
+								<li class="redLine"><!-- 빨간박스 -->
+									<em class="slabel">스페셜포함</em><!-- 라벨-->
+									<strong class="sTit_red">발맛사지 + 푸싱지에 거리 관광</strong>
+									
+									<p class="sTxt_red">1시간은 오일,전통안마, 1시간은 한약재료 찜질,태국의 생약 한약제 찜질효과와 아로마 테라피의 만남</p>
+									
+									<ul class="listDott">
+										<li>이용요금 : <span class="txtNone">$50/인</span> <strong class="c_red">무료혜택</strong></li>
+										<li>선택관광 미참여 시 호텔 휴식</li>
+										<li>소요시간 : 3시간</li>
+									</ul>
+									
+									<div class="btmTxtBox">
+										<strong class="c_red">하나투어 특전</strong>
+										<ul class="listNum">
+											<li>50 유로 상담의 관광을 무료로 제공해드립니다.</li>
+										</ul>
+									</div>
+								</li>
+								<!-- // 스페셜 특전 -->
+								
+								<li class="onlyTxt">호텔 투숙 및 휴식</li>
+							</ul>
+							
+							<div class="d_dayTxt">
+								<img src="http://image1.hanatour.com/mobile/common/schedule/ico_sc_04.png" alt="호텔">
+								<img src="http://image1.hanatour.com/mobile/common/schedule/ico_hotel_fix.png" alt="예정"><!-- 확정일경우 이미지명 ico_hotel_fix.png -->
+								<strong>출발 3일전까지 알려드리겠습니다.</strong>
+							</div>
+							
+							<div class="hotel_inforBox"><!-- class open 추가시 두번째 a부터 블락처리됨 -->
+								<a href="pop_sc_hotel.html" data-role="none" class="linkBox popUpFull">
+									<strong>노보텔 방콕 수바납후미 에어포트 호텔
+										<span class="star num80"></span><!-- 별 갯수대로 class="num + xx" ex : 100 기준으로 1개당20. 별 4개면 80 :: 4.5개면 90 -->
+									</strong>
+									<p>NOVOTEL BANGKOK SUVARNABHUMI HOTEL</p>
+								</a>
+								<a href="pop_sc_hotel.html" data-role="none" class="linkBox popUpFull">
+									<strong>노보텔 방콕 수바납후미 에어포트 호텔
+										<span class="star num90"></span>
+									</strong>
+									<p>NOVOTEL BANGKOK SUVARNABHUMI HOTEL</p>
+								</a>
+								<a href="pop_sc_hotel.html" data-role="none" class="linkBox popUpFull">
+									<strong>노보텔 방콕 수바납후미 에어포트 호텔
+										<span class="star num100"></span>
+									</strong>
+									<p>NOVOTEL BANGKOK SUVARNABHUMI HOTEL</p>
+								</a>
+								
+								<a href="#none" data-role="none" class="plusBtn">예정호텔 더보기</a><!-- 클릭시 class="open"추가 :: 추가로 div box open 추가 -> 두번째 a부터 블락처리됨 -->
+							</div>
+							
+							<div class="d_dayTxt golf">
+								<img src="http://image1.hanatour.com/mobile/common/schedule/ico_sc_07.png" alt="골프">
+								<img src="http://image1.hanatour.com/mobile/common/schedule/ico_hotel_fix.png" alt="예정"><!-- 확정일경우 이미지명 ico_hotel_fix.png -->									
+							</div>
+							<a href="pop_sc_golf.html" data-role="none" class="linkBox golf popUpFull">
+								<strong>노보텔 방콕 수바납후미 골프</strong>
+								<p>NOVOTEL BANGKOK SUVARNABHUMI GOLF</p>
+							</a>
+							<!-- // 골프 -->
+							
+							<div class="foodBox">
+								<span><img src="http://image1.hanatour.com/mobile/common/schedule/ico_sc_05.png" alt=""></span>
+								<ul>
+									<li><strong>[조식]</strong>기내식</li>
+									<li><strong>[중식]</strong>호텔식</li>
+									<li><strong>[석식]</strong>기내식</li>
+								</ul>
+							</div>
+						</dd>
+						
+						<dt class="open endDay"><a href="#none" data-role="none"><strong>5일차</strong><span>2015.10.07(토)</span></a></dt><!-- 마지막날일경우 class="endDay" 추가 -->
+						<dd>
+							<strong class="cityTit">파타야</strong>
+							<ul class="detailList">
+								<li>
+									<span><strong>11:30</strong>03/23(월)</span>
+									<strong>오사카(간사이) 출발</strong>
+									<p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p>
+								</li>
+								<li>
+									<span><strong>14:50</strong>03/23(월)</span>
+									<strong>도쿄(나리타) 도착</strong>
+								</li>
+							</ul>
+							
+							<strong class="cityTit">인천</strong>
+							
+							<div class="foodBox">
+								<span><img src="http://image1.hanatour.com/mobile/common/schedule/ico_sc_05.png" alt=""></span>
+								<ul>
+									<li><strong>[조식]</strong>기내식</li>
+									<li><strong>[중식]</strong>호텔식</li>
+									<li><strong>[석식]</strong>기내식</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					
+					<!-- 하단정보 -->
+					<div class="scTabBtmCont">
+						<!-- 쇼핑정보 -->
+						<div class="shoppBox">
+							<a href="pop_sc_shop.html" class="popUpFull" data-role="none">
+								<strong>쇼핑정보</strong>
+								전 일정 중 총 <span class="c_red">4회</span>의 쇼핑센터를 방문합니다.
+							</a>
+							<p>해외 여행시 US$600 초과 구입한 물품은 입국시 관세가 부과될 수 있으니, 물품 구매시 신중한 선택 바랍니다. </p>
+						</div>
+						<!-- // 쇼핑정보 -->
+						
+						<!-- 쇼핑정보 없는경우 추가 20160615-->
+						<div class="shoppBox">
+							<div>
+								<strong>쇼핑정보</strong>(해당상품은 쇼핑센터에 방문하지않습니다.)
+							</div>
+							<p>해외 여행시 US$600 초과 구입한 물품은 입국시 관세가 부과될 수 있으니, 물품 구매시 신중한 선택 바랍니다. </p>
+						</div>
+						<!-- // 쇼핑정보 없는경우 추가 20160615 -->
+						
+						<!-- 여행 상품평 -->
+						<div class="reviewBox">
+							<a href="pop_sc_review.html" class="popUpFull" data-role="none">
+								<strong>여행상품평</strong>
+								<div>
+									<span><img src="http://image1.hanatour.com/mobile/common/schedule/img_score_50.png" alt=""></span>
+									<!-- img_score_0.png ~ img_score_100.png :: 뒤에숫자 100 기준으로 별 반개당 10씩 올라감 -->
+									<strong>9.5</strong>
+									<em>/ 10</em>
+								</div>
+								<p>(118명 참여)</p>
+							</a>
+						</div>
+						<!-- // 여행 상품평 -->
+						
+						<!-- 관련영상 -->
+						<div class="sc_btmAco">
+							<a href="#none" class="open" data-role="none">관련영상</a><!-- open 추가시 div 펼쳐짐 -->
+							<div>
+								<!-- 스와이프 -->
+								<div class="swiper-container swiperMov">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<a href="https://player.vimeo.com/video/169181706" data-role="none">
+												<span><img src="http://img.youtube.com/vi/O1URbBgawRI/mqdefault.jpg"></span>
+											</a>
+										</div>
+										<div class="swiper-slide one"> <!-- 한개만 나올경우 빈 영역 추가 class one -->
+											<a href="https://youtu.be/WkdtmT8A2iY" data-role="none">
+												<span><img src="http://image1.hanatour.com/mobile/common/schedule/img_movie_none.jpg"></span>
+											</a>
+										</div>
+										
+									</div>
+								</div>
+								<!-- 스와이프 -->
+							</div>
+						</div>
+						<!-- // 관련영상 -->
+						
+						<!-- 여행도시 정보 -->
+						<div class="sc_btmAco" style="display:none">
+							<a href="#none" class="open" data-role="none">여행도시 정보</a><!-- open 추가시 div 펼쳐짐 -->
+							<div>
+								<select data-role="none" class="btnselRed" style="border-radius:0" title="도시선택">
+									<option value="">방콕</option>
+								</select>
+								
+								<div class="city_inforCell">
+									<!-- 시간 -->
+									<div>
+										<strong><span class="c_red">현지</span>시간</strong>
+										<b>16:14</b>
+										<em>2016.03.04</em>
+										<p class="timeTxt">한국보다 5시간 느림</p>
+									</div>
+									<!-- // 시간 -->
+									
+									<span></span><!-- 빈셀 -->
+									
+									<!-- 날씨-->
+									<div>
+										<strong><span class="c_red">10월</span>날씨</strong>
+										<b>28.2℃</b>
+										<em>평균기온</em>
+										<ul class="weatherTxt">
+											<li>
+												<span>최고기온</span>
+												<strong>32.7℃</strong>
+											</li>
+											<li>
+												<span>최저기온</span>
+												<strong>12.7℃</strong>
+											</li>
+											<li>
+												<span>평균강수량</span>
+												<strong>155mm</strong>
+											</li>
+										</ul>
+									</div>
+									<!-- // 날씨-->
+								</div>
+								
+								<div class="exchange">
+									<strong>오늘의 환율<span>2016.03.04기준</span></strong>
+									<div>
+										<span>1달러(USD) = <strong>1187.2원</strong></span>
+										<span>1바트(THB) = <strong>33.34원</strong></span>
+									</div>
+								</div>
+								
+								<div class="socket">
+									<strong>콘센트</strong>
+									<div>
+										<img src="http://image1.hanatour.com/mobile/common/schedule/bg_plug01.png" alt="">
+										<span>전압 : <strong>230V</strong></span>
+										<span>주파수 : <strong>50Hz</strong></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- // 여행도시 정보 -->
+						
+						<!-- 입국카드 작성법 -->
+						<div class="cardWrite" style="display:none">
+							<a href="pop_sc_card.html" class="popUpFull" data-role="none">방문도시별 입국카드 작성법<span>(방콕,파타야)</span></a>
+						</div>
+						<!-- // 입국카드 작성법 -->
+					</div>
+					<!-- // 하단정보 -->
+
+					<!-- 광고배너 -->
+
+					<!-- 20171227 인천공항 혜택 추가-->
+					<!--<div class="scCouponBanner swiper-container">-->
+						<!--<div class="swiper-wrapper">-->
+							<!--<div class="swiper-slide">-->
+								<!--<a href="#none" data-role="none">-->
+									<!--<em>승인번호 91021</em>-->
+									<!--<strong>공항철도 직통 열차 할인 쿠폰</strong>-->
+									<!--<p>승차권 구입시 쿠폰제시<br>유효기간 : 2016년 12월 31일까지</p>-->
+								<!--</a>-->
+							<!--</div>-->
+							<!--<div class="swiper-slide">-->
+								<!--<a href="#none" data-role="none">-->
+									<!--<em>승인번호 91021</em>-->
+									<!--<strong>공항철도 직통 열차 할인 쿠폰</strong>-->
+									<!--<div class="money">-->
+										<!--<span>14,300원</span>-->
+										<!--<b>6,900원</b>-->
+									<!--</div>-->
+									<!--<p>승차권 구입시 쿠폰제시<br>유효기간 : 2016년 12월 31일까지</p>-->
+								<!--</a>-->
+							<!--</div>-->
+							<!--<div class="swiper-slide">-->
+								<!--<a href="#none" data-role="none">-->
+									<!--<em>승인번호 91021</em>-->
+									<!--<strong>공항철도 직통 열차 할인 쿠폰</strong>-->
+									<!--<div class="money">-->
+										<!--<span>14,300원</span>-->
+										<!--<b>6,900원 / 4,500ⓜ</b>-->
+									<!--</div>-->
+									<!--<p>승차권 구입시 쿠폰제시<br>유효기간 : 2016년 12월 31일까지</p>-->
+								<!--</a>-->
+							<!--</div>-->
+						<!--</div>-->
+					<!--</div>-->
+
+					<a href="http://www.hanatour.com/asp/micro/promotion/incheon_airport_benefit/mobile/index.asp" data-role="none" target="_blank" style="display:block;margin:0 -12px;text-align:center;background-color:#f4f4f2;">
+						<img src="http://image1.hanatour.com/dotcom/update/schedule/etc/023_m.jpg" alt="하나투어 고객을 위한 인천공항 혜택 모음, 이번 여행은 스마트하게!" style="height:74px;">
+					</a>
+					<!-- // 20171227 인천공항 혜택 추가-->
+
+					<!-- // 광고배너 -->
+				</div>
+				<!-- // 일정 -->
+				
+				<!-- 선택관광 -->
+				<div class="sche_tabCont pad-12" style="display:none">
+					
+					<!-- 탭 으로 수정 20170626 -->
+					<div class="pb_toggle sche_innerTab">
+						<ul class="tabList">
+							<li class="on"><a href="#" data-role="none">지역</a></li>
+							<li><a href="#" data-role="none">BEST</a></li>
+						</ul>
+						
+						<!-- tabcont 지역 -->
+						<div class="tabCont">
+							<div class="yellowBox">
+								<ul class="scTxtList">
+									<li class="c_red">선택관광은 상품가격에 불포함 입니다.</li>
+									<li>선택관광을 참여하지 않아도 추가적 비용 또는 일정상 불이익은 없습니다.</li>
+								</ul>
+								<a href="#none" data-role="none" class="graBtn">모두 접기</a>
+							</div>
+							
+							<!-- 선택관광 리스트 -->
+							<dl class="scheduleAco02">
+								<dt class="open">
+									<a href="#none" data-role="none">
+										<!-- 도시 리스트 -->
+										<ul>
+											<li>지역</li>
+											<li>코사무이</li>
+										</ul>
+										<!-- // 도시 리스트 -->
+										<span>로얄드래곤식사</span>
+									</a>
+								</dt>
+								<dd>
+									<!-- 20170626 라벨 추가 -->
+									<div class="bestLabel">
+										<em class="inclus">스페셜포함</em>
+									</div>
+									<!-- // 20170626 라벨 추가 -->
+									<!-- 20160708 수정 -->
+									<div class="imgLeftBox">
+										<span class="imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_select_dummy01.jpg" alt=""></span>
+										<p>세계에서 제일 큰 식당으로 알려진 로얄드래곤. 세계에서 제일 큰 식당으로 알려진 로얄드래곤. 다양한 종류의 식사와 동시에 민속쇼를 관람할 수 있고, 종업원들이 롤러스케이트를 타고 서빙을 하는것이 인상적이다. 세계에서 제일 큰 식당으로 알려진 로얄드래곤. 세계에서 제일 큰 식당으로 알려진 로얄드래곤. 다양한 종류의 식사와 동시에 민속쇼를 관람할 수 있고, 종업원들이 롤러스케이트를 타고 서빙을 하는것이 인상적이다.</p>
+									</div>
+									<!-- // 20160708 수정 -->
+									<div class="yellowBox02">
+										<ul class="scTxtList">
+											<li class="stit_posi"><strong>이용요금</strong> <span class="c_red">$50/인</span></li>
+											<li class="stit_posi"><strong>소요시간</strong> <span class="c_red">1시간30분~2시간</span></li>
+											<li>선택관광 미참여 시, 호텔 휴식</li>
+										</ul>
+									</div>
+								</dd>
+								
+								<dt class="open">
+									<a href="#none" data-role="none">
+										<!-- 도시 리스트 -->
+										<ul>
+											<li>코사무이</li>
+										</ul>
+										<!-- // 도시 리스트 -->
+										<span>로얄드래곤식사</span>
+									</a>
+								</dt>
+								<dd>
+									<div class="imgLeftBox">
+										<span class="imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_select_dummy02.jpg" alt=""></span>
+										<p>세계에서 제일 큰 식당으로 알려진 로얄드래곤. 다양한 종류의 식사와 동시에 민속쇼를 관람할 수 있고, 종업원들이 롤러스케이트를 타고 서빙을 하는것이 인상적이다.</p>
+									</div>
+									<div class="yellowBox02">
+										<ul class="scTxtList">
+											<li class="stit_posi"><strong>이용요금</strong> <span class="c_red">$50/인</span></li>
+											<li class="stit_posi"><strong>소요시간</strong> <span class="c_red">1시간30분~2시간</span></li>
+											<li>선택관광 미참여 시, 호텔 휴식</li>
+										</ul>
+									</div>
+								</dd>
+								
+								<dt class="open">
+									<a href="#none" data-role="none">
+										<!-- 도시 리스트 -->
+										<ul>
+											<li>코사무이</li>
+										</ul>
+										<!-- // 도시 리스트 -->
+										<span>로얄드래곤식사</span>
+									</a>
+								</dt>
+								<dd>
+									
+									<p>세계에서 제일 큰 식당으로 알려진 로얄드래곤. 다양한 종류의 식사와 동시에 민속쇼를 관람할 수 있고, 종업원들이 롤러스케이트를 타고 서빙을 하는것이 인상적이다.</p>
+									<div class="yellowBox02">
+										<ul class="scTxtList">
+											<li class="stit_posi"><strong>이용요금</strong> <span class="c_red">$50/인</span></li>
+											<li class="stit_posi"><strong>소요시간</strong> <span class="c_red">1시간30분~2시간</span></li>
+											<li>선택관광 미참여 시, 호텔 휴식</li>
+										</ul>
+									</div>
+								</dd>
+								
+								<dt class="open">
+									<a href="#none" data-role="none">
+										<!-- 도시 리스트 -->
+										<ul>
+											<li>방콕</li>
+										</ul>
+										<!-- // 도시 리스트 -->
+										<span>로얄드래곤식사</span>
+									</a>
+								</dt>
+								<dd>
+									<p>세계에서 제일 큰 식당으로 알려진 로얄드래곤. 다양한 종류의 식사와 동시에 민속쇼를 관람할 수 있고, 종업원들이 롤러스케이트를 타고 서빙을 하는것이 인상적이다.</p>
+									<div class="yellowBox02">
+										<ul class="scTxtList">
+											<li class="stit_posi"><strong>이용요금</strong> <span class="c_red">$50/인</span></li>
+											<li class="stit_posi"><strong>소요시간</strong> <span class="c_red">1시간30분~2시간</span></li>
+											<li>선택관광 미참여 시, 호텔 휴식</li>
+										</ul>
+									</div>
+								</dd>
+							</dl>
+							<!-- // 선택관광 리스트 -->
+						</div>
+						<!-- // tabcont 지역 -->
+						
+						<!-- tabcont BEST -->
+						<div class="tabCont" style="display:none">
+							<div class="yellowBox">
+								<ul class="scTxtList">
+									<li class="c_red">선택관광은 상품가격에 불포함 입니다.</li>
+									<li>선택관광을 참여하지 않아도 추가적 비용 또는 일정상 불이익은 없습니다.</li>
+								</ul>
+								<a href="#none" data-role="none" class="graBtn">모두 접기</a>
+							</div>
+							
+							<!-- 선택관광 리스트 -->
+							<dl class="scheduleAco02 bestType"><!-- BEST에 class="bestType" 추가 -->
+								<dt class="open">
+									<a href="#none" data-role="none">
+										<strong class="rankLabel">1</strong><!-- 베스트랭킹 추가 :: 텍스트 BEST는 css로 추가됨 -->
+										<!-- 도시 리스트 -->
+										<ul>
+											<li>베스트</li>
+											<li>코사무이</li>
+										</ul>
+										<!-- // 도시 리스트 -->
+										<span>로얄드래곤식사</span>
+									</a>
+								</dt>
+								<dd>
+									<!-- 20170626 라벨 추가 -->
+									<div class="bestLabel">
+										<em class="inclus">스페셜포함</em>
+										<span class="mdBest">MD추천</span>
+									</div>
+									<!-- // 20170626 라벨 추가 -->
+									
+									<!-- 20160708 수정 -->
+									<div class="imgLeftBox">
+										<span class="imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_select_dummy01.jpg" alt=""></span>
+										<p>세계에서 제일 큰 식당으로 알려진 로얄드래곤. 세계에서 제일 큰 식당으로 알려진 로얄드래곤. 다양한 종류의 식사와 동시에 민속쇼를 관람할 수 있고, 종업원들이 롤러스케이트를 타고 서빙을 하는것이 인상적이다. 세계에서 제일 큰 식당으로 알려진 로얄드래곤. 세계에서 제일 큰 식당으로 알려진 로얄드래곤. 다양한 종류의 식사와 동시에 민속쇼를 관람할 수 있고, 종업원들이 롤러스케이트를 타고 서빙을 하는것이 인상적이다.</p>
+									</div>
+									<!-- // 20160708 수정 -->
+									<div class="yellowBox02">
+										<ul class="scTxtList">
+											<li class="stit_posi"><strong>이용요금</strong> <span class="c_red">$50/인</span></li>
+											<li class="stit_posi"><strong>소요시간</strong> <span class="c_red">1시간30분~2시간</span></li>
+											<li>선택관광 미참여 시, 호텔 휴식</li>
+										</ul>
+									</div>
+								</dd>
+								
+								<dt class="open">
+									<a href="#none" data-role="none">
+										<strong class="rankLabel">2</strong><!-- 베스트랭킹 추가 :: 텍스트 BEST는 css로 추가됨 -->
+										<!-- 도시 리스트 -->
+										<ul>
+											<li>코사무이</li>
+										</ul>
+										<!-- // 도시 리스트 -->
+										<span>로얄드래곤식사</span>
+									</a>
+								</dt>
+								<dd>
+									<!-- 20170626 라벨 추가 -->
+									<div class="bestLabel">
+										<span class="mdBest">MD추천</span>
+									</div>
+									<!-- // 20170626 라벨 추가 -->
+									<div class="imgLeftBox">
+										<span class="imgBox"><img src="http://image1.hanatour.com/mobile/common/schedule/img_select_dummy02.jpg" alt=""></span>
+										<p>세계에서 제일 큰 식당으로 알려진 로얄드래곤. 다양한 종류의 식사와 동시에 민속쇼를 관람할 수 있고, 종업원들이 롤러스케이트를 타고 서빙을 하는것이 인상적이다.</p>
+									</div>
+									<div class="yellowBox02">
+										<ul class="scTxtList">
+											<li class="stit_posi"><strong>이용요금</strong> <span class="c_red">$50/인</span></li>
+											<li class="stit_posi"><strong>소요시간</strong> <span class="c_red">1시간30분~2시간</span></li>
+											<li>선택관광 미참여 시, 호텔 휴식</li>
+										</ul>
+									</div>
+								</dd>
+								
+								<dt class="open">
+									<a href="#none" data-role="none">
+										<strong class="rankLabel">3</strong><!-- 베스트랭킹 추가 :: 텍스트 BEST는 css로 추가됨 -->
+										<!-- 도시 리스트 -->
+										<ul>
+											<li>코사무이</li>
+										</ul>
+										<!-- // 도시 리스트 -->
+										<span>로얄드래곤식사</span>
+									</a>
+								</dt>
+								<dd>
+									
+									<p>세계에서 제일 큰 식당으로 알려진 로얄드래곤. 다양한 종류의 식사와 동시에 민속쇼를 관람할 수 있고, 종업원들이 롤러스케이트를 타고 서빙을 하는것이 인상적이다.</p>
+									<div class="yellowBox02">
+										<ul class="scTxtList">
+											<li class="stit_posi"><strong>이용요금</strong> <span class="c_red">$50/인</span></li>
+											<li class="stit_posi"><strong>소요시간</strong> <span class="c_red">1시간30분~2시간</span></li>
+											<li>선택관광 미참여 시, 호텔 휴식</li>
+										</ul>
+									</div>
+								</dd>
+								
+								<dt class="open">
+									<a href="#none" data-role="none">
+										<strong class="rankLabel">4</strong><!-- 베스트랭킹 추가 :: 텍스트 BEST는 css로 추가됨 -->
+										<!-- 도시 리스트 -->
+										<ul>
+											<li>방콕</li>
+										</ul>
+										<!-- // 도시 리스트 -->
+										<span>로얄드래곤식사</span>
+									</a>
+								</dt>
+								<dd>
+									<p>세계에서 제일 큰 식당으로 알려진 로얄드래곤. 다양한 종류의 식사와 동시에 민속쇼를 관람할 수 있고, 종업원들이 롤러스케이트를 타고 서빙을 하는것이 인상적이다.</p>
+									<div class="yellowBox02">
+										<ul class="scTxtList">
+											<li class="stit_posi"><strong>이용요금</strong> <span class="c_red">$50/인</span></li>
+											<li class="stit_posi"><strong>소요시간</strong> <span class="c_red">1시간30분~2시간</span></li>
+											<li>선택관광 미참여 시, 호텔 휴식</li>
+										</ul>
+									</div>
+								</dd>
+								
+								<dt class="open">
+									<a href="#none" data-role="none">
+										<strong class="rankLabel">5</strong><!-- 베스트랭킹 추가 :: 텍스트 BEST는 css로 추가됨 -->
+										<!-- 도시 리스트 -->
+										<ul>
+											<li>방콕</li>
+										</ul>
+										<!-- // 도시 리스트 -->
+										<span>로얄드래곤식사</span>
+									</a>
+								</dt>
+								<dd>
+									<p>세계에서 제일 큰 식당으로 알려진 로얄드래곤. 다양한 종류의 식사와 동시에 민속쇼를 관람할 수 있고, 종업원들이 롤러스케이트를 타고 서빙을 하는것이 인상적이다.</p>
+									<div class="yellowBox02">
+										<ul class="scTxtList">
+											<li class="stit_posi"><strong>이용요금</strong> <span class="c_red">$50/인</span></li>
+											<li class="stit_posi"><strong>소요시간</strong> <span class="c_red">1시간30분~2시간</span></li>
+											<li>선택관광 미참여 시, 호텔 휴식</li>
+										</ul>
+									</div>
+								</dd>
+								
+								<dt class="open">
+									<a href="#none" data-role="none">
+										<strong class="rankLabel">6</strong><!-- 베스트랭킹 추가 :: 텍스트 BEST는 css로 추가됨 -->
+										<!-- 도시 리스트 -->
+										<ul>
+											<li>방콕</li>
+										</ul>
+										<!-- // 도시 리스트 -->
+										<span>로얄드래곤식사</span>
+									</a>
+								</dt>
+								<dd>
+									<p>세계에서 제일 큰 식당으로 알려진 로얄드래곤. 다양한 종류의 식사와 동시에 민속쇼를 관람할 수 있고, 종업원들이 롤러스케이트를 타고 서빙을 하는것이 인상적이다.</p>
+									<div class="yellowBox02">
+										<ul class="scTxtList">
+											<li class="stit_posi"><strong>이용요금</strong> <span class="c_red">$50/인</span></li>
+											<li class="stit_posi"><strong>소요시간</strong> <span class="c_red">1시간30분~2시간</span></li>
+											<li>선택관광 미참여 시, 호텔 휴식</li>
+										</ul>
+									</div>
+								</dd>
+								
+								<dt class="open">
+									<a href="#none" data-role="none">
+										<strong class="rankLabel">7</strong><!-- 베스트랭킹 추가 :: 텍스트 BEST는 css로 추가됨 -->
+										<!-- 도시 리스트 -->
+										<ul>
+											<li>방콕</li>
+										</ul>
+										<!-- // 도시 리스트 -->
+										<span>로얄드래곤식사</span>
+									</a>
+								</dt>
+								<dd>
+									<p>세계에서 제일 큰 식당으로 알려진 로얄드래곤. 다양한 종류의 식사와 동시에 민속쇼를 관람할 수 있고, 종업원들이 롤러스케이트를 타고 서빙을 하는것이 인상적이다.</p>
+									<div class="yellowBox02">
+										<ul class="scTxtList">
+											<li class="stit_posi"><strong>이용요금</strong> <span class="c_red">$50/인</span></li>
+											<li class="stit_posi"><strong>소요시간</strong> <span class="c_red">1시간30분~2시간</span></li>
+											<li>선택관광 미참여 시, 호텔 휴식</li>
+										</ul>
+									</div>
+								</dd>
+								
+								<dt class="open">
+									<a href="#none" data-role="none">
+										<strong class="rankLabel">8</strong><!-- 베스트랭킹 추가 :: 텍스트 BEST는 css로 추가됨 -->
+										<!-- 도시 리스트 -->
+										<ul>
+											<li>방콕</li>
+										</ul>
+										<!-- // 도시 리스트 -->
+										<span>로얄드래곤식사</span>
+									</a>
+								</dt>
+								<dd>
+									<p>세계에서 제일 큰 식당으로 알려진 로얄드래곤. 다양한 종류의 식사와 동시에 민속쇼를 관람할 수 있고, 종업원들이 롤러스케이트를 타고 서빙을 하는것이 인상적이다.</p>
+									<div class="yellowBox02">
+										<ul class="scTxtList">
+											<li class="stit_posi"><strong>이용요금</strong> <span class="c_red">$50/인</span></li>
+											<li class="stit_posi"><strong>소요시간</strong> <span class="c_red">1시간30분~2시간</span></li>
+											<li>선택관광 미참여 시, 호텔 휴식</li>
+										</ul>
+									</div>
+								</dd>
+								
+							</dl>
+							<!-- // 선택관광 리스트 -->
+						</div>
+						<!-- // tabcont BEST -->
+					</div>
+					<!-- // 탭 으로 수정 20170626 -->
+				</div>
+				<!-- // 선택관광 -->
+				
+				<!-- 참고사항 -->
+				<div class="sche_tabCont" style="display:none">
+					<div class="yellowBox mar-12">
+						<a href="#none" data-role="none" class="graBtn">모두 접기</a>
+					</div>
+					<dl class="scheduleAco">
+					
+						<dt class="open"><a href="#none" data-role="none">약관</a></dt> 
+						<dd>
+							<dl class="txtContList">
+								<dt>상품약관<a href="pop_sc_terms01.html" class="popUpFull sm_graBtn">약관 상세보기 ＞</a></dt><!-- 20170511 버튼추가 :: 표준 pop_sc_terms01.html // 특별 pop_sc_terms02.html -->
+								<dd>
+									본 상품의 예약과 취소는 국외여행 표준약관이 적용됨을 알려드립니다.
+									
+									<ul class="listOne">
+										<li>
+											<strong>계약금규정</strong>
+											<p><span class="c_red">예약일 기준 3일 이내에 1인당 100,000원을 납입하셔야 합니다.</span><br>위 계약금은 호텔, 항공, 현지 사정 등에 의하여 변경될 수 있으며, 상황에 따라 고객님의 결제시한은 당겨질 수 있습니다.</p>
+										</li>
+										<li>
+											<strong>취소료규정</strong>
+											<p>여행 취소시 국외여행표준약관 제 15조 소비자분쟁해결 규정에 따라 아래의 비율로 취소료가 부과됩니다. 
+												<span class="smallTxt">(단, 당사의 귀책사유로 여행출발 취소 경우에도 동일한 규정이 적용됩니다.</span>
+											</p>
+											<div class="yellowTxt">
+												<ul class="listDott"><!-- 특별약관일경우 class="bold" 추가 -->
+													<li>여행개시 <span class="c_red">30일전</span>(~30)까지 통보시(2015년10월12일 이전) : 계약금환급</li>
+													<li>여행개시 <span class="c_red">20일전</span>(29~20)까지 통보시(2015년10월13일 ~2015년10월22일) : 총상품가격의 <span class="c_red">10%</span> 배상</li>
+													<li>여행개시 <span class="c_red">10일전</span>(19~10)까지 통보시(2015년10월23일 ~2015년11월01일) : 총상품가격의 <span class="c_red">15%</span> 배상</li>
+													<li>여행개시 <span class="c_red">8일전</span>(9~8)까지 통보시(2015년11월02일~2015년11월03일) : 총상품가격의 <span class="c_red">20%</span> 배상</li>
+													<li>여행개시 <span class="c_red">1일전</span>(7~1)까지 통보시(2015년11월04일~2015년11월10일) : 총상품가격의 <span class="c_red">30%</span> 배상</li>
+													<li>여행<span class="c_red">당일</span> 통보시 : 총상품가격의 <span class="c_red">50%</span> 배상</li>
+												</ul>
+											</div>
+											
+											<p class="grayTxt">※ 여행출발일 이전 상해,질병,입원,사망등으로 여행을 취소하는 경우 [진단서] 증빙 근거하여 환불이 가능하며 출발일 기준 7일이내 증빙서류를 제출해주시기 바랍니다.<br>(상세규정은 약관참조)</p>
+										</li>
+										<li>
+											<strong>항공 규정</strong>
+											<p>본 상품은 여행 개시 7일전(~7)(토요일,공휴일제외) 에 항공권이 발권됩니다. 항공사 규정상 발권 후에는 환불이 불가능하며, 발권이후 이름변경이나 취소 통보시에는 총상품가격의 70%가 취소료로 부과 되오니 이점 주의하시고 예약하여 주시기 바랍니다.</p>
+										</li>
+										<li>
+											<strong>취소위약금 증빙 제공 및 차액환급</strong>
+											<p>고객은 계약취소와 관련하여 취소수수료(여행사 인건비 포함) 부과내역에 대한 구체적인 증빙과 설명을 여행사에 요구할 수 있으며, 여행사는 관련 설명과 증빙을 제시하고 취소수수료 규정과 차액이 있는 경우 환급합니다.</p>
+										</li>
+									</ul>
+								</dd>
+								<dt>최저출발인원 미 충족 시 계약해제</dt>
+								<dd>
+									<ul class="listDott">
+										<li>당사가 여행참가자 수 미달로 인하여 여행계약을 해제하는 경우 여행개시 7일전까지 여행자에게 통지하여야 합니다.</li>
+										<li>당사가 여행참가자 수 미달로 전항의 기일내 통지를 하지 아니하고 계약을 해제하는 경우 이미 지급받은 계약금 환급외에 다음 각 항목의 1의 금액을 여행자에게 배상하여야 합니다.</li>
+									</ul>
+									<div class="yellowTxt">
+										<ul class="listNum">
+											<li>가. 여행개시 <span class="c_red">7일전</span> ( ~7)까지 통지시 :<span class="c_red"> 계약금 환급</span></li>
+											<li>나. 여행개시 <span class="c_red">1일전</span> (6~1)까지 통지시 : 여행요금의 <span class="c_red">30%</span> 배상</li>
+											<li>다. 여행개시 <span class="c_red">당일</span> 통지시 : 여행요금의 <span class="c_red">50%</span> 배상</li>
+										</ul>
+									</div>
+								</dd>
+							</dl>
+						</dd>
+					
+						<dt class="open"><a href="#none" data-role="none">일반 유의사항</a></dt> 
+						<dd>
+							<!-- > 블릿 리스트 -->
+							<dl class="txtContList">
+								<dt>여권/비자</dt>
+								<dd><strong>중국</strong> : 6개월이상 유효한 여권, 관광비자필요</dd>
+								<dt>중국 비자 관련 유의사항</dt>
+								<dd>
+									<ul class="listDott">
+										<li>중국 출입국시 단체비자 또는 개인비자가 반드시 필요합니다. 단체비자는 5인 이상시 신청 가능하며 , 다른 고객님과 함께 별도의 용지에 영문명 , 성별 , 여권번호 , 생년월일이 포함되어 인쇄 발급되어 집니다. </li>
+										<li>단체비자 신청시 여권사본을 제출하여야 하며 사본은 임의 수정 또는 훼손이 되어서는 안되며, 사진,서명 부분까지 명확히 구분 가능하여야 합니다. </li>
+										<li>출국 당일에는 비자 신청시 제출된 여권사본과 동일한 여권을 지참하여야 하며 불일치 시 출국이 불가능하며 이에 따른 비용은 고객 본인이 부담하셔야 합니다.</li>
+									</ul>
+								</dd>
+								<dt>외국/이중국적 주의사항</dt>
+								<dd>외국/이중국적자의 해외여행은 도착지국가(경유국가포함)의 출입국정책이 상이하므로, 반드시 여행자본인이 해당국의 대사관에 확인하셔야 합니다.</dd>
+								<dt>항공사 관련 서비스</dt>
+								<dd>
+									항공사 마일리지적립 가능/불가능 여부는 해당 항공의 룰에 따라 달라지므로 예약하신 상품의 항공사로 확인하여 주시기 바랍니다.
+									<p class="yellowTxt">아이를 위한 기내식 사전 신청 서비스는 출발일 기준 3일전까지 하나투어상품판매점(도우미여행사)을 통해신청하시기 바랍니다. (기내식정보 바로가기 : <a href="#none" data-role="none" class="txtLink">대한항공</a>, <a href="#none" data-role="none" class="txtLink">아시아나항공</a>)</p>
+								</dd> 
+								<dt>공항이용</dt>
+								<dd>
+									<ul class="listDott">
+										<li>항공기 이용시 용기당 100ml 초과 액체류 (화장품, 치약류, 젤 등) 물품 기내 반입 제한됩니다. (단, 탁송수하물은 제한없음)</li>
+										<li>수하물 탁송 시 각 항공사 규정에 따라 보상불가한 경우가 있으므로, 귀중품은 반드시 휴대하셔야 합니다.</li>
+										<li>항공기 좌석 배정은 항공사의 고유권한으로 공항에서 선착순 배정됨에 따라 일행과 좌석이 분리될 수도 있으며, 대리수속은 불가합니다.</li>										
+									</ul>
+								</dd>
+								<dt>동/축산물 검역안내</dt>
+								<dd>
+									<ul class="listDott">
+										<li>대부분의 축산물(소세지, 육포 등) 및 생과실·열매채소 등은 휴대반입할 수 없으며, 휴대반입이 가능한 축산물과식물류도 신고 및 검역을 받아야하며, 불법 반입시 500만원 이하의 과태료가 부과됩니다.</li>
+										<li>해외 축산농장, 가축시장을 방문한 여행객과 가축전염병 발생 국가를 방문한 축산관계자는 농림축산검역본부에 신고하여 소독을 받아야 합니다.</li>
+									</ul>
+									<p class="yellowTxt">문의 : 농림축산검역본부 인천공항지역본부<br>(동축산물 032-740-2660, 식물 032-740-2077)</p>
+								</dd>
+								<dt>안전사고</dt>
+								<dd>여행일정 중 발생할 수 있는 모든 안전사고에 유의하시기 바라며, 가이드의 안내사항 및 안전수칙 준수하기 바라며, 여행자 본인의 과실로 인한 안전사고는 본인이 책임을 지게 됩니다.</dd>
+							</dl>
+							<!-- // > 블릿 리스트 -->
+						</dd>
+						<!-- 20170418 필리핀 배너 추가 -->
+						<dd class="banner_philippines">
+							<a href="http://minfo.hanatour.com/infographic/content/1000049966101" target="_blank" title="새창" data-role="none"><img src="http://image1.hanatour.com/dotcom/update/schedule/immigration/philippines_m.jpg" alt="필리핀 소아 입국 규정 - 부모를 동반하지 않는 만 15세 미만 소아의 필리핀 입국시 사전에 입국서류를 준비해야 합니다."></a>
+						</dd>
+						<!-- // 20170418 필리핀 배너 추가 -->
+					
+						<dt class="open"><a href="#none" data-role="none">예약시 유의사항</a></dt> <!-- open 추가시 dd block css 처리 -->
+						<dd>
+							<ol class="listNum">
+								<li>1. 여권 만료기간 6개월 이상과 여권 종류를 다시 한번 확인 부탁드립니다.<br>단수여권(PS)의 경우 해외여행 경험이 있으신 분은 새로 발급 받으셔야 합니다.</li>
+								<li>2. 유럽은 3인 1실 사용시 방이 상당히 협소합니다. 따라서 홀수 예약시 한분은 독실사용을 권장합니다.</li>
+								<li>3. 3인 가족으로 부득이 한방을 사용하여야 하는 분들은 호텔에 따라 extra bed가 간이 침대 또는 쇼파베드로 제공이 되기에 성인이 주무시기에 불편하실 수 있습니다.</li>
+							</ol>
+						</dd>
+						
+						
+						<dt class="open"><a href="#none" data-role="none">여행시 유의사항</a></dt>
+						<dd>
+							<ol class="listNum">
+								<li>1. 여행일정 및 자유시간 중 고객님의 안전을 위하여 가이드의 안내사항 및 안전 수칙을 준수하여 모든 안전사고에 유의하시기 바랍니다. 특히 현지 선택 관광은 가이드의 주의사항을 숙지후 참여여부를 결정하여 주시기 바라며 이용자 본인의 과실및 본인 건강상태로 인하여 발생한 안전사고에 대해서는 이용자 본인의 책임임을 알려드립니다.</li>
+								<li>2. 고객님의 안전을 위해서 해양스포츠 중 발생할 수 있는 해양동.식물의 상해를 막기위해 아쿠아슈즈(수상용 신발)가 필요하며 해양스포츠와 리조트 수영장 관련된 안전사고는 이용자의 책임이며 안전수칙 및 주의를 당부드립니다.</li>
+							</ol>
+							<p class="txt_ico01">상기일정은 현지사정(교통,기상변화 등)에 따라 달라질수 있으며, 부득이한 경우 다음 일정을 위하여 축소 변경될 수 있습니다.</p>
+							<!-- 이미지 확대용 영역 -->
+							<div class="zoomBox">
+								<img src="http://image1.hanatour.com/mobile/common/schedule/img_swim.png" alt="물놀이 안전수칙">
+								<a href="#none" data-role="none" title="확대하기"></a>
+							</div>
+							<!-- // 이미지 확대용 영역 -->
+						</dd>
+						
+						
+						<dt class="open"><a href="#none" data-role="none">결제/혜택/보험</a></dt> 
+						<dd>
+							<dl class="txtContList">
+								<dt>결제 안내</dt>
+								<dd>
+									<ul class="listOne">
+										<li>
+											<strong>결제 방법</strong>
+											<p>하나투어 법인계좌(가상계좌 포함)로의 송금, 신용카드의 경우 하나투어본사의 ARS(1577-0015) 또는 하나투어 홈페이지에서 온라인결제</p>
+										</li>
+									</ul>
+								</dd>
+								<dt>추가 혜택</dt>
+								<dd>
+									<ul class="listOne">
+										<li>
+											<strong>추천 결제 혜택</strong>
+											<div class="cardBenefit">
+												<ul>
+													<li><em>카드사</em>롯데/삼성/우리</li>
+													<li><em>적용기간</em>9/1 ~ 10/31</li>
+													<li><em>혜택</em>2~5개월 무이자</li>
+												</ul>
+												<ul>
+													<li><em>카드사</em>롯데/삼성/우리</li>
+													<li><em>적용기간</em>9/1 ~ 10/31</li>
+													<li><em>혜택</em>2~5개월 무이자<p>(단,4~5개월은 080-700-0775 신청/결제)</p></li>
+												</ul>
+											</div>
+										</li>
+										<li>
+											<strong>하나투어 마일리지</strong>
+											<ul class="listOneSmall">
+												<li>
+													<strong>가입확인</strong>
+													<p>하나투어 홈페이지, 하나투어앱, 모바일카드, 상담여행사</p>
+												</li>
+												<li>
+													<strong>마일리지 사용적립</strong>
+													<ul class="listDott">
+														<li>국내/해외 모든 항공/여행/숙박/입장권/레저 (성수기 제약 없음, 자유로운 부분 결제 가능)</li>
+														<li>웨딩,교육,쇼핑(300여 공급자의 1만여 상품), 주유 / F&amp;B / 영화 / 공연 등 업종별 메이저 기업 서비스</li>
+														<li>회원 전용 다양한 마일리지 우대 서비스</li>
+													</ul>
+												</li>
+												<li>
+													<strong>모바일 카드</strong>
+													<p>스마트월렛 모바일앱 (시럽,모카,마이원 등)에서 하나투어 멤버십 발급적립내역확인,면세점/환전/공항버스/공항철도/ 외투보관 할인 등 다양한 혜택!</p>
+												</li>
+												<li>
+													<strong>하나투어 카드</strong>
+													<div class="cardBenefit02">
+														<div>
+															<span>
+																<img src="http://image1.hanatour.com/mobile/common/schedule/img_hanacard_01.png" alt=""><br>
+																하나투어<br>KB카드
+															</span>
+															<ul class="listDott">
+																<li>하나투어 천원당 30ⓜ+3개월무이자+70만원 세이브</li>
+																<li>어디서나 천원당 10~100ⓜ 파격적립</li>
+																<li>면세점/해외 천원당 20ⓜ</li>
+																<li>전국 영화 7천원 할인 등</li>
+															</ul>
+														</div>
+														<div>
+															<span>
+																<img src="http://image1.hanatour.com/mobile/common/schedule/img_hanacard_02.png" alt=""><br>
+																하나투어<br>신한카드
+															</span>
+															<ul class="listDott">
+																<li>하나투어 10%할인(최대 3만원)+천원당 20ⓜ</li>
+																<li>어디서나 천원당 10ⓜ 파격적립</li>
+																<li>GS칼텍스 리터당 80원 주유포인트 적립</li>
+																<li>전국 영화 3천원, 놀이공원 50% 할인</li>
+															</ul>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</dd>
+								<dt>보험</dt>
+								<dd>
+									<ul class="listOne">
+										<li>
+											<strong>여행자 보험</strong>
+											
+											<div class="insurTable">
+												<!-- 1억원 -->
+												<table>
+													<caption>1억원 여행자 보험 안내표</caption>
+													<colgroup>
+														<col style="width:10%">
+														<col style="width:14%">
+														<col style="width:22%" span="3">
+													</colgroup>
+													
+													<thead>
+														<tr>
+															<th scope="col" colspan="2" class="titDivision">
+																<span>나이</span>
+																<span>보장명</span>
+															</th>
+															<th scope="col">0세~14세</th>
+															<th scope="col">15세~76세<br> 6개월 미만</th>
+															<th scope="col">76세 6개월이상~<br>99세 6개월미만</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<th scope="row" rowspan="4">상해</th>
+															<td class="stit">사망</td>
+															<td>없음</td>
+															<td colspan="2">1억원</td>
+														</tr>
+														<tr>
+															<td class="stit">후유장애</td>
+															<td colspan="3">최고 1억원</td>
+														</tr>
+														<tr>
+															<td class="stit">의료비</td>
+															<td colspan="3">해외 300만원 / 국내입원 500만원</td>
+														</tr>
+														<tr>
+															<td class="stit">국내외래/<br>처방조제</td>
+															<td colspan="3">국내 외래 25만원, 국내 처방조제 5만원<br>(회당 / 90회 한정)</td>
+														</tr>
+														<tr>
+															<th scope="row" rowspan="3">질병</th>
+															<td class="stit">사망</td>
+															<td>없음</td>
+															<td>1,000만원</td>
+															<td>없음</td>
+														</tr>
+														<tr>
+															<td class="stit">의료비</td>
+															<td colspan="3">해외 100만원 / 국내 100만원</td>
+														</tr>
+														<tr>
+															<td class="stit">국내외래/<br>처방조제</td>
+															<td colspan="3">국내 외래 25만원, 국내 처방조제 5만원<br>(회당 / 90회 한정)</td>
+														</tr>
+														<tr>
+															<th scope="row" colspan="2">배상책임<br>(면책 1만원)</th>
+															<td colspan="3">100만원</td>
+														</tr>
+														<tr>
+															<th scope="row" colspan="2">휴대품손해<br>(면책 1만원)</th>
+															<td colspan="3">50만원(1품목, 1조, 1쌍 20만원)</td>
+														</tr>
+														<tr>
+															<th scope="row" colspan="2">특별비용</th>
+															<td colspan="3">100만원</td>
+														</tr>
+													</tbody>
+												</table>
+												<!-- // 1억원 -->
+												
+												<!-- 2억원 -->
+												<table>
+													<caption>2억원 여행자 보험 안내표</caption>
+													<colgroup>
+														<col style="width:10%">
+														<col style="width:14%">
+														<col style="width:22%" span="3">
+													</colgroup>
+													
+													<thead>
+														<tr>
+															<th scope="col" colspan="2" class="titDivision">
+																<span>나이</span>
+																<span>보장명</span>
+															</th>
+															<th scope="col">0세~14세</th>
+															<th scope="col">15세~76세<br> 6개월 미만</th>
+															<th scope="col">76세 6개월이상~<br>99세 6개월미만</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<th scope="row" rowspan="4">상해</th>
+															<td class="stit">사망</td>
+															<td>없음</td>
+															<td colspan="2">2억원</td>
+														</tr>
+														<tr>
+															<td class="stit">후유장애</td>
+															<td colspan="3">최고 2억원</td>
+														</tr>
+														<tr>
+															<td class="stit">의료비</td>
+															<td colspan="3">해외 300만원 / 국내입원 500만원</td>
+														</tr>
+														<tr>
+															<td class="stit">국내외래/<br>처방조제</td>
+															<td colspan="3">국내 외래 25만원, 국내 처방조제 5만원<br>(회당 / 90회 한정)</td>
+														</tr>
+														<tr>
+															<th scope="row" rowspan="3">질병</th>
+															<td class="stit">사망</td>
+															<td>없음</td>
+															<td>1,000만원</td>
+															<td>없음</td>
+														</tr>
+														<tr>
+															<td class="stit">의료비</td>
+															<td colspan="3">해외 100만원 / 국내 100만원</td>
+														</tr>
+														<tr>
+															<td class="stit">국내외래/<br>처방조제</td>
+															<td colspan="3">국내 외래 25만원, 국내 처방조제 5만원<br>(회당 / 90회 한정)</td>
+														</tr>
+														<tr>
+															<th scope="row" colspan="2">배상책임<br>(면책 1만원)</th>
+															<td colspan="3">100만원</td>
+														</tr>
+														<tr>
+															<th scope="row" colspan="2">휴대품손해<br>(면책 1만원)</th>
+															<td colspan="3">50만원(1품목, 1조, 1쌍 20만원)</td>
+														</tr>
+														<tr>
+															<th scope="row" colspan="2">특별비용</th>
+															<td colspan="3">100만원</td>
+														</tr>
+													</tbody>
+												</table>
+												<!-- // 2억원 -->
+												
+												<!-- 3억원 -->
+												<table>
+													<caption>3억원 여행자 보험 안내표</caption>
+													<colgroup>
+														<col style="width:10%">
+														<col style="width:18%" span="5">
+													</colgroup>
+													
+													<thead>
+														<tr>
+															<th scope="col" colspan="2" class="titDivision"  style="height:30px">
+																<span>나이</span>
+																<span>보장명</span>
+															</th>
+															<th scope="col">0세~14세</th>
+															<th scope="col">76세~79세</th>
+															<th scope="col">80세~90세</th>
+															<th scope="col">15세~75세</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<th scope="row" rowspan="4">상해</th>
+															<td class="stit">사망</td>
+															<td>없음</td>
+															<td colspan="2">1억원</td>
+															<td rowspan="2">3억원</td>
+														</tr>
+														<tr>
+															<td class="stit">후유장애</td>
+															<td colspan="3">1억원</td>
+														</tr>
+														<tr>
+															<td class="stit">의료비</td>
+															<td colspan="4">해외 300만원 / 국내입원 500만원</td>
+														</tr>
+														<tr>
+															<td class="stit">통원/<br>조제비</td>
+															<td colspan="4">통원 25만원(회당/45회 한정)/<br>조제 5만원(건당/45회 한정)</td>
+														</tr>
+														<tr>
+															<th scope="row" rowspan="3">질병</th>
+															<td class="stit">사망</td>
+															<td colspan="3">없음</td>
+															<td>1,000만원</td>
+														</tr>
+														<tr>
+															<td class="stit">의료비</td>
+															<td colspan="4">해외 100만원 / 국내 100만원</td>
+														</tr>
+														<tr>
+															<td class="stit">통원/조제비</td>
+															<td colspan="4">통원 25만원(회당/45회 한정)/<br>조제 5만원(건당/45회 한정)</td>
+														</tr>
+														<tr>
+															<th scope="row" colspan="2">배상책임<br>(면책 1만원)</th>
+															<td colspan="4">100만원</td>
+														</tr>
+														<tr>
+															<th scope="row" colspan="2">휴대품손해<br>(면책 1만원)</th>
+															<td colspan="4">50만원(1품목, 1조, 1쌍 20만원)</td>
+														</tr>
+														<tr>
+															<th scope="row" colspan="2">특별비용</th>
+															<td colspan="4">100만원</td>
+														</tr>
+													</tbody>
+												</table>
+												<!-- // 3억원 -->
+											</div>
+											
+											<ul class="listDott">
+												<li><strong>보험기간: 예약기간 / 보장기간: 여행종료일~180일 (상해,질병 한정) / 보험청구 기간: 사고일 ~2년</strong></li>
+												<li>보험 기간을 연장 및 보험 보장 범위 확대를 원하시는 경우, 출발 전 에약하신 곳으로 반드시 추가 요청해주시길 바랍니다.</li>
+												<li>15세 미만자, 심신상실자, 심신박약자의 사망을 보험사로 하는 보험 계약은 무효이며, 15세 미만과 79세 이상, 임산부는 보상불가한 부분이 있으므로 개별 보험 가입을 권장합니다.</li>
+												<li>여행자보험은 실손실 보상 보험으로 보상한도 안에서 심사 지급 되며 타보험사와 중복 가입시 비례보상됩니다.</li>
+												<li>국내치료비 접수시 본인부담금 공제 후 지급됩니다. (입원시 10%, 통원치료시 8천원~2만원/1회당, 해외치료비 예외)</li>
+												<li>교통사고 등 국민건강보험공단의 적용을 받지 못하는 경우 치료비의 40% 이내에서 보상됩니다.</li>
+												<li>상해 사고로 인한 장애 판정은 사고일로부터 6개월 이후 대학병원급의 의료기관에서 후유장애를 진단 받으시길 바랍니다.</li>
+												<li>진료와 무관한 제비용(제증명료,의료보조기구 구입비)이나 국내 통원 치료시 치과치료(보철/임플란트 등), 한방치료, 미용치료에서 발생한 비급여 의료비는 보상되지 않습니다.</li>
+												<li>본인 부주의에 의한 휴대품 분실/파손,현금/유가증권 등의 도난 사고 및 기존병력으로 인해 여행 기간 중 발생되는 사고에 대해서는 보상되지 않습니다.</li>
+											</ul>
+										</li>
+										<li>
+											<strong>여행자 보험</strong>
+											<p>하나투어는 영업보증보험 22억 1천만원에 가입되어 있습니다. (<a href="http://www.hanatour.com/xsl/booking/productPackage/notice/surety_insurance.html" target="_blank" title="새창" class="txtLink" data-role="none">영업보증보험 바로가기</a>)</p>
+										</li>
+									</ul>
+								</dd>
+							</dl>
+						</dd>
+						<dt class="open"><a href="#none" data-role="none">비상연락망</a></dt> 
+						<dd>
+							<dl class="txtContList">
+								<dt>첫 만남시 긴급 상황 발생한 경우</dt>
+								<dd>
+									<ul class="listDott">
+										<li>평일 – 하나투어 공항지점 ☎ 032-743-7500</li>
+										<li>토,일,공휴일 – 하나투어 본사 당직자 ☎ 1577-1233</li>
+										<li>상품관련 문의는 예약하신 하나투어상품판매점(도우미 여행사)로 주시기 바랍니다.</li>
+									</ul>
+								</dd>
+								<dt>현지 긴급연락처</dt>
+								<dd>
+									<ul class="listDott">
+										<li>중국(장가계) ☎ 86-744-839-0077</li>
+										<li>중국(황산) ☎ 86-21-5422-3470</li>
+									</ul>
+								</dd>
+								<dt>여행불편 상담</dt>
+								<dd>
+									<ul class="listDott">
+										<li>하나투어 콜센터 ☎1577-1233(9번)</li>
+										<li>한국여행업협회 여행불편처리센터 ☎1588-8692</li>
+										<li>1372소비자상담센터 ☎(국번없이)1372</li>
+									</ul>
+								</dd>
+							</dl>
+							
+						</dd>
+						<dt class="open"><a href="#none" data-role="none">해외여행 안전정보</a></dt> 
+						<dd>
+							<dl class="txtContList">
+								<dt>여행 금지국 현황</dt>
+								<dd>
+									<p>외교부는 우리 국민을 보호하기 위해 여권법 등 관련 규정에 따라 우리 국민들의 방문 및 체류가 금지되는 국가를 지정하고 있습니다.</p>
+									<ul class="listDott">
+										<li>이라크(2007년 8월 7일 ~ 2016년 1월31일까지)</li>
+										<li>소말리아·아프가니스탄(2007년 8월 7일 ~ 2016년 2월 6일까지)</li>
+										<li>예멘(2011년 6월 28일 ~ 2016년 1월 31일까지)</li>
+										<li>시리아(2011년 8월 20일 ~ 2016년 1월 31일까지)</li>
+										<li>리비아(2014년 8월 4일 ~ 2016년 2월 2일까지) </li>
+									</ul>
+									
+									<ul class="listOne">
+										<li>
+											<strong>여권법 제 26조</strong>
+											<p>방문 및 체류가 금지된 국가나 지역으로 고시된 사정을 알면서도 같은 조 제1항 단서에 따른 허가(제14조제3항에 따라 준용되는 경우를 포함한다)를 받지 아니하고 해당 국가나 지역에서 여권 등을 사용하거나 해당 국가나 지역을 방문하거나 체류한 사람은 1년 이하의 징역 또는 1000만원 이하의 벌금에 처한다. </p>
+										</li>
+									</ul>
+								</dd>
+								<dt>여행경보단계</dt>
+								<dd>
+									<p>외교부에서 운영하는 여행경보단계는 여행유의 / 여행자제 / 철수권고 / 여행금지 4단계로 구분되며 외교부 '해외안전 여행' 사이트 (<a href="http://www.0404.go.kr" data-role="none" title="새창" target="_blank">www.0404.go.kr</a>)에서 상세정보를 확인할 수 있습니다. </p>
+									<table class="warningTable">
+										<caption>위험국가 안내표</caption>
+										<colgroup>
+											<col style="width:90px">
+											<col style="width:*">
+										</colgroup>
+										
+										<thead>
+											<tr>
+												<th scope="col" colspan="2">중국</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row" class="blue"><strong>남색경보</strong>여행주의</th>
+												<td>중국ㆍ북한 국경지역 : 단둥시, 관전만족자치현, 집안시, 백산시, 임강시, 장백조선족자치현, 안도현, 화룡시, 용정시, 도문시, 훈춘시</td>
+											</tr>
+											<tr>
+												<th scope="row" class="yellow"><strong>황색경보</strong>여행자제</th>
+												<td>티벳, 신장위구르자치구</td>
+											</tr>
+											<tr>
+												<th scope="row" class="red"><strong>적색경보</strong>여행주의</th>
+												<td>-</td>
+											</tr>
+											<!-- 20160601 삭제 
+											<tr>
+												<th scope="row" class="black"><strong>흑색경보</strong>여행주의</th>
+												<td>-</td>
+											</tr>
+											-->
+										</tbody>
+									</table>
+									
+									<table class="warningTable">
+										<caption>위험국가 안내표</caption>
+										<colgroup>
+											<col style="width:90px">
+											<col style="width:*">
+										</colgroup>
+										
+										<thead>
+											<tr>
+												<th scope="col" colspan="2">일본</th>
+											</tr>
+										</thead>
+										<tbody>
+											<!-- 해당지역아닌경우 -->
+											<tr>
+												<td colspan="2">해당 국가는 해외여행 경보단계에 해당하지 않는 지역입니다. (2015-12-15 기준)</td>
+											</tr>
+											<!-- // 해당지역아닌경우 -->
+										</tbody>
+									</table>
+									
+									
+									<p class="grayTxt">※ 해외여행 등록제 '동행'에 가입하시면 목적지의 안전정보, 여행객의 안전정보, 해외여행 중 사고에 대해 가족에게 사고사실 전달이 가능합니다.</p>
+								</dd>
+								<dt>사건/사고, 현지연락처, 안전소식/공지</dt>
+								<dd>
+									<p>외교부(<a href="http://www.0404.go.kr" data-role="none" title="새창" target="_blank">www.0404.go.kr</a>)에 공지된 여행상품에 포함된 국가의 안전정보입니다.</p>
+									<div class="safetyBtn">
+										<a href="pop_sc_safety.html" class="popUpFull" data-role="none">안전소식</a>
+										<span class="cell"></span>
+										<a href="pop_sc_safety.html" class="popUpFull" data-role="none">사건사고</a>
+										<span class="cell"></span>
+										<a href="pop_sc_safety.html" class="popUpFull" data-role="none">현지연락처</a>
+									</div>
+								</dd>
+							</dl>
+						</dd>
+					</dl>
+				</div>
+				<!-- // 참고사항 -->
+			</div>
+			<!-- // 하단 탭영역 -->
+			
+			<!-- 하단 버튼영역 -->
+			<div id="fixSdBtn" class="fixSdBtn threeType"> <!-- 세개일경우 threeType 추가하면 전화하기 버튼과 장바구니 block 처리됨 :: 숨길경우 hide 추가 -->
+				<a href="tel:" class="btnFixTel" data-role="none" title="전화하기"></a>
+				<a href="#none" class="basket" data-role="none">장바구니</a>
+				
+				<a href="#none" class="basic" data-role="none">예약하기</a> <!-- 기본 block 버튼 class="basic" :: 클릭시 하단 peopleLayer 오픈  -->
+				<a href="#none" class="end" style="display:none" data-role="none">마감</a><!-- 마감일경우 end -->
+				<a href="#none" class="telReserv" style="display:none" data-role="none">전화예약</a><!-- 전화예약일경우 telReserv -->
+				
+				<!-- 20171019 추가 -->
+				<div class="peopleLayer" style="display:none">
+					<button class="scPopClose" type="button" title="닫기"></button>
+					<ul>
+						<li>
+							<div class="moneyBox">성인<span>799,000원</span></div>
+							<div class="btnBox">
+								<strong>1명</strong>
+								<div>
+									<button class="minus" type="button" title="인원줄이기"></button>
+									<button class="plus" type="button" title="인원늘리기"></button>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="moneyBox">아동<span>639,000원</span></div>
+							<div class="btnBox">
+								<strong class="zero">0명</strong><!-- 0명일경우 class="zero" -->
+								<div>
+									<button class="minus" type="button" title="인원줄이기"></button>
+									<button class="plus" type="button" title="인원늘리기"></button>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="moneyBox">유아<span>150,000원</span></div>
+							<div class="btnBox">
+								<strong class="zero">0명</strong><!-- 0명일경우 class="zero" -->
+								<div>
+									<button class="minus" type="button" title="인원줄이기"></button>
+									<button class="plus" type="button" title="인원늘리기"></button>
+								</div>
+							</div>
+						</li>
+					</ul>
+					
+					<div class="yellowSect">
+						<strong>총 합계금액</strong>
+						<div class="rightBox">
+							<strong>2,237,200<span>원</span></strong>
+							<p>유류할증료&amp;제세공과금 포함<br>※ 발권일/환율에 따라 변경 가능</p>
+						</div>
+					</div>
+				</div>
+				<!-- // 20171019 추가 -->
+			</div>
+			<!-- // 하단 버튼영역 -->
+			
+		</div>
+        <!-- // 일정표 개편 end -->
+		
+		<footer class="newFoot">
+			<ul>
+				<li><a href="#none" data-role="none">로그인</a></li>
+				<li><a href="#none" data-role="none">PC버전</a></li>
+				<li><a href="#none" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+			</ul>
+			<div>
+				<a href="#none" data-role="none">이용약관</a>|
+				<a href="#none" data-role="none">개인정보처리방침</a>|
+				<a href="#none" data-role="none">여행약관</a>|
+				<a href="#none" data-role="none">사업자정보확인</a>
+			</div>
+			<address>
+				㈜ 하나투어 | 대표자: 최현석 | 사업자등록번호 : 102-81-39440<br>
+				통신판매업신고번호 : 종로01-1806호 | 개인정보관리 책임자 : 최종윤<br>
+				[110-160]서울특별시 종로구 인사동 5길 41 ㈜ 하나투어<br>
+				하나투어상담센터 : <a href="tel:1577-1233" data-role="none">1577-1233</a> | FAX : 02-734-0392<br>
+				이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> | 호스팅 서비스 사업자 : ㈜하나투어<br>
+				관광사업자 등록번호 : 제1933-000006호 | 영업보증보험 : 22억 1천만원 가입<br>
+				COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+			</address>
+		</footer>
+		
+<!-- //컨텐츠 영역 -->
+
+	</div>
+</div>
+
+</body>
+</html>
+

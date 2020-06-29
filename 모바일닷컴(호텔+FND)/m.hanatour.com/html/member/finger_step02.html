@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>회원가입 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="../../css/member.css"><!-- 로그인,회원가입 신규 css -->
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-2.1.3.min.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common_new.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/swiper.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function (e) {
+		$('ul.inner_terms').on('click', '> li > button', function (e) {
+			$(this).toggleClass('open');
+		});
+	});
+</script>
+</head>
+<body>
+
+<div id="wrap"> 
+	<header id="header"><!-- 띠배너 보일경우 class="tBanTy" 추가 -->
+		<div class="inner">
+			<h1><a href="#" data-role="none"><img src="../../images/common/btn_nlogo.png" alt="하나투어"></a></h1>
+			<a href="#" id="btnMenu" data-role="none"><img src="../../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+			<a href="#" id="btnMyhome" data-role="none"><img src="../../images/common/btn_hdright.png" alt="마이홈"></a>
+		</div>
+	</header>
+	<div style="height:52px"></div>
+	
+	<!-- 컨텐츠 영역 -->
+	<div id="container">
+		<h2 class="pagTit">지문 사용 동의</h2>
+		
+		<!-- 로그인 신규 -->
+		<div class="newMember">
+			<div class="stepTerms">
+				<p class="fingerStep2">지문 로그인 서비스 이용을 위한 동의 절차를 진행해주시기 바랍니다.</p>
+				
+				<h3 class="new_Tit bg_terms">서비스 사용동의</h3>
+				
+				<!-- ios -->
+				<div class="termsSect">
+					<label class="all_ch"><input type="checkbox" data-role="none" class="redCheck">이용 약관 동의 확인 (필수)</label>
+					
+					<ul class="inner_terms">
+						<li>
+							<label><input type="checkbox" data-role="none" class="redCheck">지문 로그인 서비스 유의사항 (필수)</label>
+							<button type="button" data-role="none" title="전문보기" class="termsTog"></button><!-- 클릭시 open 추가 -->
+							<!-- 약관내용 -->
+							<div class="in_termsScrBox">
+								<ul class="comBulTxt black">
+									<li>하나투어는 고객님의 지문정보를 저장하지 않으며 고객님의 스마트폰에 저장된 지문정보와 지문 로그인 진행 시 제출한 지문정보의 일치 여부를 확인하여 로그인을 진행합니다.</li>
+									<li>지문 로그인 서비스 설정 후 스마트폰에 저장된 모든 지문으로 인증이 가능합니다. 반드시 본인의 지문만 등록하시기 바랍니다.</li>
+									<li>스마트폰에 등록된 지문정보의 관리 및 사용에 대한 책임은 이용자 본인에게 있으므로 지문정보가 유출되지 않도록 유의해 주시기 바랍니다.</li>
+									<li>타인의 이용이 의심되는 경우 즉시 스마트폰의 지문정보를 삭제하고 지문 로그인 서비스를 해지하시기 바랍니다.</li>
+									<li>지문 등록/삭제는 '스마트폰 &gt; 설정 &gt; Touch ID 및 암호' 에서 변경하실 수 있습니다.</li>
+									<li>지문 로그인 설정 해제는 '하나투어 앱 &gt; 설정 &gt; 지문로그인' 에서 변경하실 수 있습니다.</li>
+								</ul>
+							</div>
+							<!-- // 약관 내용 -->
+						</li>
+						<li>
+							<label><input type="checkbox" data-role="none" class="redCheck">접근 권한 사용에 대한 동의 (필수)</label>
+							<button type="button" data-role="none" title="전문보기" class="termsTog"></button>
+							<!-- 약관내용 -->
+							<div class="in_termsScrBox">
+								<strong>본인은 ㈜하나투어가 지문 로그인 서비스 제공을 위해 사용되는 본인의 바이오정보(지문)의 접근 권한을 사용하는 것에 동의합니다.</strong>
+								<ul class="">
+									<li>1. 접근하는 개인 정보의 항목<br>&nbsp;&nbsp;1) 필수사항 : Touch ID</li>
+									<li>2. 개인 정보의 접근 목적 : 본인 확인</li>
+									<li>3. 개인 정보의 접근 기간 : 서비스 신청일로부터 서비스 해지 시까지</li>
+								</ul>
+								<p>※ 본 동의를 거부하실 수 있습니다. 단, 지문 로그인 서비스 이용을 위한 필수 사항이므로 거부하실 경우 이용이 불가함을 알려드립니다.</p>
+							</div>
+							<!-- // 약관 내용 -->
+						</li>
+						<li>
+							<label><input type="checkbox" data-role="none" class="redCheck">개인정보 이용에 대한 동의 (필수)</label>
+							<button type="button" data-role="none" title="전문보기" class="termsTog"></button>
+							<!-- 약관내용 -->
+							<div class="in_termsScrBox">
+								<strong>본인은 ㈜하나투어의 지문 로그인 서비스를 제공받기 위해 본인의 바이오정보(지문)를 ㈜하나투어가 이용하는 것에 동의합니다.</strong>
+								<ul class="">
+									<li>1. 이용하는 개인 정보의 항목<br>&nbsp;&nbsp;1) 필수사항 : Touch ID</li>
+									<li>2. 개인 정보의 접근 목적 : 지문 로그인 서비스 제공</li>
+									<li>3. 개인 정보의 접근 기간 : 서비스 신청일로부터 서비스 해지 시까지</li>
+								</ul>
+								<p>※ 본 동의를 거부하실 수 있습니다. 단, 지문 로그인 서비스 이용을 위한 필수 사항이므로 거부하실 경우 이용이 불가함을 알려드립니다.</p>
+							</div>
+							<!-- // 약관 내용 -->
+						</li>
+					</ul>
+				</div>
+				<!-- // ios -->
+				
+				<!-- 안드로이드 -->
+				<div class="termsSect">
+					<label class="all_ch"><input type="checkbox" data-role="none" class="redCheck">이용 약관 동의 확인 (필수)</label>
+					
+					<ul class="inner_terms">
+						<li>
+							<label><input type="checkbox" data-role="none" class="redCheck">지문 로그인 서비스 유의사항 (필수)</label>
+							<button type="button" data-role="none" title="전문보기" class="termsTog"></button><!-- 클릭시 open 추가 -->
+							<!-- 약관내용 -->
+							<div class="in_termsScrBox">
+								<ul class="comBulTxt black">
+									<li>하나투어는 고객님의 지문정보를 저장하지 않으며 고객님의 스마트폰에 저장된 지문정보와 지문 로그인 진행 시 제출한 지문정보의 일치 여부를 확인하여 로그인을 진행합니다.</li>
+									<li>지문 로그인 서비스 설정 후 스마트폰에 저장된 모든 지문으로 인증이 가능합니다. 반드시 본인의 지문만 등록하시기 바랍니다.</li>
+									<li>스마트폰에 등록된 지문정보의 관리 및 사용에 대한 책임은 이용자 본인에게 있으므로 지문정보가 유출되지 않도록 유의해 주시기 바랍니다.</li>
+									<li>타인의 이용이 의심되는 경우 즉시 스마트폰의 지문정보를 삭제하고 지문 로그인 서비스를 해지하시기 바랍니다.</li>
+									<li>지문 등록/삭제는 '스마트폰 &gt; 설정 &gt; 잠금화면 및 보안 &gt; 지문' 에서 변경하실 수 있습니다.</li>
+									<li>지문 로그인 설정 해제는 '하나투어 앱 &gt; 설정 &gt; 지문로그인' 에서 변경하실 수 있습니다.</li>
+								</ul>
+							</div>
+							<!-- // 약관 내용 -->
+						</li>
+						<li>
+							<label><input type="checkbox" data-role="none" class="redCheck">접근 권한 사용에 대한 동의 (필수)</label>
+							<button type="button" data-role="none" title="전문보기" class="termsTog"></button>
+							<!-- 약관내용 -->
+							<div class="in_termsScrBox">
+								<strong>본인은 ㈜하나투어가 지문 로그인 서비스 제공을 위해 사용되는 본인의 바이오정보(지문)의 접근 권한을 사용하는 것에 동의합니다.</strong>
+								<ul class="">
+									<li>1. 접근하는 개인 정보의 항목<br>&nbsp;&nbsp;1) 필수사항 : 지문</li>
+									<li>2. 개인 정보의 접근 목적 : 본인 확인</li>
+									<li>3. 개인 정보의 접근 기간 : 서비스 신청일로부터 서비스 해지 시까지</li>
+								</ul>
+								<p>※ 본 동의를 거부하실 수 있습니다. 단, 지문 로그인 서비스 이용을 위한 필수 사항이므로 거부하실 경우 이용이 불가함을 알려드립니다.</p>
+							</div>
+							<!-- // 약관 내용 -->
+						</li>
+						<li>
+							<label><input type="checkbox" data-role="none" class="redCheck">개인정보 이용에 대한 동의 (필수)</label>
+							<button type="button" data-role="none" title="전문보기" class="termsTog"></button>
+							<!-- 약관내용 -->
+							<div class="in_termsScrBox">
+								<strong>본인은 ㈜하나투어의 지문 로그인 서비스를 제공받기 위해 본인의 바이오정보(지문)를 ㈜하나투어가 이용하는 것에 동의합니다.</strong>
+								<ul class="">
+									<li>1. 이용하는 개인 정보의 항목<br>&nbsp;&nbsp;1) 필수사항 : 지문</li>
+									<li>2. 개인 정보의 접근 목적 : 지문 로그인 서비스 제공</li>
+									<li>3. 개인 정보의 접근 기간 : 서비스 신청일로부터 서비스 해지 시까지</li>
+								</ul>
+								<p>※ 본 동의를 거부하실 수 있습니다. 단, 지문 로그인 서비스 이용을 위한 필수 사항이므로 거부하실 경우 이용이 불가함을 알려드립니다.</p>
+							</div>
+							<!-- // 약관 내용 -->
+						</li>
+					</ul>
+				</div>
+				<!-- // 안드로이드 -->
+			</div>
+			
+			<!-- 버튼 -->
+			<div class="btnTwoBox">
+				<a href="#" data-role="none" class="m_btnRed">동의함</a>
+				<a href="#" data-role="none" class="m_btnRed gray">동의 안함</a>
+			</div>
+			<!-- // 버튼 -->
+		</div>
+		<!-- //로그인 신규 -->
+		
+	</div>
+	<!-- //컨텐츠 영역 -->
+	
+	<footer class="newFoot">
+		<ul>
+			<li><a href="#" data-role="none">로그인</a></li>
+			<li><a href="#" data-role="none">PC버전</a></li>
+			<li><a href="#" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+		</ul>
+		<div>
+			<a href="#" data-role="none">이용약관</a>|
+			<a href="#" data-role="none">개인정보처리방침</a>|
+			<a href="#" data-role="none">여행약관</a>|
+			<a href="#" data-role="none">사업자정보확인</a>
+		</div>
+		<address>
+				㈜ 하나투어 | 대표자: 김진국 | 사업자등록번호 : 102-81-39440<br>
+				통신판매업신고번호 : 종로01-1806호 | 개인정보관리 책임자 : 박성재<br>
+				[110-160]서울특별시 종로구 인사동 5길 41 ㈜ 하나투어<br>
+				하나투어상담센터 : <a href="tel:1577-1233" data-role="none">1577-1233</a> | FAX : 02-734-0392<br>
+				이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> | 호스팅 서비스 사업자 : ㈜하나투어<br>
+				관광사업자 등록번호 : 제1933-000006호 | 영업보증보험 : 22억 1천만원 가입<br>
+				COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+		</address>
+	</footer>
+	
+</div>
+
+
+</body>
+</html>
+

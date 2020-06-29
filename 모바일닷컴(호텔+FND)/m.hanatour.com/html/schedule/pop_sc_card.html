@@ -1,0 +1,32 @@
+<script type="text/javascript">
+	if (jQuery !== undefined) {
+		jQuery(document).ready(function () {
+			if (SCHEDULE !== undefined && typeof SCHEDULE.initZoom === 'function') SCHEDULE.initZoom($('.pop_innerComm > .zoomBox'));
+		});
+	}
+</script>
+
+<!-- pop start  -->
+
+	<div class="fullPopCommon">
+		<div class="header">
+			<h3>방문 도시별 입국카드 작성법<a href="#" class="closeOverlayPanel" data-role="none" title="레이어닫기"></a></h3>
+		</div>
+		
+		<div class="innerScroller">
+			<div class="pop_innerComm">
+			
+				<select class="btnselRed" style="border-radius:0; margin-bottom:15px" title="도시선택" data-role="none">
+					<option value="">방콕</option>
+					<option value="">대만</option>
+				</select>
+				
+				<p class="defaultTxt">태국 입국카드는 기내에서 도착하기 30분 전부터 나누어 주며 기내에서 입력할 곳에 해당 내용만 입력하면 됩니다. 한 장의 카드에는 입국카드와 출국카드가 같이 붙어 있으며, 기내에서 양쪽 다 작성해 놓는 것이 좋습니다.</p>
+				<div class="zoomBox">
+					<img src="http://image1.hanatour.com/mobile/common/schedule/img_city_card01.jpg" alt="">
+					<a href="#" data-role="none" title="확대하기"></a>
+				</div>
+			</div>
+		</div>
+		
+	</div>

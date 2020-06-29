@@ -1,0 +1,70 @@
+<script type="text/javascript">
+	if (jQuery !== undefined) {
+		jQuery(document).ready(function () {
+			if (SCHEDULE !== undefined && typeof SCHEDULE.initGallerySwiper === 'function') SCHEDULE.initGallerySwiper($('.pop_innerComm .swiper-container').not('.icoList'));
+		});
+
+		$('#overlayPanel').on('open.loadpop', function (e, data) {
+			if (SCHEDULE !== undefined && typeof SCHEDULE.resetSwiper === 'function') SCHEDULE.resetSwiper($('.pop_innerComm'));
+		});
+	}
+</script>
+
+<!-- pop start  -->
+
+	<div class="fullPopCommon">
+		<div class="header">
+			<h3>여행지 정보<a href="#" class="closeOverlayPanel" data-role="none" title="레이어닫기"></a></h3>
+		</div>
+		
+		<div class="innerScroller">
+			<div class="pop_innerComm">
+				
+				<strong class="stit01">아시아 티크<span>강변을 따라 조성된 새로운 야시장</span></strong>
+				
+				<!-- 스와이프 -->
+				<div class="swiper-container">
+					<a href="#" class="big5_prev" data-role="none"></a>
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia01.png" alt=""></div>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia02.png" alt=""></div>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia03.png" alt=""></div>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia04.png" alt=""></div>
+						<div class="swiper-slide"><img src="http://image1.hanatour.com/mobile/common/onbak/images/sub/img_area_asia05.png" alt=""></div>
+					</div>
+					<div class="swiper-pagination" style="display:none"></div>
+					<div class="swiper-pag-num"><span>1</span> / 13</div>
+					<a href="#" class="big5_next" data-role="none"></a>
+				</div>
+				<!-- // 스와이프 -->
+			
+				<p class="popTxt01">2012년에 처음 문을 연 아시아티크(Asiatique). 차오프라야 강변에 위치한 아시아티크는 밤에 빛나는 거대한 관람차가 눈에 띄는 야시장이다. 복잡하고 혼잡한 다른 야시장들에 비해 깔끔하게 정리되어 있는 매장들 덕분에 여자 관광객과 일본 관광객들이 많이 찾는다.</p>
+				
+				<ul class="cityHistory">
+					<li>아시아</li>
+					<li>태국</li>
+					<li>방콕</li>
+				</ul>
+				
+				<ul class="cityHistory">
+					<li>아시아</li>
+					<li>태국</li>
+					<li>방콕</li>
+				</ul>
+				
+				<dl class="popDefine">
+					<dt>현지어 명칭</dt>
+					<dd>Asiatique</dd>
+					<dt>주소</dt>
+					<dd>New Road, Wat Phraya Krai, Bangkok 10120, Thailand</dd>
+					<dt>홈페이지</dt>
+					<dd><a href="http://www.thaiasiatique.com" target="_blank" title="새창" class="web" data-role="none">www.thaiasiatique.com</a></dd>
+					<dt>찾아가는길</dt>
+					<dd>셔틀 보트 : BTS 싸판 탁신(Saphan Taksin)역 선착장 에서 아시아티크(Asiatique)에서 운영하는 무료 셔틀 보트로 약 10분</dd>
+					<dt>오픈시간/휴무일</dt>
+					<dd>시장 : 17:00 ~ 24:00<br>셔틀 보트 : 16:00 ~ 23:30 <br>휴무일 : 연중무휴</dd>
+				</dl>
+			</div>
+		</div>
+		
+	</div>

@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>맞춤여행 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="../../css/mypage/custom_made.css"> <!-- 맞춤여행 CSS -->
+<script src="../../js/libs/jquery/jquery-2.1.3.min.js"></script>
+<!-- 리스트 토글 스크립트 20170412 -->
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.customMade .cmAcoList').on('click', 'dt > a', function (e) {
+   			var target = $(e.currentTarget);
+
+   			target.parent().toggleClass('open');
+
+   			e.preventDefault();
+  		});
+	});
+</script>
+<!-- 리스트 토글 스크립트 20170412 -->
+</head>
+
+<body>
+
+<div id="wrap">
+	<header id="header"><!-- 띠배너 보일경우 class="tBanTy" 추가 -->
+		<div class="inner">
+			<h1><a href="#" data-role="none"><img src="http://m.hanatour.com/static/images/common/btn_nlogo.png" alt="하나투어 호텔"></a></h1>
+			<a href="#" id="btnMenu" data-role="none"><img src="../../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+			<a href="#" id="btnMyhome" data-role="none"><img src="../../images/common/btn_hdright.png" alt="마이홈"></a>
+			<a href="#" id="btnSearch" data-role="none"><img src="http://image1.hanatour.com/mobile/common/search/btn_hdsearch.png" alt="통합검색"></a><!-- 20151201 통합검색 추가 -->
+		</div>
+	</header>
+	<div class="headerMargin"></div>
+
+	<!-- 컨텐츠 영역 -->
+	<div id="container"> 
+	
+		<!-- 20170412 맞춤여행 -->
+		<h2 class="pagTit">마이페이지</h2>
+		
+		<div class="customMade">
+			<!-- 상단 -->
+			<div class="cmTop">
+				<h3>진행상태</h3>
+				
+				<!-- 리스트 -->
+				<div class="listBox">
+					<ol class="stateList">
+						<li class="on">접수</li><!-- 완료시 class="on" -->
+						<li>확인중</li>
+						<li>견적완료</li>
+					</ol>
+					
+					<p>고객님의 단체 맞춤여행 견적문의가 <strong class="c_red">접수</strong>되었습니다.<br>접수일 기준 24시간 내에 담당자 확인 및 답변드리겠습니다.</p><!-- 접수 -->
+					<p>고객님의 고객맞춤 단체여행 견적문의가 접수되어 담당자가 <strong class="c_red">확인중</strong>에 있습니다. 구체적인 일정과 금액이 확정되면 해당 페이지에서 확인 및 결제진행이 가능합니다.</p><!-- 확인중 -->
+					<p>고객님의 고객맞춤 단체여행 견적문의가 <strong class="c_red">견적완료</strong>처리되었습니다. 답변이 등록되었으며 맞춤여행 일정표 확인 및 결제가 가능합니다.</p><!-- 견적완료 -->
+				</div>
+				<!-- // 리스트 -->
+				
+				<!-- 미체결 -->
+				<div class="noneBox">
+					<em>미체결</em>
+					<p>고객님의 단체 맞춤여행 견적문의가 <strong class="c_red">미체결</strong> 처리되었습니다.<br>미체결 사유에 대한 답변이 등록되었습니다.</p>
+				</div>
+				<!-- // 미체결 -->
+			</div>
+			<!-- // 상단 -->
+			
+			<!-- 아코디언 -->
+			<dl class="cmAcoList">
+				<dt class="open"><a href="#">견적정보</a></dt><!-- 클릭시 dt class="open" 추가 -->
+				<dd>
+					<ul class="txtList01">
+						<li>
+							<strong>견적번호</strong>
+							<em class="c_red">123412345</em>
+						</li>
+						<li>
+							<strong>요청일</strong>
+							<em>2017.03.07 17:25</em>
+						</li>
+						<li>
+							<strong>처리일</strong>
+							<em class="normal">요청일 기준 24시간 이내 답변예정</em>
+						</li>
+					</ul>
+				</dd>
+				
+				<dt class=""><a href="#">나의 문의내역</a></dt><!-- 클릭시 dt class="open" 추가 -->
+				<dd>
+					<strong class="inStit first">요청 조건</strong><!-- 첫번째 inStit, first 추가 -->
+					<ul class="txtList02">
+						<li>
+							<strong>단체성격(단체명)</strong>
+							<em>기타(하나패밀리)</em>
+						</li>
+						<li>
+							<strong>목적지1/도시1</strong>
+							<em>동남아/코타키나발루</em>
+						</li>
+						<li>
+							<strong>목적지2/도시2</strong>
+							<em>동남아/방콕</em>
+						</li>
+						<li>
+							<strong>목적지3/도시3</strong>
+							<em>동남아/세부</em>
+						</li>
+						<li>
+							<strong>여행기간</strong>
+							<em>2017.05.13~2017.05.19</em>
+						</li>
+						<li>
+							<strong>단체거주지</strong>
+							<em>서울시 종로구</em>
+						</li>
+						<li>
+							<strong>희망견적가(1인)</strong>
+							<em>150만원</em>
+						</li>
+						<li>
+							<strong>인원</strong>
+							<em>30명</em>
+						</li>
+					</ul>
+					
+					<strong class="inStit">상세 조건</strong>
+					<ul class="txtList02">
+						<li>
+							<strong>선호항공</strong>
+							<em>대한항공</em>
+						</li>
+						<li>
+							<strong>호텔등급</strong>
+							<em>3성급</em>
+						</li>
+						<li>
+							<strong>식사</strong>
+							<em>조식포함</em>
+						</li>
+						<li>
+							<strong>테마</strong>
+							<em>일반</em>
+						</li>
+						<li>
+							<strong>참고일정</strong>
+							<em>blognaver.com/b019283</em>
+						</li>
+						<li>
+							<strong>선택사항</strong>
+							<em>노쇼핑/노옵션/날짜변경 가능</em>
+						</li>
+					</ul>
+					
+					<strong class="inStit">기타요청사항</strong>
+					<p class="defTxt">10인이상 출발 시 과일바구니 큰거로 2개더 서비스주세요 4박 5일 일정 중에 2일은 자유일정으로 스케줄 조정 가능한가요?   일정시작시간(기상시간)을 오전 8시에서  11시로 조정 해주세요. 어린이들이 좋아할만한 키즈카페가  있는 호텔로 숙소를 지정해 주세요. </p>
+				</dd>
+				
+				<dt class="open"><a href="#">답변내용</a></dt><!-- 클릭시 dt class="open" 추가 -->
+				<dd>답변드립니다. 10인이상 출발 시 과일바구니 큰거로 2개더 서비스드리겠습니다. 요청하신 4박 5일 일정 중에 2일은 자유일정으로 스케줄 조정가능합니다. 일정시작시간 (기상시간)을 오전 8시에서 11시로 조정 가능합니다.  어린이들이 좋아할만한 키즈카페가 있는 호텔로 숙소를 지정해드리겠습니다</dd>
+				
+				<dt class="open"><a href="#">담당 대리점</a></dt><!-- 클릭시 dt class="open" 추가 -->
+				<dd>
+					<div class="takeAgencyTop">
+						<strong>(주)참조아여행사</strong>
+						<em><span>담당자</span>김하나</em>
+					</div>
+					
+					<div class="takeAgencyBtm">
+						<p class="address">서울특별시 강서구 양천로 401, A-318<br>(가양동,강서한강자이타워)</p>
+						<a href="tel:02-365-7626" class="tel">02-365-7626</a>
+						<ul>
+							<li>팩스 : 02-013-0298</li>
+							<li>이메일 : MASTER99@hanatour.com</li>
+						</ul>
+						<p class="time">
+							<strong>도우미 여행사 업무시간</strong>
+							평일 기준 09:00~18:00 / 주말 공휴일 제외<br>(도우미 여행사에 따라 업무시간이 상이함)
+						</p>
+					</div>
+				</dd>
+			</dl>
+			<!-- // 아코디언 -->
+			
+			<a href="#" class="m_btnRed">일정표 보러가기</a><!-- 견적완료 일정표 버튼 -->
+		</div>
+		<!-- // 20170412 맞춤여행 -->
+		
+		<footer class="newFoot">
+			<ul>
+				<li><a href="#" data-role="none">로그인</a></li>
+				<li><a href="#" data-role="none">PC버전</a></li>
+				<li><a href="#" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+			</ul>
+			<div>
+				<a href="#" data-role="none">이용약관</a>|
+				<a href="#" data-role="none">개인정보처리방침</a>|
+				<a href="#" data-role="none">여행약관</a>|
+				<a href="#" data-role="none">사업자정보확인</a>
+			</div>
+			<address>
+					㈜ 하나투어 | 대표자: 김진국 | 사업자등록번호 : 102-81-39440<br>
+					통신판매업신고번호 : 종로01-1806호 | 개인정보관리 책임자 : 박성재<br>
+					[110-160]서울특별시 종로구 인사동 5길 41 ㈜ 하나투어<br>
+					하나투어상담센터 : <a href="tel:1577-1233" data-role="none">1577-1233</a> | FAX : 02-734-0392<br>
+					이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> | 호스팅 서비스 사업자 : ㈜하나투어<br>
+					관광사업자 등록번호 : 제1933-000006호 | 영업보증보험 : 22억 1천만원 가입<br>
+					COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+
+			</address>
+		</footer>
+
+	</div>
+</div>
+
+
+</body>
+</html>
+

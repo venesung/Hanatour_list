@@ -1,0 +1,302 @@
+@charset "utf-8";
+/* CSS Document */
+
+.member_afresh_sect {padding:0 30px 60px}
+.stit_box {margin-bottom:20px; font-size:1.5rem}
+.m_btnRed {font-size:1.6rem; margin:0; padding:15px 0}
+.btnTwoBox,.popReserve01 .btnTwoBox {margin:0}
+.comBulTxt li,.popReserve01 .comBulTxt li {font-size:1.2rem}
+.btnTwoBox a {font-size:1.5rem; padding:14px 0}
+
+.joincont_main {padding-top:40px;text-align:center;}
+.joincont_main .hana_logo {margin-bottom:20px; display:block}
+.joincont_main .hana_logo img {height:27px}
+.joincont_main h2 {font-size:1.5rem; margin-bottom:35px; font-weight:500}
+.joincont_main .orLine {position:relative; margin:35px 0}
+.joincont_main .orLine:before { content:'';width:100%; height:1px; background-color:#e0e0e0; position:absolute;left:0;top:50%}
+.joincont_main .orLine span {color:#888;font-size:1.2rem; display:inline-block;background-color:#fff; position:relative; padding:0 10px}
+.joincont_main .btn_padBox {padding:0 20px}
+
+.snsLogin_btnBox {padding:0 0 30px}
+.snsLogin_btnBox.joinMainType {padding:0 20px 30px}
+.snsLogin_btnBox a {display:block;border:1px solid #ccc; border-radius:3px; padding:14px 0 15px; position:relative; box-sizing:border-box; text-indent:48px; text-align:center; font-size:1.5rem}
+.snsLogin_btnBox a:before {content:''; position:absolute;left:-1px;top:-1px; width:48px; height:100%;background:red no-repeat 3px center / 45px 48px; padding-top:2px; border-radius:3px 0 0 3px}
+.snsLogin_btnBox a+a {margin-top:10px}
+.snsLogin_btnBox a.naverBtn:before {background-image:url(http://image1.hanatour.com/mobile/common/member/btn_sns_ico_naver.png); background-color:#55b24c}
+.snsLogin_btnBox a.facebookBtn:before {background-image:url(http://image1.hanatour.com/mobile/common/member/btn_sns_ico_face.png);background-color:#3b5998}
+.snsLogin_btnBox a.kakaoBtn:before {background-image:url(http://image1.hanatour.com/mobile/common/member/btn_sns_ico_kakao.png);background-color:#fadf4b}
+.snsLogin_btnBox p {font-size:1.2rem; color:#888; margin-top:15px; text-align:center}
+
+.login_already {border-top:1px solid #e0e0e0; padding:30px 20px 0; text-align:center}
+.login_already em {display:block; margin-bottom:15px}
+.login_already .m_btnWhite {display:block;border:1px solid #ccc; border-radius:4px; padding:14px 0 15px;position:relative; box-sizing:border-box; font-size:1.5rem}
+.login_already p {font-size:1.2rem; color:#888; margin-top:15px}
+
+.joincont_sub {padding-top:30px}
+.sub_inputBox {padding-top:30px}
+.sub_inputBox > div {margin-top:20px}
+.sub_inputBox > div.idBox {margin-top:0}
+.sub_inputBox > div.confirmBtn {margin-top:30px}
+.sub_inputBox.searchType {padding:15px 0 10px}
+.clearLine {height:1px; background-color:#e0e0e0; margin:20px 0}
+
+.mb_inputCell {}
+.mb_input {font-size:1.3rem;border:1px solid #ccc; height:50px;width:100%; box-sizing:border-box; text-indent:10px; text-align:left !important; color:#333}
+.mb_select {display:block;background:#fff url(http://image1.hanatour.com/mobile/common/bg_select_rpad.png) no-repeat right center / 27px 7px;font-size:1.3rem;height:50px;width:100%;border:1px solid #ccc;box-sizing:border-box;color:#333; padding-left:10px}
+.mb_input:focus,.mb_select:focus,.mb_textarea:focus {border-color:#e45b85 !important}
+.mb_input.error,.mb_select.error,.mb_textarea.error {border-color:#ff0000 !important}
+.mb_input::placeholder,.mb_textarea::placeholder {color:#333 !important}
+.mb_input:disabled,.mb_select:disabled {background:#f6f6f6 !important;color:#aaa;opacity:1}
+.login_input {font-size:1.3rem;border:none;border-bottom:1px solid #ccc; height:50px;width:100%; box-sizing:border-box;text-align:left !important; color:#333; margin-top:15px}
+.login_input:focus {border-color:#e45b85 !important}
+.login_input::placeholder {color:#333 !important}
+.m_btnAir_gray {color:#6d7588; font-size:1.4rem; border:1px solid #6d7588;display:block; border-radius:3px; text-align:center; padding:14px 0 15px; margin-top:12px}
+
+.mb_birthCell {overflow:hidden}
+.mb_birthCell .mb_select {width:32%; float:left; margin-bottom:4px}
+.mb_birthCell.phoneType .mb_select {margin-bottom:0}
+.mb_birthCell .cellSpace {display:inline-block;width:2%; float:left; height:100%}
+
+.normalTxt {color:#666;font-size:1.1rem; margin-top:4px;clear:both}
+.completeTxt {color:#e85581;font-size:1.1rem; margin-top:4px;clear:both}
+.errorTxt {color:#ff0000;font-size:1.1rem; margin-top:4px; clear:both}
+.confirmBtn button,.confirmBtn a{ display:block;border:1px solid #ccc;width:100%; background-color:#ccc; border-radius:3px; padding:15px 0 14px;position:relative; box-sizing:border-box; color:#fff; font-size:1.6rem; font-weight:bold; text-align:center}
+.confirmBtn button.complete,.confirmBtn a.complete { border-color:#c83d67; background-color:#c83d67}
+
+.pageStep {overflow:hidden; display:table;width:100%;border-bottom:1px solid #e8e8e8;border-top:1px solid #e8e8e8}
+.pageStep li {display:table-cell;width:32.5%; color:#ccc; background-color:#f7f7f7; text-align:center;height:35px; vertical-align:middle; position:relative; }
+.pageStep li:nth-child(2) {text-indent:12px}
+.pageStep li:nth-child(3) {width:35%;text-indent:10px}
+.pageStep li:last-child:after {content:none}
+.pageStep li.on {color:#c83d67; background-color:#fff; font-weight:bold}
+.pageStep li+li.on:before {content:''; position:absolute;left:0;top:0;width:11px; height:35px;background:url(http://image1.hanatour.com/mobile/common/member/bg_step_before.png) no-repeat 0 0 / 11px 35px; z-index:2}
+.pageStep li:after {content:''; position:absolute;right:-11px;top:0;width:11px; height:35px;background:url(http://image1.hanatour.com/mobile/common/member/bg_step_after.png) no-repeat -11px 0 / 22px 35px; z-index:1}
+.pageStep li.on:after {background-position:0 0}
+
+.selectRadio_tabCont {position:relative; padding-top:30px}
+.selectRadio_tabCont .radio_tab {position:absolute;left:0;top:0}
+.radio_tab {background:#fff;width:24px;height:24px;margin-right:5px;border:1px solid #ccc; border-radius:50%; position:relative; margin-top:-3px}
+.radio_tab:after {content:'';display:inline-block; width:max-content; width: -moz-max-content;width: -webkit-max-content;width: -o-max-content; height:24px;font-size:1.5rem;color:#666; vertical-align:middle; padding:1px 0 0 0; box-sizing:border-box; margin-left:30px}
+.radio_tab:checked:after {font-weight:bold; color:#111}
+.radio_tab.idTxt:after {content:'아이디 로그인'}
+.radio_tab.fingerTxt,.radio_tab.reservTxt02 {left:50%}
+.radio_tab.fingerTxt:after {content:'지문 로그인'}
+.radio_tab.reservTxt01:after {content:'여행상품'}
+.radio_tab.reservTxt02:after {content:'항공/호텔/숙박'}
+.radio_tab.searchTxt01:after {content:'휴대폰 인증으로 찾기 (아이디 전체 확인)'}
+.radio_tab.searchTxt02:after {content:'이름, 생년일로 찾기 (아이디 일부 확인)'}
+.radio_tab.searchTxt03:after {content:'등록한 휴대폰 번호로 임시 비밀번호 받기'}
+.radio_tab.searchTxt04:after {content:'가입한 이메일로 임시 비밀번호 받기'}
+
+.radio_tab:checked:before {content:'';background:#c83d67;width:12px;height:12px;margin-right:5px;border-radius:50%;position:absolute;left:50%; top:50%; margin:-6px 0 0 -6px}
+.radio_tab+div {display:none}
+.radio_tab:checked+div {display:block}
+
+.termsPopList .checkAll {display:block;padding-bottom:15px;border-bottom:1px solid #ccc}
+.termsPopList ul {}
+.termsPopList ul li {margin-top:12px;position:relative; padding-left:32px}
+.termsPopList ul li .redCheck {position:absolute;left:0;top:0}
+.termsPopList ul li a {display:block;color:#666; padding:4px 8px 2px 0;background:url(http://image1.hanatour.com/mobile/common/member/ico_terms_link.png) no-repeat right center / 6px 10px}
+.termsPopList ul li a span {color:#e85581}
+
+.mb_checkCell {overflow:hidden}
+.mb_checkCell .checkRadioBox {float:left;width:50%; box-sizing:border-box; padding:0 6px 0 0}
+.mb_checkCell .checkRadioBox+.checkRadioBox {padding:0 0 0 6px}
+.mb_checkCell .checkRadioBox input {width:50%;height:50px;border-radius:2px 0 0 2px;border:1px solid #ccc; cursor:pointer; box-sizing:border-box; float:left; position:relative}
+.mb_checkCell .checkRadioBox input:nth-child(1) {border-right:none}
+.mb_checkCell .checkRadioBox input+input {border-radius:0 2px 2px 0}
+.mb_checkCell .checkRadioBox input:checked {border-color:#e45b85; background-color:#e45b85}
+.mb_checkCell .checkRadioBox input:checked+input {border-left:none}
+.mb_checkCell .checkRadioBox input:after {font-size:1.3rem;color:#333; display:block; text-align:center; position:absolute;left:0;top:50%;transform:translate(0, -50%); -webkit-transform:translate(0, -50%); text-align:center;width:100%}
+.mb_checkCell .checkRadioBox input:checked:after {color:#fff}
+.mb_checkCell .checkRadioBox input.local:after {content:'내국인'}
+.mb_checkCell .checkRadioBox input.foreigner:after {content:'외국인'}
+.mb_checkCell .checkRadioBox input.man:after {content:'남자'}
+.mb_checkCell .checkRadioBox input.woman:after {content:'여자'}
+
+.mb_emailCell {}
+.mb_emailCell .inner_mail {overflow:hidden; margin-bottom:6px}
+.mb_emailCell .inner_mail .mb_input {float:left;width:47%}
+.mb_emailCell .inner_mail .cellSpace {width:6%; float:left; color:#888; padding-top:12px; text-align:center}
+
+.mb_passwordCell {}
+.mb_passwordCell > div {position:relative}
+.mb_passwordCell > div+div {margin-top:6px}
+.mb_passwordCell .right_inBox {position:absolute;right:10px;top:50%;transform:translate(0, -50%); -webkit-transform:translate(0, -50%); height:50px}
+.mb_passwordCell .right_inBox span {font-size:1.1rem; vertical-align:top; display:inline-block; position:relative;top:50%;transform:translate(0, -50%); -webkit-transform:translate(0, -50%)}
+.mb_passwordCell .right_inBox span.safety {color:#e85581}
+.mb_passwordCell .right_inBox span.normal {color:#e85581}
+.mb_passwordCell .right_inBox span.danger {color:#e65400}
+.mb_passwordCell .right_inBox span.error {color:#ff0000}
+.delBtn {width:32px; height:50px;background:url(http://image1.hanatour.com/mobile/common/member/ico_searbtn.png) no-repeat center center / 16px 16px}
+
+.mb_phoneCell {}
+.mb_phoneCell > div {position:relative;padding-right:80px}
+.mb_phoneCell > div+div {margin-top:6px} 
+.mb_phoneCell > div .right_inBtn {position:absolute;right:0;top:0;border:1px solid #ccc;border-radius:3px;width:70px; height:50px; font-size:1.3rem}
+.mb_phoneCell > div .right_inBtn:disabled {background-color:#ccc; color:#888}
+
+.joincont_end {text-align:center; padding:40px 0 0}
+.tit_member01 {background:url(http://image1.hanatour.com/mobile/common/member/bg_tit_icon01.png) no-repeat center top / 114px 75px; padding-top:105px; font-weight:normal; font-size:2.3rem; margin-bottom:5px}
+
+.txt_joinEnd {font-size:2.3rem; margin-bottom:15px}
+.stxt_joinEnd {font-size:1.4rem; color:#666; margin-bottom:20px}
+.subMain_quickList {padding:30px 0}
+.subMain_quickList li {display:table;width:100%}
+.subMain_quickList li+li {margin-top:10px}
+.subMain_quickList li a {display:table-cell;width:100%;vertical-align:middle;background-color:#f6fafd;border:1px solid #ccd8eb; border-radius:3px; font-size:1.6rem;height:47px}
+.subMain_quickList li a:before {content:'';height:26px;display:inline-block; background:no-repeat 0 0 / auto 26px; margin:0 10px -6px 0}
+.subMain_quickList li a.ico01:before {background-image:url(http://image1.hanatour.com/mobile/common/member/ico_end_quick_list01.png);width:30px;}
+.subMain_quickList li a.ico02:before {background-image:url(http://image1.hanatour.com/mobile/common/member/ico_end_quick_list02.png);width:30px;}
+.subMain_quickList li a.ico03:before {background-image:url(http://image1.hanatour.com/mobile/common/member/ico_end_quick_list03.png);width:26px;}
+.subMain_quickList li a.ico04:before {background-image:url(http://image1.hanatour.com/mobile/common/member/ico_end_quick_list04.png);width:26px;}
+.subMain_quickList li a.ico05:before {background-image:url(http://image1.hanatour.com/mobile/common/member/ico_end_quick_list05.png);width:27px;}
+
+.pop_termsSect {padding:20px 15px}
+.pop_termsSect > h4 {font-size:1.6rem; margin-bottom:30px}
+.pop_termsListCont dt {font-size:1.3rem;margin-bottom:15px;font-weight:bold}
+.pop_termsListCont dd {font-size:1.3rem;margin-bottom:20px}
+.pop_termsListCont dd * {font-size:1.2rem;}
+.pop_termsListCont dd p {margin-bottom:12px}
+.pop_termsListCont dd ul {padding-left:12px; margin-top:-10px}
+.pop_termsListCont dd ul li {margin-bottom:3px}
+.termsComTable {margin:5px 0; background-color:#fff}
+.termsComTable th {background-color:#f9f9f9; padding:5px 2px; border:1px solid #ccc;font-size:1.1rem; text-align:center}
+.termsComTable td {border:1px solid #ccc; padding:7px 2px; text-align:center; font-size:1.1rem}
+.termsComTable td a {color:#2489ce; font-weight:bold}
+
+.pop_member_cont01 {padding:40px 30px;}
+
+.tit_overlap {background:url(http://image1.hanatour.com/mobile/common/member/bg_tit_overlap.png) no-repeat center top / 78px 56px; padding-top:72px; font-size:2.3rem; font-weight:normal; margin-bottom:20px; text-align:center}
+.stxt_overlap {font-size:1.3rem; color:#666; margin-bottom:70px; text-align:center}
+
+.tit_mileConnect {background:url(http://image1.hanatour.com/mobile/common/member/bg_tit_mile_connect.png) no-repeat center top / 78px 56px; padding-top:72px; font-size:2.3rem; font-weight:normal; margin-bottom:20px; text-align:center}
+.txt_mileConnect {font-size:1.3rem; color:#666; margin-bottom:20px; text-align:center}
+.pop_mileageBenefit {background-color:#f6fafd;border:1px solid #ccd8eb; border-radius:3px; overflow:hidden; margin-bottom:20px}
+.pop_mileageBenefit span {float:left;width:50%; text-align:center; font-size:1.3rem; background:no-repeat center 20px / 27px 23px;box-sizing:border-box; padding:52px 0 20px}
+.pop_mileageBenefit .ico_bene01 {background-image:url(http://image1.hanatour.com/mobile/common/member/ico_pop_mileage_benefit01.png)}
+.pop_mileageBenefit .ico_bene02 {background-image:url(http://image1.hanatour.com/mobile/common/member/ico_pop_mileage_benefit02.png); border-left:1px solid #ccd8eb; position:relative}
+.pop_mileageBenefit .ico_bene02:before { content:'';width:26px; height:26px;background:url(http://image1.hanatour.com/mobile/common/member/ico_pop_mileage_benefit_p.png) no-repeat 0 0 / 26px 26px; position:absolute;left:-13px;top:50%;transform:translate(0, -50%); -webkit-transform:translate(0, -50%); }
+
+.already_id {text-align:left; margin-bottom:40px;}
+.already_id h5 {border-bottom:2px solid #3d414a; font-size:1.4rem; padding-bottom:10px}
+.already_id .c_red {font-size:1.6rem; display:block; margin-top:20px}
+.already_id .id_listBox {height:105px}
+.already_id .label_checkBox {}
+.already_id .label_checkBox label {display:block;border:1px solid #e0e0e0; border-top:none; padding:14px 15px 16px; cursor:pointer;}
+.already_id .label_checkBox label span {position:relative;top:-1px}
+.already_id .label_checkBox .comRadio input[type='radio'] {margin-top:0}
+.already_id .underTxt {font-size:1.3rem; color:#666; margin-top:15px}
+
+.tit_connect {background:url(http://image1.hanatour.com/mobile/common/member/bg_tit_connect.png) no-repeat center top / 109px 64px; padding-top:90px; font-size:2.3rem; font-weight:normal; margin-bottom:20px; text-align:center}
+.stxt_connect {font-size:1.3rem; color:#666; margin-bottom:40px; text-align:center}
+
+.loginCont_main {}
+.btm_linkBox {margin-top:5px; text-align:center}
+.btm_linkBox a {display:inline-block; padding:15px 13px; position:relative; color:#666; font-size:1.2rem}
+.btm_linkBox a:after {content:'';width:1px; height:12px; background-color:#dfdfdf; position:absolute;right:-1px;top:50%; margin-top:-6px}
+.btm_linkBox a:last-child:after {content:none}
+.id_loginCont .btm_linkBox {padding-bottom:25px; border-bottom:1px solid #e0e0e0; margin-bottom:30px}
+
+.loginMainTab {}
+.loginMainTab .tabList {overflow:hidden;padding:10px 0 0;margin-bottom:30px}
+.loginMainTab .tabList li {float:left;width:50%}
+.loginMainTab .tabList li a {color:#666;border-bottom:3px solid #e0e0e0; display:block; padding:20px 0 15px; font-size:1.6rem; text-align:center}
+.loginMainTab .tabList li.on a {color:#111;border-color:#222; font-weight:bold}
+.loginMainTab .id_loginCont {text-align:}
+.loginMainTab .snsLogin_btnBox {text-align:center}
+.idBox {position:relative}
+.idBox .delBtn {position:absolute;right:0;bottom:0}
+.loginCheckBox {position:relative; margin:15px 0 30px}
+.loginCheckBox label {display:inline-block; margin-right:10px}
+.loginCheckBox label input[type='checkbox'].redCheck {margin-right:5px}
+.loginCheckBox label span {display:inline-block; font-size:1.2rem}
+.loginCheckBox .keboardView {position:absolute;right:0;top:0; padding:4px 15px 4px 0;background:url(http://image1.hanatour.com/mobile/common/member/ico_toggle01_off.png) no-repeat right center / 10px 6px; font-size:1.2rem; color:#666}
+.loginCheckBox .keboardView.on {background-image:url(http://image1.hanatour.com/mobile/common/member/ico_toggle01_on.png)}
+.loginCheckBox .keyboard_img {text-align:center; padding-top:15px; display:none}
+.loginCheckBox .keboardView.on+.keyboard_img {display:block}
+.loginCheckBox .keyboard_img img {height:92px}
+
+.subLayoutCaptcha {background-color:#fff;margin:20px 0 30px}
+.subLayoutCaptcha > p {margin-bottom:10px;font-size:1.3rem; color:#666}
+.captchaBox {display:table;width:100%;border:1px solid #ccc;box-sizing:border-box}
+.captchaBox > span {display:table-cell;width: 55%;vertical-align:middle;text-align:center}
+.captchaBox > span.img img {width: 100%; height:100px}
+.captchaBox > span.vol {height:100px; font-size:1.2rem; color:#898989; position:relative}
+.captchaBox > span.vol:before {content:'';display:block;width:100%; height:40px;background:url(http://image1.hanatour.com/mobile/common/idpw/ico_mic.png) no-repeat center 0; background-size:18px 30px}
+.captchaBox > span.vol:after { content:'';width:100%; height:100%; position:absolute;left:-1px;top:-1px;border:1px solid #e45b85;}
+.captchaBox div {display:table-cell;width: 45%;text-align:left;vertical-align: middle;padding:}
+.captchaBox div a {display:block; color:#ccc; font-size:12px; background:no-repeat 10px center; background-size:13px auto; padding:18px 0 18px 30px; height:50px; box-sizing:border-box;border-left:1px solid #ccc}
+.captchaBox div a.vol {background-image:url(http://image1.hanatour.com/mobile/common/idpw/bg_captcha_vol02.png);border-top:1px solid #ccc}
+.captchaBox div a.pic {background-image:url(http://image1.hanatour.com/mobile/common/idpw/bg_captcha_pic.png);border-top:1px solid #ccc}
+.captchaBox div a.repair {background-image:url(http://image1.hanatour.com/mobile/common/idpw/bg_captcha_re02.png)}
+.subLayoutCaptcha .txtWrite {display:block; margin-top:10px}
+.subLayoutCaptcha .txtWrite input {height:50px; text-indent:10px; border:1px solid #ccc;width:100%; border-radius:0; font-size:1.3rem}
+.subLayoutCaptcha .txtWrite input::placeholder {color:#ccc}
+.pwerr5_txt {font-size:1.2rem; color:#666; margin-bottom:20px}
+.pwerr5_txt em {display:block;font-size:1.3rem;color:#333; margin-bottom:10px}
+
+.finger_loginCont {padding-top:25px}
+.finger_loginCont .txt_finger_login {background:url(http://image1.hanatour.com/mobile/common/member/bg_txt_finger_login.png) no-repeat center top / 60px 59px; padding-top:80px; font-size:1.4rem; margin:0 0 30px; text-align:center}
+.finger_loginCont .m_btnRed { margin-bottom:30px}
+
+.placeholderBox {position:relative}
+.placeholderBox .placeholderTxt {font-size:1.3rem; position:absolute;left:0;top:50%;transform:translate(0, -50%); -webkit-transform:translate(0, -50%); margin-top:8px}
+.placeholderBox .placeholderTxt.left {left:10px;margin-top:0}
+.placeholderBox .placeholderTxt span {color:#888; display:inline-block; margin-left:4px}
+
+.pack_reservCont .phoneBox {padding-left:108px;position:relative}
+.pack_reservCont .phoneBox select {position:absolute;left:0;bottom:0;width:85px;font-size:1.3rem; height:50px;border:none; border-bottom:1px solid #ccc; background:url(http://image1.hanatour.com/mobile/common/bg_select_red.png) no-repeat right center / 13px 7px}
+.pack_reservCont .phoneBox select:focus {border-color:#e45b85}
+.pack_reservCont .btm_linkBox {margin-bottom:15px}
+.pack_reservCont .m_btnRed,.airhotel_reservCont .m_btnRed {margin-top:30px}
+
+.fingerStep01_cont {padding-top:20px}
+.fingerStep02_cont {padding-top:30px}
+.fingerStep02_cont .termsPopList {margin-bottom:30px}
+.fingerStep03_cont {padding-top:40px}
+.fingerStep03_cont .tit_fingerEnd {font-weight:normal;font-size:1.4rem; text-align:center; margin-bottom:30px;background:url(http://image1.hanatour.com/mobile/common/member/bg_txt_finger_login.png) no-repeat center top / 60px 59px; padding-top:80px;}
+.fingerStep03_cont .comBulTxt {padding-top:40px}
+
+.password_changeCont {padding-top:40px}
+.password_changeCont .tit_pwRe {text-align:center;font-weight:normal;font-size:2.3rem;background:url(http://image1.hanatour.com/mobile/common/member/bg_password_change.png) no-repeat center top / 150px 45px; padding-top:70px}
+.password_changeCont .tit_pwRe span {color:#c83d67}
+.password_changeCont .txt_pwRe {font-size:1.3rem;color:#666; margin:20px 0 50px;text-align:center;}
+.password_changeCont .mb_passwordCell {border-top:2px solid #3d414a; padding-bottom:30px}
+.password_changeCont .mb_passwordCell > div {margin-top:20px}
+.password_changeCont .comBulTxt {margin-top:30px}
+
+.id_connectCont {text-align:center; padding-top:25px}
+.id_connectCont h2 {font-weight:normal;font-size:2.3rem;background:url(http://image1.hanatour.com/mobile/common/member/bg_id_connect_cont.png) no-repeat center top / 78px 56px; padding-top:76px; margin-bottom:15px}
+.id_connectCont h3 {font-weight:normal; font-size:1.6rem; margin-bottom:20px}
+.id_connectCont .messagesBox {position:relative; margin-bottom:55px}
+.id_connectCont .messagesBox p {display:inline-block; margin-right:4px; color:#666; font-size:1.3rem}
+.id_connectCont .messagesBox .cm_miniPop_cont {padding-right:25px; text-align:left}
+.id_connectCont .messagesBox .cm_miniPop_cont span {font-size:1.2rem; color:#666}
+.id_connectCont .comBulTxt {text-align:left; margin-top:30px}
+.id_connectCont .idpwConfirm {margin-bottom:30px; border-top:2px solid #3d414a;text-align:left}
+.id_connectCont .idpwConfirm span {display:block; padding:20px 0; font-size:1.4rem}
+.id_connectCont .btm_linkBox {border-top:1px solid #e0e0e0; margin-top:20px}
+
+.findEndCont {text-align:center}
+.findEndCont h2 {background-color:#f9f9f9; font-weight:normal;font-size:1.6rem; padding:40px 0; line-height:2rem; margin-bottom:15px}
+.findEndCont.idCont p {margin-bottom:50px}
+.findEndCont.pwCont h2 em {display:block; margin-bottom:10px}
+.findEndCont.pwCont p {margin-bottom:30px;}
+.findEndCont.pwCont .comBulTxt {text-align:left; margin-top:30px}
+
+.tit_overlap_pop {font-weight:normal;font-size:2.3rem;background:url(http://image1.hanatour.com/mobile/common/member/bg_id_connect_cont.png) no-repeat center top / 78px 56px; padding-top:76px; margin:30px 0 15px; text-align:center}
+.txt_overlap_pop {font-size:1.3rem; margin-bottom:30px; color:#666; text-align:center}
+.dl_qna_pop {text-align:left; margin-top:30px}
+.dl_qna_pop dt {font-size:1.2rem; margin-bottom:15px}
+.dl_qna_pop dd {font-size:1.2rem; color:#666; padding-left:8px; position:relative; line-height:1.6rem}
+.dl_qna_pop dd+dd {margin-top:10px}
+.dl_qna_pop dd:before {content:'';width:3px; height:3px; background-color:#666; border-radius:50%; position:absolute;left:0;top:6px}
+
+.join_endBanner {border-top:1px solid #e0e0e0; padding-top:30px}
+.join_endBanner a {display:block}
+.join_endBanner a+a {margin-top:5px}
+.join_endBanner a img {width:100%}
+
+.popReserve01 .header {position:fixed;top:0;left:0;width:100%; z-index:1}
+.popReserve01 .header+* {margin-top:50px !important}

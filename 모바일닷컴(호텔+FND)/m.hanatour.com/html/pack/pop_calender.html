@@ -1,0 +1,51 @@
+
+<script type="text/javascript">
+	$('body .slidepopup:last').off('open.loadpop').on('open.loadpop', function (e) {
+		//
+	});
+</script>
+
+<div class="popReserve01">
+	<div class="header pickerTop" data-fixedfix>
+		<h3 class="datepickerTit"><span class="tit">출발일 선택</span><a href="#" class="closeOverlayPanel" data-role="none" title="레이어닫기"></a></h3>
+		<ul class="pickerDayList">
+			<li>일</li>
+			<li>월</li>
+			<li>화</li>
+			<li>수</li>
+			<li>목</li>
+			<li>금</li>
+			<li>토</li>
+		</ul>
+	</div>
+	<div class="headPicMargin"></div>
+	<div class="overflowWrap innerScroller">
+		<div class="view">
+			<div id="datepicker">
+			</div>
+			<div class="ui-datepicker-title-add" style="display:none;">
+				<span class="allMonth_check"><input type="checkbox" name="allmonth" value="">월 전체</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="footPicMargin"></div>
+	<div class="pickerBtm footer" data-fixedfix>
+		<form id="detepicker-form" name="detepicker-form">
+			<!-- 다구간 : dateS=출국일 / dateM=중간일 / dateE=귀국일 -->
+			<!-- 왕복 : dateS=출국일 / dateE=귀국일 -->
+			<!-- 편도 : dateS=출국일 -->
+			<input type="hidden" name="dateS" value="" />
+			<input type="hidden" name="dateM" value="" />
+			<input type="hidden" name="dateE" value="" />
+		</form>
+		
+		<!-- 왕복 -->
+		<div class="oneType">
+			<span class="dayCell">출발일<strong class="date-start">&nbsp;</strong></span>
+		</div>
+		<!-- // 왕복 end -->
+		
+		<a href="#" data-role="none">확인</a>
+	</div>
+</div>

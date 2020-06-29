@@ -1,0 +1,906 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,form,div,p,h1,h2,h3,h4,h5,h6,dl,dt,dd,ul,ol,li,fieldset,input,textarea,button,blockquote,th,td {margin:0;padding:0;-webkit-text-size-adjust:none; font-size:14px; font-family:'DroidSansFallback','Apple Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;color:#333;letter-spacing:-1px}
+table {border-spacing:0;border-collapse:collapse;width:100%}
+table caption {font-size:0;line-height:0;width:0;height:0;visibility:hidden;text-indent:-9999px}
+em,cite,address,dfn,var {font-style:normal}
+dl,ul,ol{list-style:none}
+img,fieldset {border:0}
+input, select, img{vertical-align:middle;}
+input, select, textarea, button {-webkit-appearance:none;border-radius:0;outline:none}
+button {border:none; background-color:transparent;cursor:pointer}
+a {text-decoration:none;color:#333}
+
+html {font-size:10px}
+@media all and (min-width:375px) { /* 아이폰6 */
+    html {font-size:11.5px}
+}
+@media all and (min-width:414px) { /* 아이폰6 plus */
+    html {font-size:12px}
+}
+
+body {width:100%;overflow-x:hidden;-webkit-text-size-adjust:none;text-size-adjust: none;}
+#wrap {position:relative;width:100%;}
+
+/* ----------------------- menuPanel --------------------------*/
+/* 2015-04-10 수정 */
+#menuPanel {position:fixed;left:-280px;top:0;width:280px;height: 100%;z-index: 200;background: #fff;-webkit-overflow-scrolling: touch;-webkit-transform: translateZ(0px);-webkit-transform:translate3d(0,0,0);-webkit-perspective: 1000;-webkit-transition-property: -webkit-transform;-webkit-transition-timing-function: ease-out;-webkit-transition-duration:300ms;transition-property: transform;transition-timing-function: ease-out;transition-duration: 300ms;}
+#menuPanel.slideIn {-webkit-transform:translateX(280px);transform: translateX(280px);}
+#menuPanel .innerScroller {-webkit-overflow-scrolling: touch;width: 100%; height: 100%;overflow-y:scroll;}
+#menuPanel.slideIn .closeSlide {position:absolute;right:-35px;top:15px; display:block; width:22px; height:22px;background:url(../images/common/btn_theme_close.png) no-repeat 0 0; background-size:22px; z-index:100}
+
+/* ----------------------- userPanel --------------------------*/
+#userPanel {position:fixed;left:100%;top: 0px;width: 280px;height: 100%;z-index: 200;background: #fff;-webkit-transform: translateZ(0px);-webkit-transform: translate3d(0,0,0);-webkit-perspective: 1000;-webkit-transition-property: -webkit-transform;-webkit-transition-timing-function: ease-out;-webkit-transition-duration: 300ms;transition-property: transform;transition-timing-function: ease-out;transition-duration:300ms;}
+#userPanel.slideIn {-webkit-transform: translateX(-280px);transform: translateX(-280px);}
+#userPanel .innerScroller {-webkit-overflow-scrolling:touch;overflow-y:scroll;width:100%;height:100%}
+#userPanel.slideIn .closeSlide {position:absolute;left:-35px;top:15px; display:block; width:22px; height:22px;background:url(../images/common/btn_theme_close.png) no-repeat 0 0; background-size:22px; z-index:100}
+/* //2015-04-10 수정 */
+
+
+/* ----------------------- overlayPanel --------------------------*/
+/* 2015-03-13 */
+.slidepopup, #overlayPanel {position: relative;opacity:0;width: 100%;height:100%;min-height:100%;display: none;background: #fff;overflow: visible;overflow-x: hidden;}
+.slidepopup.show, #overlayPanel.show {opacity: 1;display:block}
+.slidepopup.slide, #overlayPanel.slide {position: fixed;z-index: 3000;-webkit-animation-timing-function: ease-out;-webkit-animation-duration: 350ms;-webkit-animation-delay: 50ms;animation-delay: 50ms;animation-timing-function: ease-out;animation-duration: 350ms;-webkit-box-sizing: border-box;box-sizing: border-box;overflow: hidden;left: 0;top: 0;transform: translateY(0);opacity: 1;}
+.slidepopup.slideUp, #overlayPanel.slideUp {display:block;-webkit-animation-name: slideUp;animation-name: slideUp;-webkit-transform: translateY(100%);transform: translateY(100%);}
+.slidepopup.slideDown, #overlayPanel.slideDown {-webkit-animation-name: slideDown;animation-name: slideDown;-webkit-transform: translateY(0);transform: translateY(0);}
+@-webkit-keyframes slideUp {
+    from { -webkit-transform: translateY(100%); }
+    to { -webkit-transform: translateY(0); }
+}
+@keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+@-webkit-keyframes slideDown {
+    from { -webkit-transform: translateY(0); }
+    to { -webkit-transform: translateY(100%); }
+}
+@keyframes slideDown {
+    from { transform: translateY(0); }
+    to { transform: translateY(100%); }
+}
+.slidepopup .header, #overlayPanel .header {position:; top: 0;width: 100%; z-index: 3001;left:0}
+.slidepopup .cityHeaderMar+.header, #overlayPanel .cityHeaderMar+.header {position:static;}
+.slidepopup .footer, #overlayPanel .footer {position: fixed;left:0; bottom: 0;width: 100%; z-index: 3001}
+.slidepopup .headerMar, #overlayPanel .headerMar { height: 50px;}
+/* //2015-03-13 */
+
+/* 공통 :: 간격,인풋,셀렉트,버튼,txt리스트 */
+.padT0 {padding-top:0 !important}
+.padB0 {padding-bottom:0 !important}
+.padNone {padding:0 !important}
+.padT10 {padding-top:10px !important}
+.marT0 {margin-top:0 !important}
+.marT5 {margin-top:5px !important}
+.marT10 {margin-top:10px !important}
+.marT15 {margin-top:15px !important}
+.marT20 {margin-top:20px !important}
+.marT25 {margin-top:25px !important}
+.marT30 {margin-top:30px !important}
+.marT35 {margin-top:35px !important}
+.marB0 {margin-bottom:0 !important}
+.marB5 {margin-bottom:5px !important}
+.marB10 {margin-bottom:10px !important}
+.marB15 {margin-bottom:15px !important}
+.marB50 {margin-bottom:50px !important}
+.txt_r {text-align:right !important}
+.txt_l {text-align:left !important}
+.txt_c {text-align:center !important}
+.imgFull {width:100% !important}
+.c_red {color:#c83d67 !important}
+.c_black {color:#333 !important}
+.c_gray {color:#666 !important}
+.c_blue {color:#5e9acd !important}
+/* 20180706 고객센터 개편 : 추가 */
+.c_pink {color:#e45b85 !important}
+.txtLink {text-decoration:underline !important}
+/* // 20180706 고객센터 개편 : 추가 */
+
+input[type='checkbox'].redCheck {height:24px;width:24px;border:1px solid #ccc;border-radius:3px;background-color:#fff; margin-right:10px}
+input[type='checkbox'].redCheck+span {color:#666}
+input[type='checkbox'].redCheck:checked {border:1px solid #c83d67;background:#c83d67 url(http://image1.hanatour.com/mobile/common/idpw/bg_check_on.png) no-repeat center center;background-size:16px 13px}
+input[type='checkbox'].redCheck:checked+span {color:#333}
+.selectBox {display:block;background:#fff url(http://image1.hanatour.com/mobile/common/bg_select_rpad.png) no-repeat right center / 27px 7px;text-indent:10px;font-size:14px;height:50px;width:100%;border:1px solid #ccc;box-sizing:border-box;color:#333;}
+a.selectBox {padding-top:14px;}
+.inputTxt {font-size:14px;border:1px solid #ccc; height:50px;width:100%; box-sizing:border-box; text-indent:10px; text-align:left !important; color:#333}
+.inputTxt:focus,.selectBox:focus,textarea:focus {border-color:#e45b85 !important}
+.inputTxt::placeholder,.textarea::placeholder {color:#ccc !important}
+input:disabled,select:disabled {background:#f6f6f6 !important;color:#aaa;opacity:1}
+.btnselRed {display:block;border:1px solid #ccc;background:url(http://image1.hanatour.com/mobile/common/bg_select_rpad.png) no-repeat right center / 27px 7px;text-indent:8px;padding:0;border-radius:3px;font-weight:bold;font-size:15px;height:44px;width:100%}
+a.btnselRed {padding-top:12px; height:32px}
+
+.comRadio {display:inline-block} /* label tag class */
+.comRadio input[type='radio'] {background:#fff;width:24px;height:24px;margin-right:5px;border:1px solid #ccc; border-radius:50%; position:relative; margin-top:-3px}
+.comRadio input[type='radio']+span {font-size:1.3rem;color:#666; vertical-align:middle;display:inline-block; margin-right:12px}
+.comRadio input[type='radio']:checked:after {content:'';background:#c83d67;width:12px;height:12px;margin-right:5px;border-radius:50%; position:absolute;left:50%; top:50%; margin:-6px 0 0 -6px}
+.comRadio input[type='radio']:checked+span {color:#333;font-weight:bold;}
+/* 20180706 고객센터 개편 : 추가 */
+.comRadio .comRadioSmallTxt {font-size:1.3rem;color:#888;font-weight:normal;}
+/* // 20180706 고객센터 개편 : 추가 */
+
+.m_btnRed {display:block; background-color:#c83d67; border:1px solid #c83d67; text-align:center; font-size:18px; color:#fff; padding:11px 0; border-radius:3px;font-weight:bold; margin:8px 0 10px}
+.m_btnRed.gray {background-color:#8e94a4; border:1px solid #8e94a4;}
+.btnTwoBox {overflow:hidden; margin:0 12px}
+.btnTwoBox a {width:48% !important; float:left}
+.btnTwoBox a+a {float:right}
+.btnFullMore {display:block;padding:25px 0;font-size:1.4rem;color:#888;text-align:center;}/* 20180706 고객센터 개편 : 추가 */
+
+.comBulTxt {padding:8px 0}
+.comBulTxt.padNone {padding:0}
+.comBulTxt li {font-size:1.3rem;color:#666; position:relative; padding-left:8px}
+.comBulTxt li+li {margin-top:5px}
+.comBulTxt li:before {content:'';width:3px; height:3px; border-radius:50%; background-color:#666; position:absolute;left:0;top:6px}
+.comBulTxt.red li:before {background-color:#c83d67}
+
+/* ----------------------- container --------------------------*/
+#container {position: relative;z-index:1;width: 100%;-webkit-transition-property: -webkit-transform;-webkit-transition-timing-function: ease-out;-webkit-transition-duration: 300ms;transition-property: transform;transition-timing-function: ease-out;transition-duration: 300ms;}
+#wrap.slideLeft #container { -webkit-transform: translateX(20%);transform: translateX(20%);}
+#wrap.slideRight #container { -webkit-transform: translateX(-20%);transform: translateX(-20%);}
+.mask { position: fixed;top: 0;bottom: 0;left: 0;right: 0;background: #000;opacity: 0.7;z-index: 100;-webkit-transition-property: -webkit-transform opacity;-webkit-transition-timing-function: ease-out;-webkit-transition-duration: 200ms;transition-property: transform opacity;transition-timing-function: ease-out;transition-duration: 200ms;-webkit-touch-callout: none;-webkit-text-size-adjust: none;text-size-adjust: none;/*-webkit-animation: maskOpacity 300ms 1 ease;animation: maskOpacity 300ms 1 ease;*/}
+.ics .mask {-webkit-animation: none;animation: none;}
+@-webkit-keyframes maskOpacity {
+    0% { opacity: 0; }
+    100% { opacity: 0.5; }
+}
+@keyframes mask {
+    0% { opacity: 0; }
+    100% { opacity: 0.5; }
+}
+
+.headerMargin {height:52px;}
+.headerMargin02 {height:50px;}
+.headerMargin03 {height:149px;}
+.headerMargin04 {height:104px;}
+.headerMargin05 {height:132px;}
+.headerMargin06 {height:188px;}
+.headerMargin07 {height: 92px;}
+
+/* header */
+#header {position:fixed;left: 0;top: 0;-webkit-transition-property: -webkit-transform;-webkit-transition-timing-function: ease-out;-webkit-transition-duration: 300ms;transition-property: transform;transition-timing-function: ease-out;transition-duration: 300ms; border-bottom:1px solid #ccc}
+#header h1 {position: relative; z-index: 10; background: #fff; }
+#wrap.slideLeft #header {-webkit-transform: translateX(20%);transform: translateX(20%);}
+#wrap.slideRight #header {-webkit-transform: translateX(-20%);transform: translateX(-20%);}
+#header {text-align:center;width: 100%;z-index:10;background: #fff}
+#header.tBanTy {top:56px}
+#header .inner h1 a {display:inline-block;padding:16px 20px 15px}
+#header .inner h1 img{height:20px}
+#header .inner > a {position:absolute;top:0;z-index:10;}
+#btnMenu {left:0;padding:17px 12px 17px;}
+#btnMenu img {width:17px;}
+#btnMyhome {right:0;padding:16px 12px 16px;}
+#btnMyhome img {width:16px;}
+
+.backBtn {left:0; padding:16px 15px 14px 8px}
+.backBtn img {width:12px}
+
+/* header New 2018 */
+#commonArea_newHeader { height:52px;z-index:10; background-color:#fff;text-align:center;-webkit-transition-property: -webkit-transform;-webkit-transition-timing-function: ease-out;-webkit-transition-duration: 300ms;transition-property: transform;transition-timing-function: ease-out;transition-duration: 300ms}
+#commonArea_newHeader.fixed {border-bottom:#e8e8e8 1px solid;position:fixed;left: 0;top: 0;width:100%;}
+#commonArea_newHeader.fixed+* {margin-top:52px !important}
+#commonArea_newHeader h1 {font-size:1.8rem;padding-top:16px}
+#commonArea_newHeader h1 a {}
+#commonArea_newHeader .backPageBtn {position:absolute;left:0;top:0;width:40px; height:52px;background:url(../images/common/btn_header_back.png) no-repeat center center / 12px 21px}
+
+.pagTit {position:relative;padding:11px 15px 0;height:40px; font-size:1.5rem; background-color:#c83d67; color:#fff; box-sizing:border-box;/*overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical; letter-spacing:-0.02em*/}
+/*.pagTit:after {content:''; position:absolute;left:0;bottom:0;width:100%; height:12px; background:#c83d67;}*/
+
+/* 좌측메뉴 */
+.nleftMenu h2 {background-color:#c83d67; color:#fff; border-top:1px solid #b72b48;border-bottom:1px solid #b72b48; padding:7px 0 6px 12px;font-size:13px;}
+.allmenu_2Dep {overflow:hidden}
+.allmenu_2Dep li {float:left; width:50%;}
+.allmenu_2Dep li a {display:block;padding:12px 6px 12px 12px;border-bottom:1px solid #eaeaea;height:41px;box-sizing:border-box}
+.allmenu_2Dep li:nth-child(2n+1) a {border-right:1px solid #eaeaea}
+.allmenu_btm {border-top:1px solid #696f80}
+/* start 20151015 수정 */
+.allmenu_btm a {display:block; color:#fff; font-weight:bold; background:#747b8e url(../images/common/bg_menu_list06.png) 12px center no-repeat;border-bottom:1px solid #696f80; padding:12px 0 12px 41px; background-size:20px; letter-spacing:0}
+.allmenu_btm a+a {background-image:url(../images/common/bg_menu_list01.png)}
+.allmenu_btm a+a+a {background-image:url(../images/common/bg_menu_list02.png)}
+.allmenu_btm a+a+a+a {background-image:url(../images/common/bg_menu_list03.png)}
+.allmenu_btm a+a+a+a+a {background-image:url(../images/common/bg_menu_list05.png)}
+/* end 20151015 수정 */
+.allmenu_app {overflow:hidden; background-color:#828899; padding-bottom:16px}
+.allmenu_app li {float:left; width:33.3%}
+.allmenu_app li:nth-child(2) {width:33.4%}
+.allmenu_app li a {display:block;color:#fff;font-size:11px;text-align:center;padding-top:70px;background:url(../images/common/bg_menu_app01.png) center 16px no-repeat; background-size:52px 51px}
+.allmenu_app li+li a {background-image:url(../images/common/bg_menu_app02.png)}
+.allmenu_app li+li+li a {background-image:url(../images/common/bg_menu_app03.png)}
+.allmenu_app li+li+li+li a {background-image:url(../images/common/bg_menu_app04.png)}
+.allmenu_app li+li+li+li+li a {background-image:url(../images/common/bg_menu_app05.png)}
+.allmenu_app li+li+li+li+li+li a {background-image:url(../images/common/bg_menu_app06.png)}
+#menuPanel .allmenu_event {display:block;padding-bottom:50px;background-color:#828899}
+#menuPanel .allmenu_event img {width:100%}
+
+/*우측메뉴 */
+.nRightMe_in  { margin-bottom:5px}
+.nRightMe_in h2 { background-color:#c83d67;color:#fff; padding:20px 65px 20px 20px;position:relative}
+.nRightMe_in h2 strong {font-size:22px}
+.nRightMe_in h2 a {color:#fff; position:absolute;right:0;top:0;text-align:center; padding:36px 0 14px;background:url(../images/common/bg_login.png) no-repeat center 14px;background-size:16px 17px; width:65px}
+.nRightMe_in > a {padding:20px 20px 20px 56px;display:block;font-size:15px; background:20px center no-repeat; background-size:20px 18px; border-bottom:1px solid #ccc; position:relative; overflow:hidden}
+.nRightMe_in > a:after { content:''; width:10px; height:100%; display:block; right:24px;top:0; background:url(../images/common/bg_right_bul.png) no-repeat 0 center; background-size:10px 17px; position:absolute}
+.nRightMe_in > a span {float:right; font-size:15px; color:#888; margin-right:24px}
+.nRightMe_in > a.bgRightM01 {background-image:url(../images/common/bg_right01.png)}
+.nRightMe_in > a.bgRightM02 {background-image:url(../images/common/bg_right02.png)}
+.nRightMe_in > a.bgRightM03 {background-image:url(../images/common/bg_right03.png)}
+.nRightMe_in > a.bgRightM04 {background-image:url(../images/common/bg_right04.png)}
+.nRightMe_in > a.bgRightM05 {background-image:url(../images/common/bg_right05.png)}
+.nRightMe_in > a.bgRightM06 {background-image:url(../images/common/bg_right06.png)}
+.nRightMe_in > a.bgRightM07 {background-image:url(http://image1.hanatour.com/mobile/common/bg_menu_coupon_gray.png)} /* 20151216 추가 */
+
+.nRightMe_in .mileBox {background-color:#f7f7f7;border-bottom:1px solid #ccc}
+.nRightMe_in .mileBox ul {padding:13px 20px}
+.nRightMe_in .mileBox ul li {overflow:hidden;margin-bottom:12px;position:relative;padding-left:8px;color:#666}
+.nRightMe_in .mileBox ul li:before {content:'';width:4px;height:4px;display:block;left:0;top:5px;background:#ccc;position:absolute;border-radius:50%}
+.nRightMe_in .mileBox ul li:last-child {margin-bottom:0}
+.nRightMe_in .mileBox ul span {float:right; font-size:15px; font-weight:bold; padding-right:2px; letter-spacing:0}
+.nRightMe_in .mileBox ul span img {width:16px;margin-left:3px;}
+.nRightMe_in .mileBox .milebtnBox {display:block;text-align:center; margin-bottom:15px}
+.nRightMe_in .mileBox .milebtnBox a {display:inline-block; font-size:12px; border-radius:3px;background: -moz-linear-gradient(top,#fff 0%,#efefef);background: -webkit-gradient(linear, left top, left bottom, from(#fff),to(#efefef)); border:1px solid #ccc; padding:5px 11px}
+
+#userPanel .allmenu_event {display:block;}
+#userPanel .allmenu_event img {width:100%}
+
+.nRightMe_out {text-align:center;background-color:#f7f7f7;padding-top:80px}
+.nRightMe_out p {text-align:center}
+.nRightMe_out p strong {display:block;margin-bottom:20px;font-size:22px}
+.nRightMe_out div {text-align:center;padding:30px 0 80px}
+.nRightMe_out div a {display:inline-block;width:200px;color:#fff;padding:14px 0; border-radius:5px; font-size:15px}
+.nRightMe_out div .rlogin {border:1px solid #c83d67;background-color:#c83d67}
+.nRightMe_out div .rjoin {border:1px solid #a6acbd;background-color:#a6acbd;margin-top:10px}
+
+/* footer */
+.newFoot {background-color:#fff}
+.newFoot ul {overflow:hidden;margin-bottom:20px;border-top:1px solid #666}
+.newFoot ul li {float:left;width:37%;border-bottom:1px solid #aaa;height:44px}
+.newFoot ul li a {display:block;width:100%;text-align:center;padding:15px 0;border-left:1px solid #aaa;font-size:12px;font-weight:bold}
+.newFoot ul li:first-child a {border-left:none}
+.newFoot ul li:last-child {width:26%}
+.newFoot ul li:last-child a {position:relative}
+.newFoot ul li:last-child a:after {content:''; display:inline-block;width:10px; height:100%; position:absolute;left:50%;top:0;background:url(../images/common/bg_footop.png) no-repeat 0 center;background-size:10px 5px; margin-left:17px}
+.newFoot div {padding:0 12px;margin-bottom:10px;text-align:center}
+.newFoot div a {font-size:13px;display:inline-block;margin:0 4px 0 0;vertical-align:top;padding-top:1px}
+.newFoot address {font-size:12px;color:#666;padding:0 8px 30px 8px;line-height:19px;letter-spacing:-1px;text-align:center}
+.newFoot address .mailto  {color:#f93d8b}
+
+@media all and (max-width:320px) {  /* 320이하일 경우*/
+    .newFoot div a {font-size:12px}
+    .newFoot address {font-size:11px;line-height:17px}
+}
+
+/* top btn */
+.topBtn01 {position:fixed;right:10px;bottom:15px;-webkit-transition-property: -webkit-transform opacity; -webkit-transition-timing-function: ease;-webkit-transition-duration: 1s ; transition-property: transform opacity ; transition-timing-function: ease ; transition-duration: 1s ;opacity: 0; display:none;z-index:10} /* 20160212 수정 */
+.topBtn01.on {opacity: 1; display:block}
+.topBtn01 img {width:56px}/* 20160212 수정 */
+
+/* 퀵버튼 추가 20160212 추가 */
+.quickDimBox .dimbtnToggle {position:fixed;right:11px;bottom:15px; width:55px; height:55px; background:url(http://image1.hanatour.com/mobile/common/comm/btn_quick_toggle_splite.png) no-repeat 0 0; background-size:825px 55px; z-index:50;border-radius:50%}
+.quickDimBox.topPosi .dimbtnToggle {bottom:80px}
+.quickDimBox .dimBtnQuick {display:none;position:fixed;left:0;top:0; width:100%; height:100%;z-index:40}
+.quickDimBox .dimBtnQuick.on {display:block}
+.quickDimBox .dimBtnQuick ul {position:fixed;text-align:right;right:0;bottom:85px;width:100%;height:50%}
+.quickDimBox.topPosi .dimBtnQuick ul {bottom:150px}
+.quickDimBox .dimBtnQuick ul li {position:absolute;right:12px;bottom:116px}
+.quickDimBox .dimBtnQuick ul li+li {bottom:58px}
+.quickDimBox .dimBtnQuick ul li+li+li {bottom:0}
+.quickDimBox .dimBtnQuick ul li a {overflow-x:hidden; display:inline-block; background:no-repeat right 0; background-size:52px 52px; color:#fff; padding:18px 80px}
+.quickDimBox .dimBtnQuick ul li a.icoBg01 {background-image:url(http://image1.hanatour.com/mobile/common/comm/btn_quick_ico01.png)} /* 슈퍼세이브 */
+.quickDimBox .dimBtnQuick ul li a.icoBg02 {background-image:url(http://image1.hanatour.com/mobile/common/comm/btn_quick_ico02.png)} /* 추천기획전 */
+.quickDimBox .dimBtnQuick ul li a.icoBg03 {background-image:url(http://image1.hanatour.com/mobile/common/comm/btn_quick_ico03.png)} /* 플러스여행 */
+.quickDimBox .dimBtnQuick ul li a.icoBg04 {background-image:url(http://image1.hanatour.com/mobile/common/comm/btn_quick_ico04.png)} /* 이벤트 */
+.quickDimBox .dimBtnQuick ul li a.icoBg05 {background-image:url(http://image1.hanatour.com/mobile/common/comm/btn_quick_ico05.png)} /* 프로듀서 */
+.quickDimBox .dimBtnQuick ul li a.icoBg06 {background-image:url(http://image1.hanatour.com/mobile/common/comm/btn_quick_ico06.png)} /* 테마여행 */
+.quickDimBox .dimBtnQuick ul li a.icoBg07 {background-image:url(http://image1.hanatour.com/mobile/common/comm/btn_quick_ico07.png)} /* 하나TV쇼핑 */
+.quickDimBox .dimBtnQuick ul li a.icoBg08 {background-image:url(http://image1.hanatour.com/mobile/common/comm/btn_quick_ico08.png)} /* 커피 */
+.quickDimBox .dimBtnQuick ul li a.icoBg09 {position:relative;right:-2px;padding-right:82px;background-image:url(http://image1.hanatour.com/mobile/common/comm/btn_quick_ico09.png);background-size:54px 52px} /* 챗봇 */
+.quickDimBox .txt {position:relative;right:-75px;font-weight:bold}
+
+
+/* 20151015 슈퍼세이브 버튼 삭제
+.btnSuperQuick {position:fixed;right:7px;bottom: 15px;}
+.btnSuperQuick img {width:50px}
+.topBtn01.on+.btnSuperQuick {bottom: 65px;}
+end 20151015 슈퍼세이브 버튼 추가 */
+
+.loadinBar {text-align:center; padding:12px 0 15px}
+.loadinBar img {width:30px}
+/* 제이쿼리 모바일 관련 css */
+.ui-loader{display:none}
+
+/* 팝업 */
+.mainPop {position:absolute; display:none; padding:30px 0; top:80px;left:0; z-index:999; width:100%}
+.mainPop > div {margin:0 20px;background-color:#fff}
+.mainPop > div a {display:block}
+.mainPop > div a img {width:100%;}
+.mainPop div div {height:50px; position:relative; border-top:1px solid #ccc; overflow:hidden}
+.mainPop div div label {display:block;padding:13px 0 13px 15px; vertical-align:middle; margin-right:75px}
+.mainPop div div label .redCheck {margin-right:8px}
+.mainPop div div a { position:absolute;right:0;top:0; padding:18px 25px 17px;border-left:1px solid #ccc; z-index:100}
+.popDim {position:fixed; display:none;left:0;top:0;height:100%;width:100%; background-color:#000; opacity:0.5; z-index:50}/* 딤처리 */
+.popDim02 {position:fixed; display:;left:0;top:0;height:100%;width:100%; background-color:#000; opacity:0.8; z-index:50}/* 딤처리 */
+
+/* 테마별 여행정보 */
+/* 2015-05-07 수정 */
+.themeMov {position:relative}
+.themeMov ul {overflow:hidden}
+.themeMov ul li {display:none; float:left}
+.themeMov ul li:first-child {display: block;}
+.themeMov a { display:block; position:relative}
+.themeMov a img {width:100%}
+.themeMov a div {position:absolute;left:0;top:50%;width:100%;color:#fff; margin-top:-65px; text-align:center; text-shadow:1px 1px 3px #000000}
+.themeMov a div img{width:64px}
+.themeMov a div > strong {display:block; font-size:14px}
+.themeMov a div span {display:block}
+.themeMov a div em {display:block}
+.themeMov a div p {color:#fff; font-size:17px; margin:6px 0 3px; font-weight:bold}
+.themeMov:before {content:''; position:absolute;left:5px;top:50%; margin-top:-15px; width:25px; height:30px; z-index:50; background:url(../images/common/main_17_new.png) no-repeat 0 0; background-size:25px 30px}
+.themeMov:after {content:''; position:absolute;right:5px;top:50%; margin-top:-15px; width:25px; height:30px;z-index:50;background:url(../images/common/main_17-06_new.png) no-repeat 0 0; background-size:25px 30px}
+.themeMov .slideBtn {position: absolute; left: 50%;bottom: 5px; margin-left:-15px}
+.themeMov .slideBtn a {display:inline-block;width:10px;height:10px;background:url(../images/main/btn_slide_off.png) no-repeat 0 0;background-size:10px;}
+.themeMov .slideBtn a.on{background-image:url(../images/main/btn_slide_on.png)}
+/* 2015-05-07 수정 */
+
+.travelStory h2 {padding:12px; font-size:15px; border-bottom:2px solid #ccc}
+.storyLeRi {overflow:hidden;position:relative; padding-bottom:15px}
+.storyLeRi ul {float:left;width:50%;}
+.storyLeRi:before {content:''; width:1px; height:100%; position:absolute; left:50%; top:8px; background-color:#eee}
+.storyLeRi ul li {margin-bottom:10px; padding:8px}
+.storyLeRi ul li a > span {position:relative; display:block}
+.storyLeRi ul li a > span > img {width:100%}
+.storyLeRi ul li a > span em {position:absolute;left:0;bottom:0; color:#fff; background-color:rgba(0,0,0,0.5); padding:5px; font-size:12px}
+.storyLeRi ul li a > span em img {width:15px; height:10px}
+.storyLeRi ul li a > span .time {position:absolute;left:10px;top:8px; color:#fff;text-shadow:1px 1px 3px #000}
+.storyLeRi ul li a > span .play {position:absolute;left:50%;top:50%; margin:-21px 0 0 -21px}
+.storyLeRi ul li a > span .play img {width:42px}
+.storyLeRi ul li a p {font-size:14px; margin-top:8px; font-weight:bold; color:#666}
+
+.themeNew {background:#19181d url(../images/common/bg_thememain.jpg) no-repeat 0 0;background-size:100%;}
+.themeTit {color:#fff; text-align:center}
+.themeTit strong {font-size:28px; display:block; padding:40px 0 30px; background:url(../images/common/bg_themestar.png) no-repeat center bottom;background-size:22px 21px;}
+.themeTit span {display:block; margin:15px 0 40px; font-size:14px; font-weight:normal}
+
+.etcTheme {background-color:#2f3341; position:relative; margin-top:20px}
+.etcTheme h2 {color:#fff; font-size:15px; padding:8px;border-bottom:1px solid #424552}
+.etcTheme .allTheme {position:absolute; right:0; top:0;color:#fff; padding:10px 8px; font-size:12px}
+
+.themeLayer {position:absolute; display:; padding:15px 0; top:0;left:0; z-index:999; width:100%}
+.themeLayer > div {margin:0 10px}
+.themeLayer h2 {text-align:center}
+.themeLayer h2 img {width:90px}
+.themeClose {position:absolute;right:0;top:0; padding:24px}
+.themeClose img {width:20px}
+.themeList {margin:20px 0 0 0;overflow:hidden; padding-bottom:50px}
+.etcTheme .themeList { padding-bottom:0}
+.themeList li {float:left;width:33.3%; text-align:center;margin-bottom:15px}
+.themeList li:nth-child(3n+2) {width:33.4%}
+.themeList li a {display:block;color:#fff;font-size:11px;width:75px; height:75px; border-radius:50px; margin:0 auto; border:2px solid #e0e0e0;overflow:hidden; background:no-repeat 0 0;background-size:120px 75px}
+.themeList li a span {padding:27px 5px 0 5px; display:block; background-color:rgba(0,0,0,0.5); height:100%}
+
+/*에러페이지 */
+.fullBtn {overflow:hidden;margin:0 8px 30px}
+.fullBtn a {float:right;width:49%;background-color:#c83d67;text-align:center;color:#fff;font-size:18px;padding:12px 0; font-weight:bold; border-radius:5px; margin:0 0 0 2px}
+.fullBtn a:first-child {background-color:#a6acbd; margin:0 2px 0 0; float:left}
+.errorCont {margin:100px 0 30px}
+.errorCont p {padding-top:85px;background:url(../images/common/bg_error.png) no-repeat center 0; background-size:70px 70px; text-align:center; color:#000;}
+.errorCont strong {display:block; font-size:15px; margin-bottom:15px}
+.errorCont .fullBtn {margin:50px 8px}
+
+/* 앱소개 팝업 */
+.topDimApp {position:fixed;left:0;top:0; background-color:rgba(0,0,0,0.7); width:100%; height:100%; z-index:1000;text-align:center}
+.topDimApp a{ color:#fff;text-shadow:none}
+.topDimApp .downAppBan {display:block;padding:240px 0 20px 0; font-size:20px; position:relative}
+.topDimApp .downAppBan:before {content:''; position:absolute;display:block;left:50%; bottom:51px; width:91px; height:90px; background:url(../images/common/bg_dim_app01.png) repeat 0 0;background-size:91px 90px; margin-left:-45px}
+.topDimApp .downAppBan:after {content:''; position:relative;display:inline-block;width:28px;height:28px;background:url(../images/common/bg_dim_app02.png) repeat 0 0;background-size:28px 28px;top:9px;left:5px}
+.topDimApp .closeBan {display:block; padding:50px 0 30px;font-size:16px;margin-top:50px}
+.topDimApp .closeBan span {display:inline-block; border-bottom:2px solid #fff; text-shadow:none}
+
+/* 띠배너 */
+.topBannerApp {position:fixed;top:0;left:0;height:56px;background-color:#747b8e; display:table;width:100%; z-index:100}
+.topBannerApp .downAppBan {color:#fff;display:table-cell; width:100%;text-align:left;text-shadow:none;font-size:12px;position:relative;background:url(../images/common/bg_top_app.png) 9px center no-repeat; background-size:28px 27px; vertical-align:middle; height:100%; padding:0 43px 0 45px}
+.topBannerApp .downAppBan span {font-size:12px;position:absolute;right:43px;top:15px;}
+.topBannerApp .downAppBan span img {height:28px}
+.topBannerApp .closeBan {position:absolute;right:0;top:0;width:43px;height:100%;background:url(../images/common/img_top_banclose.png) center center no-repeat; background-size:16px 16px; z-index:10}
+.topBannerApp.hotel .downAppBan {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/common/bg_top_app_hotel.png)}
+
+/* 알럿스타일 */
+.smallPop {position:fixed;left:0;top:90px;z-index:100;width:100%}
+.sm_Inner {margin:0 12px;position: relative; background:#fff; padding:30px 15px 0; border-radius:5px; text-align:center}
+.sm_Inner .oneBtnBox {margin:30px -15px 0;}
+.sm_Inner .oneBtnBox a {color:#fff; font-size:18px; display:block; background-color:#e45b85; text-align:center;border-radius:0 0 4px 4px; font-weight:bold; padding:12px 0}
+.sm_Inner .oneBtnBox a.gray {background-color:#e5e6e9; color:#666}
+.sm_Inner .twoBtnBox {margin:30px -15px 0; overflow:hidden}
+.sm_Inner .twoBtnBox a {float:left;width:50%;color:#fff; font-size:18px; display:block; background-color:#e45b85; text-align:center;border-radius:0 0 4px 0; font-weight:bold; padding:12px 0}
+.sm_Inner .twoBtnBox a:first-child {background-color:#e5e6e9; color:#666;border-radius:0 0 0 4px}
+.sm_Inner .cancleTxt {padding:30px 0;font-size:16px}
+.ptxtTit01 {font-size:16px; margin-bottom:15px}
+.ptxtTit01 strong {display:block; font-size:18px; margin-bottom:4px}
+.modalBg,.modalBg2{position:fixed;width:100%;height:100%;background:#000;opacity:0.5;z-index:2;left:0;top:0; z-index:50}
+
+/*네이버 */
+.nvLogin {margin:-4px 7px 0 0;display:inline-block}
+.nvLogin img {width:20px; margin-top:-7px}
+
+
+/* full 팝업 추가 */
+.popReserve01 {display:none}
+#overlayPanel .popReserve01,#overlayPanel1 .popReserve01 {display: block}
+.popReserve01 h3 {background-color:#747b8e; position:relative; color:#fff; height:35px; padding:15px 0 0 12px; font-size:18px}
+.popReserve01 h3 a {position:absolute; right:0;top:0;background:url(../images/common/btn_close01.png) no-repeat center center; background-size:19px; width:19px; height:19px; padding:16px 12px}
+.popReserve02 {width:100%;background-color:#dbdce1;}
+.popIncont01 {padding:15px 12px}
+.peopleBtn {text-align:center;height:47px;border:1px solid #ccc; margin-bottom:9px; border-radius:5px; border-bottom:1px solid #989898; position:relative}
+.peopleBtn > span {font-size:19px;font-weight:bold;padding-top:12px;display:inline-block}
+.peopleBtn a {position:absolute;top:0;background:no-repeat center center;width:44px; height:100%}
+.peopleBtn .plusBtn {right:0;background-image:url(../images/common/bg_plus01.png);background-size:13px 13px;border-left:1px solid #ccc}
+.peopleBtn .delBtn {left:0;background-image:url(../images/common/bg_minus01.png);background-size:13px 13px;border-right:1px solid #ccc}
+.peopleBtn02 {overflow:hidden; padding:5px 0 13px}
+.peopleBtn02 select {float:left;width:49%}
+.peopleBtn02 select+select {float:right}
+.peopleBtn02 select:disabled {background:#f7f7f7 url(../images/main/bg_select_red_disable.png) no-repeat 95% center; background-size:13px 7px; color:#ccc; opacity:1}
+
+.inforTxt {padding-left:18px; background:url(../images/common/bg_redtxt01.png) no-repeat 0 1px;background-size:14px 14px; margin:0 0 15px}
+.bulOneList {padding:0 20px 7px}
+.bulOneList li {color:#666; padding-left:10px; position:relative; margin-bottom:8px; font-weight:normal}
+.bulOneList li:before {content:''; width:4px; height:4px; display:block; position:absolute; left:0; top:5px; background-color:#767676; border-radius:50%}
+.bulOneList li em {color:#333}
+
+.s_redBtn {text-align:center; margin-top:30px}
+.s_redBtn a {border:1px solid #c83d67;background-color:#c83d67;color:#fff; margin:0 auto; padding:12px 50px 16px; font-weight:bold; border-radius:5px; height:15px; display:inline-block; font-size:18px}
+
+.inpSearBox01 {margin:15px 0; position:relative}
+.inpSearBox01 input {width:100%; height:50px;border:1px solid #ccc;text-indent:10px;border-radius:0;font-size:14px;box-sizing:border-box}
+.inpSearBox01 a {position:absolute;right:0;top:0}
+.inpSearBox01 a img {width:50px}
+.inpSearBox01.cityTy {background-color:#747b8e; padding:0 12px 15px 12px; margin:0}
+.inpSearBox01.cityTy > div {margin-right:50px; position:relative}
+.inpSearBox01.cityTy > div a {border:none; margin:0; padding:16px;width:17px}
+.inpSearBox01.cityTy > div a:after {background:url(../images/air/ico_searbtn.png) no-repeat center center; background-size:16px;width:100%; height:100%;content: "";position: absolute;display: block;right:0;top:0}
+.inpSearBox01.cityTy > a {right:12px}
+.inpSearBox01.cityTy > input {border:none}
+
+.cityEnd02 {border:1px solid #ccc; margin:12px}
+.falseTxt {text-align:center;background:url(../images/common/bg_falseend02.png) no-repeat center 0;background-size:70px; margin-top:25px; padding:75px 20px 25px}
+.falseTxt strong {display:block; margin:12px 0 15px; font-size:16px}
+
+.cityList01 h4 {padding:20px 0 10px 12px; border-bottom:1px solid #ccc; color:#c83d67; font-size:16px; font-weight:normal}
+.cityList01 strong {background-color:#f7f7f7; color:#747b8e;font-size:12px; height:21px; padding:6px 0 0 12px; display:block}
+.cityList01 ul li a {display:block; text-indent:12px;height:30px;border-bottom:1px solid #ebebeb; font-weight:bold; overflow:hidden; padding-top:14px; font-size:14px}
+.cityList01 ul li a span {float:right; margin-right:12px}
+.cityList01 ul li:last-child a {border-bottom:1px solid #ccc;}
+
+/* 통합검색 20151201 추가 */
+#btnSearch {right:40px; padding:16px 6px 16px 12px}
+#btnSearch img {width:16px}
+.bannerMaxHeig {display:block;text-align:center; margin:0 -12px}
+.bannerMaxHeig img {height:70px}
+.integ_search {background-color:#c83d67; padding:11px 12px 10px; position:relative}
+.integ_search .searchBtn {position:absolute; width:40px;right:12px;top:11px; height:40px;background:#99173e url(http://image1.hanatour.com/mobile/common/search/btn_txtsearch.png) no-repeat center center;background-size:19px;}
+.integ_search .inputBox {margin-right:80px; position:relative}
+.integ_search .inputBox input {border:none; background:#fff; height:40px; width:100%; text-indent:12px}
+/* 20160502 수정 */
+.integ_search .inputBox a {position:absolute; width:40px;right:-40px;top:0; height:40px; background-color:#fff}
+.integ_search .inputBox input:focus+a {background:#fff url(http://image1.hanatour.com/mobile/common/search/btn_close.png) no-repeat center center;background-size:16px;}
+/* // 20160502 수정 */
+
+.searchTab {overflow:hidden; position:relative}
+.searchTab:after { content:''; width:2px; height:100%; position:absolute;left:50%; margin-left:-1px; background-color:#ccc; top:0}
+.searchTab li {float:left;width:50%}
+.searchTab li a {display:block; padding:16px 0; font-size:16px; text-align:center; background-color:#f1f1f3; border-bottom:2px solid #ccc}
+.searchTab li.on a {border-bottom-color:#fff; background-color:#fff}
+
+.bestWord {margin-bottom:40px}
+.bestWord li {border-bottom:1px solid #eee}
+.bestWord li a {display:block;padding:15px 12px; position:relative; font-size:15px}
+ol.bestWord li em {border-radius:4px;background-color:#e45b85;font-size:13px;color:#fff;width:19px;display:inline-block;text-align:center;box-sizing:border-box; margin-right:10px; line-height:13px; padding:4px 0 2px}/* 20160502 수정 */
+ol.bestWord li+li+li+li em {background-color:#8f94a4;}
+ol.bestWord li .new {position:absolute; right:12px;top:50%; margin-top:-8px; font-weight:bold; color:#f33d88; font-size:14px}
+.bestWord li .ingTxt {color:#c83d67}
+
+ul.bestWord li a:after {content:'';position:absolute; width:11px;right:12px;top:50%; margin-top:-8px; height:17px;background:url(http://image1.hanatour.com/mobile/common/search/bg_search_rig.png) no-repeat 0 0;background-size:11px 17px;}
+
+.detailbtn {overflow:hidden;margin:5px 0 0}
+.detailbtn a {float:right;width:49%;background-color:#c83d67;text-align:center;color:#fff;font-size:18px;padding:12px 0; font-weight:bold; border-radius:5px; margin:0 0 0 2px}
+.detailbtn a:first-child {background-color:#a6acbd; margin:0 2px 0 0; float:left}
+
+.quickCont {background-color:#6d7588; position:relative}
+.quickCont strong {position:absolute;left:12px;top:50%; color:#fff; border-radius:5px; padding:5px; background-color:#8f94a4; margin-top:-12px; font-size:12px}
+.quickCont ul {overflow:hidden; margin-left:62px}
+.quickCont ul li {float:left;}
+.quickCont ul li a {color:#fff;font-size:14px; display:inline-block;padding:15px 5px}
+
+.searEndTab {overflow:hidden; border-bottom:1px solid #6d7588}
+.searEndTab li {float:left;width:25%; position:relative}
+.searEndTab li:after {width:1px; content:''; height:16px; position:absolute;left:0;top:50%; margin-top:-8px; background-color:#ccc}
+.searEndTab li:first-child:after {content:none}
+.searEndTab li a {display:block;text-align:center; padding:15px 0 14px; line-height:17px}
+.searEndTab li.twoline a {padding:6px 0}
+.searEndTab li.on a {font-weight:bold; color:#c83d67}
+
+.categoryBox {background-color:#dbdce1; padding:10px 12px 15px}
+.categoryBox .cateTab {background-color:#fff; position:relative; overflow:hidden}
+.categoryBox .cateTab:after {content:''; width:1px; height:100%; position:absolute;left:50%; margin-left:-1px; background-color:#ccc; top:0}
+.categoryBox .cateTab li {float:left;width:50%}
+.categoryBox .cateTab li.on {border-bottom-color:#fff}
+.categoryBox .cateTab li a {display:block; padding:14px; text-align:left; color:#333;background:url(http://image1.hanatour.com/mobile/common/search/bg_detail_off.png) no-repeat 92% center;background-size:12px;border:1px solid #ccc;}
+.categoryBox .cateTab li+li a {border-left:none}
+.categoryBox .cateTab.open li a {color:#aaa;background-image:url(http://image1.hanatour.com/mobile/common/search/bg_detail_off02.png);}
+.categoryBox .cateTab li.on a {color:#c83d67; font-weight:bold;background-image:url(http://image1.hanatour.com/mobile/common/search/bg_detail_on.png); border-bottom:1px solid #fff}
+.categoryBox .cateTabCont,.categoryBox .cateTabCont02 {background-color:#fff; border:1px solid #ccc; border-top:none;padding:15px 15px 0; overflow:hidden}
+.categoryBox .cateTabCont label {float:left;width:50%; margin-bottom:13px}
+.categoryBox label.long {width:100%}
+.categoryBox label input {margin-right:7px}
+.categoryBox label span {color:#666}
+.categoryBox label input:checked+span {color:#333}
+.categoryBox .cateTabCont02 {}
+.categoryBox .cateTabCont02 .detailSect02 {overflow:hidden}
+.categoryBox .cateTabCont02 .detailSect02 h3 {margin-bottom:7px}
+.categoryBox .cateTabCont02 .detailSect02 label {float:left;width:33.3%; margin-bottom:13px}
+.categoryBox .cateTabCont02 .detailSect03 {display:table;width:100%}
+.categoryBox .cateTabCont02 .detailSect03 > div {display:table-cell;width:49%;box-sizing:border-box}
+.categoryBox .cateTabCont02 .detailSect03 > div:first-child {padding-right:5px}
+.categoryBox .cateTabCont02 .detailSect03 > div:last-child {padding-left:5px}
+.categoryBox .redSelect{background:url(http://image1.hanatour.com/mobile/common/search/bg_select.png) no-repeat 94% center;background-size:13px 7px;text-indent:6px;width:100%;border:1px solid #ccc;height:40px;text-indent:10px;box-sizing:border-box;border-radius:0;font-size:13px; margin:7px 0 15px}
+
+.searchEndSect {padding:15px 12px}
+.searchEndSect > p {color:#666; padding-bottom:10px; border-bottom:1px solid #ddd; letter-spacing:-0.03em}/* 20160502 수정 */
+.searchEndSect > p strong {color:#222;}
+.searchEndSect > p em {font-weight:bold;display:inline-block; color:#c83d67; margin-left:3px}
+.searchEndSect .sottTab {overflow:hidden;padding:10px 0}
+.searchEndSect .sottTab a {float:left;padding:8px 6px; margin:0 6px; position:relative; color:#666}
+.searchEndSect .sottTab a:first-child {margin-left:0}
+.searchEndSect .sottTab a.on {border-radius:5px; background-color:#c83d67; color:#fff}
+.searchEndSect .sottTab a:before {content:'';width:1px; height:8px; background-color:#dbdbdb; position:absolute;left:-5px; top:50%; margin-top:-4px}
+.searchEndSect .sottTab a:first-child:before {content:none}
+
+.searchEndList {}
+.searchEndList li {border-bottom:1px solid #ccc; padding:15px 0}
+.searchEndList li:last-child {border-bottom:none}
+.searchEndList li a {display:block;padding-left:124px; position:relative}
+.searchEndList li a .sear_imgBox {position:absolute; left:0; top:0}
+.searchEndList li a .sear_imgBox img {width:112px; height:75px}
+.searchEndList li a .sear_imgBox em {position:absolute; left:0; top:0; color:#fff;width:35px; height:30px; text-align:center; font-size:11px; line-height:12px; box-sizing:border-box;padding-top:9px}
+.searchEndList li a .sear_imgBox em+em {left:35px}
+.searchEndList li a .sear_imgBox em.black {background-color:#4a505d;}
+.searchEndList li a .sear_imgBox em.pink {background-color:#ea5482;}
+.searchEndList li a .sear_imgBox em.twoline {padding-top:3px}
+.searchEndList li a .sear_txt {min-height:75px; position:relative}
+.searchEndList li a .sear_txt strong {font-weight:normal;overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; line-height:16px;letter-spacing:-0.03em}/* 20160502 수정 */
+.searchEndList li a .sear_txt p {font-size:13px;color:#666;margin:5px 0}
+.searchEndList li a .sear_txt em {color:#c83d67;font-size:17px;font-weight:bold; position:absolute;left:0;bottom:0}
+.searchEndList li a .sear_txt em span {font-size:13px; font-weight:normal; display:inline-block; margin-left:1px}/* 20160502 추가 */
+
+.searchNone {text-align:center; padding:40px 12px 0}
+.searchNone .titNone {font-size:22px; font-weight:normal}
+.searchNone .titNone span {color:#c83d67}
+.searchNone > ul {margin:25px 0 30px}
+.searchNone > ul li {text-align:left; padding-left:8px; position:relative; color:#666; margin-bottom:4px; font-size:13px}
+.searchNone > ul li:before {content:''; width:2px; height:2px; background-color:#8f94a4; border-radius:50%; position:absolute;left:0; top:6px;}
+.searchNone .beListBox {overflow:hidden; background-color:#f7f7f7; padding:18px 0; margin-bottom:30px}
+.searchNone .beListBox > div {float:left;width:50%}
+.searchNone .beListBox > div strong {font-weight:normal; font-size:15px}
+.searchNone .beListBox > div ul { margin-top:12px}
+.searchNone .beListBox > div ul li:last-child { margin-bottom:0}
+.searchNone .beListBox > div ul li a {color:#3e90f5; font-size:14px; display:block; padding:7px 0}
+
+@media all and (min-width:375px) { /* 아이폰6 */
+    .integ_search .inputBox input {font-size:15px}
+    .bestWord li a {font-size:16px}
+    .quickCont ul li a {font-size:15px}
+    .searEndTab li a {font-size:16px;line-height:21px;padding:17px 0 16px}
+    .categoryBox .cateTab li a {font-size:15px}
+    .searchEndSect > p,.searchEndSect .sottTab a,.categoryBox label span{font-size:15px}
+    .searchEndList li a .sear_txt strong {font-size:15px}
+    .searchEndList li a .sear_txt p {font-size:14px}
+    .searchEndList li a .sear_txt em {font-size:18px}
+    .cateTabCont02 h3 {font-size:15px}
+    .categoryBox .redSelect {font-size:14px}
+    .searchNone > ul li {font-size:14px}
+}
+/* // end 통합검색 20151201 추가 */
+
+/* 20171128 항공자체할인쿠폰 */
+/* 20181112 항공쿠폰 구글시트 : 수정 */
+.cpNavContainer {overflow:hidden;background-color:#fff;width:100%;-webkit-transition-property: -webkit-transform;-webkit-transition-timing-function: ease-out;-webkit-transition-duration: 300ms;transition-property: transform;transition-timing-function: ease-out;transition-duration: 300ms;}
+.cpNavContainer:after {content:''; width:7%; height:40px; position:absolute; right:0;top:1px;background:-webkit-gradient(linear,right top,left top,color-stop(36.66%,#fff),color-stop(100%,rgba(255,255,255,0)));z-index:50}
+.cpNavContainer .cpNavWrapper.swiper-wrapper {overflow:hidden;height:46px;width:100%;position:relative;margin-left:10px;}
+.cpNavContainer:before {content:'';width:500%; height:1px; background-color:#e0e0e0; position:absolute;left:-50%;bottom:0;}
+.cpNavContainer .cpNavWrapper li {position:relative;float:left;flex-grow:1;width:auto;text-align:center;}
+.cpNavContainer .cpNavWrapper li:last-child {margin-right:12px;}
+.cpNavContainer .cpNavWrapper li a {color:#333;display:block;font-weight:bold;padding:14px 9px 13px 9px;font-size:14px; height:45px; box-sizing:border-box}
+.cpNavContainer .cpNavWrapper li.on a {color:#c83d67}
+.cpNavContainer .cpNavWrapper li.on:after {content:'';position:absolute;left:0;bottom:0;height:2px;background-color:#c83d67;width:100%; z-index:11}
+.couponList02 h3 {padding:8px 12px; background-color:#f1f1f3; font-size:13px;}
+.couponList02 ul li {display:table;width:100%; overflow:hidden; background-color:#fff;}
+.couponList02 ul li+li {margin-top:5px}
+.couponList02 ul li div {display:table-cell;width:75%;vertical-align:middle;padding:15px 20px 10px;position:relative;border:1px solid #ccc; border-right:none}
+.couponList02 ul li div b {border:1px solid #6d7588;color:#6d7588;position:absolute;right:15px;top:15px; font-size:11px;padding:2px}
+.couponList02 ul li div strong {font-size:28px; color:#c83d67}
+.couponList02 ul li div strong span {font-size:16px}
+.couponList02 ul li div em {color:#333;font-weight:bold; float:none; display:block; margin:15px 0 4px}
+.couponList02 ul li div p {color:#666;font-size:12px}
+.couponList02 ul li a {display:table-cell;width:25%;vertical-align:bottom; color:#c83d67;font-size:13px; font-weight:bold; padding-bottom:15px; text-align:center;border:1px solid #ccc;border-left:1px dashed #ccc; position:relative; background:url(http://image1.hanatour.com/mobile/common/comm/img_cplist02_link.png) no-repeat center 40%; background-size:24px 18px}
+.couponList02 ul li a:before {content:'';width:12px; height:12px; border:1px solid #ccc; border-radius:50%; position:absolute;left:-7px; top:-8px; background-color:#fff;}
+.couponList02 ul li a:after {content:'';width:12px; height:12px; border:1px solid #ccc; border-radius:50%; position:absolute;left:-7px; bottom:-8px; background-color:#fff;}
+/* // 20181112 항공쿠폰 구글시트 : 수정 */
+/* 20181112 항공쿠폰 구글시트 : 추가 */
+.innerNavContainer {overflow:hidden;background-color:#fff;width:100%;-webkit-transition-property: -webkit-transform;-webkit-transition-timing-function: ease-out;-webkit-transition-duration: 300ms;transition-property: transform;transition-timing-function: ease-out;transition-duration: 300ms;}
+.innerNavContainer .innerNavWrapper.swiper-wrapper {overflow:hidden;height:46px;width:100%;position:relative;margin-left:10px;}
+.innerNavContainer:before {content:'';width:500%; height:1px; background-color:#e8e8e8; position:absolute;left:-50%;bottom:0;}
+.innerNavContainer .innerNavWrapper li {position:relative;float:left;flex-grow:1;width:auto;text-align:center;}
+.innerNavContainer .innerNavWrapper li:last-child {margin-right:12px;}
+.innerNavContainer .innerNavWrapper li a {color:#333;display:block;padding:14px 9px 13px 9px;font-size:14px; height:45px; box-sizing:border-box}
+.innerNavContainer .innerNavWrapper li.on a {color:#d52668;font-weight:400;}
+.couponList02 ul {padding:10px 12px 15px}
+/* // 20181112 항공쿠폰 구글시트 : 추가 */
+#downloadCouponDiv.couponList02 {background-color:#fff;} /* 20181119 : 추가 */
+
+/* 쿠폰 추가 20151216 */
+.couponSect {padding:15px 12px;background-color:#dbdce1}
+.couponSect .couponCont {text-align:center;background-color:#fff; border-radius:5px; padding:0 10px}
+.couponSect .couponCont > strong {font-size:23px;font-weight:normal; display:block; border-bottom:2px solid #cc1744; padding:20px 0 15px; margin-bottom:18px}
+.couponSect .couponCont > strong span {color:#b60050}
+.couponSect .couponCont ul {padding-bottom:30px;overflow:hidden}
+.couponSect .couponCont ul li {float:left;width:50%; margin-bottom:10px}
+.couponSect .couponCont ul li+li+li{margin-bottom:0}
+.couponSect .couponCont ul li span {display:block; margin:0 7px}
+.couponSect .couponCont ul li img {width:100%}
+.couponSect .couponTxt {padding:20px;border-radius:0 0 5px 5px;background:#f7f7f7 url(http://image1.hanatour.com/mobile/common/smc/bg_smc_dot.png) repeat-x 0 0;background-size:5px 1px; position:relative;margin:0 -10px 8px; font-size:15px}
+.couponSect .couponTxt:before {content:'';width:12px; height:12px; position:absolute; left:-6px;top:-6px; background-color:#dbdce1; border-radius:50%}
+.couponSect .couponTxt:after {content:'';width:12px; height:12px; position:absolute; right:-6px;top:-6px; background-color:#dbdce1; border-radius:50%}
+.couponSect .couponTxt strong {font-weight:normal; color:#b60050}
+.couponSect .inforList01 {margin-bottom:17px;border-radius:5px;overflow:hidden}
+.couponSect .inforList01 dt {background:#fff url(http://mhanafreeair.hanatour.com/images/air/bg_infor01.png) no-repeat 20px center;background-size:18px 18px; padding:15px 44px;border-bottom:1px solid #ccc;font-weight:bold;color:#666; font-size:15px}
+.couponSect .inforList01 dd {background-color:#f7f7f7; padding:20px 20px 15px}
+.couponSect .inforList01 dd li {background:url(http://mhanafreeair.hanatour.com/images/air/bg_inforline.png) no-repeat 0 7px;background-size:5px 1px; padding-left:10px; color:#676767; margin-bottom:5px; font-size:13px}
+
+/* 쿠폰 추가 20160404 */
+.couponSect02 {padding:15px 12px;background-color:#dbdce1}
+.couponSect02 .selectTogBox {background-color:#fff;position:relative}
+.couponSect02 .selectTogBox a.btnselRed {display:block;border:1px solid #ccc;background:url(http://image1.hanatour.com/mobile/common/idpw/bg_select_red.png) no-repeat 95% center;background-size:13px 7px;text-indent:8px;padding:0;border-radius:3px;font-weight:bold;font-size:15px;height:32px;border-radius:0;width:auto; margin-bottom:15px; padding-top:12px; color:#333}
+.couponSect02 .selectTogBox a.btnselRed.open {background-image:url(http://image1.hanatour.com/mobile/common/search/bg_detail_on.png)}
+.couponSect02 .selectTogBox a.btnselRed span {font-size:13px;color:#666; font-weight:normal}
+.couponSect02 .selectTogBox div {overflow:hidden;background-color:#fff;position:absolute;left:0;top:100%; width:100%; padding:0 9px 15px; border:1px solid #ccc; box-sizing:border-box;border-top:none; display:none; z-index:10}
+.couponSect02 .selectTogBox a.open+div {display:block}
+.couponSect02 .selectTogBox div label {float:left;width:50%;margin-top:15px}
+.couponSect02 .selectTogBox div label input {margin-right:7px}
+.couponSect02 .selectTogBox div label span {font-size:13px;color:#666}
+.couponSect02 .couponListBox {background-color:#fff;border-radius:4px; overflow:hidden; margin-bottom:15px}
+.couponSect02 .couponListBox .stit_cbox {display:block;background:#fff url(http://image1.hanatour.com/mobile/common/bg_menu_coupon_red.png) no-repeat 13px center;background-size:19px 19px;padding:15px 12px 15px 37px;font-size:15px}
+.couponSect02 .couponListBox .listTop {background:#f7f7f7 url(http://image1.hanatour.com/mobile/common/smc/bg_smc_dot.png) repeat-x 0 0;background-size:5px 1px; position:relative; padding:13px}
+.couponSect02 .couponListBox .listTop:before {content:'';width:12px; height:12px; position:absolute; left:-6px;top:-6px; background-color:#dbdce1; border-radius:50%}
+.couponSect02 .couponListBox .listTop:after {content:'';width:12px; height:12px; position:absolute; right:-6px;top:-6px; background-color:#dbdce1; border-radius:50%}
+.couponSect02 .couponListBox .listTop ul li {color:#676767; font-size:13px; }
+.couponSect02 .couponListBox .listBtm {background:url(http://image1.hanatour.com/mobile/common/smc/bg_smc_dot.png) repeat-x 0 0;background-size:5px 1px;}
+.couponSect02 .couponListBox .listBtm a {text-align:center; display:block; color:#747b8e; font-weight:bold; font-size:12px; padding:10px 0}
+.couponSect02 .couponListBox .listBtm a:after {content:'';background:url(http://image1.hanatour.com/mobile/common/search/bg_detail_off.png) no-repeat 0 0; width:12px; height:6px; background-size:12px 6px; display:inline-block;margin-left:3px}
+.couponSect02 .couponListBox .listBtm a.open:after {background-image: url(http://image1.hanatour.com/mobile/common/search/bg_detail_on.png)} /* 20160502 추가 */
+.couponSect02 .couponListBox .listBtm div {padding:0 13px 15px;display:none}
+.couponSect02 .couponListBox .listBtm a.open+div {display:block}
+.couponSect02 .couponListBox .listBtm div ul li {font-size:12px;color:#676767; margin-bottom:4px}
+.couponSect02 .couponListBox .listBtm div strong {color:#333;font-size:13px; display:block; margin:15px 0 6px}
+.couponSect02 .c_red {color:#c83d67}
+.couponSect02 .inforList01 {margin-bottom:17px;border-radius:5px;overflow:hidden}
+.couponSect02 .inforList01 dt {background:#fff url(http://mhanafreeair.hanatour.com/images/air/bg_infor01.png) no-repeat 20px center;background-size:18px 18px; padding:15px 44px;border-bottom:1px solid #ccc;font-weight:bold;color:#666;font-size:15px}
+.couponSect02 .inforList01 dd {background-color:#f7f7f7;padding:20px 20px 15px}
+.couponSect02 .inforList01 dd li {background:url(http://mhanafreeair.hanatour.com/images/air/bg_inforline.png) no-repeat 0 7px;background-size:5px 1px; padding-left:10px;color:#676767;margin-bottom:5px;font-size:13px}
+.couponSect02 .cpNone, .couponList02 .cpNone {text-align:left; background:#fff; padding:15px; margin-bottom:15px; border-radius:4px} /* 20181112 항공쿠폰 구글시트 : 수정 */
+
+/* 메인개편 신규 전체메뉴 20160818 수정 */
+/* ----------------------- menuPanel02 --------------------------*/
+#menuPanel02 {display:none;position:fixed;top:0;width:100%;height: 100%;z-index: 200;background: #dbdce1;-webkit-overflow-scrolling: touch;transition: transform .3s ease-out; -webkit-transition: -webkit-transform .3s ease-out; transform : translateX(-100%); -webkit-transform : translateX(-100%);}
+#menuPanel02.open {-webkit-transform: translateX(0%); transform: translateX(0%);}
+#menuPanel02 h2 {position: fixed; padding:18px 12px 12px; font-size:17px; background-color:#fff;width: 100%;box-sizing: border-box; left:0;top:0; z-index:10; height:51px; border-bottom:1px solid #dbdce1}
+#menuPanel02 h2 .closeSlide {position:absolute;right:0;top:0;background:url(http://image1.hanatour.com/mobile/common/hanatour/main/btn_hanamenu_close.png) no-repeat center 20px;width:51px; height:51px; background-size:18px 18px}
+#menuPanel02 .innerScroller {-webkit-overflow-scrolling: touch;width: 100%; height: 100%;overflow-y:scroll;}
+#menuPanel02 .hanaMenuList {background-color:#fff; margin-bottom:9px; border-bottom:1px solid #ccc; margin-top:55px}
+#menuPanel02 .hanaMenuList .topList {overflow:hidden}
+#menuPanel02 .hanaMenuList .topList li {float:left;width:33.3%;}
+#menuPanel02 .hanaMenuList .topList.firstTy li {border-top:none}
+#menuPanel02 .hanaMenuList .topList li:nth-child(3n+2) {width:33.4%}
+#menuPanel02 .hanaMenuList .topList li:nth-child(3n+2) a {border-left:1px solid #eee;border-right:1px solid #eee;}
+
+/* start 20170103 */
+#menuPanel02 .hanaMenuList h3 {font-size:13px;padding:16px 12px 16px 50px;background:no-repeat 12px center;background-size:30px 27px; color:#333; border-top:1px solid #ccc; position:relative}
+#menuPanel02 .hanaMenuList h3 .wifiBtn {font-size:12px; color:#666; position:absolute;right:12px;top:0; font-weight:normal; padding:10px 13px 10px 20px;background:url(http://image1.hanatour.com/mobile/common/hanatour/main/ico_wifi.png) no-repeat left center,url(http://image1.hanatour.com/mobile/common/hanatour/main/ico_rarr.png) no-repeat right center; background-size:15px 10px, 5px 9px}
+#menuPanel02 .hanaMenuList h3 .wifiBtn:after {}
+#menuPanel02 .hanaMenuList h3 .wifiBtn strong {display:block;color:#333}
+/* end 20170103 */
+
+#menuPanel02 .hanaMenuList h3.bgmenu01 {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/main/bg_hanamenulist01.png)}
+#menuPanel02 .hanaMenuList h3.bgmenu02 {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/main/bg_hanamenulist02.png)}
+#menuPanel02 .hanaMenuList h3.bgmenu03 {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/main/bg_hanamenulist03.png)}
+#menuPanel02 .hanaMenuList h3.bgmenu04 {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/main/bg_hanamenulist04.png)}
+#menuPanel02 .hanaMenuList h3.bgmenu05 {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/main/bg_hanamenulist05.png)}
+#menuPanel02 .hanaMenuList h3.bgmenu06 {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/main/bg_hanamenulist06.png)}
+#menuPanel02 .hanaMenuList h3.bgmenu07 {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/main/bg_hanamenulist07.png)}
+#menuPanel02 .hanaMenuList h3.bgmenu08 {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/main/bg_hanamenulist08.png)}
+#menuPanel02 .hanaMenuList h3.bgmenu09 {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/main/bg_hanamenulist09.png)}
+
+
+#menuPanel02 .hanaMenuList .innerMenuBox {overflow:hidden;background-color:#eef0f4}
+#menuPanel02 .hanaMenuList .innerMenuBox li {width:33.3%;float:left}
+#menuPanel02 .hanaMenuList .innerMenuBox li:nth-child(3n+2) {width:33.4%}
+#menuPanel02 .hanaMenuList .innerMenuBox li a {display:block;font-size:13px;padding:14px 4px 14px 12px; height:44px; box-sizing:border-box}
+#menuPanel02 .hanaMenuList .innerMenuBox li a.two {padding:7px 10px 7px 12px; line-height:14px}
+#menuPanel02 .hanaMenuList .innerMenuBox li+li+li+li a {border-top:1px solid #dfe2e6;}
+#menuPanel02 .hanaMenuList .innerMenuBox li:nth-child(3n+1) a {border-right:1px solid #dfe2e6;}
+#menuPanel02 .hanaMenuList .innerMenuBox li:nth-child(3n+2) a {border-right:1px solid #dfe2e6;}
+
+#menuPanel02 .hanaAppList {background-color:#fff;border-bottom:1px solid #ccc; margin-bottom:10px; padding-bottom:6px}
+#menuPanel02 .hanaAppList strong {display:block;padding:20px 12px 15px}
+#menuPanel02 .hanaAppList ul {overflow:hidden}
+#menuPanel02 .hanaAppList ul li {float:left;width:50%; margin-bottom:10px}
+#menuPanel02 .hanaAppList ul li a {display:block; font-size:13px; color:#666; background:no-repeat 12px 0; background-size:48px 48px; box-sizing:border-box; height:48px; padding:18px 0 0 65px}
+#menuPanel02 .hanaAppList ul li a.bgapp01 {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/main/bg_hana_appList01.png)}
+#menuPanel02 .hanaAppList ul li a.bgapp02 {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/main/bg_hana_appList02.png)}
+#menuPanel02 .hanaAppList ul li a.bgapp03 {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/main/bg_hana_appList03.png)}
+#menuPanel02 .hanaAppList ul li a.bgapp04 {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/main/bg_hana_appList04.png)}
+#menuPanel02 .hanaAppList ul li a.bgapp05 {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/main/bg_hana_appList05.png)}
+#menuPanel02 .hanaAppList ul li a.bgapp06 {background-image:url(http://image1.hanatour.com/mobile/common/hanatour/main/bg_hana_appList06.png)}
+@media all and (min-width:375px) {  /* 375이상일 경우*/
+    #menuPanel02 .hanaMenuList h3 {font-size:14px}
+    #menuPanel02 h2 {font-size:19px}
+    #menuPanel02 .hanaMenuList .innerMenuBox li a {font-size:14px}
+    #menuPanel02 .hanaAppList strong {font-size:15px}
+    #menuPanel02 .hanaAppList ul li a {font-size:14px}
+}
+
+/*  PROGRESS BAR */
+.common_progress_background {
+    left:0;
+    top:0;
+    z-index:100000;
+    display:block;
+    position:fixed;
+    opacity:1;
+    width:100%;
+    height:100%;
+    background-color:tranparent;
+}
+
+.common_progress_background_white {
+    left:0;
+    top:0;
+    z-index:100000;
+    display:block;
+    position:fixed;
+    opacity:1;
+    width:100%;
+    height:100%;
+    background-color:white;
+}
+
+.common_progress {
+    z-index:100001;
+    position:fixed;
+    left:50%;
+    top:50%;
+    background:url('/resources/images/bg/bg_loading.png') no-repeat 0 0;
+    background-size:contain;
+    width:90px;
+    height:98px;
+    text-align:center;
+    margin-top:-30px;
+    margin-left:-45px;
+}
+.common_progress img    {width:40px;height:40px;padding-top:10px;z-index:100002;}
+.common_progress div    {padding-top:6px;font-family:Consolas,Menlo;font-size:16px;color:white;z-index:100003;}
+
+/*  DORMENTED USER */
+.nLoginPop01 {position:absolute;top:65px;width:100%;left:0;z-index:999;}
+.nLoginPop01 > div {background-color:#fff;margin:0 12px;color:#444;font-size:13px; border-radius:5px; letter-spacing:-1px}
+.nLoginTit01 {background-color:#f8f8f8;padding:15px 24px;font-size:17px;position:relative;border-radius:5px 5px 0 0; border-bottom:1px solid #ccc; font-weight:normal}
+.nLoginTit01 a {position:absolute;right:0;top:0;width:20px;height:20px;background:url(http://image1.hanatour.com/2015/images/pop_login/mbtn_nloginpop_close.png) no-repeat center center; background-size:20px 20px; padding:15px 20px}
+.nLoginPopCont {padding:30px 20px}
+.nLoginPop01 .intTxt {text-align:center; font-size:13px; color:#666}
+.nLoginPop01 .intTxt strong {display:block; margin-bottom:20px; font-size:15px; font-weight:normal; color:#333}
+.nLoginPop01 .define {margin-top:30px}
+.nLoginPop01 .define dt {font-weight:bold;font-size:13px; margin-bottom:8px}
+.nLoginPop01 .define dd {position:relative; padding-left:9px; color:#666;font-size:12px}
+.nLoginPop01 .define dd:before {content:''; width:4px; height:4px; border-radius:50px; background-color:#767676; position:absolute; left:0;top:5px;}
+.nLoginPop01 .nPopBtn01 {text-align:center; margin-top:20px; display:table; width:100%}
+.nLoginPop01 .nPopBtn01 a {width:49%;color:#fff; text-align:center; padding:10px 0;border-radius:5px; border-bottom:1px solid #999; display:table-cell; font-size:16px; text-shadow:none}
+.nLoginPop01 .nPopBtn01 a.nbtnRed {background-color:#c83d67}
+.nLoginPop01 .nPopBtn01 a.nbtnGray {background-color:#a6acbd}
+.nLoginPop01 .nPopBtn01 span {display:table-cell;width:2%}
+
+.nloginDim {position:fixed;left:0;top:0;height:100%;width:100%;background-color:rgba(0,0,0,0.5);z-index: 499; display:none}
+
+.npayIpList li {padding-left:75px;position:relative;margin-top:12px}
+.npayIpList li label {position:absolute;left:0;top:12px; font-weight:normal}
+.npayIpList li input {width:100%;border:1px solid #ccc;height:40px;text-indent:10px;box-sizing:border-box;border-radius:0;margin-top:0; color:#888; font-size:14px !important; font-weight:normal;-webkit-box-shadow: none;  -moz-box-shadow: none;  box-shadow: none;-webkit-appearance: none;}
+.npayIpList li input:disabled {background-color:#f8f8f8 !important;color:#333 !important;opacity:1}
+.nLoginPopCont02 {padding:20px 20px 25px}
+.nLoginPopCont02 .nLoginTxt02 {text-align:center;color:#666;font-size:13px;font-weight:normal}
+.nLoginPopCont02 .nLoginTxt02 strong {font-size:15px;display:block;margin-bottom:15px; color:#333}
+.nLoginPopCont02 .nLoginRedTxt {font-size:12px; color:#c83d67; padding-left:8px; font-weight:normal; position:relative; margin-top:10px}
+.nLoginPopCont02 .nLoginRedTxt:before {position:absolute;left:0;top:4px; background-color:#c83d67; width:4px; height:4px; content:''; border-radius:50px}
+
+
+/* 공통 미니버튼, 팝업 */
+.cm_miniBtn {position:relative;width:20px; height:20px; border:1px solid #ccc; border-radius:2px; display:inline-block; box-sizing:border-box}
+button.cm_miniBtn {border-radius:5px; vertical-align:bottom;}
+.cm_miniBtn.on {border-color:#c83d67}
+.cm_miniBtn:before {content:''; position:absolute;left:0;top:50%;width:100%; height:8px; margin-top:-4px;background:url(../images/reservation/ico_question_mark.png) no-repeat center 0 / 5px 16px;}
+.cm_miniBtn.on:before {background-position:center -8px}
+.cm_miniBtn.on+.cm_miniPop_cont  {display:block}
+.cm_miniPop_cont {display:none; position:absolute;left:50%;top:50%; margin-top:15px; border:1px solid #c83d67; background-color:#fff; border-radius:2px; z-index:100; width:220px;padding:12px 10px;-webkit-transform: translate(-50%, 0);transform: translate(-50%, 0);}
+.cm_miniPop_cont * {font-size:1.2rem;letter-spacing:-0.02em}
+.cm_miniPop_cont ul li {margin-bottom:10px;position:relative; padding-left:6px}
+.cm_miniPop_cont ul li:last-child {margin-bottom:0}
+.cm_miniPop_cont ul li:after {content:'';width:2px;height:2px;background-color:#333; position:absolute; left:0; top:6px}
+.cm_miniPop_cont p {color:#666; padding-right:25px}
+.cm_miniPop_cont .cm_miniClose {content:'';position:absolute;right:0;top:0; width:30px; height:30px;background:url(http://image1.hanatour.com/mobile/common/schedule/btn_qnapop_close.png) no-repeat center center / 12px 12px; border:none;}
+
+
+/* 공통 알럿 팝업 신규 */
+.alertCommon {background-color:rgba(0,0,0,0.7); padding:50vh 12px 0 12px;position:fixed;left:0;top:0;z-index:500;width:100%; height:100vh; box-sizing:border-box}
+.alertCommon .layer_inner {background-color:#fff;overflow:hidden;border-radius:5px;transform:translate(0, -50%);-webkit-transform:translate(0, -50%); }
+.alertCommon .layer_inner .smPopCont {padding:0 15px;border-radius:5px 5px 0 0; text-align:center; min-height:127px;display:table;width:100%; box-sizing:border-box}
+.alertCommon .layer_inner .smPopCont > * {display:table-cell; vertical-align:middle; padding:25px 0}
+.alertCommon .layer_inner .smPopCont h2 {font-size:19px; margin-bottom:12px}
+.alertCommon .layer_inner .smPopCont p {font-size:16px;font-weight:normal;}
+.alertCommon .layer_inner .smPopCont p+p {margin-top:5px}
+.alertCommon .layer_inner .alertBtn {background-color:#e45b85;display:block; color:#fff; font-size:18px; text-align:center; padding:12px 0; font-weight:bold;width:100%}
+.alertCommon .layer_inner .alertBtn.gray {background-color:#e5e6e9; color:#666}
+.alertCommon .layer_inner .alertBtn_box {overflow:hidden}
+.alertCommon .layer_inner .alertBtn_box .alertBtn {float:left;width:50%}
+
+/* 20180308 민감정보 : 추가 */
+.terms_strong,.terms_strong_all * {font-size:1.4rem !important; font-weight:bold !important}
+
+/* 20180312 공통 CMS이미지 틀 : 추가 */
+.adminImgBox {overflow:hidden;display:flex;display: -webkit-box;display: -ms-flexbox;display: -webkit-flex;display:flex;position:relative;}
+.adminImgBox .adminImgSpan {position:absolute;left:0;top:0;display: -webkit-box;display: -ms-flexbox;display:-webkit-flex;width:100%;height:100%;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;}
+.vertical.adminImgBox .adminImgSpan {-webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center;}
+.adminImgBox img {flex:1;height:100%;width:auto}
+.vertical.adminImgBox img {width:100%;height:auto;}
+.adminImgBox .adminImgSpan, .adminBgBox {background:url(http://image1.hanatour.com/mobile/common/hanatour/common/bg_lazy_load_logo.png) center center / 84px 16px no-repeat #f7f7f7;}
+.adminImgBox .swiper-lazy-preloader {display:none;}
+/* 20180312 공통 CMS이미지 틀 : 추가 */
+
+/* 20180706 고객센터 개편 : 추가 */
+/* 공통 버튼 */
+.btn_redLine {text-align:center; padding-top:20px}
+.btn_redLine a {display:inline-block;border:1px solid #c83d67; color:#c83d67; font-size:1.5rem; padding:11px 0 10px; border-radius:3px;width:162px}
+.btn_redLine.twoType {overflow:hidden}
+.btn_redLine.twoType a {float:left;width:48%;}
+.btn_redLine.twoType a+a {float:right}
+.btn_toggle {position:absolute;right:0;top:0;width:45px;height:100%;background:url(http://image1.hanatour.com/mobile/common/hanatour/fnd/btn_toggle.png) no-repeat center center / 16px 9px;opacity:0.8}
+.btn_toggle.on {-webkit-transform:rotate(-180deg);transform:rotate(-180deg); opacity:1}
+.btn_toggle.on+.inRig, .btn_toggle.on + h4 .inRig {display:none}
+/* 공통 타이틀 영역, 아코디언 */
+.reserv_section {background-color:#dbdce1;overflow:hidden; padding-bottom:10px}
+.reserv_section > div {background-color:#fff}
+.reserv_content {border-bottom:1px solid #ccc;margin-bottom:10px}
+.reserv_content > div {padding:15px 15px 20px;border-top:1px solid #e0e0e0}
+.reserv_content .serviceType {border-top:none; padding-top:0}
+.reserv_content .pay_togCont {padding:0;border-top:none}
+
+.tit_reserv {padding:15px;position:relative;font-size:1.5rem}
+.tit_reserv .inRig {position:absolute;right:45px;top:50%;font-weight:normal; color:#c83d67; transform:translate(0, -50%);-webkit-transform:translate(0, -50%);overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical;width:45%; text-align:right; font-size:1.3rem}
+.tit_reserv .inRig.noAco {right:15px;width:50%}
+.tit_reserv sup {color:#c83d67;vertical-align:top; position:relative;top:-2px}
+
+.reserv_section > .m_btnRed {margin:15px 15px 20px; font-size:1.7rem}
+.reserv_section > .m_btnRed.fixed {position:fixed; left:0;bottom:0;width:100%; margin:0; border-radius:0;padding:16px 0;}
+.reserv_section .comBulTxt {padding:0}
+/* 동그라미 탭 */
+.radiusSortBtnList li{display:inline-block;margin:0 4px 7px 0}
+.radiusSortBtnList li:nth-child(3),.radiusSortBtnList li:last-child{margin-right:0}
+.radiusSortBtnList li a{display:block;border-radius:30px;padding:8px 17px;border:1px solid #e0e0e0;font-size:1.5rem}
+.radiusSortBtnList li.on a{color:#fff;background-color:#bc9b6a;border-color:#bc9b6a;}
+/* 세로 한줄 스와이퍼 */
+.verticalOnelineSwiper .swiper-slide a {display:block;box-sizing:border-box;width:100%;padding:15px 20px;}
+.verticalOnelineSwiper .swiper-slide .ellipsis {overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+/* 분홍배경 텍스트 */
+.bgPink {background:#fdf2f5;padding:15px 15px 20px;border-top:1px solid #fadce6}
+/* 버튼 */
+.cm_midBtn {box-sizing:border-box;height:40px;line-height:40px;padding:0 20px;border:1px solid #ccc;border-radius:2px;background-color:#fff;}
+.cm_midBtn.redTy {border-color:#c83d67;background-color:#c83d67;color:#fff;}
+/* 공통 flexbox */
+.flexBox {position:relative;display:flex;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;-webkit-box-align: center;-ms-flex-align: center;-webkit-align-items:flex-start;align-items: center;}
+.flexBox .flexItem {flex-grow:1;flex-shrink:1;flex-basis:0}
+/* // 20180706 고객센터 개편 : 추가 */
+
+.slidepopupWrap {position: fixed;width: 100%;height: 100%;top: 0;left: 0;z-index: 3000;} /* 20180712 추가 */

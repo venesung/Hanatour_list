@@ -1,0 +1,250 @@
+
+<script type="text/javascript">
+	$('#overlayPanel').on('open.loadpop', function (e, data) {
+		if (CP !== undefined && typeof CP.initEventPopup === 'function') CP.initEventPopup();
+   	});
+</script>
+
+
+<!-- pop -->
+<div id="popReserve01">
+	<div class="popReserve01" style="display:block">
+		
+		<div class="header">
+			<h3>응모하기<a href="#" class="closeOverlayPanel" data-role="none" title="레이어닫기"></a></h3>
+		</div>
+		
+		<!-- 응모하기 -->
+		<div class="pop_joinSect">
+			<!-- 상단 -->
+			<div class="cusJoinTop">
+				<div class="swiper-container">				
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="joinSwipCont">
+								<span><img src="http://image1.hanatour.com/mobile/common/theme_customer/bg_customer_join_city01.jpg" alt=""></span>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="joinSwipCont">
+								<span><img src="http://image1.hanatour.com/mobile/common/theme_customer/bg_customer_join_city02.jpg" alt=""></span>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="joinSwipCont">
+								<span><img src="http://image1.hanatour.com/mobile/common/theme_customer/bg_customer_join_city03.jpg" alt=""></span>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="joinSwipCont">
+								<span><img src="http://image1.hanatour.com/mobile/common/theme_customer/bg_customer_join_city04.jpg" alt=""></span>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="joinSwipCont">
+								<span><img src="http://image1.hanatour.com/mobile/common/theme_customer/bg_customer_join_city05.jpg" alt=""></span>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="joinSwipCont">
+								<span><img src="http://image1.hanatour.com/mobile/common/theme_customer/bg_customer_join_city06.jpg" alt=""></span>
+							</div>
+						</div>
+					</div>
+					
+					<!-- 상단 텍스트 모음 -->
+					<div class="swipTopTxt">
+						<p>나의 즐거웠던<br>일본여행의 도시는 어디였나요?<strong>도쿄</strong></p>
+						<p style="display:none">나의 즐거웠던<br>일본여행의 도시는 어디였나요?<strong>오사카/교토</strong></p>
+						<p style="display:none">나의 즐거웠던<br>일본여행의 도시는 어디였나요?<strong>홋카이도</strong></p>
+						<p style="display:none">나의 즐거웠던<br>일본여행의 도시는 어디였나요?<strong>후쿠오카/규슈</strong></p>
+						<p style="display:none">나의 즐거웠던<br>일본여행의 도시는 어디였나요?<strong>오키나와</strong></p>
+						<p style="display:none">나의 즐거웠던<br>일본여행의 도시는 어디였나요?<strong><input type="text" title="직접입력" placeholder="직접입력"></strong></p>
+					</div>
+					<!-- // 상단 텍스트 모음 -->
+					
+					<div class="swiper-pagination" style="display:none"></div>
+				</div>
+				
+				<ul class="swipBtmTab">
+					<li class="on"><a href="#" data-role="none">도쿄</a></li><!-- 선택시 class="on" -->
+					<li><a href="#" data-role="none">오사카/교토</a></li>
+					<li><a href="#" data-role="none">홋카이도</a></li>
+					<li><a href="#" data-role="none">후쿠오카/규슈</a></li>
+					<li><a href="#" data-role="none">오키나와</a></li>
+					<li><a href="#" data-role="none">직접입력</a></li>
+				</ul>
+				
+				
+			</div>
+			<!-- // 상단 -->
+			
+			<!-- 컨텐츠영역 -->
+			<div class="joinContent">
+				<!-- 이름짓기 -->
+				<div class="cusJoin_input">
+					<div class="textarea">
+						<textarea data-role="none" title="이름입력" placeholder="내 여행의 이름을 지어 주세요!"></textarea>
+						<span>입력(최대 30자)</span>
+					</div>
+				</div>
+				<!-- // 이름짓기 -->
+				
+				<!-- cont1 -->
+				<div class="cusJoinCont01">
+					<h4 class="cusTit bg01"><span>누구와 함께한</span><br>여행이었나요?</h4>
+					
+					<span class="str">* 필수선택</span>
+					<ul class="cusTab type3">
+						<li class="on"><a href="#" data-role="none">부모님</a></li><!-- 선택시 class="on" -->
+						<li><a href="#" data-role="none">여친/남친</a></li>
+						<li><a href="#" data-role="none">할머니/할아버지</a></li>
+						<li><a href="#" data-role="none">자매/형재/남매</a></li>
+						<li><a href="#" data-role="none">우리아이와 함께</a></li>
+						<li><a href="#" data-role="none">아내/남편</a></li>
+						<li><a href="#" data-role="none">우정 가득 친구</a></li>
+						<li><a href="#" data-role="none">동료/동호회</a></li>
+						<li><a href="#" data-role="none">나홀로</a></li>
+						<li class="write"><a href="#" data-role="none">직접입력</a></li>
+						<li class="write_next"><input type="text" title="직접입력" placeholder="입력(최대 10자)"></li>
+					</ul>
+					<p class="noWriteTxt">함께한 여행을 선택해 주세요!</p>
+				</div>
+				<!-- // cont1 -->
+				
+				<!-- cont2 -->
+				<div class="cusJoinCont02">
+					<h4 class="cusTit bg02"><span>여행기간은</span><br>얼마나 되었나요?</h4>
+					
+					<span class="str">* 필수선택</span>
+					<ul class="cusTab type4">
+						<li class="on"><a href="#" data-role="none">2일</a></li><!-- 선택시 class="on" -->
+						<li><a href="#" data-role="none">3일</a></li>
+						<li><a href="#" data-role="none">4일</a></li>
+						<li><a href="#" data-role="none">5일 이상</a></li>
+					</ul>
+					<p class="noWriteTxt">여행기간을 선택해 주세요!</p>
+				</div>
+				<!-- // cont2 -->
+				
+				<!-- cont3 -->
+				<div class="cusJoinCont03">
+					<h4 class="cusTit bg03"><span>이것만큼은 꼭 해야해!</span><br>내 여행의 포인트는?</h4>
+					
+					<!-- joinCont03_in -->
+					<div class="joinCont03_in">
+						<div class="pointBox">
+							<strong>포인트 01</strong>
+							<span class="str">* 필수입력</span>
+							<div class="pointCell">
+								<div class="wid01">
+									<select data-role="none">
+										<option>놀기 (체험쇼핑)</option>
+										<option>먹거리 (요리/음식)</option>
+									</select>
+								</div>
+								<div class="wid02">
+									<input data-role="none" title="포인트 입력" placeholder="예) 시부야 109쇼핑">
+									<a href="#" data-role="none" class="pointDel"><img src="http://image1.hanatour.com/mobile/common/theme_customer/btn_cusjoincont03_01.png" alt="삭제"></a>
+								</div>
+							</div>
+						</div>
+						
+						<div class="pointBox">
+							<strong>포인트 02</strong>
+							<div class="pointCell">
+								<div class="wid01">
+									<select data-role="none">
+										<option>놀기 (체험쇼핑)</option>
+										<option>먹거리 (요리/음식)</option>
+									</select>
+								</div>
+								<div class="wid02">
+									<input data-role="none" title="포인트 입력" placeholder="예) 시부야 109쇼핑">
+									<a href="#" data-role="none" class="pointDel"><img src="http://image1.hanatour.com/mobile/common/theme_customer/btn_cusjoincont03_01.png" alt="삭제"></a>
+								</div>
+							</div>
+						</div>
+						<p class="noWriteTxt">여행 포인트를 입력해 주세요!</p>
+						<a href="#" data-role="none" class="pointAdd"><span>포인트 추가</span></a>
+						
+					</div>
+					<!-- // joinCont03_in -->
+					
+				</div>
+				<!-- // cont3 -->
+				
+				<!-- cont4 -->
+				<div class="cusJoinCont04">
+					<h4 class="cusTit bg04"><span>이 여행을 추천하는</span><br>이유를 입력해 주세요.</h4>
+					
+					<span class="str">* 필수입력</span>
+					<div class="textarea"><textarea data-role="none" title="이름입력" placeholder="입력(최대 1500자)"></textarea></div>
+					<p class="noWriteTxt">추천하는 이유를 입력해 주세요!</p>
+				</div>
+				<!-- // cont4 -->
+				
+				<!-- cont5 -->
+				<div class="cusJoinCont05">
+					<h4 class="cusTit bg05"><span>당신의 여행을 엿볼 수 있는</span><br>블로그/SNS가 있다면<br>공유해주세요.</h4>
+					
+					<input type="text" class="inputBase" placeholder="http://">
+					
+				</div>
+				<!-- // cont5 -->
+				
+				<!-- 버튼 -->
+				<div class="fullBtn">
+					<a href="#" data-role="none">취소</a>
+					<a href="#" data-role="none">등록완료</a>
+				</div>
+				<!-- // 버튼 -->
+			</div>
+			<!-- // 컨텐츠영역 -->
+		</div>
+		<!-- 응모하기 -->
+		
+	</div>
+</div>
+<!-- // pop -->
+
+<!-- 저작물에 대한 지적재산권 양도동의 -->
+
+<div class="layerTerms">
+	<div>
+		<h3>저작물에 대한 지적재산권 양도동의<a href="#" class="btn_y_Close" data-role="none" title="닫기"></a></h3>
+		
+		<!-- content -->
+		<div class="pop_y_cont">
+			<label class="allLabel">
+				<strong>모두 동의합니다.</strong>
+				<input type="checkbox" class="redCheck" title="전체 동의" data-role="none">
+			</label>
+			
+			<label class="txtLabel">
+				<p>응모된 제출자료는 반환되지 않으며,<br> 응모자의 동의 없이 하나투어 홍보<br> 목적으로 사용 될 수 있습니다.</p>
+				<input type="checkbox" class="redCheck" title="동의" data-role="none">
+			</label>
+			<label class="txtLabel">
+				<p>당선작의 지적재산권 일체는 하나투어에<br> 귀속되며, 온/오프라인 미디어를 통해<br> 하나투어 홍보물로 활용 될 수 있습니다</p>
+				<input type="checkbox" class="redCheck" title="동의" data-role="none">
+			</label>
+			<label class="txtLabel">
+				<p>이벤트 응모에 참여하시는 경우, 개인정보<br> 수집, 이용 및 이벤트 진행을 위해 개인정보<br> 제공에 동의한 것으로 간주합니다. </p>
+				<input type="checkbox" class="redCheck" title="동의" data-role="none">
+			</label>
+			
+			<p class="c_red">모두 동의 시에만 응모완료가 진행됩니다.</p>
+		
+			<!-- 버튼 -->
+			<div class="fullBtn">
+				<a href="#" data-role="none">비동의</a>
+				<a href="#" data-role="none">동의</a>
+			</div>
+			<!-- // 버튼 -->
+		</div>
+		<!-- // content -->
+	</div>
+</div>
+<!-- // 저작물에 대한 지적재산권 양도동의 -->
+

@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>예약하기 - 현지투어 패스 입장권 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="../../css/fnd.css"><!-- FND 추가 -->
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-2.1.3.min.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common_new.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/swiper.min.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-ui-custom.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/hanatour/ht.calendar.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/free/m.fnd.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+	<header id="header"><!-- 띠배너 보일경우 class="tBanTy" 추가 -->
+		<div class="inner">
+			<h1><a href="#none" data-role="none"><img src="../../images/common/btn_nlogo.png" alt="하나투어"></a></h1>
+			<a href="#none" id="btnMenu" data-role="none"><img src="../../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+			<a href="#none" id="btnMyhome" data-role="none"><img src="../../images/common/btn_hdright.png" alt="마이홈"></a>
+		</div>
+	</header>
+	<div class="headerMargin07"></div>
+	
+	<!-- fnd tab -->
+	<nav class="fndTab">
+		<ul>
+			<li class="on"><a href="#"><span>현지투어 · 패스 · 입장권</span></a></li>
+			<li><a href="#"><span>유럽패스 · 구간열차</span></a></li>
+		</ul>
+	</nav>
+	<!-- // fnd tab -->
+	
+	<!-- 컨텐츠 영역 -->
+	<div id="container">
+		
+		<!-- fnd 개편 -->
+		<section class="fndSection">
+			<!-- 현지투어·패스·입장권 예약 -->
+			<div class="topGray">
+				<a href="#" data-role="none" title="뒤로가기"></a>
+				<h2>[파리 출발]베스트 파리 (루브르 박물관 + 시내투어)</h2>
+			</div>
+			
+			<!-- 달력 -->
+			<div class="calenderBox">
+				<div class="calenderTop">
+					<button data-role="none" class="prevMonth" title="이전달">3월</button><!-- 없을경우 end -->
+					<strong>2016년 04월</strong>
+					<button data-role="none" class="nextMonth" title="다음달">5월</button>
+				</div>
+				
+				<div id="datepicker"></div>
+			</div>
+			<!-- // 달력 -->
+			
+			<!-- 선택영역 -->
+			<div class="reserv_choice">
+				<div class="inChoice">
+					<h3 class="tit_reserv">옵션선택</h3>
+					<div class="in_select">
+						<select title="옵션선택" class="selectBox" data-role="none">
+							<option value="">옵션선택</option>
+							<option value="1" option="[20:00] [20:00 공연] 아시아티크 무에타이 공연장 (15분 전 도착 권장) (추가요금 : 성인 50원, 아동 50원)">가나다라마바사아자차카타파하가나다</option>
+							<option value="2" option="[13:00] [13:00 공연] 아시아티크 무에타이 공연장 (15분 전 도착 권장) (추가요금 : 성인 30원, 아동 10원)">z</option>
+															<option value="3" option="[15:00] [15:00 공연] 아시아티크 무에타이 공연장 (15분 전 도착 권장)">2</option>
+						</select>
+						
+						<select title="옵션선택" class="selectBox" data-role="none">
+							<option>옵션선택 2</option>
+							<option>밥</option>
+						</select>
+					</div>
+				</div>
+				
+				<!-- 20171017 추가 -->
+				<div class="inChoice">
+					<h3 class="tit_reserv">미팅장소</h3>
+					<div class="in_radio">
+						<label class="comRadio"><input type="radio" name="meetSelect" checked><span>[11:00] [12:00 공연] 아시아티크 무에타이 공연장 (15분 전 도착 권장) (추가요금 : 성인 30원, 아동 10원)</span></label>
+						<label class="comRadio"><input type="radio" name="meetSelect"><span>[12:00] [13:00 공연] 아시아티크 무에타이 공연장 (15분 전 도착 권장)</span></label>
+						<label class="comRadio"><input type="radio" name="meetSelect"><span>[13:00] [14:00 공연] 아시아티크 무에타이 공연장 (15분 전 도착 권장) (추가요금 : 성인 30원, 아동 10원)</span></label>
+						<label class="comRadio"><input type="radio" name="meetSelect"><span>[15:00] [16:00 공연] 아시아티크 무에타이 공연장 (15분 전 도착 권장)</span></label>
+					</div>
+				</div>
+				<!-- // 20171017 추가 -->
+				
+				<div class="inChoice">
+					<h3 class="tit_reserv">인원선택 (1인 기준 요금입니다.)</h3>
+					<div class="in_people">
+						<ul>
+							<li>
+								<h4>성인
+									<button type="button" class="miniPop" title="자세히보기" data-role="none"></button><!-- 선택시 class="on" 추가 -->
+									<div class="miniPop_cont">
+										<button type="button" class="close_mini" title="팝업닫기"></button>
+										<p>출발일 기준 만 12세 이상</p>
+									</div>
+								</h4>
+								<div class="moneyCell">
+									<span class="txt_through">175,420원</span>
+									<strong>175,100<span>원</span></strong>	
+									<span class="money_local">(JPY 5,500)</span>
+								</div>
+								<div class="btnCell">
+									<button type="button" class="minus" title="빼기" data-role="none"></button>
+									<strong>10</strong>
+									<button type="button" class="plus" title="더하기" data-role="none"></button>
+								</div>
+							</li>
+							
+							<li>
+								<h4>아동
+									<button type="button" class="miniPop" title="자세히보기" data-role="none"></button><!-- 선택시 class="on" 추가 -->
+									<div class="miniPop_cont">
+										<button type="button" class="close_mini" title="팝업닫기"></button>
+										<p>출발일/귀국일 기준 만 2세~만 12세 미만</p>
+									</div>
+								</h4>
+								<div class="moneyCell">
+									<span class="txt_through">175,420원</span>
+									<strong>175,100<span>원</span></strong>	
+								</div>
+								<div class="btnCell">
+									<button type="button" class="minus" title="빼기" data-role="none"></button>
+									<strong>1</strong>
+									<button type="button" class="plus" title="더하기" data-role="none"></button>
+								</div>
+							</li>
+							
+							<li>
+								<h4>유아
+									<button type="button" class="miniPop" title="자세히보기" data-role="none"></button><!-- 선택시 class="on" 추가 -->
+									<div class="miniPop_cont">
+										<button type="button" class="close_mini" title="팝업닫기"></button>
+										<p>출발일/귀국일 기준 만 2세 미만</p>
+									</div>
+								</h4>
+								<div class="moneyCell">
+									<span class="txt_through">175,420원</span>
+									<strong>175,100<span>원</span></strong>	
+								</div>
+								<div class="btnCell">
+									<button type="button" class="minus" title="빼기" data-role="none"></button>
+									<strong>1</strong>
+									<button type="button" class="plus" title="더하기" data-role="none"></button>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="inChoice">
+					<h3 class="tit_reserv">총 합계 금액</h3>
+					<div class="in_total">
+						<strong class="pNum">성인 2, 아동 1, 유아 1</strong>
+						<span class="txt_through">175,420원</span>
+						<em class="redMoney">494,400<span>원</span></em>
+						<span class="money_local">685,500JPY</span>
+						<p class="mileage">하나투어 마일리지 <span>590<img src="http://image1.hanatour.com/mobile/common/hanatour/fnd/ico_mileage.png" alt="마일리지"></span> 적립</p>
+					</div>
+				</div>
+			</div>
+			<!-- // 선택영역 -->
+			
+			<!-- 버튼 -->
+			<div class="fndBtnBox">
+				<a href="#" class="basket" data-role="none">장바구니</a>
+				<a href="#" class="reserv" data-role="none">예약하기</a>
+			</div>
+			<!-- // 버튼 -->
+			
+			<!-- // 현지투어·패스·입장권 예약 -->
+		</section>
+		<!-- // fnd 개편 -->
+		
+	</div>
+	<!-- //컨텐츠 영역 -->
+	
+	<footer class="newFoot">
+		<ul>
+			<li><a href="#none" data-role="none">로그인</a></li>
+			<li><a href="#none" data-role="none">PC버전</a></li>
+			<li><a href="#none" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+		</ul>
+		<div>
+			<a href="#none" data-role="none">이용약관</a>|
+			<a href="#none" data-role="none">개인정보처리방침</a>|
+			<a href="#none" data-role="none">여행약관</a>|
+			<a href="#none" data-role="none">사업자정보확인</a>
+		</div>
+		<address>
+			㈜ 하나투어 | 대표자: 최현석 | 사업자등록번호 : 102-81-39440<br>
+			통신판매업신고번호 : 종로01-1806호 | 개인정보관리 책임자 : 최종윤<br>
+			[110-160]서울특별시 종로구 인사동 5길 41 ㈜ 하나투어<br>
+			하나투어상담센터 : <a href="tel:1577-1233" data-role="none">1577-1233</a> | FAX : 02-734-0392<br>
+			이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> | 호스팅 서비스 사업자 : ㈜하나투어<br>
+			관광사업자 등록번호 : 제1933-000006호 | 영업보증보험 : 22억 1천만원 가입<br>
+			COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+		</address>
+	</footer>
+	
+</div>
+
+</body>
+</html>
+

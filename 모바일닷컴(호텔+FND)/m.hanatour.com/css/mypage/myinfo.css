@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,form,div,p,h1,h2,h3,h4,h5,h6,dl,dt,dd,ul,ol,li,fieldset,input,textarea,button,blockquote,th,td {font-size:1.3rem;letter-spacing:-0.02em;}
+
+.myinfo_section {background-color:#dbdce1;overflow:hidden; padding-bottom:10px}
+.myinfo_section > div {background-color:#fff}
+.myinfo_content {border-top:1px solid #ccc}
+.myinfo_content > div {border-top:1px solid #e8e8e8}
+.tit_myinfo {padding:15px;position:relative;font-size:1.5rem; font-weight:normal}
+.tit_myinfo .inRig {position:absolute;right:45px;top:50%;font-weight:normal; color:#c83d67; transform:translate(0, -50%);-webkit-transform:translate(0, -50%);overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical;width:45%; text-align:right; font-size:1.3rem}
+.tit_myinfo .inRig.noAco {right:15px;width:50%}
+
+.btn_toggle {position:absolute;right:0;top:0;width:45px;height:100%;background:url(http://image1.hanatour.com/mobile/common/hanatour/fnd/btn_toggle.png) no-repeat center center / 16px 9px;opacity:0.8}
+.btn_toggle.on {-webkit-transform:rotate(-180deg);transform:rotate(-180deg); opacity:1}
+.btn_toggle.on+.inRig {display:none}
+
+.myinfo_outTab {overflow:hidden}
+.myinfo_outTab li {float:left;width:33.3%; box-sizing:border-box;border-bottom:1px solid #ccc}
+.myinfo_outTab li:nth-child(2) {width:33.4%;border-right:1px solid #ccc;border-left:1px solid #ccc}
+.myinfo_outTab li a {display:block; text-align:center; padding:15px 0; background-color:#f1f1f3; font-size:1.4rem}
+.myinfo_outTab li.on {border-bottom:none}
+.myinfo_outTab li.on a {background-color:#fff}
+
+.myinfo_inTab {overflow:hidden}
+.myinfo_inTab li {float:left;width:50%; box-sizing:border-box;border-bottom:1px solid #e8e8e8}
+.myinfo_inTab li a {display:block; text-align:center; padding:15px 0; background-color:#f7f7f7}
+.myinfo_inTab li.on {border-bottom:none}
+.myinfo_inTab li:first-child.on {border-right:1px solid #e8e8e8}
+.myinfo_inTab li:last-child.on {border-left:1px solid #e8e8e8}
+.myinfo_inTab li.on a {background-color:#fff; color:#c83d67; font-weight:bold; text-decoration:underline}
+
+.btnPeriodBox {text-align:center;padding:15px 0}
+.btnPeriodBox .btn_period {border:1px solid #ccc;border-radius:2px;font-size:1.4rem;color:#666;height:30px;padding:0 10px; margin:0 1px}
+.btnPeriodBox .btn_period.on {color:#fff;background-color:#e45b85;border-color:#e45b85}
+.btnPeriodBox .btnDay_ip {padding:0 15px 0 100px;box-sizing:border-box;text-align:left; position:relative; margin-top:15px}
+.btnPeriodBox .btnDay_ip .day_ipTit {position:absolute;left:15px;top:50%;transform:translate(0, -50%);-webkit-transform:translate(0, -50%);}
+.btnPeriodBox .btnDay_ip .day_ipCell {overflow:hidden;}
+.btnPeriodBox .btnDay_ip .day_ipCell .inputTxt {height:30px;width:102px;text-align:left; letter-spacing:-0.05em}
+.btnPeriodBox .btnDay_ip .btn_dateSearch {width:30px;height:30px;border:1px solid #c83d67;position:absolute;right:15px;top:0;border-radius:2px}
+
+.myCodeList {}
+.myCodeList li {padding:0 15px}
+.myCodeList li+li {border-top:1px solid #ccc}
+.myCodeList li a {display:block;padding:15px 0 12px;border-bottom:1px dashed #e0e0e0}
+.myCodeList li a em {color:#888;display:inline-block;margin-left:10px}
+.myCodeList li > div {padding:10px 0 20px}
+.myCodeList li > div em {display:inline-block;font-size:1.2rem; border:1px solid #c83d67; color:#c83d67; padding:1px 2px}
+.myCodeList li > div .myCode {color:#5e9acd}
+.myCodeList li > div p {margin:8px 0 4px}
+.myCodeList li > div .codeDay {color:#888;font-size:1.2rem}
+.myCodeList li .myCode_btnBox {text-align:center; margin-top:15px}
+.myCodeList li .myCode_btnBox button {border:1px solid #ccc; border-radius:3px; height:30px;width:85px}

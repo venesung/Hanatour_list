@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>결제완료 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="../../css/common_reserv.css"><!-- 공통컨텐츠 신규생성 -->
+
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/libs/jquery/jquery-2.1.3.min.js"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/common_new.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/m.hanatour.com/js/pack/m.booking.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+	<header id="header"><!-- 띠배너 보일경우 class="tBanTy" 추가 -->
+		<div class="inner">
+			<h1><a href="#none" data-role="none"><img src="../../images/common/btn_nlogo.png" alt="하나투어"></a></h1>
+			<a href="#none" id="btnMenu" data-role="none"><img src="../../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+			<a href="#none" id="btnMyhome" data-role="none"><img src="../../images/common/btn_hdright.png" alt="마이홈"></a>
+		</div>
+	</header>
+	<div class="headerMargin"></div>
+	
+	<!-- 컨텐츠 영역 -->
+	<div id="container">
+		<h2 class="pagTit">결제완료</h2>
+		
+		<!-- 예약결제 간소화 simplify -->
+		<section class="reserv_section simplify">
+			<div class="reserv_end02">
+				<h3 class="tit_reserv_end">결제가 정상적으로<br>완료되었습니다.</h3>
+			</div>
+			
+			<!-- 예약코드 -->
+			<div class="topCode">
+				<strong>예약코드</strong>
+				<b>RP1617379191</b>
+			</div>
+			<!-- // 예약코드 -->
+			
+			<!-- 결제정보 -->
+			<div class="reserv_content">
+				<h3 class="tit_reserv">결제정보</h3>
+				<div>
+					<ul class="paymn_endList">
+						<li><em>결제할 금액</em><strong>630,000<span>원</span></strong></li>
+						<li><em>할인금액</em><strong>-130,000<span>원</span></strong>
+							<!-- 할인금액 -->
+							<ul class="in_sale">
+								<li><em>쿠폰</em><strong>0<span>원</span></strong></li>
+								<li><em>하나투어마일리지</em><strong class="ico_mp mile_b">50,000</strong></li>
+								<li><em>OK캐쉬백</em><strong class="ico_mp point_b">3,000</strong></li>
+								<li><em>하나투어상품권</em><strong>10,000<span>원</span></strong></li>
+							</ul>
+							<!-- // 할인금액 -->
+						</li>
+						<li><em><b>최종결제금액</b></em><strong class="c_red">500,000<span>원</span></strong></li>
+					</ul>
+					
+					<!-- 신용카드일경우 -->
+					<div class="card_breakdown">
+						<em>신용카드 <span class="c_red">300,000<span class="won">원</span></span></em>
+						<strong>신한카드(110******789)일시불&nbsp; <span>2017.07.05 22:53:27</span></strong>
+					</div>
+					
+					<a href="#pop_receipt.html" class="sbtn_left popUpFull">영수증확인</a>
+					<button type="button" class="sbtn_left">승인취소신청</button><!-- 승인완료일경우 complete 추가 , 불가일경우 disabled처리 -->
+					
+					<ul class="comBulTxt c_gray">
+						<li>승인취소, 현금영수증 신청은 <a href="#" class="textLink">결제상세내역</a> 페이지에서 확인해주세요.</li>
+					</ul>
+					<!-- // 신용카드일경우 -->
+					
+					<!-- 무통장입금일경우 -->
+					<div class="card_breakdown">
+						<em>무통장입금 <span class="c_red">300,000<span class="won">원</span></span></em>
+						<strong>국민은행 123-456-7890&nbsp; <span>(예금주명:㈜하나투어)</span></strong>
+						<b><span>입금자</span> 김*나</b>
+						<b><span>입금마감일</span> 2017년 07월 10일</b>
+					</div>
+					
+					<ul class="comBulTxt c_gray">
+						<li>입금마감일까지 입금해주세요.</li>
+						<li>위 계좌는 고객님께만 발급된 계좌번호이며, 별도 문의나 전화 확인없이 자동 입금확인됩니다.</li>
+					</ul>
+					<!-- // 무통장입금일경우 -->
+					
+					<!-- 무통장입금일경우 2 -->
+					<div class="card_breakdown">
+						<em>무통장입금 <span class="c_red">300,000<span class="won">원</span></span></em>
+						<strong>국민은행 123-456-7890&nbsp; <span>(예금주명:㈜하나투어)</span></strong>
+						<b><span>입금자</span> 김*나</b>
+					</div>
+					
+					<ul class="comBulTxt c_gray">
+						<li>현금영수증은 하나투어닷컴 PC버전에서 신청해주세요.
+							<p class="cash_day">신청기간 : <span class="c_black">출발일 다음날 ~ 도착일 +30일 이내</span></p>
+						</li>
+					</ul>
+					<!-- // 무통장입금일경우 2 -->
+					
+					<!-- 카카오페이일경우 -->
+					<div class="card_breakdown">
+						<em class="ico_kakao">카카오페이(신용카드) <span class="c_red">300,000<span class="won">원</span></span></em><!-- 카카오 아이콘 ico_kakao 추가 -->
+						<strong>신한카드(110******789)일시불&nbsp; <span>2017.07.05 22:53:27</span></strong>
+					</div>
+					
+					<button type="button" class="sbtn_left">승인취소신청</button><!-- 승인완료일경우 complete 추가 , 불가일경우 disabled 처리 -->
+					<button type="button" class="sbtn_left complete">승인취소완료</button>
+					<button type="button" class="sbtn_left" disabled>승인취소불가</button>
+					<!-- // 카카오페이일경우 -->
+				</div>
+			</div>
+			<!-- // 결제정보 -->
+			
+			<!-- 포켓와이파이 추가 -->
+			<div class="reserv_content">
+				<h3 class="tit_reserv">포켓 와이파이 &amp; USIM<button type="button" title="자세히보기 펼치기/닫기" class="btn_toggle on"></button></h3><!-- 버튼 클릭시 아래 div toggle -->
+				<div>
+					<div class="pkUsimCont">
+						<p>보조배터리 무료 대여 등 하나투어 추가혜택 받고 준비하기</p>
+						<ul>
+							<li class="ico_wifi"><p><em>이럴 땐 포켓 와이파이!</em>한 대의 단말기로 여럿이 함께 이용할 때</p></li>
+							<li class="ico_usim"><p><em>이럴 땐 USIM!</em>별도의 반납 없이 맘 편히 이용!<br>장기간 여행 시 상대적으로 저렴!</p></li>
+						</ul>
+						<a href="#">전 세계 한눈에보기</a>
+					</div>
+				</div>
+			</div>
+			
+			<a href="#" class="m_btnRed">예약상세 확인하기</a>
+			
+		</section>
+		<!-- // 예약결제 간소화 -->
+		
+	</div>
+	<!-- //컨텐츠 영역 -->
+	
+	<footer class="newFoot">
+		<ul>
+			<li><a href="#none" data-role="none">로그인</a></li>
+			<li><a href="#none" data-role="none">PC버전</a></li>
+			<li><a href="#none" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+		</ul>
+		<div>
+			<a href="#none" data-role="none">이용약관</a>|
+			<a href="#none" data-role="none">개인정보처리방침</a>|
+			<a href="#none" data-role="none">여행약관</a>|
+			<a href="#none" data-role="none">사업자정보확인</a>
+		</div>
+		<address>
+			㈜ 하나투어 | 대표자: 최현석 | 사업자등록번호 : 102-81-39440<br>
+			통신판매업신고번호 : 종로01-1806호 | 개인정보관리 책임자 : 최종윤<br>
+			[110-160]서울특별시 종로구 인사동 5길 41 ㈜ 하나투어<br>
+			하나투어상담센터 : <a href="tel:1577-1233" data-role="none">1577-1233</a> | FAX : 02-734-0392<br>
+			이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> | 호스팅 서비스 사업자 : ㈜하나투어<br>
+			관광사업자 등록번호 : 제1933-000006호 | 영업보증보험 : 22억 1천만원 가입<br>
+			COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+		</address>
+	</footer>
+	
+</div>
+
+</body>
+</html>
+
