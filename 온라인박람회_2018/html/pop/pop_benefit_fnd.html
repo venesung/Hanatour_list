@@ -1,0 +1,34 @@
+
+
+
+<script type="text/javascript">
+	$('#overlayPanel').on('open.loadpop', function (e, data) {
+   		if (EXPO !== undefined && typeof EXPO.initPopup === 'function') EXPO.initPopup();
+   	});
+</script>
+
+<div class="fullPopCommon">
+	
+	<div class="header benefitPopHead bgBene12">
+		<button type="button" class="closeOverlayPanel" title="팝업닫기"></button>
+		<h3 class="tit_popBenefit">현지투어<br><br></h3>
+	</div>
+	
+	<!-- 컨텐츠 -->
+	<div class="pop_innerComm">
+		<dl class="pop_benefitList">
+			<dt>공통 혜택</dt>
+			<dd>
+				<ul>
+					<li>최대 50% 상품가 할인</li>
+					<li>최저가 보상제 300%</li>
+					<li>3% 할인쿠폰 발급</li>
+				</ul>
+			</dd>
+		</dl>
+	</div>
+	<!-- // 컨텐츠 -->
+	
+</div>
+
+

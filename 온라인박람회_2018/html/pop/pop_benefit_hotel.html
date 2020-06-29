@@ -1,0 +1,36 @@
+
+
+
+<script type="text/javascript">
+	$('#overlayPanel').on('open.loadpop', function (e, data) {
+   		if (EXPO !== undefined && typeof EXPO.initPopup === 'function') EXPO.initPopup();
+   	});
+</script>
+
+<div class="fullPopCommon">
+	
+	<div class="header benefitPopHead bgBene10">
+		<button type="button" class="closeOverlayPanel" title="팝업닫기"></button>
+		<h3 class="tit_popBenefit">호텔<br><br></h3>
+	</div>
+	
+	<!-- 컨텐츠 -->
+	<div class="pop_innerComm">
+		<dl class="pop_benefitList">
+			<dt>해외호텔</dt>
+			<dd>
+				<ul>
+					<li>전세계 해외호텔 할인쿠폰 상시 발급</li>
+					<li>최저가 200% 보상제</li>
+				</ul>
+			</dd>
+			
+			<dt>국내숙박</dt>
+			<dd>국내 숙박 예약 시 2% 즉시 할인</dd>
+		</dl>
+	</div>
+	<!-- // 컨텐츠 -->
+	
+</div>
+
+
