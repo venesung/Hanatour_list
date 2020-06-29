@@ -1,0 +1,845 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>챗봇</title>
+<link rel="stylesheet" type="text/css" href="../css/chatbot_air.css"> <!-- 챗봇 CSS -->
+<script src="http://mhanafreeair.hanatour.com/js/jquery-2.1.3.min.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/mhanafreeair.hanatour.com/js/swiper.min.js" type="text/javascript"></script>
+<script src="http://www.chaessi.com/mobile/hanatour_app/mhanafreeair.hanatour.com/js/common.js" type="text/javascript"></script>
+<script src="../js/jquery-ui-custom.js" type="text/javascript"></script>
+<script src="../js/ht.calendar.js" type="text/javascript"></script>
+<script src="../js/m.hanafreeair.chatbot.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		if (typeof CHATBOT.initCardSwiper !== 'undefined') {
+			CHATBOT.initCardSwiper($('.swiper-container.cardSwipe').not('.swiper-container-horizontal')); //카드 스와이프 추가될때 마다 실행
+		}
+
+		CHATBOT.toggleHint(true); // 유도창 열기
+		//CHATBOT.toggleHint(false); // 유도창 닫기
+	});
+</script>
+</head>
+
+
+<!-- 챗봇 -->
+<body id="chatbotWrap">
+
+	<div id="wrap" data-role="page">
+		
+		<p class="inforTxt" style="display:n one">처음부터 다시 시작하시려면 [상품 검색] 을 입력해주세요. </p><!-- 안내문구 -->
+		<!-- 채팅 영역 -->
+		<section id="chatContainer" class=""><!-- 하단열릴시 calc01 추가 :: 상단 간편메뉴 스와이프 열릴시 calc02 추가 :: 같이열릴경우 두개다 추가 -->
+			
+		
+			<!-- 채팅 리스트 -->
+			<ul class="chatList">
+				<li class="hana"><!-- 하나투어 class="hana" 사용자일경우 class="user" -->
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>사랑합니다 고객님!<br> 고객님의 행복한 여행을 도와드릴 하나투어 챗봇입니다.</p>
+						<br><!-- p태그 말풍선 사이에 br처리 추가해주세요 -->
+						<p>
+							원하시는 여행상품을 선택해 주세요 
+							<span class="time">오후 13:16</span>
+						</p>
+					</div>
+					<!-- // 말풍선 -->
+				</li>
+				
+				<li class="user">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>패키지<span class="time">오후 3:17</span></p>
+					</div>
+					<!-- // 말풍선 -->
+				</li> 
+				
+				<li class="hana">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>패키지 검색을 시작합니다.</p>
+						<br>
+						<p>
+							출발 도시를 입력해 주세요.
+							<span class="time">오후 3:16</span>
+						</p>
+					</div>
+					<!-- // 말풍선 -->
+				</li>
+				
+				<li class="user">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>인천<span class="time">오후 3:18</span></p>
+					</div>
+					<!-- // 말풍선 -->
+				</li> 
+				
+				<li class="hana">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>목적지를 입력해 주세요.<span class="time">오후 3:16</span></p>
+					</div>
+					<!-- // 말풍선 -->
+				</li>
+				
+				<li class="user">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>도쿄<span class="time">오후 3:18</span></p>
+					</div>
+					<!-- // 말풍선 -->
+				</li> 
+				
+				<li class="hana">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>출발일을 입력해 주세요.<span class="time">오후 3:16</span></p>
+					</div>
+					<!-- // 말풍선 -->
+				</li>
+				
+				<li class="user">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>2017-01-11<span class="time">오후 3:18</span></p>
+					</div>
+					<!-- // 말풍선 -->
+				</li> 
+				
+				<li class="hana">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<!-- 검색중 -->
+						<p>패키지 <span class="line"><!-- 구분선 --></span> 인천-도쿄<br>
+							출발일 : 2017-01-11<br>상품을 검색중입니다....
+							<span class="loadingBar"><img src="http://image1.hanatour.com/mobile/common/chatbot/loading_list.gif" alt="로딩바"></span>
+							
+							<em class="dotLine">검색을 중단하고 다른 상품 검색을<br> 원하실 경우 [상품검색]을 입력해 주세요.</em> 
+						</p>
+						<!-- // 검색중 -->
+						<br>
+						
+						<p>패키지 <span class="line"><!-- 구분선 --></span> 인천-도쿄<br>
+							출발일 : 2017-01-11
+						</p>
+						<br>
+						
+						<p><a class="event_img" href="#"><img src="http://image1.hanatour.com/mobile/hanatour/2016/top/top_P13762.jpg" alt=""></a><!-- 20170308 추가 -->
+						</p>
+						<br>
+						
+						<p>아래 상품은 어떠세요?
+							<span class="time">오후 3:16</span>
+						</p>
+						
+						<!-- 스와이프 패키지 상품 -->
+						<div class="swiper-container cardSwipe">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a href="#" class="cardPack">
+										<span class="img">
+											<img class="swiper-lazy" data-src="http://image1.hanatour.com/mobile/common/chatbot/img_sample01.jpg" alt="">
+											<span class="swiper-lazy-preloader"></span>
+											
+											<!-- 라벨추가 20170313 -->
+											<span class="labelTag">
+												<em>부산출발</em>
+												<em>트레킹레포츠</em>
+											</span>
+											<!-- // 라벨추가 20170313 -->
+										</span>
+										<div>
+											<p>★도쿄 핵심관광</p>
+											<strong class="money">629,000 <span>원~</span></strong>
+										</div>
+									</a>
+								</div>
+							
+								<div class="swiper-slide">
+									<a href="#" class="cardPack">
+										<!-- 20170214 수정 :: 레이지로딩 추가 -->
+										<span class="img">
+											<img class="swiper-lazy" data-src="http://image1.hanatour.com/mobile/common/chatbot/img_noimg.jpg" alt="">
+											<span class="swiper-lazy-preloader"></span>
+										</span>
+										<!-- // 20170214 수정 :: 레이지로딩 추가 -->
+										<div>
+											<p>★도쿄 핵심관광★도쿄/오다이바 4일 1일 자유</p>
+											<strong class="money">629,000 <span>원</span></strong>
+											<em class="people">성인 1인</em>
+										</div>
+									</a>
+								</div>
+								
+								<div class="swiper-slide">
+									<a href="#" class="cardPack">
+										<span class="img">
+											<img class="swiper-lazy" data-src="http://image1.hanatour.com/mobile/common/chatbot/img_sample01.jpg" alt="">
+											<span class="swiper-lazy-preloader"></span>
+										</span>
+										<div>
+											<p>★도쿄 핵심관광★도쿄/오다이바 4일 1일 자유</p>
+											<strong class="money">629,000 <span>원</span></strong>
+											<em class="people">성인 1인</em>
+										</div>
+									</a>
+								</div>
+								
+								<div class="swiper-slide">
+									<a href="#" class="cardPack">
+										<span class="img">
+											<img class="swiper-lazy" data-src="http://image1.hanatour.com/mobile/common/chatbot/img_sample02.jpg" alt="">
+											<span class="swiper-lazy-preloader"></span>
+										</span>
+										<div>
+											<p>★도쿄 핵심관광★도쿄/오다이바 4일 1일 자유</p>
+											<strong class="money">629,000 <span>원</span></strong>
+											<em class="people">성인 1인</em>
+										</div>
+									</a>
+								</div>
+								
+								<div class="swiper-slide">
+									<a href="#" class="cardPack">
+										<span class="img">
+											<img class="swiper-lazy" data-src="http://image1.hanatour.com/mobile/common/chatbot/img_sample03.jpg" alt="">
+											<span class="swiper-lazy-preloader"></span>
+										</span>
+										<div>
+											<p>★도쿄 핵심관광★도쿄/오다이바 4일 1일 자유</p>
+											<strong class="money">629,000 <span>원</span></strong>
+											<em class="people">성인 1인</em>
+										</div>
+									</a>
+								</div>
+								
+								<!-- 더보기 버튼 -->
+								<div class="swiper-slide plusBox">
+									<a href="#" class="plusView">더 많은 상품<br>보러가기</a>
+								</div>
+								<!-- // 더보기 버튼 -->
+							</div>
+							
+							<span class="time">오후 4:16</span>
+						</div>
+						<!-- // 스와이프 패키지 상품 -->
+						
+						
+						<p>아래 상품은 어떠세요?
+							<span class="time">오후 3:16</span>
+						</p>
+						
+						<!-- 20170214 이미지 없는 스와이프 패키지 상품 -->
+						<div class="swiper-container cardSwipe imgNo"> <!-- 이미지없는경우 class="imgNo" 추가 -->
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a href="#" class="cardPack">
+										<div>
+											<p>★도쿄 핵심관광★도쿄/오다이바 ★도쿄 핵심관광★도쿄/오다이바 4일 1일 자유</p>
+											<strong class="money">629,000 <span>원</span></strong>
+											<em class="people">성인 1인</em>
+										</div>
+									</a>
+								</div>
+								
+								<div class="swiper-slide">
+									<a href="#" class="cardPack">
+										<div>
+											<p>★도쿄 핵심관광★도쿄/오다이바 4일 1일 자유 ★도쿄 핵심관광★도쿄/오다이바 4일 1일 자유 ★도쿄 핵심관광★도쿄/오다이바 4일 1일 자유 ★도쿄 핵심관광★도쿄/오다이바 4일 1일 자유</p>
+											<strong class="money">629,000 <span>원</span></strong>
+											<em class="people">성인 1인</em>
+										</div>
+									</a>
+								</div>
+								
+								<div class="swiper-slide">
+									<a href="#" class="cardPack">
+										<div>
+											<p>★도쿄 핵심관광★도쿄/오다이바 4일 1일 자유</p>
+											<strong class="money">629,000 <span>원</span></strong>
+											<em class="people">성인 1인</em>
+										</div>
+									</a>
+								</div>
+								
+								<div class="swiper-slide">
+									<a href="#" class="cardPack">
+										<div>
+											<p>★도쿄 핵심관광★도쿄/오다이바 4일 1일 자유</p>
+											<strong class="money">629,000 <span>원</span></strong>
+											<em class="people">성인 1인</em>
+										</div>
+									</a>
+								</div>
+								
+								<!-- 더보기 버튼 -->
+								<div class="swiper-slide plusBox">
+									<a href="#" class="plusView">더 많은 상품<br>보러가기</a>
+								</div>
+								<!-- // 더보기 버튼 -->
+							</div>
+							
+							<span class="time">오후 4:16</span>
+						</div>
+						<!-- // 20170214 이미지 없는 스와이프 패키지 상품 -->
+						
+						
+						
+						<!-- 20170324  -->
+						<div class="swiper-container cardSwipe imgNo"> <!-- 이미지없는경우 class="imgNo" 추가 -->
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a href="#" class="cardPack">
+										<div>
+											<p>도쿄 핵심관광★도쿄/오다이바 4일 1일 자유</p>
+											<strong class="money">629,000 <span>원</span></strong>
+											<em class="local">시외(근교)관광 약 1시간 20분 소요</em>
+										</div>
+									</a>
+								</div>
+								
+								<div class="swiper-slide">
+									<a href="#" class="cardPack">
+										<div>
+											<p>★도쿄 핵심관광★도쿄/오다이바 4일 1일 자유</p>
+											<strong class="money">629,000 <span>원</span></strong>
+											<em class="local">약 1시간 20분 소요</em>
+										</div>
+									</a>
+								</div>
+								
+								<div class="swiper-slide">
+									<a href="#" class="cardPack">
+										<div>
+											<p>★도쿄 핵심관광★도쿄/오다이바 4일 1일 자유</p>
+											<strong class="money">629,000 <span>원</span></strong>
+											<em class="local">약 1시간 20분 소요</em>
+										</div>
+									</a>
+								</div>
+								
+								<div class="swiper-slide">
+									<a href="#" class="cardPack">
+										<div>
+											<p>★도쿄 핵심관광★도쿄/오다이바 4일 1일 자유</p>
+											<strong class="money">629,000 <span>원</span></strong>
+											<em class="local">시외(근교)관광 약 1시간 20분 소요</em>
+										</div>
+									</a>
+								</div>
+								
+								<!-- 더보기 버튼 -->
+								<div class="swiper-slide plusBox">
+									<a href="#" class="plusView">더 많은 상품<br>보러가기</a>
+								</div>
+								<!-- // 더보기 버튼 -->
+							</div>
+							
+							<span class="time">오후 4:16</span>
+						</div>
+						<!-- // 20170214 이미지 없는 스와이프 패키지 상품 -->
+						
+					</div>
+					<!-- // 말풍선 -->
+				</li>
+			</ul>
+			<!-- // 채팅 리스트 -->
+			
+			<div class="chatDay">2016년 8월 31일 (수)</div><!-- 날짜 바뀔경우 -->
+			
+			<!-- 채팅 리스트 -->
+			<ul class="chatList">
+				<li class="hana"><!-- 하나투어 class="hana" 사용자일경우 class="user" -->
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>사랑합니다 고객님!<br> 고객님의 행복한 여행을 도와드릴 하나투어 챗봇입니다.</p>
+						<br><!-- p태그 말풍선 사이에 br처리 추가해주세요 -->
+						<p>
+							원하시는 여행상품을 선택해 주세요 
+							<span class="time">오후 3:16</span>
+						</p>
+					</div>
+					<!-- // 말풍선 -->
+				</li>
+				
+				<li class="user">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>항공권<span class="time">오후 3:17</span></p>
+					</div>
+					<!-- // 말풍선 -->
+				</li> 
+				
+				<li class="hana">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>항공권 검색을 시작합니다.</p>
+						<br>
+						<p>
+							출발 도시를 입력해 주세요.
+							<span class="time">오후 3:16</span>
+						</p>
+					</div>
+					<!-- // 말풍선 -->
+				</li>
+				
+				<li class="user">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>인천<span class="time">오후 3:18</span></p>
+					</div>
+					<!-- // 말풍선 -->
+				</li> 
+				
+				<li class="hana">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>목적지를 입력해 주세요.<span class="time">오후 3:16</span></p>
+					</div>
+					<!-- // 말풍선 -->
+				</li>
+				
+				<li class="user">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>도쿄<span class="time">오후 3:18</span></p>
+					</div>
+					<!-- // 말풍선 -->
+				</li> 
+				
+				<li class="hana">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>출도착 날짜를 입력해 주세요.<span class="time">오후 3:16</span></p>
+					</div>
+					<!-- // 말풍선 -->
+				</li>
+				
+				<li class="user">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>2017-01-11, 2017-01-19<span class="time">오후 3:18</span></p>
+					</div>
+					<!-- // 말풍선 -->
+				</li> 
+				
+				<li class="hana">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<!-- 검색중 -->
+						<p>항공권 <span class="line"><!-- 구분선 --></span> 인천-도쿄<br>
+							기간 : 2017-01-11, 2017-01-19<br>상품을 검색중입니다....
+							<span class="loadingBar"><img src="http://image1.hanatour.com/mobile/common/chatbot/loading_list.gif" alt="로딩바"></span>
+							
+							<em class="dotLine">검색을 중단하고 다른 상품 검색을<br> 원하실 경우 [상품검색]을 입력해 주세요.</em> 
+						</p>
+						<!-- // 검색중 -->
+						<br>
+						
+						<p>항공권 <span class="line"><!-- 구분선 --></span> 인천-도쿄<br>
+							출발일 : 2017-01-11
+						</p>
+						
+						<br>
+						
+						<p>아래 항공권은 어떠세요?
+							<span class="time">오후 3:16</span>
+						</p>
+						
+						<!-- 스와이프 항공권 상품 -->
+						<div class="swiper-container cardSwipe air"><!-- 항공권 class="air" 추가 -->
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a href="#" class="cardAir">
+										<div class="airTop">
+											<b class="best"><img src="http://image1.hanatour.com/mobile/common/chatbot/img_product_best_label.png" alt="best"></b>
+											<span class="logo"><img src="http://image1.hanatour.com/2010/images/airline/KE.png" alt=""></span>
+											<strong>대한항공</strong>
+											<em>예약가능</em>
+										</div>
+										
+										<div class="airTxt01">
+											<p>직항 <span class="line"><!-- 구분선 --></span> 유효기간 12개월</p>
+											<span>성인/국민카드</span>
+										</div>
+										<div class="airTxt02">
+											<strong class="money">629,000 <span>원~</span></strong>
+											<em>유류할증료, 제세공과금 포함</em>
+										</div>
+									</a>
+								</div>
+								
+								<div class="swiper-slide">
+									<a href="#" class="cardAir">
+										<div class="airTop">
+											<span class="logo"><img src="http://image1.hanatour.com/2010/images/airline/OZ.png" alt=""></span>
+											<strong>아시아나</strong>
+											<em>예약가능</em>
+										</div>
+										
+										<div class="airTxt01">
+											<p>직항 <span class="line"><!-- 구분선 --></span> 유효기간 12개월</p>
+											<span>성인/국민카드</span>
+										</div>
+										<div class="airTxt02">
+											<strong class="money">629,000 <span>원~</span></strong>
+											<em>유류할증료, 제세공과금 포함</em>
+										</div>
+									</a>
+								</div>
+								
+								
+								<!-- 더보기 버튼 -->
+								<div class="swiper-slide plusBox">
+									<a href="#" class="plusView">더 많은 상품<br>보러가기</a>
+								</div>
+								<!-- // 더보기 버튼 -->
+							</div>
+							
+							<span class="time">오후 4:16</span>
+						</div>
+						<!-- // 스와이프 항공권 상품 -->
+						
+					</div>
+					<!-- // 말풍선 -->
+				</li>
+			</ul>
+			<!-- // 채팅 리스트 -->
+			
+			
+			<div class="chatDay">2016년 9월 11일 (수)</div><!-- 날짜 바뀔경우 -->
+			
+			<!-- 채팅 리스트 -->
+			<ul class="chatList">
+				<li class="hana"><!-- 하나투어 class="hana" 사용자일경우 class="user" -->
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>사랑합니다 고객님!<br> 고객님의 행복한 여행을 도와드릴 하나투어 챗봇입니다.</p>
+						<br><!-- p태그 말풍선 사이에 br처리 추가해주세요 -->
+						<p>
+							원하시는 여행상품을 선택해 주세요 
+							<span class="time">오후 3:16</span>
+						</p>
+					</div>
+					<!-- // 말풍선 -->
+				</li>
+				
+				<li class="user">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>호텔<span class="time">오후 3:17</span></p>
+					</div>
+					<!-- // 말풍선 -->
+				</li> 
+				
+				<li class="hana">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>호텔 검색을 시작합니다.</p>
+						<br>
+						<p>
+							목적지를 입력해 주세요.
+							<span class="time">오후 3:16</span>
+						</p>
+					</div>
+					<!-- // 말풍선 -->
+				</li>
+				
+				<li class="user">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>도쿄<span class="time">오후 3:18</span></p>
+					</div>
+					<!-- // 말풍선 -->
+				</li> 
+				
+				<li class="hana">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>체크인,체크아웃 날짜를 입력해 주세요.<span class="time">오후 3:16</span></p>
+					</div>
+					<!-- // 말풍선 -->
+				</li>
+				
+				<li class="user">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>2017-01-11, 2017-01-19<span class="time">오후 3:18</span></p>
+					</div>
+					<!-- // 말풍선 -->
+				</li> 
+				
+				<li class="hana">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<!-- 검색중 -->
+						<p>호텔 <span class="line"><!-- 구분선 --></span> 도쿄<br>
+							기간 : 2017-01-11, 2017-01-19<br>호텔을 검색중입니다....
+							<span class="loadingBar"><img src="http://image1.hanatour.com/mobile/common/chatbot/loading_list.gif" alt="로딩바"></span>
+							
+							<em class="dotLine">검색을 중단하고 다른 상품 검색을<br> 원하실 경우 [상품검색]을 입력해 주세요.</em> 
+						</p>
+						<!-- // 검색중 -->
+						<br>
+						
+						<p>호텔 <span class="line"><!-- 구분선 --></span> 도쿄<br>
+							기간 : 2017-01-11, 2017-01-19
+						</p>
+						
+						<br>
+						
+						<p>아래 호텔은 어떠세요?
+							<span class="time">오후 3:16</span>
+						</p>
+						
+						<!-- 스와이프 호텔 상품 -->
+						<div class="swiper-container cardSwipe">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a href="#" class="cardHotel">
+										<span class="img">
+											<img class="swiper-lazy" data-src="http://image1.hanatour.com/mobile/common/chatbot/dummy_product_ht01.png" alt="">
+											<span class="swiper-lazy-preloader"></span>
+										</span>
+										<div>
+											<p>도쿄 호텔</p>
+											<b>SOFITEL SO BANGKOK</b>
+											<strong class="money">414,000 <span>원~</span></strong>
+											<em>4성급 <span class="line"><!-- 구분선 --></span> 1박요금</em>
+										</div>
+									</a>
+								</div>
+								
+								<div class="swiper-slide">
+									<a href="#" class="cardHotel">
+										<span class="img">
+											<img class="swiper-lazy" data-src="http://image1.hanatour.com/mobile/common/chatbot/dummy_product_ht02.png" alt="">
+											<span class="swiper-lazy-preloader"></span>	
+										</span>
+										<div>
+											<p>도쿄 호텔</p>
+											<b>SOFITEL SO BANGKOK</b>
+											<strong class="money">414,000 <span>원~</span></strong>
+											<em>4성급 <span class="line"><!-- 구분선 --></span> 1박요금</em>
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="cardHotel">
+										<span class="img">
+											<img class="swiper-lazy" data-src="http://image1.hanatour.com/mobile/common/chatbot/dummy_product_ht01.png" alt="">
+											<span class="swiper-lazy-preloader"></span>
+										</span>
+										<div>
+											<p>도쿄 호텔</p>
+											<b>SOFITEL SO BANGKOK</b>
+											<strong class="money">414,000 <span>원~</span></strong>
+											<em>4성급 <span class="line"><!-- 구분선 --></span> 1박요금</em>
+										</div>
+									</a>
+								</div>
+								
+								<div class="swiper-slide">
+									<a href="#" class="cardHotel">
+										<span class="img">
+											<img class="swiper-lazy" data-src="http://image1.hanatour.com/mobile/common/chatbot/dummy_product_ht02.png" alt="">
+											<span class="swiper-lazy-preloader"></span>	
+										</span>
+										<div>
+											<p>도쿄 호텔</p>
+											<b>SOFITEL SO BANGKOK</b>
+											<strong class="money">414,000 <span>원~</span></strong>
+											<em>4성급 <span class="line"><!-- 구분선 --></span> 1박요금</em>
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="cardHotel">
+										<span class="img">
+											<img class="swiper-lazy" data-src="http://image1.hanatour.com/mobile/common/chatbot/dummy_product_ht01.png" alt="">
+											<span class="swiper-lazy-preloader"></span>
+										</span>
+										<div>
+											<p>도쿄 호텔</p>
+											<b>SOFITEL SO BANGKOK</b>
+											<strong class="money">414,000 <span>원~</span></strong>
+											<em>4성급 <span class="line"><!-- 구분선 --></span> 1박요금</em>
+										</div>
+									</a>
+								</div>
+								
+								<div class="swiper-slide">
+									<a href="#" class="cardHotel">
+										<span class="img">
+											<img class="swiper-lazy" data-src="http://image1.hanatour.com/mobile/common/chatbot/dummy_product_ht02.png" alt="">
+											<span class="swiper-lazy-preloader"></span>	
+										</span>
+										<div>
+											<p>도쿄 호텔</p>
+											<b>SOFITEL SO BANGKOK</b>
+											<strong class="money">414,000 <span>원~</span></strong>
+											<em>4성급 <span class="line"><!-- 구분선 --></span> 1박요금</em>
+										</div>
+									</a>
+								</div>
+								
+								<!-- 더보기 버튼 -->
+								<div class="swiper-slide plusBox">
+									<a href="#" class="plusView">더 많은 상품<br>보러가기</a>
+								</div>
+								<!-- // 더보기 버튼 -->
+							</div>
+							
+							<span class="time">오후 4:16</span>
+						</div>
+						<!-- // 스와이프 호텔 상품 -->
+						
+					</div>
+					<!-- // 말풍선 -->
+				</li>
+			</ul>
+			<!-- // 채팅 리스트 -->
+			
+			
+			<div class="chatDay">2016년 9월 15일 (수)</div><!-- 날짜 바뀔경우 -->
+			
+			<!-- 채팅 리스트 -->
+			<ul class="chatList">
+				<li class="hana"><!-- 하나투어 class="hana" 사용자일경우 class="user" -->
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>사랑합니다 고객님!<br> 고객님의 행복한 여행을 도와드릴 하나투어 챗봇입니다.</p>
+						<br><!-- p태그 말풍선 사이에 br처리 추가해주세요 -->
+						<p>
+							원하시는 여행상품을 선택해 주세요 
+							<span class="time">오후 3:16</span>
+						</p>
+					</div>
+					<!-- // 말풍선 -->
+				</li>
+				
+				<li class="user">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>현지 1:1 문의<span class="time">오후 3:17</span></p>
+					</div>
+					<!-- // 말풍선 -->
+				</li> 
+				
+				<li class="hana">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>하나투어 현지 가이드가 여행 안내를 도와 드립니다.<br><br>현재 방콕 지역만 이용가능합니다. 카카오톡을 통해 1:1 문의를 계속 하시겠습니까?</p>
+					</div>
+					<!-- // 말풍선 -->
+				</li>
+				
+				<li class="user">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>아니오<span class="time">오후 3:20</span></p>
+						<br>
+						<p>ARS상담<span class="time">오후 3:21</span></p>
+					</div>
+					<!-- // 말풍선 -->
+				</li> 
+				
+				<li class="hana">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>지금 바로 통화 하시겠습니까?<span class="time">오후 3:20</span></p>
+					</div>
+					<!-- // 말풍선 -->
+				</li>
+				
+				<li class="user">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>아니오<span class="time">오후 3:18</span></p>
+					</div>
+					<!-- // 말풍선 -->
+				</li> 
+				
+				<li class="hana">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>통화가능한 시간을 남겨주시면 상담원이 원하시는 시간에 전화를 드리겠습니다.<span class="time">오후 3:20</span></p>
+					</div>
+					<!-- // 말풍선 -->
+				</li>
+			</ul>
+			<!-- // 채팅 리스트 -->
+			
+		</section>
+		<!-- // 채팅 영역 -->
+		
+		<!-- 하단 바 -->
+		<div class="chatBtmBar">
+			<!-- btminner -->
+			<div class="btminner">
+				<a href="#" class="plus" title="메뉴보기"><img src="http://image1.hanatour.com/mobile/common/chatbot/btn_btm_plus.png" alt=""></a> <!-- class="on" 추가 / 하단 quickMenu 활성화 -->
+				
+				<!-- 스와이프 -->
+				<div class="quickSwipe" style="display:n one"> <!-- 노출시 section id="chatContainer" 에 padding-bottom:85px 추가해주세요 -->
+					<div class="swiper-container ">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><a href="pop_cb_calender.html" class="pb_hrefpopup" data-type="type_single">패키지</a></div>
+							<div class="swiper-slide"><a href="pop_cb_calender.html" class="pb_hrefpopup" data-type="type_range">호텔</a></div>
+							<div class="swiper-slide"><a href="pop_cb_calender.html" class="pb_hrefpopup" data-type="type_range_unplan">항공권</a></div>
+							<div class="swiper-slide"><a href="pop_cb_city.html" class="pb_hrefpopup">지역선택</a></div>
+						</div>
+						
+					</div>
+				</div>
+				<!-- // 스와이프 -->
+				
+				<div class="inputBox">
+					<input type="text" title="메시지 입력" placeholder="메세지를 입력하세요.">
+					<a href="#" class="tip" title="참고사항"></a><!-- 클릭시 class="on"추가되고 아래 class="tipTxt" 노출 -->
+				</div>
+				
+				<a href="#" class="send">전송</a>
+				
+				<div class="tipTxt" style="display:none">
+					<p>[상품] [출발지] [도착지] [출발일자] [도착일자] 또는 [상품] [도착지]</p>
+					<strong><em>ex</em>패키지 인천 방콕 2016-11-20 2016-12-20</strong>
+					<strong><em>ex</em>패키지 방콕</strong>
+					<a href="#" class="tipClose" title="닫기"></a>
+				</div>
+			</div>
+			<!-- // btminner -->
+			
+			<!-- 퀵메뉴 -->
+			<div class="quickMenu" style="display:none">
+				<a href="#" class="bg_ico01">상품검색</a>
+				<a href="pop_cb_intro.html" class="bg_ico02 pb_hrefpopup">이용안내</a>   
+				<a href="#" class="bg_ico03">현지1:1문의</a>
+				<a href="tel:1577-1233" class="bg_ico04">ARS상담</a>
+			</div>
+			<!-- // 퀵메뉴 -->
+			
+		</div>
+		<!-- // 하단 바 -->
+	</div>
+	
+
+<!-- 안내팝업 추가 20180717 -->	
+<div class="introPop">
+	<span class="img"><img src="http://image1.hanatour.com/mobile/common/air/chatbot/img_intpop_750.jpg" alt="화면에 보이는 해외항공권을 눌러서 검색을 시작해보세요. 대화창에 해외항공권을 직접 입력할 수도있습니다."></span>
+	<div>
+		<label><input type="checkbox"><span>다시보지 않기</span></label>
+		<a href="#">닫기</a>
+	</div>
+</div>
+<!-- // 안내팝업추가 20180717 -->
+
+</body>
+<!-- // 챗봇 -->
+
+</html>
+

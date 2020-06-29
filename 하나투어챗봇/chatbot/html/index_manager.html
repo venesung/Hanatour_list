@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>챗봇</title>
+<link rel="stylesheet" type="text/css" href="../css/chatbot.css"> <!-- 챗봇 CSS -->
+<script src="http://m.hanatour.com/static/js/lib/jQuery/jquery-2.2.3.min.js" type="text/javascript"></script>
+<script src="http://m.hanatour.com/static/js/lib/etc/swiper.min.js" type="text/javascript"></script>
+<script src="http://m.hanatour.com/static/js/common/common_new.js" type="text/javascript"></script>
+<script src="http://m.hanatour.com/static/js/lib/jQuery/jquery-ui-custom.js" type="text/javascript"></script>
+<script src="../js/ht.calendar.js" type="text/javascript"></script>
+<script src="../js/m.chatbot.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		if (typeof CHATBOT.initCardSwiper !== 'undefined') {
+			CHATBOT.initCardSwiper($('.swiper-container.cardSwipe').not('.swiper-container-horizontal')); //카드 스와이프 추가될때 마다 실행
+		}
+
+		//CHATBOT.toggleHint(true); // 유도창 열기
+		//CHATBOT.toggleHint(false); // 유도창 닫기
+	});
+</script>
+</head>
+
+
+<!-- 챗봇 -->
+<body id="chatbotWrap">
+
+	<div id="wrap" data-role="page">
+		
+		<p class="inforTxt" style="display:n one">처음부터 다시 시작하시려면 [상품 검색] 을 입력해주세요. </p><!-- 안내문구 -->
+		<!-- 채팅 영역 -->
+		<section id="chatContainer" class=""><!-- 하단열릴시 calc01 추가 :: 상단 간편메뉴 스와이프 열릴시 calc02 추가 :: 같이열릴경우 두개다 추가 -->
+			
+		
+			<!-- 채팅 리스트 -->
+			<ul class="chatList">
+				<li class="hana"><!-- 하나투어 class="hana" 사용자일경우 class="user" -->
+					<strong class="name">하나투어</strong>
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>사랑합니다 고객님!<br> 고객님의 행복한 여행을 도와드릴 하나투어 챗봇입니다.</p>
+						<br><!-- p태그 말풍선 사이에 br처리 추가해주세요 -->
+						<p>
+							원하시는 여행상품을 선택해 주세요 
+							<span class="time">오후 13:16</span>
+						</p>
+					</div>
+					<!-- // 말풍선 -->
+				</li>
+				
+				<li class="user">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>현지 1:1 문의<span class="time">오후 3:17</span></p>
+					</div>
+					<!-- // 말풍선 -->
+				</li> 
+				
+				<li class="hana"><!-- 하나투어 class="hana" 사용자일경우 class="user" -->
+					<strong class="name">하나투어</strong>
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>현지 1:1문의 연결하시겠습니까?</p>
+						<br><!-- p태그 말풍선 사이에 br처리 추가해주세요 -->
+						<p>상담지역을 선택해 주세요.
+							<span class="time">오후 13:16</span>
+						</p>
+					</div>
+					<!-- // 말풍선 -->
+				</li>
+				<li class="user">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>방콕<span class="time">오후 3:17</span></p>
+					</div>
+					<!-- // 말풍선 -->
+				</li> 
+			</ul>
+			<!-- // 채팅 리스트 -->
+			
+			<!-- 현지 상담원 연결 추가 20170428 -->
+			<!-- 연결중 -->
+			<p class="couns_state"><span>현지 상담원과 연결중입니다.</span></p>
+			<p class="couns_txt">
+				<span class="loding"><img src="http://image1.hanatour.com/mobile/common/chatbot/manager/loading_ani.gif" alt=""></span><!-- 로딩바 -->
+				방콕 상담원과 연결가능 시각은<br>현지시각 <span>평일 오전 00:00 ~ 오후 00:00</span>입니다<br>대화가 진행되지 않으면 <span>10분 후</span><br>대화가 종료됩니다.
+			</p>
+			<!-- // 연결중 -->
+			
+			<!-- 종료전 -->
+			<p class="couns_state"><span>현지 업무 종료 시간 <em>30분전</em>입니다</span></p>
+			<p class="couns_txt">
+				업무시간이후에는<br>상담이 불가능 할 수 있습니다.
+			</p>
+			<!-- // 종료전 -->
+			
+			<!-- 종료후 -->
+			<p class="couns_state"><span>현지  업무시간 종료로 연결이 불가능합니다.</span></p>
+			<p class="couns_txt">
+				방콕 상담원과 연결가능 시각은<br>현지시각 <span>평일 오전 00:00 ~ 오후 00:00</span>입니다.<br>다른상담지역을 선택해 주세요.
+			</p>
+			<!-- // 종료후 -->
+			
+			<div class="joinTxt">현지 상담원과 연결되었습니다.</div>
+			
+			<!-- 채팅 리스트 -->
+			<ul class="chatList">
+				<li class="hana counselor"><!-- 상담원 class="counselor" 추가 -->
+					<strong class="name">방콕상담원</strong>
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>안녕하세요. 고객님 방콕지사 담당자 홍길자입니다.</p>
+						<br><!-- p태그 말풍선 사이에 br처리 추가해주세요 -->
+						<p>
+							원하시는 여행상품을 선택해 주세요 
+							<span class="time">오후 13:16</span>
+						</p>
+					</div>
+					<!-- // 말풍선 -->
+				</li>
+				
+				<li class="user">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>현지 1:1 문의<span class="time">오후 3:17</span></p>
+					</div>
+					<!-- // 말풍선 -->
+				</li> 
+				
+				<li class="hana counselor"><!-- 상담원 class="counselor" 추가 -->
+					<strong class="name">방콕상담원</strong>
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>현지 1:1문의 연결하시겠습니까?</p>
+						<br><!-- p태그 말풍선 사이에 br처리 추가해주세요 -->
+						<p>상담지역을 선택해 주세요.
+							<span class="time">오후 13:16</span>
+						</p>
+					</div>
+					<!-- // 말풍선 -->
+				</li>
+				<li class="user">
+					<!-- 말풍선 :: 추가시 p태그 추가 -->
+					<div class="bubbleBox">
+						<p>방콕<span class="time">오후 3:17</span></p>
+					</div>
+					<!-- // 말풍선 -->
+				</li> 
+			</ul>
+			<!-- // 채팅 리스트 -->
+			
+			<a href="#" class="roomExit" title="나가기"><img src="http://image1.hanatour.com/mobile/common/chatbot/manager/img_chat_exit.png" alt="EXIT"></a><!-- 나가기 버튼 -->
+			
+			<!-- // 현지 상담원 연결 추가 20170428 -->
+			
+		</section>
+		<!-- // 채팅 영역 -->
+		
+		<!-- 하단 바 -->
+		<div class="chatBtmBar dim"><!-- 딤처리 -->
+			<!-- btminner -->
+			<div class="btminner">
+				<a href="#" class="plus" title="메뉴보기"><img src="http://image1.hanatour.com/mobile/common/chatbot/btn_btm_plus.png" alt=""></a> <!-- class="on" 추가 / 하단 quickMenu 활성화 -->
+				
+				<!-- 스와이프 -->
+				<div class="quickSwipe backAdd" style="display:n one"><!-- 현지상담시 버튼노출시 class="backAdd" 추가하면 버튼 노출됨 -->
+					<a href="#" class="backBtn" title="이전으로"></a><!-- 추가 :: 클릭시 backAdd 삭제 -->
+					
+					<div class="swiper-container ">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><a href="pop_cb_calender.html" class="pb_hrefpopup" data-type="type_single">패키지</a></div>
+							<div class="swiper-slide"><a href="pop_cb_calender.html" class="pb_hrefpopup" data-type="type_range">호텔</a></div>
+							<div class="swiper-slide"><a href="pop_cb_calender.html" class="pb_hrefpopup" data-type="type_range_unplan">항공권</a></div>
+							<div class="swiper-slide"><a href="pop_cb_city.html" class="pb_hrefpopup">지역선택</a></div>
+						</div>
+						
+					</div>
+				</div>
+				<!-- // 스와이프 -->
+				
+				<div class="inputBox">
+					<input type="text" title="메시지 입력" placeholder="메세지를 입력하세요.">
+					<a href="#" class="tip" title="참고사항"></a><!-- 클릭시 class="on"추가되고 아래 class="tipTxt" 노출 -->
+				</div>
+				
+				<a href="#" class="send">전송</a>
+				
+				<div class="tipTxt" style="display:none">
+					<p>[상품] [출발지] [도착지] [출발일자] [도착일자] 또는 [상품] [도착지]</p>
+					<strong><em>ex</em>패키지 인천 방콕 2016-11-20 2016-12-20</strong>
+					<strong><em>ex</em>패키지 방콕</strong>
+					<a href="#" class="tipClose" title="닫기"></a>
+				</div>
+			</div>
+			<!-- // btminner -->
+			
+			<!-- 퀵메뉴 -->
+			<div class="quickMenu" style="display:none">
+				<a href="#" class="bg_ico01">상품검색</a>
+				<a href="pop_cb_intro.html" class="bg_ico02 pb_hrefpopup">이용안내</a>   
+				<a href="#" class="bg_ico03">현지1:1문의</a>
+				<a href="tel:1577-1233" class="bg_ico04">ARS상담</a>
+			</div>
+			<!-- // 퀵메뉴 -->
+			
+		</div>
+		<!-- // 하단 바 -->
+	</div>
+</body>
+<!-- // 챗봇 -->
+
+
+</html>
+

@@ -1,0 +1,154 @@
+<script type="text/javascript">
+	$('body .slidepopup:last').off('open.loadpop').on('open.loadpop', function (e) {
+
+		//http://mhanafreeair.hanatour.com/ 에서 추출
+
+		/* 인원선택 : + 버튼 클릭 이벤트 */
+		$(document).on("click", ".peopleBtn .plusBtn", function() {
+			//$(document).on("click", ".peopleBtn .plusBtn", function(){
+			var total_num = 0;
+			var arrNumEl = $(".peopleBtn .num");
+			arrNumEl.each(function() {
+				total_num = total_num + parseInt($(this).text());
+			});
+			if (total_num > 8) {
+				//alert("예약 가능한 인원은 최대 9명 입니다.");
+				showAlert("alert", "예약 가능한 인원은 최대 9명 입니다.", function(){
+					hideAlert();
+				});
+				return false;
+			}
+
+			var numEl = $(this).parent().find(".num");
+			var num = parseInt(numEl.text());
+
+			if (numEl.hasClass("infant")) {
+				var adultCnt = parseInt($(".adult").text());
+				if ((num + 1) > adultCnt) {
+					//alert("유아 인원이 성인 인원보다 많은 경우, 예약이 불가 합니다.");
+					showAlert("alert", "유아 인원이 성인 인원보다 많은 경우, 예약이 불가 합니다.", function(){
+						hideAlert();
+					});
+					return false;
+				}
+			}
+
+			numEl.parent().removeClass("zero");
+
+			numEl.text(num + 1);
+			return false;
+		});
+
+		/* 인원선택 : - 버튼 클릭 이벤트 */
+		$(document).on("click", ".peopleBtn .delBtn", function() {
+			//$(document).on("click", ".peopleBtn .delBtn", function(){
+			var numEl = $(this).parent().find(".num");
+			var num = parseInt(numEl.text());
+
+			if (numEl.hasClass("adult") && num == 1) {
+				//alert("최소 성인 1인 이상만 예약 가능합니다.");
+				showAlert("alert", "최소 성인 1인 이상만 예약 가능합니다.", function(){
+					hideAlert();
+				});
+				return false;
+			}
+
+			if (numEl.hasClass("adult")) {
+				var infantCnt = parseInt($(".infant").text());
+				if ((num - 1) < infantCnt) {
+					//alert("유아 인원이 성인 인원보다 많은 경우, 예약이 불가 합니다.");
+					showAlert("alert", "유아 인원이 성인 인원보다 많은 경우, 예약이 불가 합니다.", function(){
+						hideAlert();
+					});
+					return false;
+				}
+			}
+
+			if (num == 0)
+				return false;
+
+			num--;
+			numEl.text(num);
+			if (num == 0) {
+				numEl.parent().addClass("zero");
+			}
+			return false;
+		});
+			
+		// 인원 선택 팝업내 선택완료 버튼 클릭 event
+		$(document).on("click", ".slidepopup:last .s_redBtn", function(){
+			/*
+			var sel_adt_cnt = $(".adult").text();
+			var sel_adt_cnt = $(".adult").text()
+			var sel_adt_cnt = $(".adult").text();
+			var paxcnt_area = ""; 
+			if($("[name=startArea]:checked").val()=="depKor"){
+				paxcnt_area = $("#"+ itInType +"_paxCount");
+			}else{
+				paxcnt_area = $("#for_"+ itInType +"_paxCount");
+			}
+			
+			var paxcnt_text = "성인"+$(".adult").text()+", 소아"+ $(".child").text() + ", 유아"+$(".infant").text();
+			
+			hf_adult_cnt.val($(".adult").text());
+			hf_child_cnt.val($(".child").text());
+			hf_infant_cnt.val($(".infant").text());
+			paxcnt_area.html(paxcnt_text);
+			*/
+			
+			$('.slidepopup:last a.closeOverlayPanel').trigger('click.closeBtn');
+		});
+   	});
+</script>
+
+<!-- pop -->
+<div class="popReserve01" style="display:block">
+
+	<div class="header fixed">
+		<h3>인원 선택 <a href="#" class="closeOverlayPanel" data-role="none" title="레이어닫기"></a></h3>
+	</div>
+	
+	<!-- 컨텐츠 -->
+	<div class="cbPopCont">
+		<div class="airPopPeople">
+		
+				<div class="peopleBtn">
+					<a href="#" data-role="none" class="plusBtn" title="추가버튼"></a>
+					<span>성인 <span class="num adult">2</span></span>
+					<a href="#" data-role="none" class="delBtn" title="삭제버튼"></a>
+				</div>
+
+				<div class="peopleBtn">
+					<a href="#" data-role="none" class="plusBtn" title="추가버튼"></a>
+					<span class="zero">소아 <span class="num child">0</span></span>
+					<!-- 0 일경우 class="zero" -->
+					<a href="#" data-role="none" class="delBtn" title="삭제버튼"></a>
+				</div>
+
+				<div class="peopleBtn">
+					<a href="#" data-role="none" class="plusBtn" title="추가버튼"></a>
+					<span class="zero">유아 <span class="num infant">0</span></span>
+					<!-- 0 일경우 class="zero" -->
+					<a href="#" data-role="none" class="delBtn" title="삭제버튼"></a>
+				</div>
+
+				<p class="cb_inforTxt">
+					예약 가능 <span class="c_red">최대인원은 9명</span>이며, 유아 인원이 성인 인원보다 많은 경우, 예약이 불가합니다.
+				</p>
+
+				<ul class="bulOneList">
+					<li>성인 : <em>출발일 기준 만 12세 이상</em></li>
+					<li>소아 : <em>출발일/귀국일 기준 만 2세 ~ 만 12세 미만</em></li>
+					<li>유아 : <em>출발일/귀국일 기준 만 2세 미만 <br><b>※ 유아 선택 시 성인은 꼭 포함되어야 합니다.</b><br><b>※ 유아요금은 좌석이 제공되지 않습니다.</b></em></li>
+				</ul>
+
+				<div class="s_redBtn">
+					<a href="#" data-role="none">선택완료</a>
+				</div>
+		</div>
+	</div>
+	<!-- 컨텐츠 -->
+	
+</div>
+<!-- // pop -->
+

@@ -1,0 +1,106 @@
+<script type="text/javascript">
+	$('#overlayPanel').on('open.loadpop', function (e, data) {
+   		var calendarTarget = $('.popReserve01 #datepicker');
+   		var type = data.target.attr('data-type');
+
+   		if (type !== undefined) $('.popReserve01').addClass(type);
+		if (CHATBOT !== undefined && typeof CHATBOT.initCalendar === 'function') {
+			switch (type) {
+				case 'type_single' :
+					CHATBOT.initCalendar({minDate: null, range: false, autoValue: false});
+					break;
+				case 'type_range' :
+					CHATBOT.initCalendar({minDate: '+1d', range: true, rangeDay: 1});
+					break;
+				case 'type_range_unplan' :
+					CHATBOT.initCalendar({minDate: '+1d', range: true, rangeDay: 1, startMaxDay: 0});
+					break;
+				default :
+			}
+
+	   		var ins = calendarTarget.getInstance();
+	   		//ins.setDate(new Date(2017, 3, 10));
+	   		//ins.setRange(new Date(2017, 3, 20));
+		}
+   	});
+</script>
+
+<div class="popReserve01">
+	<div class="header pickerTop">
+		<h3 class="datepickerTit">
+			<span class="tit">
+				<span class="cb_hotelTit">체크인/체크아웃</span><!-- 호텔달력일경우 노출 -->
+				<span class="cb_airTit">출국/귀국일</span> <!-- 항공달력일경우 노출 -->
+				날짜 선택
+			</span>
+			<span class="firstMonth">2016.08</span>
+			<a href="#" class="closeOverlayPanel" data-role="none" title="레이어닫기"></a>
+		</h3>
+		<ul class="pickerDayList">
+			<li>일</li>
+			<li>월</li>
+			<li>화</li>
+			<li>수</li>
+			<li>목</li>
+			<li>금</li>
+			<li>토</li>
+		</ul>
+	</div>
+	<div class="headPicMargin"></div>
+	<div class="overflowWrap innerScroller">
+		<div class="view">
+			<div id="datepicker">
+			</div>
+		</div>
+	</div>
+
+	<div class="footPicMargin"></div>
+	<div class="pickerBtm footer">
+		<form id="detepicker-form" name="detepicker-form">
+			<!-- 다구간 : dateS=출국일 / dateM=중간일 / dateE=귀국일 -->
+			<!-- 왕복 : dateS=출국일 / dateE=귀국일 -->
+			<!-- 편도 : dateS=출국일 -->
+			<input type="hidden" name="dateS" value="" />
+			<input type="hidden" name="dateM" value="" />
+			<input type="hidden" name="dateE" value="" />
+		</form>
+		
+		<!-- 왕복 -->
+		<div class="twoType">
+			<span class="dayCell">
+				<span class="cb_hotelTit">체크인</span><!-- 호텔달력일경우 노출 -->
+				<span class="cb_airTit">출국일</span> <!-- 항공달력일경우 노출 -->
+				<strong class="date-start">&nbsp;</strong>
+			</span>
+			<!--<span class="dayCell">체크아웃<strong class="date-end">&nbsp;</strong></span>-->
+			<span class="dayCell return">
+				<span class="txtBox">
+					<span class="cb_hotelTit">체크아웃</span><!-- 호텔달력일경우 노출 -->
+					<span class="cb_airTit">귀국일</span> <!-- 항공달력일경우 노출 -->
+					<strong class="date-end">2017.01.11(수)</strong>
+				</span>
+				
+				<!-- 미정 체크시 -->
+				<span class="selBox" style="display: none;">
+					<em>체류기간 선택</em>
+					<select title="체류기간 선택">
+						<option value="5D">5일</option>
+						<option value="7D">7일</option>
+						<option value="14D">14일</option>
+						<option value="20D">20일</option>
+						<option value="1M">1개월</option>
+						<option value="3M">3개월</option>
+						<option value="6M">6개월</option>
+						<option value="1Y">1년</option>
+					</select>
+				</span>
+				<span class="daylabel">
+					<input type="checkbox" class="redCheck" id="not" value="N" data-role="none"><label for="not">미정</label>
+				</span>
+			</span>
+		</div>
+		<!-- // 왕복 end -->
+		
+		<a href="#" data-role="none">확인</a>
+	</div>
+</div>
