@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>검색결과 - 하나프리항공</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/air.css">
+<link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.5.css">
+<script src="../js/jquery-2.1.3.min.js" type="text/javascript"></script>
+<script src="../js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<script src="../js/iscroll.carousel.js" type="text/javascript"></script>
+<script src="../js/iscroll.swipeview.js" type="text/javascript"></script>
+<script src="../js/fixedPostiion.js" type="text/javascript"></script>
+<!-- 2015-04-10 추가 -->
+<script src="../js/datepicker.js" type="text/javascript"></script>
+<!-- //2015-04-10 추가 -->
+<script src="../js/common.js" type="text/javascript"></script>
+<script src="../js/reservation.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+	/* 샘플 데이터 */
+	var html = '<li><a href="#" data-role="none"><strong class="restit"><img src="../images/main/AA.png" alt="">케세이퍼시픽항공</strong><span class="c_ok">예약가능</span><div><em class="label"><strong class="c_label01">긴급 땡처리</strong><strong class="c_label02">알짜항공권</strong></em><p class="m_lbtxt">1회 경유<br>유효기간 12개월</p><div class="m_rbCont"><span>성인/삼성카드 결제조건</span><strong>214,200원</strong>유류할증료, 제세공과금 포함</div></div></a></li><li><a href="#" data-role="none"><strong class="restit"><img src="../images/main/AA.png" alt="">대한항공</strong><span class="c_wait">예약대기</span><div><em class="label"><strong class="c_label01">긴급 땡처리</strong></em><p class="m_lbtxt">1회 경유<br>유효기간 12개월</p><div class="m_rbCont"><span>성인/삼성카드 결제조건</span><strong>214,200원</strong>유류할증료, 제세공과금 포함</div></div><p class="startDay">출발기간 : 2015.03.03 ~ 2015.03.28</p></a></li><li class="reNone"><a href="#" data-role="none"><strong class="restit"><img src="../images/main/AA.png" alt="">케세이퍼시픽항공</strong><span class="c_end">예약마감</span><div><p class="m_lbtxt">1회 경유<br>유효기간 12개월</p><div class="m_rbCont"><span>성인/삼성카드 결제조건</span><strong>214,200원</strong>유류할증료, 제세공과금 포함</div></div></a></li><li><a href="#" data-role="none"><strong class="restit"><img src="../images/main/AA.png" alt="">대한항공</strong><span class="c_ok">예약대기</span><div><em class="label"><strong class="c_label02">알짜항공권</strong><strong class="c_label03">2인 특가</strong></em><p class="m_lbtxt">1회 경유<br>유효기간 12개월</p><div class="m_rbCont"><span>성인/삼성카드 결제조건</span><strong>214,200원</strong>유류할증료, 제세공과금 포함</div></div></a></li>';
+
+	var selector = ".resultList01";	// append할 Tag selector
+	var list = new dynamicDataLoad(selector, {
+		onLoadPosition: function(el){
+			var that = this;
+
+			//load할 데이터가 없는 경우
+			//that.appendData(true, null);
+
+			// ajax call type 샘플 코드
+			//var url = "";
+			//callAjax(url, function(html){
+			//	that.appendData(false, html);
+			//});
+
+			setTimeout(function(){
+				that.appendData(false, html);
+			}, 1000);
+		}
+	});
+});
+</script>
+</head>
+
+<body>
+
+
+
+<div id="wrap">
+	<header id="header" class="subHead">
+		<div class="inner">
+			<h1><a href="#" data-role="none"><img src="../images/common/btn_nlogo_tem.png" alt="하나투어"></a></h1> <!-- 로고이미지 세로값 80px로 통일해주세요! 가로사이즈는 무관  -->
+			<a href="#" id="btnMenu" data-role="none"><img src="../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+		</div>
+	</header>
+
+
+	<div id="container" class="subCont"><!-- 컨텐츠 sub 영역 -->
+
+		<!-- 검색결과 -->
+		<section>
+			
+			<h2 class="pagTit">검색결과 <span class="c_red">24건</span></h2><!-- 20150426 추가 -->
+			
+			<div class="resultSect01">
+				<div class="sectIn01"><!-- 편도, 다구간일경우 class="typeBg02" 추가 -->
+					<div><strong>서울</strong>인천 ICN</div>
+					<div><strong>Sultan Abdul Aziz Shah Apt, Kuala Lumpur</strong>나리타 NRT</div>
+				</div>
+				<div class="sectIn01 typeBg02"><!-- 편도, 다구간일경우 class="typeBg02" 추가 -->
+					<div><strong>서울</strong>인천 ICN</div>
+					<div><strong>도쿄</strong>나리타 NRT</div>
+				</div>
+				<div class="sectIn01 typeBg02"><!-- 편도, 다구간일경우 class="typeBg02" 추가 -->
+					<div><strong>서울</strong>인천 ICN</div>
+					<div><strong>도쿄</strong>나리타 NRT</div>
+				</div>
+				<div class="sectIn02">
+					<span>출국일 <strong>2014.03.23</strong></span>
+					<span>귀국일 <strong>2014.03.26</strong></span>
+					<p>성인 2명, 소아 1명, 유아 1명, 비즈니스석</p>
+					
+					<!-- 2015-04-10 수정 -->
+					<!-- data-mode = 다구간 : range3, 왕복 : range, 편도 : single -->
+					<a href="pop_calender.html" class="slideUpPop" data-callback="datePicker" data-mode="range" data-role="none">날짜변경</a>
+					<!-- //2015-04-10 수정 -->
+				</div>
+				
+				<a href="#" data-role="none" class="btnGray">항공권 재검색</a>
+			</div>
+			
+			<div class="sectIn03" style="display:">
+				<span>항공사 <strong>7개</strong></span>&nbsp; |
+				<span>요금 <strong>42개</strong></span>
+				<em>(성인 1인 기준)</em>
+				<p class="tTxt02">유류할증료/제세공과금은 항공사 사정 및 환율변동에 의해  매일 변경되며 발권 당일 환율에 따라 적용됩니다. </p>
+				
+				<!-- 20150827 수정 -->
+				<div class="newdetBtn">
+					<a href="pop_detail02.html" data-role="none" class="slideUpPop">상세검색</a>
+					<span class="nSelectBox">
+						<select title="정렬선택" data-role="none">
+							<option>낮은 가격 순</option>
+							<option>예약가능 우선 순</option>
+							<option>항공사 순</option>
+							<option>유효기간 순</option>
+							<option>직항우선 순</option>
+							<option>높은 가격 순</option>
+						</select>
+					</span>
+				</div>
+				<!-- //20150827 수정 end -->
+				
+				
+			</div>
+			<ul class="resultList01" style="display:">
+				<li>
+					<a href="#" data-role="none">
+						<strong class="restit"><img src="../images/common/KE.png" alt="">케세이퍼시픽항공</strong>
+						<span class="c_ok">예약가능</span>
+						<div>
+							<!-- 뺏지 -->
+							<em class="label">
+								<!-- 20150917 수정 : style 배경색 처리 -->
+								<strong style="background-color:#ed145b">최저가</strong>
+								<strong style="background-color:#856ee0">알짜항공권</strong>
+								<strong style="background-color:#0099ed">우리카드</strong>
+								<!-- // 20150917 수정 : style 배경색 처리 -->
+							</em>
+							<!-- // 뺏지 end -->
+							<p class="m_lbtxt">1회 경유<br>유효기간 12개월</p>
+							<div class="m_rbCont">
+								<span>성인/삼성카드 결제조건</span>
+								<strong>214,200원</strong>
+								유류할증료, 제세공과금 포함
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#" data-role="none">
+						<strong class="restit"><img src="../images/common/OZ.png" alt="">대한항공</strong>
+						<span class="c_wait">예약대기</span>
+						<div>
+							<!-- 뺏지 -->
+							<em class="label">
+								<strong class="c_label01">긴급 땡처리</strong>
+							</em>
+							<!-- // 뺏지 end -->
+							<p class="m_lbtxt">1회 경유<br>유효기간 12개월</p>
+							<div class="m_rbCont">
+								<span>성인/삼성카드 결제조건</span>
+								<strong>214,200원</strong>
+								유류할증료, 제세공과금 포함
+							</div>
+						</div>
+						
+						<!-- 기획전 카드일경우 start -->
+						<p class="startDay">출발기간 : 2015.03.03 ~ 2015.03.28</p>
+						<!-- //기획전 카드일경우 end -->
+					</a>
+				</li>
+				<li class="reNone"> <!-- 예약마감일경우 class="reNone"  -->
+					<a href="#" data-role="none">
+						<strong class="restit"><img src="../images/main/AA.png" alt="">케세이퍼시픽항공</strong>
+						<span class="c_end">예약마감</span>
+						<div>
+							<p class="m_lbtxt">1회 경유<br>유효기간 12개월</p>
+							<div class="m_rbCont">
+								<span>성인/삼성카드 결제조건</span>
+								<strong>214,200원</strong>
+								유류할증료, 제세공과금 포함
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#" data-role="none">
+						<strong class="restit"><img src="../images/main/AA.png" alt="">대한항공</strong>
+						<span class="c_ok">예약대기</span>
+						<div>
+							<!-- 뺏지 -->
+							<em class="label">
+								<strong class="c_label02">알짜항공권</strong><strong class="c_label03">2인 특가</strong>
+							</em>
+							<!-- // 뺏지 end -->
+							<p class="m_lbtxt">1회 경유<br>유효기간 12개월</p>
+							<div class="m_rbCont">
+								<span>성인/삼성카드 결제조건</span>
+								<strong>214,200원</strong>
+								유류할증료, 제세공과금 포함
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#" data-role="none">
+						<strong class="restit"><img src="../images/main/AA.png" alt="">대한항공</strong>
+						<span class="c_ok">예약대기</span>
+						<div>
+							<!-- 뺏지 -->
+							<em class="label">
+								<strong class="c_label01">긴급 땡처리</strong><strong class="c_label02">알짜항공권</strong><strong class="c_label03">2인 특가</strong>
+							</em>
+							<!-- // 뺏지 end -->
+							<p class="m_lbtxt">1회 경유<br>유효기간 12개월</p>
+							<div class="m_rbCont">
+								<span>성인/삼성카드 결제조건</span>
+								<strong>214,200원</strong>
+								유류할증료, 제세공과금 포함
+							</div>
+						</div>
+						<!-- 기획전 카드일경우 start -->
+						<p class="startDay">출발기간 : 2015.03.03 ~ 2015.03.28</p>
+						<!-- //기획전 카드일경우 end -->
+						
+					</a>
+				</li>
+			</ul>
+			
+			<!-- 검색결과 없는경우 -->
+			<p class="dataNone01" style="display:none">죄송합니다.<br> 검색하신 일정에 해당하는 항공권이<br> 존재하지 않습니다.</p>
+			<!-- //검색결과 없는경우 end -->
+				
+			
+			<!-- 버튼 -->
+			<!-- 20150423 삭제 div class="fixBtn">
+				<a href="#" data-role="none" class="rslistBtn">낮은 가격 순</a>
+				<div class="footRsList">
+					<ul>
+						<li><a href="#" data-role="none">확정우선 순</a></li>
+						<li><a href="#" data-role="none">혜택우선 순</a></li>
+						<li><a href="#" data-role="none">항공사 순</a></li>
+						<li><a href="#" data-role="none">유효기간 순</a></li>
+						<li><a href="#" data-role="none">직항우선 순</a></li>
+						<li class="on"><a href="#" data-role="none">낮은 가격 순</a></li><
+						<li><a href="#" data-role="none">높은 가격 순</a></li>
+					</ul>
+					<div class="footDim"></div>
+				</div>
+				
+				<a href="pop_detail.html" class="slideUpPop" data-role="none">상세검색</a>
+			</div -->
+			<!-- 버튼 end -->
+				
+		</section>
+		
+		
+		<footer class="newFoot">
+			<ul>
+				<li><a href="#" data-role="none">고객센터</a></li>
+				<li><a href="#" data-role="none">0000-0000</a></li>
+				<li><a href="#" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+			</ul>
+			<div>
+				<a href="#" data-role="none">이용약관</a>|
+				<a href="#" data-role="none">개인정보처리방침</a>|
+				<a href="#" data-role="none">여행약관</a>|
+				<a href="#" data-role="none">사업자정보확인</a>
+			</div>
+			<address>
+					상호 : 공식인증예약센터 | 대표자 : 홍길동 | 사업자등록번호 : 102-81-39440<br>
+					관광사업자등록번호 . 국외 통신판매업 : 종로01-1806호<br>
+					개인정보관리 책임자 : 최종윤 | 대표전화 : 1577-1233 | FAX : 02-734-0392<br>
+					주소 : 서울특별시 종로구 인사동 5길 41
+	
+			</address>
+		</footer>
+
+	</div><!-- //컨텐츠 영역 -->
+</div>
+<!-- 좌측메뉴 -->
+<div id="menuPanel">
+	<a href="#" data-role="none" class="closeSlide" title="닫기"></a><!-- 20150526 추가 -->
+	<div class="innerScroller">
+		<div class="nleftMenu">
+			<h2>여행상품</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">해외여행-패키지</a></li>
+				<li><a href="#" data-role="none">허니문</a></li>
+				<li><a href="#" data-role="none">에어텔</a></li>
+				<li><a href="#" data-role="none">배낭여행</a></li>
+				<li><a href="#" data-role="none">성지순례</a></li>
+				<li><a href="#" data-role="none">골프</a></li>
+				<li><a href="#" data-role="none">크루즈</a></li>
+				<li><a href="#" data-role="none">레포츠</a></li>
+				<li><a href="#" data-role="none">트레킹</a></li>
+			</ul>
+			
+			<h2>항공 / 호텔</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">해외호텔</a></li>
+				<li><a href="#" data-role="none">해외항공</a></li>
+				<li><a href="#" data-role="none">주요도시 할인항공</a></li>
+				<li><a href="#" data-role="none">특가항공</a></li>
+			</ul>
+			<h2>여행상담</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">고객센터</a></li>
+				<li><a href="#" data-role="none">카톡상담</a></li>
+			</ul>
+			
+			<div class="allmenu_btm">
+				<a href="#" data-role="none">예약확인</a>
+				<a href="#" data-role="none">미팅장소 안내</a>
+				<a href="tel:1577-8761" data-role="none">1577-8761</a>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<!-- Picker 창 -->
+<div id="overlayPanel">
+</div>
+
+</body>
+</html>
+

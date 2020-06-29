@@ -1,0 +1,398 @@
+@charset "utf-8";
+/* CSS Document */
+
+#mainSlider {
+	width: 100%;
+	overflow: hidden;
+}
+#mainSlider .scroller > section {
+	width: 100%;position: relative;
+}
+#mainSlider .scroller section div.scrollArea {
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	position: relative;
+	-webkit-overflow-scrolling: touch;
+	-webkit-transform: translateZ(0px);
+	-webkit-transform: translate3d(0,0,0);
+	-webkit-perspective: 1000;
+}
+#mainSlider .carousel:after { display: block; content:"."; height: 0; clear: both; visibility:hidden; }
+
+#mainSlider .fixedAttach {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+	background: #fff;
+	-webkit-transition-property: -webkit-transform; 
+	-webkit-transition-timing-function: ease;
+	-webkit-transition-duration: .3s ; 
+	transition-property: transform ; 
+	transition-timing-function: ease ; 
+	transition-duration: .3s ; 
+}
+#mainSlider section a img {
+	width: 100%;
+}
+.swipeView {
+	position: relative;
+	z-index: 2;
+}
+.swipeView .slider {
+	width: 100%;
+}
+.headerMargin {height:93px}
+
+#gnb {position:fixed;z-index:11;background:url(../images/common/bg_gray.png) repeat-x left bottom; background-size:1px 1px; background-color:#fff;left:0; top:50px;width:100%;-webkit-transition-property: -webkit-transform;-webkit-transition-timing-function: ease-out;-webkit-transition-duration: 300ms;transition-property: transform;transition-timing-function: ease-out;transition-duration: 300ms}
+#gnb.tBanTy {top:106px}
+
+#wrap.slideLeft #gnb {-webkit-transform: translateX(20%);transform:translateX(20%);}
+#wrap.slideRight #gnb { -webkit-transform: translateX(-20%);transform:translateX(-20%);}
+
+#gnb ul {overflow:hidden;background-size:1px 1px}
+#gnb ul li {float:left;width:25%;text-align:center; position:relative}
+#gnb .hotelTab li {width:50%}
+#gnb ul li a {color:#333;display:block;font-weight:bold;padding:14px 0 13px;font-size:14px}
+#gnb ul li.on a {color:#c83d67}
+#gnb ul li.on:after {content:'';position:absolute;left:0;bottom:0;height:4px;background-color:#c83d67;width:100%}
+#gnb ul.airNone li {width:25%}
+#gnb ul.num3_type li {width:33.3%}
+#gnb ul.num3_type li:nth-child(2) {width:33.4%}
+/*#gnb .focusBar {position:absolute;left:0;bottom:0;height:4px;background-color:#c83d67;width:100%}
+
+body:not(.nonTrans) #gnb .focusBar {
+	-webkit-transition-property: -webkit-transform;
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-duration: 300ms;
+	transition-property: transform;
+	transition-timing-function: ease-out;
+	transition-duration: 300ms;
+}
+.nonTrans #gnb .focusBar {
+	-webkit-transition-duration: 0ms;
+	transition-duration: 0ms;
+}
+*/
+/* //2015-05-20 수정 */
+@media all and (min-width:375px) {	/* 375 이상일 경우*/
+	#gnb ul li a {font-size:16px}
+}
+
+@-webkit-keyframes bgScale {
+    0% { -webkit-transform: scale(1.4); opacity:0; }
+    100% { -webkit-transform: scale(1); opacity:1; }
+}
+@keyframes bgScale {
+    0% { transform: scale(1.4); }
+    100% { transform: scale(1); }
+}
+
+.homeBannerSl {position:relative}
+.homeBannerSl div.swiper-slide {}
+.homeBannerSl div.swiper-slide a {display:block;text-align:left;position:relative}
+.homeBannerSl div.swiper-slide span {position:absolute;left:10%;top:15%;color:#fff}
+.homeBannerSl div.swiper-slide span strong {display:block; font-size:24px; margin:7px 0 10px}
+.homeBannerSl div.swiper-slide span em {font-weight:bold; display:inline-block; padding:7px 16px 7px 9px; border:1px solid #fff; border-radius:50px;background:url(../images/main/bg_btnsect01.png) no-repeat 93% center;background-size:5px 8px; font-size:12px}
+.homeBannerSl div.swiper-slide img {width:100%}
+
+.btmGreySect {background-color:#f1f5f7;padding:16px 12px 0;position:relative;-webkit-transform:translateZ(0px);-webkit-transform: translate3d(0,0,0);border-radius:6px 6px 0 0; margin-top:-16px;z-index:1000}
+
+.rangkTop { padding-bottom:10px; overflow:hidden}
+.rangkTop select {height:40px; float:left; border:1px solid #ccc;font-size:14px}
+.rangkTop .seletLeft {border-radius:5px 0 0 5px;width:60%;background:#fff url(../images/common/bg_select_red.png) no-repeat 90% center;background-size:13px; text-indent:10px}
+.rangkTop .seletRight {border-radius:0 5px 5px 0; width:40%; border-left:none; text-indent:30%;background:#fff url(../images/main/bg_stit01.png) no-repeat 15% center;background-size:16px}
+
+.rangking .areaList {overflow:hidden;padding-top:5px; margin:0 -12px}
+.rangking .areaList li {float:left;width:50%; margin-bottom:8px}
+.rangking .areaList li a {display:block;background-color:#fff;margin:0 5px 0 12px;border-radius:5px; overflow:hidden}
+.rangking .areaList li:nth-child(2n+2) a {margin:0 12px 0 5px}
+.rangking .areaList.add li a {margin:0 0 0 5px}
+.rangking .areaList.add li:nth-child(2n+2) a {margin:0 5px 0 0}
+.rangking .areaList li a .img_area {position:relative; z-index:10}
+.rangking .areaList li a .img_area img {width:100%; border-radius:5px 5px 0 0; height:150px}
+.rangking .areaList li a .img_area span {position:absolute;right:8px;bottom:0; margin-bottom:15%; padding-top:7px; font-size:10px; border:1px solid #fff; border-radius:5px; color:#fff; background:url(../images/main/bg_arealist01.png) repeat 0 0; text-align:center; line-height:10px; width:36px; height:36px; box-sizing:border-box; font-weight:bold}
+.rangking .areaList li a .cont_area {padding:12px 10px 10px;font-weight:bold;box-sizing:border-box; margin-top:-10%; position:relative; z-index:15; background-color:#fff;border-bottom: 1px solid #a3a3a3;border-radius: 0 0 5px 5px}
+.rangking .areaList li a .cont_area > em {color:#747b8e; font-size:12px; height:30px; display:block}
+.rangking .areaList li a .cont_area > strong {font-size:15px; display:block; margin:9px 0 7px;overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; font-weight:normal; height:38px; line-height:19px}
+.rangking .areaList li a .cont_area > span {font-size:19px; color:#c83d67;}
+.rangking .areaList li a .num_area {border-top:1px solid #ccc; margin:12px -10px 0; padding:10px 10px 0; overflow:hidden; height:14px}
+.rangking .areaList li a .num_area span {font-weight:normal;float:left; width:50%; text-align:left; color:#448ccb; font-size:12px; text-indent:20px;background:url(../images/main/bg_numsect_01.png) no-repeat 5px center;background-size:12px}
+.rangking .areaList li a .num_area span+span {color:#888;background-image:url(../images/main/bg_numsect_02.png)}
+.rangking .areaList li.lastEvent a {background-color:#848b9f; margin:0 0 0 5px !important}
+.rangking .areaList li.lastEvent div {height:128px;box-sizing:border-box;text-align:center;color:#fff;padding:15px 10px;margin-top:-10%;position:relative;z-index:15;}
+.rangking .areaList li.lastEvent div strong {font-size:18px; display:block; margin-top:4px}
+.rangking .areaList li.lastEvent div em {display:block;border:1px solid #fff; font-weight:normal;width:65px; margin:15px auto 0; padding:7px 15px 7px 10px; border-radius:50px;background:#fff url(../images/main/bg_btnsect02.png) no-repeat 92% center;background-size:5px 8px; color:#747b8e;font-weight:bold; font-size:13px}
+.rangking .areaList li.lastEvent img {width:100%;border-radius:5px}
+.rangking .mainfootBan {margin:10px -12px 0 -12px;display:block}
+.rangking .mainfootBan img {width:100%}
+
+@media all and (min-width:768px) {	/* 768 이상일 경우*/
+.rangking .areaList li {width:25%}
+.rangking .areaList li a {margin:0 5px}
+.rangking .areaList li:nth-child(2n+2) a {margin:0 5px}
+.rangking .areaList li:nth-child(4n+1) a {margin:0 5px 0 12px}
+.rangking .areaList li:nth-child(4n+4) a {margin:0 12px 0 5px}
+}
+
+.main_salePack {background-color:#f1f5f7;padding-bottom:8px}
+.main_salePack li {margin-bottom:8px}
+.main_salePack li:last-child {margin-bottom:0}
+.main_salePack li a {display:block;background:#fff url(../images/common/bg_line01.png) repeat-x left bottom; background-size:1px 1px}
+.main_salePack li .saleImgBox {position:relative;min-height:188px}
+.main_salePack li .saleImgBox img {width:100%; min-height:188px}
+.main_salePack li .saleImgBox .daySeat {position:absolute;left:0;bottom:0; background:url(../images/main/bg_opacty01.png) repeat 0 0;width:100%; color:#fff;display:table;padding:17px 0 12px}
+.main_salePack li .saleImgBox .daySeat span {display:table-cell;width:50%;text-align:center;font-size:12px}
+.main_salePack li .saleImgBox .daySeat span strong {font-size:18px; display:inline-block; letter-spacing:0}
+.main_salePack li .saleImgBox .daySeat span em {background:url(../images/main/bg_day01.png) no-repeat 0 2px; background-size:12px 12px;text-indent:16px;display:inline-block;font-size:12px;margin-top:8px}
+.main_salePack li .saleImgBox .daySeat span:last-child {border-left:1px solid #737f88}
+.main_salePack li .saleImgBox .daySeat span:last-child em {background-image:url(../images/main/bg_seat01.png);background-size:12px 12px}
+.main_salePack li .saleContBox {padding:15px 80px 12px 12px;position:relative}
+.main_salePack li .saleContBox > strong { overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; width:100%; font-size:15px}
+.main_salePack li .saleContBox > em {position:absolute;right:12px;top:14px;text-align:center;border-radius:4px;font-weight:bold;font-size:11px;width:36px;display:table-cell; vertical-align:middle; height:36px; box-sizing:border-box; padding-top:5px; line-height:12px}
+.main_salePack li .saleContBox > em.c_ty01 {border:1px solid #f33d88;color:#f33d88} /* 하나pack */
+.main_salePack li .saleContBox > em.c_ty02 {border:1px solid #9d7520;color:#9d7520;padding-top:12px}/* 허니문 */
+.main_salePack li .saleContBox > em.c_ty03 {border:1px solid #60981b;color:#60981b;padding-top:12px}/* 골프 */
+.main_salePack li .saleContBox > em.c_ty04 {border:1px solid #61340b;color:#61340b}/* 내나라여행 */
+.main_salePack li .saleContBox > em.c_ty05 {border:1px solid #29a655;color:#29a655}/* 국내여행 */
+.main_salePack li .saleContBox > em.c_ty06 {border:1px solid #3e97b5;color:#3e97b5}/* 성지순례 */
+.main_salePack li .saleContBox > em.c_ty07 {border:1px solid #00b0e1;color:#00b0e1;padding-top:12px}/* 레포츠 */
+.main_salePack li .saleContBox > em.c_ty08 {border:1px solid #6fc055;color:#6fc055;padding-top:12px}/* 트래킹 */
+.main_salePack li .saleContBox > em.c_ty09 {border:1px solid #4c4f93;color:#4c4f93;padding-top:12px}/* 크루즈 */
+.main_salePack li .saleContBox > em.c_ty10 {border:1px solid #2c77bc;color:#2c77bc;padding-top:12px}/* 에어텔*/
+.main_salePack li .saleContBox > em.c_ty11 {border:1px solid #f3b219;color:#f3b219}/* 배낭여행 */
+.main_salePack li .saleContBox > em.c_ty12 {border:1px solid #997e63;color:#997e63}/* zeusworld */
+.main_salePack li .saleContBox > em.c_ty13 {border:1px solid #448ccb;color:#448ccb}/* 이세이브Pack */
+.main_salePack li .saleContBox > em.c_ty14 {border:1px solid #73ad0d;color:#73ad0d;padding-top:12px}/* 캐주얼 */
+.main_salePack li .saleContBox > em.c_ty15 {border:1px solid #de8332;color:#de8332;padding-top:12px}/* 클래식 */
+.main_salePack li .saleContBox > span {color:#c83d67;font-size:19px;font-weight:bold;display:block;margin-top:10px}
+.main_salePack li .saleContBox > span em {color:#888;font-size:14px;text-decoration:line-through;font-weight:normal}
+
+.mCon03_top {padding-bottom:10px;position: relative;overflow:hidden;}
+.mCon03_top .background {position:absolute;left:-5%;top:0;bottom:0;z-index:0;width:110%;padding:0 5%;}
+.mCon03_top .background img {width:100%}
+.mCon03_top .background .step01 {background:url(../images/main/img_main03_top.png) no-repeat 0 0;background-size:cover;width:100%;height:100%;}
+.mCon03_top .background .step02 {background-size:cover;width:100%;height:100%;}
+.mCon03_top .background > div {z-index:0;position:absolute;left:0; right:0;top:0;bottom:0}
+.mCon03_top .background > div.on {z-index:1}
+.mCon03_top .inner {position: relative;z-index:2;}
+.mCon03_top .inner h2 {text-align:center;margin:0 auto 20px;color:#fff; font-size:28px; padding:0 25px; border-bottom:1px solid #fff; width:225px; position:relative; padding:20px 0 15px}
+.mCon03_top .inner h2:after {content:'';display:inline-block; position:absolute;right:0;bottom:-10px;background:url(../images/main/icon_main01.png) no-repeat 0 0;width:21px; height:19px; background-size:21px 19px}
+.mCon03_top .inner > ul {margin:0 12px}
+.mCon03_top .inner > ul > li {color:#fff; font-size:11px;background:url(../images/main/bg_list01.png) no-repeat 0 3px;background-size:8px 8px; padding-left:12px; line-height:16px; margin-bottom:10px}
+
+.mCont03_btm {position:relative;background-color:#f1f5f7}
+.mCont03_btm .toggleRad {position:absolute;right:12px;top:16px;width:130px;overflow:hidden}
+.mCont03_btm .toggleRad input[type='radio'] {width:65px;position:absolute; height:36px; opacity:0; cursor:pointer}
+.mCont03_btm .toggleRad input+span {float:left;width:65px; background-color:#fff; border:1px solid #c7c7c7; box-sizing:border-box; font-size:12px; color:#000; text-align:center; padding:10px 0; border-radius:5px 0 0 5px; border-right:none}
+.mCont03_btm .toggleRad input+span+input+span {border-radius:0 5px 5px 0; border-left:none;border-right:1px solid #c7c7c7;}
+.mCont03_btm .toggleRad input[type='radio']:checked+span {color:#fff;background-color:#9a9fae; border:1px solid #797e8d}
+.mCont03_btm > strong {display:block;padding:25px 0 25px 12px;color:#999;font-weight:normal; margin-right:150px}
+.mCont03_btm > strong em {font-size:18px;font-weight:bold;color:#333;background:url(../images/main/icon_salelist_top.png) no-repeat left top; background-size:20px 20px; padding:1px 0 1px 25px}
+.saleList {position:relative; padding-top:5px}
+/* .saleList:after {content:''; display:inline-block;background:url(../images/main/bg_salelist_sero.png) repeat-y left top;width:1px; height:100%; position:absolute;left:22px;top:-30px;padding-bottom:30px; z-index:9} */
+.saleList li {margin-bottom:5px; position:relative}
+.saleList li:after {content:''; display:inline-block;background:url(../images/main/icon_salelist_cont.png) no-repeat left top;width:12px; height:20px; position:absolute;left:16px;top:10px; background-size:12px 20px; z-index:99}
+.saleList li a {display:block;background:#fff url(../images/common/bg_line01.png) repeat-x left bottom; background-size:1px 1px; padding:12px 0 12px 34px}
+.saleList li a > strong { display:inline-block; letter-spacing:0}
+.saleList li a > span {font-size:12px; color:#999; padding:4px 0 4px 12px;}
+.saleList li a span img {width:22px !important; margin:-3px 4px 0 0}
+.saleList li a div {text-align:right;padding:3px 12px 0 0; position:relative}
+.saleList li a div em {display:block; text-decoration:line-through; color:#999}
+.saleList li a div strong {position:absolute;left:-20px;font-size:16px; bottom:3px}
+.saleList li a div span {font-size:19px; color:#c83d67; font-weight:bold}
+
+@media all and (min-width:375px) {	/* 375 이상일 경우*/
+	.saleList li a { padding:11px 0 11px 34px}
+	.saleList li a > strong {font-size:15px}
+	.saleList li a > span {font-size:13px}
+	.saleList li a div strong {font-size:17px}
+	.saleList li a div span {font-size:21px}
+	.saleList li:after {top:11px}
+	.rangking .areaList li a .cont_area strong {font-size:16px}
+}
+@media all and (min-width:414px) {	/* 414 이상일 경우*/
+	.saleList li a > strong {font-size:16px}
+	.saleList li a > span {font-size:14px}
+	.saleList li a div strong {font-size:19px}
+	.saleList li a div span {font-size:22px}
+	.rangking .areaList li a .cont_area strong {font-size:17px; height:43px}
+}
+.main_hotel {background-color:#f1f5f7;padding-bottom:10px}
+.main_hotel li {background:#fff url(../images/common/bg_line01.png) repeat-x left bottom;background-size:1px 1px; margin-bottom:10px}
+.main_hotel li:last-child {margin-bottom:0}
+.main_hotel li a {display:block}
+.main_hotel li a .saleImgBox {position:relative;min-height:129px}
+.main_hotel li a .saleImgBox img {width:100%;min-height:129px}
+.main_hotel li a .saleImgBox p {color:#fff;background:url(../images/main/bg_opacty01.png) repeat 0 0; position:absolute; left:0; bottom:0; width:100%;text-indent:12px;padding:8px 0;font-weight:bold;font-size:12px}
+.main_hotel li a .saleImgBox span {position:absolute;right:12px;top:100%;background:url(../images/main/bg_salepink.png) repeat 0 0; background-size:64px 64px;width:64px;height:64px;color:#fff;text-align:center; padding-top:18px;box-sizing:border-box; margin-top:-48px}
+.main_hotel li a .saleImgBox span strong {font-size:25px}
+.main_hotel li a .saleContBox {padding:12px;position: relative;text-align: right;}
+.main_hotel li a .saleContBox > em {color:#747b8e;font-weight:bold;position: absolute;left: 12px;bottom: 14px; font-size:15px}
+.main_hotel li a .saleContBox > strong {display:block;margin-top:6px;font-size:15px;text-align: left;}
+.main_hotel li a .saleContBox > strong em {overflow:hidden;font-size:16px;letter-spacing:0;text-overflow: ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;width:100%}
+@media all and (min-width:375px) {	/* 375 이상일 경우*/
+	.main_hotel li a .saleContBox > strong em,.main_hotel li a .saleContBox > strong,.main_salePack li .saleContBox > strong {font-size:17px}
+}
+@media (min-width: 414px) {	/* 414 이상일 경우*/
+	.main_hotel li a .saleContBox > strong em,.main_hotel li a .saleContBox > strong,.main_salePack li .saleContBox > strong {font-size:19px}
+}
+
+.main_hotel.korea li a .saleContBox > strong {margin:7px 80px 16px 0;}
+.main_hotel.korea li a .saleImgBox span {margin-top:-34px}
+.main_hotel li a .saleContBox > strong span {display:block;color:#666;margin:1px 0 15px;font-size:15px; font-weight:normal;}
+.main_hotel li a .saleContBox > span {font-size:19px;color:#c83d67;font-weight:bold; position:relative;}
+.main_hotel li a .saleContBox > span em {text-decoration:line-through;color:#999;font-weight:normal; position:absolute;right:100%;bottom:1px; width:100px; margin-right:6px; font-size:14px}
+.starBox {text-align:left}
+.starBox img {width:auto !important;height:12px; vertical-align:top}
+.positionTxt {text-align:left; font-size:12px; color:#666; padding:0 0 1px 13px;background:url(../images/main/bg_position01.png) no-repeat 0 2px; background-size:9px 12px; margin:0 0 13px 0;overflow: hidden;  text-overflow: ellipsis;  display: -webkit-box;  -webkit-line-clamp: 1;-webkit-box-orient: vertical;}
+
+.m5_linkBox {overflow:hidden; border-bottom:1px solid #b6b6b6; background-color:#fff}
+.m5_linkBox li {float:left;width:20%}
+.m5_linkBox li a {display:block;background:no-repeat center 0; padding:42px 0 11px; text-align:center; color:#4f5462; font-size:11px;border-right:1px solid #e6e6e6; font-weight:bold; height:68px; box-sizing:border-box}
+.m5_linkBox li:last-child a {border-right:none}
+.m5_linkBox li a.bgTy01 {background-image:url(../images/main/bg_m05_snavi01.png); background-size:24px 33px} /* 국내항공 */
+.m5_linkBox li a.bgTy02 {background-image:url(../images/main/bg_m05_snavi02.png); background-size:16px 36px} /* 국내숙박 */
+.m5_linkBox li a.bgTy03 {background-image:url(../images/main/bg_m05_snavi03.png); background-size:26px 35px} /* 내륙섬 */
+.m5_linkBox li a.bgTy04 {background-image:url(../images/main/bg_m05_snavi04.png); background-size:24px 35px} /* 제주여행 */
+.m5_linkBox li a.bgTy05 {background-image:url(../images/main/bg_m05_snavi05.png); background-size:20px 36px} /* 내나라여행 */
+.m5_linkBox li a.bgTy06 {background-image:url(../images/main/bg_m05_snavi06.png); background-size:16px 35px; padding-top:37px; line-height:12px} /* 제주여행 만들기 */
+.m5_linkBox li a.bgTy07 {background-image:url(../images/main/bg_m05_snavi07.png); background-size:27px 35px} /* 입장권 */
+.m5_linkBox li a.bgTy08 {background-image:url(../images/main/bg_m05_snavi08.png); background-size:24px 33px} /* 렌터카 */
+.m5_linkBox li a.bgTy09 {background-image:url(../images/main/bg_m05_snavi09.png); background-size:25px 35px} /* 지방출발 */
+.m5_linkBox li a.plusBtn {background-image:url(../images/main/bg_m05_snavi_plus.png); background-size:21px 33px}
+.m5_linkBox li a.closeBtn {background-image:url(../images/main/bg_m05_snavi_close.png); background-size:21px 33px}
+.m5_linkBox li+li+li+li+li+li {display:none}
+.m5_linkBox.open .plusBtn {display:none}
+.m5_linkBox.open li+li+li+li+li+li {display:block}
+.m5_linkBox.open li a {border-bottom:1px solid #e6e6e6;}
+.m5_linkBox.open li+li+li+li+li+li+li a {border-bottom:none}
+.m5_linkBox.open li a.closeBtn {border-right:1px solid #e6e6e6;}
+.stit05 {font-size:17px; padding:24px 12px 12px; background-color:#e3e7e9}
+.stit05 strong {color:#e0200c; display:inline-block;position:relative; padding-left:45px}
+.stit05 strong span {position:absolute; left:0;top:-1px;}
+.stit05 strong span img {width:40px}
+
+.imgLine {border-bottom:1px solid #dee2e4; margin-bottom:7px;display:block}
+.imgLine img {border-bottom:1px solid #bdbdb8}
+.imgBox100 {display:block}
+.imgBox100 img{width:100%}
+.btmBanner05 {background-color:#e3e7e9}
+.btmBanner05 a{margin-bottom:4px;}
+
+/* 버튼 */
+.btnBlue {display:block; margin:0 12px;border:1px solid #59ade3;text-align:center;color:#fff;font-size:18px;font-weight:bold; padding:12px 0; border-radius:5px;background:#59ade3 url(../images/main/bg_selectbtn01.png) no-repeat 90% center;background-size:13px}
+.w_btnBox { background-color:#f1f5f7; padding:8px 0}
+.btnWhite{display:block; margin:0 12px;border:1px solid #fff; border-bottom:1px solid #a8a8a8; text-align:center;color:#000;font-size:18px; font-weight:bold; padding:12px 0; border-radius:5px;background:#fff url(../images/main/bg_selectbtn02.png) no-repeat 90% center;background-size:13px;}
+
+/* 레이어팝업 */
+div.fullLayer {width:100%;}
+div.fullLayer > div {background-color:#fff; padding-bottom:16px; }
+div.fullLayer > div h3 {position:relative; background-color:#f8f8fb; font-size:18px; text-align:center; height:32px; padding-top:13px; color:#747b8e; border-bottom:1px solid #747b8e}
+div.fullLayer > div h3 a {position:absolute;right:0; top:0;font-size:14px; color:#999;padding:15px 12px 10px}
+div.fullLayer > div .allSelect {display:block; height:30px;padding:14px 0 0 42px; font-size:14px; font-weight:bold; border-bottom:1px solid #babdc6}
+div.fullLayer > div h4 {background-color:#eee; color:#747b8e;font-size:12px; height:21px; padding:6px 0 0 12px}
+div.fullLayer > div ul li a {display:block; text-indent:42px;height:30px;border-bottom:1px solid #babdc6; font-weight:bold; overflow:hidden; padding-top:14px; font-size:14px}
+div.fullLayer > div .allSelect,div.fullLayer > div ul li a { background:url(../images/main/bg_maincheck_off.png) no-repeat 12px center; background-size:24px 24px}
+div.fullLayer > div .allSelect.on,div.fullLayer > div ul li a.on {background-image:url(../images/main/bg_maincheck_on.png)}
+div.fullLayer > div ul li a span {float:right;margin-right:12px;font-size:12px;color:#999}
+div.fullLayer > div ul li a span em { font-size:15px;color:#333}
+
+.adBanner img {height:auto}
+
+/* 공템 style */
+.main02_cont01 {background-color:#dbdce1; padding:15px 12px}
+.main02_cont01 ul {overflow:hidden;background-color:#fff; border-bottom:1px solid #a3a3a3; border-radius:5px}
+.main02_cont01 ul li {float:left;width:33.3%; box-sizing:border-box; padding:18px 0}
+.main02_cont01 ul li+li+li+li {border-top:1px solid #c2c2c2}
+.main02_cont01 ul li:nth-child(3n+2) {width:33.4%;border-right:1px solid #c2c2c2;border-left:1px solid #c2c2c2}
+.main02_cont01 ul li a {display:block;width:100%;text-align:center;color:#4f5462; margin:-18px 0; padding:18px 0}
+.main02_cont01 ul li.on {background-color:#c83d67}
+.main02_cont01 ul li.on a {color:#fff;font-weight:bold;}
+
+.main02_cont02 {position:relative}
+.main02_cont02 .innerTop {padding:15px 100px 8px 12px}
+.main02_cont02 .innerTop select {}
+.main02_cont02 .innerTop .latelyBtn {position:absolute;right:12px;top:15px; border-radius:4px; height:30px; border:1px solid #ccc; width:80px;background:-moz-linear-gradient(top,#ffffff 0,#efeff0);background:-webkit-gradient(linear,left top,left bottom,from(#ffffff),to(#efeff0)); text-align:center; padding-top:12px}
+.main02_cont02 .innerTop .latelyBtn:after {content:''; width:12px; height:12px; background:url(../images/main/bg_tem02_on.png) no-repeat 0 0; display:inline-block; background-size:12px; margin-left:3px}
+.main02_cont02 .innerTop .latelyBtn.on:after { background-image:url(../images/main/bg_tem02_off.png)}
+.main02_cont02 .latelyBox {background-color:#f7f7f7;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin-bottom:8px;padding:5px 0}
+.main02_cont02 .latelyBox a {display:block;padding:14px 0 14px 28px;margin:0 12px; background-image:url(../images/main/bg_air_top.png),url(../images/main/bg_dotted_row.png); background-position:4px center, left top; background-repeat:no-repeat,repeat-x;background-size:17px, 5px 1px}
+.main02_cont02 .latelyBox a:first-child {background:url(../images/main/bg_air_top.png) no-repeat 4px center;background-size:17px}
+.main02_cont02 .latelyBox a span {color:#666; display:inline-block; margin-right:13px}
+
+.main02_cont02 .inputView {}
+.main02_cont02 .inputView dt {background:#f7f7f7;font-size:15px;padding:10px 12px;border-top:1px solid #ccc;border-bottom:1px solid #ccc}
+.main02_cont02 .inputView dd a {background:url(../images/common/bg_tem01.png) no-repeat 12px center;background-size:14px;padding:12px 0 12px 30px; display:block}
+.main02_cont02 .inputView dd span { color:#c83d67}
+
+.recomPlanList {}
+.recomPlanList li {}
+.recomPlanList li a {display:block;height:75px;padding:10px 12px 10px 160px;position:relative}
+.recomPlanList li .img {position:absolute;left:12px; top:11px}
+.recomPlanList li .img img {width:142px;height:71px}
+.recomPlanList li .day {margin-top:40px;display:block; color:#666}
+.recomPlanList li:nth-child(2n+2) {background-color:#f7f7f7}
+
+/* 호텔 리뉴얼 */
+.newMain_hotel {background-color:#dbdce1;padding:8px}
+.hotel_searchBox {background-color:#fff;border-radius:5px; margin-bottom:5px; border-bottom:1px solid #949494}
+.hotel_searchBox .citySer {display:block;text-align:center;padding:17px 0 13px}
+.hotel_searchBox .citySer span {color:#888;font-size:15px;background:url(../images/main/bg_select_red.png) no-repeat right center;padding-right:17px;background-size:13px}
+.hotel_searchBox .citySer strong {display:block;font-size:28px;font-weight:normal; margin:10px 0 0}
+.hotel_searchBox .citySer em {display:block;font-size:14px}
+.hotel_searchBox > div {background:#f7f7f7 url(../images/main/bg_dott_gray.png) repeat-x 0 0; background-size:5px 1px; display:table; width:100%; text-align:center; border-radius:0 0 5px 5px;}
+.hotel_searchBox > div a {display:table-cell;width:40%; text-align:center; padding:18px 0 20px}
+.hotel_searchBox > div a .check {color:#888;font-size:15px}
+.hotel_searchBox > div a .year {font-size:15px}
+.hotel_searchBox > div a strong {display:block; font-size:28px; margin-top:3px; font-weight:normal}
+.hotel_searchBox > div a strong em { font-size:14px; vertical-align:middle; position:relative;top:-2px}
+.hotel_searchBox > div > div {display:table-cell; width:20%; vertical-align:middle}
+.hotel_searchBox > div > div span {background-color:#c83d67; border-radius:50px;color:#fff; width:50px; height:26px; display:inline-block; padding-top:7px; font-size:16px; text-indent:-1px}
+
+.hotel_peopleBox {background-color:#fff;border-radius:5px;padding:15px 12px 15px;border-bottom:1px solid #949494}
+.hotel_peopleBox .peppleSel {margin:15px 0 0;position:relative}
+.hotel_peopleBox .peppleSel:first-child {margin-top:0}
+.hotel_peopleBox .peppleSel strong {font-weight:normal;display:block;padding:2px 0 7px 25px;background:url(../images/main/bg_people01.png) no-repeat 0 0; background-size:20px; margin-bottom:3px; font-size:15px}
+.hotel_peopleBox .peppleSel strong span {color:#c83d67}
+.hotel_peopleBox .peppleSel .delbtn {position:absolute;right:0;top:-2px;}
+.hotel_peopleBox .peppleSel .delbtn img {width:24px !important}
+.hotel_peopleBox .peppleSel .btnselRed { background-image:url(../images/common/bg_select_red.png); background-size:13px 7px}
+.hotel_peopleBox .addRoom {display:block; margin:15px 0 0; text-align:center;padding:15px 0; background-color:#f7f7f7; background-image:url(../images/main/bg_dott_gray.png),url(../images/main/bg_dott_gray.png),url(../images/main/bg_dott_gray02.png),url(../images/main/bg_dott_gray02.png); background-repeat:repeat-x,repeat-x,repeat-y,repeat-y; background-position:0 top, 0 bottom, 0 0, right 0;background-size:5px 1px,5px 1px,1px 4px,1px 4px; border-radius:4px; color:#6d7588; font-size:15px}
+.hotel_peopleBox .addRoom:after {content:''; width:14px; height:14px; display:inline-block; background:url(../images/main/bg_add_gray.png) no-repeat 0 0; background-size:14px 14px; margin-left:4px; position:relative; bottom:-2px}
+
+.inpSearBox01 {margin:15px 0; position:relative}
+.inpSearBox01 input {width:100%; height:50px;border:1px solid #ccc;text-indent:10px;border-radius:0;font-size:14px;box-sizing:border-box}
+.inpSearBox01 a {position:absolute;right:0;top:0}
+.inpSearBox01 a img {width:50px}
+.inpSearBox01.cityTy {background-color:#747b8e; padding:0 12px 15px 12px; margin:0}
+.inpSearBox01.cityTy > div {margin-right:50px; position:relative}
+.inpSearBox01.cityTy > div a {border:none; margin:0; padding:16px;width:17px}
+.inpSearBox01.cityTy > div a:after { background:url(../images/air/ico_searbtn.png) no-repeat center center; background-size:16px;width:100%; height:100%;content: "";position: absolute;display: block;right:0;top:0}
+.inpSearBox01.cityTy > a {right:12px}
+.inpSearBox01.cityTy > input {border:none}
+
+.cityEnd02 {border:1px solid #ccc;margin:12px}
+.falseTxt {text-align:center;background:url(../images/common/bg_falseend02.png) no-repeat center 0;background-size:70px; margin-top:25px; padding:75px 20px 25px}
+.falseTxt strong {display:block;margin:12px 0 15px;font-size:16px}
+
+.cityList01 h4 {padding:20px 0 10px 12px;border-bottom:1px solid #ccc; color:#c83d67; font-size:16px; font-weight:normal}
+.cityList01 strong {background-color:#f7f7f7;color:#747b8e;font-size:12px; height:21px; padding:6px 0 0 12px; display:block}
+.cityList01 ul li a {display:block; text-indent:12px;height:30px;border-bottom:1px solid #ebebeb; font-weight:bold; overflow:hidden; padding-top:14px; font-size:14px}
+.cityList01 ul li a span {float:right; margin-right:12px}
+.cityList01 ul li:last-child a {border-bottom:1px solid #ccc}
+
+.citySeTable th {font-size:12px;color:#747b8e;padding:10px 0}
+.citySeTable td a {display:table;width:100%;border-top:1px solid #ebebeb}
+.citySeTable td a span {display:table-cell;text-align:center;width:50%;height:40px;vertical-align:middle}
+
+.inforTxt {padding-left:18px; background:url(../images/common/bg_redtxt01.png) no-repeat 0 1px;background-size:14px 14px; margin:0 0 15px}
+.bulOneList {padding:0 20px 7px}
+.bulOneList li {color:#666; padding-left:10px;position:relative;margin-bottom:8px; font-weight:normal}
+.bulOneList li:before {content:'';width:4px;height:4px;display:block; position:absolute; left:0; top:5px; background-color:#767676; border-radius:50%}
+.bulOneList li em {color:#333}
+
+.s_redBtn {text-align:center; margin-top:30px}
+.s_redBtn a {border:1px solid #c83d67;background-color:#c83d67;color:#fff; margin:0 auto; padding:12px 50px 16px; font-weight:bold; border-radius:5px; height:15px; display:inline-block; font-size:18px}

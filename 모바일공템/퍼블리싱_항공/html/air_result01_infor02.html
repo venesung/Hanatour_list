@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>항공 스케줄 조회 - 하나프리항공</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/air.css">
+<link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.5.css">
+<script src="../js/jquery-2.1.3.min.js" type="text/javascript"></script>
+<script src="../js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<script src="../js/iscroll.carousel.js" type="text/javascript"></script>
+<script src="../js/iscroll.swipeview.js" type="text/javascript"></script>
+<script src="../js/fixedPostiion.js" type="text/javascript"></script>
+<script src="../js/common.js" type="text/javascript"></script>
+<script src="../js/reservation.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+
+
+<div id="wrap">
+	<header id="header" class="subHead">
+		<div class="inner">
+			<h1><a href="#" data-role="none"><img src="../images/common/btn_nlogo_tem.png" alt="하나투어"></a></h1> <!-- 로고이미지 세로값 80px로 통일해주세요! 가로사이즈는 무관  -->
+			<a href="#" id="btnMenu" data-role="none"><img src="../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+		</div>
+	</header>
+
+
+	<div id="container" class="subCont"><!-- 컨텐츠 sub 영역 -->
+
+		<!-- 검색결과 -->
+		<section>
+			<h2 class="pagTit">항공 스케줄 조회</h2><!-- 20150426 추가 -->
+			<div class="scInforTop">
+				<strong>
+					<img src="../images/main/BB.png" alt="">대한항공
+					<span>왕복</span>
+				</strong>
+				<div>
+					<div class="sectIn01 lineNone"><!-- 편도, 다구간일경우 class="typeBg02" 추가 -->
+						<div><strong>서울</strong>인천 ICN</div>
+						<div><strong>도쿄</strong>나리타 NRT</div>
+					</div>
+					<div class="inforTop_c "> <!-- 하나일경우 class="pdTb15" 추가 -->
+						<div><span class="c_red">출국일</span><strong>2014.03.23(수)&nbsp; 10:20</strong><em class="c_ok">예약가능</em></div>
+						<div><span class="c_red">귀국일</span><strong>2014.03.23(수)&nbsp; 10:20</strong><em class="c_ok">예약가능</em></div>
+					</div>
+					
+					<!-- 20151008 수정 -->
+					<div class="ifTxtBtmBox">
+						<span>인원선택</span>
+						<a href="pop_people.html" data-role="none" class="btnselRed slideUpPop" title="인원선택">성인 2명, 소아1명, 유아 1명</a>
+					</div>
+					<!-- // 20151008 수정 -->
+				</div>
+			</div>
+			
+			<div class="garyBox02">
+				<div class="scInforCont01">
+					<div class="inforIn01">
+						<h2>항공 요금 정보</h2>
+						<p>성인/삼성카드 결제 
+							<em class="label02"><strong class="c_label01">긴급 땡처리</strong><strong class="c_label02">알짜항공권</strong></em>
+						</p>
+						<a href="pop_terms.html" data-role="none" class="moneyBtn slideUpPop">요금규정</a>
+					</div>
+					
+					<dl class="inforMoney">
+						<dt>성인 1명</dt>
+						<dd class="stCont">[왕복] 총액운임<span>170,000원</span></dd>
+						<dd>성인기본운임 X 1<span>80,400원</span></dd>
+						<dd>유류할증료 X 1<span>33,400원</span></dd>
+						<dd>제세공과금 X 1<span>56,200원</span></dd>
+						<dt>소아 1명</dt>
+						<dd class="stCont">[왕복] 총액운임<span>52,000원</span></dd>
+						<dd>소아기본운임 X 1<span>50,400원</span></dd>
+						<dd>유류할증료 X 1<span>3,400원</span></dd>
+						<dd>제세공과금 X 1<span>0원</span></dd>
+					</dl>
+					
+					<dl class="totalMoney">
+						<dt>[왕복]총액운임</dt>
+						<dd>
+							<strong>11,182,900원</strong>
+							<p>(유류할증료, 제세공과금 포함)</p>
+						</dd>
+					</dl>
+				</div>
+				
+				<p class="tTxt03">유류할증료/제세공과금은 항공사 사정 및 환율변동에 의해  매일 변경되며 발권 당일 환율에 따라 적용됩니다. </p>
+			
+				<dl class="deScheBox">
+					<dt>출국 상세일정<span class="c_ok">예약가능</span></dt>
+					<dd>
+						<ul class="detailList">
+							<li>
+								<span><strong>11:30</strong>03/23(월)</span>
+								<strong>인천 출발</strong>
+								<em>9좌석</em>
+								<p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p> <!-- 비행 class="airBox" -->
+							</li>
+							<li>
+								<span><strong>13:20</strong>03/23(월)</span>
+								<strong>오사카(간사이) 도착</strong>
+								<p><span class="waitBox">대기</span> 1시간 50분 소요</p><!-- 대기 class="waitBox" -->
+							</li>
+							<li>
+								<span><strong>11:30</strong>03/23(월)</span>
+								<strong>오사카(간사이) 출발</strong>
+								<em>9좌석</em>
+								<p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p>
+							</li>
+							<li>
+								<span><strong>14:50</strong>03/23(월)</span>
+								<strong>도쿄(나리타) 도착</strong>
+							</li>
+						</ul>
+						
+						<div class="de_btmSect">
+							<strong>총 소요시간 : 20시간 20분</strong>
+							<span class="waitBox">총 대기</span> 04시간 45분
+							<span class="airBox">총 비행</span> 15시간 35분
+						</div>
+						
+						<!-- 20150422 삭제 span class="de_btnStyle">03.23(수) ~ 03.26(목) / 체류기간 4일</span-->
+						
+					</dd>
+					<dt>귀국 상세일정<span class="c_ok">예약가능</span></dt>
+					<dd>
+						<ul class="detailList">
+							<li>
+								<span><strong>11:30</strong>03/23(월)</span>
+								<strong>인천 출발</strong>
+								<em>9좌석</em>
+								<p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p> <!-- 비행 class="airBox" -->
+							</li>
+							<li>
+								<span><strong>13:20</strong>03/23(월)</span>
+								<strong>오사카(간사이) 도착</strong>
+								<p><span class="waitBox">대기</span> 1시간 50분 소요</p><!-- 대기 class="waitBox" -->
+							</li>
+							<li>
+								<span><strong>11:30</strong>03/23(월)</span>
+								<strong>오사카(간사이) 출발</strong>
+								<em>9좌석</em>
+								<p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p>
+							</li>
+							<li>
+								<span><strong>14:50</strong>03/23(월)</span>
+								<strong>도쿄(나리타) 도착</strong>
+							</li>
+						</ul>
+						
+						<div class="de_btmSect">
+							<strong>총 소요시간 : 20시간 20분</strong>
+							<span class="waitBox">총 대기</span> 04시간 45분
+							<span class="airBox">총 비행</span> 15시간 35분
+						</div>
+					</dd>
+				</dl>
+				
+				<dl class="inforList01">
+					<dt>유의사항</dt>
+					<dd>
+						<ul>
+							<li>유류할증료 등 제세공과금은 변경될 수 있습니다.</li>
+							<li>항공사 수수료는 항공사마다 규정이 상이하므로, 해당운임의 요금규정을 반드시 확인하시기 바랍니다.</li>
+							<li>환불소요기간은 항공사와의 확인 및 보고 절차 이외에 고객님의 결제방법(현금/카드)으로 인해 접수된 날짜로부터 5~15일정도 소요됩니다.</li>
+							<li>환불이 가능한 항공권일 경우 예약규정에 기재되어 있는 항공사 수수료외에 여행사 수수료는 별도로 부과됩니다.</li>
+							<li>천재지변으로 인한 결항으로 탑승을 못하셨을 경우 환불절차는 별도로 담당자에게 요청하셔야 합니다.</li>
+							<li>탑승이 완료된 항공권은 소급환불 및 카드 변경이 불가합니다.</li>
+						</ul>
+					</dd>
+				</dl>
+				<!--20150529 추가 -->
+				<div class="fullBtn">
+					<a href="#" data-role="none">공유하기</a>
+					<a href="#" data-role="none">예약하기</a>
+				</div>
+				<!--20150529 추가 -->
+			</div>
+			
+			<div class="fixSdBtn">
+				<a href="#" data-role="none" class="sheardBtn" title="공유하기"></a>
+				<a href="#" data-role="none">예약하기</a>
+			</div>
+			
+		</section>
+		
+		
+		<footer class="newFoot">
+			<ul>
+				<li><a href="#" data-role="none">고객센터</a></li>
+				<li><a href="#" data-role="none">0000-0000</a></li>
+				<li><a href="#" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+			</ul>
+			<div>
+				<a href="#" data-role="none">이용약관</a>|
+				<a href="#" data-role="none">개인정보처리방침</a>|
+				<a href="#" data-role="none">여행약관</a>|
+				<a href="#" data-role="none">사업자정보확인</a>
+			</div>
+			<address>
+					상호 : 공식인증예약센터 | 대표자 : 홍길동 | 사업자등록번호 : 102-81-39440<br>
+					관광사업자등록번호 . 국외 통신판매업 : 종로01-1806호<br>
+					개인정보관리 책임자 : 최종윤 | 대표전화 : 1577-1233 | FAX : 02-734-0392<br>
+					주소 : 서울특별시 종로구 인사동 5길 41
+	
+			</address>
+		</footer>
+
+	</div><!-- //컨텐츠 영역 -->
+</div>
+<!-- 좌측메뉴 -->
+<div id="menuPanel">
+	<a href="#" data-role="none" class="closeSlide" title="닫기"></a><!-- 20150526 추가 -->
+	<div class="innerScroller">
+		<div class="nleftMenu">
+			<h2>여행상품</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">해외여행-패키지</a></li>
+				<li><a href="#" data-role="none">허니문</a></li>
+				<li><a href="#" data-role="none">에어텔</a></li>
+				<li><a href="#" data-role="none">배낭여행</a></li>
+				<li><a href="#" data-role="none">성지순례</a></li>
+				<li><a href="#" data-role="none">골프</a></li>
+				<li><a href="#" data-role="none">크루즈</a></li>
+				<li><a href="#" data-role="none">레포츠</a></li>
+				<li><a href="#" data-role="none">트레킹</a></li>
+			</ul>
+			
+			<h2>항공 / 호텔</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">해외호텔</a></li>
+				<li><a href="#" data-role="none">해외항공</a></li>
+				<li><a href="#" data-role="none">주요도시 할인항공</a></li>
+				<li><a href="#" data-role="none">특가항공</a></li>
+			</ul>
+			<h2>여행상담</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">고객센터</a></li>
+				<li><a href="#" data-role="none">카톡상담</a></li>
+			</ul>
+			
+			<div class="allmenu_btm">
+				<a href="#" data-role="none">예약확인</a>
+				<a href="#" data-role="none">미팅장소 안내</a>
+				<a href="tel:1577-8761" data-role="none">1577-8761</a>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+
+<!-- Picker 창 -->
+<div id="overlayPanel">
+</div>
+
+</body>
+</html>
+

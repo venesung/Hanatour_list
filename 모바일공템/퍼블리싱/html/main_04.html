@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+
+<title>해외호텔 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<script src="../js/jquery-2.1.3.min.js" type="text/javascript"></script>
+<script src="../js/jquery-ui.js" type="text/javascript"></script>
+<script src="../js/swiper.min.js" type="text/javascript"></script>
+<script src="../js/common.js" type="text/javascript"></script>
+<script type="text/javascript">
+	var dateObj = {year: 2015, month: 0, date: [1, 2, 3, 4, 11, 20]};
+
+	$(document).ready(function(){
+		HT_JQUI_WCalendar.init($('#datepicker_pop'), {
+			defaultDate : new Date(2015, 0, 1),
+			showOtherMonths : true,
+			extendBeforeShowDay : function (date) { //beforeShowDay 내부에서 사용하므로 속성명 변경함
+				var returnVal = false;
+				
+				//dateObj.date 에 대한 날짜 활성화 체크
+				if (date.getFullYear() === dateObj.year && date.getMonth() === dateObj.month) {
+					returnVal = (dateObj.date.indexOf(date.getDate()) > -1);	
+				}
+
+				return returnVal;
+			},
+			onSelect : function (date) {
+				//console.log(date);
+			}
+		}); //{} jquery ui 옵션 확장
+
+		//$('#datepicker_pop').datepicker('setDate', new Date(2015, 0, 1)); // 날짜 변경
+	});
+</script>
+</head>
+
+<body>
+
+<div id="wrap">
+
+	<header id="header">
+		<div class="inner">
+			<h1><a href="#" data-role="none"><img src="../images/common/btn_nlogo_tem.png" alt="하나투어"></a></h1><!-- 로고이미지 세로값 80px로 통일해주세요! 가로사이즈는 무관 -->
+			<a href="#" id="btnMenu" data-role="none"><img src="../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+		</div>
+	</header>
+	
+	<nav id="gnb">
+		<ul>
+			<li><a href="#" data-role="none">홈</a></li>
+			<li><a href="#" data-role="none">여행상품</a></li>
+			<li class="on"><a href="#" data-role="none">해외호텔</a></li>
+			<li><a href="#" data-role="none">국내여행</a></li>
+		</ul>
+	</nav>
+	<div class="headerMargin"></div> <!-- 네비없을경우 class="headerMargin02" -->
+
+	<!-- 컨텐츠 영역 -->
+	<div id="container">
+		
+		<div class="newMain_hotel">
+			<div class="hotel_searchBox">
+				<a href="#hotelPop" data-role="none" class="InfoPop citySer">
+					<span>도시검색</span>
+					<strong>도쿄</strong>
+					<em>일본</em>
+				</a>
+				
+				<div>
+					<a href="#" data-role="none">
+						<span class="check">체크인</span>
+						<strong>09.01<em>(토)</em></strong>
+						<span class="year">2015</span>
+					</a>
+					<div><span>10박</span></div>
+					<a href="#" data-role="none">
+						<span class="check">체크아웃</span>
+						<strong>09.11<em>(금)</em></strong>
+						<span class="year">2015</span>
+					</a>
+				</div>
+			</div>
+			
+			<div class="hotel_peopleBox">
+				<!-- 객실 인원 선택 최대 3개 -->
+				<div class="peppleSel">
+					<strong><span>객실1 </span>인원 선택</strong>
+					<a href="#" class="delbtn" data-role="none"><img src="../images/main/btn_sel_del01.png" alt="삭제"></a>
+					<a href="#peoplePop" data-role="none" class="InfoPop btnselRed">성인2, 아동2 (만11세, 만7세)</a>
+					
+				</div>
+				<!-- // 객실 인원 선택 -->
+				
+				<!-- 객실 인원 선택 -->
+				<div class="peppleSel">
+					<strong><span>객실2 </span>인원 선택</strong>
+					<a href="#" class="delbtn" data-role="none"><img src="../images/main/btn_sel_del01.png" alt="삭제"></a>
+					<a href="#peoplePop" data-role="none" class="InfoPop btnselRed">성인2, 아동2 (만11세, 만7세)</a>
+				</div>
+				<!-- // 객실 인원 선택 -->
+				
+				<!-- 객실 인원 선택 -->
+				<div class="peppleSel" style="display:none">
+					<strong><span>객실2 </span>인원 선택</strong>
+					<a href="#" class="delbtn" data-role="none"><img src="../images/main/btn_sel_del01.png" alt="삭제"></a>
+					<a href="#peoplePop" data-role="none" class="InfoPop btnselRed">성인2, 아동2 (만11세, 만7세)</a>
+				</div>
+				<!-- // 객실 인원 선택 -->
+				
+				<a href="#" data-role="none" class="addRoom">객실추가</a>
+			</div>
+			
+			<a href="#" data-role="none" class="m_btnRed">해외호텔 검색</a>
+		</div>
+		
+		<a href="#" id="topBtn01" data-role="none" data-scroller="window" data-target="" data-attach="" data-direction="fade" data-margin="" class="topBtn01 posFixed loaded scrollTop"><img src="../images/common/btn_top01.png" alt="TOP"></a>
+	</div>
+	<!-- //컨텐츠 영역 -->
+	
+	<!-- 푸터 -->
+	<footer class="newFoot">
+		<ul>
+			<li><a href="#" data-role="none">고객센터</a></li>
+			<li><a href="#" data-role="none">0000-0000</a></li>
+			<li><a href="#" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+		</ul>
+		<div>
+			<a href="#" data-role="none">이용약관</a>|
+			<a href="#" data-role="none">개인정보처리방침</a>|
+			<a href="#" data-role="none">여행약관</a>|
+			<a href="#" data-role="none">사업자정보확인</a>
+		</div>
+		<address>
+				상호 : 공식인증예약센터 | 대표자 : 홍길동 | 사업자등록번호 : 102-81-39440<br>
+				관광사업자등록번호 . 국외 통신판매업 : 종로01-1806호<br>
+				개인정보관리 책임자 : 최종윤 | 대표전화 : 1577-1233 | FAX : 02-734-0392<br>
+				주소 : 서울특별시 종로구 인사동 5길 41
+		</address>
+	</footer>
+	<!-- // 푸터 end -->
+	
+</div>
+
+
+
+<!-- 좌측메뉴 -->
+<div id="menuPanel">
+	<a href="#" data-role="none" class="closeSlide" title="닫기"></a><!-- 20150526 추가 -->
+	<div class="innerScroller">
+		<div class="nleftMenu">
+			<h2>여행상품</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">해외여행-패키지</a></li>
+				<li><a href="#" data-role="none">허니문</a></li>
+				<li><a href="#" data-role="none">에어텔</a></li>
+				<li><a href="#" data-role="none">배낭여행</a></li>
+				<li><a href="#" data-role="none">성지순례</a></li>
+				<li><a href="#" data-role="none">골프</a></li>
+				<li><a href="#" data-role="none">크루즈</a></li>
+				<li><a href="#" data-role="none">레포츠</a></li>
+				<li><a href="#" data-role="none">트레킹</a></li>
+			</ul>
+			
+			<h2>호텔</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">해외호텔</a></li>
+				<!--li><a href="#" data-role="none">해외항공</a></li>
+				<li><a href="#" data-role="none">주요도시 할인항공</a></li>
+				<li><a href="#" data-role="none">특가항공</a></li-->
+			</ul>
+			<h2>여행상담</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">고객센터</a></li>
+				<li><a href="#" data-role="none">카톡상담</a></li>
+			</ul>
+			
+			<div class="allmenu_btm">
+				<a href="#" data-role="none">예약확인</a>
+				<a href="#" data-role="none">미팅장소 안내</a>
+				<a href="tel:1577-8761" data-role="none">1577-8761</a>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+
+
+<!-- Picker 창 -->
+<div id="overlayPanel"></div>
+
+<!-- pop start  -->
+<div id="hotelPop">
+	<div class="popReserve01">
+		<div class="header">
+			<h3>도시/호텔 검색<a href="#" class="closeOverlayPanel" data-role="none" title="레이어닫기"></a></h3>
+			<div class="inpSearBox01 cityTy">
+				<input type="text" title="도시, 호텔 검색" placeholder="도시, 호텔 검색">
+				<a href="#" data-role="none"><img src="../images/common/bg_search01.png" alt="검색하기"></a>
+			</div>
+		</div>
+	
+		<div class="innerScroller" style="padding-bottom:65px">
+			<div>
+				<!-- 검색결과 도시 -->
+				<div class="cityEnd02" style="display:n one">
+					<div class="citySeTable">
+						<table>
+							<caption>도시검색 결과표</caption>
+							<colgroup>
+								<col style="width:50%" span="2">
+							</colgroup>
+							
+							<thead>
+								<tr>
+									<th scope="col">도시</th>
+									<th scope="col">국가</th>
+								</tr>
+							</thead>
+							
+							<tbody>
+								<tr>
+									<td colspan="2">
+										<a href="#" data-role="none">
+											<span>BGI</span>
+											<span>Barnados</span>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<a href="#" data-role="none">
+											<span>BGI</span>
+											<span>바바도스</span>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<a href="#" data-role="none">
+											<span>BGI</span>
+											<span>바바도스</span>
+										</a>
+									</td>
+								</tr>
+							</tbody>
+							
+						</table>
+					</div>
+				</div>
+				<!-- 검색결과 도시 end -->
+				
+				<!-- 검색결과 호텔 -->
+				<div class="cityEnd02" style="display:n one">
+					<div class="citySeTable">
+						<table>
+							<caption>도시검색 결과표</caption>
+							<colgroup>
+								<col style="width:50%" span="2">
+							</colgroup>
+							
+							<thead>
+								<tr>
+									<th scope="col">도시</th>
+									<th scope="col">호텔</th>
+								</tr>
+							</thead>
+							
+							<tbody>
+								<tr>
+									<td colspan="2">
+										<a href="#" data-role="none">
+											<span>BGI</span>
+											<span>Barnados</span>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<a href="#" data-role="none">
+											<span>BGI</span>
+											<span>바바도스</span>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<a href="#" data-role="none">
+											<span>BGI</span>
+											<span>바바도스</span>
+										</a>
+									</td>
+								</tr>
+							</tbody>
+							
+						</table>
+					</div>
+				</div>
+				<!-- 검색결과 호텔 end -->
+				
+				<!-- 검색어 없을시 20150421 수정 -->
+				<div class="cityEnd02" style="display:none">
+					<p class="falseTxt">
+						<strong>검색결과가 없습니다.</strong>
+						단어의 철자가 정확한지 확인해 보세요.
+					</p>
+				</div>
+				<!-- 검색어 없을시 end -->
+				
+				<div class="cityList01">
+					<h4>주요도시 바로 선택</h4>
+					<strong>일본</strong>
+					<ul> 
+						<li><a href="#" data-role="none">도쿄</a></li> 
+						<li><a href="#" data-role="none">오사카</a></li>
+						<li><a href="#" data-role="none">후쿠오카</a></li>
+						<li><a href="#" data-role="none">오키나와</a></li>
+					</ul>
+					<strong>동남아</strong>
+					<ul> 
+						<li><a href="#" data-role="none">싱가포르</a></li> 
+						<li><a href="#" data-role="none">코타키나발루</a></li>
+						<li><a href="#" data-role="none">세부</a></li>
+						<li><a href="#" data-role="none">방콕</a></li>
+					</ul>
+					<strong>일본</strong>
+					<ul> 
+						<li><a href="#" data-role="none">도쿄</a></li> 
+						<li><a href="#" data-role="none">오사카</a></li>
+						<li><a href="#" data-role="none">후쿠오카</a></li>
+						<li><a href="#" data-role="none">오키나와</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // 도시검색 pop -->
+
+<!-- 인원선택 pop-->
+<div id="peoplePop">
+	<div class="popReserve01">
+		<div class="header">
+			<h3>객실 1 인원선택<a href="#" class="closeOverlayPanel" data-role="none" title="레이어닫기"></a></h3>
+		</div>
+		
+		<div class="innerScroller">
+			<div>
+				<div class="popIncont01">
+					<div class="peopleBtn">
+						<a href="#" data-role="none" class="plusBtn" title="추가버튼"></a>
+						<span>성인 <span class="num adult">1</span></span>
+						<a href="#" data-role="none" class="delBtn" title="삭제버튼"></a>
+					</div>
+					
+					<div class="peopleBtn">
+						<a href="#" data-role="none" class="plusBtn" title="추가버튼"></a>
+						<span>아동 <span class="num">0</span></span>
+						<a href="#" data-role="none" class="delBtn" title="삭제버튼"></a>
+					</div>
+					
+					<div class="peopleBtn02">
+						<select class="btnselRed" title="아동나이 선택1" data-role="none">
+							<option>아동나이 1</option>
+							<option>만 11세</option>
+						</select>
+						
+						<select class="btnselRed" disabled title="아동나이 선택2" data-role="none">
+							<option>아동나이 2</option>
+							<option>만 11세</option>
+						</select>
+					</div>
+					
+					<p class="inforTxt">한 객실 당 <span class="c_red">성인은 최대 4명, 아동은 2명</span>까지 예약이 가능합니다.</p>
+					
+					<ul class="bulOneList peoTy">
+						<li>성인 : <em>만 19세 이상</em></li>
+						<li>아동 : <em>0세 ~ 만 18세 이하</em></li>
+					</ul>
+					
+					<div class="s_redBtn"><a href="#" data-role="none">선택완료</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // 인원선택 pop -->
+<!-- // pop end -->
+
+<!-- 달력팝업 -->
+<div class="popCalender" style="display:none">
+	<div class="popCalender_inner">
+		<div id="datepicker_pop"></div>
+		<a href="#" class="cal_closeBtn" data-role="none">닫기</a>
+	</div>
+</div>
+<!-- // 달력팝업 -->
+
+</body>
+</html>
+

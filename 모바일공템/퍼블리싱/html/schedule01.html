@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>상세검색 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/sub.css">
+
+<script src="../js/jquery-2.1.3.min.js" type="text/javascript"></script>
+<script src="../js/swiper.min.js" type="text/javascript"></script>
+<script src="../js/common.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('ul.subTab').not('.tab03').on('change.WTab', function (e, obj) {
+			//console.log(obj.target, obj.idx, obj.content);
+		});
+
+		$('ul.subTab').filter('.tab03').on('change.WTab', function (e, obj) {
+			//console.log(obj.target, obj.idx, obj.content);
+		});	
+
+		// 푸터도착시 버튼 삭제 스크립트
+		bottomBtnPosition();
+	});
+
+	function bottomBtnPosition(){
+		var isOn = false;
+		var btnObj = $(".fixSdBtn");
+		var scroller = $(window);
+		if(btnObj.length == 0)
+			return;
+
+		scroller.scroll(function(e){
+			var scrollHeight = $(document).height() - 410;
+			var scrollPosition = $(window).height() + $(window).scrollTop();
+			if ((scrollHeight - scrollPosition) / scrollHeight <= 0) {
+				if(!isOn)
+					return;
+
+				btnObj.addClass("hide");
+				isOn = false;
+			}
+			else {
+				if(isOn)
+					return;
+
+				btnObj.removeClass("hide");
+				isOn = true;
+			}
+		});
+	}
+
+</script>
+</head>
+
+<body>
+
+<div id="wrap">
+	<header id="header">
+		<div class="inner">
+			<h1><a href="#" data-role="none"><img src="../images/common/btn_nlogo_tem.png" alt="하나투어"></a></h1>
+			<a href="#" id="btnMenu" data-role="none"><img src="../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+		</div>
+	</header>
+	<div class="headerMargin"></div> <!-- 네비없을경우 class="headerMargin02" -->
+	
+	<!-- 컨텐츠 영역 -->
+	<div id="container">
+		<h2 class="pagTit">일정표</h2>
+			
+			<!-- tab -->
+			<ul class="subTab">
+				<li class="tabOut01 on"><a href="#" data-role="none">일정정보</a></li> <!-- 선택시 class="on" -->
+				<li class="tabOut02"><a href="#" data-role="none">사진보기</a></li>
+			</ul>
+			<!-- // tab -->
+			
+			<!-- 일정보기 tab -->
+			<div class="tabOutCont01" style="display:">
+				<div class="scTitCont">
+					<h2>상품코드 : <span>AAP1001509307CA</span></h2>
+					<h3>[SMART CHOICE]방콕/파타야 5일[최대규모와 역사-로얄클리프]</h3>
+					<p>* 세계적인 명성의 5성급 호텔에서 편안한 휴식과 심혈을 기울여 준비한 관광지에서 재밌는 추억을 만들어 보세요.</p>
+				</div>
+				
+				<div class="scBtnCont">
+					<div>
+						<a href="#" data-role="none" class="btnGradi">일정표 메일발송</a>
+						<a href="#" data-role="none" class="btnGradi">예약문의</a>
+					</div>
+				</div>
+				
+				<div class="fixSdBtn">
+					<a href="#" data-role="none">대기예약</a>
+				</div>
+				
+				<!-- 상세리스트 -->
+				<dl class="producList">
+					<dt>예약현황</dt>
+					<dd>예약인원 : 10명 / 상품좌석수 : 10석</dd>
+					
+					<dt>여행기간</dt>
+					<dd>3박 5일
+						<p>한국출발 : 2015년 09월 30일(수) 21:10 - 7C2205</p>
+						<p>한국도착 : 2015년 10월 04일(일) 09:50 - 7C2206</p>
+					</dd>
+					
+					<dt>상품가격(예정가격)</dt>
+					<dd>
+						<!-- tab -->
+						<ul class="subTab tab03">
+							<li class="on"><a href="#" data-role="none">성인(만 12세 이상)</a></li> <!-- 선택시 class="on" -->
+							<li><a href="#" data-role="none">아동(만 12세 미만)</a></li>
+							<li><a href="#" data-role="none">유아(만 2세 미만)</a></li>
+						</ul>
+						<!-- // tab -->
+						
+						<!-- tabcont01 -->
+						<div>
+							<ul class="moneyList">
+								<li class="c_red">총상품가격 : <span>379,000원</span></li>
+								<li>기본상품가격 : <span>379,000원</span></li>
+								<li>유류할증료 : <span>0원</span></li>
+							</ul>
+						</div>
+						<!-- // tabcont01 -->
+						
+						<!-- tabcont02 -->
+						<div style="display:none">
+							<ul class="moneyList">
+								<li class="c_red">총상품가격 : <span>379,000원</span></li>
+								<li>기본상품가격 : <span>379,000원</span></li>
+								<li>유류할증료 : <span>0원</span></li>
+							</ul>
+						</div>
+						<!-- // tabcont02 -->
+						
+						<!-- tabcont03 -->
+						<div style="display:none">
+							<ul class="moneyList">
+								<li class="c_red">총상품가격 : <span>379,000원</span></li>
+								<li>기본상품가격 : <span>379,000원</span></li>
+								<li>유류할증료 : <span>0원</span></li>
+							</ul>
+						</div>
+						<!-- // tabcont03 -->
+						
+						<p>- 상기 여행 요금 및 유류할증료, 제세공과금은 유가와 환율에 따라 인상 또는 인하될 수 있습니다.</p>
+						<p>- 아동 요금은 성인 2인과 같은 방 사용 조건이며, 미충족 시 아동 추가 요금이 발생합니다.</p>
+						
+					</dd>
+					
+					<dt>하나투어 마일리지</dt>
+					<dd>
+						<p>성인기준 3,790ⓜ</p>
+						<p>여행자 각각 회원번호 또는 휴대폰/이메일 입력 필수</p>
+						<p>출발 전 하나투어클럽 가입자 한정 (유아제외), 출발일+7일 적립</p>
+						<p>하나투어 제휴카드 : 어디서나 천원당 10~100마일 적립</p>
+					</dd>
+					
+					<dt>특별한혜택</dt>
+					<dd><a href="#" data-role="none" class="btnGradi">상세보기</a></dd>
+					
+					<dt>포함내역</dt>
+					<dd>왕복항공권,전일정숙박비,차량비,여행지입장료,1억원여행자보험,인천공항세,관광진흥개발기금,현지공항세,전쟁보험료, 유류할증료</dd>
+					
+					<dt>불포함내역</dt>
+					<dd>1인당 전일정 40 USD의 가이드/기사 경비를 현지에서 지불해야 합니다.<br>※ 물값 등 기타개인경비,마사지매너팁<br>매너팁은 소비자의 자율적 선택사항으로 지불 여부에 따른 불이익이 없습니다.</dd>
+					
+					<dt>상세일정표</dt>
+					<dd>인천-방콕(1)-파타야(2)-방콕-기내(1)-인천<br><br>
+						<p><strong class="c_red">[미팅 일자 09월 30일][미팅 시간 18:40]</strong><br>인천 국제공항 3층 출국장 <strong>여행사 카운터 G와F 카운터사이 중앙엘리베이터 옆 하나투어 1번~5번 테이블 앞</strong></p>
+					</dd>
+					
+					<dt>여행전 체크 사항</dt>
+					<dd><a href="#" data-role="none" class="btnGradi">상세보기</a></dd>
+				</dl>
+				<!-- // 상세리스트 -->
+				
+				<!-- 여행 날짜별 일정 -->
+				<a href="#" class="btnGradi plus">더보기</a><!-- 20151211 추가 -->
+				
+				<section class="detailDay" style="display:none"> <!-- 이 태그안으로 일정 넣어주세요 -->
+					<dl id="prdDayDetail" class="content"><dl id="prdDayDetail" class="content"><dl id="prdDayDetail" class="content"><dl id="prdDayDetail" class="content"><dl id="prdDayDetail" class="content"><dl id="prdDayDetail" class="content"><dt class="common_titleLineBar"><h3>상세일정표</h3></dt><dd id="prdMetting" class="package_bgType_01" style="padding-bottom:20px;"><p>인천-장사(1)-장가계(2)/장사-인천</p><br><p><b><font color="brown">[미팅 일자 03월 20일] </font></b><b><font color="brown">[미팅 시간  오후 18:50] </font></b><br>인천 국제공항 3층 출국장 <b><font color="brown">여행사 카운터 G와F 카운터사이 중앙엘리베이터 옆 하나투어 6번~10번 테이블 이세이브 안내판 앞</font></b></p></dd><dl class="content"><dt class="common_titleLineBar"><h3>여행전 체크	사항</h3></dt>	</dl>	<dl class="btnLayout"><dt id="btnTravelCheck" class="button travel"><span style="font-size:13px;">상세보기</span></dt></dl></dl><div id="dayDetailView"><dt class="package_dayTitle"><div style="float:left; border-right:1px solid #262D39; padding-right:20px;"><h4>1 DAY</h4></div><div><span>03월 20일 일요일</span></div></dt><table class="package_schedule_day" width="100%"><tbody><tr><td class="title" valign="top"><span class="date"><strong>일정 </strong>| </span></td><td class="desc01"><span class="descColor"><strong>장사(長沙)</strong></span></td></tr><tr><td class="title" valign="top"><span class="location"><strong>장소 </strong>| </span></td><td class="desc01"><span class="descColor"><strong>장사(長沙)</strong></span></td></tr><tr><td class="title" valign="top"><span class="eat"><strong>식사 </strong>| </span></td><td class="desc01"><span class="descColor"><strong><span>저녁 : 기내식</span></strong></span></td></tr><tr><td class="title" valign="top"><span class="hotel"><strong>호텔 </strong>| </span></td><td class="desc02"><span class="descColor"><strong>XIANGRONG HOTEL 또는 동급[예정] 전화:86-731-8259-6666</strong></span></td></tr></tbody></table><dd class="package_bgType_01"><div><b>※본 일정은 예정일정이므로 일정의 변경 가능성이 있음을 양해부탁드립니다.또한 하계스케줄이 아직 확정이 안되어서 항공시간대 변경가능성 있습니다.-<font color="red">확정일정표를 반드시 확인해주세요.</font><br></b><b>&nbsp;</b></div><div><b><img src="http://image5.hanatour.com/schedule/common/dot/icon_dot_01.gif" width="2" height="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="2">&nbsp;<b>인천 국제공항 출발 [MU2024-21:50]</b><br>- 기내식 1회 제공 <br>- 비행소요시간 [약 3시간 30분 소요] <br>- 시차정보[한국보다 1시간 느림]<br><img src="http://image5.hanatour.com/schedule/common/dot/icon_dot_01.gif" width="2" height="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="2">&nbsp;<b>장사 국제공항 도착 [MU2024-00:05+1]</b></b></div><div><b>&nbsp;</b></div><div><b><a href="http://info.hanatour.com/weather/city/1000112291" target="_blank"><font color="blue"><ins><strong>▶ 클릭!! 장가계(張家界) 현지날씨 확인하기</strong></ins></font></a></b></div><div><b>&nbsp;</b></div><div><table style="width: 98%; height: 498px;" border="1" cellpadding="5" width="98%"><tbody><tr><td><div><b>♥ Let's go 장가계 ♥</b> <br><br><font color="blue">1.옷차림은 어떻게 준비하는 것이 좋을까요?</font><br>기본적인 기후는 한국과 비슷하게 사계절이 뚜렷합니다. 한국보다 평균기온은 조금 높은편으로 낮에 날씨가 좋더라도 산이므로 아침저녁 일교차에 대비한 옷차림이 좋습니다. 또한 산악코스는 아니지만 구간구간 걸어다니는 코스들로 구성된 만큼 장시간 도보에 편한 신발을 준비해주시기 바랍니다. <br><br><font color="blue">2.식사는 입맛에 잘 맞을까요?</font><br>장가계의 경우 한국관광객들이 많아 한식위주로 된 식단이 제공되며 중국현지식이라 하더라도 한국인의 입맛에 맛게끔 퓨전식으로 제공됩니다. <br>혹 입맛에 맞지않을 경우를 대비해 몇가지 밑반찬과 고추장, 컵라면 등을 준비해 가시면 더욱 즐거운 식사를 즐기실 수 있습니다.<br><br><font color="blue">3.현지에서 필요한 돈과 환전은 어떻게 하는게 좋을까요?</font> <br>일반적 패키지 손님의경우 가이드,기사경비(1인 1박-10$정도)과 그외 개인적으로 하시는 선택옵션비용과 쇼핑비용이 추가발생할수있습니다.<br>기본적 소요경비(가이드,기사경비/선택옵션비용)는 달러로 바꾸어 가시는게 좋고 그외 간단한 소모품을 사기엔 약간의 중국돈도 챙겨가시는게 유용합니다. <br><br><font color="blue">4.장가계 호텔은 모두 헤어드라이기가 비치</font>되어있으며, 전압은 220V로 한국에서 쓰시는 카메라와 핸드폰 충전기로 현지에서 이용이 가능합니다.<br>- 전압이 안 맞을시는 호텔프론트에서 빌려 사용하실 수 있습니다.</div><div>&nbsp;</div><div>5.2009년 7/1일부터 장사시 정부에서 환경오염 방지차원에서 일회용품 사용 규제로, 장사시 모든호텔에 일회용품(치약,칫솔,샴프,린스,슬리퍼등)을 지급하지 않고 있습니다. 이에 <font color="blue"><u>별도로 사용하실 세면도구를 준비하셔야 합니다.</u></font> 이점 양해 부탁드립니다..</div></td></tr></tbody></table><b><br><br><div><font color="#00b050">'이세이브 피켓'</font>을 들고있는 가이드를 만난 후&nbsp;호텔로 이동 및 휴식 [약 1시간 소요]</div></b></div><div><b>&nbsp;</b></div><div><div><b>&nbsp;<embed height="315" type="application/x-shockwave-flash" width="460" src="//www.youtube.com/v/v0mlk6iEroU?hl=ko_KR&amp;version=3&amp;rel=0" allowfullscreen="true" allowscriptaccess="always"></b></div><div>&nbsp;</div></div><div>호텔 투숙 및 휴식 </div></dd></div></dl><div id="dayDetailView"><dt class="package_dayTitle"><div style="float:left; border-right:1px solid #262D39; padding-right:20px;"><h4>2 DAY</h4></div><div><span>03월 21일 월요일</span></div></dt><table class="package_schedule_day" width="100%"><tbody><tr><td class="title" valign="top"><span class="date"><strong>일정 </strong>| </span></td><td class="desc01"><span class="descColor"><strong>장사(長沙) &gt; 장가계(張家界)</strong></span></td></tr><tr><td class="title" valign="top"><span class="location"><strong>장소 </strong>| </span></td><td class="desc01"><span class="descColor"><strong>장가계(張家界)</strong></span></td></tr><tr><td class="title" valign="top"><span class="eat"><strong>식사 </strong>| </span></td><td class="desc01"><span class="descColor"><strong><span style="padding-right:15px;">아침 : 호텔식</span><br><span style="padding-right:15px;">점심 : 한식</span><br><span>저녁 : 호텔식</span></strong></span></td></tr><tr><td class="title" valign="top"><span class="hotel"><strong>호텔 </strong>| </span></td><td class="desc02"><span class="descColor"><strong>BAIZHANGXIA HOTEL(白丈峽酒店) 또는 동급[예정] 전화:0744-562-2666</strong></span></td></tr></tbody></table><dd class="package_bgType_01"><div>호텔 조식 후&nbsp;&nbsp;</div><div>&nbsp;</div><div>전용버스를 이용하여 장가계로 이동<br><font color="blue">- 장사/장가계구간 <a href="javascript:OpenDetail('CB03CCSX0001')">관광전용고속도로</a>(총308km) 약 4간 30분&nbsp;소요</font></div><div>&nbsp;</div><div><table style="height: 410px; width: 98%;" bordercolor="gold" cellspacing="0" cellpadding="5" bgcolor="#fafad2" border="1" width="98%"><tbody><tr><td colspan="3"><font color="darkolivegreen"><b><font color="#2b578d"><center><b>♣ 장가계 소개 ♣</b></center></font></b><center><center><font color="#2b578d"><br><img src="http://image5.hanatour.com/CMS/2012/01/09/20120109000396_0.jpg" width="394" height="" ,="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="1499" style="width: 394px;"><img src="http://image5.hanatour.com/CMS/2012/01/12/20120112000030_0.jpg" width="394" height="" ,="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="1417" style="width: 394px;"><img src="http://image5.hanatour.com/CMS/2012/01/12/20120112000031_0.jpg" width="394" height="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="1500" style="width: 394px;"></font></center></center><font color="#2b578d"><br>호남성 서북부에 위치한 중국 최초의 삼림공원으로 국내외에서 보기드문 수려한 자연경관을 지니고 있습니다. 또한 기이한 형상의 봉우리와 용암동굴은 물론 원시상태에 가까운 아열대 경치와 생물생태 환경을 보존하고 있는 곳이기도 합니다. 약 4억년전 바다였으나 지구의 지각운동으로 육지로 솟아올라 오랜시간 침수와 자연붕괴등을 겪으며 현재와 같은 깊은 협곡과 기이한 봉우리, 물 맑은 계곡등의 자연절경을 만들어 냈습니다. 연평균 기온은 16도이며 연강수량은 1200~1600mm입니다.<br><br><img src="http://image5.hanatour.com/schedule/common/bullet/icon_ref.gif" width="26" height="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="26"><u>※ 장가계 일정은 현지 날씨 상황 및 기타 사정에 의해 관광 순서가 바뀔 수 있음을 양해 바랍니다.</u><br><center></center></font></font></td></tr></tbody></table></div><div>&nbsp;</div><div>▶<a href="javascript:OpenDetail('CC99CDYG0004')">백장협(百丈峽)</a> 차창관광<br>- 무릉원이라고도 불리는 곳으로 삭계곡 풍경구에 있는 고대 전쟁터 </div><div>&nbsp;</div><div><div style="BORDER-TOP: #2f9d27 1px dotted; BORDER-RIGHT: #2f9d27 1px dotted; BORDER-BOTTOM: #2f9d27 1px dotted; COLOR: black; PADDING-BOTTOM: 9px; TEXT-ALIGN: left; PADDING-TOP: 9px; PADDING-LEFT: 9px; BORDER-LEFT: #2f9d27 1px dotted; PADDING-RIGHT: 9px; WIDTH: 450px; BACKGROUND-COLOR: #f2ffed"><center><font color="#000000"><b>◆ <a href="javascript:OpenDetail('CC13CDYG0003')">장가계의 혼 천문산관광(케이블카 왕복) </a>◆</b></font></center><br><center><br><img src="http://image5.hanatour.com/mst_info_image/9/P000024599_S.jpg" width="234" height="" ,="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="234"><img src="http://image5.hanatour.com/CMS/2012/06/04/20120604000049_0.jpg" width="394" height="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="1499" style="width: 394px;"></center><div><br>천문산은 장가계 시내에서 8킬로 떨어져 있으며 해발은 1518.6미터입니다. 세계에서 제일 긴 케이블카(7455미터)를 타시면, 천문산의 웅장함과 자연의 위대함을 느낄 수 있습니다. [약 4시간 소요]</div><div><br>&nbsp;</div><div></div><div><img src="http://image5.hanatour.com/schedule/common/bullet/icon_ref.gif" width="26" height="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="26"> 현지 기상상태에 따라 일부 관광코스가 제한 될 수 있습니다. 양해 부탁드립니다.</div></div></div><br><div><div>&nbsp;</div><div style="BORDER-TOP: #0054ff 1px dotted; BORDER-RIGHT: #0054ff 1px dotted; BORDER-BOTTOM: #0054ff 1px dotted; COLOR: black; PADDING-BOTTOM: 9px; TEXT-ALIGN: left; PADDING-TOP: 9px; PADDING-LEFT: 9px; BORDER-LEFT: #0054ff 1px dotted; PADDING-RIGHT: 9px; WIDTH: 450px; BACKGROUND-COLOR: #ebf7ff"><div><img src="http://image7.hanatour.com/CMS/2011/04/15/20110415000200_t.jpg" height="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="107"><br><br></div><center><font color="#000000"><b>[선택관광 비용 - USD 30] : 천문산사 + 귀곡잔도(리프트편도)</b></font></center><br><center><img src="http://image5.hanatour.com/CMS/2012/11/27/20121127000754_0.jpg" width="394" height="" ,="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="540" style="width: 394px;"><img src="http://image5.hanatour.com/CMS/2012/06/07/20120607000092_0.jpg" width="394" height="" ,="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="540" style="width: 394px;"><img src="http://image5.hanatour.com/CMS/2012/06/07/20120607000095_0.jpg" width="394" height="" ,="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="540" style="width: 394px;"></center><center></center><div><br>천문산 정상에 있는 절로써 천문산사 관광과 더불어 가는 귀곡잔도는 모든 관광객에게 잊지못할 아찔함과 절벽을 걷는 듯한 느낌으로 장가계 최고의 옵션중 하나 입니다.</div><div></div><div><div>[ 대체일정 ] :이 코스를 선택하지 않으실 경우, 약 1시간 30분 정도 천문산정상에서 자유시간 또는 휴계소내에서 자유시간을 드리며,가이드나 인솔자가 동행하지 않습니다. </div><div>&nbsp;</div><div></div></div><div></div><div><strong>☞ [ 선택관광 비용- USD10 ] : 유리잔도 </strong></div><div></div><div><div>[ 대체일정 ] :이 코스를 선택하지 않으실 경우, 귀곡잔도와 서로 반대방향으로 갈라져 이동후 천문산사에서 합류하게 됩니다. 가이드나 인솔자가 동행하지 않습니다.</div></div></div><div>&nbsp;&nbsp; <div style="BORDER-TOP: #0054ff 1px dotted; BORDER-RIGHT: #0054ff 1px dotted; BORDER-BOTTOM: #0054ff 1px dotted; COLOR: black; PADDING-BOTTOM: 9px; TEXT-ALIGN: left; PADDING-TOP: 9px; PADDING-LEFT: 9px; BORDER-LEFT: #0054ff 1px dotted; PADDING-RIGHT: 9px; WIDTH: 450px; BACKGROUND-COLOR: #ebf7ff"><div><img src="http://image7.hanatour.com/CMS/2011/04/15/20110415000200_t.jpg" height="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="107"> </div><center><br><font color="#000000"><b>[선택관광 비용 - USD 50$] : 중국 최고의 쇼! 매력상서 뮤지컬 관람</b></font></center><center><br><img src="http://image5.hanatour.com/CMS/2013/09/12/20130912000062_0.jpg" width="394" height="" ,="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="540" style="width: 394px;"><img src="http://image5.hanatour.com/CMS/2013/09/12/20130912000065_0.jpg" width="394" height="" ,="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="540" style="width: 394px;"></center><center></center><div><br>매력상서는 소수민족인 토가족의 전설을 연출로한 뮤지컬입니다. 매력상서는 상서문화의 축소판임 동시에 토가족소수민족풍속의 영혼이라 볼수있습니다. 역동적인 율동과 웅장한 북소리 등 화려한 오프닝 무대를 시작으로, 한국어 일본어 자막이 제공되어 국내뿐만 아니라 외국관광자들 또한 선호하는 쇼입니다. 매력상서의 규모는 중국 중남지역에서 제일 큰 소수민족 뮤지컬이며, 디테일한 무용설계, 토가족민속만의 독특한멜로디, 눈부신조명등으로 관람하시는 손님들로 하여금 상서민족문화의 연회를 느낄수있도록 만듭니다. 매력상서는 토가족 민속노래, 무용, 서커스 등으로 나뉘어져 있으며 총 연출인원이 무려 100여명에 달하는 중국 최고의 쇼중 하나입니다. <div><br><img src="http://image5.hanatour.com/schedule/common/bullet/icon_ref.gif" width="26" height="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="26">VVIP좌석 업그레이드: [옵션가-USD 60$]로 진행됩니다.</div><div></div><div></div><div></div><div></div><div><div>[대체일정] : 공연관람을 원하지 않으신 분들은 호텔로 먼저 이동하여 자유시간을 드립니다. 호텔이 시내일 경우 인솔자 및 가이드 동행, 무릉원일 경우 동행 불가능 합니다.</div></div></div></div></div></div><div><div>&nbsp;</div></div><div>호텔 투숙 및 휴식</div></dd></div></dl><div id="dayDetailView"><dt class="package_dayTitle"><div style="float:left; border-right:1px solid #262D39; padding-right:20px;"><h4>3 DAY</h4></div><div><span>03월 22일 화요일</span></div></dt><table class="package_schedule_day" width="100%"><tbody><tr><td class="title" valign="top"><span class="date"><strong>일정 </strong>| </span></td><td class="desc01"><span class="descColor"><strong>장가계(張家界)</strong></span></td></tr><tr><td class="title" valign="top"><span class="location"><strong>장소 </strong>| </span></td><td class="desc01"><span class="descColor"><strong>장가계(張家界)</strong></span></td></tr><tr><td class="title" valign="top"><span class="eat"><strong>식사 </strong>| </span></td><td class="desc01"><span class="descColor"><strong><span style="padding-right:15px;">아침 : 호텔식</span><br><span style="padding-right:15px;">점심 : 한식</span><br><span>저녁 : 현지식</span></strong></span></td></tr><tr><td class="title" valign="top"><span class="hotel"><strong>호텔 </strong>| </span></td><td class="desc02"><span class="descColor"><strong>BAIZHANGXIA HOTEL(白丈峽酒店) 또는 동급[예정] 전화:0744-562-2666</strong></span></td></tr></tbody></table><dd class="package_bgType_01"><div align="left">호텔 조식 후 </div><div>&nbsp;&nbsp;</div><div><u>☞ 풍경구 입구에서 셔틀버스로 환승 <br><img src="http://image7.hanatour.com/CMS/2011/04/15/20110415000202_t.jpg" height="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="25"></u>장가계 관광지역 내에서는 환경보호 셔틀버스로 이동하십니다. 하차시에는 꼭 소지품을 체크해주세요.</div><div>&nbsp;&nbsp;&nbsp;&nbsp;</div><div><div style="BORDER-BOTTOM: #2f9d27 1px dotted; TEXT-ALIGN: left; BORDER-LEFT: #2f9d27 1px dotted; PADDING-BOTTOM: 9px; BACKGROUND-COLOR: #f2ffed; PADDING-LEFT: 9px; WIDTH: 450px; PADDING-RIGHT: 9px; COLOR: black; BORDER-TOP: #2f9d27 1px dotted; BORDER-RIGHT: #2f9d27 1px dotted; PADDING-TOP: 9px"><center><font color="#000000"><b>◆ <a href='javascript:OpenDetail("CC38CDYG0002")'>원가계 풍경구(원가계 백룡 엘리베이터 편도탑승)</a> ◆</b></font></center><br><center><br><img src="http://image5.hanatour.com/CMS/2012/06/04/20120604000048_0.jpg" height="" ,="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="1499" width="394" style="width: 394px;"><img src="http://image5.hanatour.com/mst_info_image/1/P000020311_S.jpg" height="" ,="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="250" width="250"><img src="http://image5.hanatour.com/mst_info_image/1/P000012051_S.jpg" height="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="234" width="234"></center><br>- 아름다운 절경에 정신을 잃는 다는 "미혼대" <br>- 아찔한 절벽을 연결하는 자연교각 "천하 제일교" [약 1시간 30분 소요] </div></div><div>&nbsp;</div><div><div style="BORDER-BOTTOM: #2f9d27 1px dotted; TEXT-ALIGN: left; BORDER-LEFT: #2f9d27 1px dotted; PADDING-BOTTOM: 9px; BACKGROUND-COLOR: #f2ffed; PADDING-LEFT: 9px; WIDTH: 450px; PADDING-RIGHT: 9px; COLOR: black; BORDER-TOP: #2f9d27 1px dotted; BORDER-RIGHT: #2f9d27 1px dotted; PADDING-TOP: 9px"><font color="#000000"><b><center style="TEXT-ALIGN: center"><br>◆<font color="#0070c0"> </font><font color="#0070c0"><font color="#000000">양가계 자연보호구(양가계케이블카 편도탑승)</font> </font>◆</center></b></font><center style="TEXT-ALIGN: center"><font color="#000000"><b></b></font>&nbsp;</center><center><font color="#000000"><b></b></font></center><div style="TEXT-ALIGN: center"><img src="http://image5.hanatour.com/CMS/2014/10/10/20141010000001_0.jpg" height="" ,="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="540" width="394" style="width: 394px;"><img src="http://image5.hanatour.com/CMS/2014/10/10/20141010000002_0.jpg" height="" ,="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="540" width="394" style="width: 394px;"><img src="http://image5.hanatour.com/CMS/2014/10/10/20141010000003_0.jpg" height="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="540" width="394" style="width: 394px;"></div><div align="center"></div><div align="left">&nbsp;</div><div align="left">양가계는 장가계 삼림공원의 핵심 부분으로서 천자산과 원가계 풍경구 사이에 자리잡고있다.신성하고 기이하고 험준한 풍경을 자랑하는 원시적인 풍경구로서 그 중 우룡채와 천파부라는 독특한 전망대로 유명하다. 그 중 우룡채는 모택동 시대 중국 공산당이 대륙에서 제일 마지막으로 산적을 숙청했던 곳으로서 널리 알려져 있다, 최근에 개발이 활성화되어 사람들에게 알려지게 된 장가계의 또다른 절경으로 알려져 있다.</div></div></div><div>&nbsp;</div><div><div style="BORDER-BOTTOM: #0054ff 1px dotted; TEXT-ALIGN: left; BORDER-LEFT: #0054ff 1px dotted; PADDING-BOTTOM: 9px; BACKGROUND-COLOR: #ebf7ff; PADDING-LEFT: 9px; WIDTH: 450px; PADDING-RIGHT: 9px; COLOR: black; BORDER-TOP: #0054ff 1px dotted; BORDER-RIGHT: #0054ff 1px dotted; PADDING-TOP: 9px"><img src="http://image7.hanatour.com/CMS/2011/04/15/20110415000200_t.jpg" height="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="107"><br><br><center><font color="#000000"><b>[ 선택관광 비용 USD - 30] : 황룡동굴(뱃놀이 포함) <center><b><font color="#000000"></font>&nbsp;</b></center></b></font><br></center><center><img src="http://image5.hanatour.com/CMS/2012/06/04/20120604000108_0.jpg" height="" ,="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="1024" width="394" style="width: 394px;"><img src="http://image5.hanatour.com/mst_info_image/1/P000025011_S.jpg" height="" ,="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="250"><img src="http://image5.hanatour.com/mst_info_image/2/P000023712_S.jpg" height="" ,="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="234"></center><div><br>무릉원의 제일 동쪽에 있는 삭계곡의 북단으로 7km 떨어진 곳에 있는 이곳은 1983년에 발견된 곳으로, 지각운동으로 이루어진 석회암 용암동굴로서 중국 10대 용암동 중 하나입니다. [약 1시간 20분 정도 소요] </div><div>&nbsp;</div><div></div><div><div><div>[ 대체일정 ] :&nbsp;황룡동굴 선택&nbsp;관광을 선택하지 않으실 경우, 약 1시간 30&nbsp;정도 장가계에서 숙박하신 호텔로 이동하여 자유시간을 드립니다. 가이드나 인솔자가 동행하지 않습니다. </div></div></div></div></div><div>&nbsp;&nbsp;&nbsp;&nbsp; </div><div><div style="BORDER-BOTTOM: #0054ff 1px dotted; TEXT-ALIGN: left; BORDER-LEFT: #0054ff 1px dotted; PADDING-BOTTOM: 9px; BACKGROUND-COLOR: #ebf7ff; PADDING-LEFT: 9px; WIDTH: 450px; PADDING-RIGHT: 9px; COLOR: black; BORDER-TOP: #0054ff 1px dotted; BORDER-RIGHT: #0054ff 1px dotted; PADDING-TOP: 9px"><img src="http://image7.hanatour.com/CMS/2011/04/15/20110415000200_t.jpg" height="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="107"> <center><font color="#000000"><b></b></font></center><center><font color="#000000"><b></b></font>&nbsp;</center><center><font color="#000000"><b>[ 선택관광 비용 -USD 20] 발마사지</b></font></center><div><br>발바닥과 발등·종아리에 분포되어 있는 반사구를 자극하여 혈액순환을 촉진시키고 노폐물과 독소를 배출시켜 자연치유력을 극대화시키는 요법입니다. 중국 전통의 발마사지를통해 여행의 피로도 풀고 특별한 체험도 즐겨 보세요~! [45분 정도 소요] </div><div></div><div><div>[ 대체일정 ] : 발마사지 일정을 선택하지 않으실 경우, 약 1시간 정도 본인 호텔 방에서 자유시간을 드리고, 장사 지역 마사지의 경우 비어있는 샵룸에서 <br>휴식시간을 가지게 됩니다. 가이드나 인솔자가 동행합니다. </div></div></div></div><div>&nbsp;&nbsp;</div><div><div>호텔 투숙 및 휴식</div></div></dd></div></dl><div id="dayDetailView"><dt class="package_dayTitle"><div style="float:left; border-right:1px solid #262D39; padding-right:20px;"><h4>4 DAY</h4></div><div><span>03월 23일 수요일</span></div></dt><table class="package_schedule_day" width="100%"><tbody><tr><td class="title" valign="top"><span class="date"><strong>일정 </strong>| </span></td><td class="desc01"><span class="descColor"><strong>장가계 &gt; 장사</strong></span></td></tr><tr><td class="title" valign="top"><span class="location"><strong>장소 </strong>| </span></td><td class="desc01"><span class="descColor"><strong>장사</strong></span></td></tr><tr><td class="title" valign="top"><span class="eat"><strong>식사 </strong>| </span></td><td class="desc02"><span class="descColor"><strong><span style="padding-right:15px;">아침 : 호텔식</span><br><span style="padding-right:15px;">점심 : 한식</span><br><span>저녁 : 현지식</span></strong></span></td></tr></tbody></table><dd class="package_bgType_01"><div>호텔 조식 후 </div><div>&nbsp;</div><div><div style="BORDER-BOTTOM: #2f9d27 1px dotted; TEXT-ALIGN: left; BORDER-LEFT: #2f9d27 1px dotted; PADDING-BOTTOM: 9px; BACKGROUND-COLOR: #f2ffed; PADDING-LEFT: 9px; WIDTH: 450px; PADDING-RIGHT: 9px; COLOR: black; BORDER-TOP: #2f9d27 1px dotted; BORDER-RIGHT: #2f9d27 1px dotted; PADDING-TOP: 9px"><center><font color="#000000"><b>◆ <a href='javascript:OpenDetail("CC13CDYG0001")'>십리화랑 (모노레일 왕복 포함)</a> ◆</b></font></center><br><center><br><img src="http://image5.hanatour.com/CMS/2012/01/06/20120106000671_0.jpg" height="" ,="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="540" width="394" style="width: 394px;"><img src="http://image5.hanatour.com/mst_info_image/5/P000012105_S.jpg" height="" ,="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="234"><img src="http://image5.hanatour.com/CMS/2012/01/09/20120109000335_0.jpg" height="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="1499" width="394" style="width: 394px;"></center><br>기이한 봉우리와 암석이 한폭의 산수화에 비유되는곳[약 1시간 소요]</div></div><div>&nbsp;</div><div><div style="BORDER-BOTTOM: #2f9d27 1px dotted; TEXT-ALIGN: left; BORDER-LEFT: #2f9d27 1px dotted; PADDING-BOTTOM: 9px; BACKGROUND-COLOR: #f2ffed; PADDING-LEFT: 9px; WIDTH: 450px; PADDING-RIGHT: 9px; COLOR: black; BORDER-TOP: #2f9d27 1px dotted; BORDER-RIGHT: #2f9d27 1px dotted; PADDING-TOP: 9px"><center><font color="#000000"><b>◆ <a href='javascript:OpenDetail("CC99CDYG0001")'>금편계곡</a> ◆</b></font></center><br><center><br><img src="http://image5.hanatour.com/mst_info_image/3/P000011493_S.jpg" height="" ,="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="234"><img src="http://image5.hanatour.com/mst_info_image/4/P000020254_S.jpg" height="" ,="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="234"><img src="http://image5.hanatour.com/mst_info_image/7/P000012047_S.jpg" height="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="234"></center><br>심산 유곡을 따라 걸으며 대자연의 신비를 감상할 수 있는 금편계곡 산책[약 30분 소요]</div></div><div>&nbsp;</div><div>&nbsp;</div><div><div><div></div><div style="BORDER-BOTTOM: #0054ff 1px dotted; TEXT-ALIGN: left; BORDER-LEFT: #0054ff 1px dotted; PADDING-BOTTOM: 9px; BACKGROUND-COLOR: #ebf7ff; PADDING-LEFT: 9px; WIDTH: 450px; PADDING-RIGHT: 9px; COLOR: black; BORDER-TOP: #0054ff 1px dotted; BORDER-RIGHT: #0054ff 1px dotted; PADDING-TOP: 9px"><img src="http://image7.hanatour.com/CMS/2011/04/15/20110415000200_t.jpg" height="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="107"><br><br><center><font color="#000000"><b>[ 선택관광 비용 USD - 50] : <a href='javascript:OpenDetail("CC29CDYG0001")'>대협곡</a> (유람선포함)</b></font></center><br><center><img src="http://image5.hanatour.com/CMS/2012/01/12/20120112000027_0.jpg" height="" ,="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="1004" width="394" style="width: 394px;"><img src="http://image5.hanatour.com/CMS/2012/01/12/20120112000032_0.jpg" height="" ,="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="999" width="394" style="width: 394px;"><img src="http://image5.hanatour.com/CMS/2012/01/12/20120112000031_0.jpg" width="394" height="" ,="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="1500" style="width: 394px;"></center><div><br>칼로 잘라 놓은듯한 절벽에서 쏟아지는 비룡폭포와 청룡을 타는듯 물위에만들어진 나무길과 30분간 유람선 탑승으로 신이된듯한느낌을 받는곳입니다.멋진 경치를 감상하는 도중에 원시삼림속에서 흘러나오는 맑은 산소로 하여 한폭의 아름다운병풍화속의 주인이 되버린다는 대협곡코스를 추천해드립니다.[약 2시간 소요]</div><div></div><div><div><div>[ 대체일정 ] : 대협곡 관광을 선택하지 않으실 경우, 약 2시간 정도 장가계에서 숙박하신 호텔로 이동하여 자유시간을 드립니다. 가이드나 인솔자가 동행하지 않습니다. </div></div></div></div></div><div>&nbsp;</div><div><div>전용버스를 이용하여 장사로 이동<br><font color="blue">- 장가계/장사구간 <a href='javascript:OpenDetail("CB03CCSX0001")'>관광전용고속도로</a>(총308km) 약 4시간 30분 소요</font></div><div></div><div>&nbsp;</div></div></div><div>공항으로 이동 [약 50분 소요]</div></dd></div></dl><div id="dayDetailView"><dt class="package_dayTitle"><div style="float:left; border-right:1px solid #262D39; padding-right:20px;"><h4>5 DAY</h4></div><div><span>03월 24일 목요일</span></div></dt><table class="package_schedule_day" width="100%"><tbody><tr><td class="title" valign="top"><span class="date"><strong>일정 </strong>| </span></td><td class="desc01"><span class="descColor"><strong>장사 &gt; 인천</strong></span></td></tr><tr><td class="title" valign="top"><span class="location"><strong>장소 </strong>| </span></td><td class="desc01"><span class="descColor"><strong>인천</strong></span></td></tr><tr><td class="title" valign="top"><span class="eat"><strong>식사 </strong>| </span></td><td class="desc02"><span class="descColor"><strong><span style="padding-right:15px;">아침 : 기내식</span><br></strong></span></td></tr></tbody></table><dd class="package_bgType_01"><img src="http://image5.hanatour.com/schedule/common/dot/icon_dot_01.gif" width="" height="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="2"><b>장사 국제공항 출발 [MU2023-00:55]</b><br><br><br><img src="http://image5.hanatour.com/schedule/common/dot/icon_dot_01.gif" width="" height="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="2"><b>인천 국제공항 도착 [MU2023-04:40]</b><br><br><img src="http://image7.hanatour.com/CMS/2010/12/16/20101216000208_t.jpg" width="" height="" onload="tagScheduleResizeImgOnloadHandler(this)" originalwidth="343"><br><br><font color="#000000"><strong>상기 일정은 현지사정(교통,기상변화)에 따라 소비자의 동의를 얻어 변경될 수 있습니다.</strong><span style="COLOR: #ff0000"> </span><br></font><b></b><b><br></b><table border="0" cellspacing="1" cellpadding="5" width="100%" bgcolor="#6602fd" align="center"><tbody><tr><td bgcolor="#ffffff"><font color="#ff3300"><b><u>★유의사항 꼭! 읽어보세요!★</u></b></font><br><br>① <b>여권 만료기간</b> 6개월 이상과 <b>여권 종류</b>를 꼭 확인 부탁 드립니다.<br>-단수여권(PS)의 경우 해외여행 경험이 있으신 분은 새로 발급 받으셔야 합니다.<br><br>② 여행일정 및 자유시간 중 고객님의 안전을 위하여 <b>가이드의 안내사항 및 안전 수칙</b>을 준수하여 모든 안전사고에 유의하시기 바랍니다.<br>특히 현지 선택 관광은 가이드의 주의사항을 숙지후 참여여부를 결정하여 주시기 바라며 이용자 본인의 과실및 본인 건강상태로 인하여 발생한 안전사고에 대해서는 이용자 본인의 책임임을 알려드립니다.<br><br>③ <font color="#000000">상기 일정은 현지사정(교통,기상변화)에 따라 소비자의 동의를 얻어 변경될 수 있습니다.<span style="COLOR: #ff0000"> </span><br></font><br>④ <b><font color="blue">단체비자 보관시 유의사항</font></b><br>- 비자원본 분실 시 복잡한 절차를 통해 많은 비용을 고객님께서 부담 하셔야 하며 정상적인 리턴 스케줄에도 차질을 빚을 수 있사오니, 현지에서 단체비자 원본을 분실하지 않도록 주의 부탁 드립니다.<br>(비자원본은 빨간 도장이 찍혀 있습니다.) <br>- 인솔자 없이 출발할 때 단체비자원본은 비자 명단 1번 고객께서 보관해 주시기 바랍니다.</td></tr></tbody></table><div>&nbsp;</div><div>&nbsp;</div></dd></div></dl>
+				</section>
+				<!-- // 여행 날짜별 일정 -->
+				
+				<!-- 하단 버튼 -->
+				<div class="scBtnCont">
+					<div>
+						<a href="#" data-role="none" class="btnGradi">일정표 메일발송</a>
+						<a href="#" data-role="none" class="btnGradi">예약문의</a>
+					</div>
+					<a href="#" data-role="none" class="m_btnRed">대기예약</a>
+				</div>
+				<!-- // 하단 버튼 -->
+				
+			</div>
+			<!-- // 일정보기 tab -->
+			
+			<!-- 사진보기 tab -->
+			<div class="tabOutCont02" style="display:none">
+				<ul class="photoList">
+					<li><a href="#" data-role="none"><img src="http://image5.hanatour.com/mst_info_image/5/P000429705_B.jpg" alt=""></a></li>
+					<li><a href="#" data-role="none"><img src="http://image5.hanatour.com/mst_info_image/3/P000003293_B.jpg" alt=""></a></li>
+					<li><a href="#" data-role="none"><img src="http://image5.hanatour.com/mst_info_image/2/P000253782_B.jpg" alt=""></a></li>
+					<li><a href="#" data-role="none"><img src="http://image5.hanatour.com/mst_info_image/7/P000047087_B.jpg" alt=""></a></li>
+					<li><a href="#" data-role="none"><img src="http://image5.hanatour.com/mst_info_image/4/P000033224_B.jpg" alt=""></a></li>
+					<li><a href="#" data-role="none"><img src="http://image5.hanatour.com/mst_info_image/7/P000025417_B.jpg" alt=""></a></li>
+					<li><a href="#" data-role="none"><img src="http://image5.hanatour.com/mst_info_image/1/P000003641_B.jpg" alt=""></a></li>
+					<li><a href="#" data-role="none"><img src="http://image5.hanatour.com/mst_info_image/4/P000287284_B.jpg" alt=""></a></li>
+					<li><a href="#" data-role="none"><img src="http://image5.hanatour.com/mst_info_image/5/P000287285_B.jpg" alt=""></a></li>
+					<li><a href="#" data-role="none"><img src="http://image5.hanatour.com/mst_info_image/6/P000287286_B.jpg" alt=""></a></li>
+					<li><a href="#" data-role="none"><img src="http://image5.hanatour.com/mst_info_image/8/P000295208_B.jpg" alt=""></a></li>
+					<li><a href="#" data-role="none"><img src="http://image5.hanatour.com/mst_info_image/1/P000295211_B.jpg" alt=""></a></li>
+				</ul>
+				
+				<div class="bigImgBox" style="display:none"><img src="http://image5.hanatour.com/mst_info_image/3/P000394783_S.jpg" alt="">
+					<p>산호섬</p>
+				</div><!-- 사진 크게볼시 block -->
+				
+				<!-- 페이징 기존활용-->
+				<table class="package_schedule_listPaging">
+					<tbody>
+						<tr>
+							<td class="prevPageBtnLayout">
+								<li id="btnDetailPhotoPrevious" class="prevBtnArrow ovsHtPhotoPageNaviBtn" style="opacity: 1;"><span></span></li>
+							</td>
+							<td class="pageNumLayout">
+								<div class="pageNumLayoutSub">
+									<strong><span class="pageNum"><span id="curDetailCnt" style="color:#D8157D;">10</span><span id="totDetailCnt" style="color:#898989"> / 13</span></span></strong>
+								</div>
+							</td>
+							<td class="nextPageBtnLayout">
+								<li id="btnDetailPhotoNext" class="nextBtnArrow ovsHtPhotoPageNaviBtn" style="opacity: 1; "><span></span></li>
+							</td>
+							<td class="gotoContentListLayout">
+								<li id="btnListView" class="gotoContentList" style="">
+									<span></span>
+								</li>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- // 페이징 기존활용 -->
+				
+			</div>
+			<!-- // 사진보기 tab -->
+			
+		</div>
+		
+		<a href="#" id="topBtn01" data-role="none" data-scroller="window" data-target="" data-attach="" data-direction="fade" data-margin="" class="topBtn01 posFixed loaded scrollTop"><img src="../images/common/btn_top01.png" alt="TOP"></a> <!-- 탑버튼 -->
+		
+	</div>
+	<!-- //컨텐츠 영역 -->
+	
+	<footer class="newFoot">
+		<ul>
+			<li><a href="#" data-role="none">고객센터</a></li>
+			<li><a href="#" data-role="none">전화번호</a></li>
+			<li><a href="#" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+		</ul>
+		<div>
+			<a href="#" data-role="none">이용약관</a>|
+			<a href="#" data-role="none">개인정보처리방침</a>|
+			<a href="#" data-role="none">여행약관</a>|
+			<a href="#" data-role="none">사업자정보확인</a>
+		</div>
+		<address>
+				㈜ 하나투어 | 대표자: 최현석 | 사업자등록번호 : 102-81-39440<br>
+				통신판매업신고번호 : 종로01-1806호 | 개인정보관리 책임자 : 최종윤<br>
+				[110-160]서울특별시 종로구 인사동 5길 41 ㈜ 하나투어<br>
+				하나투어상담센터 : <a href="tel:1577-1233" data-role="none">1577-1233</a> | FAX : 02-734-0392<br>
+				이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> | 호스팅 서비스 사업자 : ㈜하나투어<br>
+				관광사업자 등록번호 : 제1933-000006호 | 영업보증보험 : 22억 1천만원 가입<br>
+				COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+
+		</address>
+	</footer>
+</div>
+
+
+<!-- 좌측메뉴 -->
+<div id="menuPanel">
+	<a href="#" data-role="none" class="closeSlide" title="닫기"></a><!-- 20150526 추가 -->
+	<div class="innerScroller">
+		<div class="nleftMenu">
+			<h2>여행상품</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">해외여행-패키지</a></li>
+				<li><a href="#" data-role="none">허니문</a></li>
+				<li><a href="#" data-role="none">에어텔</a></li>
+				<li><a href="#" data-role="none">배낭여행</a></li>
+				<li><a href="#" data-role="none">성지순례</a></li>
+				<li><a href="#" data-role="none">골프</a></li>
+				<li><a href="#" data-role="none">크루즈</a></li>
+				<li><a href="#" data-role="none">레포츠</a></li>
+				<li><a href="#" data-role="none">트레킹</a></li>
+			</ul>
+			
+			<h2>호텔</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">해외호텔</a></li>
+				<!--li><a href="#" data-role="none">해외항공</a></li>
+				<li><a href="#" data-role="none">주요도시 할인항공</a></li>
+				<li><a href="#" data-role="none">특가항공</a></li-->
+			</ul>
+			<h2>여행상담</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">고객센터</a></li>
+				<li><a href="#" data-role="none">카톡상담</a></li>
+			</ul>
+			
+			<div class="allmenu_btm">
+				<a href="#" data-role="none">예약확인</a>
+				<a href="#" data-role="none">미팅장소 안내</a>
+				<a href="tel:1577-8761" data-role="none">1577-8761</a>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>
+

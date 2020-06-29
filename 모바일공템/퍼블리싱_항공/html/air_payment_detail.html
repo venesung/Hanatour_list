@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>결제내역 상세 - 하나프리항공</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/air.css">
+<link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.5.css">
+<script src="../js/jquery-2.1.3.min.js" type="text/javascript"></script>
+<script src="../js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<script src="../js/iscroll.carousel.js" type="text/javascript"></script>
+<script src="../js/iscroll.swipeview.js" type="text/javascript"></script>
+<script src="../js/fixedPostiion.js" type="text/javascript"></script>
+<script src="../js/common.js" type="text/javascript"></script>
+<script src="../js/reservation.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+
+
+<div id="wrap">
+	<header id="header" class="subHead">
+		<div class="inner">
+			<h1><a href="#" data-role="none"><img src="../images/common/btn_nlogo_tem.png" alt="하나투어"></a></h1> <!-- 로고이미지 세로값 80px로 통일해주세요! 가로사이즈는 무관  -->
+			<a href="#" id="btnMenu" data-role="none"><img src="../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+		</div>
+	</header>
+
+
+	<div id="container" class="subCont"><!-- 컨텐츠 sub 영역 -->
+
+		<section id="payStep"> <!-- 20150403 id 추가 -->
+			
+			<h2 class="pagTit">결제내역 상세</h2><!-- 20150426 추가 -->
+			
+ 			<div class="garyBox02">
+				<div class="payContTop01">
+					<strong class="c_red">H1412026044</strong>
+					<span><em>(</em>예약번호<em>)</em></span>
+					<strong class="rigTxt01">결제완료</strong>
+				</div>
+				
+				<!-- 여권정보 start -->
+				<div class="payRedBox">
+					<h2 class="payTit01 on"><a href="#" data-role="none">여권정보</a></h2><!-- 선택시 h2에 class="on" 추가하면 아래태그 block 처리 되있음 -->
+					<div class="paportSect">
+						<p class="inforTxt c_red">잘못 입력된 여권정보는 출국 전 반드시 실제 탑승자의 여권정보로 수정해 주시기 바랍니다.</p>
+						
+						<ul class="paportList">
+							<li>
+								<strong>홍길동</strong><span>(HONG GILDONG)</span>
+								<p>M12345621 / 20200505 / 한국</p>
+								<a href="pop_passport.html" data-role="none" class="sGrayBtn01 slideUpPop">수정</a>
+							</li>
+							<li>
+								<strong>홍길동</strong><span>(HONG GILDONG)</span>
+								<p>M12345621 / 20200505 / 한국</p>
+								<a href="pop_passport.html" data-role="none" class="sGrayBtn01 slideUpPop">수정</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- // 여권정보 end -->
+				
+				<!-- 결제정보 start -->
+				<div class="payRedBox">
+					<h2 class="payTit01 on"><a href="#" data-role="none">결제정보</a></h2><!-- 선택시 h2에 class="on" 추가하면 아래태그 block 처리 되있음 -->
+					<div class="endtopCont01">
+						<dl class="endDlList01 dotLineTy">
+							<dt>결제범위선택</dt>
+							<dd>분할 결제</dd>
+						</dl>
+						<dl class="endDlList01 endinType">
+							<dt>총 결제금액</dt>
+							<dd>2,789,800원</dd>
+							<dt class="nrDt">사용 마일리지</dt>
+							<dd>-30,000 <img class="bigMile" src="../images/air/img_mailbig.png" alt="마일리지"></dd>
+							<dt class="nrDt">신용카드</dt>
+							<dd>779,900원</dd>
+							<dt class="nrDt">현금결제</dt>
+							<dd>2,000,000원</dd>
+						</dl>
+						<dl class="endTotal01">
+							<dt>최종결제금액</dt>
+							<dd><strong class="c_red">2,746,800</strong><em>원</em></dd>
+						</dl>
+					</div>
+					
+				</div>
+				<!-- // 결제정보 end -->
+				
+				
+				<!-- 결제수단 start -->
+				<div class="payRedBox">
+					<h2 class="payTit01 on"><a href="#" data-role="none">결제수단</a></h2><!-- 선택시 h2에 class="on" 추가하면 아래태그 block 처리 되있음 -->
+					<div class="endtopCont01">
+						<dl class="endDlList01 dotLineTy">
+							<dt>결제수단</dt>
+							<dd>신용카드<span class="c_red">(결제완료)</span></dd>
+							<dt>결제카드</dt>
+							<dd>외환카드</dd>
+							<dt>할부</dt>
+							<dd>무이자 10개월</dd>
+						</dl>
+						<dl class="endDlList01 dotLineTy">
+							<dt>결제수단</dt>
+							<dd>무통장 입금<span class="c_red">(결제중)</span></dd>
+							<dt>입금은행</dt>
+							<dd>외환은행</dd>
+							<dt>가상계좌번호</dt>
+							<dd>145-234333-15-153</dd>
+						</dl>
+						
+						<ul class="bulOneList paddNoLi">
+							<li class="c_red">영업일 기준 2일 이내 입금되지 않았을 경우 예약이 자동으로 취소됩니다.</li>
+							<li>위 계좌는 고객님에게만 발급된 번호이며 별도의 문의나 전화 확인없이 자동으로 입금확인이 됩니다.</li>
+							<li>무통장 입금으로 직접 입금시 은행수수료가 부과될 수 있습니다.</li>
+						</ul>
+						
+					</div>
+					
+				</div>
+				<!-- // 결제수단 end -->
+				
+				<!-- 하나투어 마일리지 사용내역 start -->
+				<div class="payRedBox">
+					<h2 class="payTit01 on"><a href="#" data-role="none"> 하나투어 마일리지 사용내역</a></h2><!-- 선택시 h2에 class="on" 추가하면 아래태그 block 처리 되있음 -->
+					<div class="endtopCont01">
+						<h3 class="marB15 fs14">홍길동님</h3>
+						<dl class="endDlList01">
+							<dt>사용 마일리지</dt>
+							<dd>-30,000 <img class="bigMile" src="../images/air/img_mailbig.png" alt="마일리지"></dd>
+							<dt class="marB0">잔여 마일리지</dt>
+							<dd class="marB0 c_red">10,000 <img class="bigMile" src="../images/air/img_mailbig.png" alt="마일리지"></dd>
+						</dl>
+					</div>
+					
+				</div>
+				<!-- // 하나투어 마일리지 사용내역 end -->
+				
+				<!-- 도우미여행사 start -->
+				<div class="payRedBox">
+					<h2 class="payTit01 on"><a href="#" data-role="none">도우미 여행사</a></h2><!-- 선택시 h2에 class="on" 추가하면 아래태그 block 처리 되있음 -->
+					<div>
+						<dl class="doumiBox_ch payType">
+							<dt>
+								<strong>하나비즈투어</strong>
+								<a href="pop_customer.html" data-role="none" class="slideUpPop">1:1 문의</a>
+							</dt>
+							<dd>
+								<ul>	
+									<li>[지 번] 서울시 마포구 염리동 8-44 2층</li>
+									<li>[도로명] 서울시 마포구 신촌로 200, 2층 (염리동)</li>
+									<li><a href="tel:02-365-7626" data-role="none" class="c_red"><img src="../images/air/bg_reser_tel.png" alt="전화하기"> 02-365-7626</a></li>
+								</ul>
+							</dd>
+						</dl>
+						<ul class="bulOneList">
+							<li><strong>상담 문의 답변 및 처리가능 시간 : </strong><br>평일 기준 10:00 ~ 17:00 / 주말, 공휴일 제외</li>
+							<li><strong>업무 시간 : </strong><br>평일은 09:00 ~ 17:00 (발권/상담 가능)<br>토요일은 09:00 ~ 16:00 (발권 가능)<br>일요일 및 공휴일은 변경, 환불, 취소, 상담 등 업무 처리 불가</li>
+						</ul>
+					</div>
+					<!-- 문의내역 추가 20150420 -->
+					<a href="pop_customer02.html" data-role="none" class="slideUpPop">
+						<dl class="qnaBox firstQna"><!-- 첫번째 문의내역 dl에 firstQna -->
+							<dt class="inquiry">문의요청<span>2015.04.17 15:43</span></dt><!-- 문의 요청 class="inquiry" -->
+							<dd><p>학생인데 학생할인되나요?</p></dd>
+						</dl>
+					</a>
+					<a href="pop_customer02.html" data-role="none" class="slideUpPop">
+						<dl class="qnaBox">
+							<dt class="reply">답변완료<span>2015.04.17 15:43</span></dt><!-- 답변완료 class="reply" -->
+							<dd><p>날씨가 궁금해요~</p></dd>
+						</dl>
+					</a>
+					<a href="pop_customer02.html" data-role="none" class="slideUpPop">
+						<dl class="qnaBox">
+							<dt class="reply">답변완료<span>2015.04.17 15:43</span></dt><!-- 답변완료 class="reply" -->
+							<dd><p>요즘 도쿄가 좋다고 하던데 지금날씨에 두꺼운 옷을 준비해야하나요?요즘 도쿄가 좋다고 하던데 지금날씨에 두꺼운 옷을 준비해야하나요?요즘 도쿄가 좋다고 하던데 지금날씨에 두꺼운 옷을 준비해야하나요?요즘 도쿄가 좋다고 하던데 지금날씨에 두꺼운 옷을 준비해야하나요?요즘 도쿄가 좋다고 하던데 지금날씨에 두꺼운 옷을 준비해야하나요?요즘 도쿄가 좋다고 하던데 지금날씨에 두꺼운 옷을 준비해야하나요?</p></dd>
+						</dl>
+					</a>
+					<!-- 문의내역 추가 20150420 end -->
+					
+				</div>
+				<!-- // 도우미여행사 end -->
+				
+				<div class="fullBtn">
+					<a href="#" data-role="none">결제취소</a>
+					<a href="#" data-role="none">목록으로 이동</a>
+				</div>
+				
+				<a href="#" style="display:none" data-role="none" class="m_btnRed mr12">목록으로 이동</a> <!-- 여행기간이 지난 목록의 경우 -->
+
+			</div>
+			
+				
+		</section>
+		
+		
+		<footer class="newFoot">
+			<ul>
+				<li><a href="#" data-role="none">고객센터</a></li>
+				<li><a href="#" data-role="none">0000-0000</a></li>
+				<li><a href="#" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+			</ul>
+			<div>
+				<a href="#" data-role="none">이용약관</a>|
+				<a href="#" data-role="none">개인정보처리방침</a>|
+				<a href="#" data-role="none">여행약관</a>|
+				<a href="#" data-role="none">사업자정보확인</a>
+			</div>
+			<address>
+					상호 : 공식인증예약센터 | 대표자 : 홍길동 | 사업자등록번호 : 102-81-39440<br>
+					관광사업자등록번호 . 국외 통신판매업 : 종로01-1806호<br>
+					개인정보관리 책임자 : 최종윤 | 대표전화 : 1577-1233 | FAX : 02-734-0392<br>
+					주소 : 서울특별시 종로구 인사동 5길 41
+	
+			</address>
+		</footer>
+
+
+	</div><!-- //컨텐츠 영역 -->
+</div>
+
+<!-- 좌측메뉴 -->
+<div id="menuPanel">
+	<a href="#" data-role="none" class="closeSlide" title="닫기"></a><!-- 20150526 추가 -->
+	<div class="innerScroller">
+		<div class="nleftMenu">
+			<h2>여행상품</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">해외여행-패키지</a></li>
+				<li><a href="#" data-role="none">허니문</a></li>
+				<li><a href="#" data-role="none">에어텔</a></li>
+				<li><a href="#" data-role="none">배낭여행</a></li>
+				<li><a href="#" data-role="none">성지순례</a></li>
+				<li><a href="#" data-role="none">골프</a></li>
+				<li><a href="#" data-role="none">크루즈</a></li>
+				<li><a href="#" data-role="none">레포츠</a></li>
+				<li><a href="#" data-role="none">트레킹</a></li>
+			</ul>
+			
+			<h2>항공 / 호텔</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">해외호텔</a></li>
+				<li><a href="#" data-role="none">해외항공</a></li>
+				<li><a href="#" data-role="none">주요도시 할인항공</a></li>
+				<li><a href="#" data-role="none">특가항공</a></li>
+			</ul>
+			<h2>여행상담</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">고객센터</a></li>
+				<li><a href="#" data-role="none">카톡상담</a></li>
+			</ul>
+			
+			<div class="allmenu_btm">
+				<a href="#" data-role="none">예약확인</a>
+				<a href="#" data-role="none">미팅장소 안내</a>
+				<a href="tel:1577-8761" data-role="none">1577-8761</a>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<!-- Picker 창 -->
+<div id="overlayPanel">
+</div>
+
+</body>
+</html>
+

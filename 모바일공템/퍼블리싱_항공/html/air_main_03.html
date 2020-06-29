@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>특가항공 - 하나프리항공</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/air.css">
+<link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.5.css">
+<script src="../js/jquery-2.1.3.min.js" type="text/javascript"></script>
+<script src="../js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<script src="../js/iscroll.carousel.js" type="text/javascript"></script>
+<script src="../js/iscroll.swipeview.js" type="text/javascript"></script>
+<script src="../js/fixedPostiion.js" type="text/javascript"></script>
+<script src="../js/common.js" type="text/javascript"></script>
+<script src="../js/main.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+	/* 샘플 데이터 */
+	var html = '<li><a href="#" data-role="none"><strong>03/02 출발</strong><span><img src="../images/main/AA.png" alt="">대한항공 | 왕복/직항</span><div><strong>도쿄(나리타)</strong><em>442,000원</em><span>163,100원</span></div></a></li><li><a href="#" data-role="none"><strong>03/02 출발</strong><span><img src="../images/main/AA.png" alt="">필리핀항공 | 왕복/직항</span><div><strong>도쿄(나리타)</strong><em>442,000원</em><span>163,100원</span></div></a></li><li><a href="#" data-role="none"><strong>03/02 출발</strong><span><img src="../images/main/AA.png" alt="">스쿠트항공 | 왕복/직항</span><div><strong>도쿄(나리타)</strong><em>442,000원</em><span>163,100원</span></div></a></li><li><a href="#" data-role="none"><strong>03/02 출발</strong><span><img src="../images/main/AA.png" alt="">세부퍼시픽에어 | 왕복/직항</span><div><strong>도쿄(나리타)</strong><em>442,000원</em><span>163,100원</span></div></a></li><li><a href="#" data-role="none"><strong>03/02 출발</strong><span><img src="../images/main/AA.png" alt="">아시아나 | 왕복/직항</span><div><strong>도쿄(나리타)</strong><em>442,000원</em><span>163,100원</span></div></a></li><li><a href="#" data-role="none"><strong>03/02 출발</strong><span><img src="../images/main/AA.png" alt="">대한항공 | 왕복/직항</span><div><strong>도쿄(나리타)</strong><em>442,000원</em><span>163,100원</span></div></a></li><li><a href="#" data-role="none"><strong>03/02 출발</strong><span><img src="../images/main/AA.png" alt="">대한항공 | 왕복/직항</span><div><strong>도쿄(나리타)</strong><em>442,000원</em><span>163,100원</span></div></a></li><li><a href="#" data-role="none"><strong>03/02 출발</strong><span><img src="../images/main/AA.png" alt="">대한항공 | 왕복/직항</span><div><strong>도쿄(나리타)</strong><em>442,000원</em><span>163,100원</span></div></a></li>';
+	var cnt = 0;
+	var selector = ".saleList";	// append할 Tag selector
+	var list = new dynamicDataLoad(selector, {
+		onLoadPosition: function(el){
+			var that = this;
+			cnt++;
+			if(cnt >= 10)
+				that.appendData(true, null);
+
+			var url = "list.html?pageNum="+cnt;
+			callAjax(url, function(html){
+				that.appendData(false, html);
+			});
+
+		}
+	});
+});
+</script>
+</head>
+
+<body>
+
+
+<div id="wrap">
+	<header id="header">
+		<div class="inner">
+			<h1><a href="#" data-role="none"><img src="../images/common/btn_nlogo_tem.png" alt="하나투어"></a></h1> <!-- 로고이미지 세로값 80px로 통일해주세요! 가로사이즈는 무관  -->
+			<a href="#" id="btnMenu" data-role="none"><img src="../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+		</div>
+	</header>
+	
+	<nav id="gnb">
+		<ul>
+			<li><a href="#" data-role="none">해외항공</a></li>
+			<li><a href="#" data-role="none">주요도시 할인항공</a></li>
+			<li class="on"><a href="#" data-role="none">특가항공</a></li>
+		</ul>
+	</nav>
+	<div class="headerMargin"></div>
+
+
+	<div id="container">
+<!-- 컨텐츠 영역 -->
+
+		<!-- 특가항공 -->
+		<section id="page_01" class="page">
+			<div>
+			
+				<div class="mCon03_top">
+					<div data-step="step01" class="background"><img src="../images/main/img_main03_top.png"></div><!-- 2015-04-07 수정 -->
+					<div class="inner">
+						<h2>REAL BIG SALE!<br />초특가 항공권</h2>
+						<ul>
+							<li>하나투어의 제품가격은 기본운임뿐만 아니라 유류할증료, 제세 공과금 등 모두 포함한 총액운임표기를 시행합니다. (14년 7월 15일부터 시행)</li>
+							<li>총액운임 내 포함된 유류할증료와 제세공과금은 환율에 따라 변동 될 수 있습니다.</li>
+						</ul>
+						
+						<!-- 20150422 삭제 a href="main_layer.html" data-scroller="window" data-target="#page_01 .target" data-attach="#header .fixedAttach" data-direction="fixed" data-margin="#header" data-role="none" class="majorCity btnBlue posFixed loaded" title="지역선택">초특가 항공권 지역별 보기</a>
+						
+						<div class="target">
+							<div class="areaCont">
+								<a href="main_layer.html" class="majorCity" data-role="none" title="지역선택">초특가 항공권 지역별 보기</a>
+							</div>
+						</div-->
+				
+					</div>
+				</div>
+				
+				<div class="mCont03_btm">
+					<!-- 20150422 삭제 strong><em>156</em> 개 항공권 검색</strong>
+					<div class="toggleRad">
+						<input type="radio" title="최저가 순" name="togTy" id="togTy1" data-role="none" checked><span><label for="togTy1">최저가 순</label></span>
+						<input type="radio" title="출발일 순" name="togTy" id="togTy2" data-role="none"><span><label for="togTy2">출발일 순</label></span>
+					</div-->
+					
+					<ul class="saleList">
+						<li>
+							<a href="#" data-role="none">
+								<strong>03/02 출발</strong>
+								<span><img src="../images/common/5J.png" alt="">대한항공 | 왕복/직항</span><!-- 150325 항공사 이미지태그로 수정 -->
+								
+								<div>
+									<strong>도쿄(나리타)</strong>
+									<em>442,000원</em>
+									<span>163,100원</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" data-role="none">
+								<strong>03/02 출발</strong>
+								<span><img src="../images/common/5X.png" alt="">필리핀항공 | 왕복/직항</span>
+								
+								<div>
+									<strong>도쿄(나리타)</strong>
+									<em>442,000원</em>
+									<span>163,100원</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" data-role="none">
+								<strong>03/02 출발</strong>
+								<span><img src="../images/common/5Y.png" alt="">스쿠트항공 | 왕복/직항</span>
+								
+								<div>
+									<strong>도쿄(나리타)</strong>
+									<em>442,000원</em>
+									<span>163,100원</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" data-role="none">
+								<strong>03/02 출발</strong>
+								<span><img src="../images/common/KE.png" alt="">세부퍼시픽에어 | 왕복/직항</span>
+								
+								<div>
+									<strong>도쿄(나리타)</strong>
+									<em>442,000원</em>
+									<span>163,100원</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" data-role="none">
+								<strong>03/02 출발</strong>
+								<span><img src="../images/common/OZ.png" alt="">아시아나 | 왕복/직항</span>
+								
+								<div>
+									<strong>도쿄(나리타)</strong>
+									<em>442,000원</em>
+									<span>163,100원</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" data-role="none">
+								<strong>03/02 출발</strong>
+								<span><img src="../images/main/AA.png" alt="">대한항공 | 왕복/직항</span>
+								
+								<div>
+									<strong>도쿄(나리타)</strong>
+									<em>442,000원</em>
+									<span>163,100원</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" data-role="none">
+								<strong>03/02 출발</strong>
+								<span><img src="../images/main/AA.png" alt="">대한항공 | 왕복/직항</span>
+								
+								<div>
+									<strong>도쿄(나리타)</strong>
+									<em>442,000원</em>
+									<span>163,100원</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" data-role="none">
+								<strong>03/02 출발</strong>
+								<span><img src="../images/main/AA.png" alt="">대한항공 | 왕복/직항</span>
+								
+								<div>
+									<strong>도쿄(나리타)</strong>
+									<em>442,000원</em>
+									<span>163,100원</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<a href="#" data-role="none" class="btnGray marT10">특가항공 더보기</a> <!-- 20150925 추가 -->
+				</div>
+				
+				<footer class="newFoot">
+					<ul>
+						<li><a href="#" data-role="none">고객센터</a></li>
+						<li><a href="#" data-role="none">0000-0000</a></li>
+						<li><a href="#" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+					</ul>
+					<div>
+						<a href="#" data-role="none">이용약관</a>|
+						<a href="#" data-role="none">개인정보처리방침</a>|
+						<a href="#" data-role="none">여행약관</a>|
+						<a href="#" data-role="none">사업자정보확인</a>
+					</div>
+					<address>
+							상호 : 공식인증예약센터 | 대표자 : 홍길동 | 사업자등록번호 : 102-81-39440<br>
+							관광사업자등록번호 . 국외 통신판매업 : 종로01-1806호<br>
+							개인정보관리 책임자 : 최종윤 | 대표전화 : 1577-1233 | FAX : 02-734-0392<br>
+							주소 : 서울특별시 종로구 인사동 5길 41
+			
+					</address>
+				</footer>
+			</div>
+		</section>
+				
+				
+				
+<!-- //컨텐츠 영역 -->
+
+	</div>
+</div>
+
+<!-- 좌측메뉴 -->
+<div id="menuPanel">
+	<a href="#" data-role="none" class="closeSlide" title="닫기"></a><!-- 20150526 추가 -->
+	<div class="innerScroller">
+		<div class="nleftMenu">
+			<h2>여행상품</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">해외여행-패키지</a></li>
+				<li><a href="#" data-role="none">허니문</a></li>
+				<li><a href="#" data-role="none">에어텔</a></li>
+				<li><a href="#" data-role="none">배낭여행</a></li>
+				<li><a href="#" data-role="none">성지순례</a></li>
+				<li><a href="#" data-role="none">골프</a></li>
+				<li><a href="#" data-role="none">크루즈</a></li>
+				<li><a href="#" data-role="none">레포츠</a></li>
+				<li><a href="#" data-role="none">트레킹</a></li>
+			</ul>
+			
+			<h2>항공 / 호텔</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">해외호텔</a></li>
+				<li><a href="#" data-role="none">해외항공</a></li>
+				<li><a href="#" data-role="none">주요도시 할인항공</a></li>
+				<li><a href="#" data-role="none">특가항공</a></li>
+			</ul>
+			<h2>여행상담</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">고객센터</a></li>
+				<li><a href="#" data-role="none">카톡상담</a></li>
+			</ul>
+			
+			<div class="allmenu_btm">
+				<a href="#" data-role="none">예약확인</a>
+				<a href="#" data-role="none">미팅장소 안내</a>
+				<a href="tel:1577-8761" data-role="none">1577-8761</a>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<!-- Picker 창 -->
+<div id="overlayPanel">
+</div>
+
+</body>
+</html>
+

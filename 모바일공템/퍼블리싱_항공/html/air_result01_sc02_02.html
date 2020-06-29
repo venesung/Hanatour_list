@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>항공 스케줄 조회 - 하나프리항공</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/air.css">
+<link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.5.css">
+<script src="../js/jquery-2.1.3.min.js" type="text/javascript"></script>
+<script src="../js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<script src="../js/iscroll.carousel.js" type="text/javascript"></script>
+<script src="../js/iscroll.swipeview.js" type="text/javascript"></script>
+<script src="../js/fixedPostiion.js" type="text/javascript"></script>
+<script src="../js/common.js" type="text/javascript"></script>
+<script src="../js/reservation.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+	// 주요도시 팝업 열기
+	$('.slideUpPop').overlayPanelOpener({
+		eventName: "click",					// 이벤트 이름
+		dynamicData: true,					// 동적으로 data가 불러와지는 경우 : true
+		onBeforeRender: function(that){		// ajax가 call되기 전 호출
+			console.log("onBeforeRender")
+		},
+		onAfterRender: function(that){		// data가 로딩되고 DOM이 만들어진 후
+			console.log("onAfterRender")
+		},
+		onSlideUp: function(that){			// slide up transitions 완료된 후
+			console.log("onSlideUp")
+		},
+	});
+
+
+	
+	
+	/* 샘플 데이터 */
+	//var html = '<li><a href="#" data-role="none" class="sc2_Inner"><div class="insc02_l"><strong>03.22(화)</strong><span>왕복</span> 좌석 <em class="c_red">2</em>석</div><div class="insc02_r"><strong>256,200원</strong><p>유류할증료, 제세공과금 포함</p></div></a><ul class="scList01"><li><a href="#" class="sctopBox" data-role="none"><div class="daytinner">출발<strong>11:30</strong><em>03/23(수)</em></div><div><span class="c_ok">예약가능</span><strong>예약가능 14석</strong><em>1회경유 3시간 20분소요</em></div><div class="daytinner">도착<strong>11:30</strong><em>03/23(수)</em></div></a><a href="#" class="detailBox" data-role="none"><span>상세일정</span><ul class="detailList"><li><span><strong>11:30</strong>03/23(월)</span><strong>인천 출발</strong><em>9좌석</em><p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p></li><li><span><strong>13:20</strong>03/23(월)</span><strong>오사카(간사이) 도착</strong><p><span class="waitBox">대기</span> 1시간 50분 소요</p></li><li><span><strong>11:30</strong>03/23(월)</span><strong>오사카(간사이) 출발</strong><em>9좌석</em><p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p></li><li><span><strong>14:50</strong>03/23(월)</span><strong>도쿄(나리타) 도착</strong></li></ul></a></li><li><a href="#" class="sctopBox" data-role="none"><div class="daytinner">출발<strong>11:30</strong><em>03/23(수)</em></div><div><span class="c_wait">예약대기</span><strong>예약가능 14석</strong><em>1회경유 3시간 20분소요</em></div><div class="daytinner">도착<strong>11:30</strong><em>03/23(수)</em></div></a><a href="#" class="detailBox on" data-role="none"><span>상세일정</span><ul class="detailList"><li><span><strong>11:30</strong>03/23(월)</span><strong>인천 출발</strong><em>9좌석</em><p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p></li><li><span><strong>13:20</strong>03/23(월)</span><strong>오사카(간사이) 도착</strong><p><span class="waitBox">대기</span> 1시간 50분 소요</p></li><li><span><strong>11:30</strong>03/23(월)</span><strong>오사카(간사이) 출발</strong><em>9좌석</em><p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p></li><li><span><strong>14:50</strong>03/23(월)</span><strong>도쿄(나리타) 도착</strong></li></ul></a></li></ul></li><li><a href="#" data-role="none" class="sc2_Inner"><div class="insc02_l"><strong>03.22(화)</strong><span>왕복</span> 좌석 <em class="c_red">2</em>석</div><div class="insc02_r"><strong>256,200원</strong><p>유류할증료, 제세공과금 포함</p></div></a><ul class="scList01"><li><a href="#" class="sctopBox" data-role="none"><div class="daytinner">출발<strong>11:30</strong><em>03/23(수)</em></div><div><span class="c_ok">예약가능</span><strong>예약가능 14석</strong><em>1회경유 3시간 20분소요</em></div><div class="daytinner">도착<strong>11:30</strong><em>03/23(수)</em></div></a><a href="#" class="detailBox" data-role="none"><span>상세일정</span><ul class="detailList"><li><span><strong>11:30</strong>03/23(월)</span><strong>인천 출발</strong><em>9좌석</em><p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p></li><li><span><strong>13:20</strong>03/23(월)</span><strong>오사카(간사이) 도착</strong><p><span class="waitBox">대기</span> 1시간 50분 소요</p></li><li><span><strong>11:30</strong>03/23(월)</span><strong>오사카(간사이) 출발</strong><em>9좌석</em><p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p></li><li><span><strong>14:50</strong>03/23(월)</span><strong>도쿄(나리타) 도착</strong></li></ul></a></li><li><a href="#" class="sctopBox" data-role="none"><div class="daytinner">출발<strong>11:30</strong><em>03/23(수)</em></div><div><span class="c_wait">예약대기</span><strong>예약가능 14석</strong><em>1회경유 3시간 20분소요</em></div><div class="daytinner">도착<strong>11:30</strong><em>03/23(수)</em></div></a><a href="#" class="detailBox on" data-role="none"><span>상세일정</span><ul class="detailList"><li><span><strong>11:30</strong>03/23(월)</span><strong>인천 출발</strong><em>9좌석</em><p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p></li><li><span><strong>13:20</strong>03/23(월)</span><strong>오사카(간사이) 도착</strong><p><span class="waitBox">대기</span> 1시간 50분 소요</p></li><li><span><strong>11:30</strong>03/23(월)</span><strong>오사카(간사이) 출발</strong><em>9좌석</em><p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p></li><li><span><strong>14:50</strong>03/23(월)</span><strong>도쿄(나리타) 도착</strong></li></ul></a></li></ul></li><li><a href="#" data-role="none" class="sc2_Inner"> <div class="insc02_l"><strong>03.22(화)</strong><span>왕복</span> 좌석 <em class="c_red">2</em>석</div><div class="insc02_r"><strong>256,200원</strong><p>유류할증료, 제세공과금 포함</p></div></a><ul class="scList01"><li><a href="#" class="sctopBox" data-role="none"><div class="daytinner">출발<strong>11:30</strong><em>03/23(수)</em></div><div><span class="c_ok">예약가능</span><strong>예약가능 14석</strong><em>1회경유 3시간 20분소요</em></div><div class="daytinner">도착<strong>11:30</strong><em>03/23(수)</em></div></a><a href="#" class="detailBox" data-role="none"><span>상세일정</span><ul class="detailList"><li><span><strong>11:30</strong>03/23(월)</span><strong>인천 출발</strong><em>9좌석</em><p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p></li><li><span><strong>13:20</strong>03/23(월)</span><strong>오사카(간사이) 도착</strong><p><span class="waitBox">대기</span> 1시간 50분 소요</p></li><li><span><strong>11:30</strong>03/23(월)</span><strong>오사카(간사이) 출발</strong><em>9좌석</em><p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p></li><li><span><strong>14:50</strong>03/23(월)</span><strong>도쿄(나리타) 도착</strong></li></ul></a></li><li><a href="#" class="sctopBox" data-role="none"><div class="daytinner">출발<strong>11:30</strong><em>03/23(수)</em></div><div><span class="c_wait">예약대기</span><strong>예약가능 14석</strong><em>1회경유 3시간 20분소요</em></div><div class="daytinner">도착<strong>11:30</strong><em>03/23(수)</em></div></a><a href="#" class="detailBox on" data-role="none"><span>상세일정</span><ul class="detailList"><li><span><strong>11:30</strong>03/23(월)</span><strong>인천 출발</strong><em>9좌석</em><p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p></li><li><span><strong>13:20</strong>03/23(월)</span><strong>오사카(간사이) 도착</strong><p><span class="waitBox">대기</span> 1시간 50분 소요</p></li><li><span><strong>11:30</strong>03/23(월)</span><strong>오사카(간사이) 출발</strong><em>9좌석</em><p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p></li><li><span><strong>14:50</strong>03/23(월)</span><strong>도쿄(나리타) 도착</strong></li></ul></a></li></ul></li>';
+
+	
+	var listView1, listView2;
+	var selector = "#scTab_01 .sc02_Box";	// append할 Tag selector
+	listView1 = new dynamicDataLoad(selector, {
+		enabled: true,
+		onLoadPosition: function(el){
+			var that = this;
+
+			//load할 데이터가 없는 경우
+			//that.appendData(true, null);
+
+			// ajax call type 샘플 코드
+			//var url = "";
+			//callAjax(url, function(html){
+			//	that.appendData(false, html);
+			//});
+
+			setTimeout(function(){
+				that.appendData(false, html);
+			}, 1000);
+		}
+	});
+
+	selector = "#scTab_02 .sc02_Box";	// append할 Tag selector
+	listView2 = new dynamicDataLoad(selector, {
+		enabled: false,
+		onLoadPosition: function(el){
+			var that = this;
+
+			//load할 데이터가 없는 경우
+			//that.appendData(true, null);
+
+			// ajax call type 샘플 코드
+			//var url = "";
+			//callAjax(url, function(html){
+			//	that.appendData(false, html);
+			//});
+
+			setTimeout(function(){
+				that.appendData(false, html);
+			}, 1000);
+		}
+	});
+
+	$(".scTab01 a").click(function(){
+		var idx = $(this).parent().index();
+		if(idx == 0){
+			listView1.enable();
+			listView2.disable();
+		}
+		else{
+			listView1.disable();
+			listView2.enable();
+		}
+	});
+});
+</script>
+</head>
+
+<body>
+
+
+
+<div id="wrap">
+	
+	<header id="header" class="subHead">
+		<div class="inner">
+			<h1><a href="#" data-role="none"><img src="../images/common/btn_nlogo_tem.png" alt="하나투어"></a></h1> <!-- 로고이미지 세로값 80px로 통일해주세요! 가로사이즈는 무관  -->
+			<a href="#" id="btnMenu" data-role="none"><img src="../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+		</div>
+	</header>
+
+
+	<div id="container" class="subCont"><!-- 컨텐츠 sub 영역 -->
+
+		<!-- 검색결과 -->
+		<section>
+			<h2 class="pagTit">항공 스케줄 조회</h2><!-- 20150426 추가 -->
+			<div class="resultsc01">
+				<strong class="restit"><img src="../images/main/AA.png" alt="">케세이퍼시픽항공</strong>
+				<!-- 2015-04-17 common 이벤트에서 처리하지 않고 인라인 스크립트로 이벤트 처리 할 경우 class에 'localEvent' 추가 -->
+				<a href="pop_terms.html" data-role="none" class="moneyBtn slideUpPop">요금규정</a>
+				<div>
+					<!-- 뺏지 -->
+					<em class="label" style="display:none">
+						<strong class="c_label01">긴급 땡처리</strong><strong class="c_label02">알짜항공권</strong>
+					</em>
+					<!-- // 뺏지 end -->
+					<!-- 20150915 수정 -->
+					<p class="m_lbtxt">유효기간 12개월 / 직항</p>
+					<div class="m_rbCont">
+						
+						<strong>214,200원</strong>
+						성인/삼성카드결제조건
+					</div>
+					<!-- // 20150915 수정 -->
+					
+				</div>
+			</div>
+			
+			<div class="sectIn03">
+				<p class="tTxt02">항공요금은 <strong>유류할증료/제세공과금이 포함</strong>된 가격이며, 항공사 사정 및 환율변동에 의해 매일 변경되며 발권 당일 환율에 따라 적용됩니다. </p><!-- 20150915 수정 -->
+			</div>
+			
+			<div>
+				<ul class="scTab01"> <!-- 한개일경우 class="tabOne", 세개일경우 class="tabThree" 추가-->
+					<li class="on"><a href="#scTab_01" data-role="none">출국</a></li> <!-- 선택시 class="on" -->
+					<li><a href="#scTab_02" data-role="none">귀국</a></li>
+				</ul>
+				
+				
+				
+				<!-- 출국 tab start -->
+				<div id="scTab_01" class="scTab">
+					<div class="tabBtmCont">
+						<div><strong>서울</strong> (인천 ICN)</div> 
+						<div><strong>도쿄</strong> (나리타 NRT)</div>
+						
+						<p>
+							<a href="#" class="scflBtn leBox" data-role="none">이전달</a>
+							<strong>2015.03.23</strong>
+							<a href="#" class="scflBtn riBox" data-role="none">다음달</a>
+						</p>
+					</div>
+					
+					<!-- 기획전 스케쥴 리스트 start 20150424 수정 -->
+					<ul class="scList01">
+						<li>
+							<a href="#" class="sctopBox" data-role="none">
+								<div class="daytinner">
+									출발<strong>11:30</strong><em>03/23(수)</em>
+								</div>
+								<div>
+									<span class="c_ok">예약가능</span>
+									<strong>예약가능 14석</strong>
+									<em>1회경유 3시간 20분소요</em>
+								</div>
+								<div class="daytinner">
+									도착<strong>11:30</strong><em>03/23(수)</em>
+								</div>
+							</a>
+							<a href="#" class="detailBox" data-role="none"><!-- 선택시 class="on"추가-->
+								<span>상세일정</span>
+								
+								<!--20150423 삭제 ul class="detailList">
+									<li>
+										<span><strong>11:30</strong>03/23(월)</span>
+										<strong>인천 출발</strong>
+										<em>9좌석</em>
+										<p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p> 
+									</li>
+									<li>
+										<span><strong>13:20</strong>03/23(월)</span>
+										<strong>오사카(간사이) 도착</strong>
+										<p><span class="waitBox">대기</span> 1시간 50분 소요</p>
+									</li>
+									<li>
+										<span><strong>11:30</strong>03/23(월)</span>
+										<strong>오사카(간사이) 출발</strong>
+										<em>9좌석</em>
+										<p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p>
+									</li>
+									<li>
+										<span><strong>14:50</strong>03/23(월)</span>
+										<strong>도쿄(나리타) 도착</strong>
+									</li>
+								</ul-->
+								
+								<!-- 20150423 상세일정 변경 start -->
+								<div class="detailList02">
+									<!-- 일정1 start -->
+									<div>
+										<div class="indeTop">
+											<strong>서울<em>(인천)</em></strong>
+											<strong>도쿄<em>(나리타)</em></strong>
+										</div>
+										<div class="indeCent">
+											<strong><span class="c_red">출발</span> : 2015.05.05(수) 10:20</strong>
+											<strong><span class="c_red">도착</span> : 2015.05.06(목) 19:20</strong>
+										</div>
+										<div class="indeBtm">
+											<strong> JL0090 좌석<em>9</em>석</strong>
+											<span><span class="airBox">비행</span> 1시간 50분</span>
+											<span><span class="waitBox">대기</span> 1시간 5분</span>
+										</div>
+									</div>
+									<!-- // 일정1 end -->
+									
+									<!-- 일정2 start -->
+									<div>
+										<div class="indeTop">
+											<strong>서울<em>(인천)</em></strong>
+											<strong>도쿄<em>(나리타)</em></strong>
+										</div>
+										<div class="indeCent">
+											<strong><span class="c_red">출발</span> : 2015.05.05(수) 10:20</strong>
+											<strong><span class="c_red">도착</span> : 2015.05.06(목) 19:20</strong>
+										</div>
+										<div class="indeBtm">
+											<strong>시애틀 경유 <span class="bulLi"></span> JL0090 좌석<em>9</em>석</strong>
+											<span><span class="airBox">비행</span> 1시간 50분</span>
+											<span><span class="waitBox">대기</span> 1시간 5분</span>
+										</div>
+									</div>
+									<!-- // 일정2 end -->
+									
+									<!-- 총소요시간 -->
+									<div>
+										<div class="de_btmSect newTy">
+											<strong>총 소요시간 : 20시간 20분</strong>
+											<span class="waitBox">총 대기</span> 04시간 45분
+											<span class="airBox">총 비행</span> 15시간 35분
+										</div>
+									</div>
+									<!-- // 총소요시간 end -->
+								</div>
+								<!-- // 20150423 상세일정 변경 end -->
+							</a>
+						</li>
+						<li>
+							<a href="#" class="sctopBox" data-role="none">
+								<div class="daytinner">
+									출발<strong>11:30</strong><em>03/23(수)</em>
+								</div>
+								<div>
+									<span class="c_wait">예약대기</span>
+									<strong>예약가능 14석</strong>
+									<em>1회경유 3시간 20분소요</em>
+								</div>
+								<div class="daytinner">
+									도착<strong>11:30</strong><em>03/23(수)</em>
+								</div>
+							</a>
+							<a href="#" class="detailBox" data-role="none"><!-- 선택시 class="on"추가-->
+								<span>상세일정</span>
+								
+								<!--20150423 삭제 ul class="detailList">
+									<li>
+										<span><strong>11:30</strong>03/23(월)</span>
+										<strong>인천 출발</strong>
+										<em>9좌석</em>
+										<p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p> 
+									</li>
+									<li>
+										<span><strong>13:20</strong>03/23(월)</span>
+										<strong>오사카(간사이) 도착</strong>
+										<p><span class="waitBox">대기</span> 1시간 50분 소요</p>
+									</li>
+									<li>
+										<span><strong>11:30</strong>03/23(월)</span>
+										<strong>오사카(간사이) 출발</strong>
+										<em>9좌석</em>
+										<p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p>
+									</li>
+									<li>
+										<span><strong>14:50</strong>03/23(월)</span>
+										<strong>도쿄(나리타) 도착</strong>
+									</li>
+								</ul-->
+								
+								<!-- 20150423 상세일정 변경 start -->
+								<div class="detailList02">
+									<!-- 일정1 start -->
+									<div>
+										<div class="indeTop">
+											<strong>서울<em>(인천)</em></strong>
+											<strong>도쿄<em>(나리타)</em></strong>
+										</div>
+										<div class="indeCent">
+											<strong><span class="c_red">출발</span> : 2015.05.05(수) 10:20</strong>
+											<strong><span class="c_red">도착</span> : 2015.05.06(목) 19:20</strong>
+										</div>
+										<div class="indeBtm">
+											<strong> JL0090 좌석<em>9</em>석</strong>
+											<span><span class="airBox">비행</span> 1시간 50분</span>
+											<span><span class="waitBox">대기</span> 1시간 5분</span>
+										</div>
+									</div>
+									<!-- // 일정1 end -->
+									
+									<!-- 일정2 start -->
+									<div>
+										<div class="indeTop">
+											<strong>서울<em>(인천)</em></strong>
+											<strong>도쿄<em>(나리타)</em></strong>
+										</div>
+										<div class="indeCent">
+											<strong><span class="c_red">출발</span> : 2015.05.05(수) 10:20</strong>
+											<strong><span class="c_red">도착</span> : 2015.05.06(목) 19:20</strong>
+										</div>
+										<div class="indeBtm">
+											<strong>시애틀 경유 <span class="bulLi"></span> JL0090 좌석<em>9</em>석</strong>
+											<span><span class="airBox">비행</span> 1시간 50분</span>
+											<span><span class="waitBox">대기</span> 1시간 5분</span>
+										</div>
+									</div>
+									<!-- // 일정2 end -->
+									
+									<!-- 총소요시간 -->
+									<div>
+										<div class="de_btmSect newTy">
+											<strong>총 소요시간 : 20시간 20분</strong>
+											<span class="waitBox">총 대기</span> 04시간 45분
+											<span class="airBox">총 비행</span> 15시간 35분
+										</div>
+									</div>
+									<!-- // 총소요시간 end -->
+								</div>
+								<!-- // 20150423 상세일정 변경 end -->
+							</a>
+						</li>
+					</ul>
+					<!-- 기획전 스케쥴 리스트 end -->
+					
+				</div>
+				<!-- 출국 tab end -->
+				
+				
+				
+				<!-- 귀국 tab start -->
+				<div id="scTab_02" class="scTab" style="display:none">
+					
+					<div class="tabBtmCont">
+						<div><strong>서울</strong> (인천 ICN)</div> 
+						<div><strong>도쿄</strong> (나리타 NRT)</div>
+						
+						<p>
+							<a href="#" class="scflBtn leBox" data-role="none">이전달</a>
+							<strong>2015.03</strong>
+							<a href="#" class="scflBtn riBox" data-role="none">다음달</a>
+						</p>
+					</div>
+					
+					<!-- 기획전 스케쥴 리스트 start 20150424 수정 -->
+					<ul class="scList01">
+						<li>
+							<a href="#" class="sctopBox" data-role="none">
+								<div class="daytinner">
+									출발<strong>11:30</strong><em>03/23(수)</em>
+								</div>
+								<div>
+									<span class="c_ok">예약가능</span>
+									<strong>예약가능 14석</strong>
+									<em>1회경유 3시간 20분소요</em>
+								</div>
+								<div class="daytinner">
+									도착<strong>11:30</strong><em>03/23(수)</em>
+								</div>
+							</a>
+							<a href="#" class="detailBox" data-role="none"><!-- 선택시 class="on"추가-->
+								<span>상세일정</span>
+								
+								<!--20150423 삭제 ul class="detailList">
+									<li>
+										<span><strong>11:30</strong>03/23(월)</span>
+										<strong>인천 출발</strong>
+										<em>9좌석</em>
+										<p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p> 
+									</li>
+									<li>
+										<span><strong>13:20</strong>03/23(월)</span>
+										<strong>오사카(간사이) 도착</strong>
+										<p><span class="waitBox">대기</span> 1시간 50분 소요</p>
+									</li>
+									<li>
+										<span><strong>11:30</strong>03/23(월)</span>
+										<strong>오사카(간사이) 출발</strong>
+										<em>9좌석</em>
+										<p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p>
+									</li>
+									<li>
+										<span><strong>14:50</strong>03/23(월)</span>
+										<strong>도쿄(나리타) 도착</strong>
+									</li>
+								</ul-->
+								
+								<!-- 20150423 상세일정 변경 start -->
+								<div class="detailList02">
+									<!-- 일정1 start -->
+									<div>
+										<div class="indeTop">
+											<strong>서울<em>(인천)</em></strong>
+											<strong>도쿄<em>(나리타)</em></strong>
+										</div>
+										<div class="indeCent">
+											<strong><span class="c_red">출발</span> : 2015.05.05(수) 10:20</strong>
+											<strong><span class="c_red">도착</span> : 2015.05.06(목) 19:20</strong>
+										</div>
+										<div class="indeBtm">
+											<strong> JL0090 좌석<em>9</em>석</strong>
+											<span><span class="airBox">비행</span> 1시간 50분</span>
+											<span><span class="waitBox">대기</span> 1시간 5분</span>
+										</div>
+									</div>
+									<!-- // 일정1 end -->
+									
+									<!-- 일정2 start -->
+									<div>
+										<div class="indeTop">
+											<strong>서울<em>(인천)</em></strong>
+											<strong>도쿄<em>(나리타)</em></strong>
+										</div>
+										<div class="indeCent">
+											<strong><span class="c_red">출발</span> : 2015.05.05(수) 10:20</strong>
+											<strong><span class="c_red">도착</span> : 2015.05.06(목) 19:20</strong>
+										</div>
+										<div class="indeBtm">
+											<strong>시애틀 경유 <span class="bulLi"></span> JL0090 좌석<em>9</em>석</strong>
+											<span><span class="airBox">비행</span> 1시간 50분</span>
+											<span><span class="waitBox">대기</span> 1시간 5분</span>
+										</div>
+									</div>
+									<!-- // 일정2 end -->
+									
+									<!-- 총소요시간 -->
+									<div>
+										<div class="de_btmSect newTy">
+											<strong>총 소요시간 : 20시간 20분</strong>
+											<span class="waitBox">총 대기</span> 04시간 45분
+											<span class="airBox">총 비행</span> 15시간 35분
+										</div>
+									</div>
+									<!-- // 총소요시간 end -->
+								</div>
+								<!-- // 20150423 상세일정 변경 end -->
+							</a>
+						</li>
+						<li>
+							<a href="#" class="sctopBox" data-role="none">
+								<div class="daytinner">
+									출발<strong>11:30</strong><em>03/23(수)</em>
+								</div>
+								<div>
+									<span class="c_wait">예약대기</span>
+									<strong>예약가능 14석</strong>
+									<em>1회경유 3시간 20분소요</em>
+								</div>
+								<div class="daytinner">
+									도착<strong>11:30</strong><em>03/23(수)</em>
+								</div>
+							</a>
+							<a href="#" class="detailBox" data-role="none"><!-- 선택시 class="on"추가-->
+								<span>상세일정</span>
+								
+								<!--20150423 삭제 ul class="detailList">
+									<li>
+										<span><strong>11:30</strong>03/23(월)</span>
+										<strong>인천 출발</strong>
+										<em>9좌석</em>
+										<p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p> 
+									</li>
+									<li>
+										<span><strong>13:20</strong>03/23(월)</span>
+										<strong>오사카(간사이) 도착</strong>
+										<p><span class="waitBox">대기</span> 1시간 50분 소요</p>
+									</li>
+									<li>
+										<span><strong>11:30</strong>03/23(월)</span>
+										<strong>오사카(간사이) 출발</strong>
+										<em>9좌석</em>
+										<p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p>
+									</li>
+									<li>
+										<span><strong>14:50</strong>03/23(월)</span>
+										<strong>도쿄(나리타) 도착</strong>
+									</li>
+								</ul-->
+								
+								<!-- 20150423 상세일정 변경 start -->
+								<div class="detailList02">
+									<!-- 일정1 start -->
+									<div>
+										<div class="indeTop">
+											<strong>서울<em>(인천)</em></strong>
+											<strong>도쿄<em>(나리타)</em></strong>
+										</div>
+										<div class="indeCent">
+											<strong><span class="c_red">출발</span> : 2015.05.05(수) 10:20</strong>
+											<strong><span class="c_red">도착</span> : 2015.05.06(목) 19:20</strong>
+										</div>
+										<div class="indeBtm">
+											<strong> JL0090 좌석<em>9</em>석</strong>
+											<span><span class="airBox">비행</span> 1시간 50분</span>
+											<span><span class="waitBox">대기</span> 1시간 5분</span>
+										</div>
+									</div>
+									<!-- // 일정1 end -->
+									
+									<!-- 일정2 start -->
+									<div>
+										<div class="indeTop">
+											<strong>서울<em>(인천)</em></strong>
+											<strong>도쿄<em>(나리타)</em></strong>
+										</div>
+										<div class="indeCent">
+											<strong><span class="c_red">출발</span> : 2015.05.05(수) 10:20</strong>
+											<strong><span class="c_red">도착</span> : 2015.05.06(목) 19:20</strong>
+										</div>
+										<div class="indeBtm">
+											<strong>시애틀 경유 <span class="bulLi"></span> JL0090 좌석<em>9</em>석</strong>
+											<span><span class="airBox">비행</span> 1시간 50분</span>
+											<span><span class="waitBox">대기</span> 1시간 5분</span>
+										</div>
+									</div>
+									<!-- // 일정2 end -->
+									
+									<!-- 총소요시간 -->
+									<div>
+										<div class="de_btmSect newTy">
+											<strong>총 소요시간 : 20시간 20분</strong>
+											<span class="waitBox">총 대기</span> 04시간 45분
+											<span class="airBox">총 비행</span> 15시간 35분
+										</div>
+									</div>
+									<!-- // 총소요시간 end -->
+								</div>
+								<!-- // 20150423 상세일정 변경 end -->
+							</a>
+						</li>
+					</ul>
+					<!-- 기획전 스케쥴 리스트 end -->
+					
+				</div>
+				<!-- 귀국 tab end -->
+				
+				
+			</div>
+			
+		</section>
+		
+		
+		<footer class="newFoot">
+			<ul>
+				<li><a href="#" data-role="none">고객센터</a></li>
+				<li><a href="#" data-role="none">0000-0000</a></li>
+				<li><a href="#" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+			</ul>
+			<div>
+				<a href="#" data-role="none">이용약관</a>|
+				<a href="#" data-role="none">개인정보처리방침</a>|
+				<a href="#" data-role="none">여행약관</a>|
+				<a href="#" data-role="none">사업자정보확인</a>
+			</div>
+			<address>
+					상호 : 공식인증예약센터 | 대표자 : 홍길동 | 사업자등록번호 : 102-81-39440<br>
+					관광사업자등록번호 . 국외 통신판매업 : 종로01-1806호<br>
+					개인정보관리 책임자 : 최종윤 | 대표전화 : 1577-1233 | FAX : 02-734-0392<br>
+					주소 : 서울특별시 종로구 인사동 5길 41
+	
+			</address>
+		</footer>
+
+	</div><!-- //컨텐츠 영역 -->
+</div>
+<!-- 좌측메뉴 -->
+<div id="menuPanel">
+	<a href="#" data-role="none" class="closeSlide" title="닫기"></a><!-- 20150526 추가 -->
+	<div class="innerScroller">
+		<div class="nleftMenu">
+			<h2>여행상품</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">해외여행-패키지</a></li>
+				<li><a href="#" data-role="none">허니문</a></li>
+				<li><a href="#" data-role="none">에어텔</a></li>
+				<li><a href="#" data-role="none">배낭여행</a></li>
+				<li><a href="#" data-role="none">성지순례</a></li>
+				<li><a href="#" data-role="none">골프</a></li>
+				<li><a href="#" data-role="none">크루즈</a></li>
+				<li><a href="#" data-role="none">레포츠</a></li>
+				<li><a href="#" data-role="none">트레킹</a></li>
+			</ul>
+			
+			<h2>항공 / 호텔</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">해외호텔</a></li>
+				<li><a href="#" data-role="none">해외항공</a></li>
+				<li><a href="#" data-role="none">주요도시 할인항공</a></li>
+				<li><a href="#" data-role="none">특가항공</a></li>
+			</ul>
+			<h2>여행상담</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">고객센터</a></li>
+				<li><a href="#" data-role="none">카톡상담</a></li>
+			</ul>
+			
+			<div class="allmenu_btm">
+				<a href="#" data-role="none">예약확인</a>
+				<a href="#" data-role="none">미팅장소 안내</a>
+				<a href="tel:1577-8761" data-role="none">1577-8761</a>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<!-- Picker 창 -->
+<div id="overlayPanel">
+</div>
+
+</body>
+</html>
+

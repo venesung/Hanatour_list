@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+
+<title>메인 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<script src="../js/jquery-2.1.3.min.js" type="text/javascript"></script>
+<script src="../js/swiper.min.js" type="text/javascript"></script>
+<script src="../js/common.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.main02_cont01').on('change.WTab', function (e, obj) {
+			//console.log(obj.target, obj.idx, obj.content);
+		});
+
+		$('.newcityList').on('change.WTab', function (e, obj) {
+			//console.log(obj.target, obj.idx, obj.content);
+		});		
+	});
+</script>
+</head>
+
+<body>
+
+<div id="wrap">
+
+	<header id="header">
+		<div class="inner">
+			<h1><a href="#" data-role="none"><img src="../images/common/btn_nlogo_tem.png" alt="하나투어"></a></h1> <!-- 로고이미지 세로값 80px로 통일해주세요! 가로사이즈는 무관  -->
+			<a href="#" id="btnMenu" data-role="none"><img src="../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+		</div>
+	</header>
+	
+	<nav id="gnb">
+		<ul>
+			<li><a href="#" data-role="none">홈</a></li>
+			<li class="on"><a href="#" data-role="none">여행상품</a></li>
+			<li><a href="#" data-role="none">해외호텔</a></li>
+			<li><a href="#" data-role="none">국내여행</a></li>
+		</ul>
+	</nav>
+	<div class="headerMargin"></div> <!-- 네비없을경우 class="headerMargin02" -->
+
+	<!-- 컨텐츠 영역 -->
+	<div id="container">
+		<div>
+			<section>
+				<div class="main02_cont01">
+					<ul>
+						<li class="on"><a href="#" data-role="none">패키지</a></li><!-- 선택시 class="on" -->
+						<li><a href="#" data-role="none">허니문</a></li>
+						<li><a href="#" data-role="none">에어텔</a></li>
+						<li><a href="#" data-role="none">배낭여행</a></li>
+						<li><a href="#" data-role="none">성지순례</a></li>
+						<li><a href="#" data-role="none">골프</a></li>
+						<li><a href="#" data-role="none">크루즈</a></li>
+						<li><a href="#" data-role="none">레포츠</a></li>
+						<li><a href="#" data-role="none">트레킹</a></li>
+					</ul>
+					<hr><hr>
+					<ul>
+						<li class="on"><a href="#" data-role="none">패키지</a></li><!-- 선택시 class="on" -->
+						<li><a href="#" data-role="none">허니문</a></li>
+						<li><a href="#" data-role="none">에어텔</a></li>
+						<li><a href="#" data-role="none">레포츠</a></li>
+						<li><a href="#" data-role="none">트레킹</a></li>
+						<li>&nbsp;</li>
+					</ul>
+					<hr><hr>
+					<ul>
+						<li class="on"><a href="#" data-role="none">패키지</a></li><!-- 선택시 class="on" -->
+						<li><a href="#" data-role="none">허니문</a></li>
+						<li><a href="#" data-role="none">에어텔</a></li>
+						<li><a href="#" data-role="none">배낭여행</a></li>
+						<li><a href="#" data-role="none">레포츠</a></li>
+						<li><a href="#" data-role="none">트레킹</a></li>
+						<li><a href="#" data-role="none">트레킹</a></li>
+						<li>&nbsp;</li>
+						<li>&nbsp;</li>
+					</ul>
+				</div>
+				
+				<div class="main02_cont02">
+					<div class="innerTop">
+						<select title="지역선택" class="redType" data-role="none">
+							<option>인천/김포</option>
+							<option>인천/김포</option>
+							<option>인천/김포</option>
+							<option>인천/김포</option>
+						</select>
+						<a href="#" data-role="none" class="latelyBtn">최근검색</a> <!-- 선택시 class="on" -->
+					</div>
+					<!-- 최근검색버튼 선택시 노출영역 -->
+					<div class="latelyBox" style="display:none">
+						<a href="#" data-role="none"><span>인천/김포</span> 동남아 &gt; 태국 &gt; 방콕</a>
+						<a href="#" data-role="none"><span>인천/김포</span> 남태평양 &gt; 사이판</a>
+						<a href="#" data-role="none"><span>인천/김포</span> 남태평양 &gt; 뉴질랜드 &gt; 크라이스트처치</a>
+					</div>
+					<!-- // 최근검색버튼 선택시 노출영역 -->
+					<div class="innerInput">
+						<input type="text" data-role="none" title="검색어 입력" placeholder="국가와 도시를 입력하세요.">
+						<a href="#" data-role="none"><img src="../images/common/btn_search01.png" alt="검색하기"></a>
+					</div>
+					
+					<!-- 국가/도시 입력시 노출영역 -->
+					<dl class="inputView" style="display:none">
+						<dt>오사카</dt>
+						<dd><a href="#" data-role="none"><span>동남아</span> &gt; 태국 &gt; 방콕</a></dd>
+						<dt>나가사키</dt>
+						<dd><a href="#" data-role="none"><span>동남아</span> &gt; 태국 &gt; 방콕</a></dd>
+					</dl>
+					<!-- // 국가/도시 입력시 노출영역 -->
+				</div>
+				
+				
+				
+				<!-- 리스트 영역 -->
+				<ul class="newcityList">
+					<li>
+						<a href="#" data-role="none" class="titTab on" title="더보기">동남아</a>
+						<ul>
+							<li><a href="#" data-role="none">방콕</a></li>
+							<li><a href="#" data-role="none">푸켓</a></li>
+							<li><a href="#" data-role="none">코사무이</a></li>
+							<li><a href="#" data-role="none">발리</a></li>
+							<li><a href="#" data-role="none">룸복</a></li>
+							<li><a href="#" data-role="none">세부</a></li>
+							<li><a href="#" data-role="none">보라카이</a></li>
+							<li><a href="#" data-role="none">보홀</a></li>
+							<li><a href="#" data-role="none">싱가폴</a></li>
+							<li><a href="#" data-role="none">다낭</a></li>
+							<li><a href="#" data-role="none">코타키나발루</a></li>
+							<li><a href="#" data-role="none">몰디브</a></li>
+						</ul>	
+					</li>
+					<li>
+						<a href="#" data-role="none" class="titTab on" title="더보기">중국</a>
+						<ul>
+							<li><a href="#" data-role="none">홍콩</a></li>
+							<li><a href="#" data-role="none">마카오</a></li>
+							<li><a href="#" data-role="none">하이난</a></li>
+							<li><a href="#" data-role="none">홍콩</a></li>
+							<li><a href="#" data-role="none">마카오</a></li>
+							<li><a href="#" data-role="none">하이난</a></li>
+						</ul>	
+					</li>
+					<li>
+						<a href="#" data-role="none" class="titTab on" title="더보기">일본</a>
+						<ul>
+							<li><a href="#" data-role="none">오키나와</a></li>
+							<li><a href="#" data-role="none">동경</a></li>
+							<li><a href="#" data-role="none">오사카</a></li>
+						</ul>	
+					</li>
+					<li>
+						<a href="#" data-role="none" class="titTab on" title="더보기">남태평양</a>
+						<ul>
+							<li><a href="#" data-role="none">괌</a></li>
+							<li><a href="#" data-role="none">사이판</a></li>
+							<li><a href="#" data-role="none">팔라우</a></li>
+							<li><a href="#" data-role="none">멜버른</a></li>
+						</ul>	
+					</li>
+					<li>
+						<a href="#" data-role="none" class="titTab on" title="더보기">미주</a>
+						<ul>
+							<li><a href="#" data-role="none">하와이</a></li>
+							<li><a href="#" data-role="none">로스엔젤레스</a></li>
+							<li><a href="#" data-role="none">샌프란시스코</a></li>
+						</ul>	
+					</li>
+				</ul>
+				<!-- // 리스트 영역 end -->
+				
+				
+			</section>
+			<!-- // cont end -->
+		</div>
+		
+		<a href="#" id="topBtn01" data-role="none" data-scroller="window" data-target="" data-attach="" data-direction="fade" data-margin="" class="topBtn01 posFixed loaded scrollTop"><img src="../images/common/btn_top01.png" alt="TOP"></a>
+	</div>
+	<!-- //컨텐츠 영역 -->
+	
+	<!-- 푸터 -->
+	<footer class="newFoot">
+		<ul>
+			<li><a href="#" data-role="none">고객센터</a></li>
+			<li><a href="#" data-role="none">0000-0000</a></li>
+			<li><a href="#" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+		</ul>
+		<div>
+			<a href="#" data-role="none">이용약관</a>|
+			<a href="#" data-role="none">개인정보처리방침</a>|
+			<a href="#" data-role="none">여행약관</a>|
+			<a href="#" data-role="none">사업자정보확인</a>
+		</div>
+		<address>
+				상호 : 공식인증예약센터 | 대표자 : 홍길동 | 사업자등록번호 : 102-81-39440<br>
+				관광사업자등록번호 . 국외 통신판매업 : 종로01-1806호<br>
+				개인정보관리 책임자 : 최종윤 | 대표전화 : 1577-1233 | FAX : 02-734-0392<br>
+				주소 : 서울특별시 종로구 인사동 5길 41
+
+		</address>
+	</footer>
+	<!-- // 푸터 end -->
+	
+</div>
+
+
+
+<!-- 좌측메뉴 -->
+<div id="menuPanel">
+	<a href="#" data-role="none" class="closeSlide" title="닫기"></a><!-- 20150526 추가 -->
+	<div class="innerScroller">
+		<div class="nleftMenu">
+			<h2>여행상품</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">해외여행-패키지</a></li>
+				<li><a href="#" data-role="none">허니문</a></li>
+				<li><a href="#" data-role="none">에어텔</a></li>
+				<li><a href="#" data-role="none">배낭여행</a></li>
+				<li><a href="#" data-role="none">성지순례</a></li>
+				<li><a href="#" data-role="none">골프</a></li>
+				<li><a href="#" data-role="none">크루즈</a></li>
+				<li><a href="#" data-role="none">레포츠</a></li>
+				<li><a href="#" data-role="none">트레킹</a></li>
+			</ul>
+			
+			<h2>호텔</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">해외호텔</a></li>
+				<!--li><a href="#" data-role="none">해외항공</a></li>
+				<li><a href="#" data-role="none">주요도시 할인항공</a></li>
+				<li><a href="#" data-role="none">특가항공</a></li-->
+			</ul>
+			<h2>여행상담</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">고객센터</a></li>
+				<li><a href="#" data-role="none">카톡상담</a></li>
+			</ul>
+			
+			<div class="allmenu_btm">
+				<a href="#" data-role="none">예약확인</a>
+				<a href="#" data-role="none">미팅장소 안내</a>
+				<a href="tel:1577-8761" data-role="none">1577-8761</a>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+

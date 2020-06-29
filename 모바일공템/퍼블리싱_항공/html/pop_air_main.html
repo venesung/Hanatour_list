@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>해외항공 - 하나프리항공</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/air.css">
+<link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.5.css">
+<script src="../js/jquery-2.1.3.min.js" type="text/javascript"></script>
+<script src="../js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<script src="../js/iscroll.carousel.js" type="text/javascript"></script>
+<script src="../js/iscroll.swipeview.js" type="text/javascript"></script>
+<script src="../js/fixedPostiion.js" type="text/javascript"></script>
+<script src="../js/datepicker.js" type="text/javascript"></script> <!-- 추가 -->
+<script src="../js/common.js" type="text/javascript"></script>
+<script src="../js/main.js" type="text/javascript"></script>
+<!-- 메인 팝업 스크립트-->
+<script type="text/javascript">
+$(document).ready(function () {
+	var winH = window.innerHeight;
+	$("#wrap").css("position", "fixed");
+	$("#container .airmainCt01").css("overflow", "hidden");
+	$("#mainPop").show();
+	$(".popDim").show();
+
+	$("#mainPop .btnClose").click(function(){
+		$("#mainPop").hide();
+		$(".popDim").hide();
+		$("#wrap").attr("style", "");
+		$("#mainSlider .scroller section div.scrollArea").css("overflow-y", "scroll");
+	});
+});
+</script>
+<!-- 메인 팝업 스크립트 end -->
+
+</head>
+
+<body>
+
+
+<div id="wrap">
+	<header id="header" class="subHead">
+		<div class="inner">
+			<h1><a href="#" data-role="none"><img src="../images/common/btn_nlogo_tem.png" alt="하나투어"></a></h1> <!-- 로고이미지 세로값 80px로 통일해주세요! 가로사이즈는 무관  -->
+			<a href="#" id="btnMenu" data-role="none"><img src="../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+		</div>
+	</header>
+	
+	<!-- 20150402 이동 -->
+	<nav id="gnb">
+		<ul>
+			<li class="on"><a href="#" data-role="none">해외항공</a></li>
+			<li><a href="#" data-role="none">국내항공</a></li>
+			<li><a href="#" data-role="none">특가항공</a></li>
+		</ul>
+	</nav>
+	<!-- // 20150402 이동 -->
+	<div class="headerMargin"></div>
+
+
+	<div id="container">
+<!-- 컨텐츠 영역 -->
+
+				
+
+		<!-- 해외항공 -->
+		<section>
+				
+				<!-- content start -->
+				<div class="airmainCt01">
+					
+					<!-- 20150420 수정 tab start -->
+					<ul class="min_tab">
+						<li id="shTy01" class="on"><a href="#tab01" data-role="none">왕복<span>항공권</span></a></li><!-- 선택시 class="on" -->
+						<li id="shTy02" class=""><a href="#tab02" data-role="none">편도<span>항공권</span></a></li>
+						<li id="shTy03" class=""><a href="#tab03" data-role="none">다구간<span>항공권</span></a></li>
+					</ul>
+					<!-- // tab end -->
+					
+					<!-- 왕복 start -->
+					<div id="tab01" class="tabCont">
+						<div class="airinCont">
+							<!-- 도시선택 start -->
+							<div class="airSelSect">
+								<a href="pop_city03.html" class="slideUpPop" data-role="none"><strong>서울(인천/김포)</strong><span>ICN</span></a><!-- 20150410 팝업 변경 -->
+								<strong>출국</strong>
+								<a href="pop_city.html" class="slideUpPop" data-role="none"><strong>Sultan Abdul Aziz Shah Apt, Kuala Lumpur</strong><span>도착지 선택</span></a> <!-- 지역 없을경우 a class="c_off" -->
+							</div>
+							<div class="airSelSect">
+								<a href="pop_city.html" class="slideUpPop" data-role="none"><strong>Sultan Abdul Aziz Shah Apt, Kuala Lumpur</strong><span>출발지 선택</span></a>
+								<strong class="downAir">귀국</strong> <!-- 귀국일경우 BG class="downAir" -->
+								<a href="pop_city03.html" class="slideUpPop" data-role="none"><strong>서울(인천/김포)</strong><span>ICN</span></a> <!-- 지역 없을경우 a class="c_off" --><!-- 20150410 팝업 변경 -->
+							</div>
+							<!-- // 도시선택 end -->
+							
+							<div class="airdaySect">
+								<!-- data-mode = 다구간 : range3, 왕복 : range, 편도 : single -->
+								<!-- 2015-04-26 수정 -->
+								<a href="pop_calender.html" data-callback="datePicker" data-mode="range" data-role="none" data-date="2015-05-27, 2015-05-29" class="slideUpPop"><strong>출국일</strong>2015.03.23</a>
+								<a href="pop_calender.html" data-callback="datePicker" data-mode="range" data-role="none" data-date="2015-05-27, 2015-05-29" class="slideUpPop"><strong>귀국일</strong>2015.03.23</a>
+								<!-- //2015-04-26 수정 -->
+								<!-- 20150415 추가 귀국미정 체크했을경우 귀국일 영역이 아래로 바뀌여야됨 start -->
+								<div class="endCheckAfter" style="display:none">
+									<label for="secFocus">체류기간 선택</label>
+									<select id="secFocus" data-role="none" title="체류기간 선택">
+										<option>5일</option>
+										<option>7일</option>
+										<option>14일</option>
+										<option>20일</option>
+										<option>1개월</option>
+										<option>3개월</option>
+										<option>6개월</option>
+										<option>1년</option>
+									</select>
+								</div>
+								<!-- // 20150415 추가 귀국미정 체크했을경우 귀국일 영역이 아래로 바뀌여야됨 end -->
+							</div>
+							
+							<!-- 2015-04-30 수정 id="ckUnset" 추가 -->
+							<label class="endCheck">귀국미정<input type="checkbox" id="ckUnset" class="redCheck" value="N" data-role="none"></label>
+							<!-- //2015-04-30 수정 id="ckUnset" 추가 -->
+							
+							<div class="padBox">
+								<div class="airbtnBox">
+									<a href="pop_people.html" class="btnselRed slideUpPop" data-role="none">성인1, 유아0, 소아0</a>
+									<em></em>
+									<span>
+										<select data-role="none" class="btnselRed">
+											<option>좌석선택</option>
+											<option>일반석</option>
+											<option>비지니스석</option>
+											<option>일등석</option>
+										</select>
+									</span>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<!-- 왕복 end -->
+					
+					<!-- 편도 start  -->
+					<div id="tab02" class="tabCont">
+						<div class="airinCont">
+							<!-- 도시선택 start -->
+							<div class="airSelSect">
+								<a href="pop_city.html" class="slideUpPop" data-role="none"><strong>서울</strong><span>인천 ICN</span></a>
+								<strong>출국</strong>
+								<a href="pop_city.html" class="slideUpPop c_off" data-role="none"><strong>도착</strong><span>도착지 선택</span></a> <!-- 지역 없을경우 a class="c_off" -->
+							</div>
+							<!-- // 도시선택 end -->
+							
+							<!-- data-mode = 다구간 : range3, 왕복 : range, 편도 : single -->
+							<!-- 2015-04-26 수정 -->
+							<a href="pop_calender.html" data-callback="datePicker" data-mode="single" data-role="none" data-date="2015-05-29" class="airdaySect02 slideUpPop"><strong>출국일</strong>2015.03.23</a>
+							<!-- //2015-04-26 수정 -->	
+							<div class="padBox">
+								<div class="airbtnBox">
+									<a href="pop_people.html" class="btnselRed slideUpPop" data-role="none">성인1, 유아0, 소아0</a>
+									<em></em>
+									<span>
+										<select data-role="none" class="btnselRed">
+											<option>좌석선택</option>
+											<option>일반석</option>
+											<option>비지니스석</option>
+											<option>일등석</option>
+										</select>
+									</span>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<!-- 편도 end -->
+					
+					<!-- 다구간 start -->
+					<div id="tab03" class="tabCont">
+						<div class="airinCont dagugan"> <!-- 다구간 class="dagugan" 추가 -->
+							<!-- 도시선택 start -->
+							<div class="airSelSect">
+								<a href="pop_city.html" class="slideUpPop" data-role="none"><strong>서울</strong><span>인천 ICN</span></a>
+								<strong>여정1</strong><!-- 귀국일경우 BG class="downAir" -->
+								<a href="pop_city.html" class="slideUpPop c_off" data-role="none"><strong>도착</strong><span>도착지 선택</span></a> <!-- 지역 없을경우 a class="c_off" -->
+							</div>
+							<!-- 2015-04-26 수정 -->
+							<a href="pop_calender.html" class="airdaySect02 slideUpPop" data-callback="datePicker" data-mode="range3" data-date="2015-05-28, 2015-05-29, 2015-05-30" data-role="none"><strong>여정1 출국일</strong>2015.03.23</a> <!-- 2015-04-17 수정(attribute 추가) -->
+							<!-- //2015-04-26 수정 -->
+							<div class="airSelSect">
+								<a href="pop_city.html" class="slideUpPop c_off" data-role="none"><strong>출발</strong><span>출발지 선택</span></a>
+								<strong>여정2</strong> 
+								<a href="pop_city.html" class="slideUpPop c_off" data-role="none"><strong>도착</strong><span>도착지 선택</span></a> <!-- 지역 없을경우 a class="c_off" -->
+							</div>
+							<!-- 2015-04-26 수정 -->
+							<a href="pop_calender.html" class="airdaySect02 slideUpPop" data-callback="datePicker" data-mode="range3" data-date="2015-05-28, 2015-05-29, 2015-05-30" data-role="none"><strong>여정1 출국일</strong>2015.03.23</a> <!-- 2015-04-17 수정(attribute 추가) -->
+							<!-- //2015-04-26 수정 -->
+							
+							<div class="airSelSect">
+								<a href="pop_city.html" class="slideUpPop c_off" data-role="none"><strong>출국</strong><span>출국지 선택</span></a>
+								<strong>여정3</strong>
+								<a href="pop_city.html" class="slideUpPop" data-role="none"><strong>서울</strong><span>인천 ICN</span></a> <!-- 지역 없을경우 a class="c_off" -->
+							</div>
+							<!-- 2015-04-26 수정 -->
+							<a href="pop_calender.html" class="airdaySect02 slideUpPop" data-callback="datePicker" data-mode="range3" data-date="2015-05-28, 2015-05-29, 2015-05-30" data-role="none"><strong>여정1 출국일</strong>2015.03.23</a> <!-- 2015-04-17 수정(attribute 추가) -->
+							<!-- //2015-04-26 수정 -->
+							<!-- // 도시선택 end -->
+							
+							
+							<div class="padBox">
+								<div class="airbtnBox">
+									<a href="pop_people.html" class="btnselRed slideUpPop" data-role="none">성인1, 유아0, 소아0</a>
+									<em></em>
+									<span>
+										<select data-role="none" class="btnselRed">
+											<option>좌석선택</option>
+											<option>일반석</option>
+											<option>비지니스석</option>
+											<option>일등석</option>
+										</select>
+									</span>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<!-- 다구간 end -->
+					
+					
+					<a href="#" data-role="none" class="m_btnRed">항공권 검색</a>
+					
+					
+					<!-- 이벤트 배너 start -->
+					<div class="airevent01">
+						<h2>이벤트<a href="#" data-role="none">더보기</a></h2>
+
+						<div class="swipeView">
+							<div class="slider">
+								<ul>
+									<li class="page"><a href="#" data-role="none"><img src="../images/air/img_airevent01.jpg" alt="류현진이 추천하는 항공권 사전예약 할인 -  항공권 발매 1위! 대한민국 최저가"></a></li>
+									<li class="page"><a href="#" data-role="none"><img src="../images/air/img_airevent02.jpg" alt=""></a></li>
+									<li class="page"><a href="#" data-role="none"><img src="../images/air/img_airevent03.jpg" alt=""></a></li>
+									<li class="page"><a href="#" data-role="none"><img src="../images/air/img_airevent04.jpg" alt=""></a></li>
+									<li class="page"><a href="#" data-role="none"><img src="../images/air/img_airevent05.jpg" alt=""></a></li>
+								</ul>
+							</div>
+
+							<!--  버튼영역 start 150320  -->
+							<div class="slideBtn indicator">
+							</div>
+							<!-- // 버튼영역 end  -->
+						</div>
+					</div>
+					<!-- // 이벤트 배너 end -->
+					
+				</div>
+				
+				
+				<!-- content end -->
+				
+				
+				<footer class="newFoot">
+					<ul>
+						<li><a href="#" data-role="none">고객센터</a></li>
+						<li><a href="#" data-role="none">0000-0000</a></li>
+						<li><a href="#" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+					</ul>
+					<div>
+						<a href="#" data-role="none">이용약관</a>|
+						<a href="#" data-role="none">개인정보처리방침</a>|
+						<a href="#" data-role="none">여행약관</a>|
+						<a href="#" data-role="none">사업자정보확인</a>
+					</div>
+					<address>
+							상호 : 공식인증예약센터 | 대표자 : 홍길동 | 사업자등록번호 : 102-81-39440<br>
+							관광사업자등록번호 . 국외 통신판매업 : 종로01-1806호<br>
+							개인정보관리 책임자 : 최종윤 | 대표전화 : 1577-1233 | FAX : 02-734-0392<br>
+							주소 : 서울특별시 종로구 인사동 5길 41
+			
+					</address>
+				</footer>
+		</section>
+
+				
+<!-- //컨텐츠 영역 -->
+
+	</div>
+</div>
+
+
+<!-- 좌측메뉴 -->
+<div id="menuPanel">
+	<a href="#" data-role="none" class="closeSlide" title="닫기"></a><!-- 20150526 추가 -->
+	<div class="innerScroller">
+		<div class="nleftMenu">
+			<h2>여행상품</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">해외여행-패키지</a></li>
+				<li><a href="#" data-role="none">허니문</a></li>
+				<li><a href="#" data-role="none">에어텔</a></li>
+				<li><a href="#" data-role="none">배낭여행</a></li>
+				<li><a href="#" data-role="none">성지순례</a></li>
+				<li><a href="#" data-role="none">골프</a></li>
+				<li><a href="#" data-role="none">크루즈</a></li>
+				<li><a href="#" data-role="none">레포츠</a></li>
+				<li><a href="#" data-role="none">트레킹</a></li>
+			</ul>
+			
+			<h2>항공 / 호텔</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">해외호텔</a></li>
+				<li><a href="#" data-role="none">해외항공</a></li>
+				<li><a href="#" data-role="none">주요도시 할인항공</a></li>
+				<li><a href="#" data-role="none">특가항공</a></li>
+			</ul>
+			<h2>여행상담</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">고객센터</a></li>
+				<li><a href="#" data-role="none">카톡상담</a></li>
+			</ul>
+			
+			<div class="allmenu_btm">
+				<a href="#" data-role="none">예약확인</a>
+				<a href="#" data-role="none">미팅장소 안내</a>
+				<a href="tel:1577-8761" data-role="none">1577-8761</a>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+
+<!-- Picker 창 -->
+<div id="overlayPanel">
+</div>
+
+<!-- 메인 팝업 -->
+<div id="mainPop" class="mainPop">
+	<div>
+		<a href="#" data-role="none"><img src="../images/common/dummy_img_pop.jpg" alt="팝업"></a>
+		<div>
+			<label for="same01" class=""><input type="checkbox" id="same01" class="redCheck" data-role="none"> 오늘하루 안보이기</label>
+			<a href="#" class="btnClose" data-role="none">닫기</a>
+		</div>
+	</div>
+</div>
+
+<div class="popDim"></div> <!-- dim 태그 : 메인팝업 띄울경우 이 태그도 같이 띄워주세요 -->
+<!-- 메인 팝업 end -->
+
+
+
+</body>
+</html>
+

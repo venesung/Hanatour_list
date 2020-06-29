@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>호텔검색 결과 - 하나투어</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/sub.css">
+<script src="../js/jquery-2.1.3.min.js" type="text/javascript"></script>
+<script src="../js/jquery-ui.js" type="text/javascript"></script>
+<script src="../js/swiper.min.js" type="text/javascript"></script>
+<script src="../js/common.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		HT_JQUI_WRangeSlider.init($('#slider'), {
+			min : 0,
+			max : 1000000,
+			values : [0, 1000000]
+		}); //{} jquery ui 옵션 확장
+	});
+</script>
+</head>
+
+<body>
+
+<div id="wrap">
+	<header id="header">
+		<div class="inner">
+			<h1><a href="#" data-role="none"><img src="../images/common/btn_nlogo_tem.png" alt="하나투어"></a></h1>
+			<a href="#" id="btnMenu" data-role="none"><img src="../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+		</div>
+	</header>
+	<div class="headerMargin"></div> <!-- 네비없을경우 class="headerMargin02" -->
+	
+	<!-- 컨텐츠 영역 -->
+	<div id="container">
+		<h2 class="pagTit">해외호텔 &gt; 도쿄</h2>
+		
+		<div>
+			<ul class="subTab">
+				<li class="on"><a href="#" data-role="none">리스트보기</a></li> <!-- 선택시 class="on" -->
+				<li class=""><a href="#" data-role="none">지도보기</a></li>
+			</ul>
+			
+			<!-- 리스트보기 -->
+			<div class="hotel_list">
+				<div class="rangeBtn">
+					<span>1박 평균요금(세금, 봉사료 포함)</span>
+					<div class="newdetBtn">
+						<span class="nSelectBox">
+							<select title="정렬선택">
+								<option>정렬</option>
+								<option>추천순</option>
+								<option>즉시확정순</option>
+								<option>낮은가격순</option>
+								<option>이름순</option>
+							</select>
+						</span>
+						<a href="#">결과내 검색</a><!-- 선택시 class="on"추가, 아래 검색div block -->
+					</div>
+					<!-- 결과내 검색 -->
+					<div class="endsearchBox" style="display:none">
+						<div>
+							<h3>위치</h3>
+							<select title="주요지점선택" class="btnselRed">
+								<option>주요지점 선택</option>
+							</select>
+							<select title="거리 선택" class="btnselRed">
+								<option>주요지점에서의 거리(km)</option>
+								<option>0.5km</option>
+								<option>1km</option>
+								<option>2km</option>
+								<option>3km</option>
+								<option>4km</option>
+								<option>5km</option>
+								<option>10km</option>
+							</select>
+						</div>
+						<div class="scr_widthBox">
+							<h3>가격</h3>
+							<div class="moneySect">
+								<span>0원</span>
+								<span>1,400,000원</span>
+							</div>
+							<div id="slider"></div>
+						</div>
+						<div>
+							<h3>등급</h3>
+							<select title="등급 선택" class="btnselRed">
+								<option>전체등급</option>
+								<option>1성급</option>
+								<option>2성급</option>
+								<option>3성급</option>
+								<option>4성급</option>
+								<option>5성급</option>
+							</select>
+						</div>
+						<div>
+							<h3>호텔명</h3>
+							<input type="text" class="hotelWhite" title="호텔명입력" placeholder="영문명 검색 가능">
+						</div>
+						<a href="#" class="m_btnRed mr12" data-role="none">검색</a>
+					</div>
+					<!-- // 결과내 검색 -->
+				</div>
+				
+				<!-- 호텔리스트 -->
+				<ul>
+					<li>
+						<a href="#">
+							<span class="imgbox"><img src="http://image5.hanatour.com/dat_content_image/7/C00002_315357_B.jpg" alt="">
+								<em><img src="../images/sub/icon_best.png" alt="BEST"></em>
+							</span>
+							<div>
+								<span>SHINJUKU PRINCE HOTEL</span>
+								<strong>신주쿠프린스 호텔</strong>
+								<div class="starBox"><img src="../images/main/img_star04.png" alt=""></div><!-- 갯수별 이미지명 01~05. 별반개짜리일경우 이미지명 뒤에 _50 추가 : 예) 2개반일경우 img_star02_50.png -->
+								<em>107,030원~</em>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="imgbox"><img src="http://image5.hanatour.com/dat_content_image/6/C00002_420026_B.jpg" alt="">
+								<em><img src="../images/sub/icon_best.png" alt="BEST"></em>
+							</span>
+							<div>
+								<span>SHINJUKU PRINCE HOTEL </span>
+								<strong>신주쿠프린스 호텔</strong>
+								<div class="starBox"><img src="../images/main/img_star03.png" alt=""></div><!-- 갯수별 이미지명 01~05. 별반개짜리일경우 이미지명 뒤에 _50 추가 : 예) 2개반일경우 img_star02_50.png -->
+								<em>107,030원~</em>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="imgbox"><img src="http://image5.hanatour.com/dat_content_image/7/C00002_315357_B.jpg" alt="">
+								<em><img src="../images/sub/icon_best.png" alt="BEST"></em>
+							</span>
+							<div>
+								<span>SHINJUKU PRINCE HOTEL</span>
+								<strong>신주쿠프린스 호텔</strong>
+								<div class="starBox"><img src="../images/main/img_star05.png" alt=""></div><!-- 갯수별 이미지명 01~05. 별반개짜리일경우 이미지명 뒤에 _50 추가 : 예) 2개반일경우 img_star02_50.png -->
+								<em>107,030원~</em>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="imgbox"><img src="http://image5.hanatour.com/dat_content_image/7/C00002_315357_B.jpg" alt="">
+								<em><img src="../images/sub/icon_best.png" alt="BEST"></em>
+							</span>
+							<div>
+								<span>SHINJUKU PRINCE HOTEL</span>
+								<strong>신주쿠프린스 호텔</strong>
+								<div class="starBox"><img src="../images/main/img_star04.png" alt=""></div><!-- 갯수별 이미지명 01~05. 별반개짜리일경우 이미지명 뒤에 _50 추가 : 예) 2개반일경우 img_star02_50.png -->
+								<em>107,030원~</em>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="imgbox"><img src="http://image5.hanatour.com/dat_content_image/6/C00002_420026_B.jpg" alt="">
+								<em><img src="../images/sub/icon_best.png" alt="BEST"></em>
+							</span>
+							<div>
+								<span>SHINJUKU PRINCE HOTEL </span>
+								<strong>신주쿠프린스 호텔</strong>
+								<div class="starBox"><img src="../images/main/img_star03.png" alt=""></div><!-- 갯수별 이미지명 01~05. 별반개짜리일경우 이미지명 뒤에 _50 추가 : 예) 2개반일경우 img_star02_50.png -->
+								<em>107,030원~</em>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="imgbox"><img src="http://image5.hanatour.com/dat_content_image/7/C00002_315357_B.jpg" alt="">
+								<em><img src="../images/sub/icon_best.png" alt="BEST"></em>
+							</span>
+							<div>
+								<span>SHINJUKU PRINCE HOTEL</span>
+								<strong>신주쿠프린스 호텔</strong>
+								<div class="starBox"><img src="../images/main/img_star05.png" alt=""></div><!-- 갯수별 이미지명 01~05. 별반개짜리일경우 이미지명 뒤에 _50 추가 : 예) 2개반일경우 img_star02_50.png -->
+								<em>107,030원~</em>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="imgbox"><img src="http://image5.hanatour.com/dat_content_image/7/C00002_315357_B.jpg" alt="">
+								<em><img src="../images/sub/icon_best.png" alt="BEST"></em>
+							</span>
+							<div>
+								<span>SHINJUKU PRINCE HOTEL</span>
+								<strong>신주쿠프린스 호텔</strong>
+								<div class="starBox"><img src="../images/main/img_star04.png" alt=""></div><!-- 갯수별 이미지명 01~05. 별반개짜리일경우 이미지명 뒤에 _50 추가 : 예) 2개반일경우 img_star02_50.png -->
+								<em>107,030원~</em>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="imgbox"><img src="http://image5.hanatour.com/dat_content_image/6/C00002_420026_B.jpg" alt="">
+								<em><img src="../images/sub/icon_best.png" alt="BEST"></em>
+							</span>
+							<div>
+								<span>SHINJUKU PRINCE HOTEL </span>
+								<strong>신주쿠프린스 호텔</strong>
+								<div class="starBox"><img src="../images/main/img_star03.png" alt=""></div><!-- 갯수별 이미지명 01~05. 별반개짜리일경우 이미지명 뒤에 _50 추가 : 예) 2개반일경우 img_star02_50.png -->
+								<em>107,030원~</em>
+							</div>
+						</a>
+						<p class="eventTxt"><strong>이벤트</strong>상세내용은 호텔별 페이지에서 확인 가능합니다.</p>
+					</li>
+					<li>
+						<a href="#">
+							<span class="imgbox"><img src="http://image5.hanatour.com/dat_content_image/7/C00002_315357_B.jpg" alt="">
+								<em><img src="../images/sub/icon_best.png" alt="BEST"></em>
+							</span>
+							<div>
+								<span>SHINJUKU PRINCE HOTEL SHINJUKU PRINCE HOTEL SHINJUKU PRINCE HOTEL</span>
+								<strong>신주쿠프린스 호텔</strong>
+								<div class="starBox"><img src="../images/main/img_star05.png" alt=""></div><!-- 갯수별 이미지명 01~05. 별반개짜리일경우 이미지명 뒤에 _50 추가 : 예) 2개반일경우 img_star02_50.png -->
+								<em>107,030원~</em>
+							</div>
+						</a>
+					</li>
+				</ul>
+				<!-- // 호텔리스트 -->
+				
+				<!-- 기존 페이징 활용 -->
+				<div class="overseasHotel_ListView_NaviLayout" style="display: block;">
+					<div class="overseasHotel_listView_listPaging">
+						<span>
+							<button id="ovsHtPrevList" class="css3button2 ovsHtlistPageNaviBtn" data-role="none" style="opacity: 1;"><span class="leftArrow"></span></button>
+						</span>
+						<span class="txtPageLayout">
+							<span><strong><span class="txtPageNum1">3</span></strong><span class="txtPageNum2">/14</span></span>
+						</span>
+						<span>
+							<button id="ovsHtNextList" class="css3button2 ovsHtlistPageNaviBtn" data-role="none" style="opacity: 1;"><span class="rightArrow"></span></button>
+						</span>
+					</div>
+				</div>
+				<!-- // 기존 페이징 활용 -->
+				
+			</div>
+			<!-- // 리스트보기 -->
+			
+			<!-- 지도보기 -->
+			<div class="hotel_map" style="display:none">
+				지도
+			</div>
+			<!-- // 지도보기 -->
+			
+		</div>
+		
+		<a href="#" id="topBtn01" data-role="none" data-scroller="window" data-target="" data-attach="" data-direction="fade" data-margin="" class="topBtn01 posFixed loaded scrollTop"><img src="../images/common/btn_top01.png" alt="TOP"></a> <!-- 탑버튼 -->
+		
+	</div>
+	<!-- //컨텐츠 영역 -->
+	
+	<footer class="newFoot">
+		<ul>
+			<li><a href="#" data-role="none">고객센터</a></li>
+			<li><a href="#" data-role="none">전화번호</a></li>
+			<li><a href="#" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+		</ul>
+		<div>
+			<a href="#" data-role="none">이용약관</a>|
+			<a href="#" data-role="none">개인정보처리방침</a>|
+			<a href="#" data-role="none">여행약관</a>|
+			<a href="#" data-role="none">사업자정보확인</a>
+		</div>
+		<address>
+				㈜ 하나투어 | 대표자: 최현석 | 사업자등록번호 : 102-81-39440<br>
+				통신판매업신고번호 : 종로01-1806호 | 개인정보관리 책임자 : 최종윤<br>
+				[110-160]서울특별시 종로구 인사동 5길 41 ㈜ 하나투어<br>
+				하나투어상담센터 : <a href="tel:1577-1233" data-role="none">1577-1233</a> | FAX : 02-734-0392<br>
+				이메일 : <a href="mailto:15771233@hanatour.com" data-role="none" class="mailto">15771233@hanatour.com</a> | 호스팅 서비스 사업자 : ㈜하나투어<br>
+				관광사업자 등록번호 : 제1933-000006호 | 영업보증보험 : 22억 1천만원 가입<br>
+				COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+
+		</address>
+	</footer>
+	
+	
+</div>
+
+
+<!-- 좌측메뉴 -->
+<div id="menuPanel">
+	<a href="#" data-role="none" class="closeSlide" title="닫기"></a><!-- 20150526 추가 -->
+	<div class="innerScroller">
+		<div class="nleftMenu">
+			<h2>여행상품</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">해외여행-패키지</a></li>
+				<li><a href="#" data-role="none">허니문</a></li>
+				<li><a href="#" data-role="none">에어텔</a></li>
+				<li><a href="#" data-role="none">배낭여행</a></li>
+				<li><a href="#" data-role="none">성지순례</a></li>
+				<li><a href="#" data-role="none">골프</a></li>
+				<li><a href="#" data-role="none">크루즈</a></li>
+				<li><a href="#" data-role="none">레포츠</a></li>
+				<li><a href="#" data-role="none">트레킹</a></li>
+			</ul>
+			
+			<h2>호텔</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">해외호텔</a></li>
+				<!--li><a href="#" data-role="none">해외항공</a></li>
+				<li><a href="#" data-role="none">주요도시 할인항공</a></li>
+				<li><a href="#" data-role="none">특가항공</a></li-->
+			</ul>
+			<h2>여행상담</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">고객센터</a></li>
+				<li><a href="#" data-role="none">카톡상담</a></li>
+			</ul>
+			
+			<div class="allmenu_btm">
+				<a href="#" data-role="none">예약확인</a>
+				<a href="#" data-role="none">미팅장소 안내</a>
+				<a href="tel:1577-8761" data-role="none">1577-8761</a>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>
+

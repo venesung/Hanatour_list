@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<title>예약하기 - 하나프리항공</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/air.css">
+<link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.5.css">
+<script src="../js/jquery-2.1.3.min.js" type="text/javascript"></script>
+<script src="../js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<script src="../js/iscroll.carousel.js" type="text/javascript"></script>
+<script src="../js/iscroll.swipeview.js" type="text/javascript"></script>
+<script src="../js/fixedPostiion.js" type="text/javascript"></script>
+<script src="../js/common.js" type="text/javascript"></script>
+<script src="../js/reservation.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+	//개별적으로 이벤트 처리를 하고자 할때에는 각 버튼에 임의 class명을 주고 작업해 주세요
+	/*
+	$('#overlayPanel [임의 class명]').overlayPanelOpener({
+		target: "#overlayPanel02",
+		cover: true,
+		dynamicData: true,					// 동적으로 data가 불러와지는 경우 : true
+		onBeforeRender: function(that){		// ajax가 call되기 전 호출
+			console.log("onBeforeRender")
+		},
+		onAfterRender: function(that){		// data가 로딩되고 DOM이 만들어진 후
+			console.log("onAfterRender")
+		},
+		onSlideUp: function(that){			// slide up transitions 완료된 후
+			console.log("onSlideUp")
+		}
+	});
+	*/
+
+
+	//아래 코드는 항공바우처/항공바우처 메일전송/여정확인서/여정확인서 메일전송 팝업을 한번에 이벤트 등록하는 코드 샘플 입니다
+	$('#overlayPanel .slideUpPop.localEvent').overlayPanelOpener({
+		target: "#overlayPanel02",
+		cover: true,
+		dynamicData: true,					// 동적으로 data가 불러와지는 경우 : true
+		onBeforeRender: function(that){		// ajax가 call되기 전 호출
+			console.log("onBeforeRender")
+		},
+		onAfterRender: function(that){		// data가 로딩되고 DOM이 만들어진 후
+			console.log("onAfterRender")
+		},
+		onSlideUp: function(that){			// slide up transitions 완료된 후
+			console.log("onSlideUp")
+		}
+	});
+});
+</script>
+</head>
+
+<body>
+
+<div id="wrap">
+	<header id="header" class="subHead">
+		<div class="inner">
+			<h1><a href="#" data-role="none"><img src="../images/common/btn_nlogo_tem.png" alt="하나투어"></a></h1> <!-- 로고이미지 세로값 80px로 통일해주세요! 가로사이즈는 무관  -->
+			<a href="#" id="btnMenu" data-role="none"><img src="../images/common/btn_hdleft.png" alt="전체메뉴"></a>
+		</div>
+	</header>
+	
+	<div id="container" class="subCont"><!-- 컨텐츠 sub 영역 -->
+
+		<!-- 검색결과 -->
+		<section>
+			<h2 class="pagTit">예약완료</h2><!-- 20150427 수정 -->
+			<!-- 20150427 삭제 ol class="reserveStep">
+				<li class="on">약관동의</li>  완료단계 class="checked" 추가
+				<li class="">정보입력</li>
+				<li class="">예약완료</li>
+			</ol-->
+				
+			<div class="scInforTop payType">
+				<div class="payContTop01"><!-- 스크롤 내릴경우 class="payfixTop" 추가-->
+					<strong class="c_red">H1412026044</strong>
+					<span><em>(</em>예약번호<em>)</em></span>
+					<strong class="rigTxt01">결제마감 1일전</strong>
+				</div>
+				
+				<p class="payEndTopTxt">
+					<strong>예약이 완료되었습니다.</strong>
+					결제시한 <em class="fwBold">2015.06.29(월) 21:35</em>전까지<br>결제해 주시기 바랍니다.
+				</p>
+				
+				<strong>
+					<img src="../images/main/BB.png" alt="">대한항공
+					<span>왕복/2회경유</span>
+				</strong>
+				<div>
+					<div class="sectIn01 lineNone"><!-- 편도, 다구간일경우 class="typeBg02" 추가 -->
+						<div><strong>서울</strong>(인천 ICN)</div>
+						<div><strong>도쿄</strong>(나리타 NRT)</div>
+					</div>
+					<div class="inforTop_c "> <!-- 하나일경우 class="pdTb15" 추가 -->
+						<div><span class="c_red">출국일</span><strong>2014.03.23(수)&nbsp; 10:20</strong><em class="c_ok">예약가능</em></div>
+						<div><span class="c_red">귀국일</span><strong>2014.03.23(수)&nbsp; 10:20</strong><em class="c_ok">예약가능</em></div>
+					</div>
+					<p class="ifTxtBtm">성인 2명, 소아1명, 유아 1명, 비즈니스석</p>
+				</div>
+			</div>
+
+			<div class="garyBox02">
+				<!-- 예약정보 start -->
+				<div class="payRedBox">
+					<h2 class="payTit01 on"><a href="#" data-role="none">예약정보</a></h2><!-- 선택시 h2에 class="on" 추가하면 아래태그 block 처리 되있음 -->
+					<div class="endtopCont01">
+						<dl class="endDlList01">
+							<dt>결제시한</dt>
+							<dd class="c_red"><strong class="cellRp">2015. 06. 29(월) 21:35</strong></dd>
+							<dt>예약일</dt>
+							<dd><span class="cellRp">2015. 06. 29(월) 21:35</span></dd>
+							<dt>예약상태</dt>
+							<dd><strong>좌석확정</strong></dd>
+							<dt>요금조건</dt>
+							<dd>성인</dd>
+							<dt class="marB0">예약인원</dt>
+							<dd class="marB0"><strong>2명</strong></dd>
+						</dl>
+						<div class="txt_r"><a href="pop_boarding.html" data-role="none" class="sGrayBtn01 slideUpPop">탑승자 정보 자세히 보기</a></div>
+					</div>
+				</div>
+				<!-- // 예약정보 end -->
+				
+				<!-- 결제정보 start -->
+				<div class="payRedBox">
+					<h2 class="payTit01 on"><a href="#" data-role="none">결제정보</a></h2><!-- 선택시 h2에 class="on" 추가하면 아래태그 block 처리 되있음 -->
+					<div class="endtopCont01">
+						<dl class="endDlList01 dotLineTy">
+							<dt>기본운임<br> (성인 2명)</dt>
+							<dd>1,560,000원</dd>
+							<dt>유류할증료 및 제세공과금</dt>
+							<dd>937,800원</dd>
+						</dl>
+						
+						<dl class="endTotal01 reserType">
+							<dt>총 요금</dt>
+							<dd><strong class="c_red">2,746,800</strong><em>원</em></dd>
+						</dl>
+						
+						<p class="inforTxt c_red marB0">유류할증료/제세공과금은 항공사 사정 및 환율변동에 의해 매일 변경되며 발권 당일 환율에 따라 적용됩니다.</p>
+						<div class="txt_r"><a href="pop_terms.html" data-role="none" class="sGrayBtn01 slideUpPop">요금규정</a></div>
+						
+						<div class="lnGrayBtn"><a href="pop_tax.html" class="slideUpPop" data-role="none">유류할증료 + 제세공과금 변동내역</a></div><!-- 20150506 추가 -->
+						
+					</div>
+					
+				</div>
+				<!-- // 결제정보 end -->
+				
+				<!-- 상세일정 start -->
+				<div class="payRedBox">
+					<h2 class="payTit01 on"><a href="#" data-role="none">상세일정</a></h2><!-- 선택시 h2에 class="on" 추가하면 아래태그 block 처리 되있음 -->
+					
+					<div>
+						<dl class="deScheBox marB15">
+							<dt>출국 상세일정<span class="c_ok">예약가능</span></dt>
+							<dd>
+								<!-- 20150721 숨은경유지 추가 -->
+								<p class="hideAirTxt"> <!-- 항공스케줄조회에선 class="acodi"추가 -->
+									선택하신 항공편은 중간경유지 대만(타오위안)에서<br><span class="blue">01시간 00분 대기 후</span> 목적지로 이동합니다.</span>
+								</p>								
+								<!-- // 20150721 숨은경유지 추가 end-->
+								<ul class="detailList">
+									<li>
+										<span><strong>11:30</strong>03/23(월)</span>
+										<strong>인천 출발</strong>
+										<p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p> <!-- 비행 class="airBox" -->
+										<!-- 20150721 경유 추가 -->
+										<p class="viaBox"><span class="airVia">경유</span> 1시간 50분 대만 타오위안경유<em>CX0421</em></p> 
+										<!-- //20150721 경유 추가 end-->
+									</li>
+									<li>
+										<span><strong>13:20</strong>03/23(월)</span>
+										<strong>오사카(간사이) 도착</strong>
+										<p><span class="waitBox">대기</span> 1시간 50분 소요</p><!-- 대기 class="waitBox" -->
+									</li>
+									<li>
+										<span><strong>11:30</strong>03/23(월)</span>
+										<strong>오사카(간사이) 출발</strong>
+										<p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p>
+									</li>
+									<li>
+										<span><strong>14:50</strong>03/23(월)</span>
+										<strong>도쿄(나리타) 도착</strong>
+									</li>
+								</ul>
+								
+								<div class="de_btmSect">
+									<strong>총 소요시간 : 20시간 20분</strong>
+									<span class="waitBox">총 대기</span> 04시간 45분
+									<span class="airBox">총 비행</span> 15시간 35분
+								</div>
+								
+								<!-- 20150422 삭제 span class="de_btnStyle">03.23(수) ~ 03.26(목) / 체류기간 4일</span-->
+								
+							</dd>
+							<dt>귀국 상세일정<span class="c_ok">예약가능</span></dt>
+							<dd>
+								<ul class="detailList">
+									<li>
+										<span><strong>11:30</strong>03/23(월)</span>
+										<strong>인천 출발</strong>
+										<p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p> <!-- 비행 class="airBox" -->
+									</li>
+									<li>
+										<span><strong>13:20</strong>03/23(월)</span>
+										<strong>오사카(간사이) 도착</strong>
+										<p><span class="waitBox">대기</span> 1시간 50분 소요</p><!-- 대기 class="waitBox" -->
+									</li>
+									<li>
+										<span><strong>11:30</strong>03/23(월)</span>
+										<strong>오사카(간사이) 출발</strong>
+										<p><span class="airBox">비행</span> 1시간 50분 소요<em>SU0251</em></p>
+									</li>
+									<li>
+										<span><strong>14:50</strong>03/23(월)</span>
+										<strong>도쿄(나리타) 도착</strong>
+									</li>
+								</ul>
+								
+								<div class="de_btmSect">
+									<strong>총 소요시간 : 20시간 20분</strong>
+									<span class="waitBox">총 대기</span> 04시간 45분
+									<span class="airBox">총 비행</span> 15시간 35분
+								</div>
+							</dd>
+						</dl>
+					</div>
+					
+				</div>
+				<!-- // 상세일정 end -->
+				
+				<!-- 요청사항 start -->
+				<!-- 20150427 삭제 div class="payRedBox">
+					<h2 class="payTit01 on"><a href="#" data-role="none">요청사항</a></h2>
+					
+					<div class="padBox01">
+						<p class="c_gary">결제는 어떻게 하면 되나요? 분할결제 가능한가요?</p>
+					</div>
+				</div-->
+				<!-- // 요청사항 end -->
+				
+				<!-- 도우미여행사 start -->
+				<div class="payRedBox">
+					<h2 class="payTit01 on"><a href="#" data-role="none">담당 여행사</a></h2><!-- 선택시 h2에 class="on" 추가하면 아래태그 block 처리 되있음 -->
+					<div>
+						<dl class="doumiBox_ch payType">
+							<dt>
+								<strong>나이스항공여행사/이혜림</strong>
+							</dt>
+							<dd></dd>
+						</dl>
+					</div>
+				</div>
+				<!-- // 도우미여행사 end -->
+				
+				<!-- 운영 시간 안내 20151105 추가 -->
+				<div class="payRedBox">
+					<h2 class="payTit01 on"><a href="#" data-role="none">운영 시간 안내</a></h2>
+					<div>
+						<dl class="doumiBox_ch payType">
+							<dt class="timeType">
+								<strong>항공권 결제 시간 안내</strong>
+							</dt>
+							<dd class="timeType">
+								<ul class="bulOneList paddNoLi">
+									<li><strong>평일 : 09:00~17:00</strong><br>- 결제 및 상담 가능</li>
+									<li><strong>토요일/일요일 : 09:00~16:00 </strong><br>- 결제만 가능<br>- 변경, 환불, 취소, 상담 등 불가<br><br>
+										<p class="marB10">※ 주말은 16시 이후 결제가 불가합니다.<br>　결제시한이 16시 이후로 생성된 예약건도<br>　16시까지 결제해 주셔야 정상 처리됩니다.<br></p>
+										<p>※ 공휴일은 결제/상담/변경/환불/취소 불가합니다.</p>
+									</li>
+								</ul>
+							</dd>
+							<dt class="timeType">
+								<strong>온라인 1:1 상담 시간 안내</strong>
+								<a href="pop_customer.html" data-role="none" class="slideUpPop">1:1 문의</a>
+							</dt>
+							<dd class="timeType">
+								<ul class="bulOneList paddNoLi">
+									<li><strong>상담 문의 답변 및 처리가능 시간</strong><br>평일 기준 09:00 ~ 16:00 / 주말, 공휴일 제외</li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+					
+				</div>
+				<!-- // 운영 시간 안내 20151105 추가 -->
+				
+				<!-- 안내사항 start -->
+				<dl class="inforList01">
+					<dt>안내사항</dt>
+					<dd>
+						<ul>
+							<li>유류할증료/제세공과금은 항공사 사정 및 환율변동에 의해 매일 변경되며 발권 당일 환율에 따라 적용 됩니다. 
+</li>
+							<li>모든 예약상황이 OK가 될 경우 결제가 가능하며, 결제마감일(발권마감)까지 결제하지 않으시면 예약이 자동 취소됩니다.</li>
+							<li>항공요금, 규정 및 스케줄은 항공사 사정에 의하여 사전공지 없이 변경될 수 있습니다.</li>
+							<li>유류할증료 등 제세공과금 금액은 결제일 기준으로 당일 환율이 적용되어 재계산되므로 예약일과 결제일이 상이한 경우 변동될 수 있습니다.</li>
+							<li>여권 유효기간은 출발일 기준으로 6개월 이상 남아있어야 합니다.</li>
+							<li>경유지 및 목적지 국가에서 비자가 필요할 수 있으니 출발 전 비자 필요유무를 확인하고 발급받으시기 바랍니다.</li>
+							<li>편도 여정으로 항공권을 구입하실 경우 상대편 입국 국가의 비자를 반드시 소지하고 계셔야 합니다. (일부 국가는 복편 항공권을 소지하지 않으면 탑승수속이 거절될 수 있으니 유의하시기 바랍니다.)</li>
+							<li>비자를 소지하지 않은 경우에는 해당 국가로의 출국이 거부됩니다.</li>
+							<li>여권 및 비자 상담은 예약시 지정된 도우미 여행사나 여권과(여권관련), 해당국가의 대사관이나 영사관(비자관련)에 문의하시기 바랍니다.</li>
+							<li>항공사 규정상 중복예약을 하는 경우에 사전경고 없이 모든 예약이 취소될 수 있으므로 이에 따른 피해는 고객님께서 부담하셔야 합니다.</li>
+						</ul>
+					</dd>
+				</dl>
+				<!-- // 안내사항 end -->
+				
+				<a href="#" data-role="none" class="m_btnRed mr12">예약내역확인</a> <!-- 예약대기 상품예약-->
+				
+				
+				<!-- 20150529 배너 추가 -->
+				<div class="airevent02">
+					<a href="#" data-role="none"><img src="../images/air/img_event01.jpg" alt=""></a>
+					<a href="#" data-role="none"><img src="../images/air/img_event02.jpg" alt=""></a>
+				</div>
+				<!-- 20150529 배너 추가 -->
+
+			</div>
+			
+				
+		</section>
+		
+		
+		<footer class="newFoot">
+			<ul>
+				<li><a href="#" data-role="none">고객센터</a></li>
+				<li><a href="#" data-role="none">0000-0000</a></li>
+				<li><a href="#" class="scrollTop" data-role="none" title="상단 바로가기">TOP</a></li>
+			</ul>
+			<div>
+				<a href="#" data-role="none">이용약관</a>|
+				<a href="#" data-role="none">개인정보처리방침</a>|
+				<a href="#" data-role="none">여행약관</a>|
+				<a href="#" data-role="none">사업자정보확인</a>
+			</div>
+			<address>
+					상호 : 공식인증예약센터 | 대표자 : 홍길동 | 사업자등록번호 : 102-81-39440<br>
+					관광사업자등록번호 . 국외 통신판매업 : 종로01-1806호<br>
+					개인정보관리 책임자 : 최종윤 | 대표전화 : 1577-1233 | FAX : 02-734-0392<br>
+					주소 : 서울특별시 종로구 인사동 5길 41
+	
+			</address>
+		</footer>
+
+	</div><!-- //컨텐츠 영역 -->
+</div>
+
+
+
+
+<!-- Picker 창 -->
+<div id="overlayPanel">
+</div>
+
+<!-- 2015-04-27 추가 -->
+<div id="overlayPanel02">
+</div>
+<!-- //2015-04-27 추가 -->
+
+
+<!-- 좌측메뉴 -->
+<div id="menuPanel">
+	<a href="#" data-role="none" class="closeSlide" title="닫기"></a><!-- 20150526 추가 -->
+	<div class="innerScroller">
+		<div class="nleftMenu">
+			<h2>여행상품</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">해외여행-패키지</a></li>
+				<li><a href="#" data-role="none">허니문</a></li>
+				<li><a href="#" data-role="none">에어텔</a></li>
+				<li><a href="#" data-role="none">배낭여행</a></li>
+				<li><a href="#" data-role="none">성지순례</a></li>
+				<li><a href="#" data-role="none">골프</a></li>
+				<li><a href="#" data-role="none">크루즈</a></li>
+				<li><a href="#" data-role="none">레포츠</a></li>
+				<li><a href="#" data-role="none">트레킹</a></li>
+			</ul>
+			
+			<h2>항공 / 호텔</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">해외호텔</a></li>
+				<li><a href="#" data-role="none">해외항공</a></li>
+				<li><a href="#" data-role="none">주요도시 할인항공</a></li>
+				<li><a href="#" data-role="none">특가항공</a></li>
+			</ul>
+			<h2>여행상담</h2>
+			<ul class="allmenu_2Dep">
+				<li><a href="#" data-role="none">고객센터</a></li>
+				<li><a href="#" data-role="none">카톡상담</a></li>
+			</ul>
+			
+			<div class="allmenu_btm">
+				<a href="#" data-role="none">예약확인</a>
+				<a href="#" data-role="none">미팅장소 안내</a>
+				<a href="tel:1577-8761" data-role="none">1577-8761</a>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+
